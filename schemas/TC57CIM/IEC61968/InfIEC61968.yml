@@ -1,0 +1,15 @@
+id: cim:InfIEC61968
+name: TC57CIM.IEC61968.InfIEC61968
+title: InfIEC61968
+description:
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  cim: https://cim.ucaiug.io/ns#
+default_curi_maps:
+- semweb_context
+default_prefix: cim
+default_range: string
+classes:
+enums:

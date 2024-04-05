@@ -1,0 +1,15 @@
+id: cim:DetailedDiagrams
+name: TC57CIM.IEC62325.MarketOperations.CongestionRevenueRights.DetailedDiagrams
+title: DetailedDiagrams
+description:
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  cim: https://cim.ucaiug.io/ns#
+default_curi_maps:
+- semweb_context
+default_prefix: cim
+default_range: string
+classes:
+enums:

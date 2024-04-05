@@ -1,0 +1,129 @@
+id: cim:InfMarketOpCommon
+name: TC57CIM.IEC62325.InfIEC62325.InfMarketOpCommon
+title: InfMarketOpCommon
+description:
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  cim: https://cim.ucaiug.io/ns#
+default_curi_maps:
+- semweb_context
+default_prefix: cim
+default_range: string
+classes:
+enums:
+  MarketRoleKind:
+    name: MarketRoleKind
+    permissible_values:
+      BalanceResponsibleParty:
+        meaning: cim:MarketRoleKind.BalanceResponsibleParty
+      BalanceSupplier:
+        meaning: cim:MarketRoleKind.BalanceSupplier
+      balancingAuthority:
+        meaning: cim:MarketRoleKind.balancingAuthority
+      BillingAgent:
+        meaning: cim:MarketRoleKind.BillingAgent
+      BlockEnergyTrader:
+        meaning: cim:MarketRoleKind.BlockEnergyTrader
+      CapacityCoordinator:
+        meaning: cim:MarketRoleKind.CapacityCoordinator
+      CapacityTrader:
+        meaning: cim:MarketRoleKind.CapacityTrader
+      competitiveRetailer:
+        meaning: cim:MarketRoleKind.competitiveRetailer
+      complianceMonitor:
+        meaning: cim:MarketRoleKind.complianceMonitor
+      Consumer:
+        meaning: cim:MarketRoleKind.Consumer
+      ConsumptionResponsibleParty:
+        meaning: cim:MarketRoleKind.ConsumptionResponsibleParty
+      ControlAreaOperator:
+        meaning: cim:MarketRoleKind.ControlAreaOperator
+      ControlBlockOperator:
+        meaning: cim:MarketRoleKind.ControlBlockOperator
+      CoordinationCenterOperator:
+        meaning: cim:MarketRoleKind.CoordinationCenterOperator
+      distributionProvider:
+        meaning: cim:MarketRoleKind.distributionProvider
+      energyServiceConsumer:
+        meaning: cim:MarketRoleKind.energyServiceConsumer
+      generatorOperator:
+        meaning: cim:MarketRoleKind.generatorOperator
+      generatorOwner:
+        meaning: cim:MarketRoleKind.generatorOwner
+      GridAccessProvider:
+        meaning: cim:MarketRoleKind.GridAccessProvider
+      GridOperator:
+        meaning: cim:MarketRoleKind.GridOperator
+      ImbalanceSettlementResponsible:
+        meaning: cim:MarketRoleKind.ImbalanceSettlementResponsible
+      interchangeAuthority:
+        meaning: cim:MarketRoleKind.interchangeAuthority
+      InterconnectionTradeResponsible:
+        meaning: cim:MarketRoleKind.InterconnectionTradeResponsible
+      loadServingEntity:
+        meaning: cim:MarketRoleKind.loadServingEntity
+      MarketInformationAggregator:
+        meaning: cim:MarketRoleKind.MarketInformationAggregator
+      MarketOperator:
+        meaning: cim:MarketRoleKind.MarketOperator
+      MeterAdministrator:
+        meaning: cim:MarketRoleKind.MeterAdministrator
+      MeteredDataAggregator:
+        meaning: cim:MarketRoleKind.MeteredDataAggregator
+      MeteredDataCollector:
+        meaning: cim:MarketRoleKind.MeteredDataCollector
+      MeteredDataResponsible:
+        meaning: cim:MarketRoleKind.MeteredDataResponsible
+      MeteringPointAdministrator:
+        meaning: cim:MarketRoleKind.MeteringPointAdministrator
+      MeterOperator:
+        meaning: cim:MarketRoleKind.MeterOperator
+      MOLResponsible:
+        meaning: cim:MarketRoleKind.MOLResponsible
+      NominationValidator:
+        meaning: cim:MarketRoleKind.NominationValidator
+      PartyConnectedToTheGrid:
+        meaning: cim:MarketRoleKind.PartyConnectedToTheGrid
+      planningAuthority:
+        meaning: cim:MarketRoleKind.planningAuthority
+      Producer:
+        meaning: cim:MarketRoleKind.Producer
+      ProductionResponsibleParty:
+        meaning: cim:MarketRoleKind.ProductionResponsibleParty
+      purchasingSellingEntity:
+        meaning: cim:MarketRoleKind.purchasingSellingEntity
+      ReconciliationAccountable:
+        meaning: cim:MarketRoleKind.ReconciliationAccountable
+      ReconciliationResponsible:
+        meaning: cim:MarketRoleKind.ReconciliationResponsible
+      reliabilityAuthority:
+        meaning: cim:MarketRoleKind.reliabilityAuthority
+      ReserveAllocator:
+        meaning: cim:MarketRoleKind.ReserveAllocator
+      resourcePlanner:
+        meaning: cim:MarketRoleKind.resourcePlanner
+      ResourceProvider:
+        meaning: cim:MarketRoleKind.ResourceProvider
+      SchedulingCoordinator:
+        meaning: cim:MarketRoleKind.SchedulingCoordinator
+      standardsDeveloper:
+        meaning: cim:MarketRoleKind.standardsDeveloper
+      SystemOperator:
+        meaning: cim:MarketRoleKind.SystemOperator
+      TradeResponsibleParty:
+        meaning: cim:MarketRoleKind.TradeResponsibleParty
+      TransmissionCapacityAllocator:
+        meaning: cim:MarketRoleKind.TransmissionCapacityAllocator
+      transmissionOperator:
+        meaning: cim:MarketRoleKind.transmissionOperator
+      transmissionOwner:
+        meaning: cim:MarketRoleKind.transmissionOwner
+      transmissionPlanner:
+        meaning: cim:MarketRoleKind.transmissionPlanner
+      transmissionServiceProvider:
+        meaning: cim:MarketRoleKind.transmissionServiceProvider
+    enum_uri: cim:MarketRoleKind
+    description: Kind of market role an organisation can have. This list is not exhausted,
+      as other roles may exist.

@@ -1,0 +1,2372 @@
+id: cim:Domain
+name: TC57CIM.IEC61970.Base.Domain
+title: Domain
+description: "The ControlArea package models area specifications which can be used\
+  \ for a variety of purposes.  The package as a whole models potentially overlapping\
+  \ control area specifications for the purpose of actual generation control, load\
+  \ forecast area load capture, or powerflow based analysis.\r\n"
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  cim: https://cim.ucaiug.io/ns#
+default_curi_maps:
+- semweb_context
+default_prefix: cim
+default_range: string
+classes:
+  VoltagePerReactivePower:
+    name: VoltagePerReactivePower
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:VoltagePerReactivePower.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:VoltagePerReactivePower.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:VoltagePerReactivePower.value
+    class_uri: cim:VoltagePerReactivePower
+    is_a:
+    description: "Voltage variation with reactive power.\r\n"
+  Length:
+    name: Length
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Length.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Length.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Length.value
+    class_uri: cim:Length
+    is_a:
+    description: Unit of length. It shall be a positive value or zero.
+  ConductancePerLength:
+    name: ConductancePerLength
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ConductancePerLength.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ConductancePerLength.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ConductancePerLength.value
+    class_uri: cim:ConductancePerLength
+    is_a:
+    description: "Real part of admittance per unit of length.\r\n"
+  VolumeFlowRate:
+    name: VolumeFlowRate
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:VolumeFlowRate.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:VolumeFlowRate.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:VolumeFlowRate.value
+    class_uri: cim:VolumeFlowRate
+    is_a:
+    description: "Volume per time.\r\n"
+  TimeInterval:
+    name: TimeInterval
+    attributes:
+      end:
+        name: end
+        range: time
+        required: false
+        multivalued: false
+        description: "End time of this interval.\r\n"
+        slot_uri: cim:TimeInterval.end
+      start:
+        name: start
+        range: time
+        required: false
+        multivalued: false
+        description: "Start time of this interval.\r\n"
+        slot_uri: cim:TimeInterval.start
+    class_uri: cim:TimeInterval
+    is_a:
+    description: "Interval between two times.\r\n"
+  Volume:
+    name: Volume
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Volume.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Volume.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Volume.value
+    class_uri: cim:Volume
+    is_a:
+    description: "Volume.\r\n"
+  Voltage:
+    name: Voltage
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Voltage.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Voltage.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Voltage.value
+    class_uri: cim:Voltage
+    is_a:
+    description: Electrical voltage, can be both AC and DC.
+  DateInterval:
+    name: DateInterval
+    attributes:
+      end:
+        name: end
+        range: date
+        required: false
+        multivalued: false
+        description: "End date of this interval.\r\n"
+        slot_uri: cim:DateInterval.end
+      start:
+        name: start
+        range: date
+        required: false
+        multivalued: false
+        description: "Start date of this interval.\r\n"
+        slot_uri: cim:DateInterval.start
+    class_uri: cim:DateInterval
+    is_a:
+    description: "Interval between two dates.\r\n"
+  Temperature:
+    name: Temperature
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Temperature.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Temperature.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Temperature.value
+    class_uri: cim:Temperature
+    is_a:
+    description: "Value of temperature in degrees Celsius.\r\n"
+  Admittance:
+    name: Admittance
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Admittance.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Admittance.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Admittance.value
+    class_uri: cim:Admittance
+    is_a:
+    description: "Ratio of current to voltage.\r\n"
+  Impedance:
+    name: Impedance
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Impedance.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Impedance.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Impedance.value
+    class_uri: cim:Impedance
+    is_a:
+    description: "Ratio of voltage to current.\r\n"
+  CostPerVolume:
+    name: CostPerVolume
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CostPerVolume.multiplier
+      unit:
+        name: unit
+        range: Currency
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CostPerVolume.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CostPerVolume.value
+    class_uri: cim:CostPerVolume
+    is_a:
+    description: "Cost per unit volume.\r\n"
+  SusceptancePerLength:
+    name: SusceptancePerLength
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:SusceptancePerLength.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:SusceptancePerLength.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:SusceptancePerLength.value
+    class_uri: cim:SusceptancePerLength
+    is_a:
+    description: "Imaginary part of admittance per unit of length.\r\n"
+  Money:
+    name: Money
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Money.multiplier
+      unit:
+        name: unit
+        range: Currency
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Money.unit
+      value:
+        name: value
+        range: double
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Money.value
+    class_uri: cim:Money
+    is_a:
+    description: "Amount of money.\r\n"
+  Minutes:
+    name: Minutes
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Minutes.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Minutes.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Minutes.value
+    class_uri: cim:Minutes
+    is_a:
+    description: "Time in minutes.\r\n"
+  FloatQuantity:
+    name: FloatQuantity
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description: Unit multiplier of this quantity.
+        slot_uri: cim:FloatQuantity.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description: Unit of this quantity.
+        slot_uri: cim:FloatQuantity.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description: Value of this quantity.
+        slot_uri: cim:FloatQuantity.value
+    class_uri: cim:FloatQuantity
+    is_a:
+    description: Quantity with float value and associated unit information.
+  CostPerEnergyUnit:
+    name: CostPerEnergyUnit
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CostPerEnergyUnit.multiplier
+      unit:
+        name: unit
+        range: Currency
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CostPerEnergyUnit.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CostPerEnergyUnit.value
+    class_uri: cim:CostPerEnergyUnit
+    is_a:
+    description: "Cost, in units of currency, per quantity of electrical energy generated.\r\
+      \n"
+  PerCent:
+    name: PerCent
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:PerCent.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:PerCent.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description: Normally 0 to 100 on a defined base.
+        slot_uri: cim:PerCent.value
+    class_uri: cim:PerCent
+    is_a:
+    description: "Percentage on a defined base.   For example, specify as 100 to indicate\
+      \ at the defined base.\r\n"
+  IntegerQuantity:
+    name: IntegerQuantity
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description: Unit multiplier of this quantity.
+        slot_uri: cim:IntegerQuantity.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description: Unit of this quantity.
+        slot_uri: cim:IntegerQuantity.unit
+      value:
+        name: value
+        range: integer
+        required: false
+        multivalued: false
+        description: Value of this quantity.
+        slot_uri: cim:IntegerQuantity.value
+    class_uri: cim:IntegerQuantity
+    is_a:
+    description: Quantity with integer value and associated unit information.
+  ApparentPower:
+    name: ApparentPower
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ApparentPower.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ApparentPower.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ApparentPower.value
+    class_uri: cim:ApparentPower
+    is_a:
+    description: "Product of the RMS value of the voltage and the RMS value of the\
+      \ current.\r\n"
+  WaterLevel:
+    name: WaterLevel
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:WaterLevel.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:WaterLevel.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:WaterLevel.value
+    class_uri: cim:WaterLevel
+    is_a:
+    description: "Reservoir water level referred to a given datum such as mean sea\
+      \ level.\r\n"
+  Displacement:
+    name: Displacement
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Displacement.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Displacement.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Displacement.value
+    class_uri: cim:Displacement
+    is_a:
+    description: Unit of displacement relative to a reference position, hence can
+      be negative.
+  Damping:
+    name: Damping
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Damping.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Damping.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Damping.value
+    class_uri: cim:Damping
+    is_a:
+    description: Per-unit active power variation with frequency referenced on the
+      system apparent power base. Typical values are in the range 1,0 - 2,0.
+  Seconds:
+    name: Seconds
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Seconds.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Seconds.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description: Time, in seconds
+        slot_uri: cim:Seconds.value
+    class_uri: cim:Seconds
+    is_a:
+    description: "Time, in seconds.\r\n"
+  ResistancePerLength:
+    name: ResistancePerLength
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ResistancePerLength.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ResistancePerLength.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ResistancePerLength.value
+    class_uri: cim:ResistancePerLength
+    is_a:
+    description: "Resistance (real part of impedance) per unit of length.\r\n"
+  Inductance:
+    name: Inductance
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Inductance.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Inductance.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Inductance.value
+    class_uri: cim:Inductance
+    is_a:
+    description: "Inductive part of reactance (imaginary part of impedance), at rated\
+      \ frequency.\r\n"
+  AngleDegrees:
+    name: AngleDegrees
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:AngleDegrees.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:AngleDegrees.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:AngleDegrees.value
+    class_uri: cim:AngleDegrees
+    is_a:
+    description: "Measurement of angle in degrees.\r\n"
+  CostRate:
+    name: CostRate
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CostRate.multiplier
+      unit:
+        name: unit
+        range: Currency
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CostRate.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CostRate.value
+    class_uri: cim:CostRate
+    is_a:
+    description: Cost, in units of currency, per elapsed time.
+  Speed:
+    name: Speed
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Speed.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Speed.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Speed.value
+    class_uri: cim:Speed
+    is_a:
+    description: "Distance per unit of time.\r\n"
+  Capacitance:
+    name: Capacitance
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Capacitance.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Capacitance.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Capacitance.value
+    class_uri: cim:Capacitance
+    is_a:
+    description: "Capacitive part of reactance (imaginary part of impedance), at rated\
+      \ frequency.\r\n"
+  PU:
+    name: PU
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:PU.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:PU.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:PU.value
+    class_uri: cim:PU
+    is_a:
+    description: "Per Unit - a positive or negative value referred to a defined base.\
+      \ Values typically range from -10 to +10.\r\n"
+  Pressure:
+    name: Pressure
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Pressure.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Pressure.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Pressure.value
+    class_uri: cim:Pressure
+    is_a:
+    description: Pressure in pascals.
+  KiloActivePower:
+    name: KiloActivePower
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:KiloActivePower.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:KiloActivePower.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:KiloActivePower.value
+    class_uri: cim:KiloActivePower
+    is_a:
+    description: "Active power in kilowatts.\r\n"
+  ReactivePower:
+    name: ReactivePower
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ReactivePower.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ReactivePower.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ReactivePower.value
+    class_uri: cim:ReactivePower
+    is_a:
+    description: "Product of RMS value of the voltage and the RMS value of the quadrature\
+      \ component of the current.\r\n"
+  StringQuantity:
+    name: StringQuantity
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description: Unit multiplier of this quantity.
+        slot_uri: cim:StringQuantity.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description: Unit of this quantity.
+        slot_uri: cim:StringQuantity.unit
+      value:
+        name: value
+        range: string
+        required: false
+        multivalued: false
+        description: Value of this quantity.
+        slot_uri: cim:StringQuantity.value
+    class_uri: cim:StringQuantity
+    is_a:
+    description: Quantity with string value (when it is not important whether it is
+      an integral or a floating point number) and associated unit information.
+  ActivePowerChangeRate:
+    name: ActivePowerChangeRate
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ActivePowerChangeRate.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ActivePowerChangeRate.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ActivePowerChangeRate.value
+    class_uri: cim:ActivePowerChangeRate
+    is_a:
+    description: "Rate of change of active power per time.\r\n"
+  Hours:
+    name: Hours
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Hours.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Hours.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Hours.value
+    class_uri: cim:Hours
+    is_a:
+    description: "Time specified in hours.\r\n"
+  Conductance:
+    name: Conductance
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Conductance.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Conductance.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Conductance.value
+    class_uri: cim:Conductance
+    is_a:
+    description: "Factor by which voltage must be multiplied to give corresponding\
+      \ power lost from a circuit. Real part of admittance.\r\n"
+  RotationSpeed:
+    name: RotationSpeed
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:RotationSpeed.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:RotationSpeed.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:RotationSpeed.value
+    class_uri: cim:RotationSpeed
+    is_a:
+    description: "Number of revolutions per second.\r\n"
+  CurrentFlow:
+    name: CurrentFlow
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CurrentFlow.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CurrentFlow.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CurrentFlow.value
+    class_uri: cim:CurrentFlow
+    is_a:
+    description: 'Electrical current with sign convention: positive flow is out of
+      the conducting equipment into the connectivity node. Can be both AC and DC.'
+  Frequency:
+    name: Frequency
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Frequency.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Frequency.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Frequency.value
+    class_uri: cim:Frequency
+    is_a:
+    description: Cycles per second.
+  DateTimeInterval:
+    name: DateTimeInterval
+    attributes:
+      end:
+        name: end
+        range: date
+        required: false
+        multivalued: false
+        description: End date and time of this interval.  The end date and time where
+          the interval is defined up to, but excluded.
+        slot_uri: cim:DateTimeInterval.end
+      start:
+        name: start
+        range: date
+        required: false
+        multivalued: false
+        description: Start date and time of this interval.  The start date and time
+          is included in the defined interval.
+        slot_uri: cim:DateTimeInterval.start
+    class_uri: cim:DateTimeInterval
+    is_a:
+    description: 'Interval between two date and time points, where the interval includes
+      the start time but excludes end time.  '
+  AngleRadians:
+    name: AngleRadians
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:AngleRadians.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:AngleRadians.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:AngleRadians.value
+    class_uri: cim:AngleRadians
+    is_a:
+    description: "Phase angle in radians.\r\n"
+  ActivePower:
+    name: ActivePower
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ActivePower.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ActivePower.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ActivePower.value
+    class_uri: cim:ActivePower
+    is_a:
+    description: Product of RMS value of the voltage and the RMS value of the in-phase
+      component of the current.
+  ReactancePerLength:
+    name: ReactancePerLength
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ReactancePerLength.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ReactancePerLength.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ReactancePerLength.value
+    class_uri: cim:ReactancePerLength
+    is_a:
+    description: "Reactance (imaginary part of impedance) per unit of length, at rated\
+      \ frequency.\r\n"
+  Resistance:
+    name: Resistance
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Resistance.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Resistance.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Resistance.value
+    class_uri: cim:Resistance
+    is_a:
+    description: "Resistance (real part of impedance).\r\n"
+  Reactance:
+    name: Reactance
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Reactance.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Reactance.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Reactance.value
+    class_uri: cim:Reactance
+    is_a:
+    description: "Reactance (imaginary part of impedance), at rated frequency.\r\n"
+  Susceptance:
+    name: Susceptance
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Susceptance.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Susceptance.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Susceptance.value
+    class_uri: cim:Susceptance
+    is_a:
+    description: Imaginary part of admittance.
+  RealEnergy:
+    name: RealEnergy
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:RealEnergy.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:RealEnergy.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:RealEnergy.value
+    class_uri: cim:RealEnergy
+    is_a:
+    description: "Real electrical energy.\r\n"
+  Classification:
+    name: Classification
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Classification.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Classification.unit
+      value:
+        name: value
+        range: integer
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Classification.value
+    class_uri: cim:Classification
+    is_a:
+    description: Classification of level.  Specify as 1..n, with 1 being the most
+      detailed, highest priority, etc as described on the attribute using this data
+      type.
+  HeatRate:
+    name: HeatRate
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:HeatRate.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:HeatRate.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:HeatRate.value
+    class_uri: cim:HeatRate
+    is_a:
+    description: Heat generated, in energy per time unit of elapsed time.
+  Emission:
+    name: Emission
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Emission.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Emission.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Emission.value
+    class_uri: cim:Emission
+    is_a:
+    description: "Quantity of emission per fuel heat content.\r\n"
+  CostPerHeatUnit:
+    name: CostPerHeatUnit
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CostPerHeatUnit.multiplier
+      unit:
+        name: unit
+        range: Currency
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CostPerHeatUnit.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CostPerHeatUnit.value
+    class_uri: cim:CostPerHeatUnit
+    is_a:
+    description: "Cost, in units of currency, per quantity of heat generated.\r\n"
+  ActivePowerPerFrequency:
+    name: ActivePowerPerFrequency
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ActivePowerPerFrequency.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ActivePowerPerFrequency.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ActivePowerPerFrequency.value
+    class_uri: cim:ActivePowerPerFrequency
+    is_a:
+    description: Active power variation with frequency.
+  MonthDayInterval:
+    name: MonthDayInterval
+    attributes:
+      end:
+        name: end
+        range: date
+        required: false
+        multivalued: false
+        description: End time of this interval.
+        slot_uri: cim:MonthDayInterval.end
+      start:
+        name: start
+        range: date
+        required: false
+        multivalued: false
+        description: Start time of this interval.
+        slot_uri: cim:MonthDayInterval.start
+    class_uri: cim:MonthDayInterval
+    is_a:
+    description: Interval between two times specified as month and day.
+  InductancePerLength:
+    name: InductancePerLength
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:InductancePerLength.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:InductancePerLength.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:InductancePerLength.value
+    class_uri: cim:InductancePerLength
+    is_a:
+    description: Inductance per unit of length.
+  CapacitancePerLength:
+    name: CapacitancePerLength
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CapacitancePerLength.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CapacitancePerLength.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:CapacitancePerLength.value
+    class_uri: cim:CapacitancePerLength
+    is_a:
+    description: Capacitance per unit of length.
+  DecimalQuantity:
+    name: DecimalQuantity
+    attributes:
+      currency:
+        name: currency
+        range: Currency
+        required: false
+        multivalued: false
+        description: Currency of this quantity.
+        slot_uri: cim:DecimalQuantity.currency
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description: Unit multiplier of this quantity.
+        slot_uri: cim:DecimalQuantity.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description: Unit of this quantity.
+        slot_uri: cim:DecimalQuantity.unit
+      value:
+        name: value
+        range: double
+        required: false
+        multivalued: false
+        description: Value of this quantity.
+        slot_uri: cim:DecimalQuantity.value
+    class_uri: cim:DecimalQuantity
+    is_a:
+    description: Quantity with decimal value and associated unit or currency information.
+  Area:
+    name: Area
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Area.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Area.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Area.value
+    class_uri: cim:Area
+    is_a:
+    description: Area.
+  ActivePowerPerCurrentFlow:
+    name: ActivePowerPerCurrentFlow
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ActivePowerPerCurrentFlow.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ActivePowerPerCurrentFlow.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:ActivePowerPerCurrentFlow.value
+    class_uri: cim:ActivePowerPerCurrentFlow
+    is_a:
+    description: Active power variation with current flow.
+  Mass:
+    name: Mass
+    attributes:
+      multiplier:
+        name: multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Mass.multiplier
+      unit:
+        name: unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Mass.unit
+      value:
+        name: value
+        range: float
+        required: false
+        multivalued: false
+        description:
+        slot_uri: cim:Mass.value
+    class_uri: cim:Mass
+    is_a:
+    description: Mass.
+enums:
+  UnitMultiplier:
+    name: UnitMultiplier
+    permissible_values:
+      a:
+        meaning: cim:UnitMultiplier.a
+      c:
+        meaning: cim:UnitMultiplier.c
+      d:
+        meaning: cim:UnitMultiplier.d
+      da:
+        meaning: cim:UnitMultiplier.da
+      E:
+        meaning: cim:UnitMultiplier.E
+      f:
+        meaning: cim:UnitMultiplier.f
+      G:
+        meaning: cim:UnitMultiplier.G
+      h:
+        meaning: cim:UnitMultiplier.h
+      k:
+        meaning: cim:UnitMultiplier.k
+      m:
+        meaning: cim:UnitMultiplier.m
+      M:
+        meaning: cim:UnitMultiplier.M
+      micro:
+        meaning: cim:UnitMultiplier.micro
+      n:
+        meaning: cim:UnitMultiplier.n
+      none:
+        meaning: cim:UnitMultiplier.none
+      p:
+        meaning: cim:UnitMultiplier.p
+      P:
+        meaning: cim:UnitMultiplier.P
+      T:
+        meaning: cim:UnitMultiplier.T
+      y:
+        meaning: cim:UnitMultiplier.y
+      Y:
+        meaning: cim:UnitMultiplier.Y
+      z:
+        meaning: cim:UnitMultiplier.z
+      Z:
+        meaning: cim:UnitMultiplier.Z
+    enum_uri: cim:UnitMultiplier
+    description: "The unit multipliers defined for the CIM.  When applied to unit\
+      \ symbols, the unit symbol is treated as a derived unit. Regardless of the contents\
+      \ of the unit symbol text, the unit symbol shall be treated as if it were a\
+      \ single-character unit symbol. Unit symbols should not contain multipliers,\
+      \ and it should be left to the multiplier to define the multiple for an entire\
+      \ data type. \r\n\r\nFor example, if a unit symbol is \"m2Pers\" and the multiplier\
+      \ is \"k\", then the value is k(m**2/s), and the multiplier applies to the entire\
+      \ final value, not to any individual part of the value. This can be conceptualized\
+      \ by substituting a derived unit symbol for the unit type. If one imagines that\
+      \ the symbol \"\xDE\" represents the derived unit \"m2Pers\", then applying\
+      \ the multiplier \"k\" can be conceptualized simply as \"k\xDE\".\r\n\r\nFor\
+      \ example, the SI unit for mass is \"kg\" and not \"g\".  If the unit symbol\
+      \ is defined as \"kg\", then the multiplier is applied to \"kg\" as a whole\
+      \ and does not replace the \"k\" in front of the \"g\". In this case, the multiplier\
+      \ of \"m\" would be used with the unit symbol of \"kg\" to represent one gram.\
+      \  As a text string, this violates the instructions in IEC 80000-1. However,\
+      \ because the unit symbol in CIM is treated as a derived unit instead of as\
+      \ an SI unit, it makes more sense to conceptualize the \"kg\" as if it were\
+      \ replaced by one of the proposed replacements for the SI mass symbol. If one\
+      \ imagines that the \"kg\" were replaced by a symbol \"\xDE\", then it is easier\
+      \ to conceptualize the multiplier \"m\" as creating the proper unit \"m\xDE\"\
+      , and not the forbidden unit \"mkg\"."
+  UnitSymbol:
+    name: UnitSymbol
+    permissible_values:
+      A:
+        meaning: cim:UnitSymbol.A
+      A2:
+        meaning: cim:UnitSymbol.A2
+      A2h:
+        meaning: cim:UnitSymbol.A2h
+      A2s:
+        meaning: cim:UnitSymbol.A2s
+      Ah:
+        meaning: cim:UnitSymbol.Ah
+      anglemin:
+        meaning: cim:UnitSymbol.anglemin
+      anglesec:
+        meaning: cim:UnitSymbol.anglesec
+      APerA:
+        meaning: cim:UnitSymbol.APerA
+      APerm:
+        meaning: cim:UnitSymbol.APerm
+      As:
+        meaning: cim:UnitSymbol.As
+      bar:
+        meaning: cim:UnitSymbol.bar
+      Bq:
+        meaning: cim:UnitSymbol.Bq
+      Btu:
+        meaning: cim:UnitSymbol.Btu
+      C:
+        meaning: cim:UnitSymbol.C
+      cd:
+        meaning: cim:UnitSymbol.cd
+      character:
+        meaning: cim:UnitSymbol.character
+      charPers:
+        meaning: cim:UnitSymbol.charPers
+      cosPhi:
+        meaning: cim:UnitSymbol.cosPhi
+      count:
+        meaning: cim:UnitSymbol.count
+      CPerkg:
+        meaning: cim:UnitSymbol.CPerkg
+      CPerm2:
+        meaning: cim:UnitSymbol.CPerm2
+      CPerm3:
+        meaning: cim:UnitSymbol.CPerm3
+      d:
+        meaning: cim:UnitSymbol.d
+      dB:
+        meaning: cim:UnitSymbol.dB
+      dBm:
+        meaning: cim:UnitSymbol.dBm
+      deg:
+        meaning: cim:UnitSymbol.deg
+      degC:
+        meaning: cim:UnitSymbol.degC
+      F:
+        meaning: cim:UnitSymbol.F
+      FPerm:
+        meaning: cim:UnitSymbol.FPerm
+      ft3:
+        meaning: cim:UnitSymbol.ft3
+      G:
+        meaning: cim:UnitSymbol.G
+      gal:
+        meaning: cim:UnitSymbol.gal
+      gPerg:
+        meaning: cim:UnitSymbol.gPerg
+      Gy:
+        meaning: cim:UnitSymbol.Gy
+      GyPers:
+        meaning: cim:UnitSymbol.GyPers
+      H:
+        meaning: cim:UnitSymbol.H
+      h:
+        meaning: cim:UnitSymbol.h
+      ha:
+        meaning: cim:UnitSymbol.ha
+      HPerm:
+        meaning: cim:UnitSymbol.HPerm
+      Hz:
+        meaning: cim:UnitSymbol.Hz
+      HzPerHz:
+        meaning: cim:UnitSymbol.HzPerHz
+      HzPers:
+        meaning: cim:UnitSymbol.HzPers
+      J:
+        meaning: cim:UnitSymbol.J
+      JPerK:
+        meaning: cim:UnitSymbol.JPerK
+      JPerkg:
+        meaning: cim:UnitSymbol.JPerkg
+      JPerkgK:
+        meaning: cim:UnitSymbol.JPerkgK
+      JPerm2:
+        meaning: cim:UnitSymbol.JPerm2
+      JPerm3:
+        meaning: cim:UnitSymbol.JPerm3
+      JPermol:
+        meaning: cim:UnitSymbol.JPermol
+      JPermolK:
+        meaning: cim:UnitSymbol.JPermolK
+      JPers:
+        meaning: cim:UnitSymbol.JPers
+      K:
+        meaning: cim:UnitSymbol.K
+      kat:
+        meaning: cim:UnitSymbol.kat
+      katPerm3:
+        meaning: cim:UnitSymbol.katPerm3
+      kg:
+        meaning: cim:UnitSymbol.kg
+      kgm:
+        meaning: cim:UnitSymbol.kgm
+      kgm2:
+        meaning: cim:UnitSymbol.kgm2
+      kgPerJ:
+        meaning: cim:UnitSymbol.kgPerJ
+      kgPerm3:
+        meaning: cim:UnitSymbol.kgPerm3
+      kn:
+        meaning: cim:UnitSymbol.kn
+      KPers:
+        meaning: cim:UnitSymbol.KPers
+      l:
+        meaning: cim:UnitSymbol.l
+      lm:
+        meaning: cim:UnitSymbol.lm
+      lPerh:
+        meaning: cim:UnitSymbol.lPerh
+      lPerl:
+        meaning: cim:UnitSymbol.lPerl
+      lPers:
+        meaning: cim:UnitSymbol.lPers
+      lx:
+        meaning: cim:UnitSymbol.lx
+      m:
+        meaning: cim:UnitSymbol.m
+      M:
+        meaning: cim:UnitSymbol.M
+      m2:
+        meaning: cim:UnitSymbol.m2
+      m2Pers:
+        meaning: cim:UnitSymbol.m2Pers
+      m3:
+        meaning: cim:UnitSymbol.m3
+      m3Compensated:
+        meaning: cim:UnitSymbol.m3Compensated
+      m3Perh:
+        meaning: cim:UnitSymbol.m3Perh
+      m3Perkg:
+        meaning: cim:UnitSymbol.m3Perkg
+      m3Pers:
+        meaning: cim:UnitSymbol.m3Pers
+      m3Uncompensated:
+        meaning: cim:UnitSymbol.m3Uncompensated
+      min:
+        meaning: cim:UnitSymbol.min
+      mmHg:
+        meaning: cim:UnitSymbol.mmHg
+      mol:
+        meaning: cim:UnitSymbol.mol
+      molPerkg:
+        meaning: cim:UnitSymbol.molPerkg
+      molPerm3:
+        meaning: cim:UnitSymbol.molPerm3
+      molPermol:
+        meaning: cim:UnitSymbol.molPermol
+      mPerm3:
+        meaning: cim:UnitSymbol.mPerm3
+      mPers:
+        meaning: cim:UnitSymbol.mPers
+      mPers2:
+        meaning: cim:UnitSymbol.mPers2
+      Mx:
+        meaning: cim:UnitSymbol.Mx
+      N:
+        meaning: cim:UnitSymbol.N
+      Nm:
+        meaning: cim:UnitSymbol.Nm
+      none:
+        meaning: cim:UnitSymbol.none
+      NPerm:
+        meaning: cim:UnitSymbol.NPerm
+      Oe:
+        meaning: cim:UnitSymbol.Oe
+      ohm:
+        meaning: cim:UnitSymbol.ohm
+      ohmm:
+        meaning: cim:UnitSymbol.ohmm
+      ohmPerm:
+        meaning: cim:UnitSymbol.ohmPerm
+      onePerHz:
+        meaning: cim:UnitSymbol.onePerHz
+      onePerm:
+        meaning: cim:UnitSymbol.onePerm
+      Pa:
+        meaning: cim:UnitSymbol.Pa
+      PaPers:
+        meaning: cim:UnitSymbol.PaPers
+      Pas:
+        meaning: cim:UnitSymbol.Pas
+      ppm:
+        meaning: cim:UnitSymbol.ppm
+      Q:
+        meaning: cim:UnitSymbol.Q
+      Qh:
+        meaning: cim:UnitSymbol.Qh
+      rad:
+        meaning: cim:UnitSymbol.rad
+      radPers:
+        meaning: cim:UnitSymbol.radPers
+      radPers2:
+        meaning: cim:UnitSymbol.radPers2
+      rev:
+        meaning: cim:UnitSymbol.rev
+      rotPers:
+        meaning: cim:UnitSymbol.rotPers
+      s:
+        meaning: cim:UnitSymbol.s
+      S:
+        meaning: cim:UnitSymbol.S
+      SPerm:
+        meaning: cim:UnitSymbol.SPerm
+      sPers:
+        meaning: cim:UnitSymbol.sPers
+      sr:
+        meaning: cim:UnitSymbol.sr
+      Sv:
+        meaning: cim:UnitSymbol.Sv
+      T:
+        meaning: cim:UnitSymbol.T
+      therm:
+        meaning: cim:UnitSymbol.therm
+      tonne:
+        meaning: cim:UnitSymbol.tonne
+      V:
+        meaning: cim:UnitSymbol.V
+      V2:
+        meaning: cim:UnitSymbol.V2
+      V2h:
+        meaning: cim:UnitSymbol.V2h
+      VA:
+        meaning: cim:UnitSymbol.VA
+      VAh:
+        meaning: cim:UnitSymbol.VAh
+      VAr:
+        meaning: cim:UnitSymbol.VAr
+      VArh:
+        meaning: cim:UnitSymbol.VArh
+      Vh:
+        meaning: cim:UnitSymbol.Vh
+      VPerHz:
+        meaning: cim:UnitSymbol.VPerHz
+      VPerm:
+        meaning: cim:UnitSymbol.VPerm
+      VPerV:
+        meaning: cim:UnitSymbol.VPerV
+      VPerVA:
+        meaning: cim:UnitSymbol.VPerVA
+      VPerVAr:
+        meaning: cim:UnitSymbol.VPerVAr
+      Vs:
+        meaning: cim:UnitSymbol.Vs
+      W:
+        meaning: cim:UnitSymbol.W
+      Wb:
+        meaning: cim:UnitSymbol.Wb
+      Wh:
+        meaning: cim:UnitSymbol.Wh
+      WPerA:
+        meaning: cim:UnitSymbol.WPerA
+      WPerm2:
+        meaning: cim:UnitSymbol.WPerm2
+      WPerm2sr:
+        meaning: cim:UnitSymbol.WPerm2sr
+      WPermK:
+        meaning: cim:UnitSymbol.WPermK
+      WPers:
+        meaning: cim:UnitSymbol.WPers
+      WPersr:
+        meaning: cim:UnitSymbol.WPersr
+      WPerW:
+        meaning: cim:UnitSymbol.WPerW
+    enum_uri: cim:UnitSymbol
+    description: "The derived units defined for usage in the CIM. In some cases, the\
+      \ derived unit is equal to an SI unit. Whenever possible, the standard derived\
+      \ symbol is used instead of the formula for the derived unit. For example, the\
+      \ unit symbol Farad is defined as \"F\" instead of \"CPerV\". In cases where\
+      \ a standard symbol does not exist for a derived unit, the formula for the unit\
+      \ is used as the unit symbol. For example, density does not have a standard\
+      \ symbol and so it is represented as \"kgPerm3\". With the exception of the\
+      \ \"kg\", which is an SI unit, the unit symbols do not contain multipliers and\
+      \ therefore represent the base derived unit to which a multiplier can be applied\
+      \ as a whole. \r\nEvery unit symbol is treated as an unparseable text as if\
+      \ it were a single-letter symbol. The meaning of each unit symbol is defined\
+      \ by the accompanying descriptive text and not by the text contents of the unit\
+      \ symbol.\r\nTo allow the widest possible range of serializations without requiring\
+      \ special character handling, several substitutions are made which deviate from\
+      \ the format described in IEC 80000-1. The division symbol \"/\" is replaced\
+      \ by the letters \"Per\". Exponents are written in plain text after the unit\
+      \ as \"m3\" instead of being formatted as \"m\" with a superscript of 3  or\
+      \ introducing a symbol as in \"m^3\". The degree symbol \"\xB0\" is replaced\
+      \ with the letters \"deg\". Any clarification of the meaning for a substitution\
+      \ is included in the description for the unit symbol.\r\nNon-SI units are included\
+      \ in list of unit symbols to allow sources of data to be correctly labelled\
+      \ with their non-SI units (for example, a GPS sensor that is reporting numbers\
+      \ that represent feet instead of meters). This allows software to use the unit\
+      \ symbol information correctly convert and scale the raw data of those sources\
+      \ into SI-based units. \r\nThe integer values are used for harmonization with\
+      \ IEC 61850."
+  Currency:
+    name: Currency
+    permissible_values:
+      AED:
+        meaning: cim:Currency.AED
+      AFN:
+        meaning: cim:Currency.AFN
+      ALL:
+        meaning: cim:Currency.ALL
+      AMD:
+        meaning: cim:Currency.AMD
+      ANG:
+        meaning: cim:Currency.ANG
+      AOA:
+        meaning: cim:Currency.AOA
+      ARS:
+        meaning: cim:Currency.ARS
+      AUD:
+        meaning: cim:Currency.AUD
+      AWG:
+        meaning: cim:Currency.AWG
+      AZN:
+        meaning: cim:Currency.AZN
+      BAM:
+        meaning: cim:Currency.BAM
+      BBD:
+        meaning: cim:Currency.BBD
+      BDT:
+        meaning: cim:Currency.BDT
+      BGN:
+        meaning: cim:Currency.BGN
+      BHD:
+        meaning: cim:Currency.BHD
+      BIF:
+        meaning: cim:Currency.BIF
+      BMD:
+        meaning: cim:Currency.BMD
+      BND:
+        meaning: cim:Currency.BND
+      BOB:
+        meaning: cim:Currency.BOB
+      BOV:
+        meaning: cim:Currency.BOV
+      BRL:
+        meaning: cim:Currency.BRL
+      BSD:
+        meaning: cim:Currency.BSD
+      BTN:
+        meaning: cim:Currency.BTN
+      BWP:
+        meaning: cim:Currency.BWP
+      BYR:
+        meaning: cim:Currency.BYR
+      BZD:
+        meaning: cim:Currency.BZD
+      CAD:
+        meaning: cim:Currency.CAD
+      CDF:
+        meaning: cim:Currency.CDF
+      CHF:
+        meaning: cim:Currency.CHF
+      CLF:
+        meaning: cim:Currency.CLF
+      CLP:
+        meaning: cim:Currency.CLP
+      CNY:
+        meaning: cim:Currency.CNY
+      COP:
+        meaning: cim:Currency.COP
+      COU:
+        meaning: cim:Currency.COU
+      CRC:
+        meaning: cim:Currency.CRC
+      CUC:
+        meaning: cim:Currency.CUC
+      CUP:
+        meaning: cim:Currency.CUP
+      CVE:
+        meaning: cim:Currency.CVE
+      CZK:
+        meaning: cim:Currency.CZK
+      DJF:
+        meaning: cim:Currency.DJF
+      DKK:
+        meaning: cim:Currency.DKK
+      DOP:
+        meaning: cim:Currency.DOP
+      DZD:
+        meaning: cim:Currency.DZD
+      EEK:
+        meaning: cim:Currency.EEK
+      EGP:
+        meaning: cim:Currency.EGP
+      ERN:
+        meaning: cim:Currency.ERN
+      ETB:
+        meaning: cim:Currency.ETB
+      EUR:
+        meaning: cim:Currency.EUR
+      FJD:
+        meaning: cim:Currency.FJD
+      FKP:
+        meaning: cim:Currency.FKP
+      GBP:
+        meaning: cim:Currency.GBP
+      GEL:
+        meaning: cim:Currency.GEL
+      GHS:
+        meaning: cim:Currency.GHS
+      GIP:
+        meaning: cim:Currency.GIP
+      GMD:
+        meaning: cim:Currency.GMD
+      GNF:
+        meaning: cim:Currency.GNF
+      GTQ:
+        meaning: cim:Currency.GTQ
+      GYD:
+        meaning: cim:Currency.GYD
+      HKD:
+        meaning: cim:Currency.HKD
+      HNL:
+        meaning: cim:Currency.HNL
+      HRK:
+        meaning: cim:Currency.HRK
+      HTG:
+        meaning: cim:Currency.HTG
+      HUF:
+        meaning: cim:Currency.HUF
+      IDR:
+        meaning: cim:Currency.IDR
+      ILS:
+        meaning: cim:Currency.ILS
+      INR:
+        meaning: cim:Currency.INR
+      IQD:
+        meaning: cim:Currency.IQD
+      IRR:
+        meaning: cim:Currency.IRR
+      ISK:
+        meaning: cim:Currency.ISK
+      JMD:
+        meaning: cim:Currency.JMD
+      JOD:
+        meaning: cim:Currency.JOD
+      JPY:
+        meaning: cim:Currency.JPY
+      KES:
+        meaning: cim:Currency.KES
+      KGS:
+        meaning: cim:Currency.KGS
+      KHR:
+        meaning: cim:Currency.KHR
+      KMF:
+        meaning: cim:Currency.KMF
+      KPW:
+        meaning: cim:Currency.KPW
+      KRW:
+        meaning: cim:Currency.KRW
+      KWD:
+        meaning: cim:Currency.KWD
+      KYD:
+        meaning: cim:Currency.KYD
+      KZT:
+        meaning: cim:Currency.KZT
+      LAK:
+        meaning: cim:Currency.LAK
+      LBP:
+        meaning: cim:Currency.LBP
+      LKR:
+        meaning: cim:Currency.LKR
+      LRD:
+        meaning: cim:Currency.LRD
+      LSL:
+        meaning: cim:Currency.LSL
+      LTL:
+        meaning: cim:Currency.LTL
+      LVL:
+        meaning: cim:Currency.LVL
+      LYD:
+        meaning: cim:Currency.LYD
+      MAD:
+        meaning: cim:Currency.MAD
+      MDL:
+        meaning: cim:Currency.MDL
+      MGA:
+        meaning: cim:Currency.MGA
+      MKD:
+        meaning: cim:Currency.MKD
+      MMK:
+        meaning: cim:Currency.MMK
+      MNT:
+        meaning: cim:Currency.MNT
+      MOP:
+        meaning: cim:Currency.MOP
+      MRO:
+        meaning: cim:Currency.MRO
+      MUR:
+        meaning: cim:Currency.MUR
+      MVR:
+        meaning: cim:Currency.MVR
+      MWK:
+        meaning: cim:Currency.MWK
+      MXN:
+        meaning: cim:Currency.MXN
+      MYR:
+        meaning: cim:Currency.MYR
+      MZN:
+        meaning: cim:Currency.MZN
+      NAD:
+        meaning: cim:Currency.NAD
+      NGN:
+        meaning: cim:Currency.NGN
+      NIO:
+        meaning: cim:Currency.NIO
+      NOK:
+        meaning: cim:Currency.NOK
+      NPR:
+        meaning: cim:Currency.NPR
+      NZD:
+        meaning: cim:Currency.NZD
+      OMR:
+        meaning: cim:Currency.OMR
+      PAB:
+        meaning: cim:Currency.PAB
+      PEN:
+        meaning: cim:Currency.PEN
+      PGK:
+        meaning: cim:Currency.PGK
+      PHP:
+        meaning: cim:Currency.PHP
+      PKR:
+        meaning: cim:Currency.PKR
+      PLN:
+        meaning: cim:Currency.PLN
+      PYG:
+        meaning: cim:Currency.PYG
+      QAR:
+        meaning: cim:Currency.QAR
+      RON:
+        meaning: cim:Currency.RON
+      RSD:
+        meaning: cim:Currency.RSD
+      RUB:
+        meaning: cim:Currency.RUB
+      RWF:
+        meaning: cim:Currency.RWF
+      SAR:
+        meaning: cim:Currency.SAR
+      SBD:
+        meaning: cim:Currency.SBD
+      SCR:
+        meaning: cim:Currency.SCR
+      SDG:
+        meaning: cim:Currency.SDG
+      SEK:
+        meaning: cim:Currency.SEK
+      SGD:
+        meaning: cim:Currency.SGD
+      SHP:
+        meaning: cim:Currency.SHP
+      SLL:
+        meaning: cim:Currency.SLL
+      SOS:
+        meaning: cim:Currency.SOS
+      SRD:
+        meaning: cim:Currency.SRD
+      STD:
+        meaning: cim:Currency.STD
+      SYP:
+        meaning: cim:Currency.SYP
+      SZL:
+        meaning: cim:Currency.SZL
+      THB:
+        meaning: cim:Currency.THB
+      TJS:
+        meaning: cim:Currency.TJS
+      TMT:
+        meaning: cim:Currency.TMT
+      TND:
+        meaning: cim:Currency.TND
+      TOP:
+        meaning: cim:Currency.TOP
+      TRY:
+        meaning: cim:Currency.TRY
+      TTD:
+        meaning: cim:Currency.TTD
+      TWD:
+        meaning: cim:Currency.TWD
+      TZS:
+        meaning: cim:Currency.TZS
+      UAH:
+        meaning: cim:Currency.UAH
+      UGX:
+        meaning: cim:Currency.UGX
+      USD:
+        meaning: cim:Currency.USD
+      UYU:
+        meaning: cim:Currency.UYU
+      UZS:
+        meaning: cim:Currency.UZS
+      VEF:
+        meaning: cim:Currency.VEF
+      VND:
+        meaning: cim:Currency.VND
+      VUV:
+        meaning: cim:Currency.VUV
+      WST:
+        meaning: cim:Currency.WST
+      XAF:
+        meaning: cim:Currency.XAF
+      XCD:
+        meaning: cim:Currency.XCD
+      XOF:
+        meaning: cim:Currency.XOF
+      XPF:
+        meaning: cim:Currency.XPF
+      YER:
+        meaning: cim:Currency.YER
+      ZAR:
+        meaning: cim:Currency.ZAR
+      ZMK:
+        meaning: cim:Currency.ZMK
+      ZWL:
+        meaning: cim:Currency.ZWL
+    enum_uri: cim:Currency
+    description: Monetary currencies.  ISO 4217 standard including 3-character currency
+      code.
