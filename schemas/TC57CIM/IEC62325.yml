@@ -33,4 +33,8 @@ classes:
     class_uri: cim:IEC62325CIMVersion
     is_a:
     description: IEC 62325 version number assigned to this UML model.
+    in_subset:
+    - TC57CIM.IEC62325
 enums:
+subsets:
+  TC57CIM.IEC62325:

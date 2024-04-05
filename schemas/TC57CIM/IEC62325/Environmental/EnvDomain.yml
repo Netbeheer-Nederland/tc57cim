@@ -39,6 +39,8 @@ classes:
     class_uri: cim:MagneticField
     is_a:
     description: Magnetic field in nanotesla.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   RelativeDisplacement:
     name: RelativeDisplacement
     attributes:
@@ -60,6 +62,8 @@ classes:
     is_a:
     description: Vertical displacement relative to either sealevel, ground or the
       center of the earth.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   Displacement:
     name: Displacement
     attributes:
@@ -88,6 +92,8 @@ classes:
     is_a:
     description: Unit of displacement relative to a reference position, hence can
       be negative.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   ParticulateDensity:
     name: ParticulateDensity
     attributes:
@@ -115,6 +121,8 @@ classes:
     class_uri: cim:ParticulateDensity
     is_a:
     description: Particulate density as kg/m<sup>3</sup>.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   Bearing:
     name: Bearing
     attributes:
@@ -144,6 +152,8 @@ classes:
     description: The bearing in degrees (with 360 degrees being True North).  Measured
       in degrees clockwise from True North.  0 degrees indicates no direction being
       given.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
 enums:
   TestKind:
     name: TestKind
@@ -160,6 +170,8 @@ enums:
         meaning: cim:TestKind.lessThanOrEqualTo
     enum_uri: cim:TestKind
     description: The test applied to determine if the condition is met.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   AtmosphericAnalogKind:
     name: AtmosphericAnalogKind
     permissible_values:
@@ -223,6 +235,8 @@ enums:
         meaning: cim:AtmosphericAnalogKind.windSpeedSustained
     enum_uri: cim:AtmosphericAnalogKind
     description: Kinds of analogs (floats)  measuring an atmospheric condition.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   UncertaintyKind:
     name: UncertaintyKind
     permissible_values:
@@ -236,6 +250,8 @@ enums:
         meaning: cim:UncertaintyKind.unknown
     enum_uri: cim:UncertaintyKind
     description: The type of uncertainty for a reading.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   CoverageCodeKind:
     name: CoverageCodeKind
     permissible_values:
@@ -263,6 +279,8 @@ enums:
         meaning: cim:CoverageCodeKind.widespread
     enum_uri: cim:CoverageCodeKind
     description: Kinds of weather condition coverage.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   UnitMultiplier:
     name: UnitMultiplier
     permissible_values:
@@ -331,6 +349,8 @@ enums:
       \ imagines that the \"kg\" were replaced by a symbol \"\xDE\", then it is easier\
       \ to conceptualize the multiplier \"m\" as creating the proper unit \"m\xDE\"\
       , and not the forbidden unit \"mkg\"."
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   UnitSymbol:
     name: UnitSymbol
     permissible_values:
@@ -643,6 +663,8 @@ enums:
       \ symbol information correctly convert and scale the raw data of those sources\
       \ into SI-based units. \r\nThe integer values are used for harmonization with\
       \ IEC 61850."
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   FScale:
     name: FScale
     permissible_values:
@@ -667,6 +689,8 @@ enums:
       \ 8 levels of damage to 28 indicators. These estimates vary with height and\
       \ exposure.  \r\nThe 3 second gust is not the same wind as in standard surface\
       \ observations.\r\nEnumerations based on NOAA conventions."
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   WeatherCodeKind:
     name: WeatherCodeKind
     permissible_values:
@@ -728,6 +752,8 @@ enums:
         meaning: cim:WeatherCodeKind.wintryMix
     enum_uri: cim:WeatherCodeKind
     description: Kinds of weather conditions.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   RelativeDisplacementKind:
     name: RelativeDisplacementKind
     permissible_values:
@@ -739,6 +765,8 @@ enums:
         meaning: cim:RelativeDisplacementKind.seaLevel
     enum_uri: cim:RelativeDisplacementKind
     description: The types of relative displacement
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   ReportingMethodKind:
     name: ReportingMethodKind
     permissible_values:
@@ -750,6 +778,8 @@ enums:
         meaning: cim:ReportingMethodKind.queried
     enum_uri: cim:ReportingMethodKind
     description: Method by which information is gathered from station.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   EnvironmentalDiscreteKind:
     name: EnvironmentalDiscreteKind
     permissible_values:
@@ -757,6 +787,8 @@ enums:
         meaning: cim:EnvironmentalDiscreteKind.cloudCover
     enum_uri: cim:EnvironmentalDiscreteKind
     description: Discrete (integer) measuring an environmental condition.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   HydrosphericAnalogKind:
     name: HydrosphericAnalogKind
     permissible_values:
@@ -772,6 +804,8 @@ enums:
         meaning: cim:HydrosphericAnalogKind.waveHeight
     enum_uri: cim:HydrosphericAnalogKind
     description: Kinds of analogs (floats) measuring a hydrospheric condition.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   TimePeriodUnit:
     name: TimePeriodUnit
     permissible_values:
@@ -789,6 +823,8 @@ enums:
         meaning: cim:TimePeriodUnit.weeks
     enum_uri: cim:TimePeriodUnit
     description: Units in which reporting frequency is specified.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   GeosphericAnalogKind:
     name: GeosphericAnalogKind
     permissible_values:
@@ -806,6 +842,8 @@ enums:
         meaning: cim:GeosphericAnalogKind.temperature
     enum_uri: cim:GeosphericAnalogKind
     description: Kinds of analogs (floats) measuring a geospheric condition.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   SpaceAnalogKind:
     name: SpaceAnalogKind
     permissible_values:
@@ -815,6 +853,8 @@ enums:
         meaning: cim:SpaceAnalogKind.magneticFieldStrength
     enum_uri: cim:SpaceAnalogKind
     description: Kinds of analogs (floats) measuring a space condition.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   LocationKind:
     name: LocationKind
     permissible_values:
@@ -829,6 +869,8 @@ enums:
     enum_uri: cim:LocationKind
     description: The nature of the location being defined for an environmental entity.
       Possible values are center, perimeter, primary, secondary.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   CloudKind:
     name: CloudKind
     permissible_values:
@@ -858,6 +900,8 @@ enums:
         meaning: cim:CloudKind.toweringCumulus
     enum_uri: cim:CloudKind
     description: Kind of cloud.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
   IntensityCodeKind:
     name: IntensityCodeKind
     permissible_values:
@@ -871,3 +915,8 @@ enums:
         meaning: cim:IntensityCodeKind.veryLight
     enum_uri: cim:IntensityCodeKind
     description: Kinds of weather condition intensity.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
+subsets:
+  TC57CIM.IEC62325.Environmental.EnvDomain:
+  TC57CIM.IEC61970.Base.Domain:

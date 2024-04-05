@@ -44,4 +44,8 @@ classes:
     is_a:
     description: "This is the IEC 61970 CIM version number assigned to this UML model.\r\
       \n"
+    in_subset:
+    - TC57CIM.IEC61970
 enums:
+subsets:
+  TC57CIM.IEC61970:

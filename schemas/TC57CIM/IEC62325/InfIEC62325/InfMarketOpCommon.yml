@@ -127,3 +127,7 @@ enums:
     enum_uri: cim:MarketRoleKind
     description: Kind of market role an organisation can have. This list is not exhausted,
       as other roles may exist.
+    in_subset:
+    - TC57CIM.IEC62325.InfIEC62325.InfMarketOpCommon
+subsets:
+  TC57CIM.IEC62325.InfIEC62325.InfMarketOpCommon:

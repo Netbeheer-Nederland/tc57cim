@@ -42,6 +42,8 @@ classes:
     class_uri: cim:VoltagePerReactivePower
     is_a:
     description: "Voltage variation with reactive power.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Length:
     name: Length
     attributes:
@@ -69,6 +71,8 @@ classes:
     class_uri: cim:Length
     is_a:
     description: Unit of length. It shall be a positive value or zero.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   ConductancePerLength:
     name: ConductancePerLength
     attributes:
@@ -96,6 +100,8 @@ classes:
     class_uri: cim:ConductancePerLength
     is_a:
     description: "Real part of admittance per unit of length.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   VolumeFlowRate:
     name: VolumeFlowRate
     attributes:
@@ -123,6 +129,8 @@ classes:
     class_uri: cim:VolumeFlowRate
     is_a:
     description: "Volume per time.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   TimeInterval:
     name: TimeInterval
     attributes:
@@ -143,6 +151,8 @@ classes:
     class_uri: cim:TimeInterval
     is_a:
     description: "Interval between two times.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Volume:
     name: Volume
     attributes:
@@ -170,6 +180,8 @@ classes:
     class_uri: cim:Volume
     is_a:
     description: "Volume.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Voltage:
     name: Voltage
     attributes:
@@ -197,6 +209,8 @@ classes:
     class_uri: cim:Voltage
     is_a:
     description: Electrical voltage, can be both AC and DC.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   DateInterval:
     name: DateInterval
     attributes:
@@ -217,6 +231,8 @@ classes:
     class_uri: cim:DateInterval
     is_a:
     description: "Interval between two dates.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Temperature:
     name: Temperature
     attributes:
@@ -244,6 +260,8 @@ classes:
     class_uri: cim:Temperature
     is_a:
     description: "Value of temperature in degrees Celsius.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Admittance:
     name: Admittance
     attributes:
@@ -271,6 +289,8 @@ classes:
     class_uri: cim:Admittance
     is_a:
     description: "Ratio of current to voltage.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Impedance:
     name: Impedance
     attributes:
@@ -298,6 +318,8 @@ classes:
     class_uri: cim:Impedance
     is_a:
     description: "Ratio of voltage to current.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   CostPerVolume:
     name: CostPerVolume
     attributes:
@@ -325,6 +347,8 @@ classes:
     class_uri: cim:CostPerVolume
     is_a:
     description: "Cost per unit volume.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   SusceptancePerLength:
     name: SusceptancePerLength
     attributes:
@@ -352,6 +376,8 @@ classes:
     class_uri: cim:SusceptancePerLength
     is_a:
     description: "Imaginary part of admittance per unit of length.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Money:
     name: Money
     attributes:
@@ -379,6 +405,8 @@ classes:
     class_uri: cim:Money
     is_a:
     description: "Amount of money.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Minutes:
     name: Minutes
     attributes:
@@ -406,6 +434,8 @@ classes:
     class_uri: cim:Minutes
     is_a:
     description: "Time in minutes.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   FloatQuantity:
     name: FloatQuantity
     attributes:
@@ -433,6 +463,8 @@ classes:
     class_uri: cim:FloatQuantity
     is_a:
     description: Quantity with float value and associated unit information.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   CostPerEnergyUnit:
     name: CostPerEnergyUnit
     attributes:
@@ -461,6 +493,8 @@ classes:
     is_a:
     description: "Cost, in units of currency, per quantity of electrical energy generated.\r\
       \n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   PerCent:
     name: PerCent
     attributes:
@@ -489,6 +523,8 @@ classes:
     is_a:
     description: "Percentage on a defined base.   For example, specify as 100 to indicate\
       \ at the defined base.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   IntegerQuantity:
     name: IntegerQuantity
     attributes:
@@ -516,6 +552,8 @@ classes:
     class_uri: cim:IntegerQuantity
     is_a:
     description: Quantity with integer value and associated unit information.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   ApparentPower:
     name: ApparentPower
     attributes:
@@ -544,6 +582,8 @@ classes:
     is_a:
     description: "Product of the RMS value of the voltage and the RMS value of the\
       \ current.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   WaterLevel:
     name: WaterLevel
     attributes:
@@ -572,6 +612,8 @@ classes:
     is_a:
     description: "Reservoir water level referred to a given datum such as mean sea\
       \ level.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Displacement:
     name: Displacement
     attributes:
@@ -600,6 +642,8 @@ classes:
     is_a:
     description: Unit of displacement relative to a reference position, hence can
       be negative.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Damping:
     name: Damping
     attributes:
@@ -628,6 +672,8 @@ classes:
     is_a:
     description: Per-unit active power variation with frequency referenced on the
       system apparent power base. Typical values are in the range 1,0 - 2,0.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Seconds:
     name: Seconds
     attributes:
@@ -655,6 +701,8 @@ classes:
     class_uri: cim:Seconds
     is_a:
     description: "Time, in seconds.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   ResistancePerLength:
     name: ResistancePerLength
     attributes:
@@ -682,6 +730,8 @@ classes:
     class_uri: cim:ResistancePerLength
     is_a:
     description: "Resistance (real part of impedance) per unit of length.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Inductance:
     name: Inductance
     attributes:
@@ -710,6 +760,8 @@ classes:
     is_a:
     description: "Inductive part of reactance (imaginary part of impedance), at rated\
       \ frequency.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   AngleDegrees:
     name: AngleDegrees
     attributes:
@@ -737,6 +789,8 @@ classes:
     class_uri: cim:AngleDegrees
     is_a:
     description: "Measurement of angle in degrees.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   CostRate:
     name: CostRate
     attributes:
@@ -764,6 +818,8 @@ classes:
     class_uri: cim:CostRate
     is_a:
     description: Cost, in units of currency, per elapsed time.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Speed:
     name: Speed
     attributes:
@@ -791,6 +847,8 @@ classes:
     class_uri: cim:Speed
     is_a:
     description: "Distance per unit of time.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Capacitance:
     name: Capacitance
     attributes:
@@ -819,6 +877,8 @@ classes:
     is_a:
     description: "Capacitive part of reactance (imaginary part of impedance), at rated\
       \ frequency.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   PU:
     name: PU
     attributes:
@@ -847,6 +907,8 @@ classes:
     is_a:
     description: "Per Unit - a positive or negative value referred to a defined base.\
       \ Values typically range from -10 to +10.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Pressure:
     name: Pressure
     attributes:
@@ -874,6 +936,8 @@ classes:
     class_uri: cim:Pressure
     is_a:
     description: Pressure in pascals.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   KiloActivePower:
     name: KiloActivePower
     attributes:
@@ -901,6 +965,8 @@ classes:
     class_uri: cim:KiloActivePower
     is_a:
     description: "Active power in kilowatts.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   ReactivePower:
     name: ReactivePower
     attributes:
@@ -929,6 +995,8 @@ classes:
     is_a:
     description: "Product of RMS value of the voltage and the RMS value of the quadrature\
       \ component of the current.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   StringQuantity:
     name: StringQuantity
     attributes:
@@ -957,6 +1025,8 @@ classes:
     is_a:
     description: Quantity with string value (when it is not important whether it is
       an integral or a floating point number) and associated unit information.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   ActivePowerChangeRate:
     name: ActivePowerChangeRate
     attributes:
@@ -984,6 +1054,8 @@ classes:
     class_uri: cim:ActivePowerChangeRate
     is_a:
     description: "Rate of change of active power per time.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Hours:
     name: Hours
     attributes:
@@ -1011,6 +1083,8 @@ classes:
     class_uri: cim:Hours
     is_a:
     description: "Time specified in hours.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Conductance:
     name: Conductance
     attributes:
@@ -1039,6 +1113,8 @@ classes:
     is_a:
     description: "Factor by which voltage must be multiplied to give corresponding\
       \ power lost from a circuit. Real part of admittance.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   RotationSpeed:
     name: RotationSpeed
     attributes:
@@ -1066,6 +1142,8 @@ classes:
     class_uri: cim:RotationSpeed
     is_a:
     description: "Number of revolutions per second.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   CurrentFlow:
     name: CurrentFlow
     attributes:
@@ -1094,6 +1172,8 @@ classes:
     is_a:
     description: 'Electrical current with sign convention: positive flow is out of
       the conducting equipment into the connectivity node. Can be both AC and DC.'
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Frequency:
     name: Frequency
     attributes:
@@ -1121,6 +1201,8 @@ classes:
     class_uri: cim:Frequency
     is_a:
     description: Cycles per second.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   DateTimeInterval:
     name: DateTimeInterval
     attributes:
@@ -1144,6 +1226,8 @@ classes:
     is_a:
     description: 'Interval between two date and time points, where the interval includes
       the start time but excludes end time.  '
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   AngleRadians:
     name: AngleRadians
     attributes:
@@ -1171,6 +1255,8 @@ classes:
     class_uri: cim:AngleRadians
     is_a:
     description: "Phase angle in radians.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   ActivePower:
     name: ActivePower
     attributes:
@@ -1199,6 +1285,8 @@ classes:
     is_a:
     description: Product of RMS value of the voltage and the RMS value of the in-phase
       component of the current.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   ReactancePerLength:
     name: ReactancePerLength
     attributes:
@@ -1227,6 +1315,8 @@ classes:
     is_a:
     description: "Reactance (imaginary part of impedance) per unit of length, at rated\
       \ frequency.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Resistance:
     name: Resistance
     attributes:
@@ -1254,6 +1344,8 @@ classes:
     class_uri: cim:Resistance
     is_a:
     description: "Resistance (real part of impedance).\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Reactance:
     name: Reactance
     attributes:
@@ -1281,6 +1373,8 @@ classes:
     class_uri: cim:Reactance
     is_a:
     description: "Reactance (imaginary part of impedance), at rated frequency.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Susceptance:
     name: Susceptance
     attributes:
@@ -1308,6 +1402,8 @@ classes:
     class_uri: cim:Susceptance
     is_a:
     description: Imaginary part of admittance.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   RealEnergy:
     name: RealEnergy
     attributes:
@@ -1335,6 +1431,8 @@ classes:
     class_uri: cim:RealEnergy
     is_a:
     description: "Real electrical energy.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Classification:
     name: Classification
     attributes:
@@ -1364,6 +1462,8 @@ classes:
     description: Classification of level.  Specify as 1..n, with 1 being the most
       detailed, highest priority, etc as described on the attribute using this data
       type.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   HeatRate:
     name: HeatRate
     attributes:
@@ -1391,6 +1491,8 @@ classes:
     class_uri: cim:HeatRate
     is_a:
     description: Heat generated, in energy per time unit of elapsed time.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Emission:
     name: Emission
     attributes:
@@ -1418,6 +1520,8 @@ classes:
     class_uri: cim:Emission
     is_a:
     description: "Quantity of emission per fuel heat content.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   CostPerHeatUnit:
     name: CostPerHeatUnit
     attributes:
@@ -1445,6 +1549,8 @@ classes:
     class_uri: cim:CostPerHeatUnit
     is_a:
     description: "Cost, in units of currency, per quantity of heat generated.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   ActivePowerPerFrequency:
     name: ActivePowerPerFrequency
     attributes:
@@ -1472,6 +1578,8 @@ classes:
     class_uri: cim:ActivePowerPerFrequency
     is_a:
     description: Active power variation with frequency.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   MonthDayInterval:
     name: MonthDayInterval
     attributes:
@@ -1492,6 +1600,8 @@ classes:
     class_uri: cim:MonthDayInterval
     is_a:
     description: Interval between two times specified as month and day.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   InductancePerLength:
     name: InductancePerLength
     attributes:
@@ -1519,6 +1629,8 @@ classes:
     class_uri: cim:InductancePerLength
     is_a:
     description: Inductance per unit of length.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   CapacitancePerLength:
     name: CapacitancePerLength
     attributes:
@@ -1546,6 +1658,8 @@ classes:
     class_uri: cim:CapacitancePerLength
     is_a:
     description: Capacitance per unit of length.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   DecimalQuantity:
     name: DecimalQuantity
     attributes:
@@ -1580,6 +1694,8 @@ classes:
     class_uri: cim:DecimalQuantity
     is_a:
     description: Quantity with decimal value and associated unit or currency information.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Area:
     name: Area
     attributes:
@@ -1607,6 +1723,8 @@ classes:
     class_uri: cim:Area
     is_a:
     description: Area.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   ActivePowerPerCurrentFlow:
     name: ActivePowerPerCurrentFlow
     attributes:
@@ -1634,6 +1752,8 @@ classes:
     class_uri: cim:ActivePowerPerCurrentFlow
     is_a:
     description: Active power variation with current flow.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Mass:
     name: Mass
     attributes:
@@ -1661,6 +1781,8 @@ classes:
     class_uri: cim:Mass
     is_a:
     description: Mass.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
 enums:
   UnitMultiplier:
     name: UnitMultiplier
@@ -1730,6 +1852,8 @@ enums:
       \ imagines that the \"kg\" were replaced by a symbol \"\xDE\", then it is easier\
       \ to conceptualize the multiplier \"m\" as creating the proper unit \"m\xDE\"\
       , and not the forbidden unit \"mkg\"."
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   UnitSymbol:
     name: UnitSymbol
     permissible_values:
@@ -2042,6 +2166,8 @@ enums:
       \ symbol information correctly convert and scale the raw data of those sources\
       \ into SI-based units. \r\nThe integer values are used for harmonization with\
       \ IEC 61850."
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Currency:
     name: Currency
     permissible_values:
@@ -2370,3 +2496,7 @@ enums:
     enum_uri: cim:Currency
     description: Monetary currencies.  ISO 4217 standard including 3-character currency
       code.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+subsets:
+  TC57CIM.IEC61970.Base.Domain:

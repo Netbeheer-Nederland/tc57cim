@@ -36,4 +36,8 @@ classes:
     class_uri: cim:IEC61968CIMVersion
     is_a:
     description: "IEC 61968 version number assigned to this UML model.\r\n"
+    in_subset:
+    - TC57CIM.IEC61968
 enums:
+subsets:
+  TC57CIM.IEC61968:
