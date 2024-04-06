@@ -1,7 +1,6 @@
 id: cim:InfMarketOpCommon
 name: TC57CIM.IEC62325.InfIEC62325.InfMarketOpCommon
 title: InfMarketOpCommon
-description:
 imports:
 - linkml:types
 prefixes:
@@ -11,10 +10,8 @@ default_curi_maps:
 - semweb_context
 default_prefix: cim
 default_range: string
-classes:
 enums:
   MarketRoleKind:
-    name: MarketRoleKind
     permissible_values:
       BalanceResponsibleParty:
         meaning: cim:MarketRoleKind.BalanceResponsibleParty

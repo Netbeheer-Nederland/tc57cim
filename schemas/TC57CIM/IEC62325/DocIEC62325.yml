@@ -1,7 +1,6 @@
 id: cim:DocIEC62325
 name: TC57CIM.IEC62325.DocIEC62325
 title: DocIEC62325
-description:
 imports:
 - linkml:types
 prefixes:
@@ -11,6 +10,3 @@ default_curi_maps:
 - semweb_context
 default_prefix: cim
 default_range: string
-classes:
-enums:
-subsets: {}

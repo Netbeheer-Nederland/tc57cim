@@ -23,17 +23,14 @@ default_prefix: cim
 default_range: string
 classes:
   IEC61970CIMVersion:
-    name: IEC61970CIMVersion
     attributes:
       date:
-        name: date
         range: date
         required: false
         multivalued: false
         description: Form is YYYY-MM-DD for example for January 5, 2009 it is 2009-01-05.
         slot_uri: cim:IEC61970CIMVersion.date
       version:
-        name: version
         range: string
         required: false
         multivalued: false
@@ -41,11 +38,21 @@ classes:
           and the YY is the minor version. For example IEC61970CIM13v18.
         slot_uri: cim:IEC61970CIMVersion.version
     class_uri: cim:IEC61970CIMVersion
-    is_a:
     description: "This is the IEC 61970 CIM version number assigned to this UML model.\r\
       \n"
     in_subset:
     - TC57CIM.IEC61970
-enums:
 subsets:
   TC57CIM.IEC61970:
+    description: "The domain package defines primitive datatypes that are used by\
+      \ classes in other packages. Stereotypes are used to describe the datatypes.\
+      \ The following stereotypes are defined:\r\n&lt;&lt;enumeration&gt;&gt; A list\
+      \ of permissible constant values.\r\n&lt;&lt;Primitive&gt;&gt; The most basic\
+      \ data types used to compose all other data types.\r\n&lt;&lt;CIMDatatype&gt;&gt;\
+      \ A datatype that contains a value attribute, an optional unit of measure and\
+      \ a unit multiplier. The unit and multiplier may be specified as a static variable\
+      \ initialized to the allowed value.\r\n&lt;&lt;Compound&gt;&gt; A composite\
+      \ of Primitive, enumeration, CIMDatatype or other Compound classes, as long\
+      \ as the Compound classes do not recurse.\r\nFor all datatypes both positive\
+      \ and negative values are allowed unless stated otherwise for a particular datatype.\
+      \ \r\n"

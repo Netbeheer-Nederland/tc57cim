@@ -1,7 +1,6 @@
 id: cim:DetailedDiagrams
 name: TC57CIM.IEC61970.Base.ICCPConfiguration.DetailedDiagrams
 title: DetailedDiagrams
-description:
 imports:
 - linkml:types
 prefixes:
@@ -11,6 +10,3 @@ default_curi_maps:
 - semweb_context
 default_prefix: cim
 default_range: string
-classes:
-enums:
-subsets: {}

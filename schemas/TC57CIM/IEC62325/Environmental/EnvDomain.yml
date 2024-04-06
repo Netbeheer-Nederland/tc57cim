@@ -1,7 +1,6 @@
 id: cim:EnvDomain
 name: TC57CIM.IEC62325.Environmental.EnvDomain
 title: EnvDomain
-description:
 imports:
 - linkml:types
 prefixes:
@@ -13,142 +12,118 @@ default_prefix: cim
 default_range: string
 classes:
   MagneticField:
-    name: MagneticField
     attributes:
       multiplier:
-        name: multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
         description:
         slot_uri: cim:MagneticField.multiplier
       unit:
-        name: unit
         range: UnitSymbol
         required: false
         multivalued: false
         description:
         slot_uri: cim:MagneticField.unit
       value:
-        name: value
         range: float
         required: false
         multivalued: false
         description:
         slot_uri: cim:MagneticField.value
     class_uri: cim:MagneticField
-    is_a:
     description: Magnetic field in nanotesla.
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   RelativeDisplacement:
-    name: RelativeDisplacement
     attributes:
       displacement:
-        name: displacement
         range: Displacement
         required: false
         multivalued: false
         description:
         slot_uri: cim:RelativeDisplacement.displacement
       kind:
-        name: kind
         range: RelativeDisplacementKind
         required: false
         multivalued: false
         description:
         slot_uri: cim:RelativeDisplacement.kind
     class_uri: cim:RelativeDisplacement
-    is_a:
     description: Vertical displacement relative to either sealevel, ground or the
       center of the earth.
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   Displacement:
-    name: Displacement
     attributes:
       multiplier:
-        name: multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
         description:
         slot_uri: cim:Displacement.multiplier
       unit:
-        name: unit
         range: UnitSymbol
         required: false
         multivalued: false
         description:
         slot_uri: cim:Displacement.unit
       value:
-        name: value
         range: float
         required: false
         multivalued: false
         description:
         slot_uri: cim:Displacement.value
     class_uri: cim:Displacement
-    is_a:
     description: Unit of displacement relative to a reference position, hence can
       be negative.
     in_subset:
     - TC57CIM.IEC61970.Base.Domain
   ParticulateDensity:
-    name: ParticulateDensity
     attributes:
       multiplier:
-        name: multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
         description:
         slot_uri: cim:ParticulateDensity.multiplier
       unit:
-        name: unit
         range: UnitSymbol
         required: false
         multivalued: false
         description:
         slot_uri: cim:ParticulateDensity.unit
       value:
-        name: value
         range: float
         required: false
         multivalued: false
         description:
         slot_uri: cim:ParticulateDensity.value
     class_uri: cim:ParticulateDensity
-    is_a:
     description: Particulate density as kg/m<sup>3</sup>.
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   Bearing:
-    name: Bearing
     attributes:
       multiplier:
-        name: multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
         description:
         slot_uri: cim:Bearing.multiplier
       unit:
-        name: unit
         range: UnitSymbol
         required: false
         multivalued: false
         description:
         slot_uri: cim:Bearing.unit
       value:
-        name: value
         range: float
         required: false
         multivalued: false
         description:
         slot_uri: cim:Bearing.value
     class_uri: cim:Bearing
-    is_a:
     description: The bearing in degrees (with 360 degrees being True North).  Measured
       in degrees clockwise from True North.  0 degrees indicates no direction being
       given.
@@ -156,7 +131,6 @@ classes:
     - TC57CIM.IEC62325.Environmental.EnvDomain
 enums:
   TestKind:
-    name: TestKind
     permissible_values:
       equalTo:
         meaning: cim:TestKind.equalTo
@@ -173,7 +147,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   AtmosphericAnalogKind:
-    name: AtmosphericAnalogKind
     permissible_values:
       albedo:
         meaning: cim:AtmosphericAnalogKind.albedo
@@ -238,7 +211,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   UncertaintyKind:
-    name: UncertaintyKind
     permissible_values:
       estimated:
         meaning: cim:UncertaintyKind.estimated
@@ -253,7 +225,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   CoverageCodeKind:
-    name: CoverageCodeKind
     permissible_values:
       brief:
         meaning: cim:CoverageCodeKind.brief
@@ -282,7 +253,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   UnitMultiplier:
-    name: UnitMultiplier
     permissible_values:
       a:
         meaning: cim:UnitMultiplier.a
@@ -352,7 +322,6 @@ enums:
     in_subset:
     - TC57CIM.IEC61970.Base.Domain
   UnitSymbol:
-    name: UnitSymbol
     permissible_values:
       A:
         meaning: cim:UnitSymbol.A
@@ -666,7 +635,6 @@ enums:
     in_subset:
     - TC57CIM.IEC61970.Base.Domain
   FScale:
-    name: FScale
     permissible_values:
       five:
         meaning: cim:FScale.five
@@ -692,7 +660,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   WeatherCodeKind:
-    name: WeatherCodeKind
     permissible_values:
       blowingDust:
         meaning: cim:WeatherCodeKind.blowingDust
@@ -755,7 +722,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   RelativeDisplacementKind:
-    name: RelativeDisplacementKind
     permissible_values:
       centreEarth:
         meaning: cim:RelativeDisplacementKind.centreEarth
@@ -768,7 +734,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   ReportingMethodKind:
-    name: ReportingMethodKind
     permissible_values:
       automated:
         meaning: cim:ReportingMethodKind.automated
@@ -781,7 +746,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   EnvironmentalDiscreteKind:
-    name: EnvironmentalDiscreteKind
     permissible_values:
       cloudCover:
         meaning: cim:EnvironmentalDiscreteKind.cloudCover
@@ -790,7 +754,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   HydrosphericAnalogKind:
-    name: HydrosphericAnalogKind
     permissible_values:
       floodLevel:
         meaning: cim:HydrosphericAnalogKind.floodLevel
@@ -807,7 +770,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   TimePeriodUnit:
-    name: TimePeriodUnit
     permissible_values:
       days:
         meaning: cim:TimePeriodUnit.days
@@ -826,7 +788,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   GeosphericAnalogKind:
-    name: GeosphericAnalogKind
     permissible_values:
       lightningDensity:
         meaning: cim:GeosphericAnalogKind.lightningDensity
@@ -845,7 +806,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   SpaceAnalogKind:
-    name: SpaceAnalogKind
     permissible_values:
       magneticFieldDirection:
         meaning: cim:SpaceAnalogKind.magneticFieldDirection
@@ -856,7 +816,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   LocationKind:
-    name: LocationKind
     permissible_values:
       center:
         meaning: cim:LocationKind.center
@@ -872,7 +831,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   CloudKind:
-    name: CloudKind
     permissible_values:
       altoCumulus:
         meaning: cim:CloudKind.altoCumulus
@@ -903,7 +861,6 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
   IntensityCodeKind:
-    name: IntensityCodeKind
     permissible_values:
       heavy:
         meaning: cim:IntensityCodeKind.heavy
@@ -918,5 +875,9 @@ enums:
     in_subset:
     - TC57CIM.IEC62325.Environmental.EnvDomain
 subsets:
-  TC57CIM.IEC62325.Environmental.EnvDomain:
   TC57CIM.IEC61970.Base.Domain:
+    description: "The ControlArea package models area specifications which can be\
+      \ used for a variety of purposes.  The package as a whole models potentially\
+      \ overlapping control area specifications for the purpose of actual generation\
+      \ control, load forecast area load capture, or powerflow based analysis.\r\n"
+  TC57CIM.IEC62325.Environmental.EnvDomain:

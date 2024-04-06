@@ -1,7 +1,6 @@
 id: cim:IEC62325
 name: TC57CIM.IEC62325
 title: IEC62325
-description:
 imports:
 - linkml:types
 prefixes:
@@ -13,17 +12,14 @@ default_prefix: cim
 default_range: string
 classes:
   IEC62325CIMVersion:
-    name: IEC62325CIMVersion
     attributes:
       date:
-        name: date
         range: date
         required: false
         multivalued: false
         description: Form is YYYY-MM-DD for example for January 5, 2009 it is 2009-01-05.
         slot_uri: cim:IEC62325CIMVersion.date
       version:
-        name: version
         range: string
         required: false
         multivalued: false
@@ -31,10 +27,8 @@ classes:
           and the YY is the minor version. For example IEC62325CIM10v03.
         slot_uri: cim:IEC62325CIMVersion.version
     class_uri: cim:IEC62325CIMVersion
-    is_a:
     description: IEC 62325 version number assigned to this UML model.
     in_subset:
     - TC57CIM.IEC62325
-enums:
 subsets:
   TC57CIM.IEC62325:
