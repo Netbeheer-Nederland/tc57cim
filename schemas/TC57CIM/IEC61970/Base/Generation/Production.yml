@@ -7,7 +7,7 @@ description: This package contains example documentation diagrams not intended t
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 13:15:26.703887
+generation_date: 2024-04-06 15:00:40.060463
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

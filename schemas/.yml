@@ -1,11 +1,11 @@
-id: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.DocBase
-name: TC57CIM.IEC61970.Base.DocBase
-title: DocBase
-description: The equivalents package models equivalent networks.
+id: https://cim.ucaiug.io/ns#
+name: ''
+title: Model
+description: "Top package for IEC 61970.\r\n"
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 15:00:33.570834
+generation_date: 2024-04-06 15:00:33.563412
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

@@ -4,7 +4,7 @@ title: ICCPConfiguration
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 13:15:43.835554
+generation_date: 2024-04-06 15:00:56.334710
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

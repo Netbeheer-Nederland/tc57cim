@@ -4,7 +4,7 @@ title: PFVArControllerType1Dynamics
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 13:16:02.612403
+generation_date: 2024-04-06 15:01:14.211341
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

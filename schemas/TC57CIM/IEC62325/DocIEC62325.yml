@@ -4,7 +4,7 @@ title: DocIEC62325
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 13:16:57.982097
+generation_date: 2024-04-06 15:02:08.914252
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

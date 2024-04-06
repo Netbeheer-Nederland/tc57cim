@@ -4,7 +4,7 @@ title: TurbineLoadControllerDynamics
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 13:15:53.818063
+generation_date: 2024-04-06 15:01:05.836522
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:
