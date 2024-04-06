@@ -1,0 +1,41 @@
+id: cim:IEC62325
+name: TC57CIM.IEC62325
+title: IEC62325
+contributors:
+- github:bartkl
+created_by: https://github.com/bartkl/cim-to-linkml
+generation_date: 2024-04-06 12:57:12.136257
+license: https://www.apache.org/licenses/LICENSE-2.0.txt
+metamodel_version: 1.7.0
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  github: https://github.com/
+  cim: https://cim.ucaiug.io/ns#
+default_curi_maps:
+- semweb_context
+default_prefix: cim
+default_range: string
+classes:
+  IEC62325CIMVersion:
+    class_uri: cim:IEC62325CIMVersion
+    in_subset:
+    - TC57CIM.IEC62325
+    description: IEC 62325 version number assigned to this UML model.
+    attributes:
+      date:
+        slot_uri: cim:IEC62325CIMVersion.date
+        range: date
+        required: false
+        multivalued: false
+        description: Form is YYYY-MM-DD for example for January 5, 2009 it is 2009-01-05.
+      version:
+        slot_uri: cim:IEC62325CIMVersion.version
+        range: string
+        required: false
+        multivalued: false
+        description: Form is IEC62325CIMXXvYY where XX is the major CIM package version
+          and the YY is the minor version. For example IEC62325CIM10v03.
+subsets:
+  TC57CIM.IEC62325:
