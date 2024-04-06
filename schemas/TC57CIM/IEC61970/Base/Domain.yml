@@ -21,19 +21,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:VoltagePerReactivePower.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:VoltagePerReactivePower.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:VoltagePerReactivePower.value
     class_uri: cim:VoltagePerReactivePower
     description: "Voltage variation with reactive power.\r\n"
@@ -45,19 +42,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Length.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Length.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Length.value
     class_uri: cim:Length
     description: Unit of length. It shall be a positive value or zero.
@@ -69,19 +63,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ConductancePerLength.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ConductancePerLength.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ConductancePerLength.value
     class_uri: cim:ConductancePerLength
     description: "Real part of admittance per unit of length.\r\n"
@@ -93,19 +84,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:VolumeFlowRate.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:VolumeFlowRate.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:VolumeFlowRate.value
     class_uri: cim:VolumeFlowRate
     description: "Volume per time.\r\n"
@@ -135,19 +123,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Volume.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Volume.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Volume.value
     class_uri: cim:Volume
     description: "Volume.\r\n"
@@ -159,19 +144,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Voltage.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Voltage.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Voltage.value
     class_uri: cim:Voltage
     description: Electrical voltage, can be both AC and DC.
@@ -201,19 +183,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Temperature.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Temperature.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Temperature.value
     class_uri: cim:Temperature
     description: "Value of temperature in degrees Celsius.\r\n"
@@ -225,19 +204,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Admittance.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Admittance.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Admittance.value
     class_uri: cim:Admittance
     description: "Ratio of current to voltage.\r\n"
@@ -249,19 +225,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Impedance.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Impedance.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Impedance.value
     class_uri: cim:Impedance
     description: "Ratio of voltage to current.\r\n"
@@ -273,19 +246,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CostPerVolume.multiplier
       unit:
         range: Currency
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CostPerVolume.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CostPerVolume.value
     class_uri: cim:CostPerVolume
     description: "Cost per unit volume.\r\n"
@@ -297,19 +267,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:SusceptancePerLength.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:SusceptancePerLength.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:SusceptancePerLength.value
     class_uri: cim:SusceptancePerLength
     description: "Imaginary part of admittance per unit of length.\r\n"
@@ -321,19 +288,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Money.multiplier
       unit:
         range: Currency
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Money.unit
       value:
         range: double
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Money.value
     class_uri: cim:Money
     description: "Amount of money.\r\n"
@@ -345,19 +309,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Minutes.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Minutes.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Minutes.value
     class_uri: cim:Minutes
     description: "Time in minutes.\r\n"
@@ -393,19 +354,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CostPerEnergyUnit.multiplier
       unit:
         range: Currency
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CostPerEnergyUnit.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CostPerEnergyUnit.value
     class_uri: cim:CostPerEnergyUnit
     description: "Cost, in units of currency, per quantity of electrical energy generated.\r\
@@ -418,13 +376,11 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:PerCent.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:PerCent.unit
       value:
         range: float
@@ -467,19 +423,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ApparentPower.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ApparentPower.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ApparentPower.value
     class_uri: cim:ApparentPower
     description: "Product of the RMS value of the voltage and the RMS value of the\
@@ -492,19 +445,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:WaterLevel.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:WaterLevel.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:WaterLevel.value
     class_uri: cim:WaterLevel
     description: "Reservoir water level referred to a given datum such as mean sea\
@@ -517,19 +467,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Displacement.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Displacement.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Displacement.value
     class_uri: cim:Displacement
     description: Unit of displacement relative to a reference position, hence can
@@ -542,19 +489,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Damping.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Damping.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Damping.value
     class_uri: cim:Damping
     description: Per-unit active power variation with frequency referenced on the
@@ -567,13 +511,11 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Seconds.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Seconds.unit
       value:
         range: float
@@ -591,19 +533,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ResistancePerLength.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ResistancePerLength.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ResistancePerLength.value
     class_uri: cim:ResistancePerLength
     description: "Resistance (real part of impedance) per unit of length.\r\n"
@@ -615,19 +554,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Inductance.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Inductance.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Inductance.value
     class_uri: cim:Inductance
     description: "Inductive part of reactance (imaginary part of impedance), at rated\
@@ -640,19 +576,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AngleDegrees.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AngleDegrees.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AngleDegrees.value
     class_uri: cim:AngleDegrees
     description: "Measurement of angle in degrees.\r\n"
@@ -664,19 +597,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CostRate.multiplier
       unit:
         range: Currency
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CostRate.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CostRate.value
     class_uri: cim:CostRate
     description: Cost, in units of currency, per elapsed time.
@@ -688,19 +618,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Speed.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Speed.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Speed.value
     class_uri: cim:Speed
     description: "Distance per unit of time.\r\n"
@@ -712,19 +639,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Capacitance.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Capacitance.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Capacitance.value
     class_uri: cim:Capacitance
     description: "Capacitive part of reactance (imaginary part of impedance), at rated\
@@ -737,19 +661,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:PU.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:PU.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:PU.value
     class_uri: cim:PU
     description: "Per Unit - a positive or negative value referred to a defined base.\
@@ -762,19 +683,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Pressure.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Pressure.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Pressure.value
     class_uri: cim:Pressure
     description: Pressure in pascals.
@@ -786,19 +704,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:KiloActivePower.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:KiloActivePower.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:KiloActivePower.value
     class_uri: cim:KiloActivePower
     description: "Active power in kilowatts.\r\n"
@@ -810,19 +725,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ReactivePower.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ReactivePower.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ReactivePower.value
     class_uri: cim:ReactivePower
     description: "Product of RMS value of the voltage and the RMS value of the quadrature\
@@ -860,19 +772,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ActivePowerChangeRate.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ActivePowerChangeRate.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ActivePowerChangeRate.value
     class_uri: cim:ActivePowerChangeRate
     description: "Rate of change of active power per time.\r\n"
@@ -884,19 +793,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Hours.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Hours.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Hours.value
     class_uri: cim:Hours
     description: "Time specified in hours.\r\n"
@@ -908,19 +814,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Conductance.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Conductance.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Conductance.value
     class_uri: cim:Conductance
     description: "Factor by which voltage must be multiplied to give corresponding\
@@ -933,19 +836,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:RotationSpeed.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:RotationSpeed.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:RotationSpeed.value
     class_uri: cim:RotationSpeed
     description: "Number of revolutions per second.\r\n"
@@ -957,19 +857,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CurrentFlow.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CurrentFlow.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CurrentFlow.value
     class_uri: cim:CurrentFlow
     description: 'Electrical current with sign convention: positive flow is out of
@@ -982,19 +879,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Frequency.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Frequency.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Frequency.value
     class_uri: cim:Frequency
     description: Cycles per second.
@@ -1027,19 +921,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AngleRadians.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AngleRadians.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AngleRadians.value
     class_uri: cim:AngleRadians
     description: "Phase angle in radians.\r\n"
@@ -1051,19 +942,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ActivePower.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ActivePower.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ActivePower.value
     class_uri: cim:ActivePower
     description: Product of RMS value of the voltage and the RMS value of the in-phase
@@ -1076,19 +964,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ReactancePerLength.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ReactancePerLength.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ReactancePerLength.value
     class_uri: cim:ReactancePerLength
     description: "Reactance (imaginary part of impedance) per unit of length, at rated\
@@ -1101,19 +986,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Resistance.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Resistance.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Resistance.value
     class_uri: cim:Resistance
     description: "Resistance (real part of impedance).\r\n"
@@ -1125,19 +1007,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Reactance.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Reactance.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Reactance.value
     class_uri: cim:Reactance
     description: "Reactance (imaginary part of impedance), at rated frequency.\r\n"
@@ -1149,19 +1028,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Susceptance.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Susceptance.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Susceptance.value
     class_uri: cim:Susceptance
     description: Imaginary part of admittance.
@@ -1173,19 +1049,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:RealEnergy.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:RealEnergy.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:RealEnergy.value
     class_uri: cim:RealEnergy
     description: "Real electrical energy.\r\n"
@@ -1197,19 +1070,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Classification.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Classification.unit
       value:
         range: integer
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Classification.value
     class_uri: cim:Classification
     description: Classification of level.  Specify as 1..n, with 1 being the most
@@ -1223,19 +1093,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:HeatRate.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:HeatRate.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:HeatRate.value
     class_uri: cim:HeatRate
     description: Heat generated, in energy per time unit of elapsed time.
@@ -1247,19 +1114,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Emission.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Emission.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Emission.value
     class_uri: cim:Emission
     description: "Quantity of emission per fuel heat content.\r\n"
@@ -1271,19 +1135,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CostPerHeatUnit.multiplier
       unit:
         range: Currency
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CostPerHeatUnit.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CostPerHeatUnit.value
     class_uri: cim:CostPerHeatUnit
     description: "Cost, in units of currency, per quantity of heat generated.\r\n"
@@ -1295,19 +1156,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ActivePowerPerFrequency.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ActivePowerPerFrequency.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ActivePowerPerFrequency.value
     class_uri: cim:ActivePowerPerFrequency
     description: Active power variation with frequency.
@@ -1337,19 +1195,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:InductancePerLength.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:InductancePerLength.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:InductancePerLength.value
     class_uri: cim:InductancePerLength
     description: Inductance per unit of length.
@@ -1361,19 +1216,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CapacitancePerLength.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CapacitancePerLength.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:CapacitancePerLength.value
     class_uri: cim:CapacitancePerLength
     description: Capacitance per unit of length.
@@ -1415,19 +1267,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Area.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Area.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Area.value
     class_uri: cim:Area
     description: Area.
@@ -1439,19 +1288,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ActivePowerPerCurrentFlow.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ActivePowerPerCurrentFlow.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ActivePowerPerCurrentFlow.value
     class_uri: cim:ActivePowerPerCurrentFlow
     description: Active power variation with current flow.
@@ -1463,19 +1309,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Mass.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Mass.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Mass.value
     class_uri: cim:Mass
     description: Mass.

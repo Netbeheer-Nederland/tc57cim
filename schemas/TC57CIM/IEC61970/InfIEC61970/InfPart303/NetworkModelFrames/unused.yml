@@ -227,7 +227,6 @@ classes:
         range: IncrementalDatasetArg
         required: false
         multivalued: true
-        description:
         slot_uri: cim:ChangeSet.IncrementalDatasetArg
       ChangeSetMember:
         range: ChangeSetMember
@@ -239,7 +238,6 @@ classes:
         range: NetworkModelProjectStage
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ChangeSet.NMProjectStage
     class_uri: cim:ChangeSet
     is_a: DataSet
@@ -292,7 +290,6 @@ classes:
         range: ModelPartVersion
         required: true
         multivalued: false
-        description:
         slot_uri: cim:DataSet.ModelPartVersion
     class_uri: cim:DataSet
     description: "A generic container of a version of instance data. The MRID can\
@@ -343,19 +340,16 @@ classes:
         range: DataSet
         required: false
         multivalued: true
-        description:
         slot_uri: cim:ModelPartVersion.DataSet
       CompleteModelToBeDeleted:
         range: CompleteModelToBeDeleted
         required: false
         multivalued: true
-        description:
         slot_uri: cim:ModelPartVersion.CompleteModelToBeDeleted
       AssemblyManifest:
         range: AssemblyManifest
         required: false
         multivalued: true
-        description:
         slot_uri: cim:ModelPartVersion.AssemblyManifest
     class_uri: cim:ModelPartVersion
     is_a: ModelToBeDeleted
@@ -378,13 +372,11 @@ classes:
         range: ModelPartVersion
         required: false
         multivalued: true
-        description:
         slot_uri: cim:AssemblyManifest.ModelPartVersion
       CompleteModelToBeDeleted:
         range: CompleteModelToBeDeleted
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AssemblyManifest.CompleteModelToBeDeleted
     class_uri: cim:AssemblyManifest
     is_a: IdentifiedObject
@@ -398,13 +390,11 @@ classes:
         range: ModelPartVersion
         required: false
         multivalued: true
-        description:
         slot_uri: cim:CompleteModelToBeDeleted.ModelPartVersion
       AssemblyManifest:
         range: AssemblyManifest
         required: false
         multivalued: true
-        description:
         slot_uri: cim:CompleteModelToBeDeleted.AssemblyManifest
     class_uri: cim:CompleteModelToBeDeleted
     is_a: ModelToBeDeleted
@@ -588,7 +578,6 @@ classes:
         range: NetworkModelProjectDocument
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProjectComponent.NetworkModelProjectDocument
       ContainingProject:
         range: NetworkModelProject
@@ -600,13 +589,11 @@ classes:
         range: NetworkModelProjectRelationship
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProjectComponent.ProjectARelationships
       ProjectBRelationships:
         range: NetworkModelProjectRelationship
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProjectComponent.ProjectBRelationships
     class_uri: cim:NetworkModelProjectComponent
     is_a: IdentifiedObject
@@ -620,13 +607,11 @@ classes:
         range: NetworkModelProjectComponent
         required: true
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectRelationship.ProjectA
       ProjectB:
         range: NetworkModelProjectComponent
         required: true
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectRelationship.ProjectB
     class_uri: cim:NetworkModelProjectRelationship
     is_a: IdentifiedObject
@@ -641,7 +626,6 @@ classes:
         range: NetworkModelProjectComponent
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProjectDocument.NetworkModelProjectComponent
     class_uri: cim:NetworkModelProjectDocument
     in_subset:
@@ -681,13 +665,11 @@ classes:
         range: IncrementalDatasetArgDescription
         required: true
         multivalued: false
-        description:
         slot_uri: cim:IncrementalDatasetArg.IncrementalDatasetArgDescription
       IncrementalDataset:
         range: ChangeSet
         required: true
         multivalued: false
-        description:
         slot_uri: cim:IncrementalDatasetArg.IncrementalDataset
     class_uri: cim:IncrementalDatasetArg
     is_a: ModelOperationArg
@@ -742,7 +724,6 @@ classes:
         range: ModelOperationSequence
         required: true
         multivalued: false
-        description:
         slot_uri: cim:ModelOperation.OperationSequence
     class_uri: cim:ModelOperation
     is_a: IdentifiedObject
@@ -755,7 +736,6 @@ classes:
         range: ModelOperation
         required: false
         multivalued: true
-        description:
         slot_uri: cim:ModelOperationSequence.ModelOperation
     class_uri: cim:ModelOperationSequence
     is_a: IdentifiedObject
@@ -832,37 +812,31 @@ classes:
         range: integer
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectStage.changesetVersion
       commissionedDate:
         range: date
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectStage.commissionedDate
       plannedCommissionedDate:
         range: date
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectStage.plannedCommissionedDate
       ChangeSets:
         range: ChangeSet
         required: true
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProjectStage.ChangeSets
       DependencyDependentOnStage:
         range: AnnotatedProjectDependency
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectStage.DependencyDependentOnStage
       DenpendecyDependingStage:
         range: AnnotatedProjectDependency
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProjectStage.DenpendecyDependingStage
     class_uri: cim:NetworkModelProjectStage
     is_a: NetworkModelProjectComponent2
@@ -874,37 +848,31 @@ classes:
         range: date
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectComponent2.closed
       created:
         range: date
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectComponent2.created
       updated:
         range: date
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectComponent2.updated
       version:
         range: integer
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectComponent2.version
       CurrentState:
         range: CurrentState
         required: true
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectComponent2.CurrentState
       Parent:
         range: NetworkModelProject2
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectComponent2.Parent
     class_uri: cim:NetworkModelProjectComponent2
     is_a: IdentifiedObject
@@ -916,7 +884,6 @@ classes:
         range: NetworkModelProjectComponent2
         required: false
         multivalued: true
-        description:
         slot_uri: cim:CurrentState.NetworkModelProjectComponent2
     class_uri: cim:CurrentState
     is_a: IdentifiedObject
@@ -928,7 +895,6 @@ classes:
         range: NetworkModelProjectComponent2
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProject2.Child
     class_uri: cim:NetworkModelProject2
     is_a: NetworkModelProjectComponent2
@@ -940,19 +906,16 @@ classes:
         range: DependencyKind
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AnnotatedProjectDependency.dependencyType
       DependentOnStage:
         range: NetworkModelProjectStage
         required: true
         multivalued: false
-        description:
         slot_uri: cim:AnnotatedProjectDependency.DependentOnStage
       DependingStage:
         range: NetworkModelProjectStage
         required: true
         multivalued: false
-        description:
         slot_uri: cim:AnnotatedProjectDependency.DependingStage
     class_uri: cim:AnnotatedProjectDependency
     is_a: IdentifiedObject
@@ -1061,19 +1024,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AngleDegrees.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AngleDegrees.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AngleDegrees.value
     class_uri: cim:AngleDegrees
     description: "Measurement of angle in degrees.\r\n"
@@ -1320,7 +1280,6 @@ classes:
         range: NetworkFrame
         required: false
         multivalued: false
-        description:
         slot_uri: cim:FrameworkPart.Frame
     class_uri: cim:FrameworkPart
     is_a: ModelAuthoritySet
@@ -1337,13 +1296,11 @@ classes:
         range: FrameworkPart
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkFrame.FrameworkPart
       NetworkBoundary:
         range: NetworkBoundary
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkFrame.NetworkBoundary
     class_uri: cim:NetworkFrame
     is_a: FrameworkPart
@@ -1356,7 +1313,6 @@ classes:
         range: NetworkFrame
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkBoundary.NetworkFrame
     class_uri: cim:NetworkBoundary
     is_a: FrameworkPart

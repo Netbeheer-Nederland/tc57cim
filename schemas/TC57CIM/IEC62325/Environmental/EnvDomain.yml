@@ -17,19 +17,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:MagneticField.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:MagneticField.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:MagneticField.value
     class_uri: cim:MagneticField
     description: Magnetic field in nanotesla.
@@ -41,13 +38,11 @@ classes:
         range: Displacement
         required: false
         multivalued: false
-        description:
         slot_uri: cim:RelativeDisplacement.displacement
       kind:
         range: RelativeDisplacementKind
         required: false
         multivalued: false
-        description:
         slot_uri: cim:RelativeDisplacement.kind
     class_uri: cim:RelativeDisplacement
     description: Vertical displacement relative to either sealevel, ground or the
@@ -60,19 +55,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Displacement.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Displacement.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Displacement.value
     class_uri: cim:Displacement
     description: Unit of displacement relative to a reference position, hence can
@@ -85,19 +77,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ParticulateDensity.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ParticulateDensity.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ParticulateDensity.value
     class_uri: cim:ParticulateDensity
     description: Particulate density as kg/m<sup>3</sup>.
@@ -109,19 +98,16 @@ classes:
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Bearing.multiplier
       unit:
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Bearing.unit
       value:
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:Bearing.value
     class_uri: cim:Bearing
     description: The bearing in degrees (with 360 degrees being True North).  Measured
