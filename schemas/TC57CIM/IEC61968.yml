@@ -1,7 +1,6 @@
 id: cim:IEC61968
 name: TC57CIM.IEC61968
 title: IEC61968
-description:
 imports:
 - linkml:types
 prefixes:
@@ -13,10 +12,8 @@ default_prefix: cim
 default_range: string
 classes:
   IEC61968CIMVersion:
-    name: IEC61968CIMVersion
     attributes:
       date:
-        name: date
         range: date
         required: false
         multivalued: false
@@ -24,7 +21,6 @@ classes:
           5, 2009 it is 2009-01-05.
         slot_uri: cim:IEC61968CIMVersion.date
       version:
-        name: version
         range: string
         required: false
         multivalued: false
@@ -34,6 +30,8 @@ classes:
           \ the changes are due to National Committee comments."
         slot_uri: cim:IEC61968CIMVersion.version
     class_uri: cim:IEC61968CIMVersion
-    is_a:
     description: "IEC 61968 version number assigned to this UML model.\r\n"
-enums:
+    in_subset:
+    - TC57CIM.IEC61968
+subsets:
+  TC57CIM.IEC61968:

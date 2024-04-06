@@ -1,7 +1,6 @@
 id: cim:InfMarketOpCommon
 name: TC57CIM.IEC62325.InfIEC62325.InfMarketOpCommon
 title: InfMarketOpCommon
-description:
 imports:
 - linkml:types
 prefixes:
@@ -11,10 +10,8 @@ default_curi_maps:
 - semweb_context
 default_prefix: cim
 default_range: string
-classes:
 enums:
   MarketRoleKind:
-    name: MarketRoleKind
     permissible_values:
       BalanceResponsibleParty:
         meaning: cim:MarketRoleKind.BalanceResponsibleParty
@@ -127,3 +124,7 @@ enums:
     enum_uri: cim:MarketRoleKind
     description: Kind of market role an organisation can have. This list is not exhausted,
       as other roles may exist.
+    in_subset:
+    - TC57CIM.IEC62325.InfIEC62325.InfMarketOpCommon
+subsets:
+  TC57CIM.IEC62325.InfIEC62325.InfMarketOpCommon:

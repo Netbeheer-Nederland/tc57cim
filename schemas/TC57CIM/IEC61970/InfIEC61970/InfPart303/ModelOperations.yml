@@ -1,7 +1,6 @@
 id: cim:ModelOperations
 name: TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
 title: ModelOperations
-description:
 imports:
 - linkml:types
 prefixes:
@@ -13,10 +12,8 @@ default_prefix: cim
 default_range: string
 classes:
   DatasetArgDescription:
-    name: DatasetArgDescription
     attributes:
       OperationDatasetArg:
-        name: OperationDatasetArg
         range: DatasetArg
         required: false
         multivalued: true
@@ -24,12 +21,11 @@ classes:
         slot_uri: cim:DatasetArgDescription.OperationDatasetArg
     class_uri: cim:DatasetArgDescription
     is_a: ModelOperationArgDescription
-    description:
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
   ModelOperationArgDescription:
-    name: ModelOperationArgDescription
     attributes:
       multiplicityMaximum:
-        name: multiplicityMaximum
         range: integer
         required: false
         multivalued: false
@@ -37,7 +33,6 @@ classes:
           \ should be supplied for a single operation.     Use -1 to indicate unlimited. "
         slot_uri: cim:ModelOperationArgDescription.multiplicityMaximum
       multiplicityMinimum:
-        name: multiplicityMinimum
         range: integer
         required: false
         multivalued: false
@@ -45,7 +40,6 @@ classes:
           \ should be supplied for a single operation.     Use zero to indicate optional. "
         slot_uri: cim:ModelOperationArgDescription.multiplicityMinimum
       ModelOperationDefinition:
-        name: ModelOperationDefinition
         range: ModelOperationDescription
         required: true
         multivalued: false
@@ -56,11 +50,11 @@ classes:
     class_uri: cim:ModelOperationArgDescription
     is_a: IdentifiedObject
     description: The type of custom operation dataset role for an operation description.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
   IdentifiedObject:
-    name: IdentifiedObject
     attributes:
       aliasName:
-        name: aliasName
         range: string
         required: false
         multivalued: false
@@ -72,7 +66,6 @@ classes:
           \ for retirement at a future time.\r\n\r\n"
         slot_uri: cim:IdentifiedObject.aliasName
       description:
-        name: description
         range: string
         required: false
         multivalued: false
@@ -80,7 +73,6 @@ classes:
           the object. It may be non unique and may not correlate to a naming hierarchy.
         slot_uri: cim:IdentifiedObject.description
       mRID:
-        name: mRID
         range: string
         required: false
         multivalued: false
@@ -92,7 +84,6 @@ classes:
           \ attributes that identify CIM object elements."
         slot_uri: cim:IdentifiedObject.mRID
       name:
-        name: name
         range: string
         required: false
         multivalued: false
@@ -100,107 +91,94 @@ classes:
           \ text naming the object.\r\n"
         slot_uri: cim:IdentifiedObject.name
       DiagramObjects:
-        name: DiagramObjects
         range: DiagramObject
         required: false
         multivalued: true
         description: The diagram objects that are associated with the domain object.
         slot_uri: cim:IdentifiedObject.DiagramObjects
       InstanceSet:
-        name: InstanceSet
         range: InstanceSet
         required: true
         multivalued: false
         description: Dataset containing the data objects.
         slot_uri: cim:IdentifiedObject.InstanceSet
       Names:
-        name: Names
         range: Name
         required: false
         multivalued: true
         description: All names of this identified object.
         slot_uri: cim:IdentifiedObject.Names
       PropertiesCIMDataObject:
-        name: PropertiesCIMDataObject
         range: ChangeSetMember
         required: false
         multivalued: false
         description: The single CIM data object in the appropriate dataset context.
         slot_uri: cim:IdentifiedObject.PropertiesCIMDataObject
       TargetingCIMDataObject:
-        name: TargetingCIMDataObject
         range: ChangeSetMember
         required: false
         multivalued: true
         description: Data objects registered.
         slot_uri: cim:IdentifiedObject.TargetingCIMDataObject
     class_uri: cim:IdentifiedObject
-    is_a:
     description: This is a root class to provide common identification for all classes
       needing identification and naming attributes.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Core
   Name:
-    name: Name
     attributes:
       name:
-        name: name
         range: string
         required: false
         multivalued: false
         description: "Any free text that name the object.\r\n"
         slot_uri: cim:Name.name
       NameType:
-        name: NameType
         range: NameType
         required: true
         multivalued: false
         description: Type of this name.
         slot_uri: cim:Name.NameType
       IdentifiedObject:
-        name: IdentifiedObject
         range: IdentifiedObject
         required: true
         multivalued: false
         description: Identified object that this name designates.
         slot_uri: cim:Name.IdentifiedObject
     class_uri: cim:Name
-    is_a:
     description: "The Name class provides the means to define any number of human\
       \ readable  names for an object. A name is <b>not</b> to be used for defining\
       \ inter-object relationships. For inter-object relationships instead use the\
       \ object identification 'mRID'.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Core
   NameType:
-    name: NameType
     attributes:
       description:
-        name: description
         range: string
         required: false
         multivalued: false
         description: "Description of the name type.\r\n"
         slot_uri: cim:NameType.description
       name:
-        name: name
         range: string
         required: false
         multivalued: false
         description: "Name of the name type.\r\n"
         slot_uri: cim:NameType.name
       NameTypeAuthority:
-        name: NameTypeAuthority
         range: NameTypeAuthority
         required: false
         multivalued: false
         description: Authority responsible for managing names of this type.
         slot_uri: cim:NameType.NameTypeAuthority
       Names:
-        name: Names
         range: Name
         required: false
         multivalued: true
         description: All names of this type.
         slot_uri: cim:NameType.Names
     class_uri: cim:NameType
-    is_a:
     description: "Type of name. Possible values for attribute 'name' are implementation\
       \ dependent but standard profiles may specify types. An enterprise may have\
       \ multiple IT systems each having its own local name for the same object, e.g.\
@@ -212,46 +190,42 @@ classes:
       \ hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the\
       \ same parent in such a hierarchy have names that typically are unique among\
       \ them.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Core
   NameTypeAuthority:
-    name: NameTypeAuthority
     attributes:
       description:
-        name: description
         range: string
         required: false
         multivalued: false
         description: "Description of the name type authority.\r\n"
         slot_uri: cim:NameTypeAuthority.description
       name:
-        name: name
         range: string
         required: false
         multivalued: false
         description: "Name of the name type authority.\r\n"
         slot_uri: cim:NameTypeAuthority.name
       NameTypes:
-        name: NameTypes
         range: NameType
         required: false
         multivalued: true
         description: All name types managed by this authority.
         slot_uri: cim:NameTypeAuthority.NameTypes
     class_uri: cim:NameTypeAuthority
-    is_a:
     description: "Authority responsible for creation and management of names of a\
       \ given type; typically an organization or an enterprise system.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Core
   ChangeSetMember:
-    name: ChangeSetMember
     attributes:
       Changeset:
-        name: Changeset
         range: ChangeSet
         required: false
         multivalued: false
         description: Dataset containing the data objects.
         slot_uri: cim:ChangeSetMember.Changeset
       PropertiesObject:
-        name: PropertiesObject
         range: IdentifiedObject
         required: false
         multivalued: false
@@ -260,56 +234,49 @@ classes:
           is required.
         slot_uri: cim:ChangeSetMember.PropertiesObject
       TargetObject:
-        name: TargetObject
         range: IdentifiedObject
         required: true
         multivalued: false
         description: The registered CIM object.
         slot_uri: cim:ChangeSetMember.TargetObject
     class_uri: cim:ChangeSetMember
-    is_a:
     description: A CRUD-style data object.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
   ChangeSet:
-    name: ChangeSet
     attributes:
       NetworkModelProjectChangeVersion:
-        name: NetworkModelProjectChangeVersion
         range: NetworkModelProjectChangeVersion
         required: false
         multivalued: true
         description: The project of the details of model changes.
         slot_uri: cim:ChangeSet.NetworkModelProjectChangeVersion
       IncrementalDatasetArg:
-        name: IncrementalDatasetArg
         range: IncrementalDatasetArg
         required: false
         multivalued: true
-        description:
         slot_uri: cim:ChangeSet.IncrementalDatasetArg
       ChangeSetMember:
-        name: ChangeSetMember
         range: ChangeSetMember
         required: false
         multivalued: true
         description: Data objects contained in the dataset.
         slot_uri: cim:ChangeSet.ChangeSetMember
       NMProjectStage:
-        name: NMProjectStage
         range: NetworkModelProjectStage
         required: false
         multivalued: false
-        description:
         slot_uri: cim:ChangeSet.NMProjectStage
     class_uri: cim:ChangeSet
     is_a: DataSet
     description: Describes a set of changes that can be applied in different situations.   A
       given registered target object  MRID may only be referenced once by the contained
       change set members.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
   DataSet:
-    name: DataSet
     attributes:
       description:
-        name: description
         range: string
         required: false
         multivalued: false
@@ -317,7 +284,6 @@ classes:
           the object. It may be non unique and may not correlate to a naming hierarchy.
         slot_uri: cim:DataSet.description
       mRID:
-        name: mRID
         range: string
         required: false
         multivalued: false
@@ -329,7 +295,6 @@ classes:
           \ rdf:about attributes that identify CIM object elements.\r\n"
         slot_uri: cim:DataSet.mRID
       name:
-        name: name
         range: string
         required: false
         multivalued: false
@@ -337,7 +302,6 @@ classes:
           \ text naming the object.\r\n"
         slot_uri: cim:DataSet.name
       Profile:
-        name: Profile
         range: Profile
         required: true
         multivalued: true
@@ -345,37 +309,32 @@ classes:
           rules governing the contents of the data set.
         slot_uri: cim:DataSet.Profile
       AlternateModel:
-        name: AlternateModel
         range: AlternateModel
         required: false
         multivalued: false
         description: The alternate model using the data.
         slot_uri: cim:DataSet.AlternateModel
       ModelPartVersion:
-        name: ModelPartVersion
         range: ModelPartVersion
         required: true
         multivalued: false
-        description:
         slot_uri: cim:DataSet.ModelPartVersion
     class_uri: cim:DataSet
-    is_a:
     description: "A generic container of a version of instance data. The MRID can\
       \ be used in an audit trail, not in reusable script intended to work with new\
       \ versions of data.\r\nA dataset could be serialized multiple times and in multiple\
       \ technologies, yet retain the same identity."
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
   AlternateModel:
-    name: AlternateModel
     attributes:
       AlternateModelGroup:
-        name: AlternateModelGroup
         range: AlternateModelGroup
         required: true
         multivalued: false
         description: The group of alternate models for which one alternate is used.
         slot_uri: cim:AlternateModel.AlternateModelGroup
       Dataset:
-        name: Dataset
         range: DataSet
         required: true
         multivalued: false
@@ -383,12 +342,11 @@ classes:
         slot_uri: cim:AlternateModel.Dataset
     class_uri: cim:AlternateModel
     is_a: IdentifiedObject
-    description:
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.AlternateModels
   AlternateModelGroup:
-    name: AlternateModelGroup
     attributes:
       AlternateModel:
-        name: AlternateModel
         range: AlternateModel
         required: false
         multivalued: true
@@ -396,37 +354,30 @@ classes:
         slot_uri: cim:AlternateModelGroup.AlternateModel
     class_uri: cim:AlternateModelGroup
     is_a: IdentifiedObject
-    description:
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.AlternateModels
   ModelPartVersion:
-    name: ModelPartVersion
     attributes:
       ModelSpecification:
-        name: ModelSpecification
         range: ModelPartSpecification
         required: true
         multivalued: false
         description: Model specification of the modelt.
         slot_uri: cim:ModelPartVersion.ModelSpecification
       DataSet:
-        name: DataSet
         range: DataSet
         required: false
         multivalued: true
-        description:
         slot_uri: cim:ModelPartVersion.DataSet
       CompleteModelToBeDeleted:
-        name: CompleteModelToBeDeleted
         range: CompleteModelToBeDeleted
         required: false
         multivalued: true
-        description:
         slot_uri: cim:ModelPartVersion.CompleteModelToBeDeleted
       AssemblyManifest:
-        name: AssemblyManifest
         range: AssemblyManifest
         required: false
         multivalued: true
-        description:
         slot_uri: cim:ModelPartVersion.AssemblyManifest
     class_uri: cim:ModelPartVersion
     is_a: ModelToBeDeleted
@@ -435,73 +386,65 @@ classes:
       or changes to the associated data set.  Instances of this class are considered
       immutable.  The case audit trail can reference this immutable data to exactly
       reproduce a case.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
   ModelToBeDeleted:
-    name: ModelToBeDeleted
-    attributes:
     class_uri: cim:ModelToBeDeleted
     is_a: IdentifiedObject
     description: A Model is a collection of Datasets.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
   AssemblyManifest:
-    name: AssemblyManifest
     attributes:
       ModelPartVersion:
-        name: ModelPartVersion
         range: ModelPartVersion
         required: false
         multivalued: true
-        description:
         slot_uri: cim:AssemblyManifest.ModelPartVersion
       CompleteModelToBeDeleted:
-        name: CompleteModelToBeDeleted
         range: CompleteModelToBeDeleted
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AssemblyManifest.CompleteModelToBeDeleted
     class_uri: cim:AssemblyManifest
     is_a: IdentifiedObject
     description: A collection of model parts when combined form a case or part of
       a case.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
   CompleteModelToBeDeleted:
-    name: CompleteModelToBeDeleted
     attributes:
       ModelPartVersion:
-        name: ModelPartVersion
         range: ModelPartVersion
         required: false
         multivalued: true
-        description:
         slot_uri: cim:CompleteModelToBeDeleted.ModelPartVersion
       AssemblyManifest:
-        name: AssemblyManifest
         range: AssemblyManifest
         required: false
         multivalued: true
-        description:
         slot_uri: cim:CompleteModelToBeDeleted.AssemblyManifest
     class_uri: cim:CompleteModelToBeDeleted
     is_a: ModelToBeDeleted
     description: A complete model can be used in applications to perform meaningful
       calculations, e.g. a study case in offline tools or a real time model in a SCADA/EMS.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
   ModelPartSpecification:
-    name: ModelPartSpecification
     attributes:
       FrameworkPart:
-        name: FrameworkPart
         range: ModelAuthoritySet
         required: false
         multivalued: false
         description: Model frame of the model part.
         slot_uri: cim:ModelPartSpecification.FrameworkPart
       Model:
-        name: Model
         range: ModelPartVersion
         required: false
         multivalued: true
         description: Modle parts conforming to the model part specification.
         slot_uri: cim:ModelPartSpecification.Model
       AssemblyDescription:
-        name: AssemblyDescription
         range: AssemblyDescription
         required: false
         multivalued: true
@@ -512,11 +455,11 @@ classes:
     description: 'The type of model.  For example,  state estimator, planning, planning
       dynamics, short circuit, or real-time dynamics etc.     The model must conform
       to a profile. '
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
   AssemblyDescription:
-    name: AssemblyDescription
     attributes:
       ModelSpecification:
-        name: ModelSpecification
         range: ModelPartSpecification
         required: false
         multivalued: true
@@ -525,11 +468,11 @@ classes:
     class_uri: cim:AssemblyDescription
     is_a: IdentifiedObject
     description: A description for how to assemble model parts for a specific purpose.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
   ModelAuthoritySet:
-    name: ModelAuthoritySet
     attributes:
       ModelingAuthority:
-        name: ModelingAuthority
         range: ModelAuthority
         required: true
         multivalued: false
@@ -537,7 +480,6 @@ classes:
           objects in this Modeling Authority Set.
         slot_uri: cim:ModelAuthoritySet.ModelingAuthority
       ModelSpecification:
-        name: ModelSpecification
         range: ModelPartSpecification
         required: false
         multivalued: true
@@ -549,11 +491,11 @@ classes:
       \ where the data is supplied and maintained by the same Modeling Authority.\r\
       \nThis class is typically not included in instance data exchange as this information\
       \ is tracked by other mechanisms in the exchange.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
   ModelAuthority:
-    name: ModelAuthority
     attributes:
       ModelingAuthoritySets:
-        name: ModelingAuthoritySets
         range: ModelAuthoritySet
         required: true
         multivalued: true
@@ -564,11 +506,11 @@ classes:
     is_a: IdentifiedObject
     description: A Modeling Authority is an entity responsible for supplying and maintaining
       the data defining a specific set of objects in a network model.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
   Profile:
-    name: Profile
     attributes:
       DataSet:
-        name: DataSet
         range: DataSet
         required: false
         multivalued: true
@@ -579,11 +521,11 @@ classes:
     description: Describes the existence of a profile.  The MRID is usually defined
       as a static value by the document or artifact that defines the contents of the
       profile and the rules for using the profile.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
   NetworkModelProjectChangeVersion:
-    name: NetworkModelProjectChangeVersion
     attributes:
       comment:
-        name: comment
         range: string
         required: false
         multivalued: false
@@ -591,21 +533,18 @@ classes:
           from the previous version.
         slot_uri: cim:NetworkModelProjectChangeVersion.comment
       effectiveDateTime:
-        name: effectiveDateTime
         range: date
         required: false
         multivalued: false
         description: The date/time the change set is included in the model.
         slot_uri: cim:NetworkModelProjectChangeVersion.effectiveDateTime
       timeStamp:
-        name: timeStamp
         range: date
         required: false
         multivalued: false
         description: The date/time this version was finalized and thus made immutable.
         slot_uri: cim:NetworkModelProjectChangeVersion.timeStamp
       ChangeSet:
-        name: ChangeSet
         range: ChangeSet
         required: false
         multivalued: false
@@ -613,7 +552,6 @@ classes:
           should have a new identifier if it changes.
         slot_uri: cim:NetworkModelProjectChangeVersion.ChangeSet
       NetworkModelProjectChange:
-        name: NetworkModelProjectChange
         range: NetworkModelProjectChange
         required: true
         multivalued: false
@@ -621,21 +559,18 @@ classes:
           applies.
         slot_uri: cim:NetworkModelProjectChangeVersion.NetworkModelProjectChange
       SupercededBy:
-        name: SupercededBy
         range: NetworkModelProjectChangeVersion
         required: false
         multivalued: false
         description: The project version that will supercede this project version.
         slot_uri: cim:NetworkModelProjectChangeVersion.SupercededBy
       NetworkModelProjectState:
-        name: NetworkModelProjectState
         range: NetworkModelProjectState
         required: false
         multivalued: false
         description: The state of this network model project version.
         slot_uri: cim:NetworkModelProjectChangeVersion.NetworkModelProjectState
       Supercedes:
-        name: Supercedes
         range: NetworkModelProjectChangeVersion
         required: false
         multivalued: false
@@ -648,11 +583,11 @@ classes:
       identity are instantiated upon changes to the content of this class or changes
       to the associated change set.  Instances of this class are considered immutable.  The
       case audit trail can reference this immutable data to exactly reproduce a case.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   NetworkModelProjectChange:
-    name: NetworkModelProjectChange
     attributes:
       NetworkModelProjectChangeVersion:
-        name: NetworkModelProjectChangeVersion
         range: NetworkModelProjectChangeVersion
         required: true
         multivalued: true
@@ -663,81 +598,69 @@ classes:
     description: 'Network model project change described by versions of an associated
       change set.  Has persistent identity over multiple versions of the associated
       change set. '
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   NetworkModelProjectComponent:
-    name: NetworkModelProjectComponent
     attributes:
       NetworkModelProjectDocument:
-        name: NetworkModelProjectDocument
         range: NetworkModelProjectDocument
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProjectComponent.NetworkModelProjectDocument
       ContainingProject:
-        name: ContainingProject
         range: NetworkModelProject
         required: true
         multivalued: false
         description: The parent project of this project.
         slot_uri: cim:NetworkModelProjectComponent.ContainingProject
       ProjectARelationships:
-        name: ProjectARelationships
         range: NetworkModelProjectRelationship
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProjectComponent.ProjectARelationships
       ProjectBRelationships:
-        name: ProjectBRelationships
         range: NetworkModelProjectRelationship
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProjectComponent.ProjectBRelationships
     class_uri: cim:NetworkModelProjectComponent
     is_a: IdentifiedObject
     description: Abstract class for both a network model project and network model
       change.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   NetworkModelProjectRelationship:
-    name: NetworkModelProjectRelationship
     attributes:
       ProjectA:
-        name: ProjectA
         range: NetworkModelProjectComponent
         required: true
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectRelationship.ProjectA
       ProjectB:
-        name: ProjectB
         range: NetworkModelProjectComponent
         required: true
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectRelationship.ProjectB
     class_uri: cim:NetworkModelProjectRelationship
     is_a: IdentifiedObject
     description: A relationship that assists humans and software building cases by
       assembling project changes in the correct sequence.  This class may be specialized
       to create specific types of relationships.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   NetworkModelProjectDocument:
-    name: NetworkModelProjectDocument
     attributes:
       NetworkModelProjectComponent:
-        name: NetworkModelProjectComponent
         range: NetworkModelProjectComponent
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProjectDocument.NetworkModelProjectComponent
     class_uri: cim:NetworkModelProjectDocument
-    is_a:
-    description:
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   NetworkModelProject:
-    name: NetworkModelProject
     attributes:
       ContainedProject:
-        name: ContainedProject
         range: NetworkModelProjectComponent
         required: false
         multivalued: true
@@ -747,11 +670,11 @@ classes:
     is_a: NetworkModelProjectComponent
     description: "A grouping of network model change descriptions.  Primarily used\
       \ to organize the phases of an overall project.\r\n\r\n\r\n "
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   NetworkModelProjectState:
-    name: NetworkModelProjectState
     attributes:
       NetworkModelProjectChangeVersion:
-        name: NetworkModelProjectChangeVersion
         range: NetworkModelProjectChangeVersion
         required: false
         multivalued: true
@@ -762,32 +685,29 @@ classes:
     description: A network model project version state.  States are agreed upon by
       the exchange community.  Examples are "approved", "proposed", "withdrawn", "committed"
       etc.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   IncrementalDatasetArg:
-    name: IncrementalDatasetArg
     attributes:
       IncrementalDatasetArgDescription:
-        name: IncrementalDatasetArgDescription
         range: IncrementalDatasetArgDescription
         required: true
         multivalued: false
-        description:
         slot_uri: cim:IncrementalDatasetArg.IncrementalDatasetArgDescription
       IncrementalDataset:
-        name: IncrementalDataset
         range: ChangeSet
         required: true
         multivalued: false
-        description:
         slot_uri: cim:IncrementalDatasetArg.IncrementalDataset
     class_uri: cim:IncrementalDatasetArg
     is_a: ModelOperationArg
     description: A generic model operation argument referencing an incremental change
       description.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
   ModelOperationArg:
-    name: ModelOperationArg
     attributes:
       sequenceNumber:
-        name: sequenceNumber
         range: integer
         required: false
         multivalued: false
@@ -796,7 +716,6 @@ classes:
           \ an ordering. \r\n "
         slot_uri: cim:ModelOperationArg.sequenceNumber
       ModelOperation:
-        name: ModelOperation
         range: ModelOperation
         required: true
         multivalued: false
@@ -806,11 +725,11 @@ classes:
     is_a: IdentifiedObject
     description: Describes the role a dataset plays in a model operation.   The role
       is applicable only in the context of a single operation.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
   ModelOperation:
-    name: ModelOperation
     attributes:
       sequenceNumber:
-        name: sequenceNumber
         range: integer
         required: false
         multivalued: false
@@ -818,49 +737,44 @@ classes:
           starts with 1.
         slot_uri: cim:ModelOperation.sequenceNumber
       ModelOperationDescription:
-        name: ModelOperationDescription
         range: ModelOperationDescription
         required: true
         multivalued: false
         description: The type of the model operation.
         slot_uri: cim:ModelOperation.ModelOperationDescription
       ModelOperationArg:
-        name: ModelOperationArg
         range: ModelOperationArg
         required: false
         multivalued: true
         description: Arguments of the operation.
         slot_uri: cim:ModelOperation.ModelOperationArg
       OperationSequence:
-        name: OperationSequence
         range: ModelOperationSequence
         required: true
         multivalued: false
-        description:
         slot_uri: cim:ModelOperation.OperationSequence
     class_uri: cim:ModelOperation
     is_a: IdentifiedObject
     description: 'An operation performed on models. '
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
   ModelOperationSequence:
-    name: ModelOperationSequence
     attributes:
       ModelOperation:
-        name: ModelOperation
         range: ModelOperation
         required: false
         multivalued: true
-        description:
         slot_uri: cim:ModelOperationSequence.ModelOperation
     class_uri: cim:ModelOperationSequence
     is_a: IdentifiedObject
     description: A concrete sequence of operations.    For example, this may be used
       to describe a specific audit trail, a script or other specific set of actions
       on specific datasets.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
   ModelOperationDescription:
-    name: ModelOperationDescription
     attributes:
       OperationDatasetArgDescription:
-        name: OperationDatasetArgDescription
         range: ModelOperationArgDescription
         required: false
         multivalued: true
@@ -868,7 +782,6 @@ classes:
           model operation.
         slot_uri: cim:ModelOperationDescription.OperationDatasetArgDescription
       ModelOperation:
-        name: ModelOperation
         range: ModelOperation
         required: false
         multivalued: true
@@ -878,11 +791,11 @@ classes:
     is_a: IdentifiedObject
     description: The type of model operation.   This class is referenced by model
       operations and defines the kind of operation.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
   IncrementalDatasetArgDescription:
-    name: IncrementalDatasetArgDescription
     attributes:
       IncrementalDatasetArg:
-        name: IncrementalDatasetArg
         range: IncrementalDatasetArg
         required: false
         multivalued: true
@@ -890,161 +803,126 @@ classes:
         slot_uri: cim:IncrementalDatasetArgDescription.IncrementalDatasetArg
     class_uri: cim:IncrementalDatasetArgDescription
     is_a: ModelOperationArgDescription
-    description:
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
   NetworkModelProjectStage:
-    name: NetworkModelProjectStage
     attributes:
       changesetVersion:
-        name: changesetVersion
         range: integer
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectStage.changesetVersion
       commissionedDate:
-        name: commissionedDate
         range: date
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectStage.commissionedDate
       plannedCommissionedDate:
-        name: plannedCommissionedDate
         range: date
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectStage.plannedCommissionedDate
       ChangeSets:
-        name: ChangeSets
         range: ChangeSet
         required: true
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProjectStage.ChangeSets
       DependencyDependentOnStage:
-        name: DependencyDependentOnStage
         range: AnnotatedProjectDependency
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectStage.DependencyDependentOnStage
       DenpendecyDependingStage:
-        name: DenpendecyDependingStage
         range: AnnotatedProjectDependency
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProjectStage.DenpendecyDependingStage
     class_uri: cim:NetworkModelProjectStage
     is_a: NetworkModelProjectComponent2
-    description:
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   NetworkModelProjectComponent2:
-    name: NetworkModelProjectComponent2
     attributes:
       closed:
-        name: closed
         range: date
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectComponent2.closed
       created:
-        name: created
         range: date
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectComponent2.created
       updated:
-        name: updated
         range: date
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectComponent2.updated
       version:
-        name: version
         range: integer
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectComponent2.version
       CurrentState:
-        name: CurrentState
         range: CurrentState
         required: true
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectComponent2.CurrentState
       Parent:
-        name: Parent
         range: NetworkModelProject2
         required: false
         multivalued: false
-        description:
         slot_uri: cim:NetworkModelProjectComponent2.Parent
     class_uri: cim:NetworkModelProjectComponent2
     is_a: IdentifiedObject
-    description:
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   CurrentState:
-    name: CurrentState
     attributes:
       NetworkModelProjectComponent2:
-        name: NetworkModelProjectComponent2
         range: NetworkModelProjectComponent2
         required: false
         multivalued: true
-        description:
         slot_uri: cim:CurrentState.NetworkModelProjectComponent2
     class_uri: cim:CurrentState
     is_a: IdentifiedObject
-    description:
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   NetworkModelProject2:
-    name: NetworkModelProject2
     attributes:
       Child:
-        name: Child
         range: NetworkModelProjectComponent2
         required: false
         multivalued: true
-        description:
         slot_uri: cim:NetworkModelProject2.Child
     class_uri: cim:NetworkModelProject2
     is_a: NetworkModelProjectComponent2
-    description:
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   AnnotatedProjectDependency:
-    name: AnnotatedProjectDependency
     attributes:
       dependencyType:
-        name: dependencyType
         range: DependencyKind
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AnnotatedProjectDependency.dependencyType
       DependentOnStage:
-        name: DependentOnStage
         range: NetworkModelProjectStage
         required: true
         multivalued: false
-        description:
         slot_uri: cim:AnnotatedProjectDependency.DependentOnStage
       DependingStage:
-        name: DependingStage
         range: NetworkModelProjectStage
         required: true
         multivalued: false
-        description:
         slot_uri: cim:AnnotatedProjectDependency.DependingStage
     class_uri: cim:AnnotatedProjectDependency
     is_a: IdentifiedObject
-    description:
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   DiagramObject:
-    name: DiagramObject
     attributes:
       drawingOrder:
-        name: drawingOrder
         range: integer
         required: false
         multivalued: false
@@ -1053,7 +931,6 @@ classes:
           that overlap are rendered in the correct order.
         slot_uri: cim:DiagramObject.drawingOrder
       isPolygon:
-        name: isPolygon
         range: boolean
         required: false
         multivalued: false
@@ -1063,7 +940,6 @@ classes:
           be connected.
         slot_uri: cim:DiagramObject.isPolygon
       offsetX:
-        name: offsetX
         range: float
         required: false
         multivalued: false
@@ -1075,7 +951,6 @@ classes:
           \ an offset of 50% to the right.\r\n"
         slot_uri: cim:DiagramObject.offsetX
       offsetY:
-        name: offsetY
         range: float
         required: false
         multivalued: false
@@ -1088,7 +963,6 @@ classes:
           \n"
         slot_uri: cim:DiagramObject.offsetY
       rotation:
-        name: rotation
         range: AngleDegrees
         required: false
         multivalued: false
@@ -1104,21 +978,18 @@ classes:
           \ pointing to the right hand side of the diagram."
         slot_uri: cim:DiagramObject.rotation
       Diagram:
-        name: Diagram
         range: Diagram
         required: false
         multivalued: false
         description: A diagram object is part of a diagram.
         slot_uri: cim:DiagramObject.Diagram
       VisibilityLayers:
-        name: VisibilityLayers
         range: VisibilityLayer
         required: false
         multivalued: true
         description: A diagram object can be part of multiple visibility layers.
         slot_uri: cim:DiagramObject.VisibilityLayers
       DiagramObjectPoints:
-        name: DiagramObjectPoints
         range: DiagramObjectPoint
         required: false
         multivalued: true
@@ -1126,7 +997,6 @@ classes:
           position, routing (for polylines) or boundary (for polygons).
         slot_uri: cim:DiagramObject.DiagramObjectPoints
       DiagramObjectStyle:
-        name: DiagramObjectStyle
         range: DiagramObjectStyle
         required: false
         multivalued: false
@@ -1134,7 +1004,6 @@ classes:
           for the style used in the originating system.
         slot_uri: cim:DiagramObject.DiagramObjectStyle
       IdentifiedObject:
-        name: IdentifiedObject
         range: IdentifiedObject
         required: false
         multivalued: false
@@ -1146,38 +1015,32 @@ classes:
       object can be associated with anything that specializes IdentifiedObject. For
       single line diagrams such objects typically include such items as analog values,
       breakers, disconnectors, power transformers, and transmission lines.
+    in_subset:
+    - TC57CIM.IEC61970.Base.DiagramLayout
   AngleDegrees:
-    name: AngleDegrees
     attributes:
       multiplier:
-        name: multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AngleDegrees.multiplier
       unit:
-        name: unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AngleDegrees.unit
       value:
-        name: value
         range: float
         required: false
         multivalued: false
-        description:
         slot_uri: cim:AngleDegrees.value
     class_uri: cim:AngleDegrees
-    is_a:
     description: "Measurement of angle in degrees.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   Diagram:
-    name: Diagram
     attributes:
       orientation:
-        name: orientation
         range: OrientationKind
         required: false
         multivalued: false
@@ -1191,42 +1054,36 @@ classes:
           \ top to bottom.\r\n"
         slot_uri: cim:Diagram.orientation
       x1InitialView:
-        name: x1InitialView
         range: float
         required: false
         multivalued: false
         description: "X coordinate of the first corner of the initial view.\r\n"
         slot_uri: cim:Diagram.x1InitialView
       x2InitialView:
-        name: x2InitialView
         range: float
         required: false
         multivalued: false
         description: "X coordinate of the second corner of the initial view.\r\n"
         slot_uri: cim:Diagram.x2InitialView
       y1InitialView:
-        name: y1InitialView
         range: float
         required: false
         multivalued: false
         description: "Y coordinate of the first corner of the initial view.\r\n"
         slot_uri: cim:Diagram.y1InitialView
       y2InitialView:
-        name: y2InitialView
         range: float
         required: false
         multivalued: false
         description: "Y coordinate of the second corner of the initial view.\r\n"
         slot_uri: cim:Diagram.y2InitialView
       DiagramElements:
-        name: DiagramElements
         range: DiagramObject
         required: false
         multivalued: true
         description: A diagram is made up of multiple diagram objects.
         slot_uri: cim:Diagram.DiagramElements
       DiagramStyle:
-        name: DiagramStyle
         range: DiagramStyle
         required: false
         multivalued: false
@@ -1238,11 +1095,11 @@ classes:
       Cartesian coordinate system and the orientation attribute defines the orientation.
       The initial view related attributes can be used to specify an initial view with
       the x,y coordinates of the diagonal points.
+    in_subset:
+    - TC57CIM.IEC61970.Base.DiagramLayout
   DiagramStyle:
-    name: DiagramStyle
     attributes:
       Diagram:
-        name: Diagram
         range: Diagram
         required: false
         multivalued: true
@@ -1253,11 +1110,11 @@ classes:
     description: The diagram style refers to a style used by the originating system
       for a diagram.  A diagram style describes information such as schematic, geographic,
       etc.
+    in_subset:
+    - TC57CIM.IEC61970.Base.DiagramLayout
   VisibilityLayer:
-    name: VisibilityLayer
     attributes:
       drawingOrder:
-        name: drawingOrder
         range: integer
         required: false
         multivalued: false
@@ -1265,7 +1122,6 @@ classes:
           \ later the layer and the objects within it are rendered.\r\n"
         slot_uri: cim:VisibilityLayer.drawingOrder
       VisibleObjects:
-        name: VisibleObjects
         range: DiagramObject
         required: false
         multivalued: true
@@ -1281,11 +1137,11 @@ classes:
       \nCIM based graphics exchange supports an m:n relationship between diagram objects\
       \ and layers. The importing system shall convert an m:n case into an appropriate\
       \ 1:n representation if the importing system does not support m:n."
+    in_subset:
+    - TC57CIM.IEC61970.Base.DiagramLayout
   DiagramObjectPoint:
-    name: DiagramObjectPoint
     attributes:
       sequenceNumber:
-        name: sequenceNumber
         range: integer
         required: false
         multivalued: false
@@ -1294,50 +1150,44 @@ classes:
           \ than one point. The attribute shall be a positive value.\r\n"
         slot_uri: cim:DiagramObjectPoint.sequenceNumber
       xPosition:
-        name: xPosition
         range: float
         required: false
         multivalued: false
         description: "The X coordinate of this point.\r\n"
         slot_uri: cim:DiagramObjectPoint.xPosition
       yPosition:
-        name: yPosition
         range: float
         required: false
         multivalued: false
         description: "The Y coordinate of this point.\r\n"
         slot_uri: cim:DiagramObjectPoint.yPosition
       zPosition:
-        name: zPosition
         range: float
         required: false
         multivalued: false
         description: "The Z coordinate of this point.\r\n"
         slot_uri: cim:DiagramObjectPoint.zPosition
       DiagramObjectGluePoint:
-        name: DiagramObjectGluePoint
         range: DiagramObjectGluePoint
         required: false
         multivalued: false
         description: The 'glue' point to which this point is associated.
         slot_uri: cim:DiagramObjectPoint.DiagramObjectGluePoint
       DiagramObject:
-        name: DiagramObject
         range: DiagramObject
         required: true
         multivalued: false
         description: The diagram object with which the points are associated.
         slot_uri: cim:DiagramObjectPoint.DiagramObject
     class_uri: cim:DiagramObjectPoint
-    is_a:
     description: "A point in a given space defined by 3 coordinates and associated\
       \ to a diagram object.  The coordinates may be positive or negative as the origin\
       \ does not have to be in the corner of a diagram.  \r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.DiagramLayout
   DiagramObjectGluePoint:
-    name: DiagramObjectGluePoint
     attributes:
       DiagramObjectPoints:
-        name: DiagramObjectPoints
         range: DiagramObjectPoint
         required: true
         multivalued: true
@@ -1345,15 +1195,14 @@ classes:
           points that are considered to be 'glued' together.
         slot_uri: cim:DiagramObjectGluePoint.DiagramObjectPoints
     class_uri: cim:DiagramObjectGluePoint
-    is_a:
     description: "This is used for grouping diagram object points from different diagram\
       \ objects that are considered to be glued together in a diagram even if they\
       \ are not at the exact same coordinates.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.DiagramLayout
   DiagramObjectStyle:
-    name: DiagramObjectStyle
     attributes:
       StyledObjects:
-        name: StyledObjects
         range: DiagramObject
         required: false
         multivalued: true
@@ -1364,18 +1213,17 @@ classes:
     description: A reference to a style used by the originating system for a diagram
       object.  A diagram object style describes information such as line thickness,
       shape such as circle or rectangle etc, and colour.
+    in_subset:
+    - TC57CIM.IEC61970.Base.DiagramLayout
   InstanceSet:
-    name: InstanceSet
     attributes:
       DatasetArg:
-        name: DatasetArg
         range: DatasetArg
         required: false
         multivalued: true
         description: The role of a dataset in the context of an operation.
         slot_uri: cim:InstanceSet.DatasetArg
       InstanceSetMember:
-        name: InstanceSetMember
         range: IdentifiedObject
         required: false
         multivalued: true
@@ -1385,11 +1233,11 @@ classes:
     is_a: DataSet
     description: 'Instance of a version of a model part.   This corresponds to a payload
       of instance data.   '
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
   DatasetArg:
-    name: DatasetArg
     attributes:
       OperationDatasetArgDescription:
-        name: OperationDatasetArgDescription
         range: DatasetArgDescription
         required: true
         multivalued: false
@@ -1397,7 +1245,6 @@ classes:
           role types that belong to the operation type of the associated operation.
         slot_uri: cim:DatasetArg.OperationDatasetArgDescription
       Dataset:
-        name: Dataset
         range: InstanceSet
         required: true
         multivalued: false
@@ -1406,18 +1253,19 @@ classes:
     class_uri: cim:DatasetArg
     is_a: ModelOperationArg
     description: A model operation argument referencing a dataset instance.
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
 enums:
   DependencyKind:
-    name: DependencyKind
     permissible_values:
       mutuallyExclusive:
         meaning: cim:DependencyKind.mutuallyExclusive
       required:
         meaning: cim:DependencyKind.required
     enum_uri: cim:DependencyKind
-    description:
+    in_subset:
+    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   UnitMultiplier:
-    name: UnitMultiplier
     permissible_values:
       a:
         meaning: cim:UnitMultiplier.a
@@ -1484,8 +1332,9 @@ enums:
       \ imagines that the \"kg\" were replaced by a symbol \"\xDE\", then it is easier\
       \ to conceptualize the multiplier \"m\" as creating the proper unit \"m\xDE\"\
       , and not the forbidden unit \"mkg\"."
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   UnitSymbol:
-    name: UnitSymbol
     permissible_values:
       A:
         meaning: cim:UnitSymbol.A
@@ -1796,8 +1645,9 @@ enums:
       \ symbol information correctly convert and scale the raw data of those sources\
       \ into SI-based units. \r\nThe integer values are used for harmonization with\
       \ IEC 61850."
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
   OrientationKind:
-    name: OrientationKind
     permissible_values:
       negative:
         meaning: cim:OrientationKind.negative
@@ -1806,3 +1656,25 @@ enums:
     enum_uri: cim:OrientationKind
     description: "The orientation of the coordinate system with respect to top, left,\
       \ and the coordinate number system.\r\n"
+    in_subset:
+    - TC57CIM.IEC61970.Base.DiagramLayout
+subsets:
+  TC57CIM.IEC61970.Base.Core:
+    description: An extension to the Core and Wires packages that models information
+      for protection equipment such as relays. These entities are used within training
+      simulators and distribution network fault location applications.
+  TC57CIM.IEC61970.Base.DiagramLayout:
+    description: "This package is responsible for modelling the energy consumers and\
+      \ the system load as curves and associated curve data. Special circumstances\
+      \ that may affect the load, such as seasons and day types, are also included\
+      \ here.\r\n\r\nThis information is used by Load Forecasting and Load Management."
+  TC57CIM.IEC61970.Base.Domain:
+    description: "The ControlArea package models area specifications which can be\
+      \ used for a variety of purposes.  The package as a whole models potentially\
+      \ overlapping control area specifications for the purpose of actual generation\
+      \ control, load forecast area load capture, or powerflow based analysis.\r\n"
+  TC57CIM.IEC61970.InfIEC61970.InfPart303.AlternateModels:
+  TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations:
+  TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames:
+  TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects:
+  TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet:

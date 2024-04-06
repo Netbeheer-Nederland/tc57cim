@@ -1,7 +1,6 @@
 id: cim:Examples
 name: TC57CIM.IEC61970.Dynamics.Examples
 title: Examples
-description:
 imports:
 - linkml:types
 prefixes:
@@ -11,5 +10,3 @@ default_curi_maps:
 - semweb_context
 default_prefix: cim
 default_range: string
-classes:
-enums:

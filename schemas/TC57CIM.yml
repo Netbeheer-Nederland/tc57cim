@@ -1,7 +1,6 @@
 id: cim:TC57CIM
 name: TC57CIM
 title: TC57CIM
-description:
 imports:
 - linkml:types
 prefixes:
@@ -11,5 +10,3 @@ default_curi_maps:
 - semweb_context
 default_prefix: cim
 default_range: string
-classes:
-enums:
