@@ -1,20 +1,29 @@
 id: cim:InfMarketOpCommon
 name: TC57CIM.IEC62325.InfIEC62325.InfMarketOpCommon
 title: InfMarketOpCommon
-description:
+contributors:
+- github:bartkl
+created_by: https://github.com/bartkl/cim-to-linkml
+generation_date: 2024-04-06 12:57:08.491561
+license: https://www.apache.org/licenses/LICENSE-2.0.txt
+metamodel_version: 1.7.0
 imports:
 - linkml:types
 prefixes:
   linkml: https://w3id.org/linkml/
+  github: https://github.com/
   cim: https://cim.ucaiug.io/ns#
 default_curi_maps:
 - semweb_context
 default_prefix: cim
 default_range: string
-classes:
 enums:
   MarketRoleKind:
-    name: MarketRoleKind
+    enum_uri: cim:MarketRoleKind
+    description: Kind of market role an organisation can have. This list is not exhausted,
+      as other roles may exist.
+    in_subset:
+    - TC57CIM.IEC62325.InfIEC62325.InfMarketOpCommon
     permissible_values:
       BalanceResponsibleParty:
         meaning: cim:MarketRoleKind.BalanceResponsibleParty
@@ -124,6 +133,5 @@ enums:
         meaning: cim:MarketRoleKind.transmissionPlanner
       transmissionServiceProvider:
         meaning: cim:MarketRoleKind.transmissionServiceProvider
-    enum_uri: cim:MarketRoleKind
-    description: Kind of market role an organisation can have. This list is not exhausted,
-      as other roles may exist.
+subsets:
+  TC57CIM.IEC62325.InfIEC62325.InfMarketOpCommon:

@@ -5,10 +5,17 @@ description: "The ControlArea package models area specifications which can be us
   \ for a variety of purposes.  The package as a whole models potentially overlapping\
   \ control area specifications for the purpose of actual generation control, load\
   \ forecast area load capture, or powerflow based analysis.\r\n"
+contributors:
+- github:bartkl
+created_by: https://github.com/bartkl/cim-to-linkml
+generation_date: 2024-04-06 12:55:38.834643
+license: https://www.apache.org/licenses/LICENSE-2.0.txt
+metamodel_version: 1.7.0
 imports:
 - linkml:types
 prefixes:
   linkml: https://w3id.org/linkml/
+  github: https://github.com/
   cim: https://cim.ucaiug.io/ns#
 default_curi_maps:
 - semweb_context
@@ -16,1654 +23,1447 @@ default_prefix: cim
 default_range: string
 classes:
   VoltagePerReactivePower:
-    name: VoltagePerReactivePower
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:VoltagePerReactivePower.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:VoltagePerReactivePower.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:VoltagePerReactivePower.value
     class_uri: cim:VoltagePerReactivePower
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Voltage variation with reactive power.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:VoltagePerReactivePower.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:VoltagePerReactivePower.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:VoltagePerReactivePower.value
+        range: float
+        required: false
+        multivalued: false
   Length:
-    name: Length
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Length.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Length.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Length.value
     class_uri: cim:Length
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Unit of length. It shall be a positive value or zero.
+    attributes:
+      multiplier:
+        slot_uri: cim:Length.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Length.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Length.value
+        range: float
+        required: false
+        multivalued: false
   ConductancePerLength:
-    name: ConductancePerLength
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ConductancePerLength.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ConductancePerLength.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ConductancePerLength.value
     class_uri: cim:ConductancePerLength
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Real part of admittance per unit of length.\r\n"
-  VolumeFlowRate:
-    name: VolumeFlowRate
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:ConductancePerLength.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:VolumeFlowRate.multiplier
       unit:
-        name: unit
+        slot_uri: cim:ConductancePerLength.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:VolumeFlowRate.unit
       value:
-        name: value
+        slot_uri: cim:ConductancePerLength.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:VolumeFlowRate.value
+  VolumeFlowRate:
     class_uri: cim:VolumeFlowRate
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Volume per time.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:VolumeFlowRate.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:VolumeFlowRate.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:VolumeFlowRate.value
+        range: float
+        required: false
+        multivalued: false
   TimeInterval:
-    name: TimeInterval
+    class_uri: cim:TimeInterval
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: "Interval between two times.\r\n"
     attributes:
       end:
-        name: end
+        slot_uri: cim:TimeInterval.end
         range: time
         required: false
         multivalued: false
         description: "End time of this interval.\r\n"
-        slot_uri: cim:TimeInterval.end
       start:
-        name: start
+        slot_uri: cim:TimeInterval.start
         range: time
         required: false
         multivalued: false
         description: "Start time of this interval.\r\n"
-        slot_uri: cim:TimeInterval.start
-    class_uri: cim:TimeInterval
-    is_a:
-    description: "Interval between two times.\r\n"
   Volume:
-    name: Volume
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Volume.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Volume.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Volume.value
     class_uri: cim:Volume
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Volume.\r\n"
-  Voltage:
-    name: Voltage
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:Volume.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Voltage.multiplier
       unit:
-        name: unit
+        slot_uri: cim:Volume.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Voltage.unit
       value:
-        name: value
+        slot_uri: cim:Volume.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Voltage.value
+  Voltage:
     class_uri: cim:Voltage
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Electrical voltage, can be both AC and DC.
+    attributes:
+      multiplier:
+        slot_uri: cim:Voltage.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Voltage.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Voltage.value
+        range: float
+        required: false
+        multivalued: false
   DateInterval:
-    name: DateInterval
+    class_uri: cim:DateInterval
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: "Interval between two dates.\r\n"
     attributes:
       end:
-        name: end
+        slot_uri: cim:DateInterval.end
         range: date
         required: false
         multivalued: false
         description: "End date of this interval.\r\n"
-        slot_uri: cim:DateInterval.end
       start:
-        name: start
+        slot_uri: cim:DateInterval.start
         range: date
         required: false
         multivalued: false
         description: "Start date of this interval.\r\n"
-        slot_uri: cim:DateInterval.start
-    class_uri: cim:DateInterval
-    is_a:
-    description: "Interval between two dates.\r\n"
   Temperature:
-    name: Temperature
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Temperature.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Temperature.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Temperature.value
     class_uri: cim:Temperature
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Value of temperature in degrees Celsius.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:Temperature.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Temperature.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Temperature.value
+        range: float
+        required: false
+        multivalued: false
   Admittance:
-    name: Admittance
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Admittance.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Admittance.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Admittance.value
     class_uri: cim:Admittance
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Ratio of current to voltage.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:Admittance.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Admittance.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Admittance.value
+        range: float
+        required: false
+        multivalued: false
   Impedance:
-    name: Impedance
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Impedance.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Impedance.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Impedance.value
     class_uri: cim:Impedance
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Ratio of voltage to current.\r\n"
-  CostPerVolume:
-    name: CostPerVolume
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:Impedance.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CostPerVolume.multiplier
       unit:
-        name: unit
-        range: Currency
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:CostPerVolume.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:CostPerVolume.value
-    class_uri: cim:CostPerVolume
-    is_a:
-    description: "Cost per unit volume.\r\n"
-  SusceptancePerLength:
-    name: SusceptancePerLength
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:SusceptancePerLength.multiplier
-      unit:
-        name: unit
+        slot_uri: cim:Impedance.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:SusceptancePerLength.unit
       value:
-        name: value
+        slot_uri: cim:Impedance.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:SusceptancePerLength.value
-    class_uri: cim:SusceptancePerLength
-    is_a:
-    description: "Imaginary part of admittance per unit of length.\r\n"
-  Money:
-    name: Money
+  CostPerVolume:
+    class_uri: cim:CostPerVolume
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: "Cost per unit volume.\r\n"
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:CostPerVolume.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Money.multiplier
       unit:
-        name: unit
+        slot_uri: cim:CostPerVolume.unit
         range: Currency
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Money.unit
       value:
-        name: value
+        slot_uri: cim:CostPerVolume.value
+        range: float
+        required: false
+        multivalued: false
+  SusceptancePerLength:
+    class_uri: cim:SusceptancePerLength
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: "Imaginary part of admittance per unit of length.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:SusceptancePerLength.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:SusceptancePerLength.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:SusceptancePerLength.value
+        range: float
+        required: false
+        multivalued: false
+  Money:
+    class_uri: cim:Money
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: "Amount of money.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:Money.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Money.unit
+        range: Currency
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Money.value
         range: double
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Money.value
-    class_uri: cim:Money
-    is_a:
-    description: "Amount of money.\r\n"
   Minutes:
-    name: Minutes
+    class_uri: cim:Minutes
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: "Time in minutes.\r\n"
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:Minutes.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Minutes.multiplier
       unit:
-        name: unit
+        slot_uri: cim:Minutes.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Minutes.unit
       value:
-        name: value
+        slot_uri: cim:Minutes.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Minutes.value
-    class_uri: cim:Minutes
-    is_a:
-    description: "Time in minutes.\r\n"
   FloatQuantity:
-    name: FloatQuantity
+    class_uri: cim:FloatQuantity
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: Quantity with float value and associated unit information.
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:FloatQuantity.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
         description: Unit multiplier of this quantity.
-        slot_uri: cim:FloatQuantity.multiplier
       unit:
-        name: unit
+        slot_uri: cim:FloatQuantity.unit
         range: UnitSymbol
         required: false
         multivalued: false
         description: Unit of this quantity.
-        slot_uri: cim:FloatQuantity.unit
       value:
-        name: value
+        slot_uri: cim:FloatQuantity.value
         range: float
         required: false
         multivalued: false
         description: Value of this quantity.
-        slot_uri: cim:FloatQuantity.value
-    class_uri: cim:FloatQuantity
-    is_a:
-    description: Quantity with float value and associated unit information.
   CostPerEnergyUnit:
-    name: CostPerEnergyUnit
+    class_uri: cim:CostPerEnergyUnit
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: "Cost, in units of currency, per quantity of electrical energy generated.\r\
+      \n"
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:CostPerEnergyUnit.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CostPerEnergyUnit.multiplier
       unit:
-        name: unit
+        slot_uri: cim:CostPerEnergyUnit.unit
         range: Currency
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CostPerEnergyUnit.unit
       value:
-        name: value
+        slot_uri: cim:CostPerEnergyUnit.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CostPerEnergyUnit.value
-    class_uri: cim:CostPerEnergyUnit
-    is_a:
-    description: "Cost, in units of currency, per quantity of electrical energy generated.\r\
-      \n"
   PerCent:
-    name: PerCent
+    class_uri: cim:PerCent
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: "Percentage on a defined base.   For example, specify as 100 to indicate\
+      \ at the defined base.\r\n"
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:PerCent.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:PerCent.multiplier
       unit:
-        name: unit
+        slot_uri: cim:PerCent.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:PerCent.unit
       value:
-        name: value
+        slot_uri: cim:PerCent.value
         range: float
         required: false
         multivalued: false
         description: Normally 0 to 100 on a defined base.
-        slot_uri: cim:PerCent.value
-    class_uri: cim:PerCent
-    is_a:
-    description: "Percentage on a defined base.   For example, specify as 100 to indicate\
-      \ at the defined base.\r\n"
   IntegerQuantity:
-    name: IntegerQuantity
+    class_uri: cim:IntegerQuantity
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: Quantity with integer value and associated unit information.
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:IntegerQuantity.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
         description: Unit multiplier of this quantity.
-        slot_uri: cim:IntegerQuantity.multiplier
       unit:
-        name: unit
+        slot_uri: cim:IntegerQuantity.unit
         range: UnitSymbol
         required: false
         multivalued: false
         description: Unit of this quantity.
-        slot_uri: cim:IntegerQuantity.unit
       value:
-        name: value
+        slot_uri: cim:IntegerQuantity.value
         range: integer
         required: false
         multivalued: false
         description: Value of this quantity.
-        slot_uri: cim:IntegerQuantity.value
-    class_uri: cim:IntegerQuantity
-    is_a:
-    description: Quantity with integer value and associated unit information.
   ApparentPower:
-    name: ApparentPower
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ApparentPower.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ApparentPower.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ApparentPower.value
     class_uri: cim:ApparentPower
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Product of the RMS value of the voltage and the RMS value of the\
       \ current.\r\n"
-  WaterLevel:
-    name: WaterLevel
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:ApparentPower.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:WaterLevel.multiplier
       unit:
-        name: unit
+        slot_uri: cim:ApparentPower.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:WaterLevel.unit
       value:
-        name: value
+        slot_uri: cim:ApparentPower.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:WaterLevel.value
+  WaterLevel:
     class_uri: cim:WaterLevel
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Reservoir water level referred to a given datum such as mean sea\
       \ level.\r\n"
-  Displacement:
-    name: Displacement
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:WaterLevel.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Displacement.multiplier
       unit:
-        name: unit
+        slot_uri: cim:WaterLevel.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Displacement.unit
       value:
-        name: value
+        slot_uri: cim:WaterLevel.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Displacement.value
+  Displacement:
     class_uri: cim:Displacement
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Unit of displacement relative to a reference position, hence can
       be negative.
-  Damping:
-    name: Damping
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:Displacement.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Damping.multiplier
       unit:
-        name: unit
+        slot_uri: cim:Displacement.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Damping.unit
       value:
-        name: value
+        slot_uri: cim:Displacement.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Damping.value
+  Damping:
     class_uri: cim:Damping
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Per-unit active power variation with frequency referenced on the
       system apparent power base. Typical values are in the range 1,0 - 2,0.
-  Seconds:
-    name: Seconds
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:Damping.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Seconds.multiplier
       unit:
-        name: unit
+        slot_uri: cim:Damping.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Seconds.unit
       value:
-        name: value
+        slot_uri: cim:Damping.value
+        range: float
+        required: false
+        multivalued: false
+  Seconds:
+    class_uri: cim:Seconds
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: "Time, in seconds.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:Seconds.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Seconds.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Seconds.value
         range: float
         required: false
         multivalued: false
         description: Time, in seconds
-        slot_uri: cim:Seconds.value
-    class_uri: cim:Seconds
-    is_a:
-    description: "Time, in seconds.\r\n"
   ResistancePerLength:
-    name: ResistancePerLength
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ResistancePerLength.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ResistancePerLength.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ResistancePerLength.value
     class_uri: cim:ResistancePerLength
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Resistance (real part of impedance) per unit of length.\r\n"
-  Inductance:
-    name: Inductance
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:ResistancePerLength.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Inductance.multiplier
       unit:
-        name: unit
+        slot_uri: cim:ResistancePerLength.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Inductance.unit
       value:
-        name: value
+        slot_uri: cim:ResistancePerLength.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Inductance.value
+  Inductance:
     class_uri: cim:Inductance
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Inductive part of reactance (imaginary part of impedance), at rated\
       \ frequency.\r\n"
-  AngleDegrees:
-    name: AngleDegrees
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:Inductance.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:AngleDegrees.multiplier
       unit:
-        name: unit
+        slot_uri: cim:Inductance.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:AngleDegrees.unit
       value:
-        name: value
+        slot_uri: cim:Inductance.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:AngleDegrees.value
+  AngleDegrees:
     class_uri: cim:AngleDegrees
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Measurement of angle in degrees.\r\n"
-  CostRate:
-    name: CostRate
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:AngleDegrees.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CostRate.multiplier
       unit:
-        name: unit
+        slot_uri: cim:AngleDegrees.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:AngleDegrees.value
+        range: float
+        required: false
+        multivalued: false
+  CostRate:
+    class_uri: cim:CostRate
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: Cost, in units of currency, per elapsed time.
+    attributes:
+      multiplier:
+        slot_uri: cim:CostRate.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:CostRate.unit
         range: Currency
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CostRate.unit
       value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
         slot_uri: cim:CostRate.value
-    class_uri: cim:CostRate
-    is_a:
-    description: Cost, in units of currency, per elapsed time.
+        range: float
+        required: false
+        multivalued: false
   Speed:
-    name: Speed
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Speed.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Speed.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Speed.value
     class_uri: cim:Speed
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Distance per unit of time.\r\n"
-  Capacitance:
-    name: Capacitance
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:Speed.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Capacitance.multiplier
       unit:
-        name: unit
+        slot_uri: cim:Speed.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Capacitance.unit
       value:
-        name: value
+        slot_uri: cim:Speed.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Capacitance.value
+  Capacitance:
     class_uri: cim:Capacitance
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Capacitive part of reactance (imaginary part of impedance), at rated\
       \ frequency.\r\n"
-  PU:
-    name: PU
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:Capacitance.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:PU.multiplier
       unit:
-        name: unit
+        slot_uri: cim:Capacitance.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:PU.unit
       value:
-        name: value
+        slot_uri: cim:Capacitance.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:PU.value
+  PU:
     class_uri: cim:PU
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Per Unit - a positive or negative value referred to a defined base.\
       \ Values typically range from -10 to +10.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:PU.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:PU.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:PU.value
+        range: float
+        required: false
+        multivalued: false
   Pressure:
-    name: Pressure
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Pressure.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Pressure.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Pressure.value
     class_uri: cim:Pressure
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Pressure in pascals.
+    attributes:
+      multiplier:
+        slot_uri: cim:Pressure.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Pressure.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Pressure.value
+        range: float
+        required: false
+        multivalued: false
   KiloActivePower:
-    name: KiloActivePower
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:KiloActivePower.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:KiloActivePower.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:KiloActivePower.value
     class_uri: cim:KiloActivePower
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Active power in kilowatts.\r\n"
-  ReactivePower:
-    name: ReactivePower
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:KiloActivePower.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:ReactivePower.multiplier
       unit:
-        name: unit
+        slot_uri: cim:KiloActivePower.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:ReactivePower.unit
       value:
-        name: value
+        slot_uri: cim:KiloActivePower.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:ReactivePower.value
+  ReactivePower:
     class_uri: cim:ReactivePower
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Product of RMS value of the voltage and the RMS value of the quadrature\
       \ component of the current.\r\n"
-  StringQuantity:
-    name: StringQuantity
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:ReactivePower.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:ReactivePower.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:ReactivePower.value
+        range: float
+        required: false
+        multivalued: false
+  StringQuantity:
+    class_uri: cim:StringQuantity
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: Quantity with string value (when it is not important whether it is
+      an integral or a floating point number) and associated unit information.
+    attributes:
+      multiplier:
+        slot_uri: cim:StringQuantity.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
         description: Unit multiplier of this quantity.
-        slot_uri: cim:StringQuantity.multiplier
       unit:
-        name: unit
+        slot_uri: cim:StringQuantity.unit
         range: UnitSymbol
         required: false
         multivalued: false
         description: Unit of this quantity.
-        slot_uri: cim:StringQuantity.unit
       value:
-        name: value
+        slot_uri: cim:StringQuantity.value
         range: string
         required: false
         multivalued: false
         description: Value of this quantity.
-        slot_uri: cim:StringQuantity.value
-    class_uri: cim:StringQuantity
-    is_a:
-    description: Quantity with string value (when it is not important whether it is
-      an integral or a floating point number) and associated unit information.
   ActivePowerChangeRate:
-    name: ActivePowerChangeRate
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ActivePowerChangeRate.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ActivePowerChangeRate.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ActivePowerChangeRate.value
     class_uri: cim:ActivePowerChangeRate
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Rate of change of active power per time.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:ActivePowerChangeRate.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:ActivePowerChangeRate.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:ActivePowerChangeRate.value
+        range: float
+        required: false
+        multivalued: false
   Hours:
-    name: Hours
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Hours.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Hours.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Hours.value
     class_uri: cim:Hours
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Time specified in hours.\r\n"
-  Conductance:
-    name: Conductance
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:Hours.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Conductance.multiplier
       unit:
-        name: unit
+        slot_uri: cim:Hours.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Conductance.unit
       value:
-        name: value
+        slot_uri: cim:Hours.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Conductance.value
+  Conductance:
     class_uri: cim:Conductance
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Factor by which voltage must be multiplied to give corresponding\
       \ power lost from a circuit. Real part of admittance.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:Conductance.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Conductance.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Conductance.value
+        range: float
+        required: false
+        multivalued: false
   RotationSpeed:
-    name: RotationSpeed
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:RotationSpeed.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:RotationSpeed.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:RotationSpeed.value
     class_uri: cim:RotationSpeed
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Number of revolutions per second.\r\n"
-  CurrentFlow:
-    name: CurrentFlow
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:RotationSpeed.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CurrentFlow.multiplier
       unit:
-        name: unit
+        slot_uri: cim:RotationSpeed.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CurrentFlow.unit
       value:
-        name: value
+        slot_uri: cim:RotationSpeed.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CurrentFlow.value
+  CurrentFlow:
     class_uri: cim:CurrentFlow
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: 'Electrical current with sign convention: positive flow is out of
       the conducting equipment into the connectivity node. Can be both AC and DC.'
-  Frequency:
-    name: Frequency
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:CurrentFlow.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Frequency.multiplier
       unit:
-        name: unit
+        slot_uri: cim:CurrentFlow.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Frequency.unit
       value:
-        name: value
+        slot_uri: cim:CurrentFlow.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Frequency.value
+  Frequency:
     class_uri: cim:Frequency
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Cycles per second.
+    attributes:
+      multiplier:
+        slot_uri: cim:Frequency.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Frequency.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Frequency.value
+        range: float
+        required: false
+        multivalued: false
   DateTimeInterval:
-    name: DateTimeInterval
+    class_uri: cim:DateTimeInterval
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: 'Interval between two date and time points, where the interval includes
+      the start time but excludes end time.  '
     attributes:
       end:
-        name: end
+        slot_uri: cim:DateTimeInterval.end
         range: date
         required: false
         multivalued: false
         description: End date and time of this interval.  The end date and time where
           the interval is defined up to, but excluded.
-        slot_uri: cim:DateTimeInterval.end
       start:
-        name: start
+        slot_uri: cim:DateTimeInterval.start
         range: date
         required: false
         multivalued: false
         description: Start date and time of this interval.  The start date and time
           is included in the defined interval.
-        slot_uri: cim:DateTimeInterval.start
-    class_uri: cim:DateTimeInterval
-    is_a:
-    description: 'Interval between two date and time points, where the interval includes
-      the start time but excludes end time.  '
   AngleRadians:
-    name: AngleRadians
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:AngleRadians.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:AngleRadians.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:AngleRadians.value
     class_uri: cim:AngleRadians
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Phase angle in radians.\r\n"
-  ActivePower:
-    name: ActivePower
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:AngleRadians.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:ActivePower.multiplier
       unit:
-        name: unit
+        slot_uri: cim:AngleRadians.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:ActivePower.unit
       value:
-        name: value
+        slot_uri: cim:AngleRadians.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:ActivePower.value
+  ActivePower:
     class_uri: cim:ActivePower
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Product of RMS value of the voltage and the RMS value of the in-phase
       component of the current.
-  ReactancePerLength:
-    name: ReactancePerLength
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:ActivePower.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:ReactancePerLength.multiplier
       unit:
-        name: unit
+        slot_uri: cim:ActivePower.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:ReactancePerLength.unit
       value:
-        name: value
+        slot_uri: cim:ActivePower.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:ReactancePerLength.value
+  ReactancePerLength:
     class_uri: cim:ReactancePerLength
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Reactance (imaginary part of impedance) per unit of length, at rated\
       \ frequency.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:ReactancePerLength.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:ReactancePerLength.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:ReactancePerLength.value
+        range: float
+        required: false
+        multivalued: false
   Resistance:
-    name: Resistance
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Resistance.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Resistance.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Resistance.value
     class_uri: cim:Resistance
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Resistance (real part of impedance).\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:Resistance.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Resistance.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Resistance.value
+        range: float
+        required: false
+        multivalued: false
   Reactance:
-    name: Reactance
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Reactance.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Reactance.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Reactance.value
     class_uri: cim:Reactance
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Reactance (imaginary part of impedance), at rated frequency.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:Reactance.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Reactance.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Reactance.value
+        range: float
+        required: false
+        multivalued: false
   Susceptance:
-    name: Susceptance
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Susceptance.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Susceptance.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Susceptance.value
     class_uri: cim:Susceptance
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Imaginary part of admittance.
-  RealEnergy:
-    name: RealEnergy
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:Susceptance.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:RealEnergy.multiplier
       unit:
-        name: unit
+        slot_uri: cim:Susceptance.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:RealEnergy.unit
       value:
-        name: value
+        slot_uri: cim:Susceptance.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:RealEnergy.value
+  RealEnergy:
     class_uri: cim:RealEnergy
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Real electrical energy.\r\n"
-  Classification:
-    name: Classification
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:RealEnergy.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Classification.multiplier
       unit:
-        name: unit
+        slot_uri: cim:RealEnergy.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Classification.unit
       value:
-        name: value
-        range: integer
+        slot_uri: cim:RealEnergy.value
+        range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Classification.value
+  Classification:
     class_uri: cim:Classification
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Classification of level.  Specify as 1..n, with 1 being the most
       detailed, highest priority, etc as described on the attribute using this data
       type.
+    attributes:
+      multiplier:
+        slot_uri: cim:Classification.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Classification.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Classification.value
+        range: integer
+        required: false
+        multivalued: false
   HeatRate:
-    name: HeatRate
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:HeatRate.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:HeatRate.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:HeatRate.value
     class_uri: cim:HeatRate
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Heat generated, in energy per time unit of elapsed time.
-  Emission:
-    name: Emission
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:HeatRate.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Emission.multiplier
       unit:
-        name: unit
+        slot_uri: cim:HeatRate.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Emission.unit
       value:
-        name: value
+        slot_uri: cim:HeatRate.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Emission.value
+  Emission:
     class_uri: cim:Emission
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: "Quantity of emission per fuel heat content.\r\n"
-  CostPerHeatUnit:
-    name: CostPerHeatUnit
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:Emission.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CostPerHeatUnit.multiplier
       unit:
-        name: unit
+        slot_uri: cim:Emission.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Emission.value
+        range: float
+        required: false
+        multivalued: false
+  CostPerHeatUnit:
+    class_uri: cim:CostPerHeatUnit
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: "Cost, in units of currency, per quantity of heat generated.\r\n"
+    attributes:
+      multiplier:
+        slot_uri: cim:CostPerHeatUnit.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:CostPerHeatUnit.unit
         range: Currency
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CostPerHeatUnit.unit
       value:
-        name: value
+        slot_uri: cim:CostPerHeatUnit.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CostPerHeatUnit.value
-    class_uri: cim:CostPerHeatUnit
-    is_a:
-    description: "Cost, in units of currency, per quantity of heat generated.\r\n"
   ActivePowerPerFrequency:
-    name: ActivePowerPerFrequency
+    class_uri: cim:ActivePowerPerFrequency
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: Active power variation with frequency.
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:ActivePowerPerFrequency.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:ActivePowerPerFrequency.multiplier
       unit:
-        name: unit
+        slot_uri: cim:ActivePowerPerFrequency.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:ActivePowerPerFrequency.unit
       value:
-        name: value
+        slot_uri: cim:ActivePowerPerFrequency.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:ActivePowerPerFrequency.value
-    class_uri: cim:ActivePowerPerFrequency
-    is_a:
-    description: Active power variation with frequency.
   MonthDayInterval:
-    name: MonthDayInterval
+    class_uri: cim:MonthDayInterval
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: Interval between two times specified as month and day.
     attributes:
       end:
-        name: end
+        slot_uri: cim:MonthDayInterval.end
         range: date
         required: false
         multivalued: false
         description: End time of this interval.
-        slot_uri: cim:MonthDayInterval.end
       start:
-        name: start
+        slot_uri: cim:MonthDayInterval.start
         range: date
         required: false
         multivalued: false
         description: Start time of this interval.
-        slot_uri: cim:MonthDayInterval.start
-    class_uri: cim:MonthDayInterval
-    is_a:
-    description: Interval between two times specified as month and day.
   InductancePerLength:
-    name: InductancePerLength
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:InductancePerLength.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:InductancePerLength.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:InductancePerLength.value
     class_uri: cim:InductancePerLength
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Inductance per unit of length.
-  CapacitancePerLength:
-    name: CapacitancePerLength
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:InductancePerLength.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CapacitancePerLength.multiplier
       unit:
-        name: unit
+        slot_uri: cim:InductancePerLength.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CapacitancePerLength.unit
       value:
-        name: value
+        slot_uri: cim:InductancePerLength.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:CapacitancePerLength.value
+  CapacitancePerLength:
     class_uri: cim:CapacitancePerLength
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Capacitance per unit of length.
+    attributes:
+      multiplier:
+        slot_uri: cim:CapacitancePerLength.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:CapacitancePerLength.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:CapacitancePerLength.value
+        range: float
+        required: false
+        multivalued: false
   DecimalQuantity:
-    name: DecimalQuantity
+    class_uri: cim:DecimalQuantity
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
+    description: Quantity with decimal value and associated unit or currency information.
     attributes:
       currency:
-        name: currency
+        slot_uri: cim:DecimalQuantity.currency
         range: Currency
         required: false
         multivalued: false
         description: Currency of this quantity.
-        slot_uri: cim:DecimalQuantity.currency
       multiplier:
-        name: multiplier
+        slot_uri: cim:DecimalQuantity.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
         description: Unit multiplier of this quantity.
-        slot_uri: cim:DecimalQuantity.multiplier
       unit:
-        name: unit
+        slot_uri: cim:DecimalQuantity.unit
         range: UnitSymbol
         required: false
         multivalued: false
         description: Unit of this quantity.
-        slot_uri: cim:DecimalQuantity.unit
       value:
-        name: value
+        slot_uri: cim:DecimalQuantity.value
         range: double
         required: false
         multivalued: false
         description: Value of this quantity.
-        slot_uri: cim:DecimalQuantity.value
-    class_uri: cim:DecimalQuantity
-    is_a:
-    description: Quantity with decimal value and associated unit or currency information.
   Area:
-    name: Area
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Area.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Area.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Area.value
     class_uri: cim:Area
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Area.
+    attributes:
+      multiplier:
+        slot_uri: cim:Area.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Area.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Area.value
+        range: float
+        required: false
+        multivalued: false
   ActivePowerPerCurrentFlow:
-    name: ActivePowerPerCurrentFlow
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ActivePowerPerCurrentFlow.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ActivePowerPerCurrentFlow.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ActivePowerPerCurrentFlow.value
     class_uri: cim:ActivePowerPerCurrentFlow
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Active power variation with current flow.
-  Mass:
-    name: Mass
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:ActivePowerPerCurrentFlow.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Mass.multiplier
       unit:
-        name: unit
+        slot_uri: cim:ActivePowerPerCurrentFlow.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Mass.unit
       value:
-        name: value
+        slot_uri: cim:ActivePowerPerCurrentFlow.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Mass.value
+  Mass:
     class_uri: cim:Mass
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Mass.
+    attributes:
+      multiplier:
+        slot_uri: cim:Mass.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Mass.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Mass.value
+        range: float
+        required: false
+        multivalued: false
 enums:
   UnitMultiplier:
-    name: UnitMultiplier
+    enum_uri: cim:UnitMultiplier
+    description: "The unit multipliers defined for the CIM.  When applied to unit\
+      \ symbols, the unit symbol is treated as a derived unit. Regardless of the contents\
+      \ of the unit symbol text, the unit symbol shall be treated as if it were a\
+      \ single-character unit symbol. Unit symbols should not contain multipliers,\
+      \ and it should be left to the multiplier to define the multiple for an entire\
+      \ data type. \r\n\r\nFor example, if a unit symbol is \"m2Pers\" and the multiplier\
+      \ is \"k\", then the value is k(m**2/s), and the multiplier applies to the entire\
+      \ final value, not to any individual part of the value. This can be conceptualized\
+      \ by substituting a derived unit symbol for the unit type. If one imagines that\
+      \ the symbol \"\xDE\" represents the derived unit \"m2Pers\", then applying\
+      \ the multiplier \"k\" can be conceptualized simply as \"k\xDE\".\r\n\r\nFor\
+      \ example, the SI unit for mass is \"kg\" and not \"g\".  If the unit symbol\
+      \ is defined as \"kg\", then the multiplier is applied to \"kg\" as a whole\
+      \ and does not replace the \"k\" in front of the \"g\". In this case, the multiplier\
+      \ of \"m\" would be used with the unit symbol of \"kg\" to represent one gram.\
+      \  As a text string, this violates the instructions in IEC 80000-1. However,\
+      \ because the unit symbol in CIM is treated as a derived unit instead of as\
+      \ an SI unit, it makes more sense to conceptualize the \"kg\" as if it were\
+      \ replaced by one of the proposed replacements for the SI mass symbol. If one\
+      \ imagines that the \"kg\" were replaced by a symbol \"\xDE\", then it is easier\
+      \ to conceptualize the multiplier \"m\" as creating the proper unit \"m\xDE\"\
+      , and not the forbidden unit \"mkg\"."
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     permissible_values:
       a:
         meaning: cim:UnitMultiplier.a
@@ -1707,31 +1507,36 @@ enums:
         meaning: cim:UnitMultiplier.z
       Z:
         meaning: cim:UnitMultiplier.Z
-    enum_uri: cim:UnitMultiplier
-    description: "The unit multipliers defined for the CIM.  When applied to unit\
-      \ symbols, the unit symbol is treated as a derived unit. Regardless of the contents\
-      \ of the unit symbol text, the unit symbol shall be treated as if it were a\
-      \ single-character unit symbol. Unit symbols should not contain multipliers,\
-      \ and it should be left to the multiplier to define the multiple for an entire\
-      \ data type. \r\n\r\nFor example, if a unit symbol is \"m2Pers\" and the multiplier\
-      \ is \"k\", then the value is k(m**2/s), and the multiplier applies to the entire\
-      \ final value, not to any individual part of the value. This can be conceptualized\
-      \ by substituting a derived unit symbol for the unit type. If one imagines that\
-      \ the symbol \"\xDE\" represents the derived unit \"m2Pers\", then applying\
-      \ the multiplier \"k\" can be conceptualized simply as \"k\xDE\".\r\n\r\nFor\
-      \ example, the SI unit for mass is \"kg\" and not \"g\".  If the unit symbol\
-      \ is defined as \"kg\", then the multiplier is applied to \"kg\" as a whole\
-      \ and does not replace the \"k\" in front of the \"g\". In this case, the multiplier\
-      \ of \"m\" would be used with the unit symbol of \"kg\" to represent one gram.\
-      \  As a text string, this violates the instructions in IEC 80000-1. However,\
-      \ because the unit symbol in CIM is treated as a derived unit instead of as\
-      \ an SI unit, it makes more sense to conceptualize the \"kg\" as if it were\
-      \ replaced by one of the proposed replacements for the SI mass symbol. If one\
-      \ imagines that the \"kg\" were replaced by a symbol \"\xDE\", then it is easier\
-      \ to conceptualize the multiplier \"m\" as creating the proper unit \"m\xDE\"\
-      , and not the forbidden unit \"mkg\"."
   UnitSymbol:
-    name: UnitSymbol
+    enum_uri: cim:UnitSymbol
+    description: "The derived units defined for usage in the CIM. In some cases, the\
+      \ derived unit is equal to an SI unit. Whenever possible, the standard derived\
+      \ symbol is used instead of the formula for the derived unit. For example, the\
+      \ unit symbol Farad is defined as \"F\" instead of \"CPerV\". In cases where\
+      \ a standard symbol does not exist for a derived unit, the formula for the unit\
+      \ is used as the unit symbol. For example, density does not have a standard\
+      \ symbol and so it is represented as \"kgPerm3\". With the exception of the\
+      \ \"kg\", which is an SI unit, the unit symbols do not contain multipliers and\
+      \ therefore represent the base derived unit to which a multiplier can be applied\
+      \ as a whole. \r\nEvery unit symbol is treated as an unparseable text as if\
+      \ it were a single-letter symbol. The meaning of each unit symbol is defined\
+      \ by the accompanying descriptive text and not by the text contents of the unit\
+      \ symbol.\r\nTo allow the widest possible range of serializations without requiring\
+      \ special character handling, several substitutions are made which deviate from\
+      \ the format described in IEC 80000-1. The division symbol \"/\" is replaced\
+      \ by the letters \"Per\". Exponents are written in plain text after the unit\
+      \ as \"m3\" instead of being formatted as \"m\" with a superscript of 3  or\
+      \ introducing a symbol as in \"m^3\". The degree symbol \"\xB0\" is replaced\
+      \ with the letters \"deg\". Any clarification of the meaning for a substitution\
+      \ is included in the description for the unit symbol.\r\nNon-SI units are included\
+      \ in list of unit symbols to allow sources of data to be correctly labelled\
+      \ with their non-SI units (for example, a GPS sensor that is reporting numbers\
+      \ that represent feet instead of meters). This allows software to use the unit\
+      \ symbol information correctly convert and scale the raw data of those sources\
+      \ into SI-based units. \r\nThe integer values are used for harmonization with\
+      \ IEC 61850."
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     permissible_values:
       A:
         meaning: cim:UnitSymbol.A
@@ -2015,35 +1820,12 @@ enums:
         meaning: cim:UnitSymbol.WPersr
       WPerW:
         meaning: cim:UnitSymbol.WPerW
-    enum_uri: cim:UnitSymbol
-    description: "The derived units defined for usage in the CIM. In some cases, the\
-      \ derived unit is equal to an SI unit. Whenever possible, the standard derived\
-      \ symbol is used instead of the formula for the derived unit. For example, the\
-      \ unit symbol Farad is defined as \"F\" instead of \"CPerV\". In cases where\
-      \ a standard symbol does not exist for a derived unit, the formula for the unit\
-      \ is used as the unit symbol. For example, density does not have a standard\
-      \ symbol and so it is represented as \"kgPerm3\". With the exception of the\
-      \ \"kg\", which is an SI unit, the unit symbols do not contain multipliers and\
-      \ therefore represent the base derived unit to which a multiplier can be applied\
-      \ as a whole. \r\nEvery unit symbol is treated as an unparseable text as if\
-      \ it were a single-letter symbol. The meaning of each unit symbol is defined\
-      \ by the accompanying descriptive text and not by the text contents of the unit\
-      \ symbol.\r\nTo allow the widest possible range of serializations without requiring\
-      \ special character handling, several substitutions are made which deviate from\
-      \ the format described in IEC 80000-1. The division symbol \"/\" is replaced\
-      \ by the letters \"Per\". Exponents are written in plain text after the unit\
-      \ as \"m3\" instead of being formatted as \"m\" with a superscript of 3  or\
-      \ introducing a symbol as in \"m^3\". The degree symbol \"\xB0\" is replaced\
-      \ with the letters \"deg\". Any clarification of the meaning for a substitution\
-      \ is included in the description for the unit symbol.\r\nNon-SI units are included\
-      \ in list of unit symbols to allow sources of data to be correctly labelled\
-      \ with their non-SI units (for example, a GPS sensor that is reporting numbers\
-      \ that represent feet instead of meters). This allows software to use the unit\
-      \ symbol information correctly convert and scale the raw data of those sources\
-      \ into SI-based units. \r\nThe integer values are used for harmonization with\
-      \ IEC 61850."
   Currency:
-    name: Currency
+    enum_uri: cim:Currency
+    description: Monetary currencies.  ISO 4217 standard including 3-character currency
+      code.
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     permissible_values:
       AED:
         meaning: cim:Currency.AED
@@ -2367,6 +2149,9 @@ enums:
         meaning: cim:Currency.ZMK
       ZWL:
         meaning: cim:Currency.ZWL
-    enum_uri: cim:Currency
-    description: Monetary currencies.  ISO 4217 standard including 3-character currency
-      code.
+subsets:
+  TC57CIM.IEC61970.Base.Domain:
+    description: "The ControlArea package models area specifications which can be\
+      \ used for a variety of purposes.  The package as a whole models potentially\
+      \ overlapping control area specifications for the purpose of actual generation\
+      \ control, load forecast area load capture, or powerflow based analysis.\r\n"

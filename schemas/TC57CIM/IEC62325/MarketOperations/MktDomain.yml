@@ -1,20 +1,33 @@
 id: cim:MktDomain
 name: TC57CIM.IEC62325.MarketOperations.MktDomain
 title: MktDomain
-description:
+contributors:
+- github:bartkl
+created_by: https://github.com/bartkl/cim-to-linkml
+generation_date: 2024-04-06 12:57:02.222327
+license: https://www.apache.org/licenses/LICENSE-2.0.txt
+metamodel_version: 1.7.0
 imports:
 - linkml:types
 prefixes:
   linkml: https://w3id.org/linkml/
+  github: https://github.com/
   cim: https://cim.ucaiug.io/ns#
 default_curi_maps:
 - semweb_context
 default_prefix: cim
 default_range: string
-classes:
 enums:
   PriceTypeKind:
-    name: PriceTypeKind
+    enum_uri: cim:PriceTypeKind
+    description: Value of this enumeration for different prices include "total" for
+      the complete/full/all-in price, "congestion" for the congestion cost associated
+      with the total price, the "loss" for the loss price associated with the total
+      price, "capacity" for prices related to installed or reserved capacity, "mileage"
+      for use-based accounting, "system" for system-wide/copper-plate prices, and
+      "delivery" for distribution-based prices.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       capacity:
         meaning: cim:PriceTypeKind.capacity
@@ -30,15 +43,12 @@ enums:
         meaning: cim:PriceTypeKind.system
       total:
         meaning: cim:PriceTypeKind.total
-    enum_uri: cim:PriceTypeKind
-    description: Value of this enumeration for different prices include "total" for
-      the complete/full/all-in price, "congestion" for the congestion cost associated
-      with the total price, the "loss" for the loss price associated with the total
-      price, "capacity" for prices related to installed or reserved capacity, "mileage"
-      for use-based accounting, "system" for system-wide/copper-plate prices, and
-      "delivery" for distribution-based prices.
   CRRSegmentType:
-    name: CRRSegmentType
+    enum_uri: cim:CRRSegmentType
+    description: Type of the CRR, from the possible type definitions in the CRR System
+      (e.g. 'LSE', 'ETC').
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       AUC:
         meaning: cim:CRRSegmentType.AUC
@@ -56,11 +66,11 @@ enums:
         meaning: cim:CRRSegmentType.MT
       TOR:
         meaning: cim:CRRSegmentType.TOR
-    enum_uri: cim:CRRSegmentType
-    description: Type of the CRR, from the possible type definitions in the CRR System
-      (e.g. 'LSE', 'ETC').
   ExecutionType:
-    name: ExecutionType
+    enum_uri: cim:ExecutionType
+    description: "Execution types of Market Runs.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       DA:
         meaning: cim:ExecutionType.DA
@@ -70,19 +80,23 @@ enums:
         meaning: cim:ExecutionType.RTD
       RTPD:
         meaning: cim:ExecutionType.RTPD
-    enum_uri: cim:ExecutionType
-    description: "Execution types of Market Runs.\r\n"
   EquipmentStatusType:
-    name: EquipmentStatusType
+    enum_uri: cim:EquipmentStatusType
+    description: "Status of equipment.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       In:
         meaning: cim:EquipmentStatusType.In
       Out:
         meaning: cim:EquipmentStatusType.Out
-    enum_uri: cim:EquipmentStatusType
-    description: "Status of equipment.\r\n"
   UnitType:
-    name: UnitType
+    enum_uri: cim:UnitType
+    description: "Combined Cycle\r\nGas Turbine\r\nHydro Turbine\r\nOther\r\nPhotovoltaic\r\
+      \nHydro Pump-Turbine\r\nReciprocating Engine\r\nSteam Turbine\r\nSynchronous\
+      \ Condenser\r\nWind Turbine\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CCYC:
         meaning: cim:UnitType.CCYC
@@ -104,21 +118,23 @@ enums:
         meaning: cim:UnitType.SYNC
       WIND:
         meaning: cim:UnitType.WIND
-    enum_uri: cim:UnitType
-    description: "Combined Cycle\r\nGas Turbine\r\nHydro Turbine\r\nOther\r\nPhotovoltaic\r\
-      \nHydro Pump-Turbine\r\nReciprocating Engine\r\nSteam Turbine\r\nSynchronous\
-      \ Condenser\r\nWind Turbine\r\n"
   CRRCategoryType:
-    name: CRRCategoryType
+    enum_uri: cim:CRRCategoryType
+    description: "Congestion Revenue Rights category types.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       NSR:
         meaning: cim:CRRCategoryType.NSR
       PTP:
         meaning: cim:CRRCategoryType.PTP
-    enum_uri: cim:CRRCategoryType
-    description: "Congestion Revenue Rights category types.\r\n"
   ResourceAssnType:
-    name: ResourceAssnType
+    enum_uri: cim:ResourceAssnType
+    description: "For example:\r\nAsset Owner Sink designator for use by CRR\r\nAsset\
+      \ Owner Source designator for use by CRR\r\nReliability Must Run  \r\nScheduling\
+      \ Coordinator \r\nLoad Serving Entity\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CSNK:
         meaning: cim:ResourceAssnType.CSNK
@@ -130,22 +146,23 @@ enums:
         meaning: cim:ResourceAssnType.RMR
       SC:
         meaning: cim:ResourceAssnType.SC
-    enum_uri: cim:ResourceAssnType
-    description: "For example:\r\nAsset Owner Sink designator for use by CRR\r\nAsset\
-      \ Owner Source designator for use by CRR\r\nReliability Must Run  \r\nScheduling\
-      \ Coordinator \r\nLoad Serving Entity\r\n"
   ConstraintLimitType:
-    name: ConstraintLimitType
+    enum_uri: cim:ConstraintLimitType
+    description: "Binding constraint results limit type, For example:\r\nMAXIMUM\r\
+      \nMINIMUM\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       MAXIMUM:
         meaning: cim:ConstraintLimitType.MAXIMUM
       MINIMUM:
         meaning: cim:ConstraintLimitType.MINIMUM
-    enum_uri: cim:ConstraintLimitType
-    description: "Binding constraint results limit type, For example:\r\nMAXIMUM\r\
-      \nMINIMUM\r\n"
   MarketProductType:
-    name: MarketProductType
+    enum_uri: cim:MarketProductType
+    description: "For example:\r\nEnergy, Reg Up, Reg Down, Spin Reserve, Nonspin\
+      \ Reserve, RUC, Load Folloing Up, and Load Following Down."
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       EN:
         meaning: cim:MarketProductType.EN
@@ -165,20 +182,21 @@ enums:
         meaning: cim:MarketProductType.RU
       SR:
         meaning: cim:MarketProductType.SR
-    enum_uri: cim:MarketProductType
-    description: "For example:\r\nEnergy, Reg Up, Reg Down, Spin Reserve, Nonspin\
-      \ Reserve, RUC, Load Folloing Up, and Load Following Down."
   FlowDirectionType:
-    name: FlowDirectionType
+    enum_uri: cim:FlowDirectionType
+    description: "Specifies the direction of energy flow in the flowgate.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       Forward:
         meaning: cim:FlowDirectionType.Forward
       Reverse:
         meaning: cim:FlowDirectionType.Reverse
-    enum_uri: cim:FlowDirectionType
-    description: "Specifies the direction of energy flow in the flowgate.\r\n"
   ResourceCertificationKind:
-    name: ResourceCertificationKind
+    enum_uri: cim:ResourceCertificationKind
+    description: Types used for resource certification.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BLACKSTART:
         meaning: cim:ResourceCertificationKind.BLACKSTART
@@ -204,10 +222,11 @@ enums:
         meaning: cim:ResourceCertificationKind.SpinningReserve
       SynchronousCondenser:
         meaning: cim:ResourceCertificationKind.SynchronousCondenser
-    enum_uri: cim:ResourceCertificationKind
-    description: Types used for resource certification.
   SelfScheduleBreakdownType:
-    name: SelfScheduleBreakdownType
+    enum_uri: cim:SelfScheduleBreakdownType
+    description: "Self schedule breakdown type.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ETC:
         meaning: cim:SelfScheduleBreakdownType.ETC
@@ -215,10 +234,12 @@ enums:
         meaning: cim:SelfScheduleBreakdownType.LPT
       TOR:
         meaning: cim:SelfScheduleBreakdownType.TOR
-    enum_uri: cim:SelfScheduleBreakdownType
-    description: "Self schedule breakdown type.\r\n"
   BidCalculationBasis:
-    name: BidCalculationBasis
+    enum_uri: cim:BidCalculationBasis
+    description: "The basis used to calculate the bid price curve for an energy default\
+      \ bid.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       COST_BASED:
         meaning: cim:BidCalculationBasis.COST_BASED
@@ -226,11 +247,12 @@ enums:
         meaning: cim:BidCalculationBasis.LMP_BASED
       NEGOTIATED:
         meaning: cim:BidCalculationBasis.NEGOTIATED
-    enum_uri: cim:BidCalculationBasis
-    description: "The basis used to calculate the bid price curve for an energy default\
-      \ bid.\r\n"
   CheckOutType:
-    name: CheckOutType
+    enum_uri: cim:CheckOutType
+    description: "To indicate a check out type such as adjusted capacity or dispatch\
+      \ capacity.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       AFTER_THE_FACT:
         meaning: cim:CheckOutType.AFTER_THE_FACT
@@ -238,11 +260,20 @@ enums:
         meaning: cim:CheckOutType.PRE_HOUR
       PRE_SCHEDULE:
         meaning: cim:CheckOutType.PRE_SCHEDULE
-    enum_uri: cim:CheckOutType
-    description: "To indicate a check out type such as adjusted capacity or dispatch\
-      \ capacity.\r\n"
   AnodeType:
-    name: AnodeType
+    enum_uri: cim:AnodeType
+    description: "Aggregated Nodes Types for example:\r\n<ul>\r\n\t<li>SYS - System\
+      \ Zone/Region;  </li>\r\n</ul>\r\n<ul>\r\n\t<li>RUC - RUC Zone;  </li>\r\n</ul>\r\
+      \n<ul>\r\n\t<li>LFZ - Load Forecast Zone;  </li>\r\n</ul>\r\n<ul>\r\n\t<li>REG\
+      \ - Market Energy/Ancillary Service Region;  </li>\r\n</ul>\r\n<ul>\r\n\t<li>AGR\
+      \ - Aggregate Generation Resource;  </li>\r\n</ul>\r\n<ul>\r\n\t<li>POD - Point\
+      \ of Delivery;  </li>\r\n</ul>\r\n<ul>\r\n\t<li>ALR - Aggregate Load Resource;\
+      \  </li>\r\n</ul>\r\n<ul>\r\n\t<li>LTAC - Load TransmissionAccessCharge (TAC)\
+      \ Group; </li>\r\n</ul>\r\n<ul>\r\n\t<li>ACA - Adjacent Control Area </li>\r\
+      \n</ul>\r\n<ul>\r\n\t<li>ASR - Aggregated System Resource </li>\r\n</ul>\r\n\
+      <ul>\r\n\t<li>ECA - Embedded Control Area </li>\r\n</ul>"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ACA:
         meaning: cim:AnodeType.ACA
@@ -268,19 +299,13 @@ enums:
         meaning: cim:AnodeType.RUC
       SYS:
         meaning: cim:AnodeType.SYS
-    enum_uri: cim:AnodeType
-    description: "Aggregated Nodes Types for example:\r\n<ul>\r\n\t<li>SYS - System\
-      \ Zone/Region;  </li>\r\n</ul>\r\n<ul>\r\n\t<li>RUC - RUC Zone;  </li>\r\n</ul>\r\
-      \n<ul>\r\n\t<li>LFZ - Load Forecast Zone;  </li>\r\n</ul>\r\n<ul>\r\n\t<li>REG\
-      \ - Market Energy/Ancillary Service Region;  </li>\r\n</ul>\r\n<ul>\r\n\t<li>AGR\
-      \ - Aggregate Generation Resource;  </li>\r\n</ul>\r\n<ul>\r\n\t<li>POD - Point\
-      \ of Delivery;  </li>\r\n</ul>\r\n<ul>\r\n\t<li>ALR - Aggregate Load Resource;\
-      \  </li>\r\n</ul>\r\n<ul>\r\n\t<li>LTAC - Load TransmissionAccessCharge (TAC)\
-      \ Group; </li>\r\n</ul>\r\n<ul>\r\n\t<li>ACA - Adjacent Control Area </li>\r\
-      \n</ul>\r\n<ul>\r\n\t<li>ASR - Aggregated System Resource </li>\r\n</ul>\r\n\
-      <ul>\r\n\t<li>ECA - Embedded Control Area </li>\r\n</ul>"
   CommitmentType:
-    name: CommitmentType
+    enum_uri: cim:CommitmentType
+    description: "For example:\r\nSELF - Self commitment\r\nISO - New commitment for\
+      \ this market period\r\nUC - Existing commitment that was a hold over from a\
+      \ previous market\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ISO:
         meaning: cim:CommitmentType.ISO
@@ -288,12 +313,11 @@ enums:
         meaning: cim:CommitmentType.SELF
       UC:
         meaning: cim:CommitmentType.UC
-    enum_uri: cim:CommitmentType
-    description: "For example:\r\nSELF - Self commitment\r\nISO - New commitment for\
-      \ this market period\r\nUC - Existing commitment that was a hold over from a\
-      \ previous market\r\n"
   MktInvoiceLineItemKind:
-    name: MktInvoiceLineItemKind
+    enum_uri: cim:MktInvoiceLineItemKind
+    description: Kind of invoice line item.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       initial:
         meaning: cim:MktInvoiceLineItemKind.initial
@@ -301,10 +325,11 @@ enums:
         meaning: cim:MktInvoiceLineItemKind.other
       recalculation:
         meaning: cim:MktInvoiceLineItemKind.recalculation
-    enum_uri: cim:MktInvoiceLineItemKind
-    description: Kind of invoice line item.
   MPMTestOutcome:
-    name: MPMTestOutcome
+    enum_uri: cim:MPMTestOutcome
+    description: "For example:\r\nPassed\r\nFailed\r\nDisabled\r\nSkipped\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       D:
         meaning: cim:MPMTestOutcome.D
@@ -314,10 +339,11 @@ enums:
         meaning: cim:MPMTestOutcome.P
       S:
         meaning: cim:MPMTestOutcome.S
-    enum_uri: cim:MPMTestOutcome
-    description: "For example:\r\nPassed\r\nFailed\r\nDisabled\r\nSkipped\r\n"
   ResultsConstraintType:
-    name: ResultsConstraintType
+    enum_uri: cim:ResultsConstraintType
+    description: "Market results binding constraint types.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       Actual:
         meaning: cim:ResultsConstraintType.Actual
@@ -327,10 +353,11 @@ enums:
         meaning: cim:ResultsConstraintType.FG_act
       Interface:
         meaning: cim:ResultsConstraintType.Interface
-    enum_uri: cim:ResultsConstraintType
-    description: "Market results binding constraint types.\r\n"
   AreaControlMode:
-    name: AreaControlMode
+    enum_uri: cim:AreaControlMode
+    description: "Area's present control mode.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CF:
         meaning: cim:AreaControlMode.CF
@@ -340,10 +367,11 @@ enums:
         meaning: cim:AreaControlMode.OFF
       TLB:
         meaning: cim:AreaControlMode.TLB
-    enum_uri: cim:AreaControlMode
-    description: "Area's present control mode.\r\n"
   MktAccountKind:
-    name: MktAccountKind
+    enum_uri: cim:MktAccountKind
+    description: Kind of Market account.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       estimate:
         meaning: cim:MktAccountKind.estimate
@@ -353,10 +381,11 @@ enums:
         meaning: cim:MktAccountKind.reversal
       statistical:
         meaning: cim:MktAccountKind.statistical
-    enum_uri: cim:MktAccountKind
-    description: Kind of Market account.
   EnergyTransactionType:
-    name: EnergyTransactionType
+    enum_uri: cim:EnergyTransactionType
+    description: "Defines the state of a transaction.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       approve:
         meaning: cim:EnergyTransactionType.approve
@@ -364,10 +393,11 @@ enums:
         meaning: cim:EnergyTransactionType.deny
       study:
         meaning: cim:EnergyTransactionType.study
-    enum_uri: cim:EnergyTransactionType
-    description: "Defines the state of a transaction.\r\n"
   CostBasis:
-    name: CostBasis
+    enum_uri: cim:CostBasis
+    description: "For example:\r\nBid Cost\r\nProxy Cost\r\nRegistered Cost\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BIDC:
         meaning: cim:CostBasis.BIDC
@@ -375,10 +405,11 @@ enums:
         meaning: cim:CostBasis.PRXC
       REGC:
         meaning: cim:CostBasis.REGC
-    enum_uri: cim:CostBasis
-    description: "For example:\r\nBid Cost\r\nProxy Cost\r\nRegistered Cost\r\n"
   RampRateType:
-    name: RampRateType
+    enum_uri: cim:RampRateType
+    description: Ramp rate curve type.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       INTERTIE:
         meaning: cim:RampRateType.INTERTIE
@@ -392,10 +423,11 @@ enums:
         meaning: cim:RampRateType.OP_RES
       REG:
         meaning: cim:RampRateType.REG
-    enum_uri: cim:RampRateType
-    description: Ramp rate curve type.
   AutomaticDispInstTypeCommitment:
-    name: AutomaticDispInstTypeCommitment
+    enum_uri: cim:AutomaticDispInstTypeCommitment
+    description: Commitment instruction types.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       DR_ADJUSTMENT:
         meaning: cim:AutomaticDispInstTypeCommitment.DR_ADJUSTMENT
@@ -407,20 +439,23 @@ enums:
         meaning: cim:AutomaticDispInstTypeCommitment.SHUT_DOWN
       START_UP:
         meaning: cim:AutomaticDispInstTypeCommitment.START_UP
-    enum_uri: cim:AutomaticDispInstTypeCommitment
-    description: Commitment instruction types.
   PurposeFlagType:
-    name: PurposeFlagType
+    enum_uri: cim:PurposeFlagType
+    description: "MPM Purpose Flag, for example:\r\n\r\nNature of threshold data:\r\
+      \n'M' - Mitigation threshold\r\n'R' - Reporting threshold\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       M:
         meaning: cim:PurposeFlagType.M
       R:
         meaning: cim:PurposeFlagType.R
-    enum_uri: cim:PurposeFlagType
-    description: "MPM Purpose Flag, for example:\r\n\r\nNature of threshold data:\r\
-      \n'M' - Mitigation threshold\r\n'R' - Reporting threshold\r\n"
   PassIndicatorType:
-    name: PassIndicatorType
+    enum_uri: cim:PassIndicatorType
+    description: "Defines the individual passes that produce results per execution\
+      \ type/market type.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       DA:
         meaning: cim:PassIndicatorType.DA
@@ -440,21 +475,26 @@ enums:
         meaning: cim:PassIndicatorType.RTPD
       RUC:
         meaning: cim:PassIndicatorType.RUC
-    enum_uri: cim:PassIndicatorType
-    description: "Defines the individual passes that produce results per execution\
-      \ type/market type.\r\n"
   MQSInstructionSource:
-    name: MQSInstructionSource
+    enum_uri: cim:MQSInstructionSource
+    description: "Valid values, for example: \r\nINS - Instruction from RTM\r\nACT\
+      \ - Actual instruction after the fact\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ACT:
         meaning: cim:MQSInstructionSource.ACT
       INS:
         meaning: cim:MQSInstructionSource.INS
-    enum_uri: cim:MQSInstructionSource
-    description: "Valid values, for example: \r\nINS - Instruction from RTM\r\nACT\
-      \ - Actual instruction after the fact\r\n"
   BidMitigationStatus:
-    name: BidMitigationStatus
+    enum_uri: cim:BidMitigationStatus
+    description: "For example:\r\n'S' - Mitigated by SMPM because of \"misconduct\"\
+      \r\n'L; - Mitigated by LMPM because of \"misconduct\"\r\n'R' - Modified by LMPM\
+      \ because of RMR rules\r\n'M' - Mitigated because of \"misconduct\" both by\
+      \ SMPM and LMPM\r\n'B' - Mitigated because of \"misconduct\" both by SMPM and\
+      \ modified by LMLM because of RMR rules\r\n'O' - original\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       B:
         meaning: cim:BidMitigationStatus.B
@@ -468,14 +508,11 @@ enums:
         meaning: cim:BidMitigationStatus.R
       S:
         meaning: cim:BidMitigationStatus.S
-    enum_uri: cim:BidMitigationStatus
-    description: "For example:\r\n'S' - Mitigated by SMPM because of \"misconduct\"\
-      \r\n'L; - Mitigated by LMPM because of \"misconduct\"\r\n'R' - Modified by LMPM\
-      \ because of RMR rules\r\n'M' - Mitigated because of \"misconduct\" both by\
-      \ SMPM and LMPM\r\n'B' - Mitigated because of \"misconduct\" both by SMPM and\
-      \ modified by LMLM because of RMR rules\r\n'O' - original\r\n"
   MarketProductSelfSchedType:
-    name: MarketProductSelfSchedType
+    enum_uri: cim:MarketProductSelfSchedType
+    description: "Market product self schedule bid types.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ETC:
         meaning: cim:MarketProductSelfSchedType.ETC
@@ -495,10 +532,14 @@ enums:
         meaning: cim:MarketProductSelfSchedType.SP
       TOR:
         meaning: cim:MarketProductSelfSchedType.TOR
-    enum_uri: cim:MarketProductSelfSchedType
-    description: "Market product self schedule bid types.\r\n"
   RampCurveType:
-    name: RampCurveType
+    enum_uri: cim:RampCurveType
+    description: "For example:\r\n0 - Fixed ramp rate independent of rate function\
+      \ unit MW output\r\n1 - Static ramp rates as a function of unit MW output only\
+      \ \r\n2 - Dynamic ramp rates as a function of unit MW output and ramping time\r\
+      \n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       '0':
         meaning: cim:RampCurveType.0
@@ -506,13 +547,11 @@ enums:
         meaning: cim:RampCurveType.1
       '2':
         meaning: cim:RampCurveType.2
-    enum_uri: cim:RampCurveType
-    description: "For example:\r\n0 - Fixed ramp rate independent of rate function\
-      \ unit MW output\r\n1 - Static ramp rates as a function of unit MW output only\
-      \ \r\n2 - Dynamic ramp rates as a function of unit MW output and ramping time\r\
-      \n"
   AnalogLimitType:
-    name: AnalogLimitType
+    enum_uri: cim:AnalogLimitType
+    description: "Limit type specified for AnalogLimits.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BranchLongTerm:
         meaning: cim:AnalogLimitType.BranchLongTerm
@@ -524,36 +563,40 @@ enums:
         meaning: cim:AnalogLimitType.VoltageHigh
       VoltageLow:
         meaning: cim:AnalogLimitType.VoltageLow
-    enum_uri: cim:AnalogLimitType
-    description: "Limit type specified for AnalogLimits.\r\n"
   CRRHedgeType:
-    name: CRRHedgeType
+    enum_uri: cim:CRRHedgeType
+    description: "Congestion Revenue Right hedge type.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       OBLIGATION:
         meaning: cim:CRRHedgeType.OBLIGATION
       OPTION:
         meaning: cim:CRRHedgeType.OPTION
-    enum_uri: cim:CRRHedgeType
-    description: "Congestion Revenue Right hedge type.\r\n"
   LoadForecastType:
-    name: LoadForecastType
+    enum_uri: cim:LoadForecastType
+    description: "Load forecast zone types.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       LFZ:
         meaning: cim:LoadForecastType.LFZ
       LZMS:
         meaning: cim:LoadForecastType.LZMS
-    enum_uri: cim:LoadForecastType
-    description: "Load forecast zone types.\r\n"
   ActionType:
-    name: ActionType
-    permissible_values:
-      CANCEL:
-        meaning: cim:ActionType.CANCEL
     enum_uri: cim:ActionType
     description: "Action type associated with an ActionRequest against a ParticipantInterfaces::Trade.\r\
       \n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    permissible_values:
+      CANCEL:
+        meaning: cim:ActionType.CANCEL
   ReserveRequirementType:
-    name: ReserveRequirementType
+    enum_uri: cim:ReserveRequirementType
+    description: "For example:\r\nOperating Reserve, Regulation, Contingency"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CONT:
         meaning: cim:ReserveRequirementType.CONT
@@ -561,10 +604,13 @@ enums:
         meaning: cim:ReserveRequirementType.OPRSV
       REG:
         meaning: cim:ReserveRequirementType.REG
-    enum_uri: cim:ReserveRequirementType
-    description: "For example:\r\nOperating Reserve, Regulation, Contingency"
   ParticipationCategoryMPM:
-    name: ParticipationCategoryMPM
+    enum_uri: cim:ParticipationCategoryMPM
+    description: "For example:\r\n'Y' - Participates in both LMPM and SMPM\r\n'N'\
+      \ - Not included in LMP price measures\r\n'S' - Participates in SMPM price measures\r\
+      \n'L' - Participates in LMPM price measures\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       L:
         meaning: cim:ParticipationCategoryMPM.L
@@ -574,12 +620,12 @@ enums:
         meaning: cim:ParticipationCategoryMPM.S
       Y:
         meaning: cim:ParticipationCategoryMPM.Y
-    enum_uri: cim:ParticipationCategoryMPM
-    description: "For example:\r\n'Y' - Participates in both LMPM and SMPM\r\n'N'\
-      \ - Not included in LMP price measures\r\n'S' - Participates in SMPM price measures\r\
-      \n'L' - Participates in LMPM price measures\r\n"
   BidType:
-    name: BidType
+    enum_uri: cim:BidType
+    description: "For example:\r\nDEFAULT_ENERGY_BID\r\nDEFAULT_STARTUP_BID\r\nDEFAULT_MINIMUM_LOAD_BID\r\
+      \n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       DEFAULT_ENERGY_BID:
         meaning: cim:BidType.DEFAULT_ENERGY_BID
@@ -587,11 +633,15 @@ enums:
         meaning: cim:BidType.DEFAULT_MINIMUM_LOAD_BID
       DEFAULT_STARTUP_BID:
         meaning: cim:BidType.DEFAULT_STARTUP_BID
-    enum_uri: cim:BidType
-    description: "For example:\r\nDEFAULT_ENERGY_BID\r\nDEFAULT_STARTUP_BID\r\nDEFAULT_MINIMUM_LOAD_BID\r\
-      \n"
   ApnodeType:
-    name: ApnodeType
+    enum_uri: cim:ApnodeType
+    description: "Aggregate Node Types for example:\r\nAG -  Aggregated Generation\r\
+      \nCPZ -  Custom Price Zone\r\nDPZ -  Default Price Zone\r\nLAP - Load Aggregation\
+      \ Point\r\nTH -  Trading  Hub\r\nSYS - System Zone\r\nCA - Control Area\r\n\r\
+      \nGA - generic aggregation\r\nEHV - 500 kV\r\nGH - generic hub\r\nZN - zone\r\
+      \nINT - Interface\r\nBUS - Bus\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       AG:
         meaning: cim:ApnodeType.AG
@@ -619,52 +669,55 @@ enums:
         meaning: cim:ApnodeType.TH
       ZN:
         meaning: cim:ApnodeType.ZN
-    enum_uri: cim:ApnodeType
-    description: "Aggregate Node Types for example:\r\nAG -  Aggregated Generation\r\
-      \nCPZ -  Custom Price Zone\r\nDPZ -  Default Price Zone\r\nLAP - Load Aggregation\
-      \ Point\r\nTH -  Trading  Hub\r\nSYS - System Zone\r\nCA - Control Area\r\n\r\
-      \nGA - generic aggregation\r\nEHV - 500 kV\r\nGH - generic hub\r\nZN - zone\r\
-      \nINT - Interface\r\nBUS - Bus\r\n"
   OnOff:
-    name: OnOff
+    enum_uri: cim:OnOff
+    description: "ON\r\nOFF\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       'OFF':
         meaning: cim:OnOff.OFF
       'ON':
         meaning: cim:OnOff.ON
-    enum_uri: cim:OnOff
-    description: "ON\r\nOFF\r\n"
   YesNo:
-    name: YesNo
+    enum_uri: cim:YesNo
+    description: Used as a flag set to Yes or No.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       'NO':
         meaning: cim:YesNo.NO
       'YES':
         meaning: cim:YesNo.YES
-    enum_uri: cim:YesNo
-    description: Used as a flag set to Yes or No.
   SwitchStatusType:
-    name: SwitchStatusType
+    enum_uri: cim:SwitchStatusType
+    description: "Circuit Breaker Status (closed or open) of the circuit breaker.\r\
+      \n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       Closed:
         meaning: cim:SwitchStatusType.Closed
       Open:
         meaning: cim:SwitchStatusType.Open
-    enum_uri: cim:SwitchStatusType
-    description: "Circuit Breaker Status (closed or open) of the circuit breaker.\r\
-      \n"
   BidTypeRMR:
-    name: BidTypeRMR
+    enum_uri: cim:BidTypeRMR
+    description: "Bid self schedule type has two types as the required output of requirements\
+      \ and qualified pre-dispatch.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       QUALIFIED_PREDISPATCH:
         meaning: cim:BidTypeRMR.QUALIFIED_PREDISPATCH
       REQUIREMENTS:
         meaning: cim:BidTypeRMR.REQUIREMENTS
-    enum_uri: cim:BidTypeRMR
-    description: "Bid self schedule type has two types as the required output of requirements\
-      \ and qualified pre-dispatch.\r\n"
   FuelSource:
-    name: FuelSource
+    enum_uri: cim:FuelSource
+    description: "For example:\r\nBio Gas (Landfill, Sewage, Digester, etc.)\r\nBiomass\r\
+      \nCoal\r\nDIST\r\nNatural Gas\r\nGeothermal\r\nHRCV\r\nNone\r\nNuclear\r\nOil\r\
+      \nOther\r\nSolar\r\nWaste to Energy\r\nWater\r\nWind\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BGAS:
         meaning: cim:FuelSource.BGAS
@@ -700,22 +753,22 @@ enums:
         meaning: cim:FuelSource.WATR
       WIND:
         meaning: cim:FuelSource.WIND
-    enum_uri: cim:FuelSource
-    description: "For example:\r\nBio Gas (Landfill, Sewage, Digester, etc.)\r\nBiomass\r\
-      \nCoal\r\nDIST\r\nNatural Gas\r\nGeothermal\r\nHRCV\r\nNone\r\nNuclear\r\nOil\r\
-      \nOther\r\nSolar\r\nWaste to Energy\r\nWater\r\nWind\r\n"
   MPMTestMethodType:
-    name: MPMTestMethodType
+    enum_uri: cim:MPMTestMethodType
+    description: "Market power mitigation test method type.\r\n\r\nTests with the\
+      \ normal (default) thresholds or tests with the alternate thresholds."
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ALTERNATE:
         meaning: cim:MPMTestMethodType.ALTERNATE
       NORMAL:
         meaning: cim:MPMTestMethodType.NORMAL
-    enum_uri: cim:MPMTestMethodType
-    description: "Market power mitigation test method type.\r\n\r\nTests with the\
-      \ normal (default) thresholds or tests with the alternate thresholds."
   UnitRegulationKind:
-    name: UnitRegulationKind
+    enum_uri: cim:UnitRegulationKind
+    description: Unit regulation kind.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       '0':
         meaning: cim:UnitRegulationKind.0
@@ -723,10 +776,13 @@ enums:
         meaning: cim:UnitRegulationKind.1
       '2':
         meaning: cim:UnitRegulationKind.2
-    enum_uri: cim:UnitRegulationKind
-    description: Unit regulation kind.
   TimeOfUse:
-    name: TimeOfUse
+    enum_uri: cim:TimeOfUse
+    description: Time of Use used by a CRR definition for specifying the time the
+      CRR spans. ON - CRR spans the on peak hours of the day, OFF - CRR spans the
+      off peak hours of the day, 24HR - CRR spans the entire day.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       24HR:
         meaning: cim:TimeOfUse.24HR
@@ -734,12 +790,11 @@ enums:
         meaning: cim:TimeOfUse.OFF
       'ON':
         meaning: cim:TimeOfUse.ON
-    enum_uri: cim:TimeOfUse
-    description: Time of Use used by a CRR definition for specifying the time the
-      CRR spans. ON - CRR spans the on peak hours of the day, OFF - CRR spans the
-      off peak hours of the day, 24HR - CRR spans the entire day.
   MarketType:
-    name: MarketType
+    enum_uri: cim:MarketType
+    description: Market type.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       DAM:
         meaning: cim:MarketType.DAM
@@ -749,19 +804,21 @@ enums:
         meaning: cim:MarketType.RTM
       RUC:
         meaning: cim:MarketType.RUC
-    enum_uri: cim:MarketType
-    description: Market type.
   ConstraintRampType:
-    name: ConstraintRampType
+    enum_uri: cim:ConstraintRampType
+    description: "Constraint Ramp type.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       FAST:
         meaning: cim:ConstraintRampType.FAST
       SLOW:
         meaning: cim:ConstraintRampType.SLOW
-    enum_uri: cim:ConstraintRampType
-    description: "Constraint Ramp type.\r\n"
   MktBillMediaKind:
-    name: MktBillMediaKind
+    enum_uri: cim:MktBillMediaKind
+    description: Kind of bill media.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       electronic:
         meaning: cim:MktBillMediaKind.electronic
@@ -769,10 +826,14 @@ enums:
         meaning: cim:MktBillMediaKind.other
       paper:
         meaning: cim:MktBillMediaKind.paper
-    enum_uri: cim:MktBillMediaKind
-    description: Kind of bill media.
   ContractType:
-    name: ContractType
+    enum_uri: cim:ContractType
+    description: "Transmission Contract Type, For example:\r\nO - Other \r\nTE - Transmission\
+      \ Export \r\nTI - Transmission Import \r\nETC - Existing Transmission Contract\
+      \ \r\nRMT - RMT Contract \r\nTOR - Transmission Ownership Right  \r\nRMR - Reliability\
+      \ Must Run Contract \r\nCVR - Converted contract\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CVR:
         meaning: cim:ContractType.CVR
@@ -790,13 +851,12 @@ enums:
         meaning: cim:ContractType.TI
       TOR:
         meaning: cim:ContractType.TOR
-    enum_uri: cim:ContractType
-    description: "Transmission Contract Type, For example:\r\nO - Other \r\nTE - Transmission\
-      \ Export \r\nTI - Transmission Import \r\nETC - Existing Transmission Contract\
-      \ \r\nRMT - RMT Contract \r\nTOR - Transmission Ownership Right  \r\nRMR - Reliability\
-      \ Must Run Contract \r\nCVR - Converted contract\r\n"
   CRRRoleType:
-    name: CRRRoleType
+    enum_uri: cim:CRRRoleType
+    description: Role types an organisation can play with respect to a congestion
+      revenue right.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BUYER:
         meaning: cim:CRRRoleType.BUYER
@@ -804,20 +864,21 @@ enums:
         meaning: cim:CRRRoleType.OWNER
       SELLER:
         meaning: cim:CRRRoleType.SELLER
-    enum_uri: cim:CRRRoleType
-    description: Role types an organisation can play with respect to a congestion
-      revenue right.
   InterTieDirection:
-    name: InterTieDirection
+    enum_uri: cim:InterTieDirection
+    description: Direction of an intertie.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       E:
         meaning: cim:InterTieDirection.E
       I:
         meaning: cim:InterTieDirection.I
-    enum_uri: cim:InterTieDirection
-    description: Direction of an intertie.
   ResourceCapacityType:
-    name: ResourceCapacityType
+    enum_uri: cim:ResourceCapacityType
+    description: Resource capacity type.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       FO:
         meaning: cim:ResourceCapacityType.FO
@@ -835,10 +896,13 @@ enums:
         meaning: cim:ResourceCapacityType.RU
       SR:
         meaning: cim:ResourceCapacityType.SR
-    enum_uri: cim:ResourceCapacityType
-    description: Resource capacity type.
   MPMTestIdentifierType:
-    name: MPMTestIdentifierType
+    enum_uri: cim:MPMTestIdentifierType
+    description: "Market power mitigation test identifier type, for example:\r\n\r\
+      \n1 - Global Price Test\r\n2 - Global Conduct Test\r\n3 - Global Impact Test\r\
+      \n4 - Local Price Test\r\n5 - Local Conduct Test\r\n6 - Local Impact Test"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       '1':
         meaning: cim:MPMTestIdentifierType.1
@@ -852,12 +916,11 @@ enums:
         meaning: cim:MPMTestIdentifierType.5
       '6':
         meaning: cim:MPMTestIdentifierType.6
-    enum_uri: cim:MPMTestIdentifierType
-    description: "Market power mitigation test identifier type, for example:\r\n\r\
-      \n1 - Global Price Test\r\n2 - Global Conduct Test\r\n3 - Global Impact Test\r\
-      \n4 - Local Price Test\r\n5 - Local Conduct Test\r\n6 - Local Impact Test"
   EnergyProductType:
-    name: EnergyProductType
+    enum_uri: cim:EnergyProductType
+    description: "Energy product type.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       DYN:
         meaning: cim:EnergyProductType.DYN
@@ -867,10 +930,11 @@ enums:
         meaning: cim:EnergyProductType.NFRM
       WHL:
         meaning: cim:EnergyProductType.WHL
-    enum_uri: cim:EnergyProductType
-    description: "Energy product type.\r\n"
   EnergyPriceIndexType:
-    name: EnergyPriceIndexType
+    enum_uri: cim:EnergyPriceIndexType
+    description: "For example:\r\nWHOLESALE\r\nRETAIL\r\nBOTH\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BOTH:
         meaning: cim:EnergyPriceIndexType.BOTH
@@ -878,10 +942,11 @@ enums:
         meaning: cim:EnergyPriceIndexType.RETAIL
       WHOLESALE:
         meaning: cim:EnergyPriceIndexType.WHOLESALE
-    enum_uri: cim:EnergyPriceIndexType
-    description: "For example:\r\nWHOLESALE\r\nRETAIL\r\nBOTH\r\n"
   MarketEventStatusKind:
-    name: MarketEventStatusKind
+    enum_uri: cim:MarketEventStatusKind
+    description: Market event status types.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       active:
         meaning: cim:MarketEventStatusKind.active
@@ -891,10 +956,12 @@ enums:
         meaning: cim:MarketEventStatusKind.completed
       planned:
         meaning: cim:MarketEventStatusKind.planned
-    enum_uri: cim:MarketEventStatusKind
-    description: Market event status types.
   ResourceRegistrationStatus:
-    name: ResourceRegistrationStatus
+    enum_uri: cim:ResourceRegistrationStatus
+    description: "Types of resource registration status, for example:\r\n\r\nActive\r\
+      \nMothballed\r\nPlanned\r\nDecommissioned\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       Active:
         meaning: cim:ResourceRegistrationStatus.Active
@@ -904,11 +971,11 @@ enums:
         meaning: cim:ResourceRegistrationStatus.Mothballed
       Planned:
         meaning: cim:ResourceRegistrationStatus.Planned
-    enum_uri: cim:ResourceRegistrationStatus
-    description: "Types of resource registration status, for example:\r\n\r\nActive\r\
-      \nMothballed\r\nPlanned\r\nDecommissioned\r\n"
   AutomaticDispatchMode:
-    name: AutomaticDispatchMode
+    enum_uri: cim:AutomaticDispatchMode
+    description: "Automatic Dispatch mode.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CONTINGENCY:
         meaning: cim:AutomaticDispatchMode.CONTINGENCY
@@ -916,10 +983,11 @@ enums:
         meaning: cim:AutomaticDispatchMode.INTERVAL
       MANUAL:
         meaning: cim:AutomaticDispatchMode.MANUAL
-    enum_uri: cim:AutomaticDispatchMode
-    description: "Automatic Dispatch mode.\r\n"
   DispatchResponseType:
-    name: DispatchResponseType
+    enum_uri: cim:DispatchResponseType
+    description: "For example:\r\nNON_RESPONSE\r\nACCEPT\r\nDECLINE\r\nPARTIAL\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ACCEPT:
         meaning: cim:DispatchResponseType.ACCEPT
@@ -929,20 +997,24 @@ enums:
         meaning: cim:DispatchResponseType.NON_RESPONSE
       PARTIAL:
         meaning: cim:DispatchResponseType.PARTIAL
-    enum_uri: cim:DispatchResponseType
-    description: "For example:\r\nNON_RESPONSE\r\nACCEPT\r\nDECLINE\r\nPARTIAL\r\n"
   SelfSchedReferenceType:
-    name: SelfSchedReferenceType
+    enum_uri: cim:SelfSchedReferenceType
+    description: "Indication of which type of self schedule is being referenced.\r\
+      \n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ETC:
         meaning: cim:SelfSchedReferenceType.ETC
       TOR:
         meaning: cim:SelfSchedReferenceType.TOR
-    enum_uri: cim:SelfSchedReferenceType
-    description: "Indication of which type of self schedule is being referenced.\r\
-      \n"
   FlagTypeRMR:
-    name: FlagTypeRMR
+    enum_uri: cim:FlagTypeRMR
+    description: "Indicates whether the unit is RMR and it's condition type, for example:\r\
+      \nN' - not an RMR unit\r\n'1' - RMR Condition 1 unit\r\n'2' - RMR Condition\
+      \ 2 unit\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       '1':
         meaning: cim:FlagTypeRMR.1
@@ -950,50 +1022,53 @@ enums:
         meaning: cim:FlagTypeRMR.2
       N:
         meaning: cim:FlagTypeRMR.N
-    enum_uri: cim:FlagTypeRMR
-    description: "Indicates whether the unit is RMR and it's condition type, for example:\r\
-      \nN' - not an RMR unit\r\n'1' - RMR Condition 1 unit\r\n'2' - RMR Condition\
-      \ 2 unit\r\n"
   BidMitigationType:
-    name: BidMitigationType
+    enum_uri: cim:BidMitigationType
+    description: "For example:\r\nInitial\r\nFinal\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       F:
         meaning: cim:BidMitigationType.F
       I:
         meaning: cim:BidMitigationType.I
-    enum_uri: cim:BidMitigationType
-    description: "For example:\r\nInitial\r\nFinal\r\n"
   ResourceLimitIndicator:
-    name: ResourceLimitIndicator
+    enum_uri: cim:ResourceLimitIndicator
+    description: "Locational AS Flags indicating whether the Upper or Lower Bound\
+      \ limit of the AS regional procurement is binding.\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       LOWER:
         meaning: cim:ResourceLimitIndicator.LOWER
       UPPER:
         meaning: cim:ResourceLimitIndicator.UPPER
-    enum_uri: cim:ResourceLimitIndicator
-    description: "Locational AS Flags indicating whether the Upper or Lower Bound\
-      \ limit of the AS regional procurement is binding.\r\n"
   MQSCHGType:
-    name: MQSCHGType
+    enum_uri: cim:MQSCHGType
+    description: "For example:\r\nADD - add\r\nCHG - change\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ADD:
         meaning: cim:MQSCHGType.ADD
       CHG:
         meaning: cim:MQSCHGType.CHG
-    enum_uri: cim:MQSCHGType
-    description: "For example:\r\nADD - add\r\nCHG - change\r\n"
   TRType:
-    name: TRType
+    enum_uri: cim:TRType
+    description: "Transmission Contract Right type -for example:\r\nindividual or\
+      \ chain of contract rights\r\n"
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CHAIN:
         meaning: cim:TRType.CHAIN
       INDIVIDUAL:
         meaning: cim:TRType.INDIVIDUAL
-    enum_uri: cim:TRType
-    description: "Transmission Contract Right type -for example:\r\nindividual or\
-      \ chain of contract rights\r\n"
   TradeType:
-    name: TradeType
+    enum_uri: cim:TradeType
+    description: Trade type.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       AST:
         meaning: cim:TradeType.AST
@@ -1001,10 +1076,11 @@ enums:
         meaning: cim:TradeType.IST
       UCT:
         meaning: cim:TradeType.UCT
-    enum_uri: cim:TradeType
-    description: Trade type.
   RampRateCondition:
-    name: RampRateCondition
+    enum_uri: cim:RampRateCondition
+    description: Ramp rate condition.
+    in_subset:
+    - TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BEST:
         meaning: cim:RampRateCondition.BEST
@@ -1014,5 +1090,5 @@ enums:
         meaning: cim:RampRateCondition.NORMAL
       WORST:
         meaning: cim:RampRateCondition.WORST
-    enum_uri: cim:RampRateCondition
-    description: Ramp rate condition.
+subsets:
+  TC57CIM.IEC62325.MarketOperations.MktDomain:

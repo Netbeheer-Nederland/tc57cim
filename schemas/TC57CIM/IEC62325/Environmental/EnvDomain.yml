@@ -1,11 +1,17 @@
 id: cim:EnvDomain
 name: TC57CIM.IEC62325.Environmental.EnvDomain
 title: EnvDomain
-description:
+contributors:
+- github:bartkl
+created_by: https://github.com/bartkl/cim-to-linkml
+generation_date: 2024-04-06 12:56:59.783880
+license: https://www.apache.org/licenses/LICENSE-2.0.txt
+metamodel_version: 1.7.0
 imports:
 - linkml:types
 prefixes:
   linkml: https://w3id.org/linkml/
+  github: https://github.com/
   cim: https://cim.ucaiug.io/ns#
 default_curi_maps:
 - semweb_context
@@ -13,140 +19,123 @@ default_prefix: cim
 default_range: string
 classes:
   MagneticField:
-    name: MagneticField
+    class_uri: cim:MagneticField
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
+    description: Magnetic field in nanotesla.
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:MagneticField.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:MagneticField.multiplier
       unit:
-        name: unit
+        slot_uri: cim:MagneticField.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:MagneticField.unit
       value:
-        name: value
+        slot_uri: cim:MagneticField.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:MagneticField.value
-    class_uri: cim:MagneticField
-    is_a:
-    description: Magnetic field in nanotesla.
   RelativeDisplacement:
-    name: RelativeDisplacement
+    class_uri: cim:RelativeDisplacement
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
+    description: Vertical displacement relative to either sealevel, ground or the
+      center of the earth.
     attributes:
       displacement:
-        name: displacement
+        slot_uri: cim:RelativeDisplacement.displacement
         range: Displacement
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:RelativeDisplacement.displacement
       kind:
-        name: kind
+        slot_uri: cim:RelativeDisplacement.kind
         range: RelativeDisplacementKind
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:RelativeDisplacement.kind
-    class_uri: cim:RelativeDisplacement
-    is_a:
-    description: Vertical displacement relative to either sealevel, ground or the
-      center of the earth.
   Displacement:
-    name: Displacement
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Displacement.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Displacement.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:Displacement.value
     class_uri: cim:Displacement
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     description: Unit of displacement relative to a reference position, hence can
       be negative.
+    attributes:
+      multiplier:
+        slot_uri: cim:Displacement.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Displacement.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Displacement.value
+        range: float
+        required: false
+        multivalued: false
   ParticulateDensity:
-    name: ParticulateDensity
-    attributes:
-      multiplier:
-        name: multiplier
-        range: UnitMultiplier
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ParticulateDensity.multiplier
-      unit:
-        name: unit
-        range: UnitSymbol
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ParticulateDensity.unit
-      value:
-        name: value
-        range: float
-        required: false
-        multivalued: false
-        description:
-        slot_uri: cim:ParticulateDensity.value
     class_uri: cim:ParticulateDensity
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     description: Particulate density as kg/m<sup>3</sup>.
-  Bearing:
-    name: Bearing
     attributes:
       multiplier:
-        name: multiplier
+        slot_uri: cim:ParticulateDensity.multiplier
         range: UnitMultiplier
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Bearing.multiplier
       unit:
-        name: unit
+        slot_uri: cim:ParticulateDensity.unit
         range: UnitSymbol
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Bearing.unit
       value:
-        name: value
+        slot_uri: cim:ParticulateDensity.value
         range: float
         required: false
         multivalued: false
-        description:
-        slot_uri: cim:Bearing.value
+  Bearing:
     class_uri: cim:Bearing
-    is_a:
+    annotations:
+      represents_cim_data_type: true
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     description: The bearing in degrees (with 360 degrees being True North).  Measured
       in degrees clockwise from True North.  0 degrees indicates no direction being
       given.
+    attributes:
+      multiplier:
+        slot_uri: cim:Bearing.multiplier
+        range: UnitMultiplier
+        required: false
+        multivalued: false
+      unit:
+        slot_uri: cim:Bearing.unit
+        range: UnitSymbol
+        required: false
+        multivalued: false
+      value:
+        slot_uri: cim:Bearing.value
+        range: float
+        required: false
+        multivalued: false
 enums:
   TestKind:
-    name: TestKind
+    enum_uri: cim:TestKind
+    description: The test applied to determine if the condition is met.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       equalTo:
         meaning: cim:TestKind.equalTo
@@ -158,10 +147,11 @@ enums:
         meaning: cim:TestKind.lessThan
       lessThanOrEqualTo:
         meaning: cim:TestKind.lessThanOrEqualTo
-    enum_uri: cim:TestKind
-    description: The test applied to determine if the condition is met.
   AtmosphericAnalogKind:
-    name: AtmosphericAnalogKind
+    enum_uri: cim:AtmosphericAnalogKind
+    description: Kinds of analogs (floats)  measuring an atmospheric condition.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       albedo:
         meaning: cim:AtmosphericAnalogKind.albedo
@@ -221,10 +211,11 @@ enums:
         meaning: cim:AtmosphericAnalogKind.windSpeedPeak
       windSpeedSustained:
         meaning: cim:AtmosphericAnalogKind.windSpeedSustained
-    enum_uri: cim:AtmosphericAnalogKind
-    description: Kinds of analogs (floats)  measuring an atmospheric condition.
   UncertaintyKind:
-    name: UncertaintyKind
+    enum_uri: cim:UncertaintyKind
+    description: The type of uncertainty for a reading.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       estimated:
         meaning: cim:UncertaintyKind.estimated
@@ -234,10 +225,11 @@ enums:
         meaning: cim:UncertaintyKind.standard
       unknown:
         meaning: cim:UncertaintyKind.unknown
-    enum_uri: cim:UncertaintyKind
-    description: The type of uncertainty for a reading.
   CoverageCodeKind:
-    name: CoverageCodeKind
+    enum_uri: cim:CoverageCodeKind
+    description: Kinds of weather condition coverage.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       brief:
         meaning: cim:CoverageCodeKind.brief
@@ -261,10 +253,32 @@ enums:
         meaning: cim:CoverageCodeKind.scattered
       widespread:
         meaning: cim:CoverageCodeKind.widespread
-    enum_uri: cim:CoverageCodeKind
-    description: Kinds of weather condition coverage.
   UnitMultiplier:
-    name: UnitMultiplier
+    enum_uri: cim:UnitMultiplier
+    description: "The unit multipliers defined for the CIM.  When applied to unit\
+      \ symbols, the unit symbol is treated as a derived unit. Regardless of the contents\
+      \ of the unit symbol text, the unit symbol shall be treated as if it were a\
+      \ single-character unit symbol. Unit symbols should not contain multipliers,\
+      \ and it should be left to the multiplier to define the multiple for an entire\
+      \ data type. \r\n\r\nFor example, if a unit symbol is \"m2Pers\" and the multiplier\
+      \ is \"k\", then the value is k(m**2/s), and the multiplier applies to the entire\
+      \ final value, not to any individual part of the value. This can be conceptualized\
+      \ by substituting a derived unit symbol for the unit type. If one imagines that\
+      \ the symbol \"\xDE\" represents the derived unit \"m2Pers\", then applying\
+      \ the multiplier \"k\" can be conceptualized simply as \"k\xDE\".\r\n\r\nFor\
+      \ example, the SI unit for mass is \"kg\" and not \"g\".  If the unit symbol\
+      \ is defined as \"kg\", then the multiplier is applied to \"kg\" as a whole\
+      \ and does not replace the \"k\" in front of the \"g\". In this case, the multiplier\
+      \ of \"m\" would be used with the unit symbol of \"kg\" to represent one gram.\
+      \  As a text string, this violates the instructions in IEC 80000-1. However,\
+      \ because the unit symbol in CIM is treated as a derived unit instead of as\
+      \ an SI unit, it makes more sense to conceptualize the \"kg\" as if it were\
+      \ replaced by one of the proposed replacements for the SI mass symbol. If one\
+      \ imagines that the \"kg\" were replaced by a symbol \"\xDE\", then it is easier\
+      \ to conceptualize the multiplier \"m\" as creating the proper unit \"m\xDE\"\
+      , and not the forbidden unit \"mkg\"."
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     permissible_values:
       a:
         meaning: cim:UnitMultiplier.a
@@ -308,31 +322,36 @@ enums:
         meaning: cim:UnitMultiplier.z
       Z:
         meaning: cim:UnitMultiplier.Z
-    enum_uri: cim:UnitMultiplier
-    description: "The unit multipliers defined for the CIM.  When applied to unit\
-      \ symbols, the unit symbol is treated as a derived unit. Regardless of the contents\
-      \ of the unit symbol text, the unit symbol shall be treated as if it were a\
-      \ single-character unit symbol. Unit symbols should not contain multipliers,\
-      \ and it should be left to the multiplier to define the multiple for an entire\
-      \ data type. \r\n\r\nFor example, if a unit symbol is \"m2Pers\" and the multiplier\
-      \ is \"k\", then the value is k(m**2/s), and the multiplier applies to the entire\
-      \ final value, not to any individual part of the value. This can be conceptualized\
-      \ by substituting a derived unit symbol for the unit type. If one imagines that\
-      \ the symbol \"\xDE\" represents the derived unit \"m2Pers\", then applying\
-      \ the multiplier \"k\" can be conceptualized simply as \"k\xDE\".\r\n\r\nFor\
-      \ example, the SI unit for mass is \"kg\" and not \"g\".  If the unit symbol\
-      \ is defined as \"kg\", then the multiplier is applied to \"kg\" as a whole\
-      \ and does not replace the \"k\" in front of the \"g\". In this case, the multiplier\
-      \ of \"m\" would be used with the unit symbol of \"kg\" to represent one gram.\
-      \  As a text string, this violates the instructions in IEC 80000-1. However,\
-      \ because the unit symbol in CIM is treated as a derived unit instead of as\
-      \ an SI unit, it makes more sense to conceptualize the \"kg\" as if it were\
-      \ replaced by one of the proposed replacements for the SI mass symbol. If one\
-      \ imagines that the \"kg\" were replaced by a symbol \"\xDE\", then it is easier\
-      \ to conceptualize the multiplier \"m\" as creating the proper unit \"m\xDE\"\
-      , and not the forbidden unit \"mkg\"."
   UnitSymbol:
-    name: UnitSymbol
+    enum_uri: cim:UnitSymbol
+    description: "The derived units defined for usage in the CIM. In some cases, the\
+      \ derived unit is equal to an SI unit. Whenever possible, the standard derived\
+      \ symbol is used instead of the formula for the derived unit. For example, the\
+      \ unit symbol Farad is defined as \"F\" instead of \"CPerV\". In cases where\
+      \ a standard symbol does not exist for a derived unit, the formula for the unit\
+      \ is used as the unit symbol. For example, density does not have a standard\
+      \ symbol and so it is represented as \"kgPerm3\". With the exception of the\
+      \ \"kg\", which is an SI unit, the unit symbols do not contain multipliers and\
+      \ therefore represent the base derived unit to which a multiplier can be applied\
+      \ as a whole. \r\nEvery unit symbol is treated as an unparseable text as if\
+      \ it were a single-letter symbol. The meaning of each unit symbol is defined\
+      \ by the accompanying descriptive text and not by the text contents of the unit\
+      \ symbol.\r\nTo allow the widest possible range of serializations without requiring\
+      \ special character handling, several substitutions are made which deviate from\
+      \ the format described in IEC 80000-1. The division symbol \"/\" is replaced\
+      \ by the letters \"Per\". Exponents are written in plain text after the unit\
+      \ as \"m3\" instead of being formatted as \"m\" with a superscript of 3  or\
+      \ introducing a symbol as in \"m^3\". The degree symbol \"\xB0\" is replaced\
+      \ with the letters \"deg\". Any clarification of the meaning for a substitution\
+      \ is included in the description for the unit symbol.\r\nNon-SI units are included\
+      \ in list of unit symbols to allow sources of data to be correctly labelled\
+      \ with their non-SI units (for example, a GPS sensor that is reporting numbers\
+      \ that represent feet instead of meters). This allows software to use the unit\
+      \ symbol information correctly convert and scale the raw data of those sources\
+      \ into SI-based units. \r\nThe integer values are used for harmonization with\
+      \ IEC 61850."
+    in_subset:
+    - TC57CIM.IEC61970.Base.Domain
     permissible_values:
       A:
         meaning: cim:UnitSymbol.A
@@ -616,35 +635,16 @@ enums:
         meaning: cim:UnitSymbol.WPersr
       WPerW:
         meaning: cim:UnitSymbol.WPerW
-    enum_uri: cim:UnitSymbol
-    description: "The derived units defined for usage in the CIM. In some cases, the\
-      \ derived unit is equal to an SI unit. Whenever possible, the standard derived\
-      \ symbol is used instead of the formula for the derived unit. For example, the\
-      \ unit symbol Farad is defined as \"F\" instead of \"CPerV\". In cases where\
-      \ a standard symbol does not exist for a derived unit, the formula for the unit\
-      \ is used as the unit symbol. For example, density does not have a standard\
-      \ symbol and so it is represented as \"kgPerm3\". With the exception of the\
-      \ \"kg\", which is an SI unit, the unit symbols do not contain multipliers and\
-      \ therefore represent the base derived unit to which a multiplier can be applied\
-      \ as a whole. \r\nEvery unit symbol is treated as an unparseable text as if\
-      \ it were a single-letter symbol. The meaning of each unit symbol is defined\
-      \ by the accompanying descriptive text and not by the text contents of the unit\
-      \ symbol.\r\nTo allow the widest possible range of serializations without requiring\
-      \ special character handling, several substitutions are made which deviate from\
-      \ the format described in IEC 80000-1. The division symbol \"/\" is replaced\
-      \ by the letters \"Per\". Exponents are written in plain text after the unit\
-      \ as \"m3\" instead of being formatted as \"m\" with a superscript of 3  or\
-      \ introducing a symbol as in \"m^3\". The degree symbol \"\xB0\" is replaced\
-      \ with the letters \"deg\". Any clarification of the meaning for a substitution\
-      \ is included in the description for the unit symbol.\r\nNon-SI units are included\
-      \ in list of unit symbols to allow sources of data to be correctly labelled\
-      \ with their non-SI units (for example, a GPS sensor that is reporting numbers\
-      \ that represent feet instead of meters). This allows software to use the unit\
-      \ symbol information correctly convert and scale the raw data of those sources\
-      \ into SI-based units. \r\nThe integer values are used for harmonization with\
-      \ IEC 61850."
   FScale:
-    name: FScale
+    enum_uri: cim:FScale
+    description: "Fujita scale (referred to as EF-scale starting in 2007) for tornado\
+      \ damage.  A set of wind estimates (not measurements) based on damage. It uses\
+      \ three-second gusts estimated at the point of damage based on a judgment of\
+      \ 8 levels of damage to 28 indicators. These estimates vary with height and\
+      \ exposure.  \r\nThe 3 second gust is not the same wind as in standard surface\
+      \ observations.\r\nEnumerations based on NOAA conventions."
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       five:
         meaning: cim:FScale.five
@@ -660,15 +660,11 @@ enums:
         meaning: cim:FScale.two
       zero:
         meaning: cim:FScale.zero
-    enum_uri: cim:FScale
-    description: "Fujita scale (referred to as EF-scale starting in 2007) for tornado\
-      \ damage.  A set of wind estimates (not measurements) based on damage. It uses\
-      \ three-second gusts estimated at the point of damage based on a judgment of\
-      \ 8 levels of damage to 28 indicators. These estimates vary with height and\
-      \ exposure.  \r\nThe 3 second gust is not the same wind as in standard surface\
-      \ observations.\r\nEnumerations based on NOAA conventions."
   WeatherCodeKind:
-    name: WeatherCodeKind
+    enum_uri: cim:WeatherCodeKind
+    description: Kinds of weather conditions.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       blowingDust:
         meaning: cim:WeatherCodeKind.blowingDust
@@ -726,10 +722,11 @@ enums:
         meaning: cim:WeatherCodeKind.waterSpouts
       wintryMix:
         meaning: cim:WeatherCodeKind.wintryMix
-    enum_uri: cim:WeatherCodeKind
-    description: Kinds of weather conditions.
   RelativeDisplacementKind:
-    name: RelativeDisplacementKind
+    enum_uri: cim:RelativeDisplacementKind
+    description: The types of relative displacement
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       centreEarth:
         meaning: cim:RelativeDisplacementKind.centreEarth
@@ -737,10 +734,11 @@ enums:
         meaning: cim:RelativeDisplacementKind.ground
       seaLevel:
         meaning: cim:RelativeDisplacementKind.seaLevel
-    enum_uri: cim:RelativeDisplacementKind
-    description: The types of relative displacement
   ReportingMethodKind:
-    name: ReportingMethodKind
+    enum_uri: cim:ReportingMethodKind
+    description: Method by which information is gathered from station.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       automated:
         meaning: cim:ReportingMethodKind.automated
@@ -748,17 +746,19 @@ enums:
         meaning: cim:ReportingMethodKind.manual
       queried:
         meaning: cim:ReportingMethodKind.queried
-    enum_uri: cim:ReportingMethodKind
-    description: Method by which information is gathered from station.
   EnvironmentalDiscreteKind:
-    name: EnvironmentalDiscreteKind
+    enum_uri: cim:EnvironmentalDiscreteKind
+    description: Discrete (integer) measuring an environmental condition.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       cloudCover:
         meaning: cim:EnvironmentalDiscreteKind.cloudCover
-    enum_uri: cim:EnvironmentalDiscreteKind
-    description: Discrete (integer) measuring an environmental condition.
   HydrosphericAnalogKind:
-    name: HydrosphericAnalogKind
+    enum_uri: cim:HydrosphericAnalogKind
+    description: Kinds of analogs (floats) measuring a hydrospheric condition.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       floodLevel:
         meaning: cim:HydrosphericAnalogKind.floodLevel
@@ -770,10 +770,11 @@ enums:
         meaning: cim:HydrosphericAnalogKind.waterTemperature
       waveHeight:
         meaning: cim:HydrosphericAnalogKind.waveHeight
-    enum_uri: cim:HydrosphericAnalogKind
-    description: Kinds of analogs (floats) measuring a hydrospheric condition.
   TimePeriodUnit:
-    name: TimePeriodUnit
+    enum_uri: cim:TimePeriodUnit
+    description: Units in which reporting frequency is specified.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       days:
         meaning: cim:TimePeriodUnit.days
@@ -787,10 +788,11 @@ enums:
         meaning: cim:TimePeriodUnit.seconds
       weeks:
         meaning: cim:TimePeriodUnit.weeks
-    enum_uri: cim:TimePeriodUnit
-    description: Units in which reporting frequency is specified.
   GeosphericAnalogKind:
-    name: GeosphericAnalogKind
+    enum_uri: cim:GeosphericAnalogKind
+    description: Kinds of analogs (floats) measuring a geospheric condition.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       lightningDensity:
         meaning: cim:GeosphericAnalogKind.lightningDensity
@@ -804,19 +806,22 @@ enums:
         meaning: cim:GeosphericAnalogKind.snowPackDepth
       temperature:
         meaning: cim:GeosphericAnalogKind.temperature
-    enum_uri: cim:GeosphericAnalogKind
-    description: Kinds of analogs (floats) measuring a geospheric condition.
   SpaceAnalogKind:
-    name: SpaceAnalogKind
+    enum_uri: cim:SpaceAnalogKind
+    description: Kinds of analogs (floats) measuring a space condition.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       magneticFieldDirection:
         meaning: cim:SpaceAnalogKind.magneticFieldDirection
       magneticFieldStrength:
         meaning: cim:SpaceAnalogKind.magneticFieldStrength
-    enum_uri: cim:SpaceAnalogKind
-    description: Kinds of analogs (floats) measuring a space condition.
   LocationKind:
-    name: LocationKind
+    enum_uri: cim:LocationKind
+    description: The nature of the location being defined for an environmental entity.
+      Possible values are center, perimeter, primary, secondary.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       center:
         meaning: cim:LocationKind.center
@@ -826,11 +831,11 @@ enums:
         meaning: cim:LocationKind.primary
       secondary:
         meaning: cim:LocationKind.secondary
-    enum_uri: cim:LocationKind
-    description: The nature of the location being defined for an environmental entity.
-      Possible values are center, perimeter, primary, secondary.
   CloudKind:
-    name: CloudKind
+    enum_uri: cim:CloudKind
+    description: Kind of cloud.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       altoCumulus:
         meaning: cim:CloudKind.altoCumulus
@@ -856,10 +861,11 @@ enums:
         meaning: cim:CloudKind.stratus
       toweringCumulus:
         meaning: cim:CloudKind.toweringCumulus
-    enum_uri: cim:CloudKind
-    description: Kind of cloud.
   IntensityCodeKind:
-    name: IntensityCodeKind
+    enum_uri: cim:IntensityCodeKind
+    description: Kinds of weather condition intensity.
+    in_subset:
+    - TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       heavy:
         meaning: cim:IntensityCodeKind.heavy
@@ -869,5 +875,10 @@ enums:
         meaning: cim:IntensityCodeKind.veryHeavy
       veryLight:
         meaning: cim:IntensityCodeKind.veryLight
-    enum_uri: cim:IntensityCodeKind
-    description: Kinds of weather condition intensity.
+subsets:
+  TC57CIM.IEC61970.Base.Domain:
+    description: "The ControlArea package models area specifications which can be\
+      \ used for a variety of purposes.  The package as a whole models potentially\
+      \ overlapping control area specifications for the purpose of actual generation\
+      \ control, load forecast area load capture, or powerflow based analysis.\r\n"
+  TC57CIM.IEC62325.Environmental.EnvDomain:
