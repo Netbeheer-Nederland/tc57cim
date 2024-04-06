@@ -1,10 +1,10 @@
-id: cim:InfDomain
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
 name: TC57CIM.IEC62325.InfIEC62325.InfDomain
 title: InfDomain
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:57:17.015453
+generation_date: 2024-04-06 13:16:57.947039
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:
@@ -21,8 +21,7 @@ enums:
   RequestorRmrTest:
     enum_uri: cim:RequestorRmrTest
     description: "MP\r\nISO\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       ISO:
         meaning: cim:RequestorRmrTest.ISO
@@ -31,8 +30,7 @@ enums:
   OrganisationCode:
     enum_uri: cim:OrganisationCode
     description: "organization code\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       BILL_TO:
         meaning: cim:OrganisationCode.BILL_TO
@@ -44,8 +42,7 @@ enums:
         meaning: cim:OrganisationCode.SOLD_TO
   SchedClassType:
     enum_uri: cim:SchedClassType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       F:
         meaning: cim:SchedClassType.F
@@ -55,8 +52,7 @@ enums:
         meaning: cim:SchedClassType.R
   ResourceCertificationCategory:
     enum_uri: cim:ResourceCertificationCategory
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       DAM:
         meaning: cim:ResourceCertificationCategory.DAM
@@ -68,8 +64,7 @@ enums:
         meaning: cim:ResourceCertificationCategory.RTM
   UOMType:
     enum_uri: cim:UOMType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       $/lb:
         meaning: cim:UOMType.%24/lb
@@ -95,8 +90,7 @@ enums:
         meaning: cim:UOMType.US%24/MWh
   OASISMarketType:
     enum_uri: cim:OASISMarketType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       All:
         meaning: cim:OASISMarketType.All
@@ -112,8 +106,7 @@ enums:
         meaning: cim:OASISMarketType.RUC
   OASISDataItems:
     enum_uri: cim:OASISDataItems
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       AS_CLEAR_ASMP_IFM:
         meaning: cim:OASISDataItems.AS_CLEAR_ASMP_IFM
@@ -329,8 +322,7 @@ enums:
         meaning: cim:OASISDataItems.TRNS_TR_USEAGE
   OASISMeasType:
     enum_uri: cim:OASISMeasType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       '%':
         meaning: cim:OASISMeasType.%25
@@ -352,8 +344,7 @@ enums:
         meaning: cim:OASISMeasType.US%24/MWh
   SegmentCurveType:
     enum_uri: cim:SegmentCurveType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       CONSULTATIVE:
         meaning: cim:SegmentCurveType.CONSULTATIVE
@@ -362,8 +353,7 @@ enums:
   OrganisationType:
     enum_uri: cim:OrganisationType
     description: "organization type\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       CUSTOMER:
         meaning: cim:OrganisationType.CUSTOMER
@@ -372,16 +362,14 @@ enums:
   SelfScheduleTypeMB:
     enum_uri: cim:SelfScheduleTypeMB
     description: "Self Schedule Types applicable to Mitigated Bid\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       RMR:
         meaning: cim:SelfScheduleTypeMB.RMR
   MarketStatementLineItemAliasName:
     enum_uri: cim:MarketStatementLineItemAliasName
     description: "market statement line item alias name\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       CHARGE_CODE_INTERVAL_DETAIL:
         meaning: cim:MarketStatementLineItemAliasName.CHARGE_CODE_INTERVAL_DETAIL
@@ -401,8 +389,7 @@ enums:
       M - Modified Trade\r\nCV - Conditionally Valid Trade\r\nCM - Conditionally Modified\
       \ Trade\r\nCI - Conditionally Invalid Trade\r\nCX - Cancelled Trade\r\nO - Obsolete\
       \ Trade\r\nMT - Matched Trade\r\nU - Unmatched Trade\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       CI:
         meaning: cim:TradeStatusType.CI
@@ -429,8 +416,7 @@ enums:
   ZoneType:
     enum_uri: cim:ZoneType
     description: "zone type\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       ASREGION:
         meaning: cim:ZoneType.ASREGION
@@ -445,8 +431,7 @@ enums:
   MarketStatementDescription:
     enum_uri: cim:MarketStatementDescription
     description: "Description of market statement\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       DAILY_INITIAL_CREDIT:
         meaning: cim:MarketStatementDescription.DAILY_INITIAL_CREDIT
@@ -460,8 +445,7 @@ enums:
         meaning: cim:MarketStatementDescription.MONTHLY_RECALC_MARKET
   OASISStatusType:
     enum_uri: cim:OASISStatusType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       Data_Transfer_Procedure_Initiated:
         meaning: cim:OASISStatusType.Data_Transfer_Procedure_Initiated
@@ -477,8 +461,7 @@ enums:
         meaning: cim:OASISStatusType.Valid
   OASISReportType:
     enum_uri: cim:OASISReportType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       AS_DA_RESULT:
         meaning: cim:OASISReportType.AS_DA_RESULT
@@ -539,8 +522,7 @@ enums:
   MarketStatementDocStatus:
     enum_uri: cim:MarketStatementDocStatus
     description: "market statement document status\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       APPROVED:
         meaning: cim:MarketStatementDocStatus.APPROVED
@@ -548,8 +530,7 @@ enums:
         meaning: cim:MarketStatementDocStatus.CANCELLED
   OASISErrCode:
     enum_uri: cim:OASISErrCode
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       '1000':
         meaning: cim:OASISErrCode.1000
@@ -578,8 +559,7 @@ enums:
     description: "Y - indicates a resource is capable of setting the Markte Clearing\
       \ Price \r\nS - indicates the resource must submit bids for energy at $ 0\r\n\
       N - indicates the resource does not have to submit bids for energy at $ 0\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       N:
         meaning: cim:PriceSetFlag.N
@@ -589,8 +569,7 @@ enums:
         meaning: cim:PriceSetFlag.Y
   JobScheduleType:
     enum_uri: cim:JobScheduleType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       CRITICAL:
         meaning: cim:JobScheduleType.CRITICAL
@@ -599,8 +578,7 @@ enums:
   AdderType:
     enum_uri: cim:AdderType
     description: "BASELI NE\r\nNEGOTIATED\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       BASELINE:
         meaning: cim:AdderType.BASELINE
@@ -608,8 +586,7 @@ enums:
         meaning: cim:AdderType.NEGOTIATED
   SpinningEventNameType:
     enum_uri: cim:SpinningEventNameType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       EASTERN:
         meaning: cim:SpinningEventNameType.EASTERN
@@ -622,8 +599,7 @@ enums:
   ADSInstructionTypeOOS:
     enum_uri: cim:ADSInstructionTypeOOS
     description: "MIN_CONSTRAINT\r\nMAX_CONSTRAINT\r\nFIXED_CONSTRAINT\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       FIXED_CONSTRAINT:
         meaning: cim:ADSInstructionTypeOOS.FIXED_CONSTRAINT
@@ -633,15 +609,13 @@ enums:
         meaning: cim:ADSInstructionTypeOOS.MIN_CONSTRAINT
   DAMMarketType:
     enum_uri: cim:DAMMarketType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       DAM:
         meaning: cim:DAMMarketType.DAM
   OASISMasterType:
     enum_uri: cim:OASISMasterType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       ATL_APNODE:
         meaning: cim:OASISMasterType.ATL_APNODE
@@ -683,8 +657,7 @@ enums:
         meaning: cim:OASISMasterType.ATL_XREF
   SelfSchedTypeRawBid:
     enum_uri: cim:SelfSchedTypeRawBid
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       BAS:
         meaning: cim:SelfSchedTypeRawBid.BAS
@@ -708,8 +681,7 @@ enums:
         meaning: cim:SelfSchedTypeRawBid.WHL
   OASISIntervalType:
     enum_uri: cim:OASISIntervalType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       BEGINNING:
         meaning: cim:OASISIntervalType.BEGINNING
@@ -717,8 +689,7 @@ enums:
         meaning: cim:OASISIntervalType.ENDING
   MarketScheduleServices:
     enum_uri: cim:MarketScheduleServices
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       retrieveDefaultBidCurves:
         meaning: cim:MarketScheduleServices.retrieveDefaultBidCurves
@@ -732,8 +703,7 @@ enums:
         meaning: cim:MarketScheduleServices.retrieveStartUpShutDownInstructions
   SpinningEventType:
     enum_uri: cim:SpinningEventType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       AA:
         meaning: cim:SpinningEventType.AA
@@ -743,8 +713,7 @@ enums:
         meaning: cim:SpinningEventType.RZ
   AllocationEnergyTypeCode:
     enum_uri: cim:AllocationEnergyTypeCode
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       ACNG:
         meaning: cim:AllocationEnergyTypeCode.ACNG
@@ -822,8 +791,7 @@ enums:
     enum_uri: cim:MarketProductTypeAsReq
     description: "RU - Regulation Up\r\nRD - Regulation Down\r\nSR - Spin Reserve\r\
       \nNR - Nonspin Reserve\r\nAS - Upward Ancillary Service\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       AS:
         meaning: cim:MarketProductTypeAsReq.AS
@@ -838,8 +806,7 @@ enums:
   AncillaryCommodityType:
     enum_uri: cim:AncillaryCommodityType
     description: "ancillary serivce types\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       NONSPIN:
         meaning: cim:AncillaryCommodityType.NONSPIN
@@ -851,8 +818,7 @@ enums:
         meaning: cim:AncillaryCommodityType.SPIN
   SourceSinkFlag:
     enum_uri: cim:SourceSinkFlag
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       CSNK:
         meaning: cim:SourceSinkFlag.CSNK
@@ -864,8 +830,7 @@ enums:
       \nCM - Conditionally Modified Bid\r\nV - Valid Bid\r\nM - Modified Bid\r\nRJ\
       \ - Rejected Bid\r\nI - Invalid Bid\r\nCX - Cancelled Bid\r\nO - Obsolete Bid\r\
       \nCL - Clean Bid\r\nRP - Replicated Bid\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       CL:
         meaning: cim:BidStatusType.CL
@@ -889,8 +854,7 @@ enums:
         meaning: cim:BidStatusType.V
   SourceSinkType:
     enum_uri: cim:SourceSinkType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       Neither:
         meaning: cim:SourceSinkType.Neither
@@ -900,8 +864,7 @@ enums:
         meaning: cim:SourceSinkType.Source
   DispatchTransactionType:
     enum_uri: cim:DispatchTransactionType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       Purchase:
         meaning: cim:DispatchTransactionType.Purchase
@@ -909,8 +872,7 @@ enums:
         meaning: cim:DispatchTransactionType.Sale
   CleanTradeProductType:
     enum_uri: cim:CleanTradeProductType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       APN:
         meaning: cim:CleanTradeProductType.APN
@@ -938,8 +900,7 @@ enums:
       \ time self scheduled energy; \r\n15) DMLE Day ahead minimum load energy; \r\
       \n16) PE Pumping Energy; \r\n17) TEE Total Expected Energy; \r\n18) DAPE - Day-Ahead\
       \ Pumping Energy;\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       DABE:
         meaning: cim:EnergyTypeCode.DABE
@@ -979,8 +940,7 @@ enums:
         meaning: cim:EnergyTypeCode.TEE
   LFCResourceType:
     enum_uri: cim:LFCResourceType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       GEN:
         meaning: cim:LFCResourceType.GEN
@@ -989,8 +949,7 @@ enums:
   MQSDELType:
     enum_uri: cim:MQSDELType
     description: "ADD - add\r\nDEL - delete\r\nCHG - change\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       ADD:
         meaning: cim:MQSDELType.ADD
@@ -1000,8 +959,7 @@ enums:
         meaning: cim:MQSDELType.DEL
   OASISErrDescription:
     enum_uri: cim:OASISErrDescription
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       Data can be requested for period of 31 days only:
         meaning: cim:OASISErrDescription.Data%20can%20be%20requested%20for%20period%20of%2031%20days%20only
@@ -1025,8 +983,7 @@ enums:
         meaning: cim:OASISErrDescription.Validation%20exception%20during%20transformation%20of%20XML
   ADSInstructionTypeCommitment:
     enum_uri: cim:ADSInstructionTypeCommitment
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       SHUT_DOWN:
         meaning: cim:ADSInstructionTypeCommitment.SHUT_DOWN
@@ -1034,8 +991,7 @@ enums:
         meaning: cim:ADSInstructionTypeCommitment.START_UP
   LoadFollowingCapacityType:
     enum_uri: cim:LoadFollowingCapacityType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       DOWN:
         meaning: cim:LoadFollowingCapacityType.DOWN
@@ -1045,8 +1001,7 @@ enums:
     enum_uri: cim:SelfScheduleType
     description: "self schedule types\r\n\r\nPT\r\nETC\r\nTOR\r\nRMR\r\nRMT\r\nRGMR\r\
       \nORFC\r\nSP\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       BAS:
         meaning: cim:SelfScheduleType.BAS
@@ -1082,8 +1037,7 @@ enums:
         meaning: cim:SelfScheduleType.WHL
   ResourceCertificationType:
     enum_uri: cim:ResourceCertificationType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       GT:
         meaning: cim:ResourceCertificationType.GT
@@ -1098,8 +1052,7 @@ enums:
   runTypeCAISO:
     enum_uri: cim:runTypeCAISO
     description: "S - Scheduling\r\nP - Pricing\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       P:
         meaning: cim:runTypeCAISO.P
@@ -1108,8 +1061,7 @@ enums:
   CurrentStatusSC:
     enum_uri: cim:CurrentStatusSC
     description: "ACTIVE\r\nINACTIVE\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       ACTIVE:
         meaning: cim:CurrentStatusSC.ACTIVE
@@ -1117,8 +1069,7 @@ enums:
         meaning: cim:CurrentStatusSC.INACTIVE
   DispatchAcceptStatus:
     enum_uri: cim:DispatchAcceptStatus
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       ACCEPT:
         meaning: cim:DispatchAcceptStatus.ACCEPT
@@ -1134,16 +1085,14 @@ enums:
         meaning: cim:DispatchAcceptStatus.PARTIAL
   TimeZoneType:
     enum_uri: cim:TimeZoneType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       PPT:
         meaning: cim:TimeZoneType.PPT
   UnitTypeEMS:
     enum_uri: cim:UnitTypeEMS
     description: "MW\r\nFLAG\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       FLAG:
         meaning: cim:UnitTypeEMS.FLAG
@@ -1151,8 +1100,7 @@ enums:
         meaning: cim:UnitTypeEMS.MW
   BidPriceCapType:
     enum_uri: cim:BidPriceCapType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       AS:
         meaning: cim:BidPriceCapType.AS
@@ -1162,8 +1110,7 @@ enums:
         meaning: cim:BidPriceCapType.RUC
   JobStartEndType:
     enum_uri: cim:JobStartEndType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       END:
         meaning: cim:JobStartEndType.END
@@ -1173,8 +1120,7 @@ enums:
         meaning: cim:JobStartEndType.START
   TradeProductType:
     enum_uri: cim:TradeProductType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       APN:
         meaning: cim:TradeProductType.APN
@@ -1199,8 +1145,7 @@ enums:
       \ Min Operating Limit - GNOL \r\nGeneration Regulation - GR \r\nGeneration Status\
       \ - GS \r\nPump Production - PP \r\nSystem Load - SL \r\nSystem ACE - ACE\r\n\
       System INADV - INADV\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       ACE:
         meaning: cim:MeasurementTypeEMS.ACE
@@ -1236,8 +1181,7 @@ enums:
         meaning: cim:MeasurementTypeEMS.SL
   JobFlagType:
     enum_uri: cim:JobFlagType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       CREATED:
         meaning: cim:JobFlagType.CREATED
@@ -1247,15 +1191,13 @@ enums:
         meaning: cim:JobFlagType.MODIFIED
   SystemType:
     enum_uri: cim:SystemType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       OASIS:
         meaning: cim:SystemType.OASIS
   MktSubClassType:
     enum_uri: cim:MktSubClassType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       Branch_Group_Derates:
         meaning: cim:MktSubClassType.Branch_Group_Derates
@@ -1283,8 +1225,7 @@ enums:
         meaning: cim:MktSubClassType.TTC/ATC_Hourly_Forecast
   AlarmDisplayType:
     enum_uri: cim:AlarmDisplayType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       Appear:
         meaning: cim:AlarmDisplayType.Appear
@@ -1294,15 +1235,13 @@ enums:
         meaning: cim:AlarmDisplayType.Fleeting
   OASISBidReportType:
     enum_uri: cim:OASISBidReportType
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       BIDS_PUBLIC:
         meaning: cim:OASISBidReportType.BIDS_PUBLIC
   SelfSchedTypeCleanBid:
     enum_uri: cim:SelfSchedTypeCleanBid
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       BAS:
         meaning: cim:SelfSchedTypeCleanBid.BAS
@@ -1329,8 +1268,7 @@ enums:
   MarketStatementDocType:
     enum_uri: cim:MarketStatementDocType
     description: "market statement document type\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.InfIEC62325.InfDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
     permissible_values:
       CREDIT:
         meaning: cim:MarketStatementDocType.CREDIT
@@ -1338,5 +1276,3 @@ enums:
         meaning: cim:MarketStatementDocType.MARKET_INITIAL
       MARKET_RECALC:
         meaning: cim:MarketStatementDocType.MARKET_RECALC
-subsets:
-  TC57CIM.IEC62325.InfIEC62325.InfDomain:

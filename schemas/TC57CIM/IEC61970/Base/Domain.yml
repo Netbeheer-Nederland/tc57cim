@@ -1,4 +1,4 @@
-id: cim:Domain
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
 name: TC57CIM.IEC61970.Base.Domain
 title: Domain
 description: "The ControlArea package models area specifications which can be used\
@@ -8,7 +8,7 @@ description: "The ControlArea package models area specifications which can be us
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:55:38.834643
+generation_date: 2024-04-06 13:15:20.239109
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:
@@ -26,8 +26,7 @@ classes:
     class_uri: cim:VoltagePerReactivePower
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Voltage variation with reactive power.\r\n"
     attributes:
       multiplier:
@@ -49,8 +48,7 @@ classes:
     class_uri: cim:Length
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Unit of length. It shall be a positive value or zero.
     attributes:
       multiplier:
@@ -72,8 +70,7 @@ classes:
     class_uri: cim:ConductancePerLength
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Real part of admittance per unit of length.\r\n"
     attributes:
       multiplier:
@@ -95,8 +92,7 @@ classes:
     class_uri: cim:VolumeFlowRate
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Volume per time.\r\n"
     attributes:
       multiplier:
@@ -116,8 +112,7 @@ classes:
         multivalued: false
   TimeInterval:
     class_uri: cim:TimeInterval
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Interval between two times.\r\n"
     attributes:
       end:
@@ -136,8 +131,7 @@ classes:
     class_uri: cim:Volume
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Volume.\r\n"
     attributes:
       multiplier:
@@ -159,8 +153,7 @@ classes:
     class_uri: cim:Voltage
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Electrical voltage, can be both AC and DC.
     attributes:
       multiplier:
@@ -180,8 +173,7 @@ classes:
         multivalued: false
   DateInterval:
     class_uri: cim:DateInterval
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Interval between two dates.\r\n"
     attributes:
       end:
@@ -200,8 +192,7 @@ classes:
     class_uri: cim:Temperature
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Value of temperature in degrees Celsius.\r\n"
     attributes:
       multiplier:
@@ -223,8 +214,7 @@ classes:
     class_uri: cim:Admittance
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Ratio of current to voltage.\r\n"
     attributes:
       multiplier:
@@ -246,8 +236,7 @@ classes:
     class_uri: cim:Impedance
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Ratio of voltage to current.\r\n"
     attributes:
       multiplier:
@@ -269,8 +258,7 @@ classes:
     class_uri: cim:CostPerVolume
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Cost per unit volume.\r\n"
     attributes:
       multiplier:
@@ -292,8 +280,7 @@ classes:
     class_uri: cim:SusceptancePerLength
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Imaginary part of admittance per unit of length.\r\n"
     attributes:
       multiplier:
@@ -315,8 +302,7 @@ classes:
     class_uri: cim:Money
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Amount of money.\r\n"
     attributes:
       multiplier:
@@ -338,8 +324,7 @@ classes:
     class_uri: cim:Minutes
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Time in minutes.\r\n"
     attributes:
       multiplier:
@@ -359,8 +344,7 @@ classes:
         multivalued: false
   FloatQuantity:
     class_uri: cim:FloatQuantity
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Quantity with float value and associated unit information.
     attributes:
       multiplier:
@@ -385,8 +369,7 @@ classes:
     class_uri: cim:CostPerEnergyUnit
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Cost, in units of currency, per quantity of electrical energy generated.\r\
       \n"
     attributes:
@@ -409,8 +392,7 @@ classes:
     class_uri: cim:PerCent
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Percentage on a defined base.   For example, specify as 100 to indicate\
       \ at the defined base.\r\n"
     attributes:
@@ -432,8 +414,7 @@ classes:
         description: Normally 0 to 100 on a defined base.
   IntegerQuantity:
     class_uri: cim:IntegerQuantity
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Quantity with integer value and associated unit information.
     attributes:
       multiplier:
@@ -458,8 +439,7 @@ classes:
     class_uri: cim:ApparentPower
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Product of the RMS value of the voltage and the RMS value of the\
       \ current.\r\n"
     attributes:
@@ -482,8 +462,7 @@ classes:
     class_uri: cim:WaterLevel
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Reservoir water level referred to a given datum such as mean sea\
       \ level.\r\n"
     attributes:
@@ -506,8 +485,7 @@ classes:
     class_uri: cim:Displacement
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Unit of displacement relative to a reference position, hence can
       be negative.
     attributes:
@@ -530,8 +508,7 @@ classes:
     class_uri: cim:Damping
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Per-unit active power variation with frequency referenced on the
       system apparent power base. Typical values are in the range 1,0 - 2,0.
     attributes:
@@ -554,8 +531,7 @@ classes:
     class_uri: cim:Seconds
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Time, in seconds.\r\n"
     attributes:
       multiplier:
@@ -578,8 +554,7 @@ classes:
     class_uri: cim:ResistancePerLength
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Resistance (real part of impedance) per unit of length.\r\n"
     attributes:
       multiplier:
@@ -601,8 +576,7 @@ classes:
     class_uri: cim:Inductance
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Inductive part of reactance (imaginary part of impedance), at rated\
       \ frequency.\r\n"
     attributes:
@@ -625,8 +599,7 @@ classes:
     class_uri: cim:AngleDegrees
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Measurement of angle in degrees.\r\n"
     attributes:
       multiplier:
@@ -648,8 +621,7 @@ classes:
     class_uri: cim:CostRate
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Cost, in units of currency, per elapsed time.
     attributes:
       multiplier:
@@ -671,8 +643,7 @@ classes:
     class_uri: cim:Speed
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Distance per unit of time.\r\n"
     attributes:
       multiplier:
@@ -694,8 +665,7 @@ classes:
     class_uri: cim:Capacitance
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Capacitive part of reactance (imaginary part of impedance), at rated\
       \ frequency.\r\n"
     attributes:
@@ -718,8 +688,7 @@ classes:
     class_uri: cim:PU
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Per Unit - a positive or negative value referred to a defined base.\
       \ Values typically range from -10 to +10.\r\n"
     attributes:
@@ -742,8 +711,7 @@ classes:
     class_uri: cim:Pressure
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Pressure in pascals.
     attributes:
       multiplier:
@@ -765,8 +733,7 @@ classes:
     class_uri: cim:KiloActivePower
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Active power in kilowatts.\r\n"
     attributes:
       multiplier:
@@ -788,8 +755,7 @@ classes:
     class_uri: cim:ReactivePower
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Product of RMS value of the voltage and the RMS value of the quadrature\
       \ component of the current.\r\n"
     attributes:
@@ -810,8 +776,7 @@ classes:
         multivalued: false
   StringQuantity:
     class_uri: cim:StringQuantity
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Quantity with string value (when it is not important whether it is
       an integral or a floating point number) and associated unit information.
     attributes:
@@ -837,8 +802,7 @@ classes:
     class_uri: cim:ActivePowerChangeRate
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Rate of change of active power per time.\r\n"
     attributes:
       multiplier:
@@ -860,8 +824,7 @@ classes:
     class_uri: cim:Hours
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Time specified in hours.\r\n"
     attributes:
       multiplier:
@@ -883,8 +846,7 @@ classes:
     class_uri: cim:Conductance
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Factor by which voltage must be multiplied to give corresponding\
       \ power lost from a circuit. Real part of admittance.\r\n"
     attributes:
@@ -907,8 +869,7 @@ classes:
     class_uri: cim:RotationSpeed
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Number of revolutions per second.\r\n"
     attributes:
       multiplier:
@@ -930,8 +891,7 @@ classes:
     class_uri: cim:CurrentFlow
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: 'Electrical current with sign convention: positive flow is out of
       the conducting equipment into the connectivity node. Can be both AC and DC.'
     attributes:
@@ -954,8 +914,7 @@ classes:
     class_uri: cim:Frequency
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Cycles per second.
     attributes:
       multiplier:
@@ -975,8 +934,7 @@ classes:
         multivalued: false
   DateTimeInterval:
     class_uri: cim:DateTimeInterval
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: 'Interval between two date and time points, where the interval includes
       the start time but excludes end time.  '
     attributes:
@@ -998,8 +956,7 @@ classes:
     class_uri: cim:AngleRadians
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Phase angle in radians.\r\n"
     attributes:
       multiplier:
@@ -1021,8 +978,7 @@ classes:
     class_uri: cim:ActivePower
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Product of RMS value of the voltage and the RMS value of the in-phase
       component of the current.
     attributes:
@@ -1045,8 +1001,7 @@ classes:
     class_uri: cim:ReactancePerLength
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Reactance (imaginary part of impedance) per unit of length, at rated\
       \ frequency.\r\n"
     attributes:
@@ -1069,8 +1024,7 @@ classes:
     class_uri: cim:Resistance
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Resistance (real part of impedance).\r\n"
     attributes:
       multiplier:
@@ -1092,8 +1046,7 @@ classes:
     class_uri: cim:Reactance
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Reactance (imaginary part of impedance), at rated frequency.\r\n"
     attributes:
       multiplier:
@@ -1115,8 +1068,7 @@ classes:
     class_uri: cim:Susceptance
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Imaginary part of admittance.
     attributes:
       multiplier:
@@ -1138,8 +1090,7 @@ classes:
     class_uri: cim:RealEnergy
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Real electrical energy.\r\n"
     attributes:
       multiplier:
@@ -1161,8 +1112,7 @@ classes:
     class_uri: cim:Classification
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Classification of level.  Specify as 1..n, with 1 being the most
       detailed, highest priority, etc as described on the attribute using this data
       type.
@@ -1186,8 +1136,7 @@ classes:
     class_uri: cim:HeatRate
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Heat generated, in energy per time unit of elapsed time.
     attributes:
       multiplier:
@@ -1209,8 +1158,7 @@ classes:
     class_uri: cim:Emission
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Quantity of emission per fuel heat content.\r\n"
     attributes:
       multiplier:
@@ -1232,8 +1180,7 @@ classes:
     class_uri: cim:CostPerHeatUnit
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Cost, in units of currency, per quantity of heat generated.\r\n"
     attributes:
       multiplier:
@@ -1255,8 +1202,7 @@ classes:
     class_uri: cim:ActivePowerPerFrequency
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Active power variation with frequency.
     attributes:
       multiplier:
@@ -1276,8 +1222,7 @@ classes:
         multivalued: false
   MonthDayInterval:
     class_uri: cim:MonthDayInterval
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Interval between two times specified as month and day.
     attributes:
       end:
@@ -1296,8 +1241,7 @@ classes:
     class_uri: cim:InductancePerLength
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Inductance per unit of length.
     attributes:
       multiplier:
@@ -1319,8 +1263,7 @@ classes:
     class_uri: cim:CapacitancePerLength
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Capacitance per unit of length.
     attributes:
       multiplier:
@@ -1340,8 +1283,7 @@ classes:
         multivalued: false
   DecimalQuantity:
     class_uri: cim:DecimalQuantity
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Quantity with decimal value and associated unit or currency information.
     attributes:
       currency:
@@ -1372,8 +1314,7 @@ classes:
     class_uri: cim:Area
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Area.
     attributes:
       multiplier:
@@ -1395,8 +1336,7 @@ classes:
     class_uri: cim:ActivePowerPerCurrentFlow
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Active power variation with current flow.
     attributes:
       multiplier:
@@ -1418,8 +1358,7 @@ classes:
     class_uri: cim:Mass
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Mass.
     attributes:
       multiplier:
@@ -1462,8 +1401,7 @@ enums:
       \ imagines that the \"kg\" were replaced by a symbol \"\xDE\", then it is easier\
       \ to conceptualize the multiplier \"m\" as creating the proper unit \"m\xDE\"\
       , and not the forbidden unit \"mkg\"."
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     permissible_values:
       a:
         meaning: cim:UnitMultiplier.a
@@ -1535,8 +1473,7 @@ enums:
       \ symbol information correctly convert and scale the raw data of those sources\
       \ into SI-based units. \r\nThe integer values are used for harmonization with\
       \ IEC 61850."
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     permissible_values:
       A:
         meaning: cim:UnitSymbol.A
@@ -1824,8 +1761,7 @@ enums:
     enum_uri: cim:Currency
     description: Monetary currencies.  ISO 4217 standard including 3-character currency
       code.
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     permissible_values:
       AED:
         meaning: cim:Currency.AED
@@ -2149,9 +2085,3 @@ enums:
         meaning: cim:Currency.ZMK
       ZWL:
         meaning: cim:Currency.ZWL
-subsets:
-  TC57CIM.IEC61970.Base.Domain:
-    description: "The ControlArea package models area specifications which can be\
-      \ used for a variety of purposes.  The package as a whole models potentially\
-      \ overlapping control area specifications for the purpose of actual generation\
-      \ control, load forecast area load capture, or powerflow based analysis.\r\n"

@@ -1,10 +1,10 @@
-id: cim:EnvDomain
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
 name: TC57CIM.IEC62325.Environmental.EnvDomain
 title: EnvDomain
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:56:59.783880
+generation_date: 2024-04-06 13:16:40.988575
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:
@@ -22,8 +22,7 @@ classes:
     class_uri: cim:MagneticField
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     description: Magnetic field in nanotesla.
     attributes:
       multiplier:
@@ -43,8 +42,7 @@ classes:
         multivalued: false
   RelativeDisplacement:
     class_uri: cim:RelativeDisplacement
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     description: Vertical displacement relative to either sealevel, ground or the
       center of the earth.
     attributes:
@@ -62,8 +60,7 @@ classes:
     class_uri: cim:Displacement
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: Unit of displacement relative to a reference position, hence can
       be negative.
     attributes:
@@ -86,8 +83,7 @@ classes:
     class_uri: cim:ParticulateDensity
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     description: Particulate density as kg/m<sup>3</sup>.
     attributes:
       multiplier:
@@ -109,8 +105,7 @@ classes:
     class_uri: cim:Bearing
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     description: The bearing in degrees (with 360 degrees being True North).  Measured
       in degrees clockwise from True North.  0 degrees indicates no direction being
       given.
@@ -134,8 +129,7 @@ enums:
   TestKind:
     enum_uri: cim:TestKind
     description: The test applied to determine if the condition is met.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       equalTo:
         meaning: cim:TestKind.equalTo
@@ -150,8 +144,7 @@ enums:
   AtmosphericAnalogKind:
     enum_uri: cim:AtmosphericAnalogKind
     description: Kinds of analogs (floats)  measuring an atmospheric condition.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       albedo:
         meaning: cim:AtmosphericAnalogKind.albedo
@@ -214,8 +207,7 @@ enums:
   UncertaintyKind:
     enum_uri: cim:UncertaintyKind
     description: The type of uncertainty for a reading.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       estimated:
         meaning: cim:UncertaintyKind.estimated
@@ -228,8 +220,7 @@ enums:
   CoverageCodeKind:
     enum_uri: cim:CoverageCodeKind
     description: Kinds of weather condition coverage.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       brief:
         meaning: cim:CoverageCodeKind.brief
@@ -277,8 +268,7 @@ enums:
       \ imagines that the \"kg\" were replaced by a symbol \"\xDE\", then it is easier\
       \ to conceptualize the multiplier \"m\" as creating the proper unit \"m\xDE\"\
       , and not the forbidden unit \"mkg\"."
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     permissible_values:
       a:
         meaning: cim:UnitMultiplier.a
@@ -350,8 +340,7 @@ enums:
       \ symbol information correctly convert and scale the raw data of those sources\
       \ into SI-based units. \r\nThe integer values are used for harmonization with\
       \ IEC 61850."
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     permissible_values:
       A:
         meaning: cim:UnitSymbol.A
@@ -643,8 +632,7 @@ enums:
       \ 8 levels of damage to 28 indicators. These estimates vary with height and\
       \ exposure.  \r\nThe 3 second gust is not the same wind as in standard surface\
       \ observations.\r\nEnumerations based on NOAA conventions."
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       five:
         meaning: cim:FScale.five
@@ -663,8 +651,7 @@ enums:
   WeatherCodeKind:
     enum_uri: cim:WeatherCodeKind
     description: Kinds of weather conditions.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       blowingDust:
         meaning: cim:WeatherCodeKind.blowingDust
@@ -725,8 +712,7 @@ enums:
   RelativeDisplacementKind:
     enum_uri: cim:RelativeDisplacementKind
     description: The types of relative displacement
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       centreEarth:
         meaning: cim:RelativeDisplacementKind.centreEarth
@@ -737,8 +723,7 @@ enums:
   ReportingMethodKind:
     enum_uri: cim:ReportingMethodKind
     description: Method by which information is gathered from station.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       automated:
         meaning: cim:ReportingMethodKind.automated
@@ -749,16 +734,14 @@ enums:
   EnvironmentalDiscreteKind:
     enum_uri: cim:EnvironmentalDiscreteKind
     description: Discrete (integer) measuring an environmental condition.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       cloudCover:
         meaning: cim:EnvironmentalDiscreteKind.cloudCover
   HydrosphericAnalogKind:
     enum_uri: cim:HydrosphericAnalogKind
     description: Kinds of analogs (floats) measuring a hydrospheric condition.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       floodLevel:
         meaning: cim:HydrosphericAnalogKind.floodLevel
@@ -773,8 +756,7 @@ enums:
   TimePeriodUnit:
     enum_uri: cim:TimePeriodUnit
     description: Units in which reporting frequency is specified.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       days:
         meaning: cim:TimePeriodUnit.days
@@ -791,8 +773,7 @@ enums:
   GeosphericAnalogKind:
     enum_uri: cim:GeosphericAnalogKind
     description: Kinds of analogs (floats) measuring a geospheric condition.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       lightningDensity:
         meaning: cim:GeosphericAnalogKind.lightningDensity
@@ -809,8 +790,7 @@ enums:
   SpaceAnalogKind:
     enum_uri: cim:SpaceAnalogKind
     description: Kinds of analogs (floats) measuring a space condition.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       magneticFieldDirection:
         meaning: cim:SpaceAnalogKind.magneticFieldDirection
@@ -820,8 +800,7 @@ enums:
     enum_uri: cim:LocationKind
     description: The nature of the location being defined for an environmental entity.
       Possible values are center, perimeter, primary, secondary.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       center:
         meaning: cim:LocationKind.center
@@ -834,8 +813,7 @@ enums:
   CloudKind:
     enum_uri: cim:CloudKind
     description: Kind of cloud.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       altoCumulus:
         meaning: cim:CloudKind.altoCumulus
@@ -864,8 +842,7 @@ enums:
   IntensityCodeKind:
     enum_uri: cim:IntensityCodeKind
     description: Kinds of weather condition intensity.
-    in_subset:
-    - TC57CIM.IEC62325.Environmental.EnvDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.Environmental.EnvDomain
     permissible_values:
       heavy:
         meaning: cim:IntensityCodeKind.heavy
@@ -875,10 +852,3 @@ enums:
         meaning: cim:IntensityCodeKind.veryHeavy
       veryLight:
         meaning: cim:IntensityCodeKind.veryLight
-subsets:
-  TC57CIM.IEC61970.Base.Domain:
-    description: "The ControlArea package models area specifications which can be\
-      \ used for a variety of purposes.  The package as a whole models potentially\
-      \ overlapping control area specifications for the purpose of actual generation\
-      \ control, load forecast area load capture, or powerflow based analysis.\r\n"
-  TC57CIM.IEC62325.Environmental.EnvDomain:

@@ -1,10 +1,10 @@
-id: cim:Sandbox
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61968.InfIEC61968.Sandbox
 name: TC57CIM.IEC61968.InfIEC61968.Sandbox
 title: Sandbox
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:56:49.956650
+generation_date: 2024-04-06 13:16:31.546410
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

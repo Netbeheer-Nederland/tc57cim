@@ -1,10 +1,10 @@
-id: cim:MktDomain
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
 name: TC57CIM.IEC62325.MarketOperations.MktDomain
 title: MktDomain
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:57:02.222327
+generation_date: 2024-04-06 13:16:43.334232
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:
@@ -26,8 +26,7 @@ enums:
       price, "capacity" for prices related to installed or reserved capacity, "mileage"
       for use-based accounting, "system" for system-wide/copper-plate prices, and
       "delivery" for distribution-based prices.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       capacity:
         meaning: cim:PriceTypeKind.capacity
@@ -47,8 +46,7 @@ enums:
     enum_uri: cim:CRRSegmentType
     description: Type of the CRR, from the possible type definitions in the CRR System
       (e.g. 'LSE', 'ETC').
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       AUC:
         meaning: cim:CRRSegmentType.AUC
@@ -69,8 +67,7 @@ enums:
   ExecutionType:
     enum_uri: cim:ExecutionType
     description: "Execution types of Market Runs.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       DA:
         meaning: cim:ExecutionType.DA
@@ -83,8 +80,7 @@ enums:
   EquipmentStatusType:
     enum_uri: cim:EquipmentStatusType
     description: "Status of equipment.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       In:
         meaning: cim:EquipmentStatusType.In
@@ -95,8 +91,7 @@ enums:
     description: "Combined Cycle\r\nGas Turbine\r\nHydro Turbine\r\nOther\r\nPhotovoltaic\r\
       \nHydro Pump-Turbine\r\nReciprocating Engine\r\nSteam Turbine\r\nSynchronous\
       \ Condenser\r\nWind Turbine\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CCYC:
         meaning: cim:UnitType.CCYC
@@ -121,8 +116,7 @@ enums:
   CRRCategoryType:
     enum_uri: cim:CRRCategoryType
     description: "Congestion Revenue Rights category types.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       NSR:
         meaning: cim:CRRCategoryType.NSR
@@ -133,8 +127,7 @@ enums:
     description: "For example:\r\nAsset Owner Sink designator for use by CRR\r\nAsset\
       \ Owner Source designator for use by CRR\r\nReliability Must Run  \r\nScheduling\
       \ Coordinator \r\nLoad Serving Entity\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CSNK:
         meaning: cim:ResourceAssnType.CSNK
@@ -150,8 +143,7 @@ enums:
     enum_uri: cim:ConstraintLimitType
     description: "Binding constraint results limit type, For example:\r\nMAXIMUM\r\
       \nMINIMUM\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       MAXIMUM:
         meaning: cim:ConstraintLimitType.MAXIMUM
@@ -161,8 +153,7 @@ enums:
     enum_uri: cim:MarketProductType
     description: "For example:\r\nEnergy, Reg Up, Reg Down, Spin Reserve, Nonspin\
       \ Reserve, RUC, Load Folloing Up, and Load Following Down."
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       EN:
         meaning: cim:MarketProductType.EN
@@ -185,8 +176,7 @@ enums:
   FlowDirectionType:
     enum_uri: cim:FlowDirectionType
     description: "Specifies the direction of energy flow in the flowgate.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       Forward:
         meaning: cim:FlowDirectionType.Forward
@@ -195,8 +185,7 @@ enums:
   ResourceCertificationKind:
     enum_uri: cim:ResourceCertificationKind
     description: Types used for resource certification.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BLACKSTART:
         meaning: cim:ResourceCertificationKind.BLACKSTART
@@ -225,8 +214,7 @@ enums:
   SelfScheduleBreakdownType:
     enum_uri: cim:SelfScheduleBreakdownType
     description: "Self schedule breakdown type.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ETC:
         meaning: cim:SelfScheduleBreakdownType.ETC
@@ -238,8 +226,7 @@ enums:
     enum_uri: cim:BidCalculationBasis
     description: "The basis used to calculate the bid price curve for an energy default\
       \ bid.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       COST_BASED:
         meaning: cim:BidCalculationBasis.COST_BASED
@@ -251,8 +238,7 @@ enums:
     enum_uri: cim:CheckOutType
     description: "To indicate a check out type such as adjusted capacity or dispatch\
       \ capacity.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       AFTER_THE_FACT:
         meaning: cim:CheckOutType.AFTER_THE_FACT
@@ -272,8 +258,7 @@ enums:
       \ Group; </li>\r\n</ul>\r\n<ul>\r\n\t<li>ACA - Adjacent Control Area </li>\r\
       \n</ul>\r\n<ul>\r\n\t<li>ASR - Aggregated System Resource </li>\r\n</ul>\r\n\
       <ul>\r\n\t<li>ECA - Embedded Control Area </li>\r\n</ul>"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ACA:
         meaning: cim:AnodeType.ACA
@@ -304,8 +289,7 @@ enums:
     description: "For example:\r\nSELF - Self commitment\r\nISO - New commitment for\
       \ this market period\r\nUC - Existing commitment that was a hold over from a\
       \ previous market\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ISO:
         meaning: cim:CommitmentType.ISO
@@ -316,8 +300,7 @@ enums:
   MktInvoiceLineItemKind:
     enum_uri: cim:MktInvoiceLineItemKind
     description: Kind of invoice line item.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       initial:
         meaning: cim:MktInvoiceLineItemKind.initial
@@ -328,8 +311,7 @@ enums:
   MPMTestOutcome:
     enum_uri: cim:MPMTestOutcome
     description: "For example:\r\nPassed\r\nFailed\r\nDisabled\r\nSkipped\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       D:
         meaning: cim:MPMTestOutcome.D
@@ -342,8 +324,7 @@ enums:
   ResultsConstraintType:
     enum_uri: cim:ResultsConstraintType
     description: "Market results binding constraint types.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       Actual:
         meaning: cim:ResultsConstraintType.Actual
@@ -356,8 +337,7 @@ enums:
   AreaControlMode:
     enum_uri: cim:AreaControlMode
     description: "Area's present control mode.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CF:
         meaning: cim:AreaControlMode.CF
@@ -370,8 +350,7 @@ enums:
   MktAccountKind:
     enum_uri: cim:MktAccountKind
     description: Kind of Market account.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       estimate:
         meaning: cim:MktAccountKind.estimate
@@ -384,8 +363,7 @@ enums:
   EnergyTransactionType:
     enum_uri: cim:EnergyTransactionType
     description: "Defines the state of a transaction.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       approve:
         meaning: cim:EnergyTransactionType.approve
@@ -396,8 +374,7 @@ enums:
   CostBasis:
     enum_uri: cim:CostBasis
     description: "For example:\r\nBid Cost\r\nProxy Cost\r\nRegistered Cost\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BIDC:
         meaning: cim:CostBasis.BIDC
@@ -408,8 +385,7 @@ enums:
   RampRateType:
     enum_uri: cim:RampRateType
     description: Ramp rate curve type.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       INTERTIE:
         meaning: cim:RampRateType.INTERTIE
@@ -426,8 +402,7 @@ enums:
   AutomaticDispInstTypeCommitment:
     enum_uri: cim:AutomaticDispInstTypeCommitment
     description: Commitment instruction types.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       DR_ADJUSTMENT:
         meaning: cim:AutomaticDispInstTypeCommitment.DR_ADJUSTMENT
@@ -443,8 +418,7 @@ enums:
     enum_uri: cim:PurposeFlagType
     description: "MPM Purpose Flag, for example:\r\n\r\nNature of threshold data:\r\
       \n'M' - Mitigation threshold\r\n'R' - Reporting threshold\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       M:
         meaning: cim:PurposeFlagType.M
@@ -454,8 +428,7 @@ enums:
     enum_uri: cim:PassIndicatorType
     description: "Defines the individual passes that produce results per execution\
       \ type/market type.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       DA:
         meaning: cim:PassIndicatorType.DA
@@ -479,8 +452,7 @@ enums:
     enum_uri: cim:MQSInstructionSource
     description: "Valid values, for example: \r\nINS - Instruction from RTM\r\nACT\
       \ - Actual instruction after the fact\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ACT:
         meaning: cim:MQSInstructionSource.ACT
@@ -493,8 +465,7 @@ enums:
       \ because of RMR rules\r\n'M' - Mitigated because of \"misconduct\" both by\
       \ SMPM and LMPM\r\n'B' - Mitigated because of \"misconduct\" both by SMPM and\
       \ modified by LMLM because of RMR rules\r\n'O' - original\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       B:
         meaning: cim:BidMitigationStatus.B
@@ -511,8 +482,7 @@ enums:
   MarketProductSelfSchedType:
     enum_uri: cim:MarketProductSelfSchedType
     description: "Market product self schedule bid types.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ETC:
         meaning: cim:MarketProductSelfSchedType.ETC
@@ -538,8 +508,7 @@ enums:
       \ unit MW output\r\n1 - Static ramp rates as a function of unit MW output only\
       \ \r\n2 - Dynamic ramp rates as a function of unit MW output and ramping time\r\
       \n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       '0':
         meaning: cim:RampCurveType.0
@@ -550,8 +519,7 @@ enums:
   AnalogLimitType:
     enum_uri: cim:AnalogLimitType
     description: "Limit type specified for AnalogLimits.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BranchLongTerm:
         meaning: cim:AnalogLimitType.BranchLongTerm
@@ -566,8 +534,7 @@ enums:
   CRRHedgeType:
     enum_uri: cim:CRRHedgeType
     description: "Congestion Revenue Right hedge type.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       OBLIGATION:
         meaning: cim:CRRHedgeType.OBLIGATION
@@ -576,8 +543,7 @@ enums:
   LoadForecastType:
     enum_uri: cim:LoadForecastType
     description: "Load forecast zone types.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       LFZ:
         meaning: cim:LoadForecastType.LFZ
@@ -587,16 +553,14 @@ enums:
     enum_uri: cim:ActionType
     description: "Action type associated with an ActionRequest against a ParticipantInterfaces::Trade.\r\
       \n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CANCEL:
         meaning: cim:ActionType.CANCEL
   ReserveRequirementType:
     enum_uri: cim:ReserveRequirementType
     description: "For example:\r\nOperating Reserve, Regulation, Contingency"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CONT:
         meaning: cim:ReserveRequirementType.CONT
@@ -609,8 +573,7 @@ enums:
     description: "For example:\r\n'Y' - Participates in both LMPM and SMPM\r\n'N'\
       \ - Not included in LMP price measures\r\n'S' - Participates in SMPM price measures\r\
       \n'L' - Participates in LMPM price measures\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       L:
         meaning: cim:ParticipationCategoryMPM.L
@@ -624,8 +587,7 @@ enums:
     enum_uri: cim:BidType
     description: "For example:\r\nDEFAULT_ENERGY_BID\r\nDEFAULT_STARTUP_BID\r\nDEFAULT_MINIMUM_LOAD_BID\r\
       \n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       DEFAULT_ENERGY_BID:
         meaning: cim:BidType.DEFAULT_ENERGY_BID
@@ -640,8 +602,7 @@ enums:
       \ Point\r\nTH -  Trading  Hub\r\nSYS - System Zone\r\nCA - Control Area\r\n\r\
       \nGA - generic aggregation\r\nEHV - 500 kV\r\nGH - generic hub\r\nZN - zone\r\
       \nINT - Interface\r\nBUS - Bus\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       AG:
         meaning: cim:ApnodeType.AG
@@ -672,8 +633,7 @@ enums:
   OnOff:
     enum_uri: cim:OnOff
     description: "ON\r\nOFF\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       'OFF':
         meaning: cim:OnOff.OFF
@@ -682,8 +642,7 @@ enums:
   YesNo:
     enum_uri: cim:YesNo
     description: Used as a flag set to Yes or No.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       'NO':
         meaning: cim:YesNo.NO
@@ -693,8 +652,7 @@ enums:
     enum_uri: cim:SwitchStatusType
     description: "Circuit Breaker Status (closed or open) of the circuit breaker.\r\
       \n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       Closed:
         meaning: cim:SwitchStatusType.Closed
@@ -704,8 +662,7 @@ enums:
     enum_uri: cim:BidTypeRMR
     description: "Bid self schedule type has two types as the required output of requirements\
       \ and qualified pre-dispatch.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       QUALIFIED_PREDISPATCH:
         meaning: cim:BidTypeRMR.QUALIFIED_PREDISPATCH
@@ -716,8 +673,7 @@ enums:
     description: "For example:\r\nBio Gas (Landfill, Sewage, Digester, etc.)\r\nBiomass\r\
       \nCoal\r\nDIST\r\nNatural Gas\r\nGeothermal\r\nHRCV\r\nNone\r\nNuclear\r\nOil\r\
       \nOther\r\nSolar\r\nWaste to Energy\r\nWater\r\nWind\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BGAS:
         meaning: cim:FuelSource.BGAS
@@ -757,8 +713,7 @@ enums:
     enum_uri: cim:MPMTestMethodType
     description: "Market power mitigation test method type.\r\n\r\nTests with the\
       \ normal (default) thresholds or tests with the alternate thresholds."
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ALTERNATE:
         meaning: cim:MPMTestMethodType.ALTERNATE
@@ -767,8 +722,7 @@ enums:
   UnitRegulationKind:
     enum_uri: cim:UnitRegulationKind
     description: Unit regulation kind.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       '0':
         meaning: cim:UnitRegulationKind.0
@@ -781,8 +735,7 @@ enums:
     description: Time of Use used by a CRR definition for specifying the time the
       CRR spans. ON - CRR spans the on peak hours of the day, OFF - CRR spans the
       off peak hours of the day, 24HR - CRR spans the entire day.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       24HR:
         meaning: cim:TimeOfUse.24HR
@@ -793,8 +746,7 @@ enums:
   MarketType:
     enum_uri: cim:MarketType
     description: Market type.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       DAM:
         meaning: cim:MarketType.DAM
@@ -807,8 +759,7 @@ enums:
   ConstraintRampType:
     enum_uri: cim:ConstraintRampType
     description: "Constraint Ramp type.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       FAST:
         meaning: cim:ConstraintRampType.FAST
@@ -817,8 +768,7 @@ enums:
   MktBillMediaKind:
     enum_uri: cim:MktBillMediaKind
     description: Kind of bill media.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       electronic:
         meaning: cim:MktBillMediaKind.electronic
@@ -832,8 +782,7 @@ enums:
       \ Export \r\nTI - Transmission Import \r\nETC - Existing Transmission Contract\
       \ \r\nRMT - RMT Contract \r\nTOR - Transmission Ownership Right  \r\nRMR - Reliability\
       \ Must Run Contract \r\nCVR - Converted contract\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CVR:
         meaning: cim:ContractType.CVR
@@ -855,8 +804,7 @@ enums:
     enum_uri: cim:CRRRoleType
     description: Role types an organisation can play with respect to a congestion
       revenue right.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BUYER:
         meaning: cim:CRRRoleType.BUYER
@@ -867,8 +815,7 @@ enums:
   InterTieDirection:
     enum_uri: cim:InterTieDirection
     description: Direction of an intertie.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       E:
         meaning: cim:InterTieDirection.E
@@ -877,8 +824,7 @@ enums:
   ResourceCapacityType:
     enum_uri: cim:ResourceCapacityType
     description: Resource capacity type.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       FO:
         meaning: cim:ResourceCapacityType.FO
@@ -901,8 +847,7 @@ enums:
     description: "Market power mitigation test identifier type, for example:\r\n\r\
       \n1 - Global Price Test\r\n2 - Global Conduct Test\r\n3 - Global Impact Test\r\
       \n4 - Local Price Test\r\n5 - Local Conduct Test\r\n6 - Local Impact Test"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       '1':
         meaning: cim:MPMTestIdentifierType.1
@@ -919,8 +864,7 @@ enums:
   EnergyProductType:
     enum_uri: cim:EnergyProductType
     description: "Energy product type.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       DYN:
         meaning: cim:EnergyProductType.DYN
@@ -933,8 +877,7 @@ enums:
   EnergyPriceIndexType:
     enum_uri: cim:EnergyPriceIndexType
     description: "For example:\r\nWHOLESALE\r\nRETAIL\r\nBOTH\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BOTH:
         meaning: cim:EnergyPriceIndexType.BOTH
@@ -945,8 +888,7 @@ enums:
   MarketEventStatusKind:
     enum_uri: cim:MarketEventStatusKind
     description: Market event status types.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       active:
         meaning: cim:MarketEventStatusKind.active
@@ -960,8 +902,7 @@ enums:
     enum_uri: cim:ResourceRegistrationStatus
     description: "Types of resource registration status, for example:\r\n\r\nActive\r\
       \nMothballed\r\nPlanned\r\nDecommissioned\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       Active:
         meaning: cim:ResourceRegistrationStatus.Active
@@ -974,8 +915,7 @@ enums:
   AutomaticDispatchMode:
     enum_uri: cim:AutomaticDispatchMode
     description: "Automatic Dispatch mode.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CONTINGENCY:
         meaning: cim:AutomaticDispatchMode.CONTINGENCY
@@ -986,8 +926,7 @@ enums:
   DispatchResponseType:
     enum_uri: cim:DispatchResponseType
     description: "For example:\r\nNON_RESPONSE\r\nACCEPT\r\nDECLINE\r\nPARTIAL\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ACCEPT:
         meaning: cim:DispatchResponseType.ACCEPT
@@ -1001,8 +940,7 @@ enums:
     enum_uri: cim:SelfSchedReferenceType
     description: "Indication of which type of self schedule is being referenced.\r\
       \n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ETC:
         meaning: cim:SelfSchedReferenceType.ETC
@@ -1013,8 +951,7 @@ enums:
     description: "Indicates whether the unit is RMR and it's condition type, for example:\r\
       \nN' - not an RMR unit\r\n'1' - RMR Condition 1 unit\r\n'2' - RMR Condition\
       \ 2 unit\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       '1':
         meaning: cim:FlagTypeRMR.1
@@ -1025,8 +962,7 @@ enums:
   BidMitigationType:
     enum_uri: cim:BidMitigationType
     description: "For example:\r\nInitial\r\nFinal\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       F:
         meaning: cim:BidMitigationType.F
@@ -1036,8 +972,7 @@ enums:
     enum_uri: cim:ResourceLimitIndicator
     description: "Locational AS Flags indicating whether the Upper or Lower Bound\
       \ limit of the AS regional procurement is binding.\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       LOWER:
         meaning: cim:ResourceLimitIndicator.LOWER
@@ -1046,8 +981,7 @@ enums:
   MQSCHGType:
     enum_uri: cim:MQSCHGType
     description: "For example:\r\nADD - add\r\nCHG - change\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       ADD:
         meaning: cim:MQSCHGType.ADD
@@ -1057,8 +991,7 @@ enums:
     enum_uri: cim:TRType
     description: "Transmission Contract Right type -for example:\r\nindividual or\
       \ chain of contract rights\r\n"
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       CHAIN:
         meaning: cim:TRType.CHAIN
@@ -1067,8 +1000,7 @@ enums:
   TradeType:
     enum_uri: cim:TradeType
     description: Trade type.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       AST:
         meaning: cim:TradeType.AST
@@ -1079,8 +1011,7 @@ enums:
   RampRateCondition:
     enum_uri: cim:RampRateCondition
     description: Ramp rate condition.
-    in_subset:
-    - TC57CIM.IEC62325.MarketOperations.MktDomain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain
     permissible_values:
       BEST:
         meaning: cim:RampRateCondition.BEST
@@ -1090,5 +1021,3 @@ enums:
         meaning: cim:RampRateCondition.NORMAL
       WORST:
         meaning: cim:RampRateCondition.WORST
-subsets:
-  TC57CIM.IEC62325.MarketOperations.MktDomain:

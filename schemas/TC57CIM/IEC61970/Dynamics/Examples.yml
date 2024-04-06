@@ -1,10 +1,10 @@
-id: cim:Examples
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Dynamics.Examples
 name: TC57CIM.IEC61970.Dynamics.Examples
 title: Examples
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:56:35.504790
+generation_date: 2024-04-06 13:16:17.343667
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

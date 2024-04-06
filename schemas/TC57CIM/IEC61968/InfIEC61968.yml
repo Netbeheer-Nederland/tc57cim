@@ -1,10 +1,10 @@
-id: cim:InfIEC61968
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61968.InfIEC61968
 name: TC57CIM.IEC61968.InfIEC61968
 title: InfIEC61968
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:56:48.774648
+generation_date: 2024-04-06 13:16:30.397873
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

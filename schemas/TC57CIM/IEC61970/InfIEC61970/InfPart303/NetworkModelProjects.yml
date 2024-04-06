@@ -1,10 +1,10 @@
-id: cim:NetworkModelProjects
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
 name: TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
 title: NetworkModelProjects
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:56:02.415182
+generation_date: 2024-04-06 13:15:43.728808
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:
@@ -21,8 +21,7 @@ classes:
   AnnotatedProjectDependency:
     class_uri: cim:AnnotatedProjectDependency
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     attributes:
       dependencyType:
         slot_uri: cim:AnnotatedProjectDependency.dependencyType
@@ -41,8 +40,7 @@ classes:
         multivalued: false
   IdentifiedObject:
     class_uri: cim:IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.Base.Core
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Core
     description: This is a root class to provide common identification for all classes
       needing identification and naming attributes.
     attributes:
@@ -114,8 +112,7 @@ classes:
         description: Data objects registered.
   Name:
     class_uri: cim:Name
-    in_subset:
-    - TC57CIM.IEC61970.Base.Core
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Core
     description: "The Name class provides the means to define any number of human\
       \ readable  names for an object. A name is <b>not</b> to be used for defining\
       \ inter-object relationships. For inter-object relationships instead use the\
@@ -141,8 +138,7 @@ classes:
         description: Identified object that this name designates.
   NameType:
     class_uri: cim:NameType
-    in_subset:
-    - TC57CIM.IEC61970.Base.Core
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Core
     description: "Type of name. Possible values for attribute 'name' are implementation\
       \ dependent but standard profiles may specify types. An enterprise may have\
       \ multiple IT systems each having its own local name for the same object, e.g.\
@@ -181,8 +177,7 @@ classes:
         description: All names of this type.
   NameTypeAuthority:
     class_uri: cim:NameTypeAuthority
-    in_subset:
-    - TC57CIM.IEC61970.Base.Core
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Core
     description: "Authority responsible for creation and management of names of a\
       \ given type; typically an organization or an enterprise system.\r\n"
     attributes:
@@ -206,8 +201,7 @@ classes:
         description: All name types managed by this authority.
   ChangeSetMember:
     class_uri: cim:ChangeSetMember
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
     description: A CRUD-style data object.
     attributes:
       Changeset:
@@ -233,8 +227,7 @@ classes:
   ChangeSet:
     class_uri: cim:ChangeSet
     is_a: DataSet
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
     description: Describes a set of changes that can be applied in different situations.   A
       given registered target object  MRID may only be referenced once by the contained
       change set members.
@@ -263,8 +256,7 @@ classes:
         multivalued: false
   DataSet:
     class_uri: cim:DataSet
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
     description: "A generic container of a version of instance data. The MRID can\
       \ be used in an audit trail, not in reusable script intended to work with new\
       \ versions of data.\r\nA dataset could be serialized multiple times and in multiple\
@@ -316,8 +308,7 @@ classes:
   AlternateModel:
     class_uri: cim:AlternateModel
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.AlternateModels
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.AlternateModels
     attributes:
       AlternateModelGroup:
         slot_uri: cim:AlternateModel.AlternateModelGroup
@@ -334,8 +325,7 @@ classes:
   AlternateModelGroup:
     class_uri: cim:AlternateModelGroup
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.AlternateModels
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.AlternateModels
     attributes:
       AlternateModel:
         slot_uri: cim:AlternateModelGroup.AlternateModel
@@ -346,8 +336,7 @@ classes:
   ModelPartVersion:
     class_uri: cim:ModelPartVersion
     is_a: ModelToBeDeleted
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
     description: This is a version of a part of a model.  New instances of this class
       with new identity are instantiated upon changes to the content of this class
       or changes to the associated data set.  Instances of this class are considered
@@ -378,14 +367,12 @@ classes:
   ModelToBeDeleted:
     class_uri: cim:ModelToBeDeleted
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
     description: A Model is a collection of Datasets.
   AssemblyManifest:
     class_uri: cim:AssemblyManifest
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
     description: A collection of model parts when combined form a case or part of
       a case.
     attributes:
@@ -402,8 +389,7 @@ classes:
   CompleteModelToBeDeleted:
     class_uri: cim:CompleteModelToBeDeleted
     is_a: ModelToBeDeleted
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
     description: A complete model can be used in applications to perform meaningful
       calculations, e.g. a study case in offline tools or a real time model in a SCADA/EMS.
     attributes:
@@ -420,8 +406,7 @@ classes:
   ModelPartSpecification:
     class_uri: cim:ModelPartSpecification
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
     description: 'The type of model.  For example,  state estimator, planning, planning
       dynamics, short circuit, or real-time dynamics etc.     The model must conform
       to a profile. '
@@ -447,8 +432,7 @@ classes:
   AssemblyDescription:
     class_uri: cim:AssemblyDescription
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
     description: A description for how to assemble model parts for a specific purpose.
     attributes:
       ModelSpecification:
@@ -460,8 +444,7 @@ classes:
   ModelAuthoritySet:
     class_uri: cim:ModelAuthoritySet
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
     description: "A Modeling Authority Set is a group of objects in a network model\
       \ where the data is supplied and maintained by the same Modeling Authority.\r\
       \nThis class is typically not included in instance data exchange as this information\
@@ -483,8 +466,7 @@ classes:
   ModelAuthority:
     class_uri: cim:ModelAuthority
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames
     description: A Modeling Authority is an entity responsible for supplying and maintaining
       the data defining a specific set of objects in a network model.
     attributes:
@@ -498,8 +480,7 @@ classes:
   Profile:
     class_uri: cim:Profile
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
     description: Describes the existence of a profile.  The MRID is usually defined
       as a static value by the document or artifact that defines the contents of the
       profile and the rules for using the profile.
@@ -513,8 +494,7 @@ classes:
   NetworkModelProjectChangeVersion:
     class_uri: cim:NetworkModelProjectChangeVersion
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     description: Describes the status and the planned implementation of the associated
       change set into the as-built model.    New instances of this class with new
       identity are instantiated upon changes to the content of this class or changes
@@ -575,8 +555,7 @@ classes:
   NetworkModelProjectChange:
     class_uri: cim:NetworkModelProjectChange
     is_a: NetworkModelProjectComponent
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     description: 'Network model project change described by versions of an associated
       change set.  Has persistent identity over multiple versions of the associated
       change set. '
@@ -590,8 +569,7 @@ classes:
   NetworkModelProjectComponent:
     class_uri: cim:NetworkModelProjectComponent
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     description: Abstract class for both a network model project and network model
       change.
     attributes:
@@ -619,8 +597,7 @@ classes:
   NetworkModelProjectRelationship:
     class_uri: cim:NetworkModelProjectRelationship
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     description: A relationship that assists humans and software building cases by
       assembling project changes in the correct sequence.  This class may be specialized
       to create specific types of relationships.
@@ -637,8 +614,7 @@ classes:
         multivalued: false
   NetworkModelProjectDocument:
     class_uri: cim:NetworkModelProjectDocument
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     attributes:
       NetworkModelProjectComponent:
         slot_uri: cim:NetworkModelProjectDocument.NetworkModelProjectComponent
@@ -648,8 +624,7 @@ classes:
   NetworkModelProject:
     class_uri: cim:NetworkModelProject
     is_a: NetworkModelProjectComponent
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     description: "A grouping of network model change descriptions.  Primarily used\
       \ to organize the phases of an overall project.\r\n\r\n\r\n "
     attributes:
@@ -662,8 +637,7 @@ classes:
   NetworkModelProjectState:
     class_uri: cim:NetworkModelProjectState
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     description: A network model project version state.  States are agreed upon by
       the exchange community.  Examples are "approved", "proposed", "withdrawn", "committed"
       etc.
@@ -677,8 +651,7 @@ classes:
   IncrementalDatasetArg:
     class_uri: cim:IncrementalDatasetArg
     is_a: ModelOperationArg
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
     description: A generic model operation argument referencing an incremental change
       description.
     attributes:
@@ -695,8 +668,7 @@ classes:
   ModelOperationArg:
     class_uri: cim:ModelOperationArg
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
     description: Describes the role a dataset plays in a model operation.   The role
       is applicable only in the context of a single operation.
     attributes:
@@ -717,8 +689,7 @@ classes:
   ModelOperation:
     class_uri: cim:ModelOperation
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
     description: 'An operation performed on models. '
     attributes:
       sequenceNumber:
@@ -748,8 +719,7 @@ classes:
   ModelOperationSequence:
     class_uri: cim:ModelOperationSequence
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
     description: A concrete sequence of operations.    For example, this may be used
       to describe a specific audit trail, a script or other specific set of actions
       on specific datasets.
@@ -762,8 +732,7 @@ classes:
   ModelOperationDescription:
     class_uri: cim:ModelOperationDescription
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
     description: The type of model operation.   This class is referenced by model
       operations and defines the kind of operation.
     attributes:
@@ -783,8 +752,7 @@ classes:
   ModelOperationArgDescription:
     class_uri: cim:ModelOperationArgDescription
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
     description: The type of custom operation dataset role for an operation description.
     attributes:
       multiplicityMaximum:
@@ -812,8 +780,7 @@ classes:
   IncrementalDatasetArgDescription:
     class_uri: cim:IncrementalDatasetArgDescription
     is_a: ModelOperationArgDescription
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
     attributes:
       IncrementalDatasetArg:
         slot_uri: cim:IncrementalDatasetArgDescription.IncrementalDatasetArg
@@ -824,8 +791,7 @@ classes:
   NetworkModelProjectStage:
     class_uri: cim:NetworkModelProjectStage
     is_a: NetworkModelProjectComponent2
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     attributes:
       changesetVersion:
         slot_uri: cim:NetworkModelProjectStage.changesetVersion
@@ -860,8 +826,7 @@ classes:
   NetworkModelProjectComponent2:
     class_uri: cim:NetworkModelProjectComponent2
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     attributes:
       closed:
         slot_uri: cim:NetworkModelProjectComponent2.closed
@@ -896,8 +861,7 @@ classes:
   CurrentState:
     class_uri: cim:CurrentState
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     attributes:
       NetworkModelProjectComponent2:
         slot_uri: cim:CurrentState.NetworkModelProjectComponent2
@@ -907,8 +871,7 @@ classes:
   NetworkModelProject2:
     class_uri: cim:NetworkModelProject2
     is_a: NetworkModelProjectComponent2
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     attributes:
       Child:
         slot_uri: cim:NetworkModelProject2.Child
@@ -918,8 +881,7 @@ classes:
   DiagramObject:
     class_uri: cim:DiagramObject
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.Base.DiagramLayout
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.DiagramLayout
     description: An object that defines one or more points in a given space. This
       object can be associated with anything that specializes IdentifiedObject. For
       single line diagrams such objects typically include such items as analog values,
@@ -1016,8 +978,7 @@ classes:
     class_uri: cim:AngleDegrees
     annotations:
       represents_cim_data_type: true
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     description: "Measurement of angle in degrees.\r\n"
     attributes:
       multiplier:
@@ -1038,8 +999,7 @@ classes:
   Diagram:
     class_uri: cim:Diagram
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.Base.DiagramLayout
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.DiagramLayout
     description: The diagram being exchanged. The coordinate system is a standard
       Cartesian coordinate system and the orientation attribute defines the orientation.
       The initial view related attributes can be used to specify an initial view with
@@ -1097,8 +1057,7 @@ classes:
   DiagramStyle:
     class_uri: cim:DiagramStyle
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.Base.DiagramLayout
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.DiagramLayout
     description: The diagram style refers to a style used by the originating system
       for a diagram.  A diagram style describes information such as schematic, geographic,
       etc.
@@ -1112,8 +1071,7 @@ classes:
   VisibilityLayer:
     class_uri: cim:VisibilityLayer
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.Base.DiagramLayout
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.DiagramLayout
     description: "Layers are typically used for grouping diagram objects according\
       \ to themes and scales. Themes are used to display or hide certain information\
       \ (e.g., lakes, borders), while scales are used for hiding or displaying information\
@@ -1138,8 +1096,7 @@ classes:
         description: A visibility layer can contain one or more diagram objects.
   DiagramObjectPoint:
     class_uri: cim:DiagramObjectPoint
-    in_subset:
-    - TC57CIM.IEC61970.Base.DiagramLayout
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.DiagramLayout
     description: "A point in a given space defined by 3 coordinates and associated\
       \ to a diagram object.  The coordinates may be positive or negative as the origin\
       \ does not have to be in the corner of a diagram.  \r\n"
@@ -1184,8 +1141,7 @@ classes:
         description: The diagram object with which the points are associated.
   DiagramObjectGluePoint:
     class_uri: cim:DiagramObjectGluePoint
-    in_subset:
-    - TC57CIM.IEC61970.Base.DiagramLayout
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.DiagramLayout
     description: "This is used for grouping diagram object points from different diagram\
       \ objects that are considered to be glued together in a diagram even if they\
       \ are not at the exact same coordinates.\r\n"
@@ -1200,8 +1156,7 @@ classes:
   DiagramObjectStyle:
     class_uri: cim:DiagramObjectStyle
     is_a: IdentifiedObject
-    in_subset:
-    - TC57CIM.IEC61970.Base.DiagramLayout
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.DiagramLayout
     description: A reference to a style used by the originating system for a diagram
       object.  A diagram object style describes information such as line thickness,
       shape such as circle or rectangle etc, and colour.
@@ -1215,8 +1170,7 @@ classes:
   InstanceSet:
     class_uri: cim:InstanceSet
     is_a: DataSet
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet
     description: 'Instance of a version of a model part.   This corresponds to a payload
       of instance data.   '
     attributes:
@@ -1235,8 +1189,7 @@ classes:
   DatasetArg:
     class_uri: cim:DatasetArg
     is_a: ModelOperationArg
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
     description: A model operation argument referencing a dataset instance.
     attributes:
       OperationDatasetArgDescription:
@@ -1255,8 +1208,7 @@ classes:
   DatasetArgDescription:
     class_uri: cim:DatasetArgDescription
     is_a: ModelOperationArgDescription
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations
     attributes:
       OperationDatasetArg:
         slot_uri: cim:DatasetArgDescription.OperationDatasetArg
@@ -1266,8 +1218,7 @@ classes:
         description: The operation dataset roles conforming to this role type.
   PowerSystemProjectLifecycleToBeDeleted:
     class_uri: cim:PowerSystemProjectLifecycleToBeDeleted
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     description: Represent the base lifecycle of a functional model change that could
       be a construction of new elements.
     attributes:
@@ -1297,27 +1248,23 @@ classes:
         description: The date Power System Project is in planning stage.
   NetworkModelProjectCollection:
     class_uri: cim:NetworkModelProjectCollection
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
   DifferentialModel:
     class_uri: cim:DifferentialModel
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     description: 'A set of statements describing the changes in the network model.
       The statement is defined in the incremental model. '
   ProjectAlternative:
     class_uri: cim:ProjectAlternative
     is_a: NetworkModelProjectRelationship
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     description: "Project B is an alternative to project A.  Project A is the primary\
       \ alternative.\r\nMultiple project alternatives should not be selected into\
       \ a single network study case."
   ProjectDependency:
     class_uri: cim:ProjectDependency
     is_a: NetworkModelProjectRelationship
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     description: 'Project A change sets should be applied before Project B during
       case creation. '
 enums:
@@ -1345,8 +1292,7 @@ enums:
       \ imagines that the \"kg\" were replaced by a symbol \"\xDE\", then it is easier\
       \ to conceptualize the multiplier \"m\" as creating the proper unit \"m\xDE\"\
       , and not the forbidden unit \"mkg\"."
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     permissible_values:
       a:
         meaning: cim:UnitMultiplier.a
@@ -1418,8 +1364,7 @@ enums:
       \ symbol information correctly convert and scale the raw data of those sources\
       \ into SI-based units. \r\nThe integer values are used for harmonization with\
       \ IEC 61850."
-    in_subset:
-    - TC57CIM.IEC61970.Base.Domain
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Domain
     permissible_values:
       A:
         meaning: cim:UnitSymbol.A
@@ -1707,8 +1652,7 @@ enums:
     enum_uri: cim:OrientationKind
     description: "The orientation of the coordinate system with respect to top, left,\
       \ and the coordinate number system.\r\n"
-    in_subset:
-    - TC57CIM.IEC61970.Base.DiagramLayout
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.DiagramLayout
     permissible_values:
       negative:
         meaning: cim:OrientationKind.negative
@@ -1716,8 +1660,7 @@ enums:
         meaning: cim:OrientationKind.positive
   DependencyKind:
     enum_uri: cim:DependencyKind
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     permissible_values:
       mutuallyExclusive:
         meaning: cim:DependencyKind.mutuallyExclusive
@@ -1725,8 +1668,7 @@ enums:
         meaning: cim:DependencyKind.required
   ProjectStatusKind:
     enum_uri: cim:ProjectStatusKind
-    in_subset:
-    - TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects
     permissible_values:
       cancelled:
         meaning: cim:ProjectStatusKind.cancelled
@@ -1736,23 +1678,3 @@ enums:
         meaning: cim:ProjectStatusKind.draft
       frozen:
         meaning: cim:ProjectStatusKind.frozen
-subsets:
-  TC57CIM.IEC61970.Base.Core:
-    description: An extension to the Core and Wires packages that models information
-      for protection equipment such as relays. These entities are used within training
-      simulators and distribution network fault location applications.
-  TC57CIM.IEC61970.Base.DiagramLayout:
-    description: "This package is responsible for modelling the energy consumers and\
-      \ the system load as curves and associated curve data. Special circumstances\
-      \ that may affect the load, such as seasons and day types, are also included\
-      \ here.\r\n\r\nThis information is used by Load Forecasting and Load Management."
-  TC57CIM.IEC61970.Base.Domain:
-    description: "The ControlArea package models area specifications which can be\
-      \ used for a variety of purposes.  The package as a whole models potentially\
-      \ overlapping control area specifications for the purpose of actual generation\
-      \ control, load forecast area load capture, or powerflow based analysis.\r\n"
-  TC57CIM.IEC61970.InfIEC61970.InfPart303.AlternateModels:
-  TC57CIM.IEC61970.InfIEC61970.InfPart303.ModelOperations:
-  TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelFrames:
-  TC57CIM.IEC61970.InfIEC61970.InfPart303.NetworkModelProjects:
-  TC57CIM.IEC61970.InfIEC61970.Part303.GenericDataSet:

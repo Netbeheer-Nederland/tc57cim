@@ -1,10 +1,10 @@
-id: cim:DocDC
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.DC.DocDC
 name: TC57CIM.IEC61970.Base.DC.DocDC
 title: DocDC
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:55:58.635862
+generation_date: 2024-04-06 13:15:39.875456
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

@@ -1,10 +1,10 @@
-id: cim:MarketSystem
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MarketSystem
 name: TC57CIM.IEC62325.MarketOperations.MarketSystem
 title: MarketSystem
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:57:09.710341
+generation_date: 2024-04-06 13:16:50.647728
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:
