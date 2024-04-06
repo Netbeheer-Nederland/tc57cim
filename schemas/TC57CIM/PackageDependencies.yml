@@ -1,10 +1,10 @@
-id: cim:PackageDependencies
+id: https://cim.ucaiug.io/ns#TC57CIM.PackageDependencies
 name: TC57CIM.PackageDependencies
 title: PackageDependencies
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:57:23.027169
+generation_date: 2024-04-06 15:02:14.728836
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:
@@ -20,8 +20,7 @@ default_range: string
 classes:
   PackageDependenciesCIMVersion:
     class_uri: cim:PackageDependenciesCIMVersion
-    in_subset:
-    - TC57CIM.PackageDependencies
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.PackageDependencies
     description: "The version of dependencies description among top level subpackages\
       \ of the combined CIM model.  This is not the same as the combined packages\
       \ version.\r\n"
@@ -42,5 +41,3 @@ classes:
           format is simply an integer.  The version (and date) initial values should
           be updated any time the dependencies in the model change and require an
           actual change to the diagrams within this package.
-subsets:
-  TC57CIM.PackageDependencies:

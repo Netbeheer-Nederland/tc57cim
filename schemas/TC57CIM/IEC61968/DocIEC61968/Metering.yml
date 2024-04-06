@@ -1,10 +1,10 @@
-id: cim:Metering
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61968.DocIEC61968.Metering
 name: TC57CIM.IEC61968.DocIEC61968.Metering
 title: Metering
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:56:58.571744
+generation_date: 2024-04-06 15:01:51.209927
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

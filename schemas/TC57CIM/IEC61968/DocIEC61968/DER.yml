@@ -1,10 +1,10 @@
-id: cim:DER
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61968.DocIEC61968.DER
 name: TC57CIM.IEC61968.DocIEC61968.DER
 title: DER
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:56:52.354383
+generation_date: 2024-04-06 15:01:45.238885
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

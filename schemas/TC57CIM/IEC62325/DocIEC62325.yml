@@ -1,10 +1,10 @@
-id: cim:DocIEC62325
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.DocIEC62325
 name: TC57CIM.IEC62325.DocIEC62325
 title: DocIEC62325
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:57:17.058802
+generation_date: 2024-04-06 15:02:08.914252
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

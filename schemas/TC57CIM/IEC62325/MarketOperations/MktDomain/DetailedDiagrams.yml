@@ -1,10 +1,10 @@
-id: cim:DetailedDiagrams
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketOperations.MktDomain.DetailedDiagrams
 name: TC57CIM.IEC62325.MarketOperations.MktDomain.DetailedDiagrams
 title: DetailedDiagrams
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:57:17.057385
+generation_date: 2024-04-06 15:02:08.913064
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

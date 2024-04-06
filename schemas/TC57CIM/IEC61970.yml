@@ -1,4 +1,4 @@
-id: cim:IEC61970
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61970
 name: TC57CIM.IEC61970
 title: IEC61970
 description: "The domain package defines primitive datatypes that are used by classes\
@@ -15,7 +15,7 @@ description: "The domain package defines primitive datatypes that are used by cl
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:55:38.800313
+generation_date: 2024-04-06 15:00:33.569212
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:
@@ -31,8 +31,7 @@ default_range: string
 classes:
   IEC61970CIMVersion:
     class_uri: cim:IEC61970CIMVersion
-    in_subset:
-    - TC57CIM.IEC61970
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970
     description: "This is the IEC 61970 CIM version number assigned to this UML model.\r\
       \n"
     attributes:
@@ -49,17 +48,3 @@ classes:
         multivalued: false
         description: Form is IEC61970CIMXXvYY where XX is the major CIM package version
           and the YY is the minor version. For example IEC61970CIM13v18.
-subsets:
-  TC57CIM.IEC61970:
-    description: "The domain package defines primitive datatypes that are used by\
-      \ classes in other packages. Stereotypes are used to describe the datatypes.\
-      \ The following stereotypes are defined:\r\n&lt;&lt;enumeration&gt;&gt; A list\
-      \ of permissible constant values.\r\n&lt;&lt;Primitive&gt;&gt; The most basic\
-      \ data types used to compose all other data types.\r\n&lt;&lt;CIMDatatype&gt;&gt;\
-      \ A datatype that contains a value attribute, an optional unit of measure and\
-      \ a unit multiplier. The unit and multiplier may be specified as a static variable\
-      \ initialized to the allowed value.\r\n&lt;&lt;Compound&gt;&gt; A composite\
-      \ of Primitive, enumeration, CIMDatatype or other Compound classes, as long\
-      \ as the Compound classes do not recurse.\r\nFor all datatypes both positive\
-      \ and negative values are allowed unless stated otherwise for a particular datatype.\
-      \ \r\n"

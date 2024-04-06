@@ -1,4 +1,4 @@
-id: cim:Generation
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Generation
 name: TC57CIM.IEC61970.Base.Generation
 title: Generation
 description: Contains entities that describe dynamic measurement data exchanged between
@@ -6,7 +6,7 @@ description: Contains entities that describe dynamic measurement data exchanged 
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:55:44.239451
+generation_date: 2024-04-06 15:00:38.920362
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

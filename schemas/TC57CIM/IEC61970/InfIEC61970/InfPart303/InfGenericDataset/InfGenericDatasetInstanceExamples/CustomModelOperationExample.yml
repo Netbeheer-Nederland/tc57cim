@@ -1,10 +1,10 @@
-id: cim:CustomModelOperationExample
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.InfGenericDataset.InfGenericDatasetInstanceExamples.CustomModelOperationExample
 name: TC57CIM.IEC61970.InfIEC61970.InfPart303.InfGenericDataset.InfGenericDatasetInstanceExamples.CustomModelOperationExample
 title: CustomModelOperationExample
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:55:59.844964
+generation_date: 2024-04-06 15:00:53.776002
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:

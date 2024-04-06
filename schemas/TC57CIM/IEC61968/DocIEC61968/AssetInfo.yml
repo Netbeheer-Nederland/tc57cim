@@ -1,10 +1,10 @@
-id: cim:AssetInfo
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61968.DocIEC61968.AssetInfo
 name: TC57CIM.IEC61968.DocIEC61968.AssetInfo
 title: AssetInfo
 contributors:
 - github:bartkl
 created_by: https://github.com/bartkl/cim-to-linkml
-generation_date: 2024-04-06 12:56:40.237209
+generation_date: 2024-04-06 15:01:33.294659
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
 metamodel_version: 1.7.0
 imports:
