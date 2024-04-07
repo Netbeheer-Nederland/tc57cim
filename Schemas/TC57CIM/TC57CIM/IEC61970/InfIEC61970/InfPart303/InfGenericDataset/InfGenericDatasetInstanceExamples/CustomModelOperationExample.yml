@@ -1,0 +1,19 @@
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.InfIEC61970.InfPart303.InfGenericDataset.InfGenericDatasetInstanceExamples.CustomModelOperationExample
+name: TC57CIM.IEC61970.InfIEC61970.InfPart303.InfGenericDataset.InfGenericDatasetInstanceExamples.CustomModelOperationExample
+title: CustomModelOperationExample
+contributors:
+- github:bartkl
+created_by: https://github.com/bartkl/cim-to-linkml
+generation_date: 2024-04-07 14:01:27.752787
+license: https://www.apache.org/licenses/LICENSE-2.0.txt
+metamodel_version: 1.7.0
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  github: https://github.com/
+  cim: https://cim.ucaiug.io/ns#
+default_curi_maps:
+- semweb_context
+default_prefix: cim
+default_range: string

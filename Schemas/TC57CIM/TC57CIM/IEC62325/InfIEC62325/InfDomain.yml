@@ -1,0 +1,1278 @@
+id: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+name: TC57CIM.IEC62325.InfIEC62325.InfDomain
+title: InfDomain
+contributors:
+- github:bartkl
+created_by: https://github.com/bartkl/cim-to-linkml
+generation_date: 2024-04-07 14:02:48.633067
+license: https://www.apache.org/licenses/LICENSE-2.0.txt
+metamodel_version: 1.7.0
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  github: https://github.com/
+  cim: https://cim.ucaiug.io/ns#
+default_curi_maps:
+- semweb_context
+default_prefix: cim
+default_range: string
+enums:
+  RequestorRmrTest:
+    enum_uri: cim:RequestorRmrTest
+    description: "MP\r\nISO\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      ISO:
+        meaning: cim:RequestorRmrTest.ISO
+      MP:
+        meaning: cim:RequestorRmrTest.MP
+  OrganisationCode:
+    enum_uri: cim:OrganisationCode
+    description: "organization code\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      BILL_TO:
+        meaning: cim:OrganisationCode.BILL_TO
+      PAY_TO:
+        meaning: cim:OrganisationCode.PAY_TO
+      PROVIDED_BY:
+        meaning: cim:OrganisationCode.PROVIDED_BY
+      SOLD_TO:
+        meaning: cim:OrganisationCode.SOLD_TO
+  SchedClassType:
+    enum_uri: cim:SchedClassType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      F:
+        meaning: cim:SchedClassType.F
+      P:
+        meaning: cim:SchedClassType.P
+      R:
+        meaning: cim:SchedClassType.R
+  ResourceCertificationCategory:
+    enum_uri: cim:ResourceCertificationCategory
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      DAM:
+        meaning: cim:ResourceCertificationCategory.DAM
+      GT:
+        meaning: cim:ResourceCertificationCategory.GT
+      RC:
+        meaning: cim:ResourceCertificationCategory.RC
+      RTM:
+        meaning: cim:ResourceCertificationCategory.RTM
+  UOMType:
+    enum_uri: cim:UOMType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      $/lb:
+        meaning: cim:UOMType.%24/lb
+      $/mmBTU:
+        meaning: cim:UOMType.%24/mmBTU
+      '%':
+        meaning: cim:UOMType.%25
+      FACTOR:
+        meaning: cim:UOMType.FACTOR
+      FLAG:
+        meaning: cim:UOMType.FLAG
+      INTEGER:
+        meaning: cim:UOMType.INTEGER
+      MW:
+        meaning: cim:UOMType.MW
+      MWh:
+        meaning: cim:UOMType.MWh
+      US$:
+        meaning: cim:UOMType.US%24
+      US$/MW:
+        meaning: cim:UOMType.US%24/MW
+      US$/MWh:
+        meaning: cim:UOMType.US%24/MWh
+  OASISMarketType:
+    enum_uri: cim:OASISMarketType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      All:
+        meaning: cim:OASISMarketType.All
+      HASP:
+        meaning: cim:OASISMarketType.HASP
+      IFM:
+        meaning: cim:OASISMarketType.IFM
+      N/A:
+        meaning: cim:OASISMarketType.N/A
+      RTM:
+        meaning: cim:OASISMarketType.RTM
+      RUC:
+        meaning: cim:OASISMarketType.RUC
+  OASISDataItems:
+    enum_uri: cim:OASISDataItems
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      AS_CLEAR_ASMP_IFM:
+        meaning: cim:OASISDataItems.AS_CLEAR_ASMP_IFM
+      AS_CLEAR_ASMP_RTM:
+        meaning: cim:OASISDataItems.AS_CLEAR_ASMP_RTM
+      AS_CLEAR_COST_IFM:
+        meaning: cim:OASISDataItems.AS_CLEAR_COST_IFM
+      AS_CLEAR_COST_RTM:
+        meaning: cim:OASISDataItems.AS_CLEAR_COST_RTM
+      AS_CLEAR_MW_IFM:
+        meaning: cim:OASISDataItems.AS_CLEAR_MW_IFM
+      AS_CLEAR_MW_RTM:
+        meaning: cim:OASISDataItems.AS_CLEAR_MW_RTM
+      AS_GEN_TOTAL_MW_IFM:
+        meaning: cim:OASISDataItems.AS_GEN_TOTAL_MW_IFM
+      AS_GEN_TOTAL_MW_RTM:
+        meaning: cim:OASISDataItems.AS_GEN_TOTAL_MW_RTM
+      AS_IMP_TOTAL_MW_IFM:
+        meaning: cim:OASISDataItems.AS_IMP_TOTAL_MW_IFM
+      AS_IMP_TOTAL_MW_RTM:
+        meaning: cim:OASISDataItems.AS_IMP_TOTAL_MW_RTM
+      AS_LOAD_TOTAL_MW_IFM:
+        meaning: cim:OASISDataItems.AS_LOAD_TOTAL_MW_IFM
+      AS_LOAD_TOTAL_MW_RTM:
+        meaning: cim:OASISDataItems.AS_LOAD_TOTAL_MW_RTM
+      AS_REGION_REQ_MAX:
+        meaning: cim:OASISDataItems.AS_REGION_REQ_MAX
+      AS_REGION_REQ_MIN:
+        meaning: cim:OASISDataItems.AS_REGION_REQ_MIN
+      AS_REGION_value:
+        meaning: cim:OASISDataItems.AS_REGION_value
+      AS_SELF_MW_IFM:
+        meaning: cim:OASISDataItems.AS_SELF_MW_IFM
+      AS_SELF_MW_RTM:
+        meaning: cim:OASISDataItems.AS_SELF_MW_RTM
+      AS_TOTAL_MW:
+        meaning: cim:OASISDataItems.AS_TOTAL_MW
+      AS_TOTAL_MW_IFM:
+        meaning: cim:OASISDataItems.AS_TOTAL_MW_IFM
+      AS_TOTAL_MW_RTM:
+        meaning: cim:OASISDataItems.AS_TOTAL_MW_RTM
+      AS_TYPE:
+        meaning: cim:OASISDataItems.AS_TYPE
+      AS_USER_RATE:
+        meaning: cim:OASISDataItems.AS_USER_RATE
+      CA_value:
+        meaning: cim:OASISDataItems.CA_value
+      CMMT_MINLOAD_MLC:
+        meaning: cim:OASISDataItems.CMMT_MINLOAD_MLC
+      CMMT_MINLOAD_MW:
+        meaning: cim:OASISDataItems.CMMT_MINLOAD_MW
+      CMMT_RA_MLC:
+        meaning: cim:OASISDataItems.CMMT_RA_MLC
+      CMMT_RA_MW:
+        meaning: cim:OASISDataItems.CMMT_RA_MW
+      CMMT_RA_START_COST:
+        meaning: cim:OASISDataItems.CMMT_RA_START_COST
+      CMMT_RA_UNITS:
+        meaning: cim:OASISDataItems.CMMT_RA_UNITS
+      CMMT_TOTAL_MW:
+        meaning: cim:OASISDataItems.CMMT_TOTAL_MW
+      CMMT_TOTAL_START_COST:
+        meaning: cim:OASISDataItems.CMMT_TOTAL_START_COST
+      CMMT_TOTAL_UNITS:
+        meaning: cim:OASISDataItems.CMMT_TOTAL_UNITS
+      CRR_CAT:
+        meaning: cim:OASISDataItems.CRR_CAT
+      CRR_MARKET_value:
+        meaning: cim:OASISDataItems.CRR_MARKET_value
+      CRR_MW:
+        meaning: cim:OASISDataItems.CRR_MW
+      CRR_NSR:
+        meaning: cim:OASISDataItems.CRR_NSR
+      CRR_OPTION:
+        meaning: cim:OASISDataItems.CRR_OPTION
+      CRR_OWNER:
+        meaning: cim:OASISDataItems.CRR_OWNER
+      CRR_SEGMENT:
+        meaning: cim:OASISDataItems.CRR_SEGMENT
+      CRR_TERM:
+        meaning: cim:OASISDataItems.CRR_TERM
+      CRR_TOU:
+        meaning: cim:OASISDataItems.CRR_TOU
+      CRR_TYPE:
+        meaning: cim:OASISDataItems.CRR_TYPE
+      ENE_EA_DA:
+        meaning: cim:OASISDataItems.ENE_EA_DA
+      ENE_EA_EXCEPT:
+        meaning: cim:OASISDataItems.ENE_EA_EXCEPT
+      ENE_EA_HASP:
+        meaning: cim:OASISDataItems.ENE_EA_HASP
+      ENE_EA_MLE:
+        meaning: cim:OASISDataItems.ENE_EA_MLE
+      ENE_EA_MSSLF:
+        meaning: cim:OASISDataItems.ENE_EA_MSSLF
+      ENE_EA_OPTIMAL:
+        meaning: cim:OASISDataItems.ENE_EA_OPTIMAL
+      ENE_EA_RAMP_DEV:
+        meaning: cim:OASISDataItems.ENE_EA_RAMP_DEV
+      ENE_EA_RAMP_STD:
+        meaning: cim:OASISDataItems.ENE_EA_RAMP_STD
+      ENE_EA_RESIDUAL:
+        meaning: cim:OASISDataItems.ENE_EA_RESIDUAL
+      ENE_EA_RMR:
+        meaning: cim:OASISDataItems.ENE_EA_RMR
+      ENE_EA_SELF:
+        meaning: cim:OASISDataItems.ENE_EA_SELF
+      ENE_EA_SLIC:
+        meaning: cim:OASISDataItems.ENE_EA_SLIC
+      ENE_EXP_CLEAR_HASP:
+        meaning: cim:OASISDataItems.ENE_EXP_CLEAR_HASP
+      ENE_EXP_CLEAR_IFM:
+        meaning: cim:OASISDataItems.ENE_EXP_CLEAR_IFM
+      ENE_EXP_CLEAR_RTM:
+        meaning: cim:OASISDataItems.ENE_EXP_CLEAR_RTM
+      ENE_GEN_CLEAR_HASP:
+        meaning: cim:OASISDataItems.ENE_GEN_CLEAR_HASP
+      ENE_GEN_CLEAR_IFM:
+        meaning: cim:OASISDataItems.ENE_GEN_CLEAR_IFM
+      ENE_GEN_CLEAR_RTM:
+        meaning: cim:OASISDataItems.ENE_GEN_CLEAR_RTM
+      ENE_IMP_CLEAR_HASP:
+        meaning: cim:OASISDataItems.ENE_IMP_CLEAR_HASP
+      ENE_IMP_CLEAR_IFM:
+        meaning: cim:OASISDataItems.ENE_IMP_CLEAR_IFM
+      ENE_IMP_CLEAR_RTM:
+        meaning: cim:OASISDataItems.ENE_IMP_CLEAR_RTM
+      ENE_LOAD_ACTUAL:
+        meaning: cim:OASISDataItems.ENE_LOAD_ACTUAL
+      ENE_LOAD_CLEAR_HASP:
+        meaning: cim:OASISDataItems.ENE_LOAD_CLEAR_HASP
+      ENE_LOAD_CLEAR_IFM:
+        meaning: cim:OASISDataItems.ENE_LOAD_CLEAR_IFM
+      ENE_LOAD_CLEAR_RTM:
+        meaning: cim:OASISDataItems.ENE_LOAD_CLEAR_RTM
+      ENE_LOAD_FCST:
+        meaning: cim:OASISDataItems.ENE_LOAD_FCST
+      ENE_PEAK_HOUR:
+        meaning: cim:OASISDataItems.ENE_PEAK_HOUR
+      ENE_PEAK_LOAD:
+        meaning: cim:OASISDataItems.ENE_PEAK_LOAD
+      FUEL_REGION_value:
+        meaning: cim:OASISDataItems.FUEL_REGION_value
+      INVT_DATETIME:
+        meaning: cim:OASISDataItems.INVT_DATETIME
+      LOAD_ACTUAL:
+        meaning: cim:OASISDataItems.LOAD_ACTUAL
+      LOAD_CLEAR_RTM:
+        meaning: cim:OASISDataItems.LOAD_CLEAR_RTM
+      LOSS_TOTAL_COST_HASP:
+        meaning: cim:OASISDataItems.LOSS_TOTAL_COST_HASP
+      LOSS_TOTAL_COST_RTM:
+        meaning: cim:OASISDataItems.LOSS_TOTAL_COST_RTM
+      LOSS_TOTAL_MW_HASP:
+        meaning: cim:OASISDataItems.LOSS_TOTAL_MW_HASP
+      LOSS_TOTAL_MW_RTM:
+        meaning: cim:OASISDataItems.LOSS_TOTAL_MW_RTM
+      MPM_FLAG:
+        meaning: cim:OASISDataItems.MPM_FLAG
+      OP_RSRV_TOTAL:
+        meaning: cim:OASISDataItems.OP_RSRV_TOTAL
+      PRC_NG:
+        meaning: cim:OASISDataItems.PRC_NG
+      PRC_SHADOW:
+        meaning: cim:OASISDataItems.PRC_SHADOW
+      RATING_ATC:
+        meaning: cim:OASISDataItems.RATING_ATC
+      RMR_DETER_DAM:
+        meaning: cim:OASISDataItems.RMR_DETER_DAM
+      RMR_DETER_HASP:
+        meaning: cim:OASISDataItems.RMR_DETER_HASP
+      RMR_DISPATCH_DAM:
+        meaning: cim:OASISDataItems.RMR_DISPATCH_DAM
+      RMR_DISPATCH_HASP:
+        meaning: cim:OASISDataItems.RMR_DISPATCH_HASP
+      RMR_TOTAL:
+        meaning: cim:OASISDataItems.RMR_TOTAL
+      RMR_TOTAL_AVAIL:
+        meaning: cim:OASISDataItems.RMR_TOTAL_AVAIL
+      RUC_GEN_CLEAR_RUC:
+        meaning: cim:OASISDataItems.RUC_GEN_CLEAR_RUC
+      RUC_IMP_CLEAR_RUC:
+        meaning: cim:OASISDataItems.RUC_IMP_CLEAR_RUC
+      RUC_LOAD_CLEAR_RUC:
+        meaning: cim:OASISDataItems.RUC_LOAD_CLEAR_RUC
+      RUC_ZONE_value:
+        meaning: cim:OASISDataItems.RUC_ZONE_value
+      TAC_AREA_value:
+        meaning: cim:OASISDataItems.TAC_AREA_value
+      TINTRFCE_value:
+        meaning: cim:OASISDataItems.TINTRFCE_value
+      TRNS_AS_IMPORT:
+        meaning: cim:OASISDataItems.TRNS_AS_IMPORT
+      TRNS_ENE_IMPORT:
+        meaning: cim:OASISDataItems.TRNS_ENE_IMPORT
+      TRNS_EQUIP_value:
+        meaning: cim:OASISDataItems.TRNS_EQUIP_value
+      TRNS_RATING_CBM:
+        meaning: cim:OASISDataItems.TRNS_RATING_CBM
+      TRNS_RATING_DIRECTION:
+        meaning: cim:OASISDataItems.TRNS_RATING_DIRECTION
+      TRNS_RATING_OTC:
+        meaning: cim:OASISDataItems.TRNS_RATING_OTC
+      TRNS_RATING_OTC_DERATE:
+        meaning: cim:OASISDataItems.TRNS_RATING_OTC_DERATE
+      TRNS_RATING_TTC:
+        meaning: cim:OASISDataItems.TRNS_RATING_TTC
+      TRNS_TI_value:
+        meaning: cim:OASISDataItems.TRNS_TI_value
+      TRNS_TR_ENTMTS:
+        meaning: cim:OASISDataItems.TRNS_TR_ENTMTS
+      TRNS_TR_USEAGE:
+        meaning: cim:OASISDataItems.TRNS_TR_USEAGE
+  OASISMeasType:
+    enum_uri: cim:OASISMeasType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      '%':
+        meaning: cim:OASISMeasType.%25
+      FACTOR:
+        meaning: cim:OASISMeasType.FACTOR
+      FLAG:
+        meaning: cim:OASISMeasType.FLAG
+      INTEGER:
+        meaning: cim:OASISMeasType.INTEGER
+      MW:
+        meaning: cim:OASISMeasType.MW
+      MWh:
+        meaning: cim:OASISMeasType.MWh
+      US$:
+        meaning: cim:OASISMeasType.US%24
+      US$/MW:
+        meaning: cim:OASISMeasType.US%24/MW
+      US$/MWh:
+        meaning: cim:OASISMeasType.US%24/MWh
+  SegmentCurveType:
+    enum_uri: cim:SegmentCurveType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      CONSULTATIVE:
+        meaning: cim:SegmentCurveType.CONSULTATIVE
+      COST:
+        meaning: cim:SegmentCurveType.COST
+  OrganisationType:
+    enum_uri: cim:OrganisationType
+    description: "organization type\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      CUSTOMER:
+        meaning: cim:OrganisationType.CUSTOMER
+      RTO:
+        meaning: cim:OrganisationType.RTO
+  SelfScheduleTypeMB:
+    enum_uri: cim:SelfScheduleTypeMB
+    description: "Self Schedule Types applicable to Mitigated Bid\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      RMR:
+        meaning: cim:SelfScheduleTypeMB.RMR
+  MarketStatementLineItemAliasName:
+    enum_uri: cim:MarketStatementLineItemAliasName
+    description: "market statement line item alias name\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      CHARGE_CODE_INTERVAL_DETAIL:
+        meaning: cim:MarketStatementLineItemAliasName.CHARGE_CODE_INTERVAL_DETAIL
+      CHARGE_CODE_INTERVAL_TOTAL:
+        meaning: cim:MarketStatementLineItemAliasName.CHARGE_CODE_INTERVAL_TOTAL
+      CHARGE_CODE_SUMMARY:
+        meaning: cim:MarketStatementLineItemAliasName.CHARGE_CODE_SUMMARY
+      CHARGE_GROUP:
+        meaning: cim:MarketStatementLineItemAliasName.CHARGE_GROUP
+      PARENT_CHARGE_GROUP:
+        meaning: cim:MarketStatementLineItemAliasName.PARENT_CHARGE_GROUP
+      TRADE_DATE:
+        meaning: cim:MarketStatementLineItemAliasName.TRADE_DATE
+  TradeStatusType:
+    enum_uri: cim:TradeStatusType
+    description: "RJ - Rejected Trade\r\nI - Invalid Trade\r\nV - Valid Trade\r\n\
+      M - Modified Trade\r\nCV - Conditionally Valid Trade\r\nCM - Conditionally Modified\
+      \ Trade\r\nCI - Conditionally Invalid Trade\r\nCX - Cancelled Trade\r\nO - Obsolete\
+      \ Trade\r\nMT - Matched Trade\r\nU - Unmatched Trade\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      CI:
+        meaning: cim:TradeStatusType.CI
+      CM:
+        meaning: cim:TradeStatusType.CM
+      CV:
+        meaning: cim:TradeStatusType.CV
+      CX:
+        meaning: cim:TradeStatusType.CX
+      I:
+        meaning: cim:TradeStatusType.I
+      M:
+        meaning: cim:TradeStatusType.M
+      MT:
+        meaning: cim:TradeStatusType.MT
+      O:
+        meaning: cim:TradeStatusType.O
+      RJ:
+        meaning: cim:TradeStatusType.RJ
+      U:
+        meaning: cim:TradeStatusType.U
+      V:
+        meaning: cim:TradeStatusType.V
+  ZoneType:
+    enum_uri: cim:ZoneType
+    description: "zone type\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      ASREGION:
+        meaning: cim:ZoneType.ASREGION
+      DCA:
+        meaning: cim:ZoneType.DCA
+      LOADZONE:
+        meaning: cim:ZoneType.LOADZONE
+      RUCZONE:
+        meaning: cim:ZoneType.RUCZONE
+      TRADINGHUB:
+        meaning: cim:ZoneType.TRADINGHUB
+  MarketStatementDescription:
+    enum_uri: cim:MarketStatementDescription
+    description: "Description of market statement\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      DAILY_INITIAL_CREDIT:
+        meaning: cim:MarketStatementDescription.DAILY_INITIAL_CREDIT
+      DAILY_INITIAL_MARKET:
+        meaning: cim:MarketStatementDescription.DAILY_INITIAL_MARKET
+      DAILY_RECALC_MARKET:
+        meaning: cim:MarketStatementDescription.DAILY_RECALC_MARKET
+      MONTHLY_INITIAL_MARKET:
+        meaning: cim:MarketStatementDescription.MONTHLY_INITIAL_MARKET
+      MONTHLY_RECALC_MARKET:
+        meaning: cim:MarketStatementDescription.MONTHLY_RECALC_MARKET
+  OASISStatusType:
+    enum_uri: cim:OASISStatusType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      Data_Transfer_Procedure_Initiated:
+        meaning: cim:OASISStatusType.Data_Transfer_Procedure_Initiated
+      Data_Transfer_Succesful:
+        meaning: cim:OASISStatusType.Data_Transfer_Succesful
+      Forced_Termination:
+        meaning: cim:OASISStatusType.Forced_Termination
+      Obsolete:
+        meaning: cim:OASISStatusType.Obsolete
+      Push_Failed:
+        meaning: cim:OASISStatusType.Push_Failed
+      Valid:
+        meaning: cim:OASISStatusType.Valid
+  OASISReportType:
+    enum_uri: cim:OASISReportType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      AS_DA_RESULT:
+        meaning: cim:OASISReportType.AS_DA_RESULT
+      AS_OP_RSRV:
+        meaning: cim:OASISReportType.AS_OP_RSRV
+      AS_REQ:
+        meaning: cim:OASISReportType.AS_REQ
+      AS_RTM_RESULT:
+        meaning: cim:OASISReportType.AS_RTM_RESULT
+      BIDS_PUBLIC:
+        meaning: cim:OASISReportType.BIDS_PUBLIC
+      CMMT_RA_MLC:
+        meaning: cim:OASISReportType.CMMT_RA_MLC
+      CMMT_RMR:
+        meaning: cim:OASISReportType.CMMT_RMR
+      CRR_CLEARING:
+        meaning: cim:OASISReportType.CRR_CLEARING
+      CRR_INVENTORY:
+        meaning: cim:OASISReportType.CRR_INVENTORY
+      ENE_EA:
+        meaning: cim:OASISReportType.ENE_EA
+      ENE_HASP:
+        meaning: cim:OASISReportType.ENE_HASP
+      ENE_IFM:
+        meaning: cim:OASISReportType.ENE_IFM
+      ENE_MPM:
+        meaning: cim:OASISReportType.ENE_MPM
+      ENE_RTM:
+        meaning: cim:OASISReportType.ENE_RTM
+      ENE_RUC:
+        meaning: cim:OASISReportType.ENE_RUC
+      LOSS_DA_HASP:
+        meaning: cim:OASISReportType.LOSS_DA_HASP
+      LOSS_RTM:
+        meaning: cim:OASISReportType.LOSS_RTM
+      PRC_AS:
+        meaning: cim:OASISReportType.PRC_AS
+      PRC_CNSTR:
+        meaning: cim:OASISReportType.PRC_CNSTR
+      PRC_FUEL:
+        meaning: cim:OASISReportType.PRC_FUEL
+      PRC_HRLY_LMP:
+        meaning: cim:OASISReportType.PRC_HRLY_LMP
+      PRC_INTVL_LMP:
+        meaning: cim:OASISReportType.PRC_INTVL_LMP
+      SLD_FCST:
+        meaning: cim:OASISReportType.SLD_FCST
+      SLD_FCST_PEAK:
+        meaning: cim:OASISReportType.SLD_FCST_PEAK
+      SLD_MKTS:
+        meaning: cim:OASISReportType.SLD_MKTS
+      TRNS_ATC:
+        meaning: cim:OASISReportType.TRNS_ATC
+      TRNS_OUTAGE:
+        meaning: cim:OASISReportType.TRNS_OUTAGE
+      TRNS_USAGE:
+        meaning: cim:OASISReportType.TRNS_USAGE
+  MarketStatementDocStatus:
+    enum_uri: cim:MarketStatementDocStatus
+    description: "market statement document status\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      APPROVED:
+        meaning: cim:MarketStatementDocStatus.APPROVED
+      CANCELLED:
+        meaning: cim:MarketStatementDocStatus.CANCELLED
+  OASISErrCode:
+    enum_uri: cim:OASISErrCode
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      '1000':
+        meaning: cim:OASISErrCode.1000
+      '1001':
+        meaning: cim:OASISErrCode.1001
+      '1002':
+        meaning: cim:OASISErrCode.1002
+      '1003':
+        meaning: cim:OASISErrCode.1003
+      '1004':
+        meaning: cim:OASISErrCode.1004
+      '1005':
+        meaning: cim:OASISErrCode.1005
+      '1006':
+        meaning: cim:OASISErrCode.1006
+      '1007':
+        meaning: cim:OASISErrCode.1007
+      '1008':
+        meaning: cim:OASISErrCode.1008
+      '1009':
+        meaning: cim:OASISErrCode.1009
+      '1010':
+        meaning: cim:OASISErrCode.1010
+  PriceSetFlag:
+    enum_uri: cim:PriceSetFlag
+    description: "Y - indicates a resource is capable of setting the Markte Clearing\
+      \ Price \r\nS - indicates the resource must submit bids for energy at $ 0\r\n\
+      N - indicates the resource does not have to submit bids for energy at $ 0\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      N:
+        meaning: cim:PriceSetFlag.N
+      S:
+        meaning: cim:PriceSetFlag.S
+      Y:
+        meaning: cim:PriceSetFlag.Y
+  JobScheduleType:
+    enum_uri: cim:JobScheduleType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      CRITICAL:
+        meaning: cim:JobScheduleType.CRITICAL
+      NONCRITICAL:
+        meaning: cim:JobScheduleType.NONCRITICAL
+  AdderType:
+    enum_uri: cim:AdderType
+    description: "BASELI NE\r\nNEGOTIATED\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      BASELINE:
+        meaning: cim:AdderType.BASELINE
+      NEGOTIATED:
+        meaning: cim:AdderType.NEGOTIATED
+  SpinningEventNameType:
+    enum_uri: cim:SpinningEventNameType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      EASTERN:
+        meaning: cim:SpinningEventNameType.EASTERN
+      PJM:
+        meaning: cim:SpinningEventNameType.PJM
+      RFC-SR:
+        meaning: cim:SpinningEventNameType.RFC-SR
+      SOUTH-S:
+        meaning: cim:SpinningEventNameType.SOUTH-S
+  ADSInstructionTypeOOS:
+    enum_uri: cim:ADSInstructionTypeOOS
+    description: "MIN_CONSTRAINT\r\nMAX_CONSTRAINT\r\nFIXED_CONSTRAINT\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      FIXED_CONSTRAINT:
+        meaning: cim:ADSInstructionTypeOOS.FIXED_CONSTRAINT
+      MAX_CONSTRAINT:
+        meaning: cim:ADSInstructionTypeOOS.MAX_CONSTRAINT
+      MIN_CONSTRAINT:
+        meaning: cim:ADSInstructionTypeOOS.MIN_CONSTRAINT
+  DAMMarketType:
+    enum_uri: cim:DAMMarketType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      DAM:
+        meaning: cim:DAMMarketType.DAM
+  OASISMasterType:
+    enum_uri: cim:OASISMasterType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      ATL_APNODE:
+        meaning: cim:OASISMasterType.ATL_APNODE
+      ATL_AS_REGION:
+        meaning: cim:OASISMasterType.ATL_AS_REGION
+      ATL_AS_REGION_MAP:
+        meaning: cim:OASISMasterType.ATL_AS_REGION_MAP
+      ATL_HUB:
+        meaning: cim:OASISMasterType.ATL_HUB
+      ATL_LAP:
+        meaning: cim:OASISMasterType.ATL_LAP
+      ATL_LDF:
+        meaning: cim:OASISMasterType.ATL_LDF
+      ATL_PNODE:
+        meaning: cim:OASISMasterType.ATL_PNODE
+      ATL_PNODE_MAP:
+        meaning: cim:OASISMasterType.ATL_PNODE_MAP
+      ATL_PUB:
+        meaning: cim:OASISMasterType.ATL_PUB
+      ATL_PUB_SCHED:
+        meaning: cim:OASISMasterType.ATL_PUB_SCHED
+      ATL_RESOURCE:
+        meaning: cim:OASISMasterType.ATL_RESOURCE
+      ATL_RUC_ZONE:
+        meaning: cim:OASISMasterType.ATL_RUC_ZONE
+      ATL_RUC_ZONE_MAP:
+        meaning: cim:OASISMasterType.ATL_RUC_ZONE_MAP
+      ATL_STAT:
+        meaning: cim:OASISMasterType.ATL_STAT
+      ATL_TAC_AREA:
+        meaning: cim:OASISMasterType.ATL_TAC_AREA
+      ATL_TAC_AREA_MAP:
+        meaning: cim:OASISMasterType.ATL_TAC_AREA_MAP
+      ATL_TI:
+        meaning: cim:OASISMasterType.ATL_TI
+      ATL_TIEPOINT:
+        meaning: cim:OASISMasterType.ATL_TIEPOINT
+      ATL_XREF:
+        meaning: cim:OASISMasterType.ATL_XREF
+  SelfSchedTypeRawBid:
+    enum_uri: cim:SelfSchedTypeRawBid
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      BAS:
+        meaning: cim:SelfSchedTypeRawBid.BAS
+      ETC:
+        meaning: cim:SelfSchedTypeRawBid.ETC
+      LOF:
+        meaning: cim:SelfSchedTypeRawBid.LOF
+      LPT:
+        meaning: cim:SelfSchedTypeRawBid.LPT
+      PT:
+        meaning: cim:SelfSchedTypeRawBid.PT
+      RA:
+        meaning: cim:SelfSchedTypeRawBid.RA
+      RMT:
+        meaning: cim:SelfSchedTypeRawBid.RMT
+      SP:
+        meaning: cim:SelfSchedTypeRawBid.SP
+      TOR:
+        meaning: cim:SelfSchedTypeRawBid.TOR
+      WHL:
+        meaning: cim:SelfSchedTypeRawBid.WHL
+  OASISIntervalType:
+    enum_uri: cim:OASISIntervalType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      BEGINNING:
+        meaning: cim:OASISIntervalType.BEGINNING
+      ENDING:
+        meaning: cim:OASISIntervalType.ENDING
+  MarketScheduleServices:
+    enum_uri: cim:MarketScheduleServices
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      retrieveDefaultBidCurves:
+        meaning: cim:MarketScheduleServices.retrieveDefaultBidCurves
+      retrieveMarketAwards:
+        meaning: cim:MarketScheduleServices.retrieveMarketAwards
+      retrieveMPMResults:
+        meaning: cim:MarketScheduleServices.retrieveMPMResults
+      retrieveSchedulePrices:
+        meaning: cim:MarketScheduleServices.retrieveSchedulePrices
+      retrieveStartUpShutDownInstructions:
+        meaning: cim:MarketScheduleServices.retrieveStartUpShutDownInstructions
+  SpinningEventType:
+    enum_uri: cim:SpinningEventType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      AA:
+        meaning: cim:SpinningEventType.AA
+      CA:
+        meaning: cim:SpinningEventType.CA
+      RZ:
+        meaning: cim:SpinningEventType.RZ
+  AllocationEnergyTypeCode:
+    enum_uri: cim:AllocationEnergyTypeCode
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      ACNG:
+        meaning: cim:AllocationEnergyTypeCode.ACNG
+      BS:
+        meaning: cim:AllocationEnergyTypeCode.BS
+      DAPE:
+        meaning: cim:AllocationEnergyTypeCode.DAPE
+      DASE:
+        meaning: cim:AllocationEnergyTypeCode.DASE
+      ESRT:
+        meaning: cim:AllocationEnergyTypeCode.ESRT
+      ESYS:
+        meaning: cim:AllocationEnergyTypeCode.ESYS
+      ETC:
+        meaning: cim:AllocationEnergyTypeCode.ETC
+      HASE:
+        meaning: cim:AllocationEnergyTypeCode.HASE
+      LMPM:
+        meaning: cim:AllocationEnergyTypeCode.LMPM
+      MINL:
+        meaning: cim:AllocationEnergyTypeCode.MINL
+      MLE:
+        meaning: cim:AllocationEnergyTypeCode.MLE
+      MSSLFE:
+        meaning: cim:AllocationEnergyTypeCode.MSSLFE
+      OE:
+        meaning: cim:AllocationEnergyTypeCode.OE
+      OTHER:
+        meaning: cim:AllocationEnergyTypeCode.OTHER
+      OVGN:
+        meaning: cim:AllocationEnergyTypeCode.OVGN
+      PE:
+        meaning: cim:AllocationEnergyTypeCode.PE
+      RCNG:
+        meaning: cim:AllocationEnergyTypeCode.RCNG
+      RE:
+        meaning: cim:AllocationEnergyTypeCode.RE
+      RED:
+        meaning: cim:AllocationEnergyTypeCode.RED
+      RMRD:
+        meaning: cim:AllocationEnergyTypeCode.RMRD
+      RMRH:
+        meaning: cim:AllocationEnergyTypeCode.RMRH
+      RMRR:
+        meaning: cim:AllocationEnergyTypeCode.RMRR
+      RMRS:
+        meaning: cim:AllocationEnergyTypeCode.RMRS
+      RMRT:
+        meaning: cim:AllocationEnergyTypeCode.RMRT
+      RSYS:
+        meaning: cim:AllocationEnergyTypeCode.RSYS
+      RTSSE:
+        meaning: cim:AllocationEnergyTypeCode.RTSSE
+      SDWN:
+        meaning: cim:AllocationEnergyTypeCode.SDWN
+      SE:
+        meaning: cim:AllocationEnergyTypeCode.SE
+      SLIC:
+        meaning: cim:AllocationEnergyTypeCode.SLIC
+      SRE:
+        meaning: cim:AllocationEnergyTypeCode.SRE
+      STRT:
+        meaning: cim:AllocationEnergyTypeCode.STRT
+      SUMR:
+        meaning: cim:AllocationEnergyTypeCode.SUMR
+      TCNG:
+        meaning: cim:AllocationEnergyTypeCode.TCNG
+      TEST:
+        meaning: cim:AllocationEnergyTypeCode.TEST
+      TOR:
+        meaning: cim:AllocationEnergyTypeCode.TOR
+      VS:
+        meaning: cim:AllocationEnergyTypeCode.VS
+  MarketProductTypeAsReq:
+    enum_uri: cim:MarketProductTypeAsReq
+    description: "RU - Regulation Up\r\nRD - Regulation Down\r\nSR - Spin Reserve\r\
+      \nNR - Nonspin Reserve\r\nAS - Upward Ancillary Service\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      AS:
+        meaning: cim:MarketProductTypeAsReq.AS
+      NR:
+        meaning: cim:MarketProductTypeAsReq.NR
+      RD:
+        meaning: cim:MarketProductTypeAsReq.RD
+      RU:
+        meaning: cim:MarketProductTypeAsReq.RU
+      SR:
+        meaning: cim:MarketProductTypeAsReq.SR
+  AncillaryCommodityType:
+    enum_uri: cim:AncillaryCommodityType
+    description: "ancillary serivce types\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      NONSPIN:
+        meaning: cim:AncillaryCommodityType.NONSPIN
+      REGDN:
+        meaning: cim:AncillaryCommodityType.REGDN
+      REGUP:
+        meaning: cim:AncillaryCommodityType.REGUP
+      SPIN:
+        meaning: cim:AncillaryCommodityType.SPIN
+  SourceSinkFlag:
+    enum_uri: cim:SourceSinkFlag
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      CSNK:
+        meaning: cim:SourceSinkFlag.CSNK
+      CSRC:
+        meaning: cim:SourceSinkFlag.CSRC
+  BidStatusType:
+    enum_uri: cim:BidStatusType
+    description: "Status indication for bids\r\n\r\nCV - Conditionally Valid Bid\r\
+      \nCM - Conditionally Modified Bid\r\nV - Valid Bid\r\nM - Modified Bid\r\nRJ\
+      \ - Rejected Bid\r\nI - Invalid Bid\r\nCX - Cancelled Bid\r\nO - Obsolete Bid\r\
+      \nCL - Clean Bid\r\nRP - Replicated Bid\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      CL:
+        meaning: cim:BidStatusType.CL
+      CM:
+        meaning: cim:BidStatusType.CM
+      CV:
+        meaning: cim:BidStatusType.CV
+      CX:
+        meaning: cim:BidStatusType.CX
+      I:
+        meaning: cim:BidStatusType.I
+      M:
+        meaning: cim:BidStatusType.M
+      O:
+        meaning: cim:BidStatusType.O
+      RJ:
+        meaning: cim:BidStatusType.RJ
+      RP:
+        meaning: cim:BidStatusType.RP
+      V:
+        meaning: cim:BidStatusType.V
+  SourceSinkType:
+    enum_uri: cim:SourceSinkType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      Neither:
+        meaning: cim:SourceSinkType.Neither
+      Sink:
+        meaning: cim:SourceSinkType.Sink
+      Source:
+        meaning: cim:SourceSinkType.Source
+  DispatchTransactionType:
+    enum_uri: cim:DispatchTransactionType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      Purchase:
+        meaning: cim:DispatchTransactionType.Purchase
+      Sale:
+        meaning: cim:DispatchTransactionType.Sale
+  CleanTradeProductType:
+    enum_uri: cim:CleanTradeProductType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      APN:
+        meaning: cim:CleanTradeProductType.APN
+      CPT:
+        meaning: cim:CleanTradeProductType.CPT
+      NRT:
+        meaning: cim:CleanTradeProductType.NRT
+      PHY:
+        meaning: cim:CleanTradeProductType.PHY
+      RDT:
+        meaning: cim:CleanTradeProductType.RDT
+      RUT:
+        meaning: cim:CleanTradeProductType.RUT
+      SRT:
+        meaning: cim:CleanTradeProductType.SRT
+  EnergyTypeCode:
+    enum_uri: cim:EnergyTypeCode
+    description: "Valid Enumerations:\r\n1) DASE Day Ahead Scheduled Energy; \r\n\
+      2) DSSE Day Ahead Incremental Self Schedule Energy; \r\n3) DABE Day Ahead Incremental\
+      \ Energy Bid Awarded Energy; \r\n4) OE Optimal Energy; \r\n5) HASE Hour ahead\
+      \ pre-dispatched schedule energy; \r\n6) SRE Standard Ramping Energy; \r\n7)\
+      \ RED Ramping Energy Deviation; \r\n8) EDE Exceptional Dispatch energy; \r\n\
+      9) RMRE RMR Energy; \r\n10) MSSLFE MSSLF Energy; \r\n11) RE Residual Energy;\
+      \ \r\n12) MLE Minimum Load Energy; \r\n13) SE SLIC Energy; \r\n14) RTSSE Real\
+      \ time self scheduled energy; \r\n15) DMLE Day ahead minimum load energy; \r\
+      \n16) PE Pumping Energy; \r\n17) TEE Total Expected Energy; \r\n18) DAPE - Day-Ahead\
+      \ Pumping Energy;\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      DABE:
+        meaning: cim:EnergyTypeCode.DABE
+      DAPE:
+        meaning: cim:EnergyTypeCode.DAPE
+      DASE:
+        meaning: cim:EnergyTypeCode.DASE
+      DMLE:
+        meaning: cim:EnergyTypeCode.DMLE
+      DSSE:
+        meaning: cim:EnergyTypeCode.DSSE
+      EDE:
+        meaning: cim:EnergyTypeCode.EDE
+      HASE:
+        meaning: cim:EnergyTypeCode.HASE
+      MLE:
+        meaning: cim:EnergyTypeCode.MLE
+      MSSLFE:
+        meaning: cim:EnergyTypeCode.MSSLFE
+      OE:
+        meaning: cim:EnergyTypeCode.OE
+      PE:
+        meaning: cim:EnergyTypeCode.PE
+      RE:
+        meaning: cim:EnergyTypeCode.RE
+      RED:
+        meaning: cim:EnergyTypeCode.RED
+      RMRE:
+        meaning: cim:EnergyTypeCode.RMRE
+      RTSSE:
+        meaning: cim:EnergyTypeCode.RTSSE
+      SE:
+        meaning: cim:EnergyTypeCode.SE
+      SRE:
+        meaning: cim:EnergyTypeCode.SRE
+      TEE:
+        meaning: cim:EnergyTypeCode.TEE
+  LFCResourceType:
+    enum_uri: cim:LFCResourceType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      GEN:
+        meaning: cim:LFCResourceType.GEN
+      PUMP:
+        meaning: cim:LFCResourceType.PUMP
+  MQSDELType:
+    enum_uri: cim:MQSDELType
+    description: "ADD - add\r\nDEL - delete\r\nCHG - change\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      ADD:
+        meaning: cim:MQSDELType.ADD
+      CHG:
+        meaning: cim:MQSDELType.CHG
+      DEL:
+        meaning: cim:MQSDELType.DEL
+  OASISErrDescription:
+    enum_uri: cim:OASISErrDescription
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      Data can be requested for period of 31 days only:
+        meaning: cim:OASISErrDescription.Data%20can%20be%20requested%20for%20period%20of%2031%20days%20only
+      Exceptions in reading and writing of XML files:
+        meaning: cim:OASISErrDescription.Exceptions%20in%20reading%20and%20writing%20of%20XML%20files
+      Invalid date format, please use valid date format:
+        meaning: cim:OASISErrDescription.Invalid%20date%20format%2C%20please%20use%20valid%20date%20format
+      No data returned for the specified selection:
+        meaning: cim:OASISErrDescription.No%20data%20returned%20for%20the%20specified%20selection
+      Out of memory exception:
+        meaning: cim:OASISErrDescription.Out%20of%20memory%20exception
+      Report name does not exit, please use valid report name:
+        meaning: cim:OASISErrDescription.Report%20name%20does%20not%20exit%2C%20please%20use%20valid%20report%20name
+      Required file does not exist:
+        meaning: cim:OASISErrDescription.Required%20file%20does%20not%20exist
+      System Error:
+        meaning: cim:OASISErrDescription.System%20Error
+      Timed out waiting for query response:
+        meaning: cim:OASISErrDescription.Timed%20out%20waiting%20for%20query%20response
+      Validation exception during transformation of XML:
+        meaning: cim:OASISErrDescription.Validation%20exception%20during%20transformation%20of%20XML
+  ADSInstructionTypeCommitment:
+    enum_uri: cim:ADSInstructionTypeCommitment
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      SHUT_DOWN:
+        meaning: cim:ADSInstructionTypeCommitment.SHUT_DOWN
+      START_UP:
+        meaning: cim:ADSInstructionTypeCommitment.START_UP
+  LoadFollowingCapacityType:
+    enum_uri: cim:LoadFollowingCapacityType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      DOWN:
+        meaning: cim:LoadFollowingCapacityType.DOWN
+      UP:
+        meaning: cim:LoadFollowingCapacityType.UP
+  SelfScheduleType:
+    enum_uri: cim:SelfScheduleType
+    description: "self schedule types\r\n\r\nPT\r\nETC\r\nTOR\r\nRMR\r\nRMT\r\nRGMR\r\
+      \nORFC\r\nSP\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      BAS:
+        meaning: cim:SelfScheduleType.BAS
+      ETC:
+        meaning: cim:SelfScheduleType.ETC
+      IFM:
+        meaning: cim:SelfScheduleType.IFM
+      LOF:
+        meaning: cim:SelfScheduleType.LOF
+      ORFC:
+        meaning: cim:SelfScheduleType.ORFC
+      PT:
+        meaning: cim:SelfScheduleType.PT
+      PUMP_ETC:
+        meaning: cim:SelfScheduleType.PUMP_ETC
+      PUMP_TOR:
+        meaning: cim:SelfScheduleType.PUMP_TOR
+      RA:
+        meaning: cim:SelfScheduleType.RA
+      RGMR:
+        meaning: cim:SelfScheduleType.RGMR
+      RMR:
+        meaning: cim:SelfScheduleType.RMR
+      RMT:
+        meaning: cim:SelfScheduleType.RMT
+      RUC:
+        meaning: cim:SelfScheduleType.RUC
+      SP:
+        meaning: cim:SelfScheduleType.SP
+      TOR:
+        meaning: cim:SelfScheduleType.TOR
+      WHL:
+        meaning: cim:SelfScheduleType.WHL
+  ResourceCertificationType:
+    enum_uri: cim:ResourceCertificationType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      GT:
+        meaning: cim:ResourceCertificationType.GT
+      IR:
+        meaning: cim:ResourceCertificationType.IR
+      NR:
+        meaning: cim:ResourceCertificationType.NR
+      RG:
+        meaning: cim:ResourceCertificationType.RG
+      SR:
+        meaning: cim:ResourceCertificationType.SR
+  runTypeCAISO:
+    enum_uri: cim:runTypeCAISO
+    description: "S - Scheduling\r\nP - Pricing\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      P:
+        meaning: cim:runTypeCAISO.P
+      S:
+        meaning: cim:runTypeCAISO.S
+  CurrentStatusSC:
+    enum_uri: cim:CurrentStatusSC
+    description: "ACTIVE\r\nINACTIVE\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      ACTIVE:
+        meaning: cim:CurrentStatusSC.ACTIVE
+      INACTIVE:
+        meaning: cim:CurrentStatusSC.INACTIVE
+  DispatchAcceptStatus:
+    enum_uri: cim:DispatchAcceptStatus
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      ACCEPT:
+        meaning: cim:DispatchAcceptStatus.ACCEPT
+      CANNOT:
+        meaning: cim:DispatchAcceptStatus.CANNOT
+      DECLINE:
+        meaning: cim:DispatchAcceptStatus.DECLINE
+      NON_RESPONSE:
+        meaning: cim:DispatchAcceptStatus.NON_RESPONSE
+      OK:
+        meaning: cim:DispatchAcceptStatus.OK
+      PARTIAL:
+        meaning: cim:DispatchAcceptStatus.PARTIAL
+  TimeZoneType:
+    enum_uri: cim:TimeZoneType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      PPT:
+        meaning: cim:TimeZoneType.PPT
+  UnitTypeEMS:
+    enum_uri: cim:UnitTypeEMS
+    description: "MW\r\nFLAG\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      FLAG:
+        meaning: cim:UnitTypeEMS.FLAG
+      MW:
+        meaning: cim:UnitTypeEMS.MW
+  BidPriceCapType:
+    enum_uri: cim:BidPriceCapType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      AS:
+        meaning: cim:BidPriceCapType.AS
+      ENERGY:
+        meaning: cim:BidPriceCapType.ENERGY
+      RUC:
+        meaning: cim:BidPriceCapType.RUC
+  JobStartEndType:
+    enum_uri: cim:JobStartEndType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      END:
+        meaning: cim:JobStartEndType.END
+      NA:
+        meaning: cim:JobStartEndType.NA
+      START:
+        meaning: cim:JobStartEndType.START
+  TradeProductType:
+    enum_uri: cim:TradeProductType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      APN:
+        meaning: cim:TradeProductType.APN
+      CAP:
+        meaning: cim:TradeProductType.CAP
+      NRT:
+        meaning: cim:TradeProductType.NRT
+      PHY:
+        meaning: cim:TradeProductType.PHY
+      RDT:
+        meaning: cim:TradeProductType.RDT
+      RUT:
+        meaning: cim:TradeProductType.RUT
+      SRT:
+        meaning: cim:TradeProductType.SRT
+  MeasurementTypeEMS:
+    enum_uri: cim:MeasurementTypeEMS
+    description: "Path Flow - PF\r\nPath Inflow Limit - PIL\r\nPath Inflow Available\
+      \ Limit - PIAL \r\nPath Inflow Armed Limit - PIML\r\nPath Outflow Limit - POL\r\
+      \nPath Outflow Available Limit - POAL \r\nPath Outflow Armed Limit - OARL\r\n\
+      Generation Output - GO \r\nGeneration Max Operating Limit - GMOL \r\nGeneration\
+      \ Min Operating Limit - GNOL \r\nGeneration Regulation - GR \r\nGeneration Status\
+      \ - GS \r\nPump Production - PP \r\nSystem Load - SL \r\nSystem ACE - ACE\r\n\
+      System INADV - INADV\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      ACE:
+        meaning: cim:MeasurementTypeEMS.ACE
+      GMOL:
+        meaning: cim:MeasurementTypeEMS.GMOL
+      GNOL:
+        meaning: cim:MeasurementTypeEMS.GNOL
+      GO:
+        meaning: cim:MeasurementTypeEMS.GO
+      GR:
+        meaning: cim:MeasurementTypeEMS.GR
+      GS:
+        meaning: cim:MeasurementTypeEMS.GS
+      INADV:
+        meaning: cim:MeasurementTypeEMS.INADV
+      OARL:
+        meaning: cim:MeasurementTypeEMS.OARL
+      PF:
+        meaning: cim:MeasurementTypeEMS.PF
+      PIAL:
+        meaning: cim:MeasurementTypeEMS.PIAL
+      PIL:
+        meaning: cim:MeasurementTypeEMS.PIL
+      PIML:
+        meaning: cim:MeasurementTypeEMS.PIML
+      POAL:
+        meaning: cim:MeasurementTypeEMS.POAL
+      POL:
+        meaning: cim:MeasurementTypeEMS.POL
+      PP:
+        meaning: cim:MeasurementTypeEMS.PP
+      SL:
+        meaning: cim:MeasurementTypeEMS.SL
+  JobFlagType:
+    enum_uri: cim:JobFlagType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      CREATED:
+        meaning: cim:JobFlagType.CREATED
+      DELETED:
+        meaning: cim:JobFlagType.DELETED
+      MODIFIED:
+        meaning: cim:JobFlagType.MODIFIED
+  SystemType:
+    enum_uri: cim:SystemType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      OASIS:
+        meaning: cim:SystemType.OASIS
+  MktSubClassType:
+    enum_uri: cim:MktSubClassType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      Branch_Group_Derates:
+        meaning: cim:MktSubClassType.Branch_Group_Derates
+      Day_Ahead_Final_Market_Info:
+        meaning: cim:MktSubClassType.Day_Ahead_Final_Market_Info
+      Day_Ahead_Forecast_Information:
+        meaning: cim:MktSubClassType.Day_Ahead_Forecast_Information
+      Day_Ahead_Interim_Market_Info:
+        meaning: cim:MktSubClassType.Day_Ahead_Interim_Market_Info
+      Day_Ahead_RMR:
+        meaning: cim:MktSubClassType.Day_Ahead_RMR
+      Forecasted_UDC_Direct_Access_Load:
+        meaning: cim:MktSubClassType.Forecasted_UDC_Direct_Access_Load
+      Hour_Ahead_Market_Info:
+        meaning: cim:MktSubClassType.Hour_Ahead_Market_Info
+      Hourly_Expost_Market_Info:
+        meaning: cim:MktSubClassType.Hourly_Expost_Market_Info
+      Public_Bid_Data:
+        meaning: cim:MktSubClassType.Public_Bid_Data
+      Ten_Min_Expost_Market_Info:
+        meaning: cim:MktSubClassType.Ten_Min_Expost_Market_Info
+      TTC/ATC_Forecast_Information:
+        meaning: cim:MktSubClassType.TTC/ATC_Forecast_Information
+      TTC/ATC_Hourly_Forecast:
+        meaning: cim:MktSubClassType.TTC/ATC_Hourly_Forecast
+  AlarmDisplayType:
+    enum_uri: cim:AlarmDisplayType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      Appear:
+        meaning: cim:AlarmDisplayType.Appear
+      Disappear:
+        meaning: cim:AlarmDisplayType.Disappear
+      Fleeting:
+        meaning: cim:AlarmDisplayType.Fleeting
+  OASISBidReportType:
+    enum_uri: cim:OASISBidReportType
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      BIDS_PUBLIC:
+        meaning: cim:OASISBidReportType.BIDS_PUBLIC
+  SelfSchedTypeCleanBid:
+    enum_uri: cim:SelfSchedTypeCleanBid
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      BAS:
+        meaning: cim:SelfSchedTypeCleanBid.BAS
+      ETC:
+        meaning: cim:SelfSchedTypeCleanBid.ETC
+      IFM:
+        meaning: cim:SelfSchedTypeCleanBid.IFM
+      LOF:
+        meaning: cim:SelfSchedTypeCleanBid.LOF
+      LPT:
+        meaning: cim:SelfSchedTypeCleanBid.LPT
+      PT:
+        meaning: cim:SelfSchedTypeCleanBid.PT
+      RA:
+        meaning: cim:SelfSchedTypeCleanBid.RA
+      RMT:
+        meaning: cim:SelfSchedTypeCleanBid.RMT
+      SP:
+        meaning: cim:SelfSchedTypeCleanBid.SP
+      TOR:
+        meaning: cim:SelfSchedTypeCleanBid.TOR
+      WHL:
+        meaning: cim:SelfSchedTypeCleanBid.WHL
+  MarketStatementDocType:
+    enum_uri: cim:MarketStatementDocType
+    description: "market statement document type\r\n"
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.InfIEC62325.InfDomain
+    permissible_values:
+      CREDIT:
+        meaning: cim:MarketStatementDocType.CREDIT
+      MARKET_INITIAL:
+        meaning: cim:MarketStatementDocType.MARKET_INITIAL
+      MARKET_RECALC:
+        meaning: cim:MarketStatementDocType.MARKET_RECALC
