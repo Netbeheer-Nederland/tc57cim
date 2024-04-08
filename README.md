@@ -11,7 +11,7 @@ The entire CIM information model has been outputted in two forms:
 * As a single LinkML schema (`Schemas/TC57CIM.yml`)
 * As a nested directory of LinkML schemas per package (`Schemas/TC57CIM/`)
 
-### Packages per Work Group
+### Schemas Per Standard
 Single file versions of schemas per Working Group have also been generated:
 
 * IEC61968 (`Schemas/TC57CIM.IEC61968.yml`)
