@@ -1,0 +1,151 @@
+= `DeploymentDate`
+:toclevels: 4
+
+
++++Dates for deployment events of an asset.  May have multiple deployment type dates for this device and a compound type allows a query to return multiple dates.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DeploymentDate`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`DeploymentDate`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<inServiceDate,`inServiceDate`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time asset most recently put in service.+++
+
+| <<installedDate,`installedDate`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time asset most recently installed.+++
+
+| <<notYetInstalledDate,`notYetInstalledDate`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time of asset deployment transition to not yet installed.+++
+
+| <<outOfServiceDate,`outOfServiceDate`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time asset most recently taken out of service.+++
+
+| <<removedDate,`removedDate`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time asset most recently removed.+++
+|===
+
+'''
+
+
+//[discrete]
+[#inServiceDate]
+=== `inServiceDate`
++++Date and time asset most recently put in service.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DeploymentDate.inServiceDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#installedDate]
+=== `installedDate`
++++Date and time asset most recently installed.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DeploymentDate.installedDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#notYetInstalledDate]
+=== `notYetInstalledDate`
++++Date and time of asset deployment transition to not yet installed.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DeploymentDate.notYetInstalledDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#outOfServiceDate]
+=== `outOfServiceDate`
++++Date and time asset most recently taken out of service.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DeploymentDate.outOfServiceDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#removedDate]
+=== `removedDate`
++++Date and time asset most recently removed.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DeploymentDate.removedDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+

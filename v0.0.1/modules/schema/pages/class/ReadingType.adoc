@@ -1,0 +1,1017 @@
+= `ReadingType`
+:toclevels: 4
+
+
++++Detailed description for a type of a reading value. Values in attributes allow for the creation of recommended codes to be used for identifying reading value types as follows: <macroPeriod>.<aggregate>.<measuringPeriod>.<accumulation>.<flowDirection>.<commodity>.<measurementKind>.<interharmonic.numerator>.<interharmonic.denominator>.<argument.numerator>.<argument.denominator>.<tou>.<cpp>.<consumptionTier>.<phases>.<multiplier>.<unit>.<currency>.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ReadingType`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`ReadingType`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ReadingType {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+RationalNumber {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ReadingInterharmonic {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Channel {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+MeterReadSchedule {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ConsumptionTariffInterval {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+PendingCalculation {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+IntervalBlock {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+MetrologyRequirement {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Reading {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+ReadingType -> RationalNumber: argument
+
+
+ReadingType -> ReadingInterharmonic: interharmonic
+
+
+ReadingType -> Channel: Channel
+
+
+ReadingType -> MeterReadSchedule: MeterReadSchedule
+
+
+ReadingType -> ConsumptionTariffInterval: ConsumptionTariffIntervals
+
+
+ReadingType -> PendingCalculation: PendingCalculation
+
+
+ReadingType -> IntervalBlock: IntervalBlocks
+
+
+ReadingType -> MetrologyRequirement: MetrologyRequirements
+
+
+ReadingType -> Reading: Readings
+
+
+ReadingType -> DiagramObject: DiagramObjects
+
+
+ReadingType -> InstanceSet: InstanceSet
+
+
+ReadingType -> Name: Names
+
+
+ReadingType -> ChangeSetMember: PropertiesCIMDataObject
+
+
+ReadingType -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<Channel,`Channel`>>
+| 0..1
+| xref::class/Channel.adoc[`Channel`]
+| +++Channel reporting/collecting register values with this type information.+++
+
+| <<MeterReadSchedule,`MeterReadSchedule`>>
+| 0..1
+| xref::class/MeterReadSchedule.adoc[`MeterReadSchedule`]
+| +++Meter read schedule for which the reading type applies+++
+
+| <<PendingCalculation,`PendingCalculation`>>
+| 0..1
+| xref::class/PendingCalculation.adoc[`PendingCalculation`]
+| +++Pending calculation that produced this reading type.+++
+
+| <<accumulation,`accumulation`>>
+| 0..1
+| xref::enumeration/AccumulationKind.adoc[`AccumulationKind`]
+| +++Accumulation behaviour of a reading over time, usually 'measuringPeriod', to be used with individual endpoints (as opposed to 'macroPeriod' and 'aggregate' that are used to describe aggregations of data from individual endpoints).+++
+
+| <<aggregate,`aggregate`>>
+| 0..1
+| xref::enumeration/AggregateKind.adoc[`AggregateKind`]
+| +++Salient attribute of the reading data aggregated from individual endpoints. This is mainly used to define a mathematical operation carried out over 'macroPeriod', but may also be used to describe an attribute of the data when the 'macroPeriod' is not defined.+++
+
+| <<argument,`argument`>>
+| 0..1
+| xref::class/RationalNumber.adoc[`RationalNumber`]
+| +++Argument used to introduce numbers into the unit of measure description where they are needed (e.g., 4 where the measure needs an argument such as CEMI(n=4)). Most arguments used in practice however will be integers (i.e., 'denominator'=1).
+Value 0 in 'numerator' and 'denominator' means not applicable.+++
+
+| <<commodity,`commodity`>>
+| 0..1
+| xref::enumeration/CommodityKind.adoc[`CommodityKind`]
+| +++Commodity being measured.+++
+
+| <<consumptionTier,`consumptionTier`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++In case of common flat-rate pricing for power, in which all purchases are at a given rate, 'consumptionTier'=0. Otherwise, the value indicates the consumption tier, which can be used in conjunction with TOU or CPP pricing.
+Consumption tier pricing refers to the method of billing in which a certain "block" of energy is purchased/sold at one price, after which the next block of energy is purchased at another price, and so on, all throughout a defined period. At the start of the defined period, consumption is initially zero, and any usage is measured against the first consumption tier ('consumptionTier'=1). If this block of energy is consumed before the end of the period, energy consumption moves to be reconed against the second consumption tier ('consumptionTier'=2), and so on. At the end of the defined period, the consumption accumulator is reset, and usage within the 'consumptionTier'=1 restarts.+++
+
+| <<cpp,`cpp`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Critical peak period (CPP) bucket the reading value is attributed to. Value 0 means not applicable. Even though CPP is usually considered a specialised form of time of use 'tou', this attribute is defined explicitly for flexibility.+++
+
+| <<currency,`currency`>>
+| 0..1
+| xref::enumeration/Currency.adoc[`Currency`]
+| +++Metering-specific currency.+++
+
+| <<flowDirection,`flowDirection`>>
+| 0..1
+| xref::enumeration/FlowDirectionKind.adoc[`FlowDirectionKind`]
+| +++Flow direction for a reading where the direction of flow of the commodity is important (for electricity measurements this includes current, energy, power, and demand).+++
+
+| <<interharmonic,`interharmonic`>>
+| 0..1
+| xref::class/ReadingInterharmonic.adoc[`ReadingInterharmonic`]
+| +++Indication of a "harmonic" or "interharmonic" basis for the measurement. Value 0 in 'numerator' and 'denominator' means not applicable.+++
+
+| <<macroPeriod,`macroPeriod`>>
+| 0..1
+| xref::enumeration/MacroPeriodKind.adoc[`MacroPeriodKind`]
+| +++Time period of interest that reflects how the reading is viewed or captured over a long period of time.+++
+
+| <<measurementKind,`measurementKind`>>
+| 0..1
+| xref::enumeration/MeasurementKind.adoc[`MeasurementKind`]
+| +++Identifies "what" is being measured, as refinement of 'commodity'. When combined with 'unit', it provides detail to the unit of measure. For example, 'energy' with a unit of measure of 'kWh' indicates to the user that active energy is being measured, while with 'kVAh' or 'kVArh', it indicates apparent energy and reactive energy, respectively. 'power' can be combined in a similar way with various power units of measure: Distortion power ('distortionVoltAmperes') with 'kVA' is different from 'power' with 'kVA'.+++
+
+| <<measuringPeriod,`measuringPeriod`>>
+| 0..1
+| xref::enumeration/MeasuringPeriodKind.adoc[`MeasuringPeriodKind`]
+| +++Time attribute inherent or fundamental to the reading value (as opposed to 'macroPeriod' that supplies an "adjective" to describe aspects of a time period with regard to the measurement). It refers to the way the value was originally measured and not to the frequency at which it is reported or presented. For example, an hourly interval of consumption data would have value 'hourly' as an attribute. However in the case of an hourly sampled voltage value, the meterReadings schema would carry the 'hourly' interval size information.
+It is common for meters to report demand in a form that is measured over the course of a portion of an hour, while enterprise applications however commonly assume the demand (in kW or kVAr) normalised to 1 hour. The system that receives readings directly from the meter therefore shall perform this transformation before publishing readings for use by the other enterprise systems. The scalar used is chosen based on the block size (not any sub-interval size).+++
+
+| <<multiplier,`multiplier`>>
+| 0..1
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++Metering-specific multiplier.+++
+
+| <<phases,`phases`>>
+| 0..1
+| xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+| +++Metering-specific phase code.+++
+
+| <<tou,`tou`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Time of use (TOU) bucket the reading value is attributed to. Value 0 means not applicable.+++
+
+| <<unit,`unit`>>
+| 0..1
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+| +++Metering-specific unit.+++
+
+| <<ConsumptionTariffIntervals,`ConsumptionTariffIntervals`>>
+| 0..*
+| xref::class/ConsumptionTariffInterval.adoc[`ConsumptionTariffInterval`]
+| +++All tariff intervals with consumption described by this reading type.+++
+
+| <<IntervalBlocks,`IntervalBlocks`>>
+| 0..*
+| xref::class/IntervalBlock.adoc[`IntervalBlock`]
+| +++All blocks containing interval reading values with this type information.+++
+
+| <<MetrologyRequirements,`MetrologyRequirements`>>
+| 0..*
+| xref::class/MetrologyRequirement.adoc[`MetrologyRequirement`]
+| +++All metrology requirements that require this reading type to be collected.+++
+
+| <<Readings,`Readings`>>
+| 0..*
+| xref::class/Reading.adoc[`Reading`]
+| +++All reading values with this type information.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#accumulation]
+=== `accumulation`
++++Accumulation behaviour of a reading over time, usually 'measuringPeriod', to be used with individual endpoints (as opposed to 'macroPeriod' and 'aggregate' that are used to describe aggregations of data from individual endpoints).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.accumulation`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/AccumulationKind.adoc[`AccumulationKind`]
+
+
+|===
+
+//[discrete]
+[#aggregate]
+=== `aggregate`
++++Salient attribute of the reading data aggregated from individual endpoints. This is mainly used to define a mathematical operation carried out over 'macroPeriod', but may also be used to describe an attribute of the data when the 'macroPeriod' is not defined.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.aggregate`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/AggregateKind.adoc[`AggregateKind`]
+
+
+|===
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#argument]
+=== `argument`
++++Argument used to introduce numbers into the unit of measure description where they are needed (e.g., 4 where the measure needs an argument such as CEMI(n=4)). Most arguments used in practice however will be integers (i.e., 'denominator'=1).
+Value 0 in 'numerator' and 'denominator' means not applicable.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.argument`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RationalNumber.adoc[`RationalNumber`]
+
+
+|===
+
+//[discrete]
+[#Channel]
+=== `Channel`
++++Channel reporting/collecting register values with this type information.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.Channel`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Channel.adoc[`Channel`]
+
+
+|===
+
+//[discrete]
+[#commodity]
+=== `commodity`
++++Commodity being measured.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.commodity`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/CommodityKind.adoc[`CommodityKind`]
+
+
+|===
+
+//[discrete]
+[#ConsumptionTariffIntervals]
+=== `ConsumptionTariffIntervals`
++++All tariff intervals with consumption described by this reading type.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.ConsumptionTariffIntervals`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConsumptionTariffInterval.adoc[`ConsumptionTariffInterval`]
+
+
+|===
+
+//[discrete]
+[#consumptionTier]
+=== `consumptionTier`
++++In case of common flat-rate pricing for power, in which all purchases are at a given rate, 'consumptionTier'=0. Otherwise, the value indicates the consumption tier, which can be used in conjunction with TOU or CPP pricing.
+Consumption tier pricing refers to the method of billing in which a certain "block" of energy is purchased/sold at one price, after which the next block of energy is purchased at another price, and so on, all throughout a defined period. At the start of the defined period, consumption is initially zero, and any usage is measured against the first consumption tier ('consumptionTier'=1). If this block of energy is consumed before the end of the period, energy consumption moves to be reconed against the second consumption tier ('consumptionTier'=2), and so on. At the end of the defined period, the consumption accumulator is reset, and usage within the 'consumptionTier'=1 restarts.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.consumptionTier`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#cpp]
+=== `cpp`
++++Critical peak period (CPP) bucket the reading value is attributed to. Value 0 means not applicable. Even though CPP is usually considered a specialised form of time of use 'tou', this attribute is defined explicitly for flexibility.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.cpp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#currency]
+=== `currency`
++++Metering-specific currency.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.currency`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/Currency.adoc[`Currency`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#flowDirection]
+=== `flowDirection`
++++Flow direction for a reading where the direction of flow of the commodity is important (for electricity measurements this includes current, energy, power, and demand).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.flowDirection`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/FlowDirectionKind.adoc[`FlowDirectionKind`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#interharmonic]
+=== `interharmonic`
++++Indication of a "harmonic" or "interharmonic" basis for the measurement. Value 0 in 'numerator' and 'denominator' means not applicable.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.interharmonic`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReadingInterharmonic.adoc[`ReadingInterharmonic`]
+
+
+|===
+
+//[discrete]
+[#IntervalBlocks]
+=== `IntervalBlocks`
++++All blocks containing interval reading values with this type information.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.IntervalBlocks`
+| Cardinality
+| 0..*
+| Type
+| xref::class/IntervalBlock.adoc[`IntervalBlock`]
+
+
+|===
+
+//[discrete]
+[#macroPeriod]
+=== `macroPeriod`
++++Time period of interest that reflects how the reading is viewed or captured over a long period of time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.macroPeriod`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MacroPeriodKind.adoc[`MacroPeriodKind`]
+
+
+|===
+
+//[discrete]
+[#measurementKind]
+=== `measurementKind`
++++Identifies "what" is being measured, as refinement of 'commodity'. When combined with 'unit', it provides detail to the unit of measure. For example, 'energy' with a unit of measure of 'kWh' indicates to the user that active energy is being measured, while with 'kVAh' or 'kVArh', it indicates apparent energy and reactive energy, respectively. 'power' can be combined in a similar way with various power units of measure: Distortion power ('distortionVoltAmperes') with 'kVA' is different from 'power' with 'kVA'.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.measurementKind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MeasurementKind.adoc[`MeasurementKind`]
+
+
+|===
+
+//[discrete]
+[#measuringPeriod]
+=== `measuringPeriod`
++++Time attribute inherent or fundamental to the reading value (as opposed to 'macroPeriod' that supplies an "adjective" to describe aspects of a time period with regard to the measurement). It refers to the way the value was originally measured and not to the frequency at which it is reported or presented. For example, an hourly interval of consumption data would have value 'hourly' as an attribute. However in the case of an hourly sampled voltage value, the meterReadings schema would carry the 'hourly' interval size information.
+It is common for meters to report demand in a form that is measured over the course of a portion of an hour, while enterprise applications however commonly assume the demand (in kW or kVAr) normalised to 1 hour. The system that receives readings directly from the meter therefore shall perform this transformation before publishing readings for use by the other enterprise systems. The scalar used is chosen based on the block size (not any sub-interval size).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.measuringPeriod`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MeasuringPeriodKind.adoc[`MeasuringPeriodKind`]
+
+
+|===
+
+//[discrete]
+[#MeterReadSchedule]
+=== `MeterReadSchedule`
++++Meter read schedule for which the reading type applies+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.MeterReadSchedule`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MeterReadSchedule.adoc[`MeterReadSchedule`]
+
+
+|===
+
+//[discrete]
+[#MetrologyRequirements]
+=== `MetrologyRequirements`
++++All metrology requirements that require this reading type to be collected.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.MetrologyRequirements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MetrologyRequirement.adoc[`MetrologyRequirement`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
++++Metering-specific multiplier.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#PendingCalculation]
+=== `PendingCalculation`
++++Pending calculation that produced this reading type.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.PendingCalculation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PendingCalculation.adoc[`PendingCalculation`]
+
+
+|===
+
+//[discrete]
+[#phases]
+=== `phases`
++++Metering-specific phase code.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.phases`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Readings]
+=== `Readings`
++++All reading values with this type information.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.Readings`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Reading.adoc[`Reading`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#tou]
+=== `tou`
++++Time of use (TOU) bucket the reading value is attributed to. Value 0 means not applicable.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.tou`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
++++Metering-specific unit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingType.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+
+
+|===
+
+

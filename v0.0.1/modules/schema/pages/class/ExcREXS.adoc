@@ -1,0 +1,1621 @@
+= `ExcREXS`
+:toclevels: 4
+
+
++++General purpose rotating excitation system.  This model can be used to represent a wide range of excitation systems whose DC power source is an AC or DC generator. It encompasses IEEE type AC1, AC2, DC1, and DC2 excitation system models.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ExcREXS`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+**** *`ExcREXS`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ExcREXS {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SynchronousMachineDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PowerSystemStabilizerDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PFVArControllerType1Dynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+OverexcitationLimiterDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiscontinuousExcitationControlDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PFVArControllerType2Dynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+UnderexcitationLimiterDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+VoltageCompensatorDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ExcREXS -> SynchronousMachineDynamics: SynchronousMachineDynamics
+
+
+ExcREXS -> PowerSystemStabilizerDynamics: PowerSystemStabilizerDynamics
+
+
+ExcREXS -> PFVArControllerType1Dynamics: PFVArControllerType1Dynamics
+
+
+ExcREXS -> OverexcitationLimiterDynamics: OverexcitationLimiterDynamics
+
+
+ExcREXS -> DiscontinuousExcitationControlDynamics: DiscontinuousExcitationControlDynamics
+
+
+ExcREXS -> PFVArControllerType2Dynamics: PFVArControllerType2Dynamics
+
+
+ExcREXS -> UnderexcitationLimiterDynamics: UnderexcitationLimiterDynamics
+
+
+ExcREXS -> VoltageCompensatorDynamics: VoltageCompensatorDynamics
+
+
+ExcREXS -> DiagramObject: DiagramObjects
+
+
+ExcREXS -> InstanceSet: InstanceSet
+
+
+ExcREXS -> Name: Names
+
+
+ExcREXS -> ChangeSetMember: PropertiesCIMDataObject
+
+
+ExcREXS -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<SynchronousMachineDynamics,`SynchronousMachineDynamics`>>
+| 1
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+| +++Synchronous machine model with which this excitation system model is associated.+++
+
+| <<VoltageCompensatorDynamics,`VoltageCompensatorDynamics`>>
+| 1
+| xref::class/VoltageCompensatorDynamics.adoc[`VoltageCompensatorDynamics`]
+| +++Voltage compensator model associated with this excitation system model.+++
+
+| <<e1,`e1`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Field voltage value 1 (<i>E</i><i><sub>1</sub></i>).  Typical value = 3.+++
+
+| <<e2,`e2`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Field voltage value 2 (<i>E</i><i><sub>2</sub></i>).  Typical value = 4.+++
+
+| <<fbf,`fbf`>>
+| 0..1
+| xref::enumeration/ExcREXSFeedbackSignalKind.adoc[`ExcREXSFeedbackSignalKind`]
+| +++Rate feedback signal flag (<i>fbf</i>). Typical value = fieldCurrent.+++
+
+| <<flimf,`flimf`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Limit type flag (<i>Flimf</i>).  Typical value = 0.+++
+
+| <<kc,`kc`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Rectifier regulation factor (<i>Kc</i>).  Typical value = 0,05.+++
+
+| <<kd,`kd`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Exciter regulation factor (<i>Kd</i>).  Typical value = 2.+++
+
+| <<ke,`ke`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Exciter field proportional constant (<i>Ke</i>).  Typical value = 1.+++
+
+| <<kefd,`kefd`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Field voltage feedback gain (<i>Kefd</i>).  Typical value = 0.+++
+
+| <<kf,`kf`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Rate feedback gain (<i>Kf</i>) (&gt;= 0).  Typical value = 0,05.+++
+
+| <<kh,`kh`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Field voltage controller feedback gain (<i>Kh</i>).  Typical value = 0.+++
+
+| <<kii,`kii`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Field current regulator integral gain (<i>Kii</i>).  Typical value = 0.+++
+
+| <<kip,`kip`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Field current regulator proportional gain (<i>Kip</i>).  Typical value = 1.+++
+
+| <<ks,`ks`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Coefficient to allow different usage of the model-speed coefficient (<i>Ks</i>).  Typical value = 0.+++
+
+| <<kvi,`kvi`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Voltage regulator integral gain (<i>Kvi</i>).  Typical value = 0.+++
+
+| <<kvp,`kvp`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Voltage regulator proportional gain (<i>Kvp</i>).  Typical value = 2800.+++
+
+| <<kvphz,`kvphz`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++V/Hz limiter gain (<i>Kvphz</i>).  Typical value = 0.+++
+
+| <<nvphz,`nvphz`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Pickup speed of V/Hz limiter (<i>Nvphz</i>).  Typical value = 0.+++
+
+| <<se1,`se1`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Saturation factor at <i>E</i><i><sub>1</sub></i><i> </i>(<i>Se</i><i><sub>1</sub></i>).  Typical value = 0,0001.+++
+
+| <<se2,`se2`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Saturation factor at <i>E</i><i><sub>2</sub></i> (<i>Se</i><i><sub>2</sub></i>).  Typical value = 0,001.+++
+
+| <<ta,`ta`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Voltage regulator time constant (<i>Ta</i>) (&gt;= 0).  If = 0, block is bypassed.  Typical value = 0,01.+++
+
+| <<tb1,`tb1`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lag time constant (<i>Tb1</i>) (&gt;= 0).  If = 0, block is bypassed.  Typical value = 0.+++
+
+| <<tb2,`tb2`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lag time constant (<i>Tb2</i>) (&gt;= 0).  If = 0, block is bypassed.  Typical value = 0.+++
+
+| <<tc1,`tc1`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lead time constant (<i>Tc1</i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<tc2,`tc2`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lead time constant (<i>Tc2</i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<te,`te`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Exciter field time constant (<i>Te</i>) (&gt; 0).  Typical value = 1,2.+++
+
+| <<tf,`tf`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Rate feedback time constant (<i>Tf</i>) (&gt;= 0).  If = 0, the feedback path is not used.  Typical value = 1.+++
+
+| <<tf1,`tf1`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Feedback lead time constant (<i>Tf1</i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<tf2,`tf2`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Feedback lag time constant (<i>Tf2</i>) (&gt;= 0).  If = 0, block is bypassed.  Typical value = 0.+++
+
+| <<tp,`tp`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Field current bridge time constant (<i>Tp</i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<vcmax,`vcmax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum compounding voltage (<i>Vcmax</i>).  Typical value = 0.+++
+
+| <<vfmax,`vfmax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum exciter field current (<i>Vfmax</i>) (&gt; ExcREXS.vfmin).  Typical value = 47.+++
+
+| <<vfmin,`vfmin`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Minimum exciter field current (<i>Vfmin</i>) (&lt; ExcREXS.vfmax).  Typical value = -20.+++
+
+| <<vimax,`vimax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Voltage regulator input limit (<i>Vimax</i>).  Typical value = 0,1.+++
+
+| <<vrmax,`vrmax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum controller output (V<i>rmax</i>) (&gt; ExcREXS.vrmin).  Typical value = 47.+++
+
+| <<vrmin,`vrmin`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Minimum controller output (<i>Vrmin</i>) (&lt; ExcREXS.vrmax).  Typical value = -20.+++
+
+| <<xc,`xc`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Exciter compounding reactance (<i>Xc</i>).  Typical value = 0.+++
+
+| <<DiscontinuousExcitationControlDynamics,`DiscontinuousExcitationControlDynamics`>>
+| 0..1
+| xref::class/DiscontinuousExcitationControlDynamics.adoc[`DiscontinuousExcitationControlDynamics`]
+| +++Discontinuous excitation control model associated with this excitation system model.+++
+
+| <<OverexcitationLimiterDynamics,`OverexcitationLimiterDynamics`>>
+| 0..1
+| xref::class/OverexcitationLimiterDynamics.adoc[`OverexcitationLimiterDynamics`]
+| +++Overexcitation limiter model associated with this excitation system model.+++
+
+| <<PFVArControllerType1Dynamics,`PFVArControllerType1Dynamics`>>
+| 0..1
+| xref::class/PFVArControllerType1Dynamics.adoc[`PFVArControllerType1Dynamics`]
+| +++Power factor or VAr controller type 1 model associated with this excitation system model.+++
+
+| <<PFVArControllerType2Dynamics,`PFVArControllerType2Dynamics`>>
+| 0..1
+| xref::class/PFVArControllerType2Dynamics.adoc[`PFVArControllerType2Dynamics`]
+| +++Power factor or VAr controller type 2 model associated with this excitation system model.+++
+
+| <<PowerSystemStabilizerDynamics,`PowerSystemStabilizerDynamics`>>
+| 0..1
+| xref::class/PowerSystemStabilizerDynamics.adoc[`PowerSystemStabilizerDynamics`]
+| +++Power system stabilizer model associated with this excitation system model.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<UnderexcitationLimiterDynamics,`UnderexcitationLimiterDynamics`>>
+| 0..1
+| xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+| +++Undrexcitation limiter model associated with this excitation system model.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<enabled,`enabled`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiscontinuousExcitationControlDynamics]
+=== `DiscontinuousExcitationControlDynamics`
++++Discontinuous excitation control model associated with this excitation system model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.DiscontinuousExcitationControlDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DiscontinuousExcitationControlDynamics.adoc[`DiscontinuousExcitationControlDynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+//[discrete]
+[#e1]
+=== `e1`
++++Field voltage value 1 (<i>E</i><i><sub>1</sub></i>).  Typical value = 3.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.e1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#e2]
+=== `e2`
++++Field voltage value 2 (<i>E</i><i><sub>2</sub></i>).  Typical value = 4.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.e2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+//[discrete]
+[#fbf]
+=== `fbf`
++++Rate feedback signal flag (<i>fbf</i>). Typical value = fieldCurrent.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.fbf`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ExcREXSFeedbackSignalKind.adoc[`ExcREXSFeedbackSignalKind`]
+
+
+|===
+
+//[discrete]
+[#flimf]
+=== `flimf`
++++Limit type flag (<i>Flimf</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.flimf`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#kc]
+=== `kc`
++++Rectifier regulation factor (<i>Kc</i>).  Typical value = 0,05.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.kc`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kd]
+=== `kd`
++++Exciter regulation factor (<i>Kd</i>).  Typical value = 2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.kd`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#ke]
+=== `ke`
++++Exciter field proportional constant (<i>Ke</i>).  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.ke`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kefd]
+=== `kefd`
++++Field voltage feedback gain (<i>Kefd</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.kefd`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kf]
+=== `kf`
++++Rate feedback gain (<i>Kf</i>) (&gt;= 0).  Typical value = 0,05.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.kf`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#kh]
+=== `kh`
++++Field voltage controller feedback gain (<i>Kh</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.kh`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kii]
+=== `kii`
++++Field current regulator integral gain (<i>Kii</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.kii`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kip]
+=== `kip`
++++Field current regulator proportional gain (<i>Kip</i>).  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.kip`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#ks]
+=== `ks`
++++Coefficient to allow different usage of the model-speed coefficient (<i>Ks</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.ks`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kvi]
+=== `kvi`
++++Voltage regulator integral gain (<i>Kvi</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.kvi`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kvp]
+=== `kvp`
++++Voltage regulator proportional gain (<i>Kvp</i>).  Typical value = 2800.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.kvp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kvphz]
+=== `kvphz`
++++V/Hz limiter gain (<i>Kvphz</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.kvphz`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#nvphz]
+=== `nvphz`
++++Pickup speed of V/Hz limiter (<i>Nvphz</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.nvphz`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#OverexcitationLimiterDynamics]
+=== `OverexcitationLimiterDynamics`
++++Overexcitation limiter model associated with this excitation system model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.OverexcitationLimiterDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/OverexcitationLimiterDynamics.adoc[`OverexcitationLimiterDynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+//[discrete]
+[#PFVArControllerType1Dynamics]
+=== `PFVArControllerType1Dynamics`
++++Power factor or VAr controller type 1 model associated with this excitation system model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.PFVArControllerType1Dynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PFVArControllerType1Dynamics.adoc[`PFVArControllerType1Dynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+//[discrete]
+[#PFVArControllerType2Dynamics]
+=== `PFVArControllerType2Dynamics`
++++Power factor or VAr controller type 2 model associated with this excitation system model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.PFVArControllerType2Dynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PFVArControllerType2Dynamics.adoc[`PFVArControllerType2Dynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+//[discrete]
+[#PowerSystemStabilizerDynamics]
+=== `PowerSystemStabilizerDynamics`
++++Power system stabilizer model associated with this excitation system model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.PowerSystemStabilizerDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PowerSystemStabilizerDynamics.adoc[`PowerSystemStabilizerDynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#se1]
+=== `se1`
++++Saturation factor at <i>E</i><i><sub>1</sub></i><i> </i>(<i>Se</i><i><sub>1</sub></i>).  Typical value = 0,0001.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.se1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#se2]
+=== `se2`
++++Saturation factor at <i>E</i><i><sub>2</sub></i> (<i>Se</i><i><sub>2</sub></i>).  Typical value = 0,001.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.se2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#SynchronousMachineDynamics]
+=== `SynchronousMachineDynamics`
++++Synchronous machine model with which this excitation system model is associated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.SynchronousMachineDynamics`
+| Cardinality
+| 1
+| Type
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+//[discrete]
+[#ta]
+=== `ta`
++++Voltage regulator time constant (<i>Ta</i>) (&gt;= 0).  If = 0, block is bypassed.  Typical value = 0,01.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.ta`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#tb1]
+=== `tb1`
++++Lag time constant (<i>Tb1</i>) (&gt;= 0).  If = 0, block is bypassed.  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.tb1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tb2]
+=== `tb2`
++++Lag time constant (<i>Tb2</i>) (&gt;= 0).  If = 0, block is bypassed.  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.tb2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tc1]
+=== `tc1`
++++Lead time constant (<i>Tc1</i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.tc1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tc2]
+=== `tc2`
++++Lead time constant (<i>Tc2</i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.tc2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#te]
+=== `te`
++++Exciter field time constant (<i>Te</i>) (&gt; 0).  Typical value = 1,2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.te`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tf]
+=== `tf`
++++Rate feedback time constant (<i>Tf</i>) (&gt;= 0).  If = 0, the feedback path is not used.  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.tf`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tf1]
+=== `tf1`
++++Feedback lead time constant (<i>Tf1</i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.tf1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tf2]
+=== `tf2`
++++Feedback lag time constant (<i>Tf2</i>) (&gt;= 0).  If = 0, block is bypassed.  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.tf2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tp]
+=== `tp`
++++Field current bridge time constant (<i>Tp</i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.tp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#UnderexcitationLimiterDynamics]
+=== `UnderexcitationLimiterDynamics`
++++Undrexcitation limiter model associated with this excitation system model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.UnderexcitationLimiterDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+//[discrete]
+[#vcmax]
+=== `vcmax`
++++Maximum compounding voltage (<i>Vcmax</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.vcmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vfmax]
+=== `vfmax`
++++Maximum exciter field current (<i>Vfmax</i>) (&gt; ExcREXS.vfmin).  Typical value = 47.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.vfmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vfmin]
+=== `vfmin`
++++Minimum exciter field current (<i>Vfmin</i>) (&lt; ExcREXS.vfmax).  Typical value = -20.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.vfmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vimax]
+=== `vimax`
++++Voltage regulator input limit (<i>Vimax</i>).  Typical value = 0,1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.vimax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#VoltageCompensatorDynamics]
+=== `VoltageCompensatorDynamics`
++++Voltage compensator model associated with this excitation system model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.VoltageCompensatorDynamics`
+| Cardinality
+| 1
+| Type
+| xref::class/VoltageCompensatorDynamics.adoc[`VoltageCompensatorDynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+//[discrete]
+[#vrmax]
+=== `vrmax`
++++Maximum controller output (V<i>rmax</i>) (&gt; ExcREXS.vrmin).  Typical value = 47.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.vrmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vrmin]
+=== `vrmin`
++++Minimum controller output (<i>Vrmin</i>) (&lt; ExcREXS.vrmax).  Typical value = -20.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.vrmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#xc]
+=== `xc`
++++Exciter compounding reactance (<i>Xc</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcREXS.xc`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+

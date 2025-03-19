@@ -1,0 +1,73 @@
+= `InputSignalKind`
+:toclevels: 4
+
+
++++Types of input signals.  In dynamics modelling, commonly represented by the <i>j</i> parameter.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:InputSignalKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `branchCurrent`
+| `cim:InputSignalKind.branchCurrent`
+| n/a
+
+| `busFrequency`
+| `cim:InputSignalKind.busFrequency`
+| n/a
+
+| `busFrequencyDeviation`
+| `cim:InputSignalKind.busFrequencyDeviation`
+| n/a
+
+| `busVoltage`
+| `cim:InputSignalKind.busVoltage`
+| n/a
+
+| `busVoltageDerivative`
+| `cim:InputSignalKind.busVoltageDerivative`
+| n/a
+
+| `fieldCurrent`
+| `cim:InputSignalKind.fieldCurrent`
+| n/a
+
+| `generatorAcceleratingPower`
+| `cim:InputSignalKind.generatorAcceleratingPower`
+| n/a
+
+| `generatorElectricalPower`
+| `cim:InputSignalKind.generatorElectricalPower`
+| n/a
+
+| `generatorMechanicalPower`
+| `cim:InputSignalKind.generatorMechanicalPower`
+| n/a
+
+| `rotorAngularFrequencyDeviation`
+| `cim:InputSignalKind.rotorAngularFrequencyDeviation`
+| n/a
+
+| `rotorSpeed`
+| `cim:InputSignalKind.rotorSpeed`
+| n/a
+|===

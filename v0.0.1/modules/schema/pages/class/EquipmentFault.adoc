@@ -1,0 +1,692 @@
+= `EquipmentFault`
+:toclevels: 4
+
+
++++A fault applied at the terminal, external to the equipment. This class is not used to specify faults internal to the equipment.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EquipmentFault`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Fault.adoc[`Fault`]
+*** *`EquipmentFault`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+EquipmentFault {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Terminal {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+FaultImpedance {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Equipment {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+FaultCauseType {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Location {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Outage {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+EquipmentFault -> Terminal: Terminal
+
+
+EquipmentFault -> FaultImpedance: impedance
+
+
+EquipmentFault -> Equipment: FaultyEquipment
+
+
+EquipmentFault -> FaultCauseType: FaultCauseTypes
+
+
+EquipmentFault -> Location: Location
+
+
+EquipmentFault -> Outage: Outage
+
+
+EquipmentFault -> DiagramObject: DiagramObjects
+
+
+EquipmentFault -> InstanceSet: InstanceSet
+
+
+EquipmentFault -> Name: Names
+
+
+EquipmentFault -> ChangeSetMember: PropertiesCIMDataObject
+
+
+EquipmentFault -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<Terminal,`Terminal`>>
+| 0..1
+| xref::class/Terminal.adoc[`Terminal`]
+| +++The terminal connecting to the bus to which the fault is applied.+++
+
+| <<FaultyEquipment,`FaultyEquipment`>>
+| 0..1
+| xref::class/Equipment.adoc[`Equipment`]
+| +++Equipment carrying this fault.+++
+
+| <<Location,`Location`>>
+| 0..1
+| xref::class/Location.adoc[`Location`]
+| +++Location of this fault.+++
+
+| <<Outage,`Outage`>>
+| 0..1
+| xref::class/Outage.adoc[`Outage`]
+| +++Outage associated with this fault.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<impedance,`impedance`>>
+| 0..1
+| xref::class/FaultImpedance.adoc[`FaultImpedance`]
+| +++Fault impedance. Its usage is described by 'kind'.+++
+
+| <<kind,`kind`>>
+| 0..1
+| xref::enumeration/PhaseConnectedFaultKind.adoc[`PhaseConnectedFaultKind`]
+| +++The kind of phase fault.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<occurredDateTime,`occurredDateTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++The date and time at which the fault occurred.+++
+
+| <<phases,`phases`>>
+| 0..1
+| xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+| +++The phases participating in the fault. The fault connections into these phases are further specified by the type of fault.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<FaultCauseTypes,`FaultCauseTypes`>>
+| 0..*
+| xref::class/FaultCauseType.adoc[`FaultCauseType`]
+| +++All types of fault cause.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#FaultCauseTypes]
+=== `FaultCauseTypes`
++++All types of fault cause.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Fault.FaultCauseTypes`
+| Cardinality
+| 0..*
+| Type
+| xref::class/FaultCauseType.adoc[`FaultCauseType`]
+
+| Inherited from
+| xref::class/Fault.adoc[`Fault`]
+
+
+|===
+
+//[discrete]
+[#FaultyEquipment]
+=== `FaultyEquipment`
++++Equipment carrying this fault.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Fault.FaultyEquipment`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Equipment.adoc[`Equipment`]
+
+| Inherited from
+| xref::class/Fault.adoc[`Fault`]
+
+
+|===
+
+//[discrete]
+[#impedance]
+=== `impedance`
++++Fault impedance. Its usage is described by 'kind'.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Fault.impedance`
+| Cardinality
+| 0..1
+| Type
+| xref::class/FaultImpedance.adoc[`FaultImpedance`]
+
+| Inherited from
+| xref::class/Fault.adoc[`Fault`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#kind]
+=== `kind`
++++The kind of phase fault.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Fault.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/PhaseConnectedFaultKind.adoc[`PhaseConnectedFaultKind`]
+
+| Inherited from
+| xref::class/Fault.adoc[`Fault`]
+
+
+|===
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location of this fault.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Fault.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/Fault.adoc[`Fault`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#occurredDateTime]
+=== `occurredDateTime`
++++The date and time at which the fault occurred.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Fault.occurredDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Fault.adoc[`Fault`]
+
+
+|===
+
+//[discrete]
+[#Outage]
+=== `Outage`
++++Outage associated with this fault.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Fault.Outage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Outage.adoc[`Outage`]
+
+| Inherited from
+| xref::class/Fault.adoc[`Fault`]
+
+
+|===
+
+//[discrete]
+[#phases]
+=== `phases`
++++The phases participating in the fault. The fault connections into these phases are further specified by the type of fault.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Fault.phases`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+
+| Inherited from
+| xref::class/Fault.adoc[`Fault`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Terminal]
+=== `Terminal`
++++The terminal connecting to the bus to which the fault is applied.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquipmentFault.Terminal`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Terminal.adoc[`Terminal`]
+
+
+|===
+
+

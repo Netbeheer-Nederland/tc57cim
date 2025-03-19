@@ -1,0 +1,256 @@
+= `MPMTestResults`
+:toclevels: 4
+
+
++++Provides the outcome and margin percent (as appropriate) result data for the MPM tests.  There are relationships to Zone for Designated Congestion Area Tests, CurveSchedData for bid segment tests, to the SubControlArea for the system wide level tests, and Pnodes for the LMPM impact tests.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MPMTestResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MPMTestResults`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+MPMTestResults {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+MPMClearing {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MPMTestCategory {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+AggregatedPnode {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+MPMTestResults -> MPMClearing: MPMClearing
+
+
+MPMTestResults -> MPMTestCategory: MPMTestCategory
+
+
+MPMTestResults -> AggregatedPnode: AggregatedPnode
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<AggregatedPnode,`AggregatedPnode`>>
+| 1
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+| n/a
+
+| <<MPMTestCategory,`MPMTestCategory`>>
+| 1
+| xref::class/MPMTestCategory.adoc[`MPMTestCategory`]
+| n/a
+
+| <<MPMClearing,`MPMClearing`>>
+| 0..1
+| xref::class/MPMClearing.adoc[`MPMClearing`]
+| n/a
+
+| <<marginPercent,`marginPercent`>>
+| 0..1
+| xref::class/PerCent.adoc[`PerCent`]
+| +++Used to show the Margin % result of the Impact test+++
+
+| <<outcome,`outcome`>>
+| 0..1
+| xref::enumeration/MPMTestOutcome.adoc[`MPMTestOutcome`]
+| +++The results of the test. For the Price, Impact, and Conduct tests, typical values are NA, Pass, Fail, Disable, or Skip.+++
+|===
+
+'''
+
+
+//[discrete]
+[#AggregatedPnode]
+=== `AggregatedPnode`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMTestResults.AggregatedPnode`
+| Cardinality
+| 1
+| Type
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+
+
+|===
+
+//[discrete]
+[#marginPercent]
+=== `marginPercent`
++++Used to show the Margin % result of the Impact test+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMTestResults.marginPercent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+//[discrete]
+[#MPMClearing]
+=== `MPMClearing`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMTestResults.MPMClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MPMClearing.adoc[`MPMClearing`]
+
+
+|===
+
+//[discrete]
+[#MPMTestCategory]
+=== `MPMTestCategory`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMTestResults.MPMTestCategory`
+| Cardinality
+| 1
+| Type
+| xref::class/MPMTestCategory.adoc[`MPMTestCategory`]
+
+
+|===
+
+//[discrete]
+[#outcome]
+=== `outcome`
++++The results of the test. For the Price, Impact, and Conduct tests, typical values are NA, Pass, Fail, Disable, or Skip.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMTestResults.outcome`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MPMTestOutcome.adoc[`MPMTestOutcome`]
+
+
+|===
+
+

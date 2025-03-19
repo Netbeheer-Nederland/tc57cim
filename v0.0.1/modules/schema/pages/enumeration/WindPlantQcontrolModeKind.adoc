@@ -1,0 +1,45 @@
+= `WindPlantQcontrolModeKind`
+:toclevels: 4
+
+
++++Reactive power/voltage controller mode.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:WindPlantQcontrolModeKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `powerFactor`
+| `cim:WindPlantQcontrolModeKind.powerFactor`
+| n/a
+
+| `reactivePower`
+| `cim:WindPlantQcontrolModeKind.reactivePower`
+| n/a
+
+| `uqStatic`
+| `cim:WindPlantQcontrolModeKind.uqStatic`
+| n/a
+
+| `voltageControl`
+| `cim:WindPlantQcontrolModeKind.voltageControl`
+| n/a
+|===

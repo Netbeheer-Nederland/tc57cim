@@ -1,0 +1,1197 @@
+= `GeneratorTypeAsset`
+:toclevels: 4
+
+
++++Generic generation equipment that may be used for various purposes such as work planning. It defines both the Real and Reactive power properties (modelled at the PSR level as a GeneratingUnit + SynchronousMachine).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:GeneratorTypeAsset`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+*** *`GeneratorTypeAsset`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+GeneratorTypeAsset {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringQuantity {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ErpBomItemData {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ErpReqLineItem {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+TypeAssetCatalogue {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ProductAssetModel {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+CompatibleUnit {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+AssetInfo {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ErpIssueInventory {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GeneratorTypeAsset -> StringQuantity: quantity
+
+
+GeneratorTypeAsset -> ErpBomItemData: ErpBomItemDatas
+
+
+GeneratorTypeAsset -> ErpReqLineItem: ErpReqLineItems
+
+
+GeneratorTypeAsset -> TypeAssetCatalogue: TypeAssetCatalogue
+
+
+GeneratorTypeAsset -> ProductAssetModel: ProductAssetModel
+
+
+GeneratorTypeAsset -> CompatibleUnit: CompatibleUnits
+
+
+GeneratorTypeAsset -> AssetInfo: AssetInfo
+
+
+GeneratorTypeAsset -> ErpIssueInventory: ErpInventoryIssues
+
+
+GeneratorTypeAsset -> DiagramObject: DiagramObjects
+
+
+GeneratorTypeAsset -> InstanceSet: InstanceSet
+
+
+GeneratorTypeAsset -> Name: Names
+
+
+GeneratorTypeAsset -> ChangeSetMember: PropertiesCIMDataObject
+
+
+GeneratorTypeAsset -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<maxP,`maxP`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Maximum real power limit.+++
+
+| <<maxQ,`maxQ`>>
+| 0..1
+| xref::class/ReactivePower.adoc[`ReactivePower`]
+| +++Maximum reactive power limit.+++
+
+| <<minP,`minP`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Minimum real power generated.+++
+
+| <<minQ,`minQ`>>
+| 0..1
+| xref::class/ReactivePower.adoc[`ReactivePower`]
+| +++Minimum reactive power generated.+++
+
+| <<rDirectSubtrans,`rDirectSubtrans`>>
+| 0..1
+| xref::class/Resistance.adoc[`Resistance`]
+| +++Direct-axis subtransient resistance.+++
+
+| <<rDirectSync,`rDirectSync`>>
+| 0..1
+| xref::class/Resistance.adoc[`Resistance`]
+| +++Direct-axis synchronous resistance.+++
+
+| <<rDirectTrans,`rDirectTrans`>>
+| 0..1
+| xref::class/Resistance.adoc[`Resistance`]
+| +++Direct-axis transient resistance.+++
+
+| <<rQuadSubtrans,`rQuadSubtrans`>>
+| 0..1
+| xref::class/Resistance.adoc[`Resistance`]
+| +++Quadrature-axis subtransient resistance.+++
+
+| <<rQuadSync,`rQuadSync`>>
+| 0..1
+| xref::class/Resistance.adoc[`Resistance`]
+| +++Quadrature-axis synchronous resistance.+++
+
+| <<rQuadTrans,`rQuadTrans`>>
+| 0..1
+| xref::class/Resistance.adoc[`Resistance`]
+| +++Quadrature-axis transient resistance.+++
+
+| <<xDirectSubtrans,`xDirectSubtrans`>>
+| 0..1
+| xref::class/Reactance.adoc[`Reactance`]
+| +++Direct-axis subtransient reactance.+++
+
+| <<xDirectSync,`xDirectSync`>>
+| 0..1
+| xref::class/Reactance.adoc[`Reactance`]
+| +++Direct-axis synchronous reactance.+++
+
+| <<xDirectTrans,`xDirectTrans`>>
+| 0..1
+| xref::class/Reactance.adoc[`Reactance`]
+| +++Direct-axis transient reactance.+++
+
+| <<xQuadSubtrans,`xQuadSubtrans`>>
+| 0..1
+| xref::class/Reactance.adoc[`Reactance`]
+| +++Quadrature-axis subtransient reactance.+++
+
+| <<xQuadSync,`xQuadSync`>>
+| 0..1
+| xref::class/Reactance.adoc[`Reactance`]
+| +++Quadrature-axis synchronous reactance.+++
+
+| <<xQuadTrans,`xQuadTrans`>>
+| 0..1
+| xref::class/Reactance.adoc[`Reactance`]
+| +++Quadrature-axis transient reactance.+++
+
+| <<AssetInfo,`AssetInfo`>>
+| 0..1
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+| +++Generic nameplate information associated with this catalog asset type.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<TypeAssetCatalogue,`TypeAssetCatalogue`>>
+| 0..1
+| xref::class/TypeAssetCatalogue.adoc[`TypeAssetCatalogue`]
+| n/a
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<estimatedUnitCost,`estimatedUnitCost`>>
+| 0..1
+| xref::class/Money.adoc[`Money`]
+| +++Estimated unit cost (or cost per unit length) of this type of asset. It does not include labor to install, construct or configure it.+++
+
+| <<kind,`kind`>>
+| 0..1
+| xref::enumeration/AssetKind.adoc[`AssetKind`]
+| +++Kind of asset (from enumerated list).+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<quantity,`quantity`>>
+| 0..1
+| xref::class/StringQuantity.adoc[`StringQuantity`]
+| +++The value, unit of measure, and multiplier for the quantity.+++
+
+| <<stockItem,`stockItem`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if item is a stock item (default).+++
+
+| <<type,`type`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Description of type of asset.+++
+
+| <<CompatibleUnits,`CompatibleUnits`>>
+| 0..*
+| xref::class/CompatibleUnit.adoc[`CompatibleUnit`]
+| n/a
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<ErpBomItemDatas,`ErpBomItemDatas`>>
+| 0..*
+| xref::class/ErpBomItemData.adoc[`ErpBomItemData`]
+| n/a
+
+| <<ErpInventoryIssues,`ErpInventoryIssues`>>
+| 0..*
+| xref::class/ErpIssueInventory.adoc[`ErpIssueInventory`]
+| n/a
+
+| <<ErpReqLineItems,`ErpReqLineItems`>>
+| 0..*
+| xref::class/ErpReqLineItem.adoc[`ErpReqLineItem`]
+| n/a
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<ProductAssetModel,`ProductAssetModel`>>
+| 0..*
+| xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+| +++Product asset model conforming to this catalog asset type.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#AssetInfo]
+=== `AssetInfo`
++++Generic nameplate information associated with this catalog asset type.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CatalogAssetType.AssetInfo`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| Inherited from
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+
+|===
+
+//[discrete]
+[#CompatibleUnits]
+=== `CompatibleUnits`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CatalogAssetType.CompatibleUnits`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CompatibleUnit.adoc[`CompatibleUnit`]
+
+| Inherited from
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ErpBomItemDatas]
+=== `ErpBomItemDatas`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CatalogAssetType.ErpBomItemDatas`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ErpBomItemData.adoc[`ErpBomItemData`]
+
+| Inherited from
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+
+|===
+
+//[discrete]
+[#ErpInventoryIssues]
+=== `ErpInventoryIssues`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CatalogAssetType.ErpInventoryIssues`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ErpIssueInventory.adoc[`ErpIssueInventory`]
+
+| Inherited from
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+
+|===
+
+//[discrete]
+[#ErpReqLineItems]
+=== `ErpReqLineItems`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CatalogAssetType.ErpReqLineItems`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ErpReqLineItem.adoc[`ErpReqLineItem`]
+
+| Inherited from
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+
+|===
+
+//[discrete]
+[#estimatedUnitCost]
+=== `estimatedUnitCost`
++++Estimated unit cost (or cost per unit length) of this type of asset. It does not include labor to install, construct or configure it.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CatalogAssetType.estimatedUnitCost`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+| Inherited from
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#kind]
+=== `kind`
++++Kind of asset (from enumerated list).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CatalogAssetType.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/AssetKind.adoc[`AssetKind`]
+
+| Inherited from
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+
+|===
+
+//[discrete]
+[#maxP]
+=== `maxP`
++++Maximum real power limit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.maxP`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#maxQ]
+=== `maxQ`
++++Maximum reactive power limit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.maxQ`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReactivePower.adoc[`ReactivePower`]
+
+
+|===
+
+//[discrete]
+[#minP]
+=== `minP`
++++Minimum real power generated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.minP`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#minQ]
+=== `minQ`
++++Minimum reactive power generated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.minQ`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReactivePower.adoc[`ReactivePower`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ProductAssetModel]
+=== `ProductAssetModel`
++++Product asset model conforming to this catalog asset type.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CatalogAssetType.ProductAssetModel`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+
+| Inherited from
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#quantity]
+=== `quantity`
++++The value, unit of measure, and multiplier for the quantity.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CatalogAssetType.quantity`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StringQuantity.adoc[`StringQuantity`]
+
+| Inherited from
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+
+|===
+
+//[discrete]
+[#rDirectSubtrans]
+=== `rDirectSubtrans`
++++Direct-axis subtransient resistance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.rDirectSubtrans`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Resistance.adoc[`Resistance`]
+
+
+|===
+
+//[discrete]
+[#rDirectSync]
+=== `rDirectSync`
++++Direct-axis synchronous resistance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.rDirectSync`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Resistance.adoc[`Resistance`]
+
+
+|===
+
+//[discrete]
+[#rDirectTrans]
+=== `rDirectTrans`
++++Direct-axis transient resistance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.rDirectTrans`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Resistance.adoc[`Resistance`]
+
+
+|===
+
+//[discrete]
+[#rQuadSubtrans]
+=== `rQuadSubtrans`
++++Quadrature-axis subtransient resistance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.rQuadSubtrans`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Resistance.adoc[`Resistance`]
+
+
+|===
+
+//[discrete]
+[#rQuadSync]
+=== `rQuadSync`
++++Quadrature-axis synchronous resistance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.rQuadSync`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Resistance.adoc[`Resistance`]
+
+
+|===
+
+//[discrete]
+[#rQuadTrans]
+=== `rQuadTrans`
++++Quadrature-axis transient resistance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.rQuadTrans`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Resistance.adoc[`Resistance`]
+
+
+|===
+
+//[discrete]
+[#stockItem]
+=== `stockItem`
++++True if item is a stock item (default).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CatalogAssetType.stockItem`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#type]
+=== `type`
++++Description of type of asset.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CatalogAssetType.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+
+|===
+
+//[discrete]
+[#TypeAssetCatalogue]
+=== `TypeAssetCatalogue`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CatalogAssetType.TypeAssetCatalogue`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TypeAssetCatalogue.adoc[`TypeAssetCatalogue`]
+
+| Inherited from
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+
+|===
+
+//[discrete]
+[#xDirectSubtrans]
+=== `xDirectSubtrans`
++++Direct-axis subtransient reactance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.xDirectSubtrans`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reactance.adoc[`Reactance`]
+
+
+|===
+
+//[discrete]
+[#xDirectSync]
+=== `xDirectSync`
++++Direct-axis synchronous reactance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.xDirectSync`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reactance.adoc[`Reactance`]
+
+
+|===
+
+//[discrete]
+[#xDirectTrans]
+=== `xDirectTrans`
++++Direct-axis transient reactance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.xDirectTrans`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reactance.adoc[`Reactance`]
+
+
+|===
+
+//[discrete]
+[#xQuadSubtrans]
+=== `xQuadSubtrans`
++++Quadrature-axis subtransient reactance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.xQuadSubtrans`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reactance.adoc[`Reactance`]
+
+
+|===
+
+//[discrete]
+[#xQuadSync]
+=== `xQuadSync`
++++Quadrature-axis synchronous reactance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.xQuadSync`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reactance.adoc[`Reactance`]
+
+
+|===
+
+//[discrete]
+[#xQuadTrans]
+=== `xQuadTrans`
++++Quadrature-axis transient reactance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratorTypeAsset.xQuadTrans`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reactance.adoc[`Reactance`]
+
+
+|===
+
+

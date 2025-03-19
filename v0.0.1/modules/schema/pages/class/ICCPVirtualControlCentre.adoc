@@ -1,0 +1,814 @@
+= `ICCPVirtualControlCentre`
+:toclevels: 4
+
+
++++This contains the information that a particular actor exposes for a particular agreed upon ICCP Bilateral Table.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ICCPVirtualControlCentre`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/BilateralExchangeActor.adoc[`BilateralExchangeActor`]
+*** *`ICCPVirtualControlCentre`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ICCPVirtualControlCentre {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+BilateralExchangeAgreement {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+CommunicationLink {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+BilateralExchangeAgreement {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ProvidedBilateralPoint {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+ICCPVirtualControlCentre -> BilateralExchangeAgreement: ProviderBilateralExchange
+
+
+ICCPVirtualControlCentre -> CommunicationLink: CommunicationLink
+
+
+ICCPVirtualControlCentre -> BilateralExchangeAgreement: ConsumerBilateralExchange
+
+
+ICCPVirtualControlCentre -> ProvidedBilateralPoint: ProvidedBilateralIOPoint
+
+
+ICCPVirtualControlCentre -> DiagramObject: DiagramObjects
+
+
+ICCPVirtualControlCentre -> InstanceSet: InstanceSet
+
+
+ICCPVirtualControlCentre -> Name: Names
+
+
+ICCPVirtualControlCentre -> ChangeSetMember: PropertiesCIMDataObject
+
+
+ICCPVirtualControlCentre -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<applicationSecurityRequirement,`applicationSecurityRequirement`>>
+| 0..1
+| xref::enumeration/ApplicationSecurityKind.adoc[`ApplicationSecurityKind`]
+| +++Specifies the expected security mechanism, per IEC 62351-4, to be utilized.+++
+
+| <<calling,`calling`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Used to indicate if the Provider is responsible for initiating the TASE.2 connection.  If the value is TRUE, the provider is responsible for establishing the association.  If the value is FALSE, the peer provider of the Bilateral Table will need to establish the association.+++
+
+| <<clientAndServer,`clientAndServer`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++If True the value indicates that the entity represented by the bilateral table is capable of issuing requests and responding to request (e.g. bidirectional support of ICCP requests).
+
+If False, this indicates that a calling entity (e.g. calling = True) will not be able to respond to ICCP requests.  If False, and calling=False, this indicates that the entity will only respond to ICCP requests and not issue ICCP requests.+++
+
+| <<minimumUpdateInterval,`minimumUpdateInterval`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Specifies the fastest update interval that can be provided for integrity information and Transfer Set creation. The value is in seconds.+++
+
+| <<nameOfLocalICC,`nameOfLocalICC`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Specifies the ICC scope name that the remote can use to access the information in the Bilateral Table if the information is not VCC scoped.  This value may not be null.+++
+
+| <<supportForBlock1,`supportForBlock1`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Per IEC 60870-6-702:  If true indicates support for basic services.  Must always be true.+++
+
+| <<supportForBlock2,`supportForBlock2`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Per IEC 60870-6-702:  If true indicates support for extended conditions.+++
+
+| <<supportForBlock3,`supportForBlock3`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Per IEC 60870-6-702:  If true indicates support for blocked transfers.+++
+
+| <<supportForBlock4,`supportForBlock4`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Per IEC 60870-6-702:  If true indicates support for information messages.+++
+
+| <<supportForBlock5,`supportForBlock5`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Per IEC 60870-6-702:  If true indicates support for device control.+++
+
+| <<supportForDepriciatedBlock8,`supportForDepriciatedBlock8`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Per IEC 60870-6-702:  If true indicates support for accounts.  The use of this block was deprecated in Edition 3.+++
+
+| <<transportSecurityRequirement,`transportSecurityRequirement`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true, then transport level security as specified by IEC 62351-6 is required.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<CommunicationLink,`CommunicationLink`>>
+| 0..*
+| xref::class/CommunicationLink.adoc[`CommunicationLink`]
+| +++Communication addressing for a Bilateral Table used by a ICCP data provider or consumer.+++
+
+| <<ConsumerBilateralExchange,`ConsumerBilateralExchange`>>
+| 0..*
+| xref::class/BilateralExchangeAgreement.adoc[`BilateralExchangeAgreement`]
+| +++Agreement to information subscriber.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<ProvidedBilateralIOPoint,`ProvidedBilateralIOPoint`>>
+| 0..*
+| xref::class/ProvidedBilateralPoint.adoc[`ProvidedBilateralPoint`]
+| +++ICCP information in a Bilateral table that will be exposed to a remote peer.+++
+
+| <<ProviderBilateralExchange,`ProviderBilateralExchange`>>
+| 0..*
+| xref::class/BilateralExchangeAgreement.adoc[`BilateralExchangeAgreement`]
+| +++Agreement to information provider.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#applicationSecurityRequirement]
+=== `applicationSecurityRequirement`
++++Specifies the expected security mechanism, per IEC 62351-4, to be utilized.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ICCPVirtualControlCentre.applicationSecurityRequirement`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ApplicationSecurityKind.adoc[`ApplicationSecurityKind`]
+
+
+|===
+
+//[discrete]
+[#calling]
+=== `calling`
++++Used to indicate if the Provider is responsible for initiating the TASE.2 connection.  If the value is TRUE, the provider is responsible for establishing the association.  If the value is FALSE, the peer provider of the Bilateral Table will need to establish the association.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ICCPVirtualControlCentre.calling`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#clientAndServer]
+=== `clientAndServer`
++++If True the value indicates that the entity represented by the bilateral table is capable of issuing requests and responding to request (e.g. bidirectional support of ICCP requests).
+
+If False, this indicates that a calling entity (e.g. calling = True) will not be able to respond to ICCP requests.  If False, and calling=False, this indicates that the entity will only respond to ICCP requests and not issue ICCP requests.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ICCPVirtualControlCentre.clientAndServer`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#CommunicationLink]
+=== `CommunicationLink`
++++Communication addressing for a Bilateral Table used by a ICCP data provider or consumer.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralExchangeActor.CommunicationLink`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CommunicationLink.adoc[`CommunicationLink`]
+
+| Inherited from
+| xref::class/BilateralExchangeActor.adoc[`BilateralExchangeActor`]
+
+
+|===
+
+//[discrete]
+[#ConsumerBilateralExchange]
+=== `ConsumerBilateralExchange`
++++Agreement to information subscriber.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralExchangeActor.ConsumerBilateralExchange`
+| Cardinality
+| 0..*
+| Type
+| xref::class/BilateralExchangeAgreement.adoc[`BilateralExchangeAgreement`]
+
+| Inherited from
+| xref::class/BilateralExchangeActor.adoc[`BilateralExchangeActor`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#minimumUpdateInterval]
+=== `minimumUpdateInterval`
++++Specifies the fastest update interval that can be provided for integrity information and Transfer Set creation. The value is in seconds.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ICCPVirtualControlCentre.minimumUpdateInterval`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#nameOfLocalICC]
+=== `nameOfLocalICC`
++++Specifies the ICC scope name that the remote can use to access the information in the Bilateral Table if the information is not VCC scoped.  This value may not be null.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ICCPVirtualControlCentre.nameOfLocalICC`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ProvidedBilateralIOPoint]
+=== `ProvidedBilateralIOPoint`
++++ICCP information in a Bilateral table that will be exposed to a remote peer.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralExchangeActor.ProvidedBilateralIOPoint`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProvidedBilateralPoint.adoc[`ProvidedBilateralPoint`]
+
+| Inherited from
+| xref::class/BilateralExchangeActor.adoc[`BilateralExchangeActor`]
+
+
+|===
+
+//[discrete]
+[#ProviderBilateralExchange]
+=== `ProviderBilateralExchange`
++++Agreement to information provider.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralExchangeActor.ProviderBilateralExchange`
+| Cardinality
+| 0..*
+| Type
+| xref::class/BilateralExchangeAgreement.adoc[`BilateralExchangeAgreement`]
+
+| Inherited from
+| xref::class/BilateralExchangeActor.adoc[`BilateralExchangeActor`]
+
+
+|===
+
+//[discrete]
+[#supportForBlock1]
+=== `supportForBlock1`
++++Per IEC 60870-6-702:  If true indicates support for basic services.  Must always be true.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ICCPVirtualControlCentre.supportForBlock1`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#supportForBlock2]
+=== `supportForBlock2`
++++Per IEC 60870-6-702:  If true indicates support for extended conditions.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ICCPVirtualControlCentre.supportForBlock2`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#supportForBlock3]
+=== `supportForBlock3`
++++Per IEC 60870-6-702:  If true indicates support for blocked transfers.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ICCPVirtualControlCentre.supportForBlock3`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#supportForBlock4]
+=== `supportForBlock4`
++++Per IEC 60870-6-702:  If true indicates support for information messages.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ICCPVirtualControlCentre.supportForBlock4`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#supportForBlock5]
+=== `supportForBlock5`
++++Per IEC 60870-6-702:  If true indicates support for device control.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ICCPVirtualControlCentre.supportForBlock5`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#supportForDepriciatedBlock8]
+=== `supportForDepriciatedBlock8`
++++Per IEC 60870-6-702:  If true indicates support for accounts.  The use of this block was deprecated in Edition 3.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ICCPVirtualControlCentre.supportForDepriciatedBlock8`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#transportSecurityRequirement]
+=== `transportSecurityRequirement`
++++If true, then transport level security as specified by IEC 62351-6 is required.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ICCPVirtualControlCentre.transportSecurityRequirement`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+

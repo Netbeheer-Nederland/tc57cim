@@ -1,0 +1,41 @@
+= `CIGREStandardEditionKind`
+:toclevels: 4
+
+
++++List of editions for CIGRE standards.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CIGREStandardEditionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `2000`
+| `cim:CIGREStandardEditionKind.2000`
+| n/a
+
+| `none`
+| `cim:CIGREStandardEditionKind.none`
+| n/a
+
+| `unknown`
+| `cim:CIGREStandardEditionKind.unknown`
+| n/a
+|===

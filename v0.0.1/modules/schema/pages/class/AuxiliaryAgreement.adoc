@@ -1,0 +1,1278 @@
+= `AuxiliaryAgreement`
+:toclevels: 4
+
+
++++An ad-hoc auxiliary account agreement associated with a customer agreement, not part of the customer's account, but typically subject to formal agreement between customer and supplier (utility). Typically this is used to collect revenue owed by the customer for other services or arrears accrued with the utility for other services. It is typically linked to a prepaid token purchase transaction, thus forcing the customer to make a payment towards settlement of the auxiliary account balance whenever the customer needs to purchase a prepaid token for electricity.
+The present status of the auxiliary agreement can be defined in the context of the utility's business rules, for example: enabled, disabled, pending, over recovered, under recovered, written off, etc.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AuxiliaryAgreement`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Document.adoc[`Document`]
+*** xref::class/Agreement.adoc[`Agreement`]
+**** *`AuxiliaryAgreement`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+AuxiliaryAgreement {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+AuxiliaryAccount {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+CustomerAgreement {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DateTimeInterval {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Status {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ElectronicAddress {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Status {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ActivityRecord {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ConfigurationEvent {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Author {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Editor {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Approver {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Issuer {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+AuxiliaryAgreement -> AuxiliaryAccount: AuxiliaryAccounts
+
+
+AuxiliaryAgreement -> CustomerAgreement: CustomerAgreement
+
+
+AuxiliaryAgreement -> DateTimeInterval: validityInterval
+
+
+AuxiliaryAgreement -> Status: docStatus
+
+
+AuxiliaryAgreement -> ElectronicAddress: electronicAddress
+
+
+AuxiliaryAgreement -> Status: status
+
+
+AuxiliaryAgreement -> ActivityRecord: ActivityRecord
+
+
+AuxiliaryAgreement -> ConfigurationEvent: ConfigurationEvents
+
+
+AuxiliaryAgreement -> Author: Author
+
+
+AuxiliaryAgreement -> Editor: Editor
+
+
+AuxiliaryAgreement -> Approver: Approver
+
+
+AuxiliaryAgreement -> Issuer: Issuer
+
+
+AuxiliaryAgreement -> DiagramObject: DiagramObjects
+
+
+AuxiliaryAgreement -> InstanceSet: InstanceSet
+
+
+AuxiliaryAgreement -> Name: Names
+
+
+AuxiliaryAgreement -> ChangeSetMember: PropertiesCIMDataObject
+
+
+AuxiliaryAgreement -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<AuxiliaryAccounts,`AuxiliaryAccounts`>>
+| 1..*
+| xref::class/AuxiliaryAccount.adoc[`AuxiliaryAccount`]
+| +++All auxiliary accounts regulated by this agreement.+++
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<CustomerAgreement,`CustomerAgreement`>>
+| 0..1
+| xref::class/CustomerAgreement.adoc[`CustomerAgreement`]
+| +++Customer agreement this (non-service related) auxiliary agreement refers to.+++
+
+| <<arrearsInterest,`arrearsInterest`>>
+| 0..1
+| xref::class/PerCent.adoc[`PerCent`]
+| +++The interest per annum to be charged prorata on 'AuxiliaryAccount.dueArrears' at the end of each 'payCycle'.+++
+
+| <<auxCycle,`auxCycle`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The frequency for automatically recurring auxiliary charges, where 'AuxiliaryAccount.initialCharge' is recursively added to 'AuxiliaryAccount.dueCurrent' at the start of each 'auxCycle'. For example: on a specified date and time; hourly; daily; weekly; monthly; 3-monthly; 6-monthly; 12-monthly; etc.+++
+
+| <<auxPriorityCode,`auxPriorityCode`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The coded priority indicating the priority that this auxiliary agreement has above other auxiliary agreements (associated with the same customer agreement) when it comes to competing for settlement from a payment transaction or token purchase.+++
+
+| <<fixedAmount,`fixedAmount`>>
+| 0..1
+| xref::class/Money.adoc[`Money`]
+| +++The fixed amount that has to be collected from each vending transaction towards settlement of this auxiliary agreement. Note that there may be multiple tokens vended per vending transaction, but this is not relevant.+++
+
+| <<minAmount,`minAmount`>>
+| 0..1
+| xref::class/Money.adoc[`Money`]
+| +++The minimum amount that has to be paid at any transaction towards settling this auxiliary agreement or reducing the balance.+++
+
+| <<payCycle,`payCycle`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The contractually expected payment frequency (by the customer). Examples are: ad-hoc; on specified date; hourly, daily, weekly, monthly. etc.+++
+
+| <<subType,`subType`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Sub-classification of the inherited 'type' for this AuxiliaryAgreement.+++
+
+| <<vendPortion,`vendPortion`>>
+| 0..1
+| xref::class/PerCent.adoc[`PerCent`]
+| +++The percentage of the transaction amount that has to be collected from each vending transaction towards settlement of this auxiliary agreement when payments are not in arrears. Note that there may be multiple tokens vended per vending transaction, but this is not relevant.+++
+
+| <<vendPortionArrear,`vendPortionArrear`>>
+| 0..1
+| xref::class/PerCent.adoc[`PerCent`]
+| +++The percentage of the transaction amount that has to be collected from each vending transaction towards settlement of this auxiliary agreement when payments are in arrears. Note that there may be multiple tokens vended per vending transaction, but this is not relevant.+++
+
+| <<Approver,`Approver`>>
+| 0..1
+| xref::class/Approver.adoc[`Approver`]
+| +++Approver of this document.+++
+
+| <<Author,`Author`>>
+| 0..1
+| xref::class/Author.adoc[`Author`]
+| +++Author of this document.+++
+
+| <<Editor,`Editor`>>
+| 0..1
+| xref::class/Editor.adoc[`Editor`]
+| +++Editor of this document.+++
+
+| <<Issuer,`Issuer`>>
+| 0..1
+| xref::class/Issuer.adoc[`Issuer`]
+| +++Issuer of this document.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<authorName,`authorName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Name of the author of this document.+++
+
+| <<comment,`comment`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Free text comment.+++
+
+| <<createdDateTime,`createdDateTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time that this document was created.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<docStatus,`docStatus`>>
+| 0..1
+| xref::class/Status.adoc[`Status`]
+| +++Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status' attribute.
+Example values for 'docStatus.status' are draft, approved, cancelled, etc.+++
+
+| <<electronicAddress,`electronicAddress`>>
+| 0..1
+| xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+| +++Electronic address.+++
+
+| <<lastModifiedDateTime,`lastModifiedDateTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<revisionNumber,`revisionNumber`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Revision number for this document.+++
+
+| <<signDate,`signDate`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date this agreement was consummated among associated persons and/or organisations.+++
+
+| <<status,`status`>>
+| 0..1
+| xref::class/Status.adoc[`Status`]
+| +++Status of subject matter (e.g., Agreement, Work) this document represents. For status of the document itself, use 'docStatus' attribute.+++
+
+| <<subject,`subject`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Document subject.+++
+
+| <<title,`title`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Document title.+++
+
+| <<type,`type`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).+++
+
+| <<validityInterval,`validityInterval`>>
+| 0..1
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++Date and time interval this agreement is valid (from going into effect to termination).+++
+
+| <<ActivityRecord,`ActivityRecord`>>
+| 0..*
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+| +++The activity record for a document+++
+
+| <<ConfigurationEvents,`ConfigurationEvents`>>
+| 0..*
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this document.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#ActivityRecord]
+=== `ActivityRecord`
++++The activity record for a document+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.ActivityRecord`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Approver]
+=== `Approver`
++++Approver of this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Approver`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Approver.adoc[`Approver`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#arrearsInterest]
+=== `arrearsInterest`
++++The interest per annum to be charged prorata on 'AuxiliaryAccount.dueArrears' at the end of each 'payCycle'.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryAgreement.arrearsInterest`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+//[discrete]
+[#Author]
+=== `Author`
++++Author of this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Author`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Author.adoc[`Author`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#authorName]
+=== `authorName`
++++Name of the author of this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.authorName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#auxCycle]
+=== `auxCycle`
++++The frequency for automatically recurring auxiliary charges, where 'AuxiliaryAccount.initialCharge' is recursively added to 'AuxiliaryAccount.dueCurrent' at the start of each 'auxCycle'. For example: on a specified date and time; hourly; daily; weekly; monthly; 3-monthly; 6-monthly; 12-monthly; etc.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryAgreement.auxCycle`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#AuxiliaryAccounts]
+=== `AuxiliaryAccounts`
++++All auxiliary accounts regulated by this agreement.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryAgreement.AuxiliaryAccounts`
+| Cardinality
+| 1..*
+| Type
+| xref::class/AuxiliaryAccount.adoc[`AuxiliaryAccount`]
+
+
+|===
+
+//[discrete]
+[#auxPriorityCode]
+=== `auxPriorityCode`
++++The coded priority indicating the priority that this auxiliary agreement has above other auxiliary agreements (associated with the same customer agreement) when it comes to competing for settlement from a payment transaction or token purchase.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryAgreement.auxPriorityCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#comment]
+=== `comment`
++++Free text comment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.comment`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#ConfigurationEvents]
+=== `ConfigurationEvents`
++++All configuration events created for this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.ConfigurationEvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#createdDateTime]
+=== `createdDateTime`
++++Date and time that this document was created.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.createdDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#CustomerAgreement]
+=== `CustomerAgreement`
++++Customer agreement this (non-service related) auxiliary agreement refers to.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryAgreement.CustomerAgreement`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CustomerAgreement.adoc[`CustomerAgreement`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#docStatus]
+=== `docStatus`
++++Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status' attribute.
+Example values for 'docStatus.status' are draft, approved, cancelled, etc.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.docStatus`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#Editor]
+=== `Editor`
++++Editor of this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Editor`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Editor.adoc[`Editor`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#electronicAddress]
+=== `electronicAddress`
++++Electronic address.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.electronicAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#fixedAmount]
+=== `fixedAmount`
++++The fixed amount that has to be collected from each vending transaction towards settlement of this auxiliary agreement. Note that there may be multiple tokens vended per vending transaction, but this is not relevant.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryAgreement.fixedAmount`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Issuer]
+=== `Issuer`
++++Issuer of this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Issuer`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Issuer.adoc[`Issuer`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#lastModifiedDateTime]
+=== `lastModifiedDateTime`
++++Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.lastModifiedDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#minAmount]
+=== `minAmount`
++++The minimum amount that has to be paid at any transaction towards settling this auxiliary agreement or reducing the balance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryAgreement.minAmount`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#payCycle]
+=== `payCycle`
++++The contractually expected payment frequency (by the customer). Examples are: ad-hoc; on specified date; hourly, daily, weekly, monthly. etc.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryAgreement.payCycle`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#revisionNumber]
+=== `revisionNumber`
++++Revision number for this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.revisionNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#signDate]
+=== `signDate`
++++Date this agreement was consummated among associated persons and/or organisations.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Agreement.signDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Agreement.adoc[`Agreement`]
+
+
+|===
+
+//[discrete]
+[#status]
+=== `status`
++++Status of subject matter (e.g., Agreement, Work) this document represents. For status of the document itself, use 'docStatus' attribute.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#subject]
+=== `subject`
++++Document subject.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.subject`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#subType]
+=== `subType`
++++Sub-classification of the inherited 'type' for this AuxiliaryAgreement.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryAgreement.subType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#title]
+=== `title`
++++Document title.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.title`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#type]
+=== `type`
++++Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#validityInterval]
+=== `validityInterval`
++++Date and time interval this agreement is valid (from going into effect to termination).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Agreement.validityInterval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+| Inherited from
+| xref::class/Agreement.adoc[`Agreement`]
+
+
+|===
+
+//[discrete]
+[#vendPortion]
+=== `vendPortion`
++++The percentage of the transaction amount that has to be collected from each vending transaction towards settlement of this auxiliary agreement when payments are not in arrears. Note that there may be multiple tokens vended per vending transaction, but this is not relevant.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryAgreement.vendPortion`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+//[discrete]
+[#vendPortionArrear]
+=== `vendPortionArrear`
++++The percentage of the transaction amount that has to be collected from each vending transaction towards settlement of this auxiliary agreement when payments are in arrears. Note that there may be multiple tokens vended per vending transaction, but this is not relevant.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryAgreement.vendPortionArrear`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+

@@ -1,0 +1,49 @@
+= `ConditionFactorKind`
+:toclevels: 4
+
+
++++Kind of condition factor.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ConditionFactorKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `accountAllocation`
+| `cim:ConditionFactorKind.accountAllocation`
+| n/a
+
+| `labor`
+| `cim:ConditionFactorKind.labor`
+| n/a
+
+| `material`
+| `cim:ConditionFactorKind.material`
+| n/a
+
+| `other`
+| `cim:ConditionFactorKind.other`
+| n/a
+
+| `travel`
+| `cim:ConditionFactorKind.travel`
+| n/a
+|===

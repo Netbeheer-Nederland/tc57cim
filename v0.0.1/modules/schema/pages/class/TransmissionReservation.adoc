@@ -1,0 +1,277 @@
+= `TransmissionReservation`
+:toclevels: 4
+
+
++++A transmission reservation is obtained from the OASIS system to reserve transmission for a specified time period, transmission path and transmission product.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TransmissionReservation`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`TransmissionReservation`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+TransmissionReservation {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+EnergyTransaction {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+TransactionBid {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ServicePoint {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ServicePoint {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+TransmissionPath {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+TransmissionReservation -> EnergyTransaction: EnergyTransaction
+
+
+TransmissionReservation -> TransactionBid: TransactionBid
+
+
+TransmissionReservation -> ServicePoint: Sink
+
+
+TransmissionReservation -> ServicePoint: Source
+
+
+TransmissionReservation -> TransmissionPath: TransmissionPath
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<TransmissionPath,`TransmissionPath`>>
+| 1
+| xref::class/TransmissionPath.adoc[`TransmissionPath`]
+| n/a
+
+| <<EnergyTransaction,`EnergyTransaction`>>
+| 0..1
+| xref::class/EnergyTransaction.adoc[`EnergyTransaction`]
+| n/a
+
+| <<Sink,`Sink`>>
+| 0..1
+| xref::class/ServicePoint.adoc[`ServicePoint`]
+| n/a
+
+| <<Source,`Source`>>
+| 0..1
+| xref::class/ServicePoint.adoc[`ServicePoint`]
+| n/a
+
+| <<TransactionBid,`TransactionBid`>>
+| 0..1
+| xref::class/TransactionBid.adoc[`TransactionBid`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#EnergyTransaction]
+=== `EnergyTransaction`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionReservation.EnergyTransaction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnergyTransaction.adoc[`EnergyTransaction`]
+
+
+|===
+
+//[discrete]
+[#Sink]
+=== `Sink`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionReservation.Sink`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ServicePoint.adoc[`ServicePoint`]
+
+
+|===
+
+//[discrete]
+[#Source]
+=== `Source`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionReservation.Source`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ServicePoint.adoc[`ServicePoint`]
+
+
+|===
+
+//[discrete]
+[#TransactionBid]
+=== `TransactionBid`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionReservation.TransactionBid`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TransactionBid.adoc[`TransactionBid`]
+
+
+|===
+
+//[discrete]
+[#TransmissionPath]
+=== `TransmissionPath`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionReservation.TransmissionPath`
+| Cardinality
+| 1
+| Type
+| xref::class/TransmissionPath.adoc[`TransmissionPath`]
+
+
+|===
+
+

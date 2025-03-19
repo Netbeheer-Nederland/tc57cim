@@ -1,0 +1,375 @@
+= `ExPostResourceResults`
+:toclevels: 4
+
+
++++Model of ex-post pricing of resources contains components of LMPs: energy, congestion, loss. Resource based.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ExPostResourceResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ExPostResourceResults`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ExPostResourceResults {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RegisteredResource {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ExPostResource {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+ExPostResourceResults -> RegisteredResource: RegisteredResource
+
+
+ExPostResourceResults -> ExPostResource: ExPostResource
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<ExPostResource,`ExPostResource`>>
+| 1
+| xref::class/ExPostResource.adoc[`ExPostResource`]
+| n/a
+
+| <<RegisteredResource,`RegisteredResource`>>
+| 0..1
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| n/a
+
+| <<congestionLMP,`congestionLMP`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++LMP component in USD (deprecated)+++
+
+| <<desiredMW,`desiredMW`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Desired output of unit+++
+
+| <<dispatchRate,`dispatchRate`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Unit Dispatch rate from real time unit dispatch.+++
+
+| <<lmp,`lmp`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++LMP (Local Marginal Price) in USD at the equipment (deprecated)+++
+
+| <<lossLMP,`lossLMP`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++loss lmp (deprecated)+++
+
+| <<maxEconomicMW,`maxEconomicMW`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Economic Maximum MW+++
+
+| <<minEconomicMW,`minEconomicMW`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Economic Minimum MW+++
+
+| <<resourceMW,`resourceMW`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Current MW output of the equipment 
+Attribute Usage: Information purposes - Information purposes - Output of LPA engine.+++
+
+| <<status,`status`>>
+| 0..1
+| xref::enumeration/EquipmentStatusType.adoc[`EquipmentStatusType`]
+| +++Status of equipment+++
+|===
+
+'''
+
+
+//[discrete]
+[#congestionLMP]
+=== `congestionLMP`
++++LMP component in USD (deprecated)+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.congestionLMP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#desiredMW]
+=== `desiredMW`
++++Desired output of unit+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.desiredMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#dispatchRate]
+=== `dispatchRate`
++++Unit Dispatch rate from real time unit dispatch.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.dispatchRate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#ExPostResource]
+=== `ExPostResource`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.ExPostResource`
+| Cardinality
+| 1
+| Type
+| xref::class/ExPostResource.adoc[`ExPostResource`]
+
+
+|===
+
+//[discrete]
+[#lmp]
+=== `lmp`
++++LMP (Local Marginal Price) in USD at the equipment (deprecated)+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.lmp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#lossLMP]
+=== `lossLMP`
++++loss lmp (deprecated)+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.lossLMP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#maxEconomicMW]
+=== `maxEconomicMW`
++++Economic Maximum MW+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.maxEconomicMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#minEconomicMW]
+=== `minEconomicMW`
++++Economic Minimum MW+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.minEconomicMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+//[discrete]
+[#resourceMW]
+=== `resourceMW`
++++Current MW output of the equipment 
+Attribute Usage: Information purposes - Information purposes - Output of LPA engine.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.resourceMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#status]
+=== `status`
++++Status of equipment+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.status`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/EquipmentStatusType.adoc[`EquipmentStatusType`]
+
+
+|===
+
+

@@ -1,0 +1,85 @@
+= `CIGREStandard`
+:toclevels: 4
+
+
++++Standard published by CIGRE (Council on Large Electric Systems).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CIGREStandard`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`CIGREStandard`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<standardEdition,`standardEdition`>>
+| 0..1
+| xref::enumeration/CIGREStandardEditionKind.adoc[`CIGREStandardEditionKind`]
+| +++Edition of CIGRE standard.+++
+
+| <<standardNumber,`standardNumber`>>
+| 0..1
+| xref::enumeration/CIGREStandardKind.adoc[`CIGREStandardKind`]
+| +++CIGRE standard number.+++
+|===
+
+'''
+
+
+//[discrete]
+[#standardEdition]
+=== `standardEdition`
++++Edition of CIGRE standard.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CIGREStandard.standardEdition`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/CIGREStandardEditionKind.adoc[`CIGREStandardEditionKind`]
+
+
+|===
+
+//[discrete]
+[#standardNumber]
+=== `standardNumber`
++++CIGRE standard number.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CIGREStandard.standardNumber`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/CIGREStandardKind.adoc[`CIGREStandardKind`]
+
+
+|===
+
+

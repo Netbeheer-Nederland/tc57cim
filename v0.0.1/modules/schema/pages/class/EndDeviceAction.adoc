@@ -1,0 +1,235 @@
+= `EndDeviceAction`
+:toclevels: 4
+
+
++++Action/command performed by an end device on a device other than the end device.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EndDeviceAction`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`EndDeviceAction`*
+ ** xref::class/PanDemandResponse.adoc[`PanDemandResponse`]
+ ** xref::class/PanDisplay.adoc[`PanDisplay`]
+ ** xref::class/PanPricing.adoc[`PanPricing`]
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+EndDeviceAction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+
+EndDeviceControl {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+
+EndDeviceAction -> EndDeviceControl: EndDeviceControl
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<EndDeviceControl,`EndDeviceControl`>>
+| 0..1
+| xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+| +++End device control issuing this end device action.+++
+
+| <<command,`command`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Command text.+++
+
+| <<duration,`duration`>>
+| 0..1
+| xref::class/Minutes.adoc[`Minutes`]
+| +++Amount of time the action of this control is to remain active.+++
+
+| <<durationIndefinite,`durationIndefinite`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the action of this control is indefinite.+++
+
+| <<startDateTime,`startDateTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Start date and time for action of this control.+++
+|===
+
+'''
+
+
+//[discrete]
+[#command]
+=== `command`
++++Command text.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.command`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#duration]
+=== `duration`
++++Amount of time the action of this control is to remain active.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.duration`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Minutes.adoc[`Minutes`]
+
+
+|===
+
+//[discrete]
+[#durationIndefinite]
+=== `durationIndefinite`
++++True if the action of this control is indefinite.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.durationIndefinite`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#EndDeviceControl]
+=== `EndDeviceControl`
++++End device control issuing this end device action.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.EndDeviceControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+
+
+|===
+
+//[discrete]
+[#startDateTime]
+=== `startDateTime`
++++Start date and time for action of this control.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.startDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+

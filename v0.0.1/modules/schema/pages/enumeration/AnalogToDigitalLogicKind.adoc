@@ -1,0 +1,53 @@
+= `AnalogToDigitalLogicKind`
+:toclevels: 4
+
+
++++Categories of analog to digital (or logical result) comparison.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AnalogToDigitalLogicKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `eq`
+| `cim:AnalogToDigitalLogicKind.eq`
+| n/a
+
+| `ge`
+| `cim:AnalogToDigitalLogicKind.ge`
+| n/a
+
+| `gt`
+| `cim:AnalogToDigitalLogicKind.gt`
+| n/a
+
+| `le`
+| `cim:AnalogToDigitalLogicKind.le`
+| n/a
+
+| `lt`
+| `cim:AnalogToDigitalLogicKind.lt`
+| n/a
+
+| `ne`
+| `cim:AnalogToDigitalLogicKind.ne`
+| n/a
+|===

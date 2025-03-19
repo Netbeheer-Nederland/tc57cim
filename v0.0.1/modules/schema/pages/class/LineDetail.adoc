@@ -1,0 +1,201 @@
+= `LineDetail`
+:toclevels: 4
+
+
++++Details on an amount line, with rounding, date and note.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:LineDetail`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`LineDetail`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+LineDetail {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<amount,`amount`>>
+| 0..1
+| xref::class/Money.adoc[`Money`]
+| +++Amount for this line item.+++
+
+| <<dateTime,`dateTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time when this line was created in the application process.+++
+
+| <<note,`note`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Free format note relevant to this line.+++
+
+| <<rounding,`rounding`>>
+| 0..1
+| xref::class/Money.adoc[`Money`]
+| +++Totalised monetary value of all errors due to process rounding or truncating that is not reflected in 'amount'.+++
+|===
+
+'''
+
+
+//[discrete]
+[#amount]
+=== `amount`
++++Amount for this line item.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LineDetail.amount`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+//[discrete]
+[#dateTime]
+=== `dateTime`
++++Date and time when this line was created in the application process.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LineDetail.dateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#note]
+=== `note`
++++Free format note relevant to this line.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LineDetail.note`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#rounding]
+=== `rounding`
++++Totalised monetary value of all errors due to process rounding or truncating that is not reflected in 'amount'.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LineDetail.rounding`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+

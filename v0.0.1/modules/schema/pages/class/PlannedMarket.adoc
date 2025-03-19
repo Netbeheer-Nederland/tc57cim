@@ -1,0 +1,275 @@
+= `PlannedMarket`
+:toclevels: 4
+
+
++++Represent a planned market. For example a planned DA/HA/RT market.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PlannedMarket`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`PlannedMarket`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+PlannedMarket {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+PlannedMarketEvent {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketRun {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketPlan {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+PlannedMarket -> PlannedMarketEvent: PlannedMarketEvent
+
+
+PlannedMarket -> MarketRun: MarketRun
+
+
+PlannedMarket -> MarketPlan: MarketPlan
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<MarketPlan,`MarketPlan`>>
+| 1
+| xref::class/MarketPlan.adoc[`MarketPlan`]
+| +++A market plan has a number of markets (DA, HA, RT).+++
+
+| <<PlannedMarketEvent,`PlannedMarketEvent`>>
+| 1..*
+| xref::class/PlannedMarketEvent.adoc[`PlannedMarketEvent`]
+| +++A planned market shall have a set of planned events+++
+
+| <<marketEndTime,`marketEndTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Market end time.+++
+
+| <<marketStartTime,`marketStartTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Market start time.+++
+
+| <<marketType,`marketType`>>
+| 0..1
+| xref::enumeration/MarketType.adoc[`MarketType`]
+| +++Market type.+++
+
+| <<MarketRun,`MarketRun`>>
+| 0..*
+| xref::class/MarketRun.adoc[`MarketRun`]
+| +++A planned market could have multiple market runs for the reason that a planned market could have a rerun.+++
+|===
+
+'''
+
+
+//[discrete]
+[#marketEndTime]
+=== `marketEndTime`
++++Market end time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PlannedMarket.marketEndTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#MarketPlan]
+=== `MarketPlan`
++++A market plan has a number of markets (DA, HA, RT).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PlannedMarket.MarketPlan`
+| Cardinality
+| 1
+| Type
+| xref::class/MarketPlan.adoc[`MarketPlan`]
+
+
+|===
+
+//[discrete]
+[#MarketRun]
+=== `MarketRun`
++++A planned market could have multiple market runs for the reason that a planned market could have a rerun.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PlannedMarket.MarketRun`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketRun.adoc[`MarketRun`]
+
+
+|===
+
+//[discrete]
+[#marketStartTime]
+=== `marketStartTime`
++++Market start time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PlannedMarket.marketStartTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#marketType]
+=== `marketType`
++++Market type.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PlannedMarket.marketType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MarketType.adoc[`MarketType`]
+
+
+|===
+
+//[discrete]
+[#PlannedMarketEvent]
+=== `PlannedMarketEvent`
++++A planned market shall have a set of planned events+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PlannedMarket.PlannedMarketEvent`
+| Cardinality
+| 1..*
+| Type
+| xref::class/PlannedMarketEvent.adoc[`PlannedMarketEvent`]
+
+
+|===
+
+

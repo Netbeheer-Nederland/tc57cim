@@ -1,0 +1,49 @@
+= `DeploymentStateKind`
+:toclevels: 4
+
+
++++Possible states of asset deployment.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:DeploymentStateKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `inService`
+| `cim:DeploymentStateKind.inService`
+| n/a
+
+| `installed`
+| `cim:DeploymentStateKind.installed`
+| n/a
+
+| `notYetInstalled`
+| `cim:DeploymentStateKind.notYetInstalled`
+| n/a
+
+| `outOfService`
+| `cim:DeploymentStateKind.outOfService`
+| n/a
+
+| `removed`
+| `cim:DeploymentStateKind.removed`
+| n/a
+|===

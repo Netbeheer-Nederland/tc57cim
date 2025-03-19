@@ -1,0 +1,323 @@
+= `Quantity`
+:toclevels: 4
+
+
++++Description of quantities needed in the data exchange. 
+The type of the quantity is described either by the role of the association or the type attribute.
+The quality attribute provides the information about the quality of the quantity (measured, estimated, etc.).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Quantity`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`Quantity`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+Quantity {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Quantity {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Domain {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Point {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+TimeSeries {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Quantity {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+Quantity -> Quantity: quantity
+
+
+Quantity -> Domain: Domain
+
+
+Quantity -> Point: Point
+
+
+Quantity -> TimeSeries: TimeSeries
+
+
+Quantity -> Quantity: Detail_Quantity
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<quality,`quality`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The quality of the information being provided. This quality may be estimated, not available, as provided, etc.+++
+
+| <<quantity,`quantity`>>
+| 0..1
+| xref::class/Quantity.adoc[`Quantity`]
+| n/a
+
+| <<type,`type`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description of the type of the quantity.+++
+
+| <<Detail_Quantity,`Detail_Quantity`>>
+| 0..*
+| xref::class/Quantity.adoc[`Quantity`]
+| +++Additional information related to the associated quantity.+++
+
+| <<Domain,`Domain`>>
+| 0..*
+| xref::class/Domain.adoc[`Domain`]
+| n/a
+
+| <<Point,`Point`>>
+| 0..*
+| xref::class/Point.adoc[`Point`]
+| n/a
+
+| <<TimeSeries,`TimeSeries`>>
+| 0..*
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#Detail_Quantity]
+=== `Detail_Quantity`
++++Additional information related to the associated quantity.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.Detail_Quantity`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Quantity.adoc[`Quantity`]
+
+
+|===
+
+//[discrete]
+[#Domain]
+=== `Domain`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.Domain`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Domain.adoc[`Domain`]
+
+
+|===
+
+//[discrete]
+[#Point]
+=== `Point`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.Point`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Point.adoc[`Point`]
+
+
+|===
+
+//[discrete]
+[#quality]
+=== `quality`
++++The quality of the information being provided. This quality may be estimated, not available, as provided, etc.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.quality`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#quantity]
+=== `quantity`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.quantity`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Quantity.adoc[`Quantity`]
+
+
+|===
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#type]
+=== `type`
++++The description of the type of the quantity.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+

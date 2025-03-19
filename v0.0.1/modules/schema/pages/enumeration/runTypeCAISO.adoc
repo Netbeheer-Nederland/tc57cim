@@ -1,0 +1,38 @@
+= `runTypeCAISO`
+:toclevels: 4
+
+
++++S - Scheduling
+P - Pricing+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:runTypeCAISO`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `P`
+| `cim:runTypeCAISO.P`
+| n/a
+
+| `S`
+| `cim:runTypeCAISO.S`
+| n/a
+|===

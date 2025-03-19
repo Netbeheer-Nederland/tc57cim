@@ -1,0 +1,43 @@
+= `PriceSetFlag`
+:toclevels: 4
+
+
++++Y - indicates a resource is capable of setting the Markte Clearing Price 
+S - indicates the resource must submit bids for energy at $ 0
+N - indicates the resource does not have to submit bids for energy at $ 0+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:PriceSetFlag`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `N`
+| `cim:PriceSetFlag.N`
+| n/a
+
+| `S`
+| `cim:PriceSetFlag.S`
+| n/a
+
+| `Y`
+| `cim:PriceSetFlag.Y`
+| n/a
+|===

@@ -1,0 +1,45 @@
+= `PinTerminalKind`
+:toclevels: 4
+
+
++++Categorisation of type of compare done on Terminal.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:PinTerminalKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `activePower`
+| `cim:PinTerminalKind.activePower`
+| n/a
+
+| `apparentPower`
+| `cim:PinTerminalKind.apparentPower`
+| n/a
+
+| `reactivePower`
+| `cim:PinTerminalKind.reactivePower`
+| n/a
+
+| `voltage`
+| `cim:PinTerminalKind.voltage`
+| n/a
+|===

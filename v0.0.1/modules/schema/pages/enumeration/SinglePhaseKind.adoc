@@ -1,0 +1,53 @@
+= `SinglePhaseKind`
+:toclevels: 4
+
+
++++Enumeration of single phase identifiers. Allows designation of single phases for both transmission and distribution equipment, circuits and loads.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SinglePhaseKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `A`
+| `cim:SinglePhaseKind.A`
+| n/a
+
+| `B`
+| `cim:SinglePhaseKind.B`
+| n/a
+
+| `C`
+| `cim:SinglePhaseKind.C`
+| n/a
+
+| `N`
+| `cim:SinglePhaseKind.N`
+| n/a
+
+| `s1`
+| `cim:SinglePhaseKind.s1`
+| n/a
+
+| `s2`
+| `cim:SinglePhaseKind.s2`
+| n/a
+|===

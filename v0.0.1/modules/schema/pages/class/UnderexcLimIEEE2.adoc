@@ -1,0 +1,1497 @@
+= `UnderexcLimIEEE2`
+:toclevels: 4
+
+
++++Type UEL2 underexcitation limiter which has either a straight-line or multi-segment characteristic when plotted in terms of machine reactive power output vs. real power output.
+Reference: IEEE UEL2 421.5-2005, 10.2  (limit characteristic lookup table shown in Figure 10.4 (p 32)).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:UnderexcLimIEEE2`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+**** *`UnderexcLimIEEE2`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+UnderexcLimIEEE2 {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ExcitationSystemDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+RemoteInputSignal {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+UnderexcLimIEEE2 -> ExcitationSystemDynamics: ExcitationSystemDynamics
+
+
+UnderexcLimIEEE2 -> RemoteInputSignal: RemoteInputSignal
+
+
+UnderexcLimIEEE2 -> DiagramObject: DiagramObjects
+
+
+UnderexcLimIEEE2 -> InstanceSet: InstanceSet
+
+
+UnderexcLimIEEE2 -> Name: Names
+
+
+UnderexcLimIEEE2 -> ChangeSetMember: PropertiesCIMDataObject
+
+
+UnderexcLimIEEE2 -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<ExcitationSystemDynamics,`ExcitationSystemDynamics`>>
+| 1
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+| +++Excitation system model with which this underexcitation limiter model is associated.+++
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<k1,`k1`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++UEL terminal voltage exponent applied to real power input to UEL limit look-up table (<i>k1</i>).  Typical value = 2.+++
+
+| <<k2,`k2`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++UEL terminal voltage exponent applied to reactive power output from UEL limit look-up table (<i>k2</i>).  Typical value = 2.+++
+
+| <<kfb,`kfb`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Gain associated with optional integrator feedback input signal to UEL (<i>K</i><i><sub>FB</sub></i>).  Typical value = 0.+++
+
+| <<kuf,`kuf`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++UEL excitation system stabilizer gain (<i>K</i><i><sub>UF</sub></i>).  Typical value = 0.+++
+
+| <<kui,`kui`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++UEL integral gain (<i>K</i><i><sub>UI</sub></i>).  Typical value = 0,5.+++
+
+| <<kul,`kul`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++UEL proportional gain (<i>K</i><i><sub>UL</sub></i>).  Typical value = 0,8.+++
+
+| <<p0,`p0`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Real power values for endpoints (<i>P</i><i><sub>0</sub></i>).  Typical value = 0.+++
+
+| <<p1,`p1`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Real power values for endpoints (<i>P</i><i><sub>1</sub></i>).  Typical value = 0,3.+++
+
+| <<p10,`p10`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Real power values for endpoints (<i>P</i><i><sub>10</sub></i>).+++
+
+| <<p2,`p2`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Real power values for endpoints (<i>P</i><i><sub>2</sub></i>).  Typical value = 0,6.+++
+
+| <<p3,`p3`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Real power values for endpoints (<i>P</i><i><sub>3</sub></i>).  Typical value = 0,9.+++
+
+| <<p4,`p4`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Real power values for endpoints (<i>P</i><i><sub>4</sub></i>).  Typical value = 1,02.+++
+
+| <<p5,`p5`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Real power values for endpoints (<i>P</i><i><sub>5</sub></i>).+++
+
+| <<p6,`p6`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Real power values for endpoints (<i>P</i><i><sub>6</sub></i>).+++
+
+| <<p7,`p7`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Real power values for endpoints (<i>P</i><i><sub>7</sub></i>).+++
+
+| <<p8,`p8`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Real power values for endpoints (<i>P</i><i><sub>8</sub></i>).+++
+
+| <<p9,`p9`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Real power values for endpoints (<i>P</i><i><sub>9</sub></i>).+++
+
+| <<q0,`q0`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Reactive power values for endpoints (<i>Q</i><i><sub>0</sub></i>).  Typical value = -0,31.+++
+
+| <<q1,`q1`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Reactive power values for endpoints (<i>Q</i><i><sub>1</sub></i>).  Typical value = -0,31.+++
+
+| <<q10,`q10`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Reactive power values for endpoints (<i>Q</i><i><sub>10</sub></i>).+++
+
+| <<q2,`q2`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Reactive power values for endpoints (<i>Q</i><i><sub>2</sub></i>).  Typical value = -0,28.+++
+
+| <<q3,`q3`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Reactive power values for endpoints (<i>Q</i><i><sub>3</sub></i>).  Typical value = -0,21.+++
+
+| <<q4,`q4`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Reactive power values for endpoints (<i>Q</i><i><sub>4</sub></i>).  Typical value = 0.+++
+
+| <<q5,`q5`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Reactive power values for endpoints (<i>Q</i><i><sub>5</sub></i>).+++
+
+| <<q6,`q6`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Reactive power values for endpoints (<i>Q</i><i><sub>6</sub></i>).+++
+
+| <<q7,`q7`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Reactive power values for endpoints (<i>Q</i><i><sub>7</sub></i>).+++
+
+| <<q8,`q8`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Reactive power values for endpoints (<i>Q</i><i><sub>8</sub></i>).+++
+
+| <<q9,`q9`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Reactive power values for endpoints (<i>Q</i><i><sub>9</sub></i>).+++
+
+| <<tu1,`tu1`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++UEL lead time constant (<i>T</i><i><sub>U1</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<tu2,`tu2`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++UEL lag time constant (<i>T</i><i><sub>U2</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<tu3,`tu3`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++UEL lead time constant (<i>T</i><i><sub>U3</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<tu4,`tu4`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++UEL lag time constant (<i>T</i><i><sub>U4</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<tul,`tul`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Time constant associated with optional integrator feedback input signal to UEL (<i>T</i><i><sub>UL</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<tup,`tup`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Real power filter time constant (<i>T</i><i><sub>UP</sub></i>) (&gt;= 0).  Typical value = 5.+++
+
+| <<tuq,`tuq`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Reactive power filter time constant (<i>T</i><i><sub>UQ</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<tuv,`tuv`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Voltage filter time constant (<i>T</i><i><sub>UV</sub></i>) (&gt;= 0).  Typical value = 5.+++
+
+| <<vuimax,`vuimax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++UEL integrator output maximum limit (<i>V</i><i><sub>UIMAX</sub></i>) (&gt; UnderexcLimIEEE2.vuimin).  Typical value = 0,25.+++
+
+| <<vuimin,`vuimin`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++UEL integrator output minimum limit (<i>V</i><i><sub>UIMIN</sub></i>) (&lt; UnderexcLimIEEE2.vuimax).  Typical value = 0.+++
+
+| <<vulmax,`vulmax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++UEL output maximum limit (<i>V</i><i><sub>ULMAX</sub></i>) (&gt; UnderexcLimIEEE2.vulmin).  Typical value = 0,25.+++
+
+| <<vulmin,`vulmin`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++UEL output minimum limit (<i>V</i><i><sub>ULMIN</sub></i>) (&lt; UnderexcLimIEEE2.vulmax).  Typical value = 0.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<RemoteInputSignal,`RemoteInputSignal`>>
+| 0..1
+| xref::class/RemoteInputSignal.adoc[`RemoteInputSignal`]
+| +++Remote input signal used by this underexcitation limiter model.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<enabled,`enabled`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+//[discrete]
+[#ExcitationSystemDynamics]
+=== `ExcitationSystemDynamics`
++++Excitation system model with which this underexcitation limiter model is associated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcitationLimiterDynamics.ExcitationSystemDynamics`
+| Cardinality
+| 1
+| Type
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+| Inherited from
+| xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#k1]
+=== `k1`
++++UEL terminal voltage exponent applied to real power input to UEL limit look-up table (<i>k1</i>).  Typical value = 2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.k1`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#k2]
+=== `k2`
++++UEL terminal voltage exponent applied to reactive power output from UEL limit look-up table (<i>k2</i>).  Typical value = 2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.k2`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#kfb]
+=== `kfb`
++++Gain associated with optional integrator feedback input signal to UEL (<i>K</i><i><sub>FB</sub></i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.kfb`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kuf]
+=== `kuf`
++++UEL excitation system stabilizer gain (<i>K</i><i><sub>UF</sub></i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.kuf`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kui]
+=== `kui`
++++UEL integral gain (<i>K</i><i><sub>UI</sub></i>).  Typical value = 0,5.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.kui`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kul]
+=== `kul`
++++UEL proportional gain (<i>K</i><i><sub>UL</sub></i>).  Typical value = 0,8.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.kul`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#p0]
+=== `p0`
++++Real power values for endpoints (<i>P</i><i><sub>0</sub></i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.p0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#p1]
+=== `p1`
++++Real power values for endpoints (<i>P</i><i><sub>1</sub></i>).  Typical value = 0,3.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.p1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#p10]
+=== `p10`
++++Real power values for endpoints (<i>P</i><i><sub>10</sub></i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.p10`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#p2]
+=== `p2`
++++Real power values for endpoints (<i>P</i><i><sub>2</sub></i>).  Typical value = 0,6.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.p2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#p3]
+=== `p3`
++++Real power values for endpoints (<i>P</i><i><sub>3</sub></i>).  Typical value = 0,9.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.p3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#p4]
+=== `p4`
++++Real power values for endpoints (<i>P</i><i><sub>4</sub></i>).  Typical value = 1,02.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.p4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#p5]
+=== `p5`
++++Real power values for endpoints (<i>P</i><i><sub>5</sub></i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.p5`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#p6]
+=== `p6`
++++Real power values for endpoints (<i>P</i><i><sub>6</sub></i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.p6`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#p7]
+=== `p7`
++++Real power values for endpoints (<i>P</i><i><sub>7</sub></i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.p7`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#p8]
+=== `p8`
++++Real power values for endpoints (<i>P</i><i><sub>8</sub></i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.p8`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#p9]
+=== `p9`
++++Real power values for endpoints (<i>P</i><i><sub>9</sub></i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.p9`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#q0]
+=== `q0`
++++Reactive power values for endpoints (<i>Q</i><i><sub>0</sub></i>).  Typical value = -0,31.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.q0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#q1]
+=== `q1`
++++Reactive power values for endpoints (<i>Q</i><i><sub>1</sub></i>).  Typical value = -0,31.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.q1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#q10]
+=== `q10`
++++Reactive power values for endpoints (<i>Q</i><i><sub>10</sub></i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.q10`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#q2]
+=== `q2`
++++Reactive power values for endpoints (<i>Q</i><i><sub>2</sub></i>).  Typical value = -0,28.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.q2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#q3]
+=== `q3`
++++Reactive power values for endpoints (<i>Q</i><i><sub>3</sub></i>).  Typical value = -0,21.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.q3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#q4]
+=== `q4`
++++Reactive power values for endpoints (<i>Q</i><i><sub>4</sub></i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.q4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#q5]
+=== `q5`
++++Reactive power values for endpoints (<i>Q</i><i><sub>5</sub></i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.q5`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#q6]
+=== `q6`
++++Reactive power values for endpoints (<i>Q</i><i><sub>6</sub></i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.q6`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#q7]
+=== `q7`
++++Reactive power values for endpoints (<i>Q</i><i><sub>7</sub></i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.q7`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#q8]
+=== `q8`
++++Reactive power values for endpoints (<i>Q</i><i><sub>8</sub></i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.q8`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#q9]
+=== `q9`
++++Reactive power values for endpoints (<i>Q</i><i><sub>9</sub></i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.q9`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#RemoteInputSignal]
+=== `RemoteInputSignal`
++++Remote input signal used by this underexcitation limiter model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcitationLimiterDynamics.RemoteInputSignal`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RemoteInputSignal.adoc[`RemoteInputSignal`]
+
+| Inherited from
+| xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#tu1]
+=== `tu1`
++++UEL lead time constant (<i>T</i><i><sub>U1</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.tu1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tu2]
+=== `tu2`
++++UEL lag time constant (<i>T</i><i><sub>U2</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.tu2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tu3]
+=== `tu3`
++++UEL lead time constant (<i>T</i><i><sub>U3</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.tu3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tu4]
+=== `tu4`
++++UEL lag time constant (<i>T</i><i><sub>U4</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.tu4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tul]
+=== `tul`
++++Time constant associated with optional integrator feedback input signal to UEL (<i>T</i><i><sub>UL</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.tul`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tup]
+=== `tup`
++++Real power filter time constant (<i>T</i><i><sub>UP</sub></i>) (&gt;= 0).  Typical value = 5.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.tup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tuq]
+=== `tuq`
++++Reactive power filter time constant (<i>T</i><i><sub>UQ</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.tuq`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tuv]
+=== `tuv`
++++Voltage filter time constant (<i>T</i><i><sub>UV</sub></i>) (&gt;= 0).  Typical value = 5.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.tuv`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#vuimax]
+=== `vuimax`
++++UEL integrator output maximum limit (<i>V</i><i><sub>UIMAX</sub></i>) (&gt; UnderexcLimIEEE2.vuimin).  Typical value = 0,25.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.vuimax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vuimin]
+=== `vuimin`
++++UEL integrator output minimum limit (<i>V</i><i><sub>UIMIN</sub></i>) (&lt; UnderexcLimIEEE2.vuimax).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.vuimin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vulmax]
+=== `vulmax`
++++UEL output maximum limit (<i>V</i><i><sub>ULMAX</sub></i>) (&gt; UnderexcLimIEEE2.vulmin).  Typical value = 0,25.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.vulmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vulmin]
+=== `vulmin`
++++UEL output minimum limit (<i>V</i><i><sub>ULMIN</sub></i>) (&lt; UnderexcLimIEEE2.vulmax).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLimIEEE2.vulmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+

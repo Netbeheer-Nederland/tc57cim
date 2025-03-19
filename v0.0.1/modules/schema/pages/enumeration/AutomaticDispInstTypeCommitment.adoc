@@ -1,0 +1,49 @@
+= `AutomaticDispInstTypeCommitment`
+:toclevels: 4
+
+
++++Commitment instruction types.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AutomaticDispInstTypeCommitment`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `DR_ADJUSTMENT`
+| `cim:AutomaticDispInstTypeCommitment.DR_ADJUSTMENT`
+| n/a
+
+| `DR_DEPLOY`
+| `cim:AutomaticDispInstTypeCommitment.DR_DEPLOY`
+| n/a
+
+| `DR_RELEASE`
+| `cim:AutomaticDispInstTypeCommitment.DR_RELEASE`
+| n/a
+
+| `SHUT_DOWN`
+| `cim:AutomaticDispInstTypeCommitment.SHUT_DOWN`
+| n/a
+
+| `START_UP`
+| `cim:AutomaticDispInstTypeCommitment.START_UP`
+| n/a
+|===

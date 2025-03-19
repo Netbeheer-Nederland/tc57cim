@@ -1,0 +1,45 @@
+= `WireUsageKind`
+:toclevels: 4
+
+
++++Kind of wire usage.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:WireUsageKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `distribution`
+| `cim:WireUsageKind.distribution`
+| n/a
+
+| `other`
+| `cim:WireUsageKind.other`
+| n/a
+
+| `secondary`
+| `cim:WireUsageKind.secondary`
+| n/a
+
+| `transmission`
+| `cim:WireUsageKind.transmission`
+| n/a
+|===

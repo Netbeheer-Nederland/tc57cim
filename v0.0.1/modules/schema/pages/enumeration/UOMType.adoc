@@ -1,0 +1,71 @@
+= `UOMType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:UOMType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `$/lb`
+| `cim:UOMType.%24/lb`
+| n/a
+
+| `$/mmBTU`
+| `cim:UOMType.%24/mmBTU`
+| n/a
+
+| `%`
+| `cim:UOMType.%25`
+| n/a
+
+| `FACTOR`
+| `cim:UOMType.FACTOR`
+| n/a
+
+| `FLAG`
+| `cim:UOMType.FLAG`
+| n/a
+
+| `INTEGER`
+| `cim:UOMType.INTEGER`
+| n/a
+
+| `MW`
+| `cim:UOMType.MW`
+| n/a
+
+| `MWh`
+| `cim:UOMType.MWh`
+| n/a
+
+| `US$`
+| `cim:UOMType.US%24`
+| n/a
+
+| `US$/MW`
+| `cim:UOMType.US%24/MW`
+| n/a
+
+| `US$/MWh`
+| `cim:UOMType.US%24/MWh`
+| n/a
+|===

@@ -1,0 +1,305 @@
+= `ControlledAppliance`
+:toclevels: 4
+
+
++++Appliance controlled with a PAN device control.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ControlledAppliance`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`ControlledAppliance`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<isElectricVehicle,`isElectricVehicle`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the appliance is an electric vehicle.+++
+
+| <<isExteriorLighting,`isExteriorLighting`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the appliance is exterior lighting.+++
+
+| <<isGenerationSystem,`isGenerationSystem`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the appliance is a generation system.+++
+
+| <<isHvacCompressorOrFurnace,`isHvacCompressorOrFurnace`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the appliance is HVAC compressor or furnace.+++
+
+| <<isInteriorLighting,`isInteriorLighting`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the appliance is interior lighting.+++
+
+| <<isIrrigationPump,`isIrrigationPump`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the appliance is an irrigation pump.+++
+
+| <<isManagedCommercialIndustrialLoad,`isManagedCommercialIndustrialLoad`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the appliance is managed commercial or industrial load.+++
+
+| <<isPoolPumpSpaJacuzzi,`isPoolPumpSpaJacuzzi`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the appliance is a pool, pump, spa or jacuzzi.+++
+
+| <<isSimpleMiscLoad,`isSimpleMiscLoad`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the appliance is a simple miscellaneous load.+++
+
+| <<isSmartAppliance,`isSmartAppliance`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the appliance is a smart appliance.+++
+
+| <<isStripAndBaseboardHeater,`isStripAndBaseboardHeater`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the appliance is a stip or baseboard heater.+++
+
+| <<isWaterHeater,`isWaterHeater`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the appliance is a water heater.+++
+|===
+
+'''
+
+
+//[discrete]
+[#isElectricVehicle]
+=== `isElectricVehicle`
++++True if the appliance is an electric vehicle.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlledAppliance.isElectricVehicle`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isExteriorLighting]
+=== `isExteriorLighting`
++++True if the appliance is exterior lighting.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlledAppliance.isExteriorLighting`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isGenerationSystem]
+=== `isGenerationSystem`
++++True if the appliance is a generation system.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlledAppliance.isGenerationSystem`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isHvacCompressorOrFurnace]
+=== `isHvacCompressorOrFurnace`
++++True if the appliance is HVAC compressor or furnace.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlledAppliance.isHvacCompressorOrFurnace`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isInteriorLighting]
+=== `isInteriorLighting`
++++True if the appliance is interior lighting.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlledAppliance.isInteriorLighting`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isIrrigationPump]
+=== `isIrrigationPump`
++++True if the appliance is an irrigation pump.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlledAppliance.isIrrigationPump`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isManagedCommercialIndustrialLoad]
+=== `isManagedCommercialIndustrialLoad`
++++True if the appliance is managed commercial or industrial load.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlledAppliance.isManagedCommercialIndustrialLoad`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isPoolPumpSpaJacuzzi]
+=== `isPoolPumpSpaJacuzzi`
++++True if the appliance is a pool, pump, spa or jacuzzi.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlledAppliance.isPoolPumpSpaJacuzzi`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isSimpleMiscLoad]
+=== `isSimpleMiscLoad`
++++True if the appliance is a simple miscellaneous load.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlledAppliance.isSimpleMiscLoad`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isSmartAppliance]
+=== `isSmartAppliance`
++++True if the appliance is a smart appliance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlledAppliance.isSmartAppliance`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isStripAndBaseboardHeater]
+=== `isStripAndBaseboardHeater`
++++True if the appliance is a stip or baseboard heater.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlledAppliance.isStripAndBaseboardHeater`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isWaterHeater]
+=== `isWaterHeater`
++++True if the appliance is a water heater.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlledAppliance.isWaterHeater`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+

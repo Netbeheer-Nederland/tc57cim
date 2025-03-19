@@ -1,0 +1,850 @@
+= `EnvironmentalAlert`
+:toclevels: 4
+
+
++++An environmental alert issued by a provider or system.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EnvironmentalAlert`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/ActivityRecord.adoc[`ActivityRecord`]
+*** *`EnvironmentalAlert`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+EnvironmentalAlert {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DateTimeInterval {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+AlertTypeList {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+EnvironmentalLocationType {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+EnvironmentalDataProvider {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Status {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Document {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Author {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Asset {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+EnvironmentalAlert -> DateTimeInterval: inEffect
+
+
+EnvironmentalAlert -> AlertTypeList: AlertTypeList
+
+
+EnvironmentalAlert -> EnvironmentalLocationType: EnvironmentalLocationKind
+
+
+EnvironmentalAlert -> EnvironmentalDataProvider: EnvironmentalDataProvider
+
+
+EnvironmentalAlert -> Status: status
+
+
+EnvironmentalAlert -> Document: Document
+
+
+EnvironmentalAlert -> Author: Author
+
+
+EnvironmentalAlert -> Asset: Assets
+
+
+EnvironmentalAlert -> DiagramObject: DiagramObjects
+
+
+EnvironmentalAlert -> InstanceSet: InstanceSet
+
+
+EnvironmentalAlert -> Name: Names
+
+
+EnvironmentalAlert -> ChangeSetMember: PropertiesCIMDataObject
+
+
+EnvironmentalAlert -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<AlertTypeList,`AlertTypeList`>>
+| 1
+| xref::class/AlertTypeList.adoc[`AlertTypeList`]
+| +++The list of alert types from which the type of this alert is drawn.+++
+
+| <<EnvironmentalLocationKind,`EnvironmentalLocationKind`>>
+| 1..*
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+| +++Type of location to which this environmental alert applies.+++
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<EnvironmentalDataProvider,`EnvironmentalDataProvider`>>
+| 0..1
+| xref::class/EnvironmentalDataProvider.adoc[`EnvironmentalDataProvider`]
+| +++Environmental data provider for this alert.+++
+
+| <<alertType,`alertType`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The type of the issued alert which is drawn from the specified alert type list.+++
+
+| <<cancelledDateTime,`cancelledDateTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Time and date alert cancelled. Used only if alert is cancelled before it expires.+++
+
+| <<headline,`headline`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++An abbreviated textual description of the alert issued. 
+Note: the full text of the alert appears in the .description attribute (inherited from IdentifiedObject).+++
+
+| <<inEffect,`inEffect`>>
+| 0..1
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++The interval for which this weather alert is in effect.+++
+
+| <<Author,`Author`>>
+| 0..1
+| xref::class/Author.adoc[`Author`]
+| +++Author of this activity record.+++
+
+| <<Document,`Document`>>
+| 0..1
+| xref::class/Document.adoc[`Document`]
+| +++The document having associated activity records+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<createdDateTime,`createdDateTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time this activity record has been created (different from the 'status.dateTime', which is the time of a status change of the associated object, if applicable).+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<reason,`reason`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Reason for event resulting in this activity record, typically supplied when user initiated.+++
+
+| <<severity,`severity`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Severity level of event resulting in this activity record.+++
+
+| <<status,`status`>>
+| 0..1
+| xref::class/Status.adoc[`Status`]
+| +++Information on consequence of event resulting in this activity record.+++
+
+| <<type,`type`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Type of event resulting in this activity record.+++
+
+| <<Assets,`Assets`>>
+| 0..*
+| xref::class/Asset.adoc[`Asset`]
+| +++All assets for which this activity record has been created.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#alertType]
+=== `alertType`
++++The type of the issued alert which is drawn from the specified alert type list.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalAlert.alertType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#AlertTypeList]
+=== `AlertTypeList`
++++The list of alert types from which the type of this alert is drawn.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalAlert.AlertTypeList`
+| Cardinality
+| 1
+| Type
+| xref::class/AlertTypeList.adoc[`AlertTypeList`]
+
+
+|===
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets for which this activity record has been created.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActivityRecord.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+
+|===
+
+//[discrete]
+[#Author]
+=== `Author`
++++Author of this activity record.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActivityRecord.Author`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Author.adoc[`Author`]
+
+| Inherited from
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+
+|===
+
+//[discrete]
+[#cancelledDateTime]
+=== `cancelledDateTime`
++++Time and date alert cancelled. Used only if alert is cancelled before it expires.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalAlert.cancelledDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#createdDateTime]
+=== `createdDateTime`
++++Date and time this activity record has been created (different from the 'status.dateTime', which is the time of a status change of the associated object, if applicable).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActivityRecord.createdDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Document]
+=== `Document`
++++The document having associated activity records+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActivityRecord.Document`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Document.adoc[`Document`]
+
+| Inherited from
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+
+|===
+
+//[discrete]
+[#EnvironmentalDataProvider]
+=== `EnvironmentalDataProvider`
++++Environmental data provider for this alert.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalAlert.EnvironmentalDataProvider`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnvironmentalDataProvider.adoc[`EnvironmentalDataProvider`]
+
+
+|===
+
+//[discrete]
+[#EnvironmentalLocationKind]
+=== `EnvironmentalLocationKind`
++++Type of location to which this environmental alert applies.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalAlert.EnvironmentalLocationKind`
+| Cardinality
+| 1..*
+| Type
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+
+
+|===
+
+//[discrete]
+[#headline]
+=== `headline`
++++An abbreviated textual description of the alert issued. 
+Note: the full text of the alert appears in the .description attribute (inherited from IdentifiedObject).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalAlert.headline`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#inEffect]
+=== `inEffect`
++++The interval for which this weather alert is in effect.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalAlert.inEffect`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#reason]
+=== `reason`
++++Reason for event resulting in this activity record, typically supplied when user initiated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActivityRecord.reason`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+
+|===
+
+//[discrete]
+[#severity]
+=== `severity`
++++Severity level of event resulting in this activity record.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActivityRecord.severity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+
+|===
+
+//[discrete]
+[#status]
+=== `status`
++++Information on consequence of event resulting in this activity record.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActivityRecord.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#type]
+=== `type`
++++Type of event resulting in this activity record.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActivityRecord.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+
+|===
+
+

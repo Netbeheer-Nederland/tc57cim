@@ -1,0 +1,44 @@
+= `RampCurveType`
+:toclevels: 4
+
+
++++For example:
+0 - Fixed ramp rate independent of rate function unit MW output
+1 - Static ramp rates as a function of unit MW output only 
+2 - Dynamic ramp rates as a function of unit MW output and ramping time+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:RampCurveType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `0`
+| `cim:RampCurveType.0`
+| n/a
+
+| `1`
+| `cim:RampCurveType.1`
+| n/a
+
+| `2`
+| `cim:RampCurveType.2`
+| n/a
+|===

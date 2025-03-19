@@ -1,0 +1,2291 @@
+= `EquivalentInjection`
+:toclevels: 4
+
+
++++This class represents equivalent injections (generation or load).  Voltage regulation is allowed only at the point of connection.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EquivalentInjection`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+*** xref::class/Equipment.adoc[`Equipment`]
+**** xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+***** xref::class/EquivalentEquipment.adoc[`EquivalentEquipment`]
+****** *`EquivalentInjection`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+EquivalentInjection {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReactiveCapabilityCurve {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+EquivalentNetwork {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ProtectiveActionAdjustment {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+SvStatus {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ProtectionEquipment {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+BaseVoltage {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Terminal {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+JumperAction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+GroundAction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Outage {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+WeatherStation {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+OperationalLimitSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ContingencyEquipment {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+EquipmentContainer {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Fault {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+LimitDependency {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+EquipmentLimitSeriesComponent {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ProtectiveActionEquipment {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PinEquipment {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+EquipmentUnavailabilitySchedule {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+EquipmentContainer {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+UsagePoint {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Outage {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+OperationalRestriction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Control {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Measurement {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PSRType {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ConfigurationEvent {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ReportingGroup {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+OperatingShare {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+AssetInfo {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+VerificationAction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ClearanceDocument {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+GenericAction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+PSREvent {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Asset {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Location {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+OperationalTag {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EquivalentInjection -> ReactiveCapabilityCurve: ReactiveCapabilityCurve
+
+
+EquivalentInjection -> EquivalentNetwork: EquivalentNetwork
+
+
+EquivalentInjection -> ProtectiveActionAdjustment: ProtectiveActionAdjustment
+
+
+EquivalentInjection -> SvStatus: SvStatus
+
+
+EquivalentInjection -> ProtectionEquipment: ProtectionEquipments
+
+
+EquivalentInjection -> BaseVoltage: BaseVoltage
+
+
+EquivalentInjection -> Terminal: Terminals
+
+
+EquivalentInjection -> JumperAction: JumpingAction
+
+
+EquivalentInjection -> GroundAction: GroundingAction
+
+
+EquivalentInjection -> Outage: Outage
+
+
+EquivalentInjection -> WeatherStation: WeatherStation
+
+
+EquivalentInjection -> OperationalLimitSet: OperationalLimitSet
+
+
+EquivalentInjection -> ContingencyEquipment: ContingencyEquipment
+
+
+EquivalentInjection -> EquipmentContainer: EquipmentContainer
+
+
+EquivalentInjection -> Fault: Faults
+
+
+EquivalentInjection -> LimitDependency: LimitDependencyModel
+
+
+EquivalentInjection -> EquipmentLimitSeriesComponent: EqiupmentLimitSeriesComponent
+
+
+EquivalentInjection -> ProtectiveActionEquipment: ProtectiveActionEquipment
+
+
+EquivalentInjection -> PinEquipment: PinEquipment
+
+
+EquivalentInjection -> EquipmentUnavailabilitySchedule: EquipmentUnavailabilitySchedule
+
+
+EquivalentInjection -> EquipmentContainer: AdditionalEquipmentContainer
+
+
+EquivalentInjection -> UsagePoint: UsagePoints
+
+
+EquivalentInjection -> Outage: Outages
+
+
+EquivalentInjection -> OperationalRestriction: OperationalRestrictions
+
+
+EquivalentInjection -> Control: Controls
+
+
+EquivalentInjection -> Measurement: Measurements
+
+
+EquivalentInjection -> PSRType: PSRType
+
+
+EquivalentInjection -> ConfigurationEvent: ConfigurationEvent
+
+
+EquivalentInjection -> ReportingGroup: ReportingGroup
+
+
+EquivalentInjection -> OperatingShare: OperatingShare
+
+
+EquivalentInjection -> AssetInfo: AssetDatasheet
+
+
+EquivalentInjection -> VerificationAction: VerificationAction
+
+
+EquivalentInjection -> ClearanceDocument: Clearances
+
+
+EquivalentInjection -> GenericAction: GenericAction
+
+
+EquivalentInjection -> PSREvent: PSREvents
+
+
+EquivalentInjection -> Asset: Assets
+
+
+EquivalentInjection -> Location: Location
+
+
+EquivalentInjection -> OperationalTag: OperationalTags
+
+
+EquivalentInjection -> DiagramObject: DiagramObjects
+
+
+EquivalentInjection -> InstanceSet: InstanceSet
+
+
+EquivalentInjection -> Name: Names
+
+
+EquivalentInjection -> ChangeSetMember: PropertiesCIMDataObject
+
+
+EquivalentInjection -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<ReactiveCapabilityCurve,`ReactiveCapabilityCurve`>>
+| 0..1
+| xref::class/ReactiveCapabilityCurve.adoc[`ReactiveCapabilityCurve`]
+| +++The reactive capability curve used by this equivalent injection.+++
+
+| <<maxP,`maxP`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Maximum active power of the injection.+++
+
+| <<maxQ,`maxQ`>>
+| 0..1
+| xref::class/ReactivePower.adoc[`ReactivePower`]
+| +++Maximum reactive power of the injection.  Used for modelling of infeed for load flow exchange. Not used for short circuit modelling.  If maxQ and minQ are not used ReactiveCapabilityCurve can be used.+++
+
+| <<minP,`minP`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Minimum active power of the injection.+++
+
+| <<minQ,`minQ`>>
+| 0..1
+| xref::class/ReactivePower.adoc[`ReactivePower`]
+| +++Minimum reactive power of the injection.  Used for modelling of infeed for load flow exchange. Not used for short circuit modelling.  If maxQ and minQ are not used ReactiveCapabilityCurve can be used.+++
+
+| <<p,`p`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Equivalent active power injection. Load sign convention is used, i.e. positive sign means flow out from a node.
+Starting value for steady state solutions.+++
+
+| <<q,`q`>>
+| 0..1
+| xref::class/ReactivePower.adoc[`ReactivePower`]
+| +++Equivalent reactive power injection. Load sign convention is used, i.e. positive sign means flow out from a node.
+Starting value for steady state solutions.+++
+
+| <<r,`r`>>
+| 0..1
+| xref::class/Resistance.adoc[`Resistance`]
+| +++Positive sequence resistance. Used to represent Extended-Ward (IEC 60909).
+Usage : Extended-Ward is a result of network reduction prior to the data exchange.+++
+
+| <<r0,`r0`>>
+| 0..1
+| xref::class/Resistance.adoc[`Resistance`]
+| +++Zero sequence resistance. Used to represent Extended-Ward (IEC 60909).
+Usage : Extended-Ward is a result of network reduction prior to the data exchange.+++
+
+| <<r2,`r2`>>
+| 0..1
+| xref::class/Resistance.adoc[`Resistance`]
+| +++Negative sequence resistance. Used to represent Extended-Ward (IEC 60909).
+Usage : Extended-Ward is a result of network reduction prior to the data exchange.+++
+
+| <<regulationCapability,`regulationCapability`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Specifies whether or not the EquivalentInjection has the capability to regulate the local voltage. If true the EquivalentInjection can regulate. If false the EquivalentInjection cannot regulate. ReactiveCapabilityCurve can only be associated with EquivalentInjection  if the flag is true.+++
+
+| <<regulationStatus,`regulationStatus`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Specifies the regulation status of the EquivalentInjection.  True is regulating.  False is not regulating.+++
+
+| <<regulationTarget,`regulationTarget`>>
+| 0..1
+| xref::class/Voltage.adoc[`Voltage`]
+| +++The target voltage for voltage regulation. The attribute shall be a positive value.+++
+
+| <<x,`x`>>
+| 0..1
+| xref::class/Reactance.adoc[`Reactance`]
+| +++Positive sequence reactance. Used to represent Extended-Ward (IEC 60909).
+Usage : Extended-Ward is a result of network reduction prior to the data exchange.+++
+
+| <<x0,`x0`>>
+| 0..1
+| xref::class/Reactance.adoc[`Reactance`]
+| +++Zero sequence reactance. Used to represent Extended-Ward (IEC 60909).
+Usage : Extended-Ward is a result of network reduction prior to the data exchange.+++
+
+| <<x2,`x2`>>
+| 0..1
+| xref::class/Reactance.adoc[`Reactance`]
+| +++Negative sequence reactance. Used to represent Extended-Ward (IEC 60909).
+Usage : Extended-Ward is a result of network reduction prior to the data exchange.+++
+
+| <<AssetDatasheet,`AssetDatasheet`>>
+| 0..1
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+| +++Datasheet information for this power system resource.+++
+
+| <<BaseVoltage,`BaseVoltage`>>
+| 0..1
+| xref::class/BaseVoltage.adoc[`BaseVoltage`]
+| +++Base voltage of this conducting equipment.  Use only when there is no voltage level container used and only one base voltage applies.  For example, not used for transformers.+++
+
+| <<EquipmentContainer,`EquipmentContainer`>>
+| 0..1
+| xref::class/EquipmentContainer.adoc[`EquipmentContainer`]
+| +++Container of this equipment.+++
+
+| <<EquivalentNetwork,`EquivalentNetwork`>>
+| 0..1
+| xref::class/EquivalentNetwork.adoc[`EquivalentNetwork`]
+| +++The equivalent where the reduced model belongs.+++
+
+| <<GroundingAction,`GroundingAction`>>
+| 0..1
+| xref::class/GroundAction.adoc[`GroundAction`]
+| +++Action involving grounding operation on this conducting equipment.+++
+
+| <<JumpingAction,`JumpingAction`>>
+| 0..1
+| xref::class/JumperAction.adoc[`JumperAction`]
+| +++Jumper action involving jumping operation on this conducting equipment.+++
+
+| <<Location,`Location`>>
+| 0..1
+| xref::class/Location.adoc[`Location`]
+| +++Location of this power system resource.+++
+
+| <<Outage,`Outage`>>
+| 0..1
+| xref::class/Outage.adoc[`Outage`]
+| +++The outage that is isolated by the outage isolation equipment.+++
+
+| <<PSRType,`PSRType`>>
+| 0..1
+| xref::class/PSRType.adoc[`PSRType`]
+| +++Custom classification for this power system resource.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aggregate,`aggregate`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++The aggregate flag provides an alternative way of representing an aggregated (equivalent) element. It is applicable in cases when the dedicated classes for equivalent equipment do not have all of the attributes necessary to represent the required level of detail.  In case the flag is set to “true” the single instance of equipment represents multiple pieces of equipment that have been modelled together as an aggregate equivalent obtained by a network reduction procedure. Examples would be power transformers or synchronous machines operating in parallel modelled as a single aggregate power transformer or aggregate synchronous machine.  
+The attribute is not used for EquivalentBranch, EquivalentShunt and EquivalentInjection.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<inService,`inService`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Specifies the availability of the equipment. True means the equipment is available for topology processing, which determines if the equipment is energized or not. False means that the equipment is treated by network applications as if it is not in the model.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<networkAnalysisEnabled,`networkAnalysisEnabled`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++The equipment is enabled to participate in network analysis.  If unspecified, the value is assumed to be true.+++
+
+| <<normallyInService,`normallyInService`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Specifies the availability of the equipment under normal operating conditions. True means the equipment is available for topology processing, which determines if the equipment is energized or not. False means that the equipment is treated by network applications as if it is not in the model.+++
+
+| <<AdditionalEquipmentContainer,`AdditionalEquipmentContainer`>>
+| 0..*
+| xref::class/EquipmentContainer.adoc[`EquipmentContainer`]
+| +++Additional equipment container beyond the primary equipment container.  The equipment is contained in another equipment container, but also grouped with this equipment container.+++
+
+| <<Assets,`Assets`>>
+| 0..*
+| xref::class/Asset.adoc[`Asset`]
+| +++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a single AC line segment.+++
+
+| <<Clearances,`Clearances`>>
+| 0..*
+| xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+| +++All clearances applicable to this power system resource.+++
+
+| <<ConfigurationEvent,`ConfigurationEvent`>>
+| 0..*
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this Power System resource.+++
+
+| <<ContingencyEquipment,`ContingencyEquipment`>>
+| 0..*
+| xref::class/ContingencyEquipment.adoc[`ContingencyEquipment`]
+| +++The contingency equipments in which this equipment participates.+++
+
+| <<Controls,`Controls`>>
+| 0..*
+| xref::class/Control.adoc[`Control`]
+| +++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or capacitor bank breaker actuator.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<EqiupmentLimitSeriesComponent,`EqiupmentLimitSeriesComponent`>>
+| 0..*
+| xref::class/EquipmentLimitSeriesComponent.adoc[`EquipmentLimitSeriesComponent`]
+| +++Equipment limit series calculation component to which this equipment contributes.+++
+
+| <<EquipmentUnavailabilitySchedule,`EquipmentUnavailabilitySchedule`>>
+| 0..*
+| xref::class/EquipmentUnavailabilitySchedule.adoc[`EquipmentUnavailabilitySchedule`]
+| n/a
+
+| <<Faults,`Faults`>>
+| 0..*
+| xref::class/Fault.adoc[`Fault`]
+| +++All faults on this equipment.+++
+
+| <<GenericAction,`GenericAction`>>
+| 0..*
+| xref::class/GenericAction.adoc[`GenericAction`]
+| +++The generic action that is performed on the power system resource+++
+
+| <<LimitDependencyModel,`LimitDependencyModel`>>
+| 0..*
+| xref::class/LimitDependency.adoc[`LimitDependency`]
+| +++Limit dependencymodels organized under this equipment as a means for organizing the model in a tree view.+++
+
+| <<Measurements,`Measurements`>>
+| 0..*
+| xref::class/Measurement.adoc[`Measurement`]
+| +++The measurements associated with this power system resource.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<OperatingShare,`OperatingShare`>>
+| 0..*
+| xref::class/OperatingShare.adoc[`OperatingShare`]
+| +++The operating shares of this power system resource.+++
+
+| <<OperationalLimitSet,`OperationalLimitSet`>>
+| 0..*
+| xref::class/OperationalLimitSet.adoc[`OperationalLimitSet`]
+| +++The operational limit sets associated with this equipment.+++
+
+| <<OperationalRestrictions,`OperationalRestrictions`>>
+| 0..*
+| xref::class/OperationalRestriction.adoc[`OperationalRestriction`]
+| +++All operational restrictions for this equipment.+++
+
+| <<OperationalTags,`OperationalTags`>>
+| 0..*
+| xref::class/OperationalTag.adoc[`OperationalTag`]
+| +++All operational tags placed on this power system resource.+++
+
+| <<Outages,`Outages`>>
+| 0..*
+| xref::class/Outage.adoc[`Outage`]
+| +++All outages in which this equipment is involved.+++
+
+| <<PSREvents,`PSREvents`>>
+| 0..*
+| xref::class/PSREvent.adoc[`PSREvent`]
+| +++All events associated with this power system resource.+++
+
+| <<PinEquipment,`PinEquipment`>>
+| 0..*
+| xref::class/PinEquipment.adoc[`PinEquipment`]
+| n/a
+
+| <<ProtectionEquipments,`ProtectionEquipments`>>
+| 0..*
+| xref::class/ProtectionEquipment.adoc[`ProtectionEquipment`]
+| +++Protection equipment  used to protect specific conducting equipment.+++
+
+| <<ProtectiveActionAdjustment,`ProtectiveActionAdjustment`>>
+| 0..*
+| xref::class/ProtectiveActionAdjustment.adoc[`ProtectiveActionAdjustment`]
+| +++The operating condition to the Conducting Equipment is changed when protective action adjustment is activated. For ShuntCompensator or other conducting equipment that operates on discrete values (integer), the values given in float will be rounded.+++
+
+| <<ProtectiveActionEquipment,`ProtectiveActionEquipment`>>
+| 0..*
+| xref::class/ProtectiveActionEquipment.adoc[`ProtectiveActionEquipment`]
+| +++Protective action is controlling equipment. This can be direct signals from the control center, or emulation of action done by protection equipment.+++
+
+| <<ReportingGroup,`ReportingGroup`>>
+| 0..*
+| xref::class/ReportingGroup.adoc[`ReportingGroup`]
+| +++Reporting groups to which this power system resource belongs.+++
+
+| <<SvStatus,`SvStatus`>>
+| 0..*
+| xref::class/SvStatus.adoc[`SvStatus`]
+| +++The status state variable associated with this conducting equipment.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+
+| <<Terminals,`Terminals`>>
+| 0..*
+| xref::class/Terminal.adoc[`Terminal`]
+| +++Conducting equipment have terminals that may be connected to other conducting equipment terminals via connectivity nodes or topological nodes.+++
+
+| <<UsagePoints,`UsagePoints`>>
+| 0..*
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+| +++All usage points connected to the electrical grid through this equipment.+++
+
+| <<VerificationAction,`VerificationAction`>>
+| 0..*
+| xref::class/VerificationAction.adoc[`VerificationAction`]
+| +++The verification action that is performed on the power system resource+++
+
+| <<WeatherStation,`WeatherStation`>>
+| 0..*
+| xref::class/WeatherStation.adoc[`WeatherStation`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#AdditionalEquipmentContainer]
+=== `AdditionalEquipmentContainer`
++++Additional equipment container beyond the primary equipment container.  The equipment is contained in another equipment container, but also grouped with this equipment container.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.AdditionalEquipmentContainer`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EquipmentContainer.adoc[`EquipmentContainer`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#aggregate]
+=== `aggregate`
++++The aggregate flag provides an alternative way of representing an aggregated (equivalent) element. It is applicable in cases when the dedicated classes for equivalent equipment do not have all of the attributes necessary to represent the required level of detail.  In case the flag is set to “true” the single instance of equipment represents multiple pieces of equipment that have been modelled together as an aggregate equivalent obtained by a network reduction procedure. Examples would be power transformers or synchronous machines operating in parallel modelled as a single aggregate power transformer or aggregate synchronous machine.  
+The attribute is not used for EquivalentBranch, EquivalentShunt and EquivalentInjection.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.aggregate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#AssetDatasheet]
+=== `AssetDatasheet`
++++Datasheet information for this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.AssetDatasheet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a single AC line segment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#BaseVoltage]
+=== `BaseVoltage`
++++Base voltage of this conducting equipment.  Use only when there is no voltage level container used and only one base voltage applies.  For example, not used for transformers.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConductingEquipment.BaseVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/BaseVoltage.adoc[`BaseVoltage`]
+
+| Inherited from
+| xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+
+
+|===
+
+//[discrete]
+[#Clearances]
+=== `Clearances`
++++All clearances applicable to this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Clearances`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#ConfigurationEvent]
+=== `ConfigurationEvent`
++++All configuration events created for this Power System resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ConfigurationEvent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#ContingencyEquipment]
+=== `ContingencyEquipment`
++++The contingency equipments in which this equipment participates.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.ContingencyEquipment`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ContingencyEquipment.adoc[`ContingencyEquipment`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#Controls]
+=== `Controls`
++++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or capacitor bank breaker actuator.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Controls`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Control.adoc[`Control`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#EqiupmentLimitSeriesComponent]
+=== `EqiupmentLimitSeriesComponent`
++++Equipment limit series calculation component to which this equipment contributes.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.EqiupmentLimitSeriesComponent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EquipmentLimitSeriesComponent.adoc[`EquipmentLimitSeriesComponent`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#EquipmentContainer]
+=== `EquipmentContainer`
++++Container of this equipment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.EquipmentContainer`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EquipmentContainer.adoc[`EquipmentContainer`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#EquipmentUnavailabilitySchedule]
+=== `EquipmentUnavailabilitySchedule`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.EquipmentUnavailabilitySchedule`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EquipmentUnavailabilitySchedule.adoc[`EquipmentUnavailabilitySchedule`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#EquivalentNetwork]
+=== `EquivalentNetwork`
++++The equivalent where the reduced model belongs.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentEquipment.EquivalentNetwork`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EquivalentNetwork.adoc[`EquivalentNetwork`]
+
+| Inherited from
+| xref::class/EquivalentEquipment.adoc[`EquivalentEquipment`]
+
+
+|===
+
+//[discrete]
+[#Faults]
+=== `Faults`
++++All faults on this equipment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.Faults`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Fault.adoc[`Fault`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#GenericAction]
+=== `GenericAction`
++++The generic action that is performed on the power system resource+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.GenericAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/GenericAction.adoc[`GenericAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#GroundingAction]
+=== `GroundingAction`
++++Action involving grounding operation on this conducting equipment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConductingEquipment.GroundingAction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/GroundAction.adoc[`GroundAction`]
+
+| Inherited from
+| xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+
+
+|===
+
+//[discrete]
+[#inService]
+=== `inService`
++++Specifies the availability of the equipment. True means the equipment is available for topology processing, which determines if the equipment is energized or not. False means that the equipment is treated by network applications as if it is not in the model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.inService`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#JumpingAction]
+=== `JumpingAction`
++++Jumper action involving jumping operation on this conducting equipment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConductingEquipment.JumpingAction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/JumperAction.adoc[`JumperAction`]
+
+| Inherited from
+| xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+
+
+|===
+
+//[discrete]
+[#LimitDependencyModel]
+=== `LimitDependencyModel`
++++Limit dependencymodels organized under this equipment as a means for organizing the model in a tree view.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.LimitDependencyModel`
+| Cardinality
+| 0..*
+| Type
+| xref::class/LimitDependency.adoc[`LimitDependency`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location of this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#maxP]
+=== `maxP`
++++Maximum active power of the injection.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.maxP`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#maxQ]
+=== `maxQ`
++++Maximum reactive power of the injection.  Used for modelling of infeed for load flow exchange. Not used for short circuit modelling.  If maxQ and minQ are not used ReactiveCapabilityCurve can be used.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.maxQ`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReactivePower.adoc[`ReactivePower`]
+
+
+|===
+
+//[discrete]
+[#Measurements]
+=== `Measurements`
++++The measurements associated with this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Measurements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Measurement.adoc[`Measurement`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#minP]
+=== `minP`
++++Minimum active power of the injection.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.minP`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#minQ]
+=== `minQ`
++++Minimum reactive power of the injection.  Used for modelling of infeed for load flow exchange. Not used for short circuit modelling.  If maxQ and minQ are not used ReactiveCapabilityCurve can be used.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.minQ`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReactivePower.adoc[`ReactivePower`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#networkAnalysisEnabled]
+=== `networkAnalysisEnabled`
++++The equipment is enabled to participate in network analysis.  If unspecified, the value is assumed to be true.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.networkAnalysisEnabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#normallyInService]
+=== `normallyInService`
++++Specifies the availability of the equipment under normal operating conditions. True means the equipment is available for topology processing, which determines if the equipment is energized or not. False means that the equipment is treated by network applications as if it is not in the model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.normallyInService`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#OperatingShare]
+=== `OperatingShare`
++++The operating shares of this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperatingShare`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperatingShare.adoc[`OperatingShare`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#OperationalLimitSet]
+=== `OperationalLimitSet`
++++The operational limit sets associated with this equipment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.OperationalLimitSet`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperationalLimitSet.adoc[`OperationalLimitSet`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#OperationalRestrictions]
+=== `OperationalRestrictions`
++++All operational restrictions for this equipment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.OperationalRestrictions`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperationalRestriction.adoc[`OperationalRestriction`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#OperationalTags]
+=== `OperationalTags`
++++All operational tags placed on this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperationalTags`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperationalTag.adoc[`OperationalTag`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#Outage]
+=== `Outage`
++++The outage that is isolated by the outage isolation equipment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConductingEquipment.Outage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Outage.adoc[`Outage`]
+
+| Inherited from
+| xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+
+
+|===
+
+//[discrete]
+[#Outages]
+=== `Outages`
++++All outages in which this equipment is involved.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.Outages`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Outage.adoc[`Outage`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#p]
+=== `p`
++++Equivalent active power injection. Load sign convention is used, i.e. positive sign means flow out from a node.
+Starting value for steady state solutions.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.p`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#PinEquipment]
+=== `PinEquipment`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.PinEquipment`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PinEquipment.adoc[`PinEquipment`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ProtectionEquipments]
+=== `ProtectionEquipments`
++++Protection equipment  used to protect specific conducting equipment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConductingEquipment.ProtectionEquipments`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProtectionEquipment.adoc[`ProtectionEquipment`]
+
+| Inherited from
+| xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+
+
+|===
+
+//[discrete]
+[#ProtectiveActionAdjustment]
+=== `ProtectiveActionAdjustment`
++++The operating condition to the Conducting Equipment is changed when protective action adjustment is activated. For ShuntCompensator or other conducting equipment that operates on discrete values (integer), the values given in float will be rounded.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConductingEquipment.ProtectiveActionAdjustment`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProtectiveActionAdjustment.adoc[`ProtectiveActionAdjustment`]
+
+| Inherited from
+| xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+
+
+|===
+
+//[discrete]
+[#ProtectiveActionEquipment]
+=== `ProtectiveActionEquipment`
++++Protective action is controlling equipment. This can be direct signals from the control center, or emulation of action done by protection equipment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.ProtectiveActionEquipment`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProtectiveActionEquipment.adoc[`ProtectiveActionEquipment`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#PSREvents]
+=== `PSREvents`
++++All events associated with this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSREvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PSREvent.adoc[`PSREvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#PSRType]
+=== `PSRType`
++++Custom classification for this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSRType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PSRType.adoc[`PSRType`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#q]
+=== `q`
++++Equivalent reactive power injection. Load sign convention is used, i.e. positive sign means flow out from a node.
+Starting value for steady state solutions.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.q`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReactivePower.adoc[`ReactivePower`]
+
+
+|===
+
+//[discrete]
+[#r]
+=== `r`
++++Positive sequence resistance. Used to represent Extended-Ward (IEC 60909).
+Usage : Extended-Ward is a result of network reduction prior to the data exchange.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.r`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Resistance.adoc[`Resistance`]
+
+
+|===
+
+//[discrete]
+[#r0]
+=== `r0`
++++Zero sequence resistance. Used to represent Extended-Ward (IEC 60909).
+Usage : Extended-Ward is a result of network reduction prior to the data exchange.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.r0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Resistance.adoc[`Resistance`]
+
+
+|===
+
+//[discrete]
+[#r2]
+=== `r2`
++++Negative sequence resistance. Used to represent Extended-Ward (IEC 60909).
+Usage : Extended-Ward is a result of network reduction prior to the data exchange.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.r2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Resistance.adoc[`Resistance`]
+
+
+|===
+
+//[discrete]
+[#ReactiveCapabilityCurve]
+=== `ReactiveCapabilityCurve`
++++The reactive capability curve used by this equivalent injection.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.ReactiveCapabilityCurve`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReactiveCapabilityCurve.adoc[`ReactiveCapabilityCurve`]
+
+
+|===
+
+//[discrete]
+[#regulationCapability]
+=== `regulationCapability`
++++Specifies whether or not the EquivalentInjection has the capability to regulate the local voltage. If true the EquivalentInjection can regulate. If false the EquivalentInjection cannot regulate. ReactiveCapabilityCurve can only be associated with EquivalentInjection  if the flag is true.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.regulationCapability`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#regulationStatus]
+=== `regulationStatus`
++++Specifies the regulation status of the EquivalentInjection.  True is regulating.  False is not regulating.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.regulationStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#regulationTarget]
+=== `regulationTarget`
++++The target voltage for voltage regulation. The attribute shall be a positive value.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.regulationTarget`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+
+|===
+
+//[discrete]
+[#ReportingGroup]
+=== `ReportingGroup`
++++Reporting groups to which this power system resource belongs.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ReportingGroup`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ReportingGroup.adoc[`ReportingGroup`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#SvStatus]
+=== `SvStatus`
++++The status state variable associated with this conducting equipment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConductingEquipment.SvStatus`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SvStatus.adoc[`SvStatus`]
+
+| Inherited from
+| xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Terminals]
+=== `Terminals`
++++Conducting equipment have terminals that may be connected to other conducting equipment terminals via connectivity nodes or topological nodes.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConductingEquipment.Terminals`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Terminal.adoc[`Terminal`]
+
+| Inherited from
+| xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+
+
+|===
+
+//[discrete]
+[#UsagePoints]
+=== `UsagePoints`
++++All usage points connected to the electrical grid through this equipment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.UsagePoints`
+| Cardinality
+| 0..*
+| Type
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#VerificationAction]
+=== `VerificationAction`
++++The verification action that is performed on the power system resource+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.VerificationAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/VerificationAction.adoc[`VerificationAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#WeatherStation]
+=== `WeatherStation`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Equipment.WeatherStation`
+| Cardinality
+| 0..*
+| Type
+| xref::class/WeatherStation.adoc[`WeatherStation`]
+
+| Inherited from
+| xref::class/Equipment.adoc[`Equipment`]
+
+
+|===
+
+//[discrete]
+[#x]
+=== `x`
++++Positive sequence reactance. Used to represent Extended-Ward (IEC 60909).
+Usage : Extended-Ward is a result of network reduction prior to the data exchange.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.x`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reactance.adoc[`Reactance`]
+
+
+|===
+
+//[discrete]
+[#x0]
+=== `x0`
++++Zero sequence reactance. Used to represent Extended-Ward (IEC 60909).
+Usage : Extended-Ward is a result of network reduction prior to the data exchange.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.x0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reactance.adoc[`Reactance`]
+
+
+|===
+
+//[discrete]
+[#x2]
+=== `x2`
++++Negative sequence reactance. Used to represent Extended-Ward (IEC 60909).
+Usage : Extended-Ward is a result of network reduction prior to the data exchange.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EquivalentInjection.x2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reactance.adoc[`Reactance`]
+
+
+|===
+
+

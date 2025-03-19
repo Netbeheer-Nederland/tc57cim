@@ -1,0 +1,41 @@
+= `ClearanceActionKind`
+:toclevels: 4
+
+
++++Type of clearance action.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ClearanceActionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `issue`
+| `cim:ClearanceActionKind.issue`
+| n/a
+
+| `release`
+| `cim:ClearanceActionKind.release`
+| n/a
+
+| `update`
+| `cim:ClearanceActionKind.update`
+| n/a
+|===

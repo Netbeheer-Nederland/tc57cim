@@ -1,0 +1,829 @@
+= `ConstraintResults`
+:toclevels: 4
+
+
++++Provides the Market results for the constraint processing for either the DAM or RTM. The data includes the constraint type (binding or violated), the solved value for the constraint, and the associated shadow price.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ConstraintResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`ConstraintResults`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ConstraintResults {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MktContingency {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Flowgate {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ConstraintClearing {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+ConstraintResults -> MktContingency: MktContingency
+
+
+ConstraintResults -> Flowgate: Flowgate
+
+
+ConstraintResults -> ConstraintClearing: ConstraintClearing
+
+
+ConstraintResults -> DiagramObject: DiagramObjects
+
+
+ConstraintResults -> InstanceSet: InstanceSet
+
+
+ConstraintResults -> Name: Names
+
+
+ConstraintResults -> ChangeSetMember: PropertiesCIMDataObject
+
+
+ConstraintResults -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<Flowgate,`Flowgate`>>
+| 1
+| xref::class/Flowgate.adoc[`Flowgate`]
+| n/a
+
+| <<MktContingency,`MktContingency`>>
+| 1
+| xref::class/MktContingency.adoc[`MktContingency`]
+| n/a
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<BGLimit,`BGLimit`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++This value is determined in DA and RTM. The SCUC optimization ensures that the MW flow on the Branch Group will not exceed this limit in the relevant direction.+++
+
+| <<BGTRResCap,`BGTRResCap`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Branch Group TR Reservation Capacity - This value is determined in DA and RTM. It is the amount of spare transmission capacity that is left for the TR holder to use.+++
+
+| <<ConstraintClearing,`ConstraintClearing`>>
+| 0..1
+| xref::class/ConstraintClearing.adoc[`ConstraintClearing`]
+| n/a
+
+| <<baseFlow,`baseFlow`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Branch base Power Flow.+++
+
+| <<bindingLimit,`bindingLimit`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++MW Limit.+++
+
+| <<clearedValue,`clearedValue`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Cleared MW.+++
+
+| <<competitivePathConstraint,`competitivePathConstraint`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Non-competitive path constraint Flag"(Y/N)  indicating whether the shadow price on a non-competitive path was non-zero.+++
+
+| <<constraintType,`constraintType`>>
+| 0..1
+| xref::enumeration/ResultsConstraintType.adoc[`ResultsConstraintType`]
+| +++Type of constraint.+++
+
+| <<limitFlag,`limitFlag`>>
+| 0..1
+| xref::enumeration/ConstraintLimitType.adoc[`ConstraintLimitType`]
+| +++Limit flag ('Maximum', 'Minimum').+++
+
+| <<optimizationFlag,`optimizationFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Included in optimization Y/N.+++
+
+| <<overloadMW,`overloadMW`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Transmission overload MW.+++
+
+| <<percentMW,`percentMW`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Actual MW flow as percent of limit.+++
+
+| <<shadowPrice,`shadowPrice`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Shadow Price ($/MW) for the commodity.  Shadow price for the corresponding constraint.+++
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Update time stamp.+++
+
+| <<updateType,`updateType`>>
+| 0..1
+| xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+| +++MQS change type.+++
+
+| <<updateUser,`updateUser`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Updated user.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#baseFlow]
+=== `baseFlow`
++++Branch base Power Flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.baseFlow`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#BGLimit]
+=== `BGLimit`
++++This value is determined in DA and RTM. The SCUC optimization ensures that the MW flow on the Branch Group will not exceed this limit in the relevant direction.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.BGLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#BGTRResCap]
+=== `BGTRResCap`
++++Branch Group TR Reservation Capacity - This value is determined in DA and RTM. It is the amount of spare transmission capacity that is left for the TR holder to use.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.BGTRResCap`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#bindingLimit]
+=== `bindingLimit`
++++MW Limit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.bindingLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#clearedValue]
+=== `clearedValue`
++++Cleared MW.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.clearedValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#competitivePathConstraint]
+=== `competitivePathConstraint`
++++Non-competitive path constraint Flag"(Y/N)  indicating whether the shadow price on a non-competitive path was non-zero.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.competitivePathConstraint`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#ConstraintClearing]
+=== `ConstraintClearing`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.ConstraintClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ConstraintClearing.adoc[`ConstraintClearing`]
+
+
+|===
+
+//[discrete]
+[#constraintType]
+=== `constraintType`
++++Type of constraint.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.constraintType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ResultsConstraintType.adoc[`ResultsConstraintType`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Flowgate]
+=== `Flowgate`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.Flowgate`
+| Cardinality
+| 1
+| Type
+| xref::class/Flowgate.adoc[`Flowgate`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#limitFlag]
+=== `limitFlag`
++++Limit flag ('Maximum', 'Minimum').+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.limitFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ConstraintLimitType.adoc[`ConstraintLimitType`]
+
+
+|===
+
+//[discrete]
+[#MktContingency]
+=== `MktContingency`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.MktContingency`
+| Cardinality
+| 1
+| Type
+| xref::class/MktContingency.adoc[`MktContingency`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#optimizationFlag]
+=== `optimizationFlag`
++++Included in optimization Y/N.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.optimizationFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#overloadMW]
+=== `overloadMW`
++++Transmission overload MW.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.overloadMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#percentMW]
+=== `percentMW`
++++Actual MW flow as percent of limit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.percentMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#shadowPrice]
+=== `shadowPrice`
++++Shadow Price ($/MW) for the commodity.  Shadow price for the corresponding constraint.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.shadowPrice`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
++++Update time stamp.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#updateType]
+=== `updateType`
++++MQS change type.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.updateType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+
+
+|===
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
++++Updated user.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintResults.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+

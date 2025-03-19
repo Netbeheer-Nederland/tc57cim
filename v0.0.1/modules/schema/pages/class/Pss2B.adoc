@@ -1,0 +1,1218 @@
+= `Pss2B`
+:toclevels: 4
+
+
++++Modified IEEE PSS2B.  Extra lead/lag (or rate) block added at end (up to 4 lead/lags total).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Pss2B`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/PowerSystemStabilizerDynamics.adoc[`PowerSystemStabilizerDynamics`]
+**** *`Pss2B`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+Pss2B {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ExcitationSystemDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+RemoteInputSignal {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pss2B -> ExcitationSystemDynamics: ExcitationSystemDynamics
+
+
+Pss2B -> RemoteInputSignal: RemoteInputSignal
+
+
+Pss2B -> DiagramObject: DiagramObjects
+
+
+Pss2B -> InstanceSet: InstanceSet
+
+
+Pss2B -> Name: Names
+
+
+Pss2B -> ChangeSetMember: PropertiesCIMDataObject
+
+
+Pss2B -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<ExcitationSystemDynamics,`ExcitationSystemDynamics`>>
+| 1
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+| +++Excitation system model with which this power system stabilizer model is associated.+++
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<a,`a`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Numerator constant (<i>a</i>).  Typical value = 1.+++
+
+| <<ks1,`ks1`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Stabilizer gain (<i>Ks1</i>).  Typical value = 12.+++
+
+| <<ks2,`ks2`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Gain on signal #2 (<i>Ks2</i>).  Typical value = 0,2.+++
+
+| <<ks3,`ks3`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Gain on signal #2 input before ramp-tracking filter (<i>Ks3</i>).  Typical value = 1.+++
+
+| <<ks4,`ks4`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Gain on signal #2 input after ramp-tracking filter (<i>Ks4</i>).  Typical value = 1.+++
+
+| <<m,`m`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Denominator order of ramp tracking filter (<i>m</i>).  Typical value = 5.+++
+
+| <<n,`n`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Order of ramp tracking filter (<i>n</i>).  Typical value = 1.+++
+
+| <<t1,`t1`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lead/lag time constant (<i>T</i><i><sub>1</sub></i>) (&gt;= 0).  Typical value = 0,12.+++
+
+| <<t10,`t10`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lead/lag time constant (<i>T</i><i><sub>10</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<t11,`t11`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lead/lag time constant (<i>T</i><i><sub>11</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<t2,`t2`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lead/lag time constant (<i>T</i><i><sub>2</sub></i>) (&gt;= 0).  Typical value = 0,02.+++
+
+| <<t3,`t3`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lead/lag time constant (<i>T</i><i><sub>3</sub></i>) (&gt;= 0).  Typical value = 0,3.+++
+
+| <<t4,`t4`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lead/lag time constant (<i>T</i><i><sub>4</sub></i>) (&gt;= 0).  Typical value = 0,02.+++
+
+| <<t6,`t6`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Time constant on signal #1 (<i>T</i><i><sub>6</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<t7,`t7`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Time constant on signal #2 (<i>T</i><i><sub>7</sub></i>) (&gt;= 0).  Typical value = 2.+++
+
+| <<t8,`t8`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lead of ramp tracking filter (<i>T</i><i><sub>8</sub></i>) (&gt;= 0).  Typical value = 0,2.+++
+
+| <<t9,`t9`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lag of ramp tracking filter (<i>T</i><i><sub>9</sub></i>) (&gt;= 0).  Typical value = 0,1.+++
+
+| <<ta,`ta`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lead constant (<i>T</i><i><sub>a</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<tb,`tb`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lag time constant (<i>T</i><i><sub>b</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<tw1,`tw1`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++First washout on signal #1 (<i>T</i><i><sub>w1</sub></i>) (&gt;= 0).  Typical value = 2.+++
+
+| <<tw2,`tw2`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Second washout on signal #1 (<i>T</i><i><sub>w2</sub></i>) (&gt;= 0).  Typical value = 2.+++
+
+| <<tw3,`tw3`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++First washout on signal #2 (<i>T</i><i><sub>w3</sub></i>) (&gt;= 0).  Typical value = 2.+++
+
+| <<tw4,`tw4`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Second washout on signal #2 (<i>T</i><i><sub>w4</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<vsi1max,`vsi1max`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Input signal #1 maximum limit (<i>Vsi1max</i>) (&gt; Pss2B.vsi1min).  Typical value = 2.+++
+
+| <<vsi1min,`vsi1min`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Input signal #1 minimum limit (<i>Vsi1min</i>) (&lt; Pss2B.vsi1max).  Typical value = -2.+++
+
+| <<vsi2max,`vsi2max`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Input signal #2 maximum limit (<i>Vsi2max</i>) (&gt; Pss2B.vsi2min).  Typical value = 2.+++
+
+| <<vsi2min,`vsi2min`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Input signal #2 minimum limit (<i>Vsi2min</i>) (&lt; Pss2B.vsi2max).  Typical value = -2.+++
+
+| <<vstmax,`vstmax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Stabilizer output maximum limit (<i>Vstmax</i>) (&gt; Pss2B.vstmin).  Typical value = 0,1.+++
+
+| <<vstmin,`vstmin`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Stabilizer output minimum limit (<i>Vstmin</i>) (&lt; Pss2B.vstmax).  Typical value = -0,1.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<enabled,`enabled`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<RemoteInputSignal,`RemoteInputSignal`>>
+| 0..*
+| xref::class/RemoteInputSignal.adoc[`RemoteInputSignal`]
+| +++Remote input signal used by this power system stabilizer model.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#a]
+=== `a`
++++Numerator constant (<i>a</i>).  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.a`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+//[discrete]
+[#ExcitationSystemDynamics]
+=== `ExcitationSystemDynamics`
++++Excitation system model with which this power system stabilizer model is associated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemStabilizerDynamics.ExcitationSystemDynamics`
+| Cardinality
+| 1
+| Type
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+| Inherited from
+| xref::class/PowerSystemStabilizerDynamics.adoc[`PowerSystemStabilizerDynamics`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ks1]
+=== `ks1`
++++Stabilizer gain (<i>Ks1</i>).  Typical value = 12.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.ks1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#ks2]
+=== `ks2`
++++Gain on signal #2 (<i>Ks2</i>).  Typical value = 0,2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.ks2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#ks3]
+=== `ks3`
++++Gain on signal #2 input before ramp-tracking filter (<i>Ks3</i>).  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.ks3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#ks4]
+=== `ks4`
++++Gain on signal #2 input after ramp-tracking filter (<i>Ks4</i>).  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.ks4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#m]
+=== `m`
++++Denominator order of ramp tracking filter (<i>m</i>).  Typical value = 5.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.m`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#n]
+=== `n`
++++Order of ramp tracking filter (<i>n</i>).  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.n`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#RemoteInputSignal]
+=== `RemoteInputSignal`
++++Remote input signal used by this power system stabilizer model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemStabilizerDynamics.RemoteInputSignal`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RemoteInputSignal.adoc[`RemoteInputSignal`]
+
+| Inherited from
+| xref::class/PowerSystemStabilizerDynamics.adoc[`PowerSystemStabilizerDynamics`]
+
+
+|===
+
+//[discrete]
+[#t1]
+=== `t1`
++++Lead/lag time constant (<i>T</i><i><sub>1</sub></i>) (&gt;= 0).  Typical value = 0,12.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.t1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t10]
+=== `t10`
++++Lead/lag time constant (<i>T</i><i><sub>10</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.t10`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t11]
+=== `t11`
++++Lead/lag time constant (<i>T</i><i><sub>11</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.t11`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t2]
+=== `t2`
++++Lead/lag time constant (<i>T</i><i><sub>2</sub></i>) (&gt;= 0).  Typical value = 0,02.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.t2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t3]
+=== `t3`
++++Lead/lag time constant (<i>T</i><i><sub>3</sub></i>) (&gt;= 0).  Typical value = 0,3.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.t3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t4]
+=== `t4`
++++Lead/lag time constant (<i>T</i><i><sub>4</sub></i>) (&gt;= 0).  Typical value = 0,02.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.t4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t6]
+=== `t6`
++++Time constant on signal #1 (<i>T</i><i><sub>6</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.t6`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t7]
+=== `t7`
++++Time constant on signal #2 (<i>T</i><i><sub>7</sub></i>) (&gt;= 0).  Typical value = 2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.t7`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t8]
+=== `t8`
++++Lead of ramp tracking filter (<i>T</i><i><sub>8</sub></i>) (&gt;= 0).  Typical value = 0,2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.t8`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t9]
+=== `t9`
++++Lag of ramp tracking filter (<i>T</i><i><sub>9</sub></i>) (&gt;= 0).  Typical value = 0,1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.t9`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#ta]
+=== `ta`
++++Lead constant (<i>T</i><i><sub>a</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.ta`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#tb]
+=== `tb`
++++Lag time constant (<i>T</i><i><sub>b</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.tb`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tw1]
+=== `tw1`
++++First washout on signal #1 (<i>T</i><i><sub>w1</sub></i>) (&gt;= 0).  Typical value = 2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.tw1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tw2]
+=== `tw2`
++++Second washout on signal #1 (<i>T</i><i><sub>w2</sub></i>) (&gt;= 0).  Typical value = 2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.tw2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tw3]
+=== `tw3`
++++First washout on signal #2 (<i>T</i><i><sub>w3</sub></i>) (&gt;= 0).  Typical value = 2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.tw3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tw4]
+=== `tw4`
++++Second washout on signal #2 (<i>T</i><i><sub>w4</sub></i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.tw4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#vsi1max]
+=== `vsi1max`
++++Input signal #1 maximum limit (<i>Vsi1max</i>) (&gt; Pss2B.vsi1min).  Typical value = 2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.vsi1max`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vsi1min]
+=== `vsi1min`
++++Input signal #1 minimum limit (<i>Vsi1min</i>) (&lt; Pss2B.vsi1max).  Typical value = -2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.vsi1min`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vsi2max]
+=== `vsi2max`
++++Input signal #2 maximum limit (<i>Vsi2max</i>) (&gt; Pss2B.vsi2min).  Typical value = 2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.vsi2max`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vsi2min]
+=== `vsi2min`
++++Input signal #2 minimum limit (<i>Vsi2min</i>) (&lt; Pss2B.vsi2max).  Typical value = -2.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.vsi2min`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vstmax]
+=== `vstmax`
++++Stabilizer output maximum limit (<i>Vstmax</i>) (&gt; Pss2B.vstmin).  Typical value = 0,1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.vstmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vstmin]
+=== `vstmin`
++++Stabilizer output minimum limit (<i>Vstmin</i>) (&lt; Pss2B.vstmax).  Typical value = -0,1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pss2B.vstmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+

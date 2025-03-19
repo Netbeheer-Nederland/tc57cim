@@ -1,0 +1,51 @@
+= `DispatchAcceptStatus`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:DispatchAcceptStatus`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ACCEPT`
+| `cim:DispatchAcceptStatus.ACCEPT`
+| n/a
+
+| `CANNOT`
+| `cim:DispatchAcceptStatus.CANNOT`
+| n/a
+
+| `DECLINE`
+| `cim:DispatchAcceptStatus.DECLINE`
+| n/a
+
+| `NON_RESPONSE`
+| `cim:DispatchAcceptStatus.NON_RESPONSE`
+| n/a
+
+| `OK`
+| `cim:DispatchAcceptStatus.OK`
+| n/a
+
+| `PARTIAL`
+| `cim:DispatchAcceptStatus.PARTIAL`
+| n/a
+|===

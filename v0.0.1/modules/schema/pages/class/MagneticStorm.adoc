@@ -1,0 +1,288 @@
+= `MagneticStorm`
+:toclevels: 4
+
+
++++A magnetic storm, a temporary disturbance of the earth's magnetic field, induced by radiation and streams of charged particles from the sun.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MagneticStorm`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+** xref::class/SpacePhenomenon.adoc[`SpacePhenomenon`]
+*** *`MagneticStorm`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+MagneticStorm {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+DateTimeInterval {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+EnvironmentalLocationType {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+PhenomenonClassification {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+EnvironmentalInformation {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+MagneticStorm -> DateTimeInterval: timeInterval
+
+
+MagneticStorm -> EnvironmentalLocationType: EnvironmentalLocationKind
+
+
+MagneticStorm -> PhenomenonClassification: PhenomenonClassification
+
+
+MagneticStorm -> EnvironmentalInformation: EnvironmentalInformation
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<changeDst,`changeDst`>>
+| 0..1
+| xref::class/MagneticField.adoc[`MagneticField`]
+| +++Change in the disturbance  - storm time (Dst) index. The size of a geomagnetic storm is classified as:
+- moderate ( -50 nT &gt;minimum of Dst &gt; -100 nT)
+- intense (-100 nT &gt; minimum Dst &gt; -250 nT) or 
+- super-storm ( minimum of Dst &lt; -250 nT).+++
+
+| <<EnvironmentalInformation,`EnvironmentalInformation`>>
+| 0..1
+| xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+| +++The forecast or observation of which this phenomenon description is a part.+++
+
+| <<PhenomenonClassification,`PhenomenonClassification`>>
+| 0..1
+| xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+| +++The classification of this phenomenon.+++
+
+| <<timeInterval,`timeInterval`>>
+| 0..1
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++The timestamp of the phenomenon as a single point or time interval.+++
+
+| <<EnvironmentalLocationKind,`EnvironmentalLocationKind`>>
+| 0..*
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+| +++Location of relevance to this environmental phenomenon.+++
+|===
+
+'''
+
+
+//[discrete]
+[#changeDst]
+=== `changeDst`
++++Change in the disturbance  - storm time (Dst) index. The size of a geomagnetic storm is classified as:
+- moderate ( -50 nT &gt;minimum of Dst &gt; -100 nT)
+- intense (-100 nT &gt; minimum Dst &gt; -250 nT) or 
+- super-storm ( minimum of Dst &lt; -250 nT).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MagneticStorm.changeDst`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MagneticField.adoc[`MagneticField`]
+
+
+|===
+
+//[discrete]
+[#EnvironmentalInformation]
+=== `EnvironmentalInformation`
++++The forecast or observation of which this phenomenon description is a part.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.EnvironmentalInformation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#EnvironmentalLocationKind]
+=== `EnvironmentalLocationKind`
++++Location of relevance to this environmental phenomenon.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.EnvironmentalLocationKind`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#PhenomenonClassification]
+=== `PhenomenonClassification`
++++The classification of this phenomenon.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.PhenomenonClassification`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#timeInterval]
+=== `timeInterval`
++++The timestamp of the phenomenon as a single point or time interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.timeInterval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+

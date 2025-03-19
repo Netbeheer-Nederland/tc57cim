@@ -1,0 +1,265 @@
+= `LossClearingResults`
+:toclevels: 4
+
+
++++Provides the MW loss for RUC Zones, subcontrol areas, and the total loss.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:LossClearingResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`LossClearingResults`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+LossClearingResults {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+SubControlArea {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RUCZone {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+LossClearing {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+HostControlArea {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+LossClearingResults -> SubControlArea: SubControlArea
+
+
+LossClearingResults -> RUCZone: RUCZone
+
+
+LossClearingResults -> LossClearing: LossClearing
+
+
+LossClearingResults -> HostControlArea: HostControlArea
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<HostControlArea,`HostControlArea`>>
+| 0..1
+| xref::class/HostControlArea.adoc[`HostControlArea`]
+| n/a
+
+| <<LossClearing,`LossClearing`>>
+| 0..1
+| xref::class/LossClearing.adoc[`LossClearing`]
+| n/a
+
+| <<RUCZone,`RUCZone`>>
+| 0..1
+| xref::class/RUCZone.adoc[`RUCZone`]
+| n/a
+
+| <<SubControlArea,`SubControlArea`>>
+| 0..1
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+| n/a
+
+| <<lossMW,`lossMW`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#HostControlArea]
+=== `HostControlArea`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LossClearingResults.HostControlArea`
+| Cardinality
+| 0..1
+| Type
+| xref::class/HostControlArea.adoc[`HostControlArea`]
+
+
+|===
+
+//[discrete]
+[#LossClearing]
+=== `LossClearing`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LossClearingResults.LossClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/LossClearing.adoc[`LossClearing`]
+
+
+|===
+
+//[discrete]
+[#lossMW]
+=== `lossMW`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LossClearingResults.lossMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#RUCZone]
+=== `RUCZone`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LossClearingResults.RUCZone`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RUCZone.adoc[`RUCZone`]
+
+
+|===
+
+//[discrete]
+[#SubControlArea]
+=== `SubControlArea`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LossClearingResults.SubControlArea`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+
+
+|===
+
+

@@ -1,0 +1,59 @@
+= `BidMitigationStatus`
+:toclevels: 4
+
+
++++For example:
+'S' - Mitigated by SMPM because of "misconduct"
+'L; - Mitigated by LMPM because of "misconduct"
+'R' - Modified by LMPM because of RMR rules
+'M' - Mitigated because of "misconduct" both by SMPM and LMPM
+'B' - Mitigated because of "misconduct" both by SMPM and modified by LMLM because of RMR rules
+'O' - original+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:BidMitigationStatus`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `B`
+| `cim:BidMitigationStatus.B`
+| n/a
+
+| `L`
+| `cim:BidMitigationStatus.L`
+| n/a
+
+| `M`
+| `cim:BidMitigationStatus.M`
+| n/a
+
+| `O`
+| `cim:BidMitigationStatus.O`
+| n/a
+
+| `R`
+| `cim:BidMitigationStatus.R`
+| n/a
+
+| `S`
+| `cim:BidMitigationStatus.S`
+| n/a
+|===

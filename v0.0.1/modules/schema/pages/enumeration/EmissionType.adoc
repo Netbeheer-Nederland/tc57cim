@@ -1,0 +1,53 @@
+= `EmissionType`
+:toclevels: 4
+
+
++++The type of emission.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:EmissionType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `carbonDioxide`
+| `cim:EmissionType.carbonDioxide`
+| n/a
+
+| `carbonDisulfide`
+| `cim:EmissionType.carbonDisulfide`
+| n/a
+
+| `chlorine`
+| `cim:EmissionType.chlorine`
+| n/a
+
+| `hydrogenSulfide`
+| `cim:EmissionType.hydrogenSulfide`
+| n/a
+
+| `nitrogenOxide`
+| `cim:EmissionType.nitrogenOxide`
+| n/a
+
+| `sulfurDioxide`
+| `cim:EmissionType.sulfurDioxide`
+| n/a
+|===

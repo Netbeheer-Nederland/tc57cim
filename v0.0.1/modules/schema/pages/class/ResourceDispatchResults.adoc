@@ -1,0 +1,549 @@
+= `ResourceDispatchResults`
+:toclevels: 4
+
+
++++The ResourceDispatchResults class provides market results that can be provided to a SC. The specific data provided consists of several indicators such as contingency flags, blocked start up, and RMR dispatch. It also provides the projected overall and the regulating status of the resource.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ResourceDispatchResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ResourceDispatchResults`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ResourceDispatchResults {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ResourceClearing {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RegisteredResource {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+ResourceDispatchResults -> ResourceClearing: ResourceClearing
+
+
+ResourceDispatchResults -> RegisteredResource: RegisteredResource
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<RegisteredResource,`RegisteredResource`>>
+| 0..1
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| n/a
+
+| <<ResourceClearing,`ResourceClearing`>>
+| 0..1
+| xref::class/ResourceClearing.adoc[`ResourceClearing`]
+| n/a
+
+| <<blockedDispatch,`blockedDispatch`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Blocked Dispatch Indicator (Yes/No)+++
+
+| <<blockedPublishDOP,`blockedPublishDOP`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Block sending DOP to ADS (Y/N)+++
+
+| <<contingencyFlag,`contingencyFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Contingent Operating Reserve Indicator (Yes/No).  Resource participating with AS capacity in contingency dispatch.+++
+
+| <<limitIndicator,`limitIndicator`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++indicate which limit is the constraints+++
+
+| <<lowerLimit,`lowerLimit`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++resource energy ramping lower limit+++
+
+| <<maxRampRate,`maxRampRate`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++maximum ramp rate+++
+
+| <<operatingLimitHigh,`operatingLimitHigh`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The upper operating limit incorporating any derate used by the RTD for the Binding Interval.+++
+
+| <<operatingLimitLow,`operatingLimitLow`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The lower operating limit incorporating any derate used by the RTD for the Binding Interval.+++
+
+| <<penaltyDispatchIndicator,`penaltyDispatchIndicator`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Penalty Dispatch Indicator (Yes / No) indicating an un-economic adjustment.+++
+
+| <<regulatingLimitHigh,`regulatingLimitHigh`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The upper regulating limit incorporating any derate used by the RTD for the Binding Interval.+++
+
+| <<regulatingLimitLow,`regulatingLimitLow`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The lower regulating limit incorporating any derate used by the RTD for the Binding Interval.+++
+
+| <<resourceStatus,`resourceStatus`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Unit Commitment Status (On/Off/Starting)+++
+
+| <<totalSchedule,`totalSchedule`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Resource total upward schedule.  total schedule = En + all AS per resource per interval+++
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| n/a
+
+| <<updateType,`updateType`>>
+| 0..1
+| xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+| n/a
+
+| <<updateUser,`updateUser`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| n/a
+
+| <<upperLimit,`upperLimit`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++resource energy ramping upper limit+++
+|===
+
+'''
+
+
+//[discrete]
+[#blockedDispatch]
+=== `blockedDispatch`
++++Blocked Dispatch Indicator (Yes/No)+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.blockedDispatch`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#blockedPublishDOP]
+=== `blockedPublishDOP`
++++Block sending DOP to ADS (Y/N)+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.blockedPublishDOP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#contingencyFlag]
+=== `contingencyFlag`
++++Contingent Operating Reserve Indicator (Yes/No).  Resource participating with AS capacity in contingency dispatch.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.contingencyFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#limitIndicator]
+=== `limitIndicator`
++++indicate which limit is the constraints+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.limitIndicator`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#lowerLimit]
+=== `lowerLimit`
++++resource energy ramping lower limit+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.lowerLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#maxRampRate]
+=== `maxRampRate`
++++maximum ramp rate+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.maxRampRate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#operatingLimitHigh]
+=== `operatingLimitHigh`
++++The upper operating limit incorporating any derate used by the RTD for the Binding Interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.operatingLimitHigh`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#operatingLimitLow]
+=== `operatingLimitLow`
++++The lower operating limit incorporating any derate used by the RTD for the Binding Interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.operatingLimitLow`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#penaltyDispatchIndicator]
+=== `penaltyDispatchIndicator`
++++Penalty Dispatch Indicator (Yes / No) indicating an un-economic adjustment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.penaltyDispatchIndicator`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+//[discrete]
+[#regulatingLimitHigh]
+=== `regulatingLimitHigh`
++++The upper regulating limit incorporating any derate used by the RTD for the Binding Interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.regulatingLimitHigh`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#regulatingLimitLow]
+=== `regulatingLimitLow`
++++The lower regulating limit incorporating any derate used by the RTD for the Binding Interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.regulatingLimitLow`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#ResourceClearing]
+=== `ResourceClearing`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.ResourceClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ResourceClearing.adoc[`ResourceClearing`]
+
+
+|===
+
+//[discrete]
+[#resourceStatus]
+=== `resourceStatus`
++++Unit Commitment Status (On/Off/Starting)+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.resourceStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#totalSchedule]
+=== `totalSchedule`
++++Resource total upward schedule.  total schedule = En + all AS per resource per interval+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.totalSchedule`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#updateType]
+=== `updateType`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.updateType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+
+
+|===
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#upperLimit]
+=== `upperLimit`
++++resource energy ramping upper limit+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.upperLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+

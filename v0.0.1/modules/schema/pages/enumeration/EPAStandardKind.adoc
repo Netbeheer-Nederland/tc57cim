@@ -1,0 +1,33 @@
+= `EPAStandardKind`
+:toclevels: 4
+
+
++++List of EPA standards.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:EPAStandardKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `8082`
+| `cim:EPAStandardKind.8082`
+| n/a
+|===

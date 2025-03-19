@@ -1,0 +1,207 @@
+= `VDCOL`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:VDCOL`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`VDCOL`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+VDCOL {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+IdcInverterControl {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+HVDCLookUpTable {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Delay {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+VDCOL -> IdcInverterControl: IdcInverterControl
+
+
+VDCOL -> HVDCLookUpTable: HVDCLookUpTable
+
+
+VDCOL -> Delay: Delay
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<Delay,`Delay`>>
+| 1
+| xref::class/Delay.adoc[`Delay`]
+| n/a
+
+| <<HVDCLookUpTable,`HVDCLookUpTable`>>
+| 1..*
+| xref::class/HVDCLookUpTable.adoc[`HVDCLookUpTable`]
+| n/a
+
+| <<IdcInverterControl,`IdcInverterControl`>>
+| 0..1
+| xref::class/IdcInverterControl.adoc[`IdcInverterControl`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#Delay]
+=== `Delay`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:VDCOL.Delay`
+| Cardinality
+| 1
+| Type
+| xref::class/Delay.adoc[`Delay`]
+
+
+|===
+
+//[discrete]
+[#HVDCLookUpTable]
+=== `HVDCLookUpTable`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:VDCOL.HVDCLookUpTable`
+| Cardinality
+| 1..*
+| Type
+| xref::class/HVDCLookUpTable.adoc[`HVDCLookUpTable`]
+
+
+|===
+
+//[discrete]
+[#IdcInverterControl]
+=== `IdcInverterControl`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:VDCOL.IdcInverterControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IdcInverterControl.adoc[`IdcInverterControl`]
+
+
+|===
+
+

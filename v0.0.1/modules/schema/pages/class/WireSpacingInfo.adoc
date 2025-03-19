@@ -1,0 +1,773 @@
+= `WireSpacingInfo`
+:toclevels: 4
+
+
++++Wire spacing data that associates multiple wire positions with the line segment, and allows to calculate line segment impedances. Number of phases can be derived from the number of associated wire positions whose phase is not neutral.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:WireSpacingInfo`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/AssetInfo.adoc[`AssetInfo`]
+*** *`WireSpacingInfo`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+WireSpacingInfo {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+
+DuctBank {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Structure {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+WirePosition {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ACLineSegment {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PowerSystemResource {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+CatalogAssetType {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Asset {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ProductAssetModel {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+WireSpacingInfo -> DuctBank: DuctBank
+
+
+WireSpacingInfo -> Structure: Structures
+
+
+WireSpacingInfo -> WirePosition: WirePositions
+
+
+WireSpacingInfo -> ACLineSegment: ACLineSegment
+
+
+WireSpacingInfo -> PowerSystemResource: PowerSystemResources
+
+
+WireSpacingInfo -> CatalogAssetType: CatalogAssetType
+
+
+WireSpacingInfo -> Asset: Assets
+
+
+WireSpacingInfo -> ProductAssetModel: ProductAssetModel
+
+
+WireSpacingInfo -> DiagramObject: DiagramObjects
+
+
+WireSpacingInfo -> InstanceSet: InstanceSet
+
+
+WireSpacingInfo -> Name: Names
+
+
+WireSpacingInfo -> ChangeSetMember: PropertiesCIMDataObject
+
+
+WireSpacingInfo -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<WirePositions,`WirePositions`>>
+| 1..*
+| xref::class/WirePosition.adoc[`WirePosition`]
+| +++All positions of single wires (phase or neutral) making the conductor.+++
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<DuctBank,`DuctBank`>>
+| 0..1
+| xref::class/DuctBank.adoc[`DuctBank`]
+| n/a
+
+| <<isCable,`isCable`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true, this spacing data describes a cable.+++
+
+| <<phaseWireCount,`phaseWireCount`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Number of wire sub-conductors in the symmetrical bundle (typically between 1 and 4).+++
+
+| <<phaseWireSpacing,`phaseWireSpacing`>>
+| 0..1
+| xref::class/Length.adoc[`Length`]
+| +++Distance between wire sub-conductors in a symmetrical bundle.+++
+
+| <<usage,`usage`>>
+| 0..1
+| xref::enumeration/WireUsageKind.adoc[`WireUsageKind`]
+| +++Usage of the associated wires.+++
+
+| <<ACLineSegment,`ACLineSegment`>>
+| 0..*
+| xref::class/ACLineSegment.adoc[`ACLineSegment`]
+| +++The AC line segment defined by the wire spacing information+++
+
+| <<Structures,`Structures`>>
+| 0..*
+| xref::class/Structure.adoc[`Structure`]
+| n/a
+
+| <<CatalogAssetType,`CatalogAssetType`>>
+| 0..1
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+| +++Asset information (nameplate) for this catalog asset type.+++
+
+| <<ProductAssetModel,`ProductAssetModel`>>
+| 0..1
+| xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+| +++Product asset model which conforms to this catalog asset type.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<Assets,`Assets`>>
+| 0..*
+| xref::class/Asset.adoc[`Asset`]
+| +++All assets described by this data.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<PowerSystemResources,`PowerSystemResources`>>
+| 0..*
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+| +++All power system resources with this datasheet information.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#ACLineSegment]
+=== `ACLineSegment`
++++The AC line segment defined by the wire spacing information+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireSpacingInfo.ACLineSegment`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ACLineSegment.adoc[`ACLineSegment`]
+
+
+|===
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets described by this data.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+//[discrete]
+[#CatalogAssetType]
+=== `CatalogAssetType`
++++Asset information (nameplate) for this catalog asset type.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.CatalogAssetType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DuctBank]
+=== `DuctBank`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireSpacingInfo.DuctBank`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DuctBank.adoc[`DuctBank`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#isCable]
+=== `isCable`
++++If true, this spacing data describes a cable.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireSpacingInfo.isCable`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#phaseWireCount]
+=== `phaseWireCount`
++++Number of wire sub-conductors in the symmetrical bundle (typically between 1 and 4).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireSpacingInfo.phaseWireCount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#phaseWireSpacing]
+=== `phaseWireSpacing`
++++Distance between wire sub-conductors in a symmetrical bundle.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireSpacingInfo.phaseWireSpacing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+//[discrete]
+[#PowerSystemResources]
+=== `PowerSystemResources`
++++All power system resources with this datasheet information.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.PowerSystemResources`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+//[discrete]
+[#ProductAssetModel]
+=== `ProductAssetModel`
++++Product asset model which conforms to this catalog asset type.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.ProductAssetModel`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Structures]
+=== `Structures`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireSpacingInfo.Structures`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Structure.adoc[`Structure`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#usage]
+=== `usage`
++++Usage of the associated wires.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireSpacingInfo.usage`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/WireUsageKind.adoc[`WireUsageKind`]
+
+
+|===
+
+//[discrete]
+[#WirePositions]
+=== `WirePositions`
++++All positions of single wires (phase or neutral) making the conductor.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireSpacingInfo.WirePositions`
+| Cardinality
+| 1..*
+| Type
+| xref::class/WirePosition.adoc[`WirePosition`]
+
+
+|===
+
+

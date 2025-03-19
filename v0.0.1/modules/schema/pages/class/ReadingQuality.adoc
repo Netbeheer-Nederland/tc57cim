@@ -1,0 +1,241 @@
+= `ReadingQuality`
+:toclevels: 4
+
+
++++Quality of a specific reading value or interval reading value. Note that more than one quality may be applicable to a given reading. Typically not used unless problems or unusual conditions occur (i.e., quality for each reading is assumed to be good unless stated otherwise in associated reading quality type). It can also be used with the corresponding reading quality type to indicate that the validation has been performed and succeeded.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ReadingQuality`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`ReadingQuality`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ReadingQuality {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ReadingQualityType {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+BaseReading {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+ReadingQuality -> ReadingQualityType: ReadingQualityType
+
+
+ReadingQuality -> BaseReading: Reading
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<ReadingQualityType,`ReadingQualityType`>>
+| 1
+| xref::class/ReadingQualityType.adoc[`ReadingQualityType`]
+| +++Type of this reading quality.+++
+
+| <<Reading,`Reading`>>
+| 0..1
+| xref::class/BaseReading.adoc[`BaseReading`]
+| +++Reading value to which this quality applies.+++
+
+| <<comment,`comment`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Elaboration on the quality code.+++
+
+| <<source,`source`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++System acting as the source of the quality code.+++
+
+| <<timeStamp,`timeStamp`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time at which the quality code was assigned or ascertained.+++
+|===
+
+'''
+
+
+//[discrete]
+[#comment]
+=== `comment`
++++Elaboration on the quality code.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingQuality.comment`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#Reading]
+=== `Reading`
++++Reading value to which this quality applies.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingQuality.Reading`
+| Cardinality
+| 0..1
+| Type
+| xref::class/BaseReading.adoc[`BaseReading`]
+
+
+|===
+
+//[discrete]
+[#ReadingQualityType]
+=== `ReadingQualityType`
++++Type of this reading quality.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingQuality.ReadingQualityType`
+| Cardinality
+| 1
+| Type
+| xref::class/ReadingQualityType.adoc[`ReadingQualityType`]
+
+
+|===
+
+//[discrete]
+[#source]
+=== `source`
++++System acting as the source of the quality code.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingQuality.source`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#timeStamp]
+=== `timeStamp`
++++Date and time at which the quality code was assigned or ascertained.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingQuality.timeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+

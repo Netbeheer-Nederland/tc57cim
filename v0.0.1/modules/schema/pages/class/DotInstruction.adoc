@@ -1,0 +1,621 @@
+= `DotInstruction`
+:toclevels: 4
+
+
++++Provides the necessary information (on a resource basis) to capture the Dispatch Operating Target (DOT) results on a Dispatch interval. This information is only relevant to the RT interval market.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DotInstruction`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`DotInstruction`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+DotInstruction {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RegisteredResource {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+InstructionClearingDOT {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+DotInstruction -> RegisteredResource: RegisteredResource
+
+
+DotInstruction -> InstructionClearingDOT: InstructionClearingDOT
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstructionClearingDOT,`InstructionClearingDOT`>>
+| 1..*
+| xref::class/InstructionClearingDOT.adoc[`InstructionClearingDOT`]
+| n/a
+
+| <<DOT,`DOT`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Dispatch operating target value.+++
+
+| <<RegisteredResource,`RegisteredResource`>>
+| 0..1
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| n/a
+
+| <<actualRampRate,`actualRampRate`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Actual ramp rate.+++
+
+| <<compliantIndicator,`compliantIndicator`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Flag indicating whether or not the resource was in compliance with the instruction (plus/minus 10%).
+
+Directs if a unit is allowed to set the price (ex-post pricing).+++
+
+| <<economicMaxOverride,`economicMaxOverride`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Economic Max Limit override for unit, this value is null, if it is not, this value overrides the Energy column value.  
+Allows dispatcher to override the unit's energy value.+++
+
+| <<expectedEnergy,`expectedEnergy`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Expected energy.+++
+
+| <<generatorPerformanceDegree,`generatorPerformanceDegree`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The Degree of Generator Performance (DGP) used for the unit. Measure of how a generator responds to raise /lower signals.  Calculated every five minutes.+++
+
+| <<hourAheadSchedEnergy,`hourAheadSchedEnergy`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++HASP results.+++
+
+| <<hourlySchedule,`hourlySchedule`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Hourly Schedule (DA Energy Schedule).+++
+
+| <<instructionTime,`instructionTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++The date/time for the instruction.+++
+
+| <<maximumEmergencyInd,`maximumEmergencyInd`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if maximum emergency limit activated; false otherwise. If unit is requested  to move up to its max emergency limit., this flag is set to true.+++
+
+| <<meterLoadFollowing,`meterLoadFollowing`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Meter Sub System Load Following.+++
+
+| <<nonRampRestrictedMW,`nonRampRestrictedMW`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Desired MW that is not ramp restricted. If no ramp rate limit existed for the unit, this is the MW value tha t the unit was requested to move to.+++
+
+| <<nonSpinReserve,`nonSpinReserve`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Non Spin Reserve used to procure energy.+++
+
+| <<previousDOTTimeStamp,`previousDOTTimeStamp`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Timestamp when the previous DOT value was issued.+++
+
+| <<rampRateLimit,`rampRateLimit`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The ramp rate limit for the unit in MWs per minute. Participant bidding data.+++
+
+| <<regulationStatus,`regulationStatus`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Regulation Status (Yes/No).+++
+
+| <<spinReserve,`spinReserve`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Spin Reserve used to procure energy.+++
+
+| <<standardRampEnergy,`standardRampEnergy`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Standard ramping energy (MWH).+++
+
+| <<supplementalEnergy,`supplementalEnergy`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Supplemental Energy procure by Real Time Dispatch.+++
+
+| <<unitStatus,`unitStatus`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Output results from the case identifying the reason the unit was committed by the software.+++
+|===
+
+'''
+
+
+//[discrete]
+[#actualRampRate]
+=== `actualRampRate`
++++Actual ramp rate.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.actualRampRate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#compliantIndicator]
+=== `compliantIndicator`
++++Flag indicating whether or not the resource was in compliance with the instruction (plus/minus 10%).
+
+Directs if a unit is allowed to set the price (ex-post pricing).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.compliantIndicator`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#DOT]
+=== `DOT`
++++Dispatch operating target value.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.DOT`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#economicMaxOverride]
+=== `economicMaxOverride`
++++Economic Max Limit override for unit, this value is null, if it is not, this value overrides the Energy column value.  
+Allows dispatcher to override the unit's energy value.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.economicMaxOverride`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#expectedEnergy]
+=== `expectedEnergy`
++++Expected energy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.expectedEnergy`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#generatorPerformanceDegree]
+=== `generatorPerformanceDegree`
++++The Degree of Generator Performance (DGP) used for the unit. Measure of how a generator responds to raise /lower signals.  Calculated every five minutes.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.generatorPerformanceDegree`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#hourAheadSchedEnergy]
+=== `hourAheadSchedEnergy`
++++HASP results.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.hourAheadSchedEnergy`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#hourlySchedule]
+=== `hourlySchedule`
++++Hourly Schedule (DA Energy Schedule).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.hourlySchedule`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#InstructionClearingDOT]
+=== `InstructionClearingDOT`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.InstructionClearingDOT`
+| Cardinality
+| 1..*
+| Type
+| xref::class/InstructionClearingDOT.adoc[`InstructionClearingDOT`]
+
+
+|===
+
+//[discrete]
+[#instructionTime]
+=== `instructionTime`
++++The date/time for the instruction.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.instructionTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#maximumEmergencyInd]
+=== `maximumEmergencyInd`
++++True if maximum emergency limit activated; false otherwise. If unit is requested  to move up to its max emergency limit., this flag is set to true.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.maximumEmergencyInd`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#meterLoadFollowing]
+=== `meterLoadFollowing`
++++Meter Sub System Load Following.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.meterLoadFollowing`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#nonRampRestrictedMW]
+=== `nonRampRestrictedMW`
++++Desired MW that is not ramp restricted. If no ramp rate limit existed for the unit, this is the MW value tha t the unit was requested to move to.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.nonRampRestrictedMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#nonSpinReserve]
+=== `nonSpinReserve`
++++Non Spin Reserve used to procure energy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.nonSpinReserve`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#previousDOTTimeStamp]
+=== `previousDOTTimeStamp`
++++Timestamp when the previous DOT value was issued.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.previousDOTTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#rampRateLimit]
+=== `rampRateLimit`
++++The ramp rate limit for the unit in MWs per minute. Participant bidding data.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.rampRateLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+//[discrete]
+[#regulationStatus]
+=== `regulationStatus`
++++Regulation Status (Yes/No).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.regulationStatus`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#spinReserve]
+=== `spinReserve`
++++Spin Reserve used to procure energy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.spinReserve`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#standardRampEnergy]
+=== `standardRampEnergy`
++++Standard ramping energy (MWH).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.standardRampEnergy`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#supplementalEnergy]
+=== `supplementalEnergy`
++++Supplemental Energy procure by Real Time Dispatch.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.supplementalEnergy`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#unitStatus]
+=== `unitStatus`
++++Output results from the case identifying the reason the unit was committed by the software.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.unitStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+

@@ -1,0 +1,175 @@
+= `RMRDetermination`
+:toclevels: 4
+
+
++++Indicates whether unit is a reliablity must run unit: required to be on to satisfy Grid Code Reliablitiy criteria, load demand, or voltage support.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RMRDetermination`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`RMRDetermination`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+RMRDetermination {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Bid {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MitigatedBidClearing {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+RMRDetermination -> Bid: Bid
+
+
+RMRDetermination -> MitigatedBidClearing: MitigatedBidClearing
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<MitigatedBidClearing,`MitigatedBidClearing`>>
+| 1..*
+| xref::class/MitigatedBidClearing.adoc[`MitigatedBidClearing`]
+| n/a
+
+| <<Bid,`Bid`>>
+| 0..1
+| xref::class/Bid.adoc[`Bid`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#Bid]
+=== `Bid`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RMRDetermination.Bid`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+//[discrete]
+[#MitigatedBidClearing]
+=== `MitigatedBidClearing`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RMRDetermination.MitigatedBidClearing`
+| Cardinality
+| 1..*
+| Type
+| xref::class/MitigatedBidClearing.adoc[`MitigatedBidClearing`]
+
+
+|===
+
+

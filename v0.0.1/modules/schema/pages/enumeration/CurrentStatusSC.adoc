@@ -1,0 +1,38 @@
+= `CurrentStatusSC`
+:toclevels: 4
+
+
++++ACTIVE
+INACTIVE+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CurrentStatusSC`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ACTIVE`
+| `cim:CurrentStatusSC.ACTIVE`
+| n/a
+
+| `INACTIVE`
+| `cim:CurrentStatusSC.INACTIVE`
+| n/a
+|===

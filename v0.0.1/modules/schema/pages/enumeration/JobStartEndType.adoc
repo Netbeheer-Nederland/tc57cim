@@ -1,0 +1,39 @@
+= `JobStartEndType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:JobStartEndType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `END`
+| `cim:JobStartEndType.END`
+| n/a
+
+| `NA`
+| `cim:JobStartEndType.NA`
+| n/a
+
+| `START`
+| `cim:JobStartEndType.START`
+| n/a
+|===

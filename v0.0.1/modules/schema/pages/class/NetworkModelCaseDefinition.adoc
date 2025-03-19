@@ -1,0 +1,141 @@
+= `NetworkModelCaseDefinition`
+:toclevels: 4
+
+
++++Instructions to build a network model case, including when appropriate the results.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:NetworkModelCaseDefinition`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`NetworkModelCaseDefinition`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+NetworkModelCaseDefinition {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Operation {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+NetworkModelCaseDefinition -> Operation: Operation
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<Operation,`Operation`>>
+| 0..*
+| xref::class/Operation.adoc[`Operation`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#Operation]
+=== `Operation`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NetworkModelCaseDefinition.Operation`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Operation.adoc[`Operation`]
+
+
+|===
+
+

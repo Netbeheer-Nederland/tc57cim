@@ -1,0 +1,37 @@
+= `PinBranchGroupKind`
+:toclevels: 4
+
+
++++Categorisation of type of compare done on a branch group.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:PinBranchGroupKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `activePower`
+| `cim:PinBranchGroupKind.activePower`
+| n/a
+
+| `reactivePower`
+| `cim:PinBranchGroupKind.reactivePower`
+| n/a
+|===

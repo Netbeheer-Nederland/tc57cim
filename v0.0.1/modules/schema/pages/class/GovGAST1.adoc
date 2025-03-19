@@ -1,0 +1,1377 @@
+= `GovGAST1`
+:toclevels: 4
+
+
++++Modified single shaft gas turbine.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:GovGAST1`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+**** *`GovGAST1`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+GovGAST1 {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AsynchronousMachineDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+TurbineLoadControllerDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+SynchronousMachineDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GovGAST1 -> AsynchronousMachineDynamics: AsynchronousMachineDynamics
+
+
+GovGAST1 -> TurbineLoadControllerDynamics: TurbineLoadControllerDynamics
+
+
+GovGAST1 -> SynchronousMachineDynamics: SynchronousMachineDynamics
+
+
+GovGAST1 -> DiagramObject: DiagramObjects
+
+
+GovGAST1 -> InstanceSet: InstanceSet
+
+
+GovGAST1 -> Name: Names
+
+
+GovGAST1 -> ChangeSetMember: PropertiesCIMDataObject
+
+
+GovGAST1 -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<a,`a`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Turbine power time constant numerator scale factor (<i>a</i>).  Typical value = 0,8.+++
+
+| <<b,`b`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Turbine power time constant denominator scale factor (<i>b</i>) (&gt;0).  Typical value = 1.+++
+
+| <<db1,`db1`>>
+| 0..1
+| xref::class/Frequency.adoc[`Frequency`]
+| +++Intentional dead-band width (<i>db1</i>).  Unit = Hz.  Typical value = 0.+++
+
+| <<db2,`db2`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Unintentional dead-band (<i>db2</i>).  Unit = MW.  Typical value = 0.+++
+
+| <<eps,`eps`>>
+| 0..1
+| xref::class/Frequency.adoc[`Frequency`]
+| +++Intentional db hysteresis (<i>eps</i>).  Unit = Hz.  Typical value = 0.+++
+
+| <<fidle,`fidle`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Fuel flow at zero power output (<i>Fidle</i>).  Typical value = 0,18.+++
+
+| <<gv1,`gv1`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Nonlinear gain point 1, PU gv (<i>Gv1</i>).  Typical value = 0.+++
+
+| <<gv2,`gv2`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Nonlinear gain point 2,PU gv (<i>Gv2</i>).  Typical value = 0.+++
+
+| <<gv3,`gv3`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Nonlinear gain point 3, PU gv (<i>Gv3</i>).  Typical value = 0.+++
+
+| <<gv4,`gv4`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Nonlinear gain point 4, PU gv (<i>Gv4</i>).  Typical value = 0.+++
+
+| <<gv5,`gv5`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Nonlinear gain point 5, PU gv (<i>Gv5</i>).  Typical value = 0.+++
+
+| <<gv6,`gv6`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Nonlinear gain point 6, PU gv (<i>Gv6</i>).  Typical value = 0.+++
+
+| <<ka,`ka`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Governor gain (<i>Ka</i>).  Typical value = 0.+++
+
+| <<kt,`kt`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Temperature limiter gain (<i>Kt</i>).  Typical value = 3.+++
+
+| <<lmax,`lmax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Ambient temperature load limit (<i>Lmax</i>).  <i>Lmax</i> is the turbine power output corresponding to the limiting exhaust gas temperature.  Typical value = 1.+++
+
+| <<loadinc,`loadinc`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Valve position change allowed at fast rate (<i>Loadinc</i>).  Typical value = 0,05.+++
+
+| <<ltrate,`ltrate`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Maximum long term fuel valve opening rate (<i>Ltrate</i>).  Typical value = 0,02.+++
+
+| <<mwbase,`mwbase`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Base for power values (<i>MWbase</i>) (&gt; 0).  Unit = MW.+++
+
+| <<pgv1,`pgv1`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Nonlinear gain point 1, PU power (<i>Pgv1</i>).  Typical value = 0.+++
+
+| <<pgv2,`pgv2`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Nonlinear gain point 2, PU power (<i>Pgv2</i>).  Typical value = 0.+++
+
+| <<pgv3,`pgv3`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Nonlinear gain point 3, PU power (<i>Pgv3</i>).  Typical value = 0.+++
+
+| <<pgv4,`pgv4`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Nonlinear gain point 4, PU power (<i>Pgv4</i>).  Typical value = 0.+++
+
+| <<pgv5,`pgv5`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Nonlinear gain point 5, PU power (<i>Pgv5</i>).  Typical value = 0.+++
+
+| <<pgv6,`pgv6`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Nonlinear gain point 6, PU power (<i>Pgv6</i>).  Typical value = 0.+++
+
+| <<r,`r`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Permanent droop (<i>R</i>) (&gt;0).  Typical value = 0,04.+++
+
+| <<rmax,`rmax`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Maximum fuel valve opening rate (<i>Rmax</i>).  Unit = PU / s.  Typical value = 1.+++
+
+| <<t1,`t1`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Governor mechanism time constant (<i>T1</i>) (&gt;= 0).  <i>T1</i> represents the natural valve positioning time constant of the governor for small disturbances, as seen when rate limiting is not in effect.  Typical value = 0,5.+++
+
+| <<t2,`t2`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Turbine power time constant (<i>T2</i>) (&gt;= 0). <i>T2</i> represents delay due to internal energy storage of the gas turbine engine. <i>T2</i> can be used to give a rough approximation to the delay associated with acceleration of the compressor spool of a multi-shaft engine, or with the compressibility of gas in the plenum of the free power turbine of an aero-derivative unit, for example.  Typical value = 0,5.+++
+
+| <<t3,`t3`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Turbine exhaust temperature time constant (<i>T3</i>) (&gt;= 0).  <i>T3</i> represents delay in the exhaust temperature and load limiting system. Typical value = 3.+++
+
+| <<t4,`t4`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Governor lead time constant (<i>T4</i>) (&gt;= 0).  Typical value = 0.+++
+
+| <<t5,`t5`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Governor lag time constant (<i>T5</i>) (&gt;= 0).  If = 0, entire gain and lead-lag block is bypassed.  Typical value = 0.+++
+
+| <<tltr,`tltr`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Valve position averaging time constant (<i>Tltr</i>) (&gt;= 0).  Typical value = 10.+++
+
+| <<vmax,`vmax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum turbine power, PU of MWbase (<i>Vmax</i>) (&gt; GovGAST1.vmin).  Typical value = 1.+++
+
+| <<vmin,`vmin`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Minimum turbine power, PU of MWbase (<i>Vmin</i>) (&lt; GovGAST1.vmax).  Typical value = 0.+++
+
+| <<AsynchronousMachineDynamics,`AsynchronousMachineDynamics`>>
+| 0..1
+| xref::class/AsynchronousMachineDynamics.adoc[`AsynchronousMachineDynamics`]
+| +++Asynchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<SynchronousMachineDynamics,`SynchronousMachineDynamics`>>
+| 0..1
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+| +++Synchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.+++
+
+| <<TurbineLoadControllerDynamics,`TurbineLoadControllerDynamics`>>
+| 0..1
+| xref::class/TurbineLoadControllerDynamics.adoc[`TurbineLoadControllerDynamics`]
+| +++Turbine load controller providing input to this turbine-governor.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<enabled,`enabled`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#a]
+=== `a`
++++Turbine power time constant numerator scale factor (<i>a</i>).  Typical value = 0,8.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.a`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#AsynchronousMachineDynamics]
+=== `AsynchronousMachineDynamics`
++++Asynchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineGovernorDynamics.AsynchronousMachineDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AsynchronousMachineDynamics.adoc[`AsynchronousMachineDynamics`]
+
+| Inherited from
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+
+|===
+
+//[discrete]
+[#b]
+=== `b`
++++Turbine power time constant denominator scale factor (<i>b</i>) (&gt;0).  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.b`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#db1]
+=== `db1`
++++Intentional dead-band width (<i>db1</i>).  Unit = Hz.  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.db1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Frequency.adoc[`Frequency`]
+
+
+|===
+
+//[discrete]
+[#db2]
+=== `db2`
++++Unintentional dead-band (<i>db2</i>).  Unit = MW.  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.db2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+//[discrete]
+[#eps]
+=== `eps`
++++Intentional db hysteresis (<i>eps</i>).  Unit = Hz.  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.eps`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Frequency.adoc[`Frequency`]
+
+
+|===
+
+//[discrete]
+[#fidle]
+=== `fidle`
++++Fuel flow at zero power output (<i>Fidle</i>).  Typical value = 0,18.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.fidle`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gv1]
+=== `gv1`
++++Nonlinear gain point 1, PU gv (<i>Gv1</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.gv1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gv2]
+=== `gv2`
++++Nonlinear gain point 2,PU gv (<i>Gv2</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.gv2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gv3]
+=== `gv3`
++++Nonlinear gain point 3, PU gv (<i>Gv3</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.gv3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gv4]
+=== `gv4`
++++Nonlinear gain point 4, PU gv (<i>Gv4</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.gv4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gv5]
+=== `gv5`
++++Nonlinear gain point 5, PU gv (<i>Gv5</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.gv5`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gv6]
+=== `gv6`
++++Nonlinear gain point 6, PU gv (<i>Gv6</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.gv6`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ka]
+=== `ka`
++++Governor gain (<i>Ka</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.ka`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kt]
+=== `kt`
++++Temperature limiter gain (<i>Kt</i>).  Typical value = 3.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.kt`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#lmax]
+=== `lmax`
++++Ambient temperature load limit (<i>Lmax</i>).  <i>Lmax</i> is the turbine power output corresponding to the limiting exhaust gas temperature.  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.lmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#loadinc]
+=== `loadinc`
++++Valve position change allowed at fast rate (<i>Loadinc</i>).  Typical value = 0,05.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.loadinc`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#ltrate]
+=== `ltrate`
++++Maximum long term fuel valve opening rate (<i>Ltrate</i>).  Typical value = 0,02.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.ltrate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#mwbase]
+=== `mwbase`
++++Base for power values (<i>MWbase</i>) (&gt; 0).  Unit = MW.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.mwbase`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#pgv1]
+=== `pgv1`
++++Nonlinear gain point 1, PU power (<i>Pgv1</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.pgv1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pgv2]
+=== `pgv2`
++++Nonlinear gain point 2, PU power (<i>Pgv2</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.pgv2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pgv3]
+=== `pgv3`
++++Nonlinear gain point 3, PU power (<i>Pgv3</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.pgv3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pgv4]
+=== `pgv4`
++++Nonlinear gain point 4, PU power (<i>Pgv4</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.pgv4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pgv5]
+=== `pgv5`
++++Nonlinear gain point 5, PU power (<i>Pgv5</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.pgv5`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pgv6]
+=== `pgv6`
++++Nonlinear gain point 6, PU power (<i>Pgv6</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.pgv6`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#r]
+=== `r`
++++Permanent droop (<i>R</i>) (&gt;0).  Typical value = 0,04.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.r`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#rmax]
+=== `rmax`
++++Maximum fuel valve opening rate (<i>Rmax</i>).  Unit = PU / s.  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.rmax`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#SynchronousMachineDynamics]
+=== `SynchronousMachineDynamics`
++++Synchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineGovernorDynamics.SynchronousMachineDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+
+| Inherited from
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+
+|===
+
+//[discrete]
+[#t1]
+=== `t1`
++++Governor mechanism time constant (<i>T1</i>) (&gt;= 0).  <i>T1</i> represents the natural valve positioning time constant of the governor for small disturbances, as seen when rate limiting is not in effect.  Typical value = 0,5.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.t1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t2]
+=== `t2`
++++Turbine power time constant (<i>T2</i>) (&gt;= 0). <i>T2</i> represents delay due to internal energy storage of the gas turbine engine. <i>T2</i> can be used to give a rough approximation to the delay associated with acceleration of the compressor spool of a multi-shaft engine, or with the compressibility of gas in the plenum of the free power turbine of an aero-derivative unit, for example.  Typical value = 0,5.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.t2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t3]
+=== `t3`
++++Turbine exhaust temperature time constant (<i>T3</i>) (&gt;= 0).  <i>T3</i> represents delay in the exhaust temperature and load limiting system. Typical value = 3.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.t3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t4]
+=== `t4`
++++Governor lead time constant (<i>T4</i>) (&gt;= 0).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.t4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t5]
+=== `t5`
++++Governor lag time constant (<i>T5</i>) (&gt;= 0).  If = 0, entire gain and lead-lag block is bypassed.  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.t5`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#tltr]
+=== `tltr`
++++Valve position averaging time constant (<i>Tltr</i>) (&gt;= 0).  Typical value = 10.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.tltr`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#TurbineLoadControllerDynamics]
+=== `TurbineLoadControllerDynamics`
++++Turbine load controller providing input to this turbine-governor.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineGovernorDynamics.TurbineLoadControllerDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TurbineLoadControllerDynamics.adoc[`TurbineLoadControllerDynamics`]
+
+| Inherited from
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+
+|===
+
+//[discrete]
+[#vmax]
+=== `vmax`
++++Maximum turbine power, PU of MWbase (<i>Vmax</i>) (&gt; GovGAST1.vmin).  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.vmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#vmin]
+=== `vmin`
++++Minimum turbine power, PU of MWbase (<i>Vmin</i>) (&lt; GovGAST1.vmax).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST1.vmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+

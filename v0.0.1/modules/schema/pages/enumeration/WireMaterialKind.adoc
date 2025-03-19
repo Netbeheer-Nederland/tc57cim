@@ -1,0 +1,65 @@
+= `WireMaterialKind`
+:toclevels: 4
+
+
++++Kind of wire material.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:WireMaterialKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `aaac`
+| `cim:WireMaterialKind.aaac`
+| n/a
+
+| `acsr`
+| `cim:WireMaterialKind.acsr`
+| n/a
+
+| `aluminum`
+| `cim:WireMaterialKind.aluminum`
+| n/a
+
+| `aluminumAlloy`
+| `cim:WireMaterialKind.aluminumAlloy`
+| n/a
+
+| `aluminumAlloySteel`
+| `cim:WireMaterialKind.aluminumAlloySteel`
+| n/a
+
+| `aluminumSteel`
+| `cim:WireMaterialKind.aluminumSteel`
+| n/a
+
+| `copper`
+| `cim:WireMaterialKind.copper`
+| n/a
+
+| `other`
+| `cim:WireMaterialKind.other`
+| n/a
+
+| `steel`
+| `cim:WireMaterialKind.steel`
+| n/a
+|===

@@ -1,0 +1,41 @@
+= `SampleContainerType`
+:toclevels: 4
+
+
++++Types of sample containers.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SampleContainerType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `glassCan`
+| `cim:SampleContainerType.glassCan`
+| n/a
+
+| `metalCan`
+| `cim:SampleContainerType.metalCan`
+| n/a
+
+| `syringe`
+| `cim:SampleContainerType.syringe`
+| n/a
+|===

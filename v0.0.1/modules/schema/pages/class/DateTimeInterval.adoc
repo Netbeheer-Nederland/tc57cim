@@ -1,0 +1,85 @@
+= `DateTimeInterval`
+:toclevels: 4
+
+
++++Interval between two date and time points, where the interval includes the start time but excludes end time.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DateTimeInterval`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`DateTimeInterval`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<end,`end`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++End date and time of this interval.  The end date and time where the interval is defined up to, but excluded.+++
+
+| <<start,`start`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Start date and time of this interval.  The start date and time is included in the defined interval.+++
+|===
+
+'''
+
+
+//[discrete]
+[#end]
+=== `end`
++++End date and time of this interval.  The end date and time where the interval is defined up to, but excluded.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateTimeInterval.end`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#start]
+=== `start`
++++Start date and time of this interval.  The start date and time is included in the defined interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateTimeInterval.start`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+

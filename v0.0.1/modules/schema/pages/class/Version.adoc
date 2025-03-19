@@ -1,0 +1,129 @@
+= `Version`
+:toclevels: 4
+
+
++++This is the version for a group of devices or objects.  This could be used to track the version for any group of objects or devices over time. For example, for a DERGroup, the requesting system may want to get the details of a specific version of a DERGroup.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Version`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`Version`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<major,`major`>>
+| 1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++major release level for this version+++
+
+| <<date,`date`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++date of this version+++
+
+| <<minor,`minor`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++minor release level for this version+++
+
+| <<revision,`revision`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++revision level for this version+++
+|===
+
+'''
+
+
+//[discrete]
+[#date]
+=== `date`
++++date of this version+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Version.date`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#major]
+=== `major`
++++major release level for this version+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Version.major`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#minor]
+=== `minor`
++++minor release level for this version+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Version.minor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#revision]
+=== `revision`
++++revision level for this version+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Version.revision`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+

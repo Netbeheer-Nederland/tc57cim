@@ -1,0 +1,129 @@
+= `Status`
+:toclevels: 4
+
+
++++Current status information relevant to an entity.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Status`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`Status`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<dateTime,`dateTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time for which status 'value' applies.+++
+
+| <<reason,`reason`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Reason code or explanation for why an object went to the current status 'value'.+++
+
+| <<remark,`remark`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Pertinent information regarding the current 'value', as free form text.+++
+
+| <<value,`value`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Status value at 'dateTime'; prior status changes may have been kept in instances of activity records associated with the object to which this status applies.+++
+|===
+
+'''
+
+
+//[discrete]
+[#dateTime]
+=== `dateTime`
++++Date and time for which status 'value' applies.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Status.dateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#reason]
+=== `reason`
++++Reason code or explanation for why an object went to the current status 'value'.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Status.reason`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#remark]
+=== `remark`
++++Pertinent information regarding the current 'value', as free form text.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Status.remark`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#value]
+=== `value`
++++Status value at 'dateTime'; prior status changes may have been kept in instances of activity records associated with the object to which this status applies.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Status.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+

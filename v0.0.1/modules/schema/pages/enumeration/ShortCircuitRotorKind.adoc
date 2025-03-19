@@ -1,0 +1,45 @@
+= `ShortCircuitRotorKind`
+:toclevels: 4
+
+
++++Type of rotor, used by short circuit applications.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ShortCircuitRotorKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `salientPole1`
+| `cim:ShortCircuitRotorKind.salientPole1`
+| n/a
+
+| `salientPole2`
+| `cim:ShortCircuitRotorKind.salientPole2`
+| n/a
+
+| `turboSeries1`
+| `cim:ShortCircuitRotorKind.turboSeries1`
+| n/a
+
+| `turboSeries2`
+| `cim:ShortCircuitRotorKind.turboSeries2`
+| n/a
+|===
