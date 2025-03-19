@@ -1,0 +1,26 @@
+{
+  "name": "Protect documentation branches",
+  "target": "branch",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "refs/heads/docs-dev",
+        "refs/heads/docs"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "update"
+    },
+    {
+      "type": "creation"
+    }
+  ],
+  "bypass_actors": []
+}

@@ -1,0 +1,50 @@
+name: Preview version
+on:
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Python 3.12.7
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.12.7"
+      - name: Install Poetry 2.0.1
+        run: curl -sSL https://install.python-poetry.org | python3 - --version 2.0.1
+      - name: Install Python project dependencies
+        run: $HOME/.local/bin/poetry install --no-root
+      - name: Install Just 1.38.0
+        run: pip install rust-just==1.38.0
+      - name: Generate documentation and schemas
+        run: |
+          just build
+      - name: Commit artifacts to `docs-dev` branch
+        run: |
+          git fetch
+          git checkout docs-dev
+
+          if [ -d "${{ github.ref_name }}" ]; then
+              git rm -rf "${{ github.ref_name }}"
+          fi
+
+          sed -i '/^version: .*$/d' artifacts/documentation/antora.yml
+          sed -i "/^name: .*$/a version: ${{ github.ref_name }}" artifacts/documentation/antora.yml
+
+          mv artifacts/documentation "${{ github.ref_name }}"
+
+          git config user.name "CICD"
+          git config user.email "cicd@netbeheernederland.nl"
+
+          git add "${{ github.ref_name }}"
+          git commit -m "Added docs and schemas for ${{ github.ref_name }}"
+          git push

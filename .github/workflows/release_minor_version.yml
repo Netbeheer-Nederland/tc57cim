@@ -1,0 +1,80 @@
+name: Release new minor version
+on:
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Tag version
+        run: |
+          git fetch --tags
+
+          if [ -z $(git tag | grep -P '^v\d+\.\d+\.\d+$' | grep ^${{ github.ref_name }} | cut -c 2- | sort -t . -k 1,1n -k 2,2n -k 3,3n | tail -1) ]; then
+              NEW_VERSION="${{ github.ref_name }}.1.0"
+          else
+              LATEST_VERSION=$(git tag | grep -P '^v\d+\.\d+\.\d+$' | grep ^${{ github.ref_name }} | cut -c 2- | sort -t . -k 1,1n -k 2,2n -k 3,3n | tail -1)
+              LATEST_MAJOR=$(echo $LATEST_VERSION | cut -d . -f 1)
+              LATEST_MINOR=$(echo $LATEST_VERSION | cut -d . -f 2)
+              NEW_MINOR=$(echo $LATEST_MINOR + 1 | bc)
+              NEW_VERSION="v$LATEST_MAJOR.$NEW_MINOR.0"
+          fi
+
+          git config user.name "CICD"
+          git config user.email "cicd@netbeheernederland.nl"
+
+          git tag $NEW_VERSION
+          git push --tags
+          echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
+      - name: Setup Python 3.12.7
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.12.7"
+      - name: Install Poetry 2.0.1
+        run: curl -sSL https://install.python-poetry.org | python3 - --version 2.0.1
+      - name: Install Python project dependencies
+        run: $HOME/.local/bin/poetry install --no-root
+      - name: Install Just 1.38.0
+        run: pip install rust-just==1.38.0
+      - name: Generate documentation and schemas
+        run: |
+          VERSION=${{ env.NEW_VERSION }} just build
+      - name: Commit artifacts to `docs` branch
+        run: |
+          git fetch
+          git checkout docs
+
+          if [ -d "${{ env.NEW_VERSION }}" ]; then
+              exit 1  # Versions are set in stone.
+          fi
+
+          sed -i '/^version: .*$/d' artifacts/documentation/antora.yml
+          sed -i "/^name: .*$/a version: ${{ env.NEW_VERSION }}" artifacts/documentation/antora.yml
+
+          mv artifacts/documentation "${{ env.NEW_VERSION }}"
+
+          git config user.name "CICD"
+          git config user.email "cicd@netbeheernederland.nl"
+
+          git add "${{ env.NEW_VERSION }}"
+          git commit -m "Added docs and schemas for ${{ env.NEW_VERSION }}"
+          git push
+      - name: Prepare release
+        run: echo "" > release_notes.txt
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: release_notes.txt
+          tag_name: ${{ env.NEW_VERSION }}
+          files: |
+            ${{ env.NEW_VERSION }}/modules/schema/attachments/information_models/*.schema.linkml.yml
+            ${{ env.NEW_VERSION }}/modules/schema/attachments/schemas/*/*
