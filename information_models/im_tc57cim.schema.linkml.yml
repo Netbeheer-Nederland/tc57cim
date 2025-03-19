@@ -1491,6 +1491,7 @@ classes:
         description: All operational tags placed on this power system resource.
   IdentifiedObject:
     class_uri: cim:IdentifiedObject
+    tree_root: true
     from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Core
     description: This is a root class to provide common identification for all classes
       needing identification and naming attributes.
