@@ -1,0 +1,42 @@
+= `ReserveRequirementType`
+:toclevels: 4
+
+
++++For example:
+Operating Reserve, Regulation, Contingency+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ReserveRequirementType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `CONT`
+| `cim:ReserveRequirementType.CONT`
+| n/a
+
+| `OPRSV`
+| `cim:ReserveRequirementType.OPRSV`
+| n/a
+
+| `REG`
+| `cim:ReserveRequirementType.REG`
+| n/a
+|===

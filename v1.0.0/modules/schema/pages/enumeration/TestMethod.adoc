@@ -1,0 +1,97 @@
+= `TestMethod`
+:toclevels: 4
+
+
++++Possible test methods.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TestMethod`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `60567ByDisplacement`
+| `cim:TestMethod.60567ByDisplacement`
+| n/a
+
+| `60567ByPartition`
+| `cim:TestMethod.60567ByPartition`
+| n/a
+
+| `60567ByVacuum`
+| `cim:TestMethod.60567ByVacuum`
+| n/a
+
+| `60970Automatic`
+| `cim:TestMethod.60970Automatic`
+| n/a
+
+| `60970Manual1`
+| `cim:TestMethod.60970Manual1`
+| n/a
+
+| `60970Manual2`
+| `cim:TestMethod.60970Manual2`
+| n/a
+
+| `61125A`
+| `cim:TestMethod.61125A`
+| n/a
+
+| `61125B`
+| `cim:TestMethod.61125B`
+| n/a
+
+| `61125C`
+| `cim:TestMethod.61125C`
+| n/a
+
+| `62270AnnexA`
+| `cim:TestMethod.62270AnnexA`
+| n/a
+
+| `62535AnnexA`
+| `cim:TestMethod.62535AnnexA`
+| n/a
+
+| `62535Main`
+| `cim:TestMethod.62535Main`
+| n/a
+
+| `D1275A`
+| `cim:TestMethod.D1275A`
+| n/a
+
+| `D1275B`
+| `cim:TestMethod.D1275B`
+| n/a
+
+| `D3612A`
+| `cim:TestMethod.D3612A`
+| n/a
+
+| `D3612B`
+| `cim:TestMethod.D3612B`
+| n/a
+
+| `D3612C`
+| `cim:TestMethod.D3612C`
+| n/a
+|===

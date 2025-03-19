@@ -1,0 +1,45 @@
+= `RemoteUnitType`
+:toclevels: 4
+
+
++++Type of remote unit.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:RemoteUnitType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ControlCenter`
+| `cim:RemoteUnitType.ControlCenter`
+| n/a
+
+| `IED`
+| `cim:RemoteUnitType.IED`
+| n/a
+
+| `RTU`
+| `cim:RemoteUnitType.RTU`
+| n/a
+
+| `SubstationControlSystem`
+| `cim:RemoteUnitType.SubstationControlSystem`
+| n/a
+|===

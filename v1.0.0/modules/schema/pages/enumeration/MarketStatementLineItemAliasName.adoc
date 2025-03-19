@@ -1,0 +1,53 @@
+= `MarketStatementLineItemAliasName`
+:toclevels: 4
+
+
++++market statement line item alias name+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MarketStatementLineItemAliasName`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `CHARGE_CODE_INTERVAL_DETAIL`
+| `cim:MarketStatementLineItemAliasName.CHARGE_CODE_INTERVAL_DETAIL`
+| n/a
+
+| `CHARGE_CODE_INTERVAL_TOTAL`
+| `cim:MarketStatementLineItemAliasName.CHARGE_CODE_INTERVAL_TOTAL`
+| n/a
+
+| `CHARGE_CODE_SUMMARY`
+| `cim:MarketStatementLineItemAliasName.CHARGE_CODE_SUMMARY`
+| n/a
+
+| `CHARGE_GROUP`
+| `cim:MarketStatementLineItemAliasName.CHARGE_GROUP`
+| n/a
+
+| `PARENT_CHARGE_GROUP`
+| `cim:MarketStatementLineItemAliasName.PARENT_CHARGE_GROUP`
+| n/a
+
+| `TRADE_DATE`
+| `cim:MarketStatementLineItemAliasName.TRADE_DATE`
+| n/a
+|===

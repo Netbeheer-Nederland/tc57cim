@@ -1,0 +1,35 @@
+= `SourceSinkFlag`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SourceSinkFlag`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `CSNK`
+| `cim:SourceSinkFlag.CSNK`
+| n/a
+
+| `CSRC`
+| `cim:SourceSinkFlag.CSRC`
+| n/a
+|===

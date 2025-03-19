@@ -1,0 +1,275 @@
+= `StreetAddress`
+:toclevels: 4
+
+
++++General purpose street and postal address information.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:StreetAddress`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`StreetAddress`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+StreetAddress {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Status {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+StreetDetail {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+TownDetail {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+StreetAddress -> Status: status
+
+
+StreetAddress -> StreetDetail: streetDetail
+
+
+StreetAddress -> TownDetail: townDetail
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<language,`language`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The language in which the address is specified, using ISO 639-1 two digit language code.+++
+
+| <<poBox,`poBox`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Post office box.+++
+
+| <<postalCode,`postalCode`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Postal code for the address.+++
+
+| <<status,`status`>>
+| 0..1
+| xref::class/Status.adoc[`Status`]
+| +++Status of this address.+++
+
+| <<streetDetail,`streetDetail`>>
+| 0..1
+| xref::class/StreetDetail.adoc[`StreetDetail`]
+| +++Street detail.+++
+
+| <<townDetail,`townDetail`>>
+| 0..1
+| xref::class/TownDetail.adoc[`TownDetail`]
+| +++Town detail.+++
+|===
+
+'''
+
+
+//[discrete]
+[#language]
+=== `language`
++++The language in which the address is specified, using ISO 639-1 two digit language code.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.language`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#poBox]
+=== `poBox`
++++Post office box.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.poBox`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#postalCode]
+=== `postalCode`
++++Postal code for the address.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.postalCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#status]
+=== `status`
++++Status of this address.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+
+|===
+
+//[discrete]
+[#streetDetail]
+=== `streetDetail`
++++Street detail.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.streetDetail`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StreetDetail.adoc[`StreetDetail`]
+
+
+|===
+
+//[discrete]
+[#townDetail]
+=== `townDetail`
++++Town detail.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.townDetail`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TownDetail.adoc[`TownDetail`]
+
+
+|===
+
+

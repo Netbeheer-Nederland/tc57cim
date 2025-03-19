@@ -1,0 +1,41 @@
+= `EPAStandardEditionKind`
+:toclevels: 4
+
+
++++List of editions for EPA standards.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:EPAStandardEditionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `A`
+| `cim:EPAStandardEditionKind.A`
+| n/a
+
+| `none`
+| `cim:EPAStandardEditionKind.none`
+| n/a
+
+| `unknown`
+| `cim:EPAStandardEditionKind.unknown`
+| n/a
+|===

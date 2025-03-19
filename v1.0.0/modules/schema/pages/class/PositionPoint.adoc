@@ -1,0 +1,251 @@
+= `PositionPoint`
+:toclevels: 4
+
+
++++Set of spatial coordinates that determine a point, defined in the coordinate system specified in 'Location.CoordinateSystem'. Use a single position point instance to describe a point-oriented location. Use a sequence of position points to describe a line-oriented object (physical location of non-point oriented objects like cables or lines), or area of an object (like a substation or a geographical zone - in this case, have first and last position point with the same values).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PositionPoint`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`PositionPoint`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+PositionPoint {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Location {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+PositionPoint -> Location: Location
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<Location,`Location`>>
+| 1
+| xref::class/Location.adoc[`Location`]
+| +++Location described by this position point.+++
+
+| <<groupNumber,`groupNumber`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Zero-relative sequence number of this group within a series of points; used when there is a need to express disjoint groups of points that are considered to be part of a single location.+++
+
+| <<sequenceNumber,`sequenceNumber`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Zero-relative sequence number of this point within a series of points.+++
+
+| <<xPosition,`xPosition`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++X axis position.+++
+
+| <<yPosition,`yPosition`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Y axis position.+++
+
+| <<zPosition,`zPosition`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Z axis position.+++
+|===
+
+'''
+
+
+//[discrete]
+[#groupNumber]
+=== `groupNumber`
++++Zero-relative sequence number of this group within a series of points; used when there is a need to express disjoint groups of points that are considered to be part of a single location.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PositionPoint.groupNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location described by this position point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PositionPoint.Location`
+| Cardinality
+| 1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+//[discrete]
+[#sequenceNumber]
+=== `sequenceNumber`
++++Zero-relative sequence number of this point within a series of points.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PositionPoint.sequenceNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#xPosition]
+=== `xPosition`
++++X axis position.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PositionPoint.xPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#yPosition]
+=== `yPosition`
++++Y axis position.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PositionPoint.yPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#zPosition]
+=== `zPosition`
++++(if applicable) Z axis position.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PositionPoint.zPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+

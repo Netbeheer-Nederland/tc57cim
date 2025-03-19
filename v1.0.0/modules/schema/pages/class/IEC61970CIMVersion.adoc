@@ -1,0 +1,85 @@
+= `IEC61970CIMVersion`
+:toclevels: 4
+
+
++++This is the IEC 61970 CIM version number assigned to this UML model.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:IEC61970CIMVersion`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`IEC61970CIMVersion`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<date,`date`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Form is YYYY-MM-DD for example for January 5, 2009 it is 2009-01-05.+++
+
+| <<version,`version`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Form is IEC61970CIMXXvYY where XX is the major CIM package version and the YY is the minor version. For example IEC61970CIM13v18.+++
+|===
+
+'''
+
+
+//[discrete]
+[#date]
+=== `date`
++++Form is YYYY-MM-DD for example for January 5, 2009 it is 2009-01-05.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IEC61970CIMVersion.date`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#version]
+=== `version`
++++Form is IEC61970CIMXXvYY where XX is the major CIM package version and the YY is the minor version. For example IEC61970CIM13v18.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IEC61970CIMVersion.version`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+

@@ -1,0 +1,6 @@
+name: im-tc57cim
+version: v1.0.0
+title: TC57CIM
+nav:
+- modules/ROOT/nav.adoc
+- modules/schema/nav.adoc

@@ -1,0 +1,497 @@
+= `ScheduledVoltageLimitValue`
+:toclevels: 4
+
+
++++A voltage limit value for a scheduled time.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ScheduledVoltageLimitValue`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/ScheduledLimitValue.adoc[`ScheduledLimitValue`]
+*** *`ScheduledVoltageLimitValue`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ScheduledVoltageLimitValue {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+Season {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ScheduledLimitDependency {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+ScheduledVoltageLimitValue -> Season: Season
+
+
+ScheduledVoltageLimitValue -> ScheduledLimitDependency: ScheduledLimitDependency
+
+
+ScheduledVoltageLimitValue -> DiagramObject: DiagramObjects
+
+
+ScheduledVoltageLimitValue -> InstanceSet: InstanceSet
+
+
+ScheduledVoltageLimitValue -> Name: Names
+
+
+ScheduledVoltageLimitValue -> ChangeSetMember: PropertiesCIMDataObject
+
+
+ScheduledVoltageLimitValue -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<ScheduledLimitDependency,`ScheduledLimitDependency`>>
+| 1
+| xref::class/ScheduledLimitDependency.adoc[`ScheduledLimitDependency`]
+| n/a
+
+| <<value,`value`>>
+| 0..1
+| xref::class/Voltage.adoc[`Voltage`]
+| +++The voltage limit value for the scheduled time.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<Season,`Season`>>
+| 0..1
+| xref::class/Season.adoc[`Season`]
+| +++The season for which the scheduled limits applies.    If not specified, then applicable ot any season.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ScheduledLimitDependency]
+=== `ScheduledLimitDependency`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ScheduledLimitValue.ScheduledLimitDependency`
+| Cardinality
+| 1
+| Type
+| xref::class/ScheduledLimitDependency.adoc[`ScheduledLimitDependency`]
+
+| Inherited from
+| xref::class/ScheduledLimitValue.adoc[`ScheduledLimitValue`]
+
+
+|===
+
+//[discrete]
+[#Season]
+=== `Season`
++++The season for which the scheduled limits applies.    If not specified, then applicable ot any season.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ScheduledLimitValue.Season`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Season.adoc[`Season`]
+
+| Inherited from
+| xref::class/ScheduledLimitValue.adoc[`ScheduledLimitValue`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#value]
+=== `value`
++++The voltage limit value for the scheduled time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ScheduledVoltageLimitValue.value`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+
+|===
+
+

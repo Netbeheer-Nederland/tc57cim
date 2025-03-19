@@ -1,0 +1,1185 @@
+= `AssetTemperaturePressureAnalog`
+:toclevels: 4
+
+
++++Temperature or pressure type of asset analog.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AssetTemperaturePressureAnalog`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Measurement.adoc[`Measurement`]
+*** xref::class/Analog.adoc[`Analog`]
+**** xref::class/AssetAnalog.adoc[`AssetAnalog`]
+***** *`AssetTemperaturePressureAnalog`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+AssetTemperaturePressureAnalog {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+
+TestStandard {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+AnalogValue {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+AnalogLimitSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ACDCTerminal {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ProtectiveActionAdjustment {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+CalculationMethodHierarchy {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+PowerSystemResource {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PinMeasurement {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+MeasurementCalculatorInput {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Asset {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+MeasurementAction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Location {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Procedure {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+AssetTemperaturePressureAnalog -> TestStandard: TestStandard
+
+
+AssetTemperaturePressureAnalog -> AnalogValue: AnalogValues
+
+
+AssetTemperaturePressureAnalog -> AnalogLimitSet: LimitSets
+
+
+AssetTemperaturePressureAnalog -> ACDCTerminal: Terminal
+
+
+AssetTemperaturePressureAnalog -> ProtectiveActionAdjustment: ProtectiveActionAdjustment
+
+
+AssetTemperaturePressureAnalog -> CalculationMethodHierarchy: CalculationMethodHierarchy
+
+
+AssetTemperaturePressureAnalog -> PowerSystemResource: PowerSystemResource
+
+
+AssetTemperaturePressureAnalog -> PinMeasurement: PinMeasurement
+
+
+AssetTemperaturePressureAnalog -> MeasurementCalculatorInput: MeasurementCalculatorInput
+
+
+AssetTemperaturePressureAnalog -> Asset: Asset
+
+
+AssetTemperaturePressureAnalog -> MeasurementAction: MeasurementAction
+
+
+AssetTemperaturePressureAnalog -> Location: Locations
+
+
+AssetTemperaturePressureAnalog -> Procedure: Procedures
+
+
+AssetTemperaturePressureAnalog -> DiagramObject: DiagramObjects
+
+
+AssetTemperaturePressureAnalog -> InstanceSet: InstanceSet
+
+
+AssetTemperaturePressureAnalog -> Name: Names
+
+
+AssetTemperaturePressureAnalog -> ChangeSetMember: PropertiesCIMDataObject
+
+
+AssetTemperaturePressureAnalog -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<kind,`kind`>>
+| 0..1
+| xref::enumeration/AssetTemperaturePressureAnalogKind.adoc[`AssetTemperaturePressureAnalogKind`]
+| +++Kind of analog representing temperature or pressure related to an asset.+++
+
+| <<Asset,`Asset`>>
+| 0..1
+| xref::class/Asset.adoc[`Asset`]
+| +++Asset that has a measurement+++
+
+| <<CalculationMethodHierarchy,`CalculationMethodHierarchy`>>
+| 0..1
+| xref::class/CalculationMethodHierarchy.adoc[`CalculationMethodHierarchy`]
+| +++Calculation method hierarchy which applies to this analog.+++
+
+| <<MeasurementAction,`MeasurementAction`>>
+| 0..1
+| xref::class/MeasurementAction.adoc[`MeasurementAction`]
+| +++The measurement action that is performed on the measurement+++
+
+| <<PowerSystemResource,`PowerSystemResource`>>
+| 0..1
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+| +++The power system resource that contains the measurement.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<Terminal,`Terminal`>>
+| 0..1
+| xref::class/ACDCTerminal.adoc[`ACDCTerminal`]
+| +++One or more measurements may be associated with a terminal in the network.+++
+
+| <<TestStandard,`TestStandard`>>
+| 0..1
+| xref::class/TestStandard.adoc[`TestStandard`]
+| +++The lab test standard to which this asset health analog is related.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<detectionLimit,`detectionLimit`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Detection limit of related analog value if different from detection limit of test standard or if there is no test standard. The detection limit (also known as lower limit of detection or limit of detection (LOD), is the lowest quantity of a substance that can be distinguished from the absence of that substance (a blank value) within a stated confidence limit (generally 1%).+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<maxValue,`maxValue`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Normal value range maximum for any of the MeasurementValue.values. Used for scaling, e.g. in bar graphs or of telemetered raw values.+++
+
+| <<measurementType,`measurementType`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Specifies the type of measurement.  For example, this specifies if the measurement represents an indoor temperature, outdoor temperature, bus voltage, line flow, etc.
+When the measurementType is set to "Specialization", the type of Measurement is defined in more detail by the specialized class which inherits from Measurement.+++
+
+| <<minValue,`minValue`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Normal value range minimum for any of the MeasurementValue.values. Used for scaling, e.g. in bar graphs or of telemetered raw values.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<normalValue,`normalValue`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Normal measurement value, e.g., used for percentage calculations.+++
+
+| <<phases,`phases`>>
+| 0..1
+| xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+| +++Indicates to which phases the measurement applies and avoids the need to use 'measurementType' to also encode phase information (which would explode the types). The phase information in Measurement, along with 'measurementType' and 'phases' uniquely defines a Measurement for a device, based on normal network phase. Their meaning will not change when the computed energizing phasing is changed due to jumpers or other reasons.
+If the attribute is missing three phases (ABC) shall be assumed.+++
+
+| <<positiveFlowIn,`positiveFlowIn`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true then this measurement is an active power, reactive power or current with the convention that a positive value measured at the Terminal means power is flowing into the related PowerSystemResource.+++
+
+| <<precision,`precision`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Precision of related analog value if different from precision of test standard or if there is no test standard. Precision is a measure of how closely individual measurements agree with one another. Expressed as 'plus or minus' the value of this attribute.+++
+
+| <<reportingTemperature,`reportingTemperature`>>
+| 0..1
+| xref::class/Temperature.adoc[`Temperature`]
+| +++Reporting temperature of related analog value if different from reporting temperature of test standard or if there is no test standard. Reporting temperature is what gas volumes are normalized to. Different reporting temperatures are used by different sources. For example, ASTM specifies 0°C, whereas IEC specifies 20°C. Online monitors often have their own unique reporting temperatures.+++
+
+| <<unitMultiplier,`unitMultiplier`>>
+| 0..1
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++The unit multiplier of the measured quantity.+++
+
+| <<unitSymbol,`unitSymbol`>>
+| 0..1
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+| +++The unit of measure of the measured quantity.+++
+
+| <<AnalogValues,`AnalogValues`>>
+| 0..*
+| xref::class/AnalogValue.adoc[`AnalogValue`]
+| +++The values connected to this measurement.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<LimitSets,`LimitSets`>>
+| 0..*
+| xref::class/AnalogLimitSet.adoc[`AnalogLimitSet`]
+| +++A measurement may have zero or more limit ranges defined for it.+++
+
+| <<Locations,`Locations`>>
+| 0..*
+| xref::class/Location.adoc[`Location`]
+| +++Location of this measurement.+++
+
+| <<MeasurementCalculatorInput,`MeasurementCalculatorInput`>>
+| 0..*
+| xref::class/MeasurementCalculatorInput.adoc[`MeasurementCalculatorInput`]
+| n/a
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<PinMeasurement,`PinMeasurement`>>
+| 0..*
+| xref::class/PinMeasurement.adoc[`PinMeasurement`]
+| n/a
+
+| <<Procedures,`Procedures`>>
+| 0..*
+| xref::class/Procedure.adoc[`Procedure`]
+| +++Measurements are specified in types of documents, such as procedures.+++
+
+| <<ProtectiveActionAdjustment,`ProtectiveActionAdjustment`>>
+| 0..*
+| xref::class/ProtectiveActionAdjustment.adoc[`ProtectiveActionAdjustment`]
+| n/a
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#AnalogValues]
+=== `AnalogValues`
++++The values connected to this measurement.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Analog.AnalogValues`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AnalogValue.adoc[`AnalogValue`]
+
+| Inherited from
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+//[discrete]
+[#Asset]
+=== `Asset`
++++Asset that has a measurement+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.Asset`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#CalculationMethodHierarchy]
+=== `CalculationMethodHierarchy`
++++Calculation method hierarchy which applies to this analog.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.CalculationMethodHierarchy`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CalculationMethodHierarchy.adoc[`CalculationMethodHierarchy`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#detectionLimit]
+=== `detectionLimit`
++++Detection limit of related analog value if different from detection limit of test standard or if there is no test standard. The detection limit (also known as lower limit of detection or limit of detection (LOD), is the lowest quantity of a substance that can be distinguished from the absence of that substance (a blank value) within a stated confidence limit (generally 1%).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetAnalog.detectionLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/AssetAnalog.adoc[`AssetAnalog`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#kind]
+=== `kind`
++++Kind of analog representing temperature or pressure related to an asset.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetTemperaturePressureAnalog.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/AssetTemperaturePressureAnalogKind.adoc[`AssetTemperaturePressureAnalogKind`]
+
+
+|===
+
+//[discrete]
+[#LimitSets]
+=== `LimitSets`
++++A measurement may have zero or more limit ranges defined for it.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Analog.LimitSets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AnalogLimitSet.adoc[`AnalogLimitSet`]
+
+| Inherited from
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+//[discrete]
+[#Locations]
+=== `Locations`
++++Location of this measurement.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.Locations`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#maxValue]
+=== `maxValue`
++++Normal value range maximum for any of the MeasurementValue.values. Used for scaling, e.g. in bar graphs or of telemetered raw values.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Analog.maxValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+//[discrete]
+[#MeasurementAction]
+=== `MeasurementAction`
++++The measurement action that is performed on the measurement+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.MeasurementAction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MeasurementAction.adoc[`MeasurementAction`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#MeasurementCalculatorInput]
+=== `MeasurementCalculatorInput`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.MeasurementCalculatorInput`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MeasurementCalculatorInput.adoc[`MeasurementCalculatorInput`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#measurementType]
+=== `measurementType`
++++Specifies the type of measurement.  For example, this specifies if the measurement represents an indoor temperature, outdoor temperature, bus voltage, line flow, etc.
+When the measurementType is set to "Specialization", the type of Measurement is defined in more detail by the specialized class which inherits from Measurement.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.measurementType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#minValue]
+=== `minValue`
++++Normal value range minimum for any of the MeasurementValue.values. Used for scaling, e.g. in bar graphs or of telemetered raw values.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Analog.minValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#normalValue]
+=== `normalValue`
++++Normal measurement value, e.g., used for percentage calculations.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Analog.normalValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+//[discrete]
+[#phases]
+=== `phases`
++++Indicates to which phases the measurement applies and avoids the need to use 'measurementType' to also encode phase information (which would explode the types). The phase information in Measurement, along with 'measurementType' and 'phases' uniquely defines a Measurement for a device, based on normal network phase. Their meaning will not change when the computed energizing phasing is changed due to jumpers or other reasons.
+If the attribute is missing three phases (ABC) shall be assumed.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.phases`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#PinMeasurement]
+=== `PinMeasurement`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.PinMeasurement`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PinMeasurement.adoc[`PinMeasurement`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#positiveFlowIn]
+=== `positiveFlowIn`
++++If true then this measurement is an active power, reactive power or current with the convention that a positive value measured at the Terminal means power is flowing into the related PowerSystemResource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Analog.positiveFlowIn`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+//[discrete]
+[#PowerSystemResource]
+=== `PowerSystemResource`
++++The power system resource that contains the measurement.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.PowerSystemResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#precision]
+=== `precision`
++++Precision of related analog value if different from precision of test standard or if there is no test standard. Precision is a measure of how closely individual measurements agree with one another. Expressed as 'plus or minus' the value of this attribute.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetAnalog.precision`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/AssetAnalog.adoc[`AssetAnalog`]
+
+
+|===
+
+//[discrete]
+[#Procedures]
+=== `Procedures`
++++Measurements are specified in types of documents, such as procedures.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.Procedures`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Procedure.adoc[`Procedure`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ProtectiveActionAdjustment]
+=== `ProtectiveActionAdjustment`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.ProtectiveActionAdjustment`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProtectiveActionAdjustment.adoc[`ProtectiveActionAdjustment`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#reportingTemperature]
+=== `reportingTemperature`
++++Reporting temperature of related analog value if different from reporting temperature of test standard or if there is no test standard. Reporting temperature is what gas volumes are normalized to. Different reporting temperatures are used by different sources. For example, ASTM specifies 0°C, whereas IEC specifies 20°C. Online monitors often have their own unique reporting temperatures.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetAnalog.reportingTemperature`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Temperature.adoc[`Temperature`]
+
+| Inherited from
+| xref::class/AssetAnalog.adoc[`AssetAnalog`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Terminal]
+=== `Terminal`
++++One or more measurements may be associated with a terminal in the network.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.Terminal`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ACDCTerminal.adoc[`ACDCTerminal`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#TestStandard]
+=== `TestStandard`
++++The lab test standard to which this asset health analog is related.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetAnalog.TestStandard`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TestStandard.adoc[`TestStandard`]
+
+| Inherited from
+| xref::class/AssetAnalog.adoc[`AssetAnalog`]
+
+
+|===
+
+//[discrete]
+[#unitMultiplier]
+=== `unitMultiplier`
++++The unit multiplier of the measured quantity.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.unitMultiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+//[discrete]
+[#unitSymbol]
+=== `unitSymbol`
++++The unit of measure of the measured quantity.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.unitSymbol`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+

@@ -1,0 +1,57 @@
+= `LandPropertyKind`
+:toclevels: 4
+
+
++++Kind of (land) property.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:LandPropertyKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `building`
+| `cim:LandPropertyKind.building`
+| n/a
+
+| `customerPremise`
+| `cim:LandPropertyKind.customerPremise`
+| n/a
+
+| `depot`
+| `cim:LandPropertyKind.depot`
+| n/a
+
+| `external`
+| `cim:LandPropertyKind.external`
+| n/a
+
+| `gridSupplyPoint`
+| `cim:LandPropertyKind.gridSupplyPoint`
+| n/a
+
+| `store`
+| `cim:LandPropertyKind.store`
+| n/a
+
+| `substation`
+| `cim:LandPropertyKind.substation`
+| n/a
+|===

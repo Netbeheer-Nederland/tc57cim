@@ -1,0 +1,966 @@
+= `WindTurbineType3IEC`
+:toclevels: 4
+
+
++++Parent class supporting relationships to IEC wind turbines type 3 including their control models.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:WindTurbineType3IEC`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/WindTurbineType3or4Dynamics.adoc[`WindTurbineType3or4Dynamics`]
+**** xref::class/WindTurbineType3or4IEC.adoc[`WindTurbineType3or4IEC`]
+***** *`WindTurbineType3IEC`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+WindTurbineType3IEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindAeroTwoDimIEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindMechIEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindContPitchAngleIEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindGenType3IEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindContPType3IEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindAeroOneDimIEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindContQPQULimIEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindContCurrLimIEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindProtectionIEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindContQIEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindRefFrameRotIEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindContQLimIEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PowerElectronicsConnection {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+RemoteInputSignal {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindPlantDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+WindTurbineType3IEC -> WindAeroTwoDimIEC: WindAeroTwoDimIEC
+
+
+WindTurbineType3IEC -> WindMechIEC: WindMechIEC
+
+
+WindTurbineType3IEC -> WindContPitchAngleIEC: WindContPitchAngleIEC
+
+
+WindTurbineType3IEC -> WindGenType3IEC: WindGenType3IEC
+
+
+WindTurbineType3IEC -> WindContPType3IEC: WindContPType3IEC
+
+
+WindTurbineType3IEC -> WindAeroOneDimIEC: WindAeroOneDimIEC
+
+
+WindTurbineType3IEC -> WindContQPQULimIEC: WindContQPQULimIEC
+
+
+WindTurbineType3IEC -> WindContCurrLimIEC: WindContCurrLimIEC
+
+
+WindTurbineType3IEC -> WindProtectionIEC: WindProtectionIEC
+
+
+WindTurbineType3IEC -> WindContQIEC: WIndContQIEC
+
+
+WindTurbineType3IEC -> WindRefFrameRotIEC: WindRefFrameRotIEC
+
+
+WindTurbineType3IEC -> WindContQLimIEC: WindContQLimIEC
+
+
+WindTurbineType3IEC -> PowerElectronicsConnection: PowerElectronicsConnection
+
+
+WindTurbineType3IEC -> RemoteInputSignal: RemoteInputSignal
+
+
+WindTurbineType3IEC -> WindPlantDynamics: WindPlantDynamics
+
+
+WindTurbineType3IEC -> DiagramObject: DiagramObjects
+
+
+WindTurbineType3IEC -> InstanceSet: InstanceSet
+
+
+WindTurbineType3IEC -> Name: Names
+
+
+WindTurbineType3IEC -> ChangeSetMember: PropertiesCIMDataObject
+
+
+WindTurbineType3IEC -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<WindContPType3IEC,`WindContPType3IEC`>>
+| 1
+| xref::class/WindContPType3IEC.adoc[`WindContPType3IEC`]
+| +++Wind control P type 3 model associated with this wind turbine type 3 model.+++
+
+| <<WindContPitchAngleIEC,`WindContPitchAngleIEC`>>
+| 1
+| xref::class/WindContPitchAngleIEC.adoc[`WindContPitchAngleIEC`]
+| +++Wind control pitch angle model associated with this wind turbine type 3.+++
+
+| <<WindMechIEC,`WindMechIEC`>>
+| 1
+| xref::class/WindMechIEC.adoc[`WindMechIEC`]
+| +++Wind mechanical model associated with this wind turbine type 3 model.+++
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<PowerElectronicsConnection,`PowerElectronicsConnection`>>
+| 1
+| xref::class/PowerElectronicsConnection.adoc[`PowerElectronicsConnection`]
+| +++The power electronics connection associated with this wind turbine type 3 or type 4 dynamics model.+++
+
+| <<WIndContQIEC,`WIndContQIEC`>>
+| 1
+| xref::class/WindContQIEC.adoc[`WindContQIEC`]
+| +++Wind control Q model associated with this wind turbine type 3 or type 4 model.+++
+
+| <<WindContCurrLimIEC,`WindContCurrLimIEC`>>
+| 1
+| xref::class/WindContCurrLimIEC.adoc[`WindContCurrLimIEC`]
+| +++Wind control current limitation model associated with this wind turbine type 3 or type 4 model.+++
+
+| <<WindProtectionIEC,`WindProtectionIEC`>>
+| 1
+| xref::class/WindProtectionIEC.adoc[`WindProtectionIEC`]
+| +++Wind turbune protection model associated with this wind generator type 3 or type 4 model.+++
+
+| <<WindRefFrameRotIEC,`WindRefFrameRotIEC`>>
+| 1
+| xref::class/WindRefFrameRotIEC.adoc[`WindRefFrameRotIEC`]
+| +++Reference frame rotation model associated with this wind turbine type 3 or type 4 model.+++
+
+| <<WindAeroOneDimIEC,`WindAeroOneDimIEC`>>
+| 0..1
+| xref::class/WindAeroOneDimIEC.adoc[`WindAeroOneDimIEC`]
+| +++Wind aerodynamic model associated with this wind generator type 3 model.+++
+
+| <<WindAeroTwoDimIEC,`WindAeroTwoDimIEC`>>
+| 0..1
+| xref::class/WindAeroTwoDimIEC.adoc[`WindAeroTwoDimIEC`]
+| +++Wind aerodynamic model associated with this wind turbine type 3 model.+++
+
+| <<WindGenType3IEC,`WindGenType3IEC`>>
+| 0..1
+| xref::class/WindGenType3IEC.adoc[`WindGenType3IEC`]
+| +++Wind generator type 3 model associated with this wind turbine type 3 model.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<RemoteInputSignal,`RemoteInputSignal`>>
+| 0..1
+| xref::class/RemoteInputSignal.adoc[`RemoteInputSignal`]
+| +++Remote input signal used by these wind turbine type 3 or type 4 models.+++
+
+| <<WindContQLimIEC,`WindContQLimIEC`>>
+| 0..1
+| xref::class/WindContQLimIEC.adoc[`WindContQLimIEC`]
+| +++Constant Q limitation model associated with this wind generator type 3 or type 4 model.+++
+
+| <<WindContQPQULimIEC,`WindContQPQULimIEC`>>
+| 0..1
+| xref::class/WindContQPQULimIEC.adoc[`WindContQPQULimIEC`]
+| +++QP and QU limitation model associated with this wind generator type 3 or type 4 model.+++
+
+| <<WindPlantDynamics,`WindPlantDynamics`>>
+| 0..1
+| xref::class/WindPlantDynamics.adoc[`WindPlantDynamics`]
+| +++The wind plant with which the wind turbines type 3 or type 4 are associated.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<enabled,`enabled`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#PowerElectronicsConnection]
+=== `PowerElectronicsConnection`
++++The power electronics connection associated with this wind turbine type 3 or type 4 dynamics model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3or4Dynamics.PowerElectronicsConnection`
+| Cardinality
+| 1
+| Type
+| xref::class/PowerElectronicsConnection.adoc[`PowerElectronicsConnection`]
+
+| Inherited from
+| xref::class/WindTurbineType3or4Dynamics.adoc[`WindTurbineType3or4Dynamics`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#RemoteInputSignal]
+=== `RemoteInputSignal`
++++Remote input signal used by these wind turbine type 3 or type 4 models.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3or4Dynamics.RemoteInputSignal`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RemoteInputSignal.adoc[`RemoteInputSignal`]
+
+| Inherited from
+| xref::class/WindTurbineType3or4Dynamics.adoc[`WindTurbineType3or4Dynamics`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#WindAeroOneDimIEC]
+=== `WindAeroOneDimIEC`
++++Wind aerodynamic model associated with this wind generator type 3 model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3IEC.WindAeroOneDimIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindAeroOneDimIEC.adoc[`WindAeroOneDimIEC`]
+
+
+|===
+
+//[discrete]
+[#WindAeroTwoDimIEC]
+=== `WindAeroTwoDimIEC`
++++Wind aerodynamic model associated with this wind turbine type 3 model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3IEC.WindAeroTwoDimIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindAeroTwoDimIEC.adoc[`WindAeroTwoDimIEC`]
+
+
+|===
+
+//[discrete]
+[#WindContCurrLimIEC]
+=== `WindContCurrLimIEC`
++++Wind control current limitation model associated with this wind turbine type 3 or type 4 model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3or4IEC.WindContCurrLimIEC`
+| Cardinality
+| 1
+| Type
+| xref::class/WindContCurrLimIEC.adoc[`WindContCurrLimIEC`]
+
+| Inherited from
+| xref::class/WindTurbineType3or4IEC.adoc[`WindTurbineType3or4IEC`]
+
+
+|===
+
+//[discrete]
+[#WindContPitchAngleIEC]
+=== `WindContPitchAngleIEC`
++++Wind control pitch angle model associated with this wind turbine type 3.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3IEC.WindContPitchAngleIEC`
+| Cardinality
+| 1
+| Type
+| xref::class/WindContPitchAngleIEC.adoc[`WindContPitchAngleIEC`]
+
+
+|===
+
+//[discrete]
+[#WindContPType3IEC]
+=== `WindContPType3IEC`
++++Wind control P type 3 model associated with this wind turbine type 3 model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3IEC.WindContPType3IEC`
+| Cardinality
+| 1
+| Type
+| xref::class/WindContPType3IEC.adoc[`WindContPType3IEC`]
+
+
+|===
+
+//[discrete]
+[#WIndContQIEC]
+=== `WIndContQIEC`
++++Wind control Q model associated with this wind turbine type 3 or type 4 model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3or4IEC.WIndContQIEC`
+| Cardinality
+| 1
+| Type
+| xref::class/WindContQIEC.adoc[`WindContQIEC`]
+
+| Inherited from
+| xref::class/WindTurbineType3or4IEC.adoc[`WindTurbineType3or4IEC`]
+
+
+|===
+
+//[discrete]
+[#WindContQLimIEC]
+=== `WindContQLimIEC`
++++Constant Q limitation model associated with this wind generator type 3 or type 4 model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3or4IEC.WindContQLimIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindContQLimIEC.adoc[`WindContQLimIEC`]
+
+| Inherited from
+| xref::class/WindTurbineType3or4IEC.adoc[`WindTurbineType3or4IEC`]
+
+
+|===
+
+//[discrete]
+[#WindContQPQULimIEC]
+=== `WindContQPQULimIEC`
++++QP and QU limitation model associated with this wind generator type 3 or type 4 model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3or4IEC.WindContQPQULimIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindContQPQULimIEC.adoc[`WindContQPQULimIEC`]
+
+| Inherited from
+| xref::class/WindTurbineType3or4IEC.adoc[`WindTurbineType3or4IEC`]
+
+
+|===
+
+//[discrete]
+[#WindGenType3IEC]
+=== `WindGenType3IEC`
++++Wind generator type 3 model associated with this wind turbine type 3 model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3IEC.WindGenType3IEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindGenType3IEC.adoc[`WindGenType3IEC`]
+
+
+|===
+
+//[discrete]
+[#WindMechIEC]
+=== `WindMechIEC`
++++Wind mechanical model associated with this wind turbine type 3 model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3IEC.WindMechIEC`
+| Cardinality
+| 1
+| Type
+| xref::class/WindMechIEC.adoc[`WindMechIEC`]
+
+
+|===
+
+//[discrete]
+[#WindPlantDynamics]
+=== `WindPlantDynamics`
++++The wind plant with which the wind turbines type 3 or type 4 are associated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3or4Dynamics.WindPlantDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindPlantDynamics.adoc[`WindPlantDynamics`]
+
+| Inherited from
+| xref::class/WindTurbineType3or4Dynamics.adoc[`WindTurbineType3or4Dynamics`]
+
+
+|===
+
+//[discrete]
+[#WindProtectionIEC]
+=== `WindProtectionIEC`
++++Wind turbune protection model associated with this wind generator type 3 or type 4 model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3or4IEC.WindProtectionIEC`
+| Cardinality
+| 1
+| Type
+| xref::class/WindProtectionIEC.adoc[`WindProtectionIEC`]
+
+| Inherited from
+| xref::class/WindTurbineType3or4IEC.adoc[`WindTurbineType3or4IEC`]
+
+
+|===
+
+//[discrete]
+[#WindRefFrameRotIEC]
+=== `WindRefFrameRotIEC`
++++Reference frame rotation model associated with this wind turbine type 3 or type 4 model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindTurbineType3or4IEC.WindRefFrameRotIEC`
+| Cardinality
+| 1
+| Type
+| xref::class/WindRefFrameRotIEC.adoc[`WindRefFrameRotIEC`]
+
+| Inherited from
+| xref::class/WindTurbineType3or4IEC.adoc[`WindTurbineType3or4IEC`]
+
+
+|===
+
+

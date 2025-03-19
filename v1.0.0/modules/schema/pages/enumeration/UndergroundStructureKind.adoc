@@ -1,0 +1,69 @@
+= `UndergroundStructureKind`
+:toclevels: 4
+
+
++++Kind of underground structure.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:UndergroundStructureKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `burd`
+| `cim:UndergroundStructureKind.burd`
+| n/a
+
+| `enclosure`
+| `cim:UndergroundStructureKind.enclosure`
+| n/a
+
+| `handhole`
+| `cim:UndergroundStructureKind.handhole`
+| n/a
+
+| `manhole`
+| `cim:UndergroundStructureKind.manhole`
+| n/a
+
+| `pad`
+| `cim:UndergroundStructureKind.pad`
+| n/a
+
+| `pullbox`
+| `cim:UndergroundStructureKind.pullbox`
+| n/a
+
+| `subsurfaceEnclosure`
+| `cim:UndergroundStructureKind.subsurfaceEnclosure`
+| n/a
+
+| `trench`
+| `cim:UndergroundStructureKind.trench`
+| n/a
+
+| `tunnel`
+| `cim:UndergroundStructureKind.tunnel`
+| n/a
+
+| `vault`
+| `cim:UndergroundStructureKind.vault`
+| n/a
+|===

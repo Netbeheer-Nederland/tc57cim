@@ -1,0 +1,1758 @@
+= `MarketEvaluationPoint`
+:toclevels: 4
+
+
++++The identification of an entity where energy products are measured or computed.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MarketEvaluationPoint`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/UsagePoint.adoc[`UsagePoint`]
+*** *`MarketEvaluationPoint`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+MarketEvaluationPoint {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+TimeSeries {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+DecimalQuantity {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+Register {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Equipment {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+EndDevice {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ServiceMultiplier {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ConfigurationEvent {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ServiceCategory {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+MeterReadSchedule {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+CustomerAgreement {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Outage {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+PlannedOutageNotification {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+MetrologyRequirement {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+MeterWorkTask {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+UsagePointGroup {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ServiceSupplier {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+EndDeviceControl {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+EndDeviceEvent {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ServiceLocation {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+UsagePointLocation {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+PricingStructure {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+MeterReading {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+EnvironmentalMonitoringStation {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+MarketEvaluationPoint -> TimeSeries: TimeSeries
+
+
+
+
+MarketEvaluationPoint -> DecimalQuantity: physicalConnectionCapacity
+
+
+
+
+MarketEvaluationPoint -> Register: Register
+
+
+MarketEvaluationPoint -> Equipment: Equipments
+
+
+MarketEvaluationPoint -> EndDevice: EndDevices
+
+
+MarketEvaluationPoint -> ServiceMultiplier: ServiceMultipliers
+
+
+MarketEvaluationPoint -> ConfigurationEvent: ConfigurationEvents
+
+
+MarketEvaluationPoint -> ServiceCategory: ServiceCategory
+
+
+MarketEvaluationPoint -> MeterReadSchedule: MeterReadSchedule
+
+
+MarketEvaluationPoint -> CustomerAgreement: CustomerAgreement
+
+
+MarketEvaluationPoint -> Outage: Outage
+
+
+MarketEvaluationPoint -> PlannedOutageNotification: PlannedOutageNotification
+
+
+MarketEvaluationPoint -> MetrologyRequirement: MetrologyRequirements
+
+
+MarketEvaluationPoint -> MeterWorkTask: MeterServiceWorkTasks
+
+
+MarketEvaluationPoint -> UsagePointGroup: UsagePointGroups
+
+
+MarketEvaluationPoint -> ServiceSupplier: ServiceSupplier
+
+
+MarketEvaluationPoint -> EndDeviceControl: EndDeviceControls
+
+
+MarketEvaluationPoint -> EndDeviceEvent: EndDeviceEvents
+
+
+MarketEvaluationPoint -> ServiceLocation: ServiceLocation
+
+
+MarketEvaluationPoint -> UsagePointLocation: UsagePointLocation
+
+
+MarketEvaluationPoint -> PricingStructure: PricingStructures
+
+
+MarketEvaluationPoint -> MeterReading: MeterReadings
+
+
+MarketEvaluationPoint -> EnvironmentalMonitoringStation: EnvironmentalMonitoringStation
+
+
+MarketEvaluationPoint -> DiagramObject: DiagramObjects
+
+
+MarketEvaluationPoint -> InstanceSet: InstanceSet
+
+
+MarketEvaluationPoint -> Name: Names
+
+
+MarketEvaluationPoint -> ChangeSetMember: PropertiesCIMDataObject
+
+
+MarketEvaluationPoint -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<TimeSeries,`TimeSeries`>>
+| 0..*
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+| n/a
+
+| <<CustomerAgreement,`CustomerAgreement`>>
+| 0..1
+| xref::class/CustomerAgreement.adoc[`CustomerAgreement`]
+| +++Customer agreement regulating this service delivery point.+++
+
+| <<EnvironmentalMonitoringStation,`EnvironmentalMonitoringStation`>>
+| 0..1
+| xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+| n/a
+
+| <<MeterReadSchedule,`MeterReadSchedule`>>
+| 0..1
+| xref::class/MeterReadSchedule.adoc[`MeterReadSchedule`]
+| +++Meter read schedule that applies to the usage point+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<ServiceCategory,`ServiceCategory`>>
+| 0..1
+| xref::class/ServiceCategory.adoc[`ServiceCategory`]
+| +++Service category delivered by this usage point.+++
+
+| <<ServiceLocation,`ServiceLocation`>>
+| 0..1
+| xref::class/ServiceLocation.adoc[`ServiceLocation`]
+| +++Service location where the service delivered by this usage point is consumed.+++
+
+| <<ServiceSupplier,`ServiceSupplier`>>
+| 0..1
+| xref::class/ServiceSupplier.adoc[`ServiceSupplier`]
+| +++ServiceSupplier (utility) utilising this usage point to deliver a service.+++
+
+| <<UsagePointLocation,`UsagePointLocation`>>
+| 0..1
+| xref::class/UsagePointLocation.adoc[`UsagePointLocation`]
+| +++Location of this usage point.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<amiBillingReady,`amiBillingReady`>>
+| 0..1
+| xref::enumeration/AmiBillingReadyKind.adoc[`AmiBillingReadyKind`]
+| +++Tracks the lifecycle of the metering installation at a usage point with respect to readiness for billing via advanced metering infrastructure reads.+++
+
+| <<checkBilling,`checkBilling`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if as a result of an inspection or otherwise, there is a reason to suspect that a previous billing may have been performed with erroneous data. Value should be reset once this potential discrepancy has been resolved.+++
+
+| <<connectionCategory,`connectionCategory`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++A code used to specify the connection category, e.g., low voltage or low pressure, where the usage point is defined.+++
+
+| <<connectionState,`connectionState`>>
+| 0..1
+| xref::enumeration/UsagePointConnectedKind.adoc[`UsagePointConnectedKind`]
+| +++State of the usage point with respect to connection to the network.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<disconnectionMethod,`disconnectionMethod`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Is an indication of how the usage point is physically connected or disconnected.+++
+
+| <<estimatedLoad,`estimatedLoad`>>
+| 0..1
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++Estimated load.+++
+
+| <<grounded,`grounded`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if grounded.+++
+
+| <<isSdp,`isSdp`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true, this usage point is a service delivery point, i.e., a usage point where the ownership of the service changes hands.+++
+
+| <<isVirtual,`isVirtual`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true, this usage point is virtual, i.e., no physical location exists in the network where a meter could be located to collect the meter readings. For example, one may define a virtual usage point to serve as an aggregation of usage for all of a company's premises distributed widely across the distribution territory. Otherwise, the usage point is physical, i.e., there is a logical point in the network where a meter could be located to collect meter readings.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<minimalUsageExpected,`minimalUsageExpected`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true, minimal or zero usage is expected at this usage point for situations such as premises vacancy, logical or physical disconnect. It is used for readings validation and estimation.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<nominalServiceVoltage,`nominalServiceVoltage`>>
+| 0..1
+| xref::class/Voltage.adoc[`Voltage`]
+| +++Nominal service voltage.+++
+
+| <<outageRegion,`outageRegion`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Outage region in which this usage point is located.+++
+
+| <<phaseCode,`phaseCode`>>
+| 0..1
+| xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+| +++Phase code. Number of wires and specific nominal phases can be deduced from enumeration literal values. For example, ABCN is three-phase, four-wire, s12n (splitSecondary12N) is single-phase, three-wire, and s1n and s2n are single-phase, two-wire.+++
+
+| <<phaseCount,`phaseCount`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Number of potential phases the Usage Point supports, typically 0, 1 or 3.+++
+
+| <<physicalConnectionCapacity,`physicalConnectionCapacity`>>
+| 0..1
+| xref::class/DecimalQuantity.adoc[`DecimalQuantity`]
+| +++Quantitative information about the maximum physical capacity of the connection for the usage point.+++
+
+| <<ratedCurrent,`ratedCurrent`>>
+| 0..1
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++Current flow that this usage point is configured to deliver.+++
+
+| <<ratedPower,`ratedPower`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Active power that this usage point is configured to deliver.+++
+
+| <<readCycle,`readCycle`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Cycle day on which the meter for this usage point will normally be read.  Usually correlated with the billing cycle.+++
+
+| <<readRoute,`readRoute`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Identifier of the route to which this usage point is assigned for purposes of meter reading. Typically used to configure hand held meter reading systems prior to collection of reads.+++
+
+| <<serviceDeliveryRemark,`serviceDeliveryRemark`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Remarks about this usage point, for example the reason for it being rated with a non-nominal priority.+++
+
+| <<servicePriority,`servicePriority`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Priority of service for this usage point. Note that usage points at the same service location can have different priorities.+++
+
+| <<ConfigurationEvents,`ConfigurationEvents`>>
+| 0..*
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this usage point.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<EndDeviceControls,`EndDeviceControls`>>
+| 0..*
+| xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+| +++All end device controls sending commands to this usage point.+++
+
+| <<EndDeviceEvents,`EndDeviceEvents`>>
+| 0..*
+| xref::class/EndDeviceEvent.adoc[`EndDeviceEvent`]
+| +++All end device events reported for this usage point.+++
+
+| <<EndDevices,`EndDevices`>>
+| 0..*
+| xref::class/EndDevice.adoc[`EndDevice`]
+| +++All end devices at this usage point.+++
+
+| <<Equipments,`Equipments`>>
+| 0..*
+| xref::class/Equipment.adoc[`Equipment`]
+| +++All equipment connecting this usage point to the electrical grid.+++
+
+| <<MeterReadings,`MeterReadings`>>
+| 0..*
+| xref::class/MeterReading.adoc[`MeterReading`]
+| +++All meter readings obtained from this usage point.+++
+
+| <<MeterServiceWorkTasks,`MeterServiceWorkTasks`>>
+| 0..*
+| xref::class/MeterWorkTask.adoc[`MeterWorkTask`]
+| +++All meter service work tasks at this usage point.+++
+
+| <<MetrologyRequirements,`MetrologyRequirements`>>
+| 0..*
+| xref::class/MetrologyRequirement.adoc[`MetrologyRequirement`]
+| +++All metrology requirements for this usage point.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<Outage,`Outage`>>
+| 0..*
+| xref::class/Outage.adoc[`Outage`]
+| +++All outages at this Usage Point+++
+
+| <<PlannedOutageNotification,`PlannedOutageNotification`>>
+| 0..*
+| xref::class/PlannedOutageNotification.adoc[`PlannedOutageNotification`]
+| +++The planned outage notification for the specified Usage Point.+++
+
+| <<PricingStructures,`PricingStructures`>>
+| 0..*
+| xref::class/PricingStructure.adoc[`PricingStructure`]
+| +++All pricing structures applicable to this service delivery point (with prepayment meter running as a stand-alone device, with no CustomerAgreement or Customer).+++
+
+| <<Register,`Register`>>
+| 0..*
+| xref::class/Register.adoc[`Register`]
+| +++All registers for quantities metered at this Usage Point.+++
+
+| <<ServiceMultipliers,`ServiceMultipliers`>>
+| 0..*
+| xref::class/ServiceMultiplier.adoc[`ServiceMultiplier`]
+| +++All multipliers applied at this usage point.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+
+| <<UsagePointGroups,`UsagePointGroups`>>
+| 0..*
+| xref::class/UsagePointGroup.adoc[`UsagePointGroup`]
+| +++All groups to which this usage point belongs.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#amiBillingReady]
+=== `amiBillingReady`
++++Tracks the lifecycle of the metering installation at a usage point with respect to readiness for billing via advanced metering infrastructure reads.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.amiBillingReady`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/AmiBillingReadyKind.adoc[`AmiBillingReadyKind`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#checkBilling]
+=== `checkBilling`
++++True if as a result of an inspection or otherwise, there is a reason to suspect that a previous billing may have been performed with erroneous data. Value should be reset once this potential discrepancy has been resolved.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.checkBilling`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#ConfigurationEvents]
+=== `ConfigurationEvents`
++++All configuration events created for this usage point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.ConfigurationEvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#connectionCategory]
+=== `connectionCategory`
++++A code used to specify the connection category, e.g., low voltage or low pressure, where the usage point is defined.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.connectionCategory`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#connectionState]
+=== `connectionState`
++++State of the usage point with respect to connection to the network.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.connectionState`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UsagePointConnectedKind.adoc[`UsagePointConnectedKind`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#CustomerAgreement]
+=== `CustomerAgreement`
++++Customer agreement regulating this service delivery point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.CustomerAgreement`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CustomerAgreement.adoc[`CustomerAgreement`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#disconnectionMethod]
+=== `disconnectionMethod`
++++Is an indication of how the usage point is physically connected or disconnected.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.disconnectionMethod`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#EndDeviceControls]
+=== `EndDeviceControls`
++++All end device controls sending commands to this usage point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.EndDeviceControls`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#EndDeviceEvents]
+=== `EndDeviceEvents`
++++All end device events reported for this usage point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.EndDeviceEvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EndDeviceEvent.adoc[`EndDeviceEvent`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#EndDevices]
+=== `EndDevices`
++++All end devices at this usage point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.EndDevices`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EndDevice.adoc[`EndDevice`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#EnvironmentalMonitoringStation]
+=== `EnvironmentalMonitoringStation`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.EnvironmentalMonitoringStation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#Equipments]
+=== `Equipments`
++++All equipment connecting this usage point to the electrical grid.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.Equipments`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Equipment.adoc[`Equipment`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#estimatedLoad]
+=== `estimatedLoad`
++++Estimated load.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.estimatedLoad`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#grounded]
+=== `grounded`
++++True if grounded.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.grounded`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#isSdp]
+=== `isSdp`
++++If true, this usage point is a service delivery point, i.e., a usage point where the ownership of the service changes hands.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.isSdp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#isVirtual]
+=== `isVirtual`
++++If true, this usage point is virtual, i.e., no physical location exists in the network where a meter could be located to collect the meter readings. For example, one may define a virtual usage point to serve as an aggregation of usage for all of a company's premises distributed widely across the distribution territory. Otherwise, the usage point is physical, i.e., there is a logical point in the network where a meter could be located to collect meter readings.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.isVirtual`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#MeterReadings]
+=== `MeterReadings`
++++All meter readings obtained from this usage point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.MeterReadings`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MeterReading.adoc[`MeterReading`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#MeterReadSchedule]
+=== `MeterReadSchedule`
++++Meter read schedule that applies to the usage point+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.MeterReadSchedule`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MeterReadSchedule.adoc[`MeterReadSchedule`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#MeterServiceWorkTasks]
+=== `MeterServiceWorkTasks`
++++All meter service work tasks at this usage point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.MeterServiceWorkTasks`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MeterWorkTask.adoc[`MeterWorkTask`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#MetrologyRequirements]
+=== `MetrologyRequirements`
++++All metrology requirements for this usage point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.MetrologyRequirements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MetrologyRequirement.adoc[`MetrologyRequirement`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#minimalUsageExpected]
+=== `minimalUsageExpected`
++++If true, minimal or zero usage is expected at this usage point for situations such as premises vacancy, logical or physical disconnect. It is used for readings validation and estimation.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.minimalUsageExpected`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#nominalServiceVoltage]
+=== `nominalServiceVoltage`
++++Nominal service voltage.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.nominalServiceVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#Outage]
+=== `Outage`
++++All outages at this Usage Point+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.Outage`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Outage.adoc[`Outage`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#outageRegion]
+=== `outageRegion`
++++Outage region in which this usage point is located.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.outageRegion`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#phaseCode]
+=== `phaseCode`
++++Phase code. Number of wires and specific nominal phases can be deduced from enumeration literal values. For example, ABCN is three-phase, four-wire, s12n (splitSecondary12N) is single-phase, three-wire, and s1n and s2n are single-phase, two-wire.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.phaseCode`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#phaseCount]
+=== `phaseCount`
++++Number of potential phases the Usage Point supports, typically 0, 1 or 3.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.phaseCount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#physicalConnectionCapacity]
+=== `physicalConnectionCapacity`
++++Quantitative information about the maximum physical capacity of the connection for the usage point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.physicalConnectionCapacity`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DecimalQuantity.adoc[`DecimalQuantity`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#PlannedOutageNotification]
+=== `PlannedOutageNotification`
++++The planned outage notification for the specified Usage Point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.PlannedOutageNotification`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PlannedOutageNotification.adoc[`PlannedOutageNotification`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#PricingStructures]
+=== `PricingStructures`
++++All pricing structures applicable to this service delivery point (with prepayment meter running as a stand-alone device, with no CustomerAgreement or Customer).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.PricingStructures`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PricingStructure.adoc[`PricingStructure`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ratedCurrent]
+=== `ratedCurrent`
++++Current flow that this usage point is configured to deliver.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.ratedCurrent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#ratedPower]
+=== `ratedPower`
++++Active power that this usage point is configured to deliver.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.ratedPower`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#readCycle]
+=== `readCycle`
++++Cycle day on which the meter for this usage point will normally be read.  Usually correlated with the billing cycle.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.readCycle`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#readRoute]
+=== `readRoute`
++++Identifier of the route to which this usage point is assigned for purposes of meter reading. Typically used to configure hand held meter reading systems prior to collection of reads.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.readRoute`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#Register]
+=== `Register`
++++All registers for quantities metered at this Usage Point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.Register`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Register.adoc[`Register`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#ServiceCategory]
+=== `ServiceCategory`
++++Service category delivered by this usage point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.ServiceCategory`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ServiceCategory.adoc[`ServiceCategory`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#serviceDeliveryRemark]
+=== `serviceDeliveryRemark`
++++Remarks about this usage point, for example the reason for it being rated with a non-nominal priority.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.serviceDeliveryRemark`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#ServiceLocation]
+=== `ServiceLocation`
++++Service location where the service delivered by this usage point is consumed.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.ServiceLocation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ServiceLocation.adoc[`ServiceLocation`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#ServiceMultipliers]
+=== `ServiceMultipliers`
++++All multipliers applied at this usage point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.ServiceMultipliers`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ServiceMultiplier.adoc[`ServiceMultiplier`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#servicePriority]
+=== `servicePriority`
++++Priority of service for this usage point. Note that usage points at the same service location can have different priorities.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.servicePriority`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#ServiceSupplier]
+=== `ServiceSupplier`
++++ServiceSupplier (utility) utilising this usage point to deliver a service.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.ServiceSupplier`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ServiceSupplier.adoc[`ServiceSupplier`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketEvaluationPoint.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#UsagePointGroups]
+=== `UsagePointGroups`
++++All groups to which this usage point belongs.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.UsagePointGroups`
+| Cardinality
+| 0..*
+| Type
+| xref::class/UsagePointGroup.adoc[`UsagePointGroup`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+//[discrete]
+[#UsagePointLocation]
+=== `UsagePointLocation`
++++Location of this usage point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.UsagePointLocation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/UsagePointLocation.adoc[`UsagePointLocation`]
+
+| Inherited from
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+

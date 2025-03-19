@@ -1,0 +1,35 @@
+= `DispatchTransactionType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:DispatchTransactionType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `Purchase`
+| `cim:DispatchTransactionType.Purchase`
+| n/a
+
+| `Sale`
+| `cim:DispatchTransactionType.Sale`
+| n/a
+|===

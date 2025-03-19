@@ -1,0 +1,200 @@
+= `OperatingShare`
+:toclevels: 4
+
+
++++Specifies the operations contract relationship between a power system resource and a contract participant.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:OperatingShare`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`OperatingShare`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+OperatingShare {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+OperatingParticipant {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PowerSystemResource {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+OperatingShare -> OperatingParticipant: OperatingParticipant
+
+
+OperatingShare -> PowerSystemResource: PowerSystemResource
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<OperatingParticipant,`OperatingParticipant`>>
+| 1
+| xref::class/OperatingParticipant.adoc[`OperatingParticipant`]
+| +++The operating participant having this share with the associated power system resource.+++
+
+| <<PowerSystemResource,`PowerSystemResource`>>
+| 1
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+| +++The power system resource to which the share applies.+++
+
+| <<percentage,`percentage`>>
+| 0..1
+| xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage operational ownership between the pair (power system resource and operating participant) associated with this share. The total percentage ownership for a power system resource should add to 100%.+++
+|===
+
+'''
+
+
+//[discrete]
+[#OperatingParticipant]
+=== `OperatingParticipant`
++++The operating participant having this share with the associated power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingShare.OperatingParticipant`
+| Cardinality
+| 1
+| Type
+| xref::class/OperatingParticipant.adoc[`OperatingParticipant`]
+
+
+|===
+
+//[discrete]
+[#percentage]
+=== `percentage`
++++Percentage operational ownership between the pair (power system resource and operating participant) associated with this share. The total percentage ownership for a power system resource should add to 100%.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingShare.percentage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+//[discrete]
+[#PowerSystemResource]
+=== `PowerSystemResource`
++++The power system resource to which the share applies.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingShare.PowerSystemResource`
+| Cardinality
+| 1
+| Type
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+

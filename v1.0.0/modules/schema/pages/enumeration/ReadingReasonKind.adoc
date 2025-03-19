@@ -1,0 +1,77 @@
+= `ReadingReasonKind`
+:toclevels: 4
+
+
++++Reason for the reading being taken.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ReadingReasonKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `billing`
+| `cim:ReadingReasonKind.billing`
+| n/a
+
+| `demandReset`
+| `cim:ReadingReasonKind.demandReset`
+| n/a
+
+| `inquiry`
+| `cim:ReadingReasonKind.inquiry`
+| n/a
+
+| `installation`
+| `cim:ReadingReasonKind.installation`
+| n/a
+
+| `loadManagement`
+| `cim:ReadingReasonKind.loadManagement`
+| n/a
+
+| `loadResearch`
+| `cim:ReadingReasonKind.loadResearch`
+| n/a
+
+| `moveIn`
+| `cim:ReadingReasonKind.moveIn`
+| n/a
+
+| `moveOut`
+| `cim:ReadingReasonKind.moveOut`
+| n/a
+
+| `other`
+| `cim:ReadingReasonKind.other`
+| n/a
+
+| `removal`
+| `cim:ReadingReasonKind.removal`
+| n/a
+
+| `serviceConnect`
+| `cim:ReadingReasonKind.serviceConnect`
+| n/a
+
+| `serviceDisconnect`
+| `cim:ReadingReasonKind.serviceDisconnect`
+| n/a
+|===

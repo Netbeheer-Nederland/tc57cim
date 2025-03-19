@@ -1,0 +1,57 @@
+= `AnchorKind`
+:toclevels: 4
+
+
++++Kind of anchor.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AnchorKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `concrete`
+| `cim:AnchorKind.concrete`
+| n/a
+
+| `helix`
+| `cim:AnchorKind.helix`
+| n/a
+
+| `multiHelix`
+| `cim:AnchorKind.multiHelix`
+| n/a
+
+| `other`
+| `cim:AnchorKind.other`
+| n/a
+
+| `rod`
+| `cim:AnchorKind.rod`
+| n/a
+
+| `screw`
+| `cim:AnchorKind.screw`
+| n/a
+
+| `unknown`
+| `cim:AnchorKind.unknown`
+| n/a
+|===

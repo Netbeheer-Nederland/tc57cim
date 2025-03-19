@@ -1,0 +1,49 @@
+= `AnalogLimitType`
+:toclevels: 4
+
+
++++Limit type specified for AnalogLimits.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AnalogLimitType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `BranchLongTerm`
+| `cim:AnalogLimitType.BranchLongTerm`
+| n/a
+
+| `BranchMediumTerm`
+| `cim:AnalogLimitType.BranchMediumTerm`
+| n/a
+
+| `BranchShortTerm`
+| `cim:AnalogLimitType.BranchShortTerm`
+| n/a
+
+| `VoltageHigh`
+| `cim:AnalogLimitType.VoltageHigh`
+| n/a
+
+| `VoltageLow`
+| `cim:AnalogLimitType.VoltageLow`
+| n/a
+|===

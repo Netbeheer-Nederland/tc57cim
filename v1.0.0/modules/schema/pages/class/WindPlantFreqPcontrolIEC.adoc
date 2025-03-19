@@ -1,0 +1,835 @@
+= `WindPlantFreqPcontrolIEC`
+:toclevels: 4
+
+
++++Frequency and active power controller model.
+Reference: IEC 61400-27-1:2015, Annex D.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:WindPlantFreqPcontrolIEC`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`WindPlantFreqPcontrolIEC`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+WindPlantFreqPcontrolIEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WindPlantIEC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindDynamicsLookupTable {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WindPlantFreqPcontrolIEC -> WindPlantIEC: WindPlantIEC
+
+
+WindPlantFreqPcontrolIEC -> WindDynamicsLookupTable: WindDynamicsLookupTable
+
+
+WindPlantFreqPcontrolIEC -> DiagramObject: DiagramObjects
+
+
+WindPlantFreqPcontrolIEC -> InstanceSet: InstanceSet
+
+
+WindPlantFreqPcontrolIEC -> Name: Names
+
+
+WindPlantFreqPcontrolIEC -> ChangeSetMember: PropertiesCIMDataObject
+
+
+WindPlantFreqPcontrolIEC -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<WindPlantIEC,`WindPlantIEC`>>
+| 1
+| xref::class/WindPlantIEC.adoc[`WindPlantIEC`]
+| +++Wind plant model with which this wind plant frequency and active power control is associated.+++
+
+| <<WindDynamicsLookupTable,`WindDynamicsLookupTable`>>
+| 1..*
+| xref::class/WindDynamicsLookupTable.adoc[`WindDynamicsLookupTable`]
+| +++The wind dynamics lookup table associated with this frequency and active power wind plant model.+++
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<dprefmax,`dprefmax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum ramp rate of <i>p</i><i><sub>WTref</sub></i> request from the plant controller to the wind turbines (<i>dp</i><i><sub>refmax</sub></i>) (&gt; WindPlantFreqPcontrolIEC.dprefmin). It is a case-dependent parameter.+++
+
+| <<dprefmin,`dprefmin`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Minimum (negative) ramp rate of <i>p</i><i><sub>WTref</sub></i> request from the plant controller to the wind turbines (<i>dp</i><i><sub>refmin</sub></i>) (&lt; WindPlantFreqPcontrolIEC.dprefmax). It is a project-dependent parameter.+++
+
+| <<dpwprefmax,`dpwprefmax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum positive ramp rate for wind plant power reference (<i>dp</i><i><sub>WPrefmax</sub></i>) (&gt; WindPlantFreqPcontrolIEC.dpwprefmin). It is a project-dependent parameter.+++
+
+| <<dpwprefmin,`dpwprefmin`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum negative ramp rate for wind plant power reference (<i>dp</i><i><sub>WPrefmin</sub></i>) (&lt; WindPlantFreqPcontrolIEC.dpwprefmax). It is a project-dependent parameter.+++
+
+| <<kiwpp,`kiwpp`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Plant P controller integral gain (<i>K</i><i><sub>IWPp</sub></i>). It is a project-dependent parameter.+++
+
+| <<kiwppmax,`kiwppmax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum PI integrator term (<i>K</i><i><sub>IWPpmax</sub></i>) (&gt; WindPlantFreqPcontrolIEC.kiwppmin). It is a project-dependent parameter.+++
+
+| <<kiwppmin,`kiwppmin`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Minimum PI integrator term (<i>K</i><i><sub>IWPpmin</sub></i>) (&lt; WindPlantFreqPcontrolIEC.kiwppmax). It is a project-dependent parameter.+++
+
+| <<kpwpp,`kpwpp`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Plant P controller proportional gain (<i>K</i><i><sub>PWPp</sub></i>). It is a project-dependent parameter.+++
+
+| <<kwppref,`kwppref`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Power reference gain (<i>K</i><i><sub>WPpref</sub></i>). It is a project-dependent parameter.+++
+
+| <<prefmax,`prefmax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum <i>p</i><i><sub>WTref</sub></i> request from the plant controller to the wind turbines (<i>p</i><i><sub>refmax</sub></i>) (&gt; WindPlantFreqPcontrolIEC.prefmin). It is a project-dependent parameter.+++
+
+| <<prefmin,`prefmin`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Minimum <i>p</i><i><sub>WTref</sub></i> request from the plant controller to the wind turbines (<i>p</i><i><sub>refmin</sub></i>) (&lt; WindPlantFreqPcontrolIEC.prefmax). It is a project-dependent parameter.+++
+
+| <<tpft,`tpft`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lead time constant in reference value transfer function (<i>T</i><i><sub>pft</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+
+| <<tpfv,`tpfv`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Lag time constant in reference value transfer function (<i>T</i><i><sub>pfv</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+
+| <<twpffiltp,`twpffiltp`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Filter time constant for frequency measurement (<i>T</i><i><sub>WPffiltp</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+
+| <<twppfiltp,`twppfiltp`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Filter time constant for active power measurement (<i>T</i><i><sub>WPpfiltp</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#dprefmax]
+=== `dprefmax`
++++Maximum ramp rate of <i>p</i><i><sub>WTref</sub></i> request from the plant controller to the wind turbines (<i>dp</i><i><sub>refmax</sub></i>) (&gt; WindPlantFreqPcontrolIEC.dprefmin). It is a case-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.dprefmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#dprefmin]
+=== `dprefmin`
++++Minimum (negative) ramp rate of <i>p</i><i><sub>WTref</sub></i> request from the plant controller to the wind turbines (<i>dp</i><i><sub>refmin</sub></i>) (&lt; WindPlantFreqPcontrolIEC.dprefmax). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.dprefmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#dpwprefmax]
+=== `dpwprefmax`
++++Maximum positive ramp rate for wind plant power reference (<i>dp</i><i><sub>WPrefmax</sub></i>) (&gt; WindPlantFreqPcontrolIEC.dpwprefmin). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.dpwprefmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#dpwprefmin]
+=== `dpwprefmin`
++++Maximum negative ramp rate for wind plant power reference (<i>dp</i><i><sub>WPrefmin</sub></i>) (&lt; WindPlantFreqPcontrolIEC.dpwprefmax). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.dpwprefmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#kiwpp]
+=== `kiwpp`
++++Plant P controller integral gain (<i>K</i><i><sub>IWPp</sub></i>). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.kiwpp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#kiwppmax]
+=== `kiwppmax`
++++Maximum PI integrator term (<i>K</i><i><sub>IWPpmax</sub></i>) (&gt; WindPlantFreqPcontrolIEC.kiwppmin). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.kiwppmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kiwppmin]
+=== `kiwppmin`
++++Minimum PI integrator term (<i>K</i><i><sub>IWPpmin</sub></i>) (&lt; WindPlantFreqPcontrolIEC.kiwppmax). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.kiwppmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kpwpp]
+=== `kpwpp`
++++Plant P controller proportional gain (<i>K</i><i><sub>PWPp</sub></i>). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.kpwpp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#kwppref]
+=== `kwppref`
++++Power reference gain (<i>K</i><i><sub>WPpref</sub></i>). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.kwppref`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#prefmax]
+=== `prefmax`
++++Maximum <i>p</i><i><sub>WTref</sub></i> request from the plant controller to the wind turbines (<i>p</i><i><sub>refmax</sub></i>) (&gt; WindPlantFreqPcontrolIEC.prefmin). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.prefmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#prefmin]
+=== `prefmin`
++++Minimum <i>p</i><i><sub>WTref</sub></i> request from the plant controller to the wind turbines (<i>p</i><i><sub>refmin</sub></i>) (&lt; WindPlantFreqPcontrolIEC.prefmax). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.prefmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#tpft]
+=== `tpft`
++++Lead time constant in reference value transfer function (<i>T</i><i><sub>pft</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.tpft`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tpfv]
+=== `tpfv`
++++Lag time constant in reference value transfer function (<i>T</i><i><sub>pfv</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.tpfv`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#twpffiltp]
+=== `twpffiltp`
++++Filter time constant for frequency measurement (<i>T</i><i><sub>WPffiltp</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.twpffiltp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#twppfiltp]
+=== `twppfiltp`
++++Filter time constant for active power measurement (<i>T</i><i><sub>WPpfiltp</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.twppfiltp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#WindDynamicsLookupTable]
+=== `WindDynamicsLookupTable`
++++The wind dynamics lookup table associated with this frequency and active power wind plant model.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.WindDynamicsLookupTable`
+| Cardinality
+| 1..*
+| Type
+| xref::class/WindDynamicsLookupTable.adoc[`WindDynamicsLookupTable`]
+
+
+|===
+
+//[discrete]
+[#WindPlantIEC]
+=== `WindPlantIEC`
++++Wind plant model with which this wind plant frequency and active power control is associated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindPlantFreqPcontrolIEC.WindPlantIEC`
+| Cardinality
+| 1
+| Type
+| xref::class/WindPlantIEC.adoc[`WindPlantIEC`]
+
+
+|===
+
+

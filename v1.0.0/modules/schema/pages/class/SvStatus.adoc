@@ -1,0 +1,186 @@
+= `SvStatus`
+:toclevels: 4
+
+
++++State variable for status.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SvStatus`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/StateVariable.adoc[`StateVariable`]
+** *`SvStatus`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+SvStatus {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ConductingEquipment {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+SvStatus -> ConductingEquipment: ConductingEquipment
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<ConductingEquipment,`ConductingEquipment`>>
+| 1
+| xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+| +++The conducting equipment associated with the status state variable.+++
+
+| <<inService,`inService`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++The in service status as a result of topology processing.  It indicates if the equipment is considered as energized by the power flow. It reflects if the equipment is connected within a solvable island.  It does not necessarily reflect whether or not the island was solved by the power flow.+++
+
+| <<phase,`phase`>>
+| 0..1
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++The individual phase status.    If the attribute is unspecified, then three phase model is assumed.+++
+|===
+
+'''
+
+
+//[discrete]
+[#ConductingEquipment]
+=== `ConductingEquipment`
++++The conducting equipment associated with the status state variable.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvStatus.ConductingEquipment`
+| Cardinality
+| 1
+| Type
+| xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+
+
+|===
+
+//[discrete]
+[#inService]
+=== `inService`
++++The in service status as a result of topology processing.  It indicates if the equipment is considered as energized by the power flow. It reflects if the equipment is connected within a solvable island.  It does not necessarily reflect whether or not the island was solved by the power flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvStatus.inService`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#phase]
+=== `phase`
++++The individual phase status.    If the attribute is unspecified, then three phase model is assumed.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvStatus.phase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+

@@ -1,0 +1,207 @@
+= `EstimatedRestorationTime`
+:toclevels: 4
+
+
++++The Estimated Restoration Time (ERT) for a single outage+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EstimatedRestorationTime`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`EstimatedRestorationTime`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+EstimatedRestorationTime {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Outage {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+EstimatedRestorationTime -> Outage: Outage
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<confidenceKind,`confidenceKind`>>
+| 0..1
+| xref::enumeration/ERTConfidenceKind.adoc[`ERTConfidenceKind`]
+| +++provides the confidence level that this ERT can be accomplished.  This may be changed/updated as needed.+++
+
+| <<ert,`ert`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++estimated time the outage will be restored+++
+
+| <<ertSource,`ertSource`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++defines the source that provided the ERT value.+++
+
+| <<Outage,`Outage`>>
+| 0..*
+| xref::class/Outage.adoc[`Outage`]
+| +++The outage associated with the estimated time the power will be restored.+++
+|===
+
+'''
+
+
+//[discrete]
+[#confidenceKind]
+=== `confidenceKind`
++++provides the confidence level that this ERT can be accomplished.  This may be changed/updated as needed.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EstimatedRestorationTime.confidenceKind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ERTConfidenceKind.adoc[`ERTConfidenceKind`]
+
+
+|===
+
+//[discrete]
+[#ert]
+=== `ert`
++++estimated time the outage will be restored+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EstimatedRestorationTime.ert`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#ertSource]
+=== `ertSource`
++++defines the source that provided the ERT value.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EstimatedRestorationTime.ertSource`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#Outage]
+=== `Outage`
++++The outage associated with the estimated time the power will be restored.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EstimatedRestorationTime.Outage`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Outage.adoc[`Outage`]
+
+
+|===
+
+

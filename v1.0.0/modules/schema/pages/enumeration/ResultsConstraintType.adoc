@@ -1,0 +1,45 @@
+= `ResultsConstraintType`
+:toclevels: 4
+
+
++++Market results binding constraint types.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ResultsConstraintType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `Actual`
+| `cim:ResultsConstraintType.Actual`
+| n/a
+
+| `Contingency`
+| `cim:ResultsConstraintType.Contingency`
+| n/a
+
+| `FG_act`
+| `cim:ResultsConstraintType.FG_act`
+| n/a
+
+| `Interface`
+| `cim:ResultsConstraintType.Interface`
+| n/a
+|===

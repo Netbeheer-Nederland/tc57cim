@@ -1,0 +1,108 @@
+= `MeasurementTypeEMS`
+:toclevels: 4
+
+
++++Path Flow - PF
+Path Inflow Limit - PIL
+Path Inflow Available Limit - PIAL 
+Path Inflow Armed Limit - PIML
+Path Outflow Limit - POL
+Path Outflow Available Limit - POAL 
+Path Outflow Armed Limit - OARL
+Generation Output - GO 
+Generation Max Operating Limit - GMOL 
+Generation Min Operating Limit - GNOL 
+Generation Regulation - GR 
+Generation Status - GS 
+Pump Production - PP 
+System Load - SL 
+System ACE - ACE
+System INADV - INADV+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MeasurementTypeEMS`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ACE`
+| `cim:MeasurementTypeEMS.ACE`
+| n/a
+
+| `GMOL`
+| `cim:MeasurementTypeEMS.GMOL`
+| n/a
+
+| `GNOL`
+| `cim:MeasurementTypeEMS.GNOL`
+| n/a
+
+| `GO`
+| `cim:MeasurementTypeEMS.GO`
+| n/a
+
+| `GR`
+| `cim:MeasurementTypeEMS.GR`
+| n/a
+
+| `GS`
+| `cim:MeasurementTypeEMS.GS`
+| n/a
+
+| `INADV`
+| `cim:MeasurementTypeEMS.INADV`
+| n/a
+
+| `OARL`
+| `cim:MeasurementTypeEMS.OARL`
+| n/a
+
+| `PF`
+| `cim:MeasurementTypeEMS.PF`
+| n/a
+
+| `PIAL`
+| `cim:MeasurementTypeEMS.PIAL`
+| n/a
+
+| `PIL`
+| `cim:MeasurementTypeEMS.PIL`
+| n/a
+
+| `PIML`
+| `cim:MeasurementTypeEMS.PIML`
+| n/a
+
+| `POAL`
+| `cim:MeasurementTypeEMS.POAL`
+| n/a
+
+| `POL`
+| `cim:MeasurementTypeEMS.POL`
+| n/a
+
+| `PP`
+| `cim:MeasurementTypeEMS.PP`
+| n/a
+
+| `SL`
+| `cim:MeasurementTypeEMS.SL`
+| n/a
+|===

@@ -1,0 +1,45 @@
+= `BreakerConfiguration`
+:toclevels: 4
+
+
++++Switching arrangement for bay.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:BreakerConfiguration`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `breakerAndAHalf`
+| `cim:BreakerConfiguration.breakerAndAHalf`
+| n/a
+
+| `doubleBreaker`
+| `cim:BreakerConfiguration.doubleBreaker`
+| n/a
+
+| `noBreaker`
+| `cim:BreakerConfiguration.noBreaker`
+| n/a
+
+| `singleBreaker`
+| `cim:BreakerConfiguration.singleBreaker`
+| n/a
+|===

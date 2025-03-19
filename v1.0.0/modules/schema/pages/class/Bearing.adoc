@@ -1,0 +1,98 @@
+= `Bearing`
+:toclevels: 4
+
+
++++The bearing in degrees (with 360 degrees being True North).  Measured in degrees clockwise from True North.  0 degrees indicates no direction being given.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Bearing`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+|===
+
+== Slots
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| `value`
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Bearing.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Bearing.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Bearing.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////

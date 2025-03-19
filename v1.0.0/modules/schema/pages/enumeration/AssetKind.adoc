@@ -1,0 +1,69 @@
+= `AssetKind`
+:toclevels: 4
+
+
++++Kinds of assets or asset components.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AssetKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `breakerAirBlastBreaker`
+| `cim:AssetKind.breakerAirBlastBreaker`
+| n/a
+
+| `breakerBulkOilBreaker`
+| `cim:AssetKind.breakerBulkOilBreaker`
+| n/a
+
+| `breakerInsulatingStackAssembly`
+| `cim:AssetKind.breakerInsulatingStackAssembly`
+| n/a
+
+| `breakerMinimumOilBreaker`
+| `cim:AssetKind.breakerMinimumOilBreaker`
+| n/a
+
+| `breakerSF6DeadTankBreaker`
+| `cim:AssetKind.breakerSF6DeadTankBreaker`
+| n/a
+
+| `breakerSF6LiveTankBreaker`
+| `cim:AssetKind.breakerSF6LiveTankBreaker`
+| n/a
+
+| `breakerTankAssembly`
+| `cim:AssetKind.breakerTankAssembly`
+| n/a
+
+| `other`
+| `cim:AssetKind.other`
+| n/a
+
+| `transformer`
+| `cim:AssetKind.transformer`
+| n/a
+
+| `transformerTank`
+| `cim:AssetKind.transformerTank`
+| n/a
+|===

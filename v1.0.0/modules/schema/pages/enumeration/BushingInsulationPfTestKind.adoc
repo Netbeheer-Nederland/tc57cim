@@ -1,0 +1,37 @@
+= `BushingInsulationPfTestKind`
+:toclevels: 4
+
+
++++Kind of PF test for bushing insulation.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:BushingInsulationPfTestKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `c1`
+| `cim:BushingInsulationPfTestKind.c1`
+| n/a
+
+| `c2`
+| `cim:BushingInsulationPfTestKind.c2`
+| n/a
+|===

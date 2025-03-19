@@ -1,0 +1,154 @@
+= `BreakerFailureReasonKind`
+:toclevels: 4
+
+
++++Reason for breaker failure.
+Note: This enumeration provides essential information to asset health analytics. The existing list is a starting point and is anticipated to be fleshed out further as requirements are better understood (PAB 2016/01/09).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:BreakerFailureReasonKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `blastValveFailure`
+| `cim:BreakerFailureReasonKind.blastValveFailure`
+| n/a
+
+| `bushingFailure`
+| `cim:BreakerFailureReasonKind.bushingFailure`
+| n/a
+
+| `closeCoilOpenShortedFailed`
+| `cim:BreakerFailureReasonKind.closeCoilOpenShortedFailed`
+| n/a
+
+| `contaminatedAir`
+| `cim:BreakerFailureReasonKind.contaminatedAir`
+| n/a
+
+| `contaminatedArcChutes`
+| `cim:BreakerFailureReasonKind.contaminatedArcChutes`
+| n/a
+
+| `contaminatedGas`
+| `cim:BreakerFailureReasonKind.contaminatedGas`
+| n/a
+
+| `contaminatedGasAir`
+| `cim:BreakerFailureReasonKind.contaminatedGasAir`
+| n/a
+
+| `controlCircuitFailure`
+| `cim:BreakerFailureReasonKind.controlCircuitFailure`
+| n/a
+
+| `degradedLubrication`
+| `cim:BreakerFailureReasonKind.degradedLubrication`
+| n/a
+
+| `externalOrInternalContamination`
+| `cim:BreakerFailureReasonKind.externalOrInternalContamination`
+| n/a
+
+| `highPressureAirPlant`
+| `cim:BreakerFailureReasonKind.highPressureAirPlant`
+| n/a
+
+| `highResistanceLoadPath`
+| `cim:BreakerFailureReasonKind.highResistanceLoadPath`
+| n/a
+
+| `highResistancePath`
+| `cim:BreakerFailureReasonKind.highResistancePath`
+| n/a
+
+| `interrupterContactFailure`
+| `cim:BreakerFailureReasonKind.interrupterContactFailure`
+| n/a
+
+| `interrupterFailure`
+| `cim:BreakerFailureReasonKind.interrupterFailure`
+| n/a
+
+| `linkageFailure`
+| `cim:BreakerFailureReasonKind.linkageFailure`
+| n/a
+
+| `lossOfOil`
+| `cim:BreakerFailureReasonKind.lossOfOil`
+| n/a
+
+| `lossOfVacuum`
+| `cim:BreakerFailureReasonKind.lossOfVacuum`
+| n/a
+
+| `lowGasPressure`
+| `cim:BreakerFailureReasonKind.lowGasPressure`
+| n/a
+
+| `mechanismFailure`
+| `cim:BreakerFailureReasonKind.mechanismFailure`
+| n/a
+
+| `mechanismOrLinkageFailure`
+| `cim:BreakerFailureReasonKind.mechanismOrLinkageFailure`
+| n/a
+
+| `oilRelatedFailure`
+| `cim:BreakerFailureReasonKind.oilRelatedFailure`
+| n/a
+
+| `poorOilQuality`
+| `cim:BreakerFailureReasonKind.poorOilQuality`
+| n/a
+
+| `rackingMechanismFailure`
+| `cim:BreakerFailureReasonKind.rackingMechanismFailure`
+| n/a
+
+| `resistorFailure`
+| `cim:BreakerFailureReasonKind.resistorFailure`
+| n/a
+
+| `resistorGradingCapacitorFailure`
+| `cim:BreakerFailureReasonKind.resistorGradingCapacitorFailure`
+| n/a
+
+| `SF6BlastValveFailure`
+| `cim:BreakerFailureReasonKind.SF6BlastValveFailure`
+| n/a
+
+| `SF6PufferFailure`
+| `cim:BreakerFailureReasonKind.SF6PufferFailure`
+| n/a
+
+| `solidDielectricFailure`
+| `cim:BreakerFailureReasonKind.solidDielectricFailure`
+| n/a
+
+| `storedEnergyFailure`
+| `cim:BreakerFailureReasonKind.storedEnergyFailure`
+| n/a
+
+| `tripCoilOpenShortedFailed`
+| `cim:BreakerFailureReasonKind.tripCoilOpenShortedFailed`
+| n/a
+|===

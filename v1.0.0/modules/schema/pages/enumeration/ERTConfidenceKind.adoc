@@ -1,0 +1,37 @@
+= `ERTConfidenceKind`
+:toclevels: 4
+
+
++++The estimated restoration time (ERT) is the amount of time estimated to correct the outage and can have a confidence factor applied such as high or low confidence that the ERT will be accomplished.  This confidence factor may be updated as needed during the outage period - just as the actual ERT can be updated.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ERTConfidenceKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `high`
+| `cim:ERTConfidenceKind.high`
+| n/a
+
+| `low`
+| `cim:ERTConfidenceKind.low`
+| n/a
+|===

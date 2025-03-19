@@ -1,0 +1,41 @@
+= `OilSampleLocation`
+:toclevels: 4
+
+
++++Locations where oil can be sampled.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OilSampleLocation`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `oilDrainageDevice`
+| `cim:OilSampleLocation.oilDrainageDevice`
+| n/a
+
+| `oilSampleValve`
+| `cim:OilSampleLocation.oilSampleValve`
+| n/a
+
+| `other`
+| `cim:OilSampleLocation.other`
+| n/a
+|===

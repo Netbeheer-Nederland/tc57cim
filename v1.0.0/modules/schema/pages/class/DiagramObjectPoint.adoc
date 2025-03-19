@@ -1,0 +1,263 @@
+= `DiagramObjectPoint`
+:toclevels: 4
+
+
++++A point in a given space defined by 3 coordinates and associated to a diagram object.  The coordinates may be positive or negative as the origin does not have to be in the corner of a diagram.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DiagramObjectPoint`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`DiagramObjectPoint`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+DiagramObjectPoint {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObjectGluePoint {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+DiagramObjectPoint -> DiagramObjectGluePoint: DiagramObjectGluePoint
+
+
+DiagramObjectPoint -> DiagramObject: DiagramObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<DiagramObject,`DiagramObject`>>
+| 1
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram object with which the points are associated.+++
+
+| <<DiagramObjectGluePoint,`DiagramObjectGluePoint`>>
+| 0..1
+| xref::class/DiagramObjectGluePoint.adoc[`DiagramObjectGluePoint`]
+| +++The 'glue' point to which this point is associated.+++
+
+| <<sequenceNumber,`sequenceNumber`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++The sequence position of the point, used for defining the order of points for diagram objects acting as a polyline or polygon with more than one point. The attribute shall be a positive value.+++
+
+| <<xPosition,`xPosition`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The X coordinate of this point.+++
+
+| <<yPosition,`yPosition`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The Y coordinate of this point.+++
+
+| <<zPosition,`zPosition`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The Z coordinate of this point.+++
+|===
+
+'''
+
+
+//[discrete]
+[#DiagramObject]
+=== `DiagramObject`
++++The diagram object with which the points are associated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectPoint.DiagramObject`
+| Cardinality
+| 1
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjectGluePoint]
+=== `DiagramObjectGluePoint`
++++The 'glue' point to which this point is associated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectPoint.DiagramObjectGluePoint`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DiagramObjectGluePoint.adoc[`DiagramObjectGluePoint`]
+
+
+|===
+
+//[discrete]
+[#sequenceNumber]
+=== `sequenceNumber`
++++The sequence position of the point, used for defining the order of points for diagram objects acting as a polyline or polygon with more than one point. The attribute shall be a positive value.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectPoint.sequenceNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#xPosition]
+=== `xPosition`
++++The X coordinate of this point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectPoint.xPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#yPosition]
+=== `yPosition`
++++The Y coordinate of this point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectPoint.yPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#zPosition]
+=== `zPosition`
++++The Z coordinate of this point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectPoint.zPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+

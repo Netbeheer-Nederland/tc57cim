@@ -1,0 +1,219 @@
+= `BidDistributionFactor`
+:toclevels: 4
+
+
++++This class allows SC to input different time intervals for distribution factors.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:BidDistributionFactor`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`BidDistributionFactor`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+BidDistributionFactor {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+PnodeDistributionFactor {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ProductBid {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+BidDistributionFactor -> PnodeDistributionFactor: PnodeDistributionFactor
+
+
+BidDistributionFactor -> ProductBid: ProductBid
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<ProductBid,`ProductBid`>>
+| 1
+| xref::class/ProductBid.adoc[`ProductBid`]
+| n/a
+
+| <<timeIntervalEnd,`timeIntervalEnd`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++End of the time interval n which bid is valid (yyyy-mm-dd hh24: mi: ss)+++
+
+| <<timeIntervalStart,`timeIntervalStart`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Start of the time interval in which bid is valid (yyyy-mm-dd hh24: mi: ss).+++
+
+| <<PnodeDistributionFactor,`PnodeDistributionFactor`>>
+| 0..*
+| xref::class/PnodeDistributionFactor.adoc[`PnodeDistributionFactor`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#PnodeDistributionFactor]
+=== `PnodeDistributionFactor`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidDistributionFactor.PnodeDistributionFactor`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PnodeDistributionFactor.adoc[`PnodeDistributionFactor`]
+
+
+|===
+
+//[discrete]
+[#ProductBid]
+=== `ProductBid`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidDistributionFactor.ProductBid`
+| Cardinality
+| 1
+| Type
+| xref::class/ProductBid.adoc[`ProductBid`]
+
+
+|===
+
+//[discrete]
+[#timeIntervalEnd]
+=== `timeIntervalEnd`
++++End of the time interval n which bid is valid (yyyy-mm-dd hh24: mi: ss)+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidDistributionFactor.timeIntervalEnd`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#timeIntervalStart]
+=== `timeIntervalStart`
++++Start of the time interval in which bid is valid (yyyy-mm-dd hh24: mi: ss).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidDistributionFactor.timeIntervalStart`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+

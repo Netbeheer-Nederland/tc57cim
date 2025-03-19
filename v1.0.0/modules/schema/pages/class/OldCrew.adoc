@@ -1,0 +1,923 @@
+= `OldCrew`
+:toclevels: 4
+
+
++++A crew is a group of people with specific skills, tools, and vehicles.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:OldCrew`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Crew.adoc[`Crew`]
+*** *`OldCrew`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+OldCrew {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ShiftPattern {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Route {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Location {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Assignment {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Capability {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Status {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+CrewType {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+CrewMember {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+FieldDispatchHistory {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Location {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+WorkAsset {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+SwitchingAction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Outage {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+WorkTask {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+OldCrew -> ShiftPattern: ShiftPatterns
+
+
+OldCrew -> Route: Route
+
+
+OldCrew -> Location: Locations
+
+
+OldCrew -> Assignment: Assignments
+
+
+OldCrew -> Capability: Capabilities
+
+
+OldCrew -> Status: status
+
+
+OldCrew -> CrewType: CrewType
+
+
+OldCrew -> CrewMember: CrewMembers
+
+
+OldCrew -> FieldDispatchHistory: FieldDispatchHistory
+
+
+OldCrew -> Location: Location
+
+
+OldCrew -> WorkAsset: WorkAssets
+
+
+OldCrew -> SwitchingAction: SwitchingAction
+
+
+OldCrew -> Outage: Outage
+
+
+OldCrew -> WorkTask: WorkTasks
+
+
+OldCrew -> DiagramObject: DiagramObjects
+
+
+OldCrew -> InstanceSet: InstanceSet
+
+
+OldCrew -> Name: Names
+
+
+OldCrew -> ChangeSetMember: PropertiesCIMDataObject
+
+
+OldCrew -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<SwitchingAction,`SwitchingAction`>>
+| 1
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+| +++The switching action that is assigned to this crew.+++
+
+| <<Route,`Route`>>
+| 0..1
+| xref::class/Route.adoc[`Route`]
+| n/a
+
+| <<type,`type`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Classification by utility's work management standards and practices.+++
+
+| <<Assignments,`Assignments`>>
+| 0..*
+| xref::class/Assignment.adoc[`Assignment`]
+| +++All Assignments for this Crew.+++
+
+| <<Capabilities,`Capabilities`>>
+| 0..*
+| xref::class/Capability.adoc[`Capability`]
+| n/a
+
+| <<Locations,`Locations`>>
+| 0..*
+| xref::class/Location.adoc[`Location`]
+| n/a
+
+| <<ShiftPatterns,`ShiftPatterns`>>
+| 0..*
+| xref::class/ShiftPattern.adoc[`ShiftPattern`]
+| n/a
+
+| <<CrewType,`CrewType`>>
+| 0..1
+| xref::class/CrewType.adoc[`CrewType`]
+| +++Type of this crew.+++
+
+| <<Location,`Location`>>
+| 0..1
+| xref::class/Location.adoc[`Location`]
+| +++The location this crew is assigned to.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<status,`status`>>
+| 0..1
+| xref::class/Status.adoc[`Status`]
+| +++Status of this crew.+++
+
+| <<CrewMembers,`CrewMembers`>>
+| 0..*
+| xref::class/CrewMember.adoc[`CrewMember`]
+| +++All members of this crew.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<FieldDispatchHistory,`FieldDispatchHistory`>>
+| 0..*
+| xref::class/FieldDispatchHistory.adoc[`FieldDispatchHistory`]
+| +++The dispatch history associated with the crew.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<Outage,`Outage`>>
+| 0..*
+| xref::class/Outage.adoc[`Outage`]
+| +++The outage that is assigned to the crew.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+
+| <<WorkAssets,`WorkAssets`>>
+| 0..*
+| xref::class/WorkAsset.adoc[`WorkAsset`]
+| +++All work assets used by this crew.+++
+
+| <<WorkTasks,`WorkTasks`>>
+| 0..*
+| xref::class/WorkTask.adoc[`WorkTask`]
+| +++All work tasks this crew participates in.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Assignments]
+=== `Assignments`
++++All Assignments for this Crew.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldCrew.Assignments`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Assignment.adoc[`Assignment`]
+
+
+|===
+
+//[discrete]
+[#Capabilities]
+=== `Capabilities`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldCrew.Capabilities`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Capability.adoc[`Capability`]
+
+
+|===
+
+//[discrete]
+[#CrewMembers]
+=== `CrewMembers`
++++All members of this crew.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Crew.CrewMembers`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CrewMember.adoc[`CrewMember`]
+
+| Inherited from
+| xref::class/Crew.adoc[`Crew`]
+
+
+|===
+
+//[discrete]
+[#CrewType]
+=== `CrewType`
++++Type of this crew.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Crew.CrewType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CrewType.adoc[`CrewType`]
+
+| Inherited from
+| xref::class/Crew.adoc[`Crew`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#FieldDispatchHistory]
+=== `FieldDispatchHistory`
++++The dispatch history associated with the crew.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Crew.FieldDispatchHistory`
+| Cardinality
+| 0..*
+| Type
+| xref::class/FieldDispatchHistory.adoc[`FieldDispatchHistory`]
+
+| Inherited from
+| xref::class/Crew.adoc[`Crew`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Location]
+=== `Location`
++++The location this crew is assigned to.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Crew.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/Crew.adoc[`Crew`]
+
+
+|===
+
+//[discrete]
+[#Locations]
+=== `Locations`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldCrew.Locations`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Outage]
+=== `Outage`
++++The outage that is assigned to the crew.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Crew.Outage`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Outage.adoc[`Outage`]
+
+| Inherited from
+| xref::class/Crew.adoc[`Crew`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Route]
+=== `Route`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldCrew.Route`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Route.adoc[`Route`]
+
+
+|===
+
+//[discrete]
+[#ShiftPatterns]
+=== `ShiftPatterns`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldCrew.ShiftPatterns`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ShiftPattern.adoc[`ShiftPattern`]
+
+
+|===
+
+//[discrete]
+[#status]
+=== `status`
++++Status of this crew.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Crew.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/Crew.adoc[`Crew`]
+
+
+|===
+
+//[discrete]
+[#SwitchingAction]
+=== `SwitchingAction`
++++The switching action that is assigned to this crew.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Crew.SwitchingAction`
+| Cardinality
+| 1
+| Type
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+| Inherited from
+| xref::class/Crew.adoc[`Crew`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#type]
+=== `type`
++++Classification by utility's work management standards and practices.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldCrew.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#WorkAssets]
+=== `WorkAssets`
++++All work assets used by this crew.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Crew.WorkAssets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/WorkAsset.adoc[`WorkAsset`]
+
+| Inherited from
+| xref::class/Crew.adoc[`Crew`]
+
+
+|===
+
+//[discrete]
+[#WorkTasks]
+=== `WorkTasks`
++++All work tasks this crew participates in.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Crew.WorkTasks`
+| Cardinality
+| 0..*
+| Type
+| xref::class/WorkTask.adoc[`WorkTask`]
+
+| Inherited from
+| xref::class/Crew.adoc[`Crew`]
+
+
+|===
+
+

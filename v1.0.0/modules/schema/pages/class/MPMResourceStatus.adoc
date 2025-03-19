@@ -1,0 +1,235 @@
+= `MPMResourceStatus`
+:toclevels: 4
+
+
++++Model of results of Market Power tests, gives status of resource for the associated interval.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MPMResourceStatus`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MPMResourceStatus`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+MPMResourceStatus {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RegisteredResource {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MitigatedBidClearing {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MPMTestCategory {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+MPMResourceStatus -> RegisteredResource: RegisteredResource
+
+
+MPMResourceStatus -> MitigatedBidClearing: MitigatedBidClearing
+
+
+MPMResourceStatus -> MPMTestCategory: MPMTestCategory
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<MPMTestCategory,`MPMTestCategory`>>
+| 1
+| xref::class/MPMTestCategory.adoc[`MPMTestCategory`]
+| n/a
+
+| <<MitigatedBidClearing,`MitigatedBidClearing`>>
+| 1..*
+| xref::class/MitigatedBidClearing.adoc[`MitigatedBidClearing`]
+| n/a
+
+| <<RegisteredResource,`RegisteredResource`>>
+| 0..1
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| n/a
+
+| <<resourceStatus,`resourceStatus`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Interval Test Status
+
+'N' - not applicable+++
+|===
+
+'''
+
+
+//[discrete]
+[#MitigatedBidClearing]
+=== `MitigatedBidClearing`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMResourceStatus.MitigatedBidClearing`
+| Cardinality
+| 1..*
+| Type
+| xref::class/MitigatedBidClearing.adoc[`MitigatedBidClearing`]
+
+
+|===
+
+//[discrete]
+[#MPMTestCategory]
+=== `MPMTestCategory`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMResourceStatus.MPMTestCategory`
+| Cardinality
+| 1
+| Type
+| xref::class/MPMTestCategory.adoc[`MPMTestCategory`]
+
+
+|===
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMResourceStatus.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+//[discrete]
+[#resourceStatus]
+=== `resourceStatus`
++++Interval Test Status
+
+'N' - not applicable+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMResourceStatus.resourceStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+

@@ -1,0 +1,41 @@
+= `BillMediaKind`
+:toclevels: 4
+
+
++++Kind of bill media.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:BillMediaKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `electronic`
+| `cim:BillMediaKind.electronic`
+| n/a
+
+| `other`
+| `cim:BillMediaKind.other`
+| n/a
+
+| `paper`
+| `cim:BillMediaKind.paper`
+| n/a
+|===

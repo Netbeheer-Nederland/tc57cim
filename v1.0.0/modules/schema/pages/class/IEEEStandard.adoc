@@ -1,0 +1,85 @@
+= `IEEEStandard`
+:toclevels: 4
+
+
++++Standard published by IEEE (Institute of Electrical and Electronics Engineers).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:IEEEStandard`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`IEEEStandard`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<standardEdition,`standardEdition`>>
+| 0..1
+| xref::enumeration/IEEEStandardEditionKind.adoc[`IEEEStandardEditionKind`]
+| +++Edition of IEEE standard.+++
+
+| <<standardNumber,`standardNumber`>>
+| 0..1
+| xref::enumeration/IEEEStandardKind.adoc[`IEEEStandardKind`]
+| +++IEEE standard number.+++
+|===
+
+'''
+
+
+//[discrete]
+[#standardEdition]
+=== `standardEdition`
++++Edition of IEEE standard.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IEEEStandard.standardEdition`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/IEEEStandardEditionKind.adoc[`IEEEStandardEditionKind`]
+
+
+|===
+
+//[discrete]
+[#standardNumber]
+=== `standardNumber`
++++IEEE standard number.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IEEEStandard.standardNumber`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/IEEEStandardKind.adoc[`IEEEStandardKind`]
+
+
+|===
+
+

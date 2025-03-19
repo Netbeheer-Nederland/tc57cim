@@ -1,0 +1,57 @@
+= `RetiredReasonKind`
+:toclevels: 4
+
+
++++Reason asset retired.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:RetiredReasonKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `environmental`
+| `cim:RetiredReasonKind.environmental`
+| n/a
+
+| `excessiveMaintenance`
+| `cim:RetiredReasonKind.excessiveMaintenance`
+| n/a
+
+| `facilitiesUpgrade`
+| `cim:RetiredReasonKind.facilitiesUpgrade`
+| n/a
+
+| `failed`
+| `cim:RetiredReasonKind.failed`
+| n/a
+
+| `obsolescence`
+| `cim:RetiredReasonKind.obsolescence`
+| n/a
+
+| `other`
+| `cim:RetiredReasonKind.other`
+| n/a
+
+| `sold`
+| `cim:RetiredReasonKind.sold`
+| n/a
+|===

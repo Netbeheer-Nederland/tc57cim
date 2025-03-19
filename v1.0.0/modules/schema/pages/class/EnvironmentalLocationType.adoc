@@ -1,0 +1,231 @@
+= `EnvironmentalLocationType`
+:toclevels: 4
+
+
++++Type of environmental location. Used when an environmental alert or phenomenon has multiple locations associated with it.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EnvironmentalLocationType`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`EnvironmentalLocationType`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+EnvironmentalLocationType {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Location {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+EnvironmentalPhenomenon {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+EnvironmentalAlert {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+EnvironmentalLocationType -> Location: Location
+
+
+EnvironmentalLocationType -> EnvironmentalPhenomenon: EnvironmentalPhenomenon
+
+
+EnvironmentalLocationType -> EnvironmentalAlert: EnvironmentalAlert
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<Location,`Location`>>
+| 0..1
+| xref::class/Location.adoc[`Location`]
+| +++Location of this instance of ths kind of environmental location.+++
+
+| <<kind,`kind`>>
+| 0..1
+| xref::enumeration/LocationKind.adoc[`LocationKind`]
+| +++The kind of location. Typical values might be center, extent, primary, secondary, etc.+++
+
+| <<EnvironmentalAlert,`EnvironmentalAlert`>>
+| 0..*
+| xref::class/EnvironmentalAlert.adoc[`EnvironmentalAlert`]
+| +++Environmental alert applying to location of this type.+++
+
+| <<EnvironmentalPhenomenon,`EnvironmentalPhenomenon`>>
+| 0..*
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+| +++Environmental phenomenon for which this location is of relevance.+++
+|===
+
+'''
+
+
+//[discrete]
+[#EnvironmentalAlert]
+=== `EnvironmentalAlert`
++++Environmental alert applying to location of this type.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalLocationType.EnvironmentalAlert`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalAlert.adoc[`EnvironmentalAlert`]
+
+
+|===
+
+//[discrete]
+[#EnvironmentalPhenomenon]
+=== `EnvironmentalPhenomenon`
++++Environmental phenomenon for which this location is of relevance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalLocationType.EnvironmentalPhenomenon`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#kind]
+=== `kind`
++++The kind of location. Typical values might be center, extent, primary, secondary, etc.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalLocationType.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/LocationKind.adoc[`LocationKind`]
+
+
+|===
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location of this instance of ths kind of environmental location.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalLocationType.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+

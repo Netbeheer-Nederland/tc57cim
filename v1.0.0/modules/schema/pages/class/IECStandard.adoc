@@ -1,0 +1,85 @@
+= `IECStandard`
+:toclevels: 4
+
+
++++Standard published by IEC (International Electrotechnical Commission).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:IECStandard`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`IECStandard`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<standardEdition,`standardEdition`>>
+| 0..1
+| xref::enumeration/IECStandardEditionKind.adoc[`IECStandardEditionKind`]
+| +++Edition of IEC standard.+++
+
+| <<standardNumber,`standardNumber`>>
+| 0..1
+| xref::enumeration/IECStandardKind.adoc[`IECStandardKind`]
+| +++IEC standard number.+++
+|===
+
+'''
+
+
+//[discrete]
+[#standardEdition]
+=== `standardEdition`
++++Edition of IEC standard.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IECStandard.standardEdition`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/IECStandardEditionKind.adoc[`IECStandardEditionKind`]
+
+
+|===
+
+//[discrete]
+[#standardNumber]
+=== `standardNumber`
++++IEC standard number.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IECStandard.standardNumber`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/IECStandardKind.adoc[`IECStandardKind`]
+
+
+|===
+
+

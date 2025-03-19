@@ -1,0 +1,386 @@
+= `RemoteConnectDisconnectInfo`
+:toclevels: 4
+
+
++++Details of remote connect and disconnect function.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RemoteConnectDisconnectInfo`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`RemoteConnectDisconnectInfo`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+RemoteConnectDisconnectInfo {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<armedTimeout,`armedTimeout`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Setting of the timeout elapsed time.+++
+
+| <<customerVoltageLimit,`customerVoltageLimit`>>
+| 0..1
+| xref::class/Voltage.adoc[`Voltage`]
+| +++Voltage limit on customer side of RCD switch above which the connect should not be made.+++
+
+| <<energyLimit,`energyLimit`>>
+| 0..1
+| xref::class/RealEnergy.adoc[`RealEnergy`]
+| +++Limit of energy before disconnect.+++
+
+| <<energyUsageStartDateTime,`energyUsageStartDateTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Start date and time to accumulate energy for energy usage limiting.+++
+
+| <<energyUsageWarning,`energyUsageWarning`>>
+| 0..1
+| xref::class/RealEnergy.adoc[`RealEnergy`]
+| +++Warning energy limit, used to trigger event code that energy usage is nearing limit.+++
+
+| <<isArmConnect,`isArmConnect`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the RCD switch has to be armed before a connect action can be initiated.+++
+
+| <<isArmDisconnect,`isArmDisconnect`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the RCD switch has to be armed before a disconnect action can be initiated.+++
+
+| <<isEnergyLimiting,`isEnergyLimiting`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the energy usage is limited and the customer will be disconnected if they go over the limit.+++
+
+| <<needsPowerLimitCheck,`needsPowerLimitCheck`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if load limit has to be checked to issue an immediate disconnect (after a connect) if load is over the limit.+++
+
+| <<needsVoltageLimitCheck,`needsVoltageLimitCheck`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if voltage limit has to be checked to prevent connect if voltage is over the limit.+++
+
+| <<powerLimit,`powerLimit`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Load limit above which the connect should either not take place or should cause an immediate disconnect.+++
+
+| <<usePushbutton,`usePushbutton`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if pushbutton has to be used for connect.+++
+|===
+
+'''
+
+
+//[discrete]
+[#armedTimeout]
+=== `armedTimeout`
++++Setting of the timeout elapsed time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteConnectDisconnectInfo.armedTimeout`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#customerVoltageLimit]
+=== `customerVoltageLimit`
++++Voltage limit on customer side of RCD switch above which the connect should not be made.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteConnectDisconnectInfo.customerVoltageLimit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+
+|===
+
+//[discrete]
+[#energyLimit]
+=== `energyLimit`
++++Limit of energy before disconnect.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteConnectDisconnectInfo.energyLimit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RealEnergy.adoc[`RealEnergy`]
+
+
+|===
+
+//[discrete]
+[#energyUsageStartDateTime]
+=== `energyUsageStartDateTime`
++++Start date and time to accumulate energy for energy usage limiting.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteConnectDisconnectInfo.energyUsageStartDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#energyUsageWarning]
+=== `energyUsageWarning`
++++Warning energy limit, used to trigger event code that energy usage is nearing limit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteConnectDisconnectInfo.energyUsageWarning`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RealEnergy.adoc[`RealEnergy`]
+
+
+|===
+
+//[discrete]
+[#isArmConnect]
+=== `isArmConnect`
++++True if the RCD switch has to be armed before a connect action can be initiated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteConnectDisconnectInfo.isArmConnect`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isArmDisconnect]
+=== `isArmDisconnect`
++++True if the RCD switch has to be armed before a disconnect action can be initiated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteConnectDisconnectInfo.isArmDisconnect`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#isEnergyLimiting]
+=== `isEnergyLimiting`
++++True if the energy usage is limited and the customer will be disconnected if they go over the limit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteConnectDisconnectInfo.isEnergyLimiting`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#needsPowerLimitCheck]
+=== `needsPowerLimitCheck`
++++True if load limit has to be checked to issue an immediate disconnect (after a connect) if load is over the limit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteConnectDisconnectInfo.needsPowerLimitCheck`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#needsVoltageLimitCheck]
+=== `needsVoltageLimitCheck`
++++True if voltage limit has to be checked to prevent connect if voltage is over the limit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteConnectDisconnectInfo.needsVoltageLimitCheck`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#powerLimit]
+=== `powerLimit`
++++Load limit above which the connect should either not take place or should cause an immediate disconnect.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteConnectDisconnectInfo.powerLimit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#usePushbutton]
+=== `usePushbutton`
++++True if pushbutton has to be used for connect.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteConnectDisconnectInfo.usePushbutton`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+

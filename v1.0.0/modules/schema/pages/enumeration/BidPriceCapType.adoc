@@ -1,0 +1,39 @@
+= `BidPriceCapType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:BidPriceCapType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `AS`
+| `cim:BidPriceCapType.AS`
+| n/a
+
+| `ENERGY`
+| `cim:BidPriceCapType.ENERGY`
+| n/a
+
+| `RUC`
+| `cim:BidPriceCapType.RUC`
+| n/a
+|===

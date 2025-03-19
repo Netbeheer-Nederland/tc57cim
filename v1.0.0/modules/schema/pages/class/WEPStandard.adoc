@@ -1,0 +1,85 @@
+= `WEPStandard`
+:toclevels: 4
+
+
++++Standard published by Westinghouse - a WEP (Westinghouse Engineering Procedure).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:WEPStandard`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`WEPStandard`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<standardEdition,`standardEdition`>>
+| 0..1
+| xref::enumeration/WEPStandardEditionKind.adoc[`WEPStandardEditionKind`]
+| +++Edition of WEP standard.+++
+
+| <<standardNumber,`standardNumber`>>
+| 0..1
+| xref::enumeration/WEPStandardKind.adoc[`WEPStandardKind`]
+| +++WEP standard number.+++
+|===
+
+'''
+
+
+//[discrete]
+[#standardEdition]
+=== `standardEdition`
++++Edition of WEP standard.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WEPStandard.standardEdition`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/WEPStandardEditionKind.adoc[`WEPStandardEditionKind`]
+
+
+|===
+
+//[discrete]
+[#standardNumber]
+=== `standardNumber`
++++WEP standard number.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WEPStandard.standardNumber`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/WEPStandardKind.adoc[`WEPStandardKind`]
+
+
+|===
+
+

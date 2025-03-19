@@ -1,0 +1,45 @@
+= `CoolingKind`
+:toclevels: 4
+
+
++++Kind of cooling.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CoolingKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `forcedAir`
+| `cim:CoolingKind.forcedAir`
+| n/a
+
+| `forcedOilAndAir`
+| `cim:CoolingKind.forcedOilAndAir`
+| n/a
+
+| `other`
+| `cim:CoolingKind.other`
+| n/a
+
+| `selfCooling`
+| `cim:CoolingKind.selfCooling`
+| n/a
+|===

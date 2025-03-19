@@ -1,0 +1,219 @@
+= `DateAndOrTime`
+:toclevels: 4
+
+
++++The date and/or the time.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DateAndOrTime`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`DateAndOrTime`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+DateAndOrTime {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketDocument {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+TimeSeries {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+DateAndOrTime -> MarketDocument: MarketDocument
+
+
+DateAndOrTime -> TimeSeries: TimeSeries
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<date,`date`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date as "yyyy-mm-dd", which conforms with ISO 8601+++
+
+| <<time,`time`>>
+| 0..1
+| https://w3id.org/linkml/Time[`time`]
+| +++Time as "hh:mm:ss.sssZ", which conforms with ISO 8601.+++
+
+| <<MarketDocument,`MarketDocument`>>
+| 0..*
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+| n/a
+
+| <<TimeSeries,`TimeSeries`>>
+| 0..*
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#date]
+=== `date`
++++Date as "yyyy-mm-dd", which conforms with ISO 8601+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateAndOrTime.date`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#MarketDocument]
+=== `MarketDocument`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateAndOrTime.MarketDocument`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+
+
+|===
+
+//[discrete]
+[#time]
+=== `time`
++++Time as "hh:mm:ss.sssZ", which conforms with ISO 8601.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateAndOrTime.time`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Time[`time`]
+
+
+|===
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateAndOrTime.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+

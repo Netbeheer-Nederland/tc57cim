@@ -1,0 +1,547 @@
+= `Hurricane`
+:toclevels: 4
+
+
++++A hurricane, a subtype of cyclone occurring in the North Atlantic Ocean or North-eastern Pacific Ocean whose intensity is measured using the Saffir-Simpson Hurricane Scale.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Hurricane`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+** xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+*** xref::class/Cyclone.adoc[`Cyclone`]
+**** *`Hurricane`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+Hurricane {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+RelativeDisplacement {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RelativeDisplacement {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+DateTimeInterval {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+EnvironmentalLocationType {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+PhenomenonClassification {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+EnvironmentalInformation {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+Hurricane -> RelativeDisplacement: altitude
+
+
+Hurricane -> RelativeDisplacement: base
+
+
+
+
+
+
+Hurricane -> DateTimeInterval: timeInterval
+
+
+Hurricane -> EnvironmentalLocationType: EnvironmentalLocationKind
+
+
+Hurricane -> PhenomenonClassification: PhenomenonClassification
+
+
+Hurricane -> EnvironmentalInformation: EnvironmentalInformation
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<category,`category`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++The hurricane's category during the time interval, using Saffir-Simpson Hurricane Wind Scale, a 1 to 5 rating based on a hurricane's sustained wind speed.+++
+
+| <<EnvironmentalInformation,`EnvironmentalInformation`>>
+| 0..1
+| xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+| +++The forecast or observation of which this phenomenon description is a part.+++
+
+| <<PhenomenonClassification,`PhenomenonClassification`>>
+| 0..1
+| xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+| +++The classification of this phenomenon.+++
+
+| <<altitude,`altitude`>>
+| 0..1
+| xref::class/RelativeDisplacement.adoc[`RelativeDisplacement`]
+| +++The maximum altitude of the phenomenon.+++
+
+| <<base,`base`>>
+| 0..1
+| xref::class/RelativeDisplacement.adoc[`RelativeDisplacement`]
+| +++The base altitude of the phenomenon.+++
+
+| <<centralPressure,`centralPressure`>>
+| 0..1
+| xref::class/Pressure.adoc[`Pressure`]
+| +++The central pressure of the cyclone during the time interval.+++
+
+| <<direction,`direction`>>
+| 0..1
+| xref::class/Bearing.adoc[`Bearing`]
+| +++The direction the phenomenon is moving.+++
+
+| <<maxCoverage,`maxCoverage`>>
+| 0..1
+| xref::class/PerCent.adoc[`PerCent`]
+| +++The maximum percentage coverage+++
+
+| <<maxSurfaceWindSpeed,`maxSurfaceWindSpeed`>>
+| 0..1
+| xref::class/Speed.adoc[`Speed`]
+| +++The maximum surface wind speed of the cyclone during the time interval.+++
+
+| <<minCoverage,`minCoverage`>>
+| 0..1
+| xref::class/PerCent.adoc[`PerCent`]
+| +++The minimum percentage coverage+++
+
+| <<speed,`speed`>>
+| 0..1
+| xref::class/Speed.adoc[`Speed`]
+| +++The speed of the phenomenon+++
+
+| <<timeInterval,`timeInterval`>>
+| 0..1
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++The timestamp of the phenomenon as a single point or time interval.+++
+
+| <<windForce,`windForce`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Wind Force as classified on the Beaufort Scale (0-12) during the time interval.+++
+
+| <<EnvironmentalLocationKind,`EnvironmentalLocationKind`>>
+| 0..*
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+| +++Location of relevance to this environmental phenomenon.+++
+|===
+
+'''
+
+
+//[discrete]
+[#altitude]
+=== `altitude`
++++The maximum altitude of the phenomenon.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericPhenomenon.altitude`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RelativeDisplacement.adoc[`RelativeDisplacement`]
+
+| Inherited from
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#base]
+=== `base`
++++The base altitude of the phenomenon.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericPhenomenon.base`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RelativeDisplacement.adoc[`RelativeDisplacement`]
+
+| Inherited from
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#category]
+=== `category`
++++The hurricane's category during the time interval, using Saffir-Simpson Hurricane Wind Scale, a 1 to 5 rating based on a hurricane's sustained wind speed.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Hurricane.category`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#centralPressure]
+=== `centralPressure`
++++The central pressure of the cyclone during the time interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Cyclone.centralPressure`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Pressure.adoc[`Pressure`]
+
+| Inherited from
+| xref::class/Cyclone.adoc[`Cyclone`]
+
+
+|===
+
+//[discrete]
+[#direction]
+=== `direction`
++++The direction the phenomenon is moving.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericPhenomenon.direction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Bearing.adoc[`Bearing`]
+
+| Inherited from
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#EnvironmentalInformation]
+=== `EnvironmentalInformation`
++++The forecast or observation of which this phenomenon description is a part.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.EnvironmentalInformation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#EnvironmentalLocationKind]
+=== `EnvironmentalLocationKind`
++++Location of relevance to this environmental phenomenon.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.EnvironmentalLocationKind`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#maxCoverage]
+=== `maxCoverage`
++++The maximum percentage coverage+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericPhenomenon.maxCoverage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+| Inherited from
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#maxSurfaceWindSpeed]
+=== `maxSurfaceWindSpeed`
++++The maximum surface wind speed of the cyclone during the time interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Cyclone.maxSurfaceWindSpeed`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Speed.adoc[`Speed`]
+
+| Inherited from
+| xref::class/Cyclone.adoc[`Cyclone`]
+
+
+|===
+
+//[discrete]
+[#minCoverage]
+=== `minCoverage`
++++The minimum percentage coverage+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericPhenomenon.minCoverage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+| Inherited from
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#PhenomenonClassification]
+=== `PhenomenonClassification`
++++The classification of this phenomenon.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.PhenomenonClassification`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#speed]
+=== `speed`
++++The speed of the phenomenon+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericPhenomenon.speed`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Speed.adoc[`Speed`]
+
+| Inherited from
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#timeInterval]
+=== `timeInterval`
++++The timestamp of the phenomenon as a single point or time interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.timeInterval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#windForce]
+=== `windForce`
++++Wind Force as classified on the Beaufort Scale (0-12) during the time interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Cyclone.windForce`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+| Inherited from
+| xref::class/Cyclone.adoc[`Cyclone`]
+
+
+|===
+
+

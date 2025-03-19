@@ -1,0 +1,53 @@
+= `TimeIntervalKind`
+:toclevels: 4
+
+
++++Specifies the unit of time for the intervals in the schedule.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TimeIntervalKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `D`
+| `cim:TimeIntervalKind.D`
+| n/a
+
+| `h`
+| `cim:TimeIntervalKind.h`
+| n/a
+
+| `m`
+| `cim:TimeIntervalKind.m`
+| n/a
+
+| `M`
+| `cim:TimeIntervalKind.M`
+| n/a
+
+| `s`
+| `cim:TimeIntervalKind.s`
+| n/a
+
+| `Y`
+| `cim:TimeIntervalKind.Y`
+| n/a
+|===

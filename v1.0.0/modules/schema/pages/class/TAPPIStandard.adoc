@@ -1,0 +1,85 @@
+= `TAPPIStandard`
+:toclevels: 4
+
+
++++Standard published by TAPPI.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TAPPIStandard`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`TAPPIStandard`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<standardEdition,`standardEdition`>>
+| 0..1
+| xref::enumeration/TAPPIStandardEditionKind.adoc[`TAPPIStandardEditionKind`]
+| +++Edition of TAPPI standard.+++
+
+| <<standardNumber,`standardNumber`>>
+| 0..1
+| xref::enumeration/TAPPIStandardKind.adoc[`TAPPIStandardKind`]
+| +++TAPPI standard number.+++
+|===
+
+'''
+
+
+//[discrete]
+[#standardEdition]
+=== `standardEdition`
++++Edition of TAPPI standard.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TAPPIStandard.standardEdition`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/TAPPIStandardEditionKind.adoc[`TAPPIStandardEditionKind`]
+
+
+|===
+
+//[discrete]
+[#standardNumber]
+=== `standardNumber`
++++TAPPI standard number.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TAPPIStandard.standardNumber`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/TAPPIStandardKind.adoc[`TAPPIStandardKind`]
+
+
+|===
+
+

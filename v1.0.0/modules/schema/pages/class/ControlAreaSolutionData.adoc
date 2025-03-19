@@ -1,0 +1,189 @@
+= `ControlAreaSolutionData`
+:toclevels: 4
+
+
++++State Estimator Solution Pool Interchange and Losses.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ControlAreaSolutionData`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ControlAreaSolutionData`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ControlAreaSolutionData {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MktControlArea {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+ControlAreaSolutionData -> MktControlArea: MktControlArea
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<MktControlArea,`MktControlArea`>>
+| 0..1
+| xref::class/MktControlArea.adoc[`MktControlArea`]
+| n/a
+
+| <<solvedInterchange,`solvedInterchange`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Pool MW Interchange 
+Attribute Usage: The active power interchange of the pool+++
+
+| <<solvedLosses,`solvedLosses`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Pool Losses MW 
+Attribute Usage: The active power losses of the pool in MW+++
+|===
+
+'''
+
+
+//[discrete]
+[#MktControlArea]
+=== `MktControlArea`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlAreaSolutionData.MktControlArea`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MktControlArea.adoc[`MktControlArea`]
+
+
+|===
+
+//[discrete]
+[#solvedInterchange]
+=== `solvedInterchange`
++++Pool MW Interchange 
+Attribute Usage: The active power interchange of the pool+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlAreaSolutionData.solvedInterchange`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#solvedLosses]
+=== `solvedLosses`
++++Pool Losses MW 
+Attribute Usage: The active power losses of the pool in MW+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlAreaSolutionData.solvedLosses`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+

@@ -1,0 +1,45 @@
+= `MktAccountKind`
+:toclevels: 4
+
+
++++Kind of Market account.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MktAccountKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `estimate`
+| `cim:MktAccountKind.estimate`
+| n/a
+
+| `normal`
+| `cim:MktAccountKind.normal`
+| n/a
+
+| `reversal`
+| `cim:MktAccountKind.reversal`
+| n/a
+
+| `statistical`
+| `cim:MktAccountKind.statistical`
+| n/a
+|===

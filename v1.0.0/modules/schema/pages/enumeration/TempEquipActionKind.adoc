@@ -1,0 +1,45 @@
+= `TempEquipActionKind`
+:toclevels: 4
+
+
++++Kind of action on temporary equipment (such as cut, jumper, ground, energy source).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TempEquipActionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `connect`
+| `cim:TempEquipActionKind.connect`
+| n/a
+
+| `disconnect`
+| `cim:TempEquipActionKind.disconnect`
+| n/a
+
+| `place`
+| `cim:TempEquipActionKind.place`
+| n/a
+
+| `remove`
+| `cim:TempEquipActionKind.remove`
+| n/a
+|===

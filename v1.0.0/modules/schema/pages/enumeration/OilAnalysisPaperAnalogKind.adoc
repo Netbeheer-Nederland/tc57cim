@@ -1,0 +1,77 @@
+= `OilAnalysisPaperAnalogKind`
+:toclevels: 4
+
+
++++Analogs representing oil paper degradation analysis result.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OilAnalysisPaperAnalogKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `acetylfuran`
+| `cim:OilAnalysisPaperAnalogKind.acetylfuran`
+| n/a
+
+| `degreeOfPolymerization`
+| `cim:OilAnalysisPaperAnalogKind.degreeOfPolymerization`
+| n/a
+
+| `degreeOfPolymerizationCalculated`
+| `cim:OilAnalysisPaperAnalogKind.degreeOfPolymerizationCalculated`
+| n/a
+
+| `ethanol`
+| `cim:OilAnalysisPaperAnalogKind.ethanol`
+| n/a
+
+| `furfural`
+| `cim:OilAnalysisPaperAnalogKind.furfural`
+| n/a
+
+| `furfurylAlcohol`
+| `cim:OilAnalysisPaperAnalogKind.furfurylAlcohol`
+| n/a
+
+| `hydroxymethylfurfural`
+| `cim:OilAnalysisPaperAnalogKind.hydroxymethylfurfural`
+| n/a
+
+| `methanol`
+| `cim:OilAnalysisPaperAnalogKind.methanol`
+| n/a
+
+| `methylfurfural`
+| `cim:OilAnalysisPaperAnalogKind.methylfurfural`
+| n/a
+
+| `solidInsulationDielectricStrength`
+| `cim:OilAnalysisPaperAnalogKind.solidInsulationDielectricStrength`
+| n/a
+
+| `tensileStrength`
+| `cim:OilAnalysisPaperAnalogKind.tensileStrength`
+| n/a
+
+| `totalFuran`
+| `cim:OilAnalysisPaperAnalogKind.totalFuran`
+| n/a
+|===

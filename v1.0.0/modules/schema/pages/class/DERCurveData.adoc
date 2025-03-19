@@ -1,0 +1,285 @@
+= `DERCurveData`
+:toclevels: 4
+
+
++++The DER curve data class provides the nominal, maximum and minimum values for a DER Monitorable parameter for a series of time intervals defined by the DER DispatchSchedule.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DERCurveData`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`DERCurveData`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+DERCurveData {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DERMonitorableParameter {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DispatchSchedule {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+DERCurveData -> DERMonitorableParameter: DERMonitorableParameter
+
+
+DERCurveData -> DispatchSchedule: DispatchSchedule
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<DERMonitorableParameter,`DERMonitorableParameter`>>
+| 1
+| xref::class/DERMonitorableParameter.adoc[`DERMonitorableParameter`]
+| +++The DER monitorable parameter for which a time dependent curve has been created.+++
+
+| <<DispatchSchedule,`DispatchSchedule`>>
+| 0..1
+| xref::class/DispatchSchedule.adoc[`DispatchSchedule`]
+| +++The schedule used for dispatching or forecasting the values of DER monitorable parameters over time.+++
+
+| <<intervalNumber,`intervalNumber`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++The sequence number of a time interval defined by the DispatchSchedule.+++
+
+| <<maxYValue,`maxYValue`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The maximum value of the DERMonitorableParameter during the time interval.+++
+
+| <<minYValue,`minYValue`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The minimum value of the DERMonitorableParameter during the time interval.+++
+
+| <<nominalYValue,`nominalYValue`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The nominal value of the DERMonitorableParameter during the time interval.+++
+
+| <<timeStamp,`timeStamp`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++The start time of the interval+++
+|===
+
+'''
+
+
+//[discrete]
+[#DERMonitorableParameter]
+=== `DERMonitorableParameter`
++++The DER monitorable parameter for which a time dependent curve has been created.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERCurveData.DERMonitorableParameter`
+| Cardinality
+| 1
+| Type
+| xref::class/DERMonitorableParameter.adoc[`DERMonitorableParameter`]
+
+
+|===
+
+//[discrete]
+[#DispatchSchedule]
+=== `DispatchSchedule`
++++The schedule used for dispatching or forecasting the values of DER monitorable parameters over time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERCurveData.DispatchSchedule`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DispatchSchedule.adoc[`DispatchSchedule`]
+
+
+|===
+
+//[discrete]
+[#intervalNumber]
+=== `intervalNumber`
++++The sequence number of a time interval defined by the DispatchSchedule.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERCurveData.intervalNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#maxYValue]
+=== `maxYValue`
++++The maximum value of the DERMonitorableParameter during the time interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERCurveData.maxYValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#minYValue]
+=== `minYValue`
++++The minimum value of the DERMonitorableParameter during the time interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERCurveData.minYValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#nominalYValue]
+=== `nominalYValue`
++++The nominal value of the DERMonitorableParameter during the time interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERCurveData.nominalYValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#timeStamp]
+=== `timeStamp`
++++The start time of the interval+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERCurveData.timeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+

@@ -1,0 +1,1241 @@
+= `WorkTimeSchedule`
+:toclevels: 4
+
+
++++Time schedule specific to work.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:WorkTimeSchedule`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Document.adoc[`Document`]
+*** xref::class/TimeSchedule.adoc[`TimeSchedule`]
+**** *`WorkTimeSchedule`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+WorkTimeSchedule {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+BaseWork {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ServiceRequest {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+DateTimeInterval {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+TimePoint {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+MeterReadSchedule {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Status {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ElectronicAddress {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Status {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ActivityRecord {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ConfigurationEvent {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Author {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Editor {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Approver {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Issuer {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+WorkTimeSchedule -> BaseWork: BaseWork
+
+
+WorkTimeSchedule -> ServiceRequest: ServiceRequest
+
+
+
+
+WorkTimeSchedule -> DateTimeInterval: scheduleInterval
+
+
+WorkTimeSchedule -> TimePoint: TimePoints
+
+
+WorkTimeSchedule -> MeterReadSchedule: MeterReadSchedule
+
+
+WorkTimeSchedule -> Status: docStatus
+
+
+WorkTimeSchedule -> ElectronicAddress: electronicAddress
+
+
+WorkTimeSchedule -> Status: status
+
+
+WorkTimeSchedule -> ActivityRecord: ActivityRecord
+
+
+WorkTimeSchedule -> ConfigurationEvent: ConfigurationEvents
+
+
+WorkTimeSchedule -> Author: Author
+
+
+WorkTimeSchedule -> Editor: Editor
+
+
+WorkTimeSchedule -> Approver: Approver
+
+
+WorkTimeSchedule -> Issuer: Issuer
+
+
+WorkTimeSchedule -> DiagramObject: DiagramObjects
+
+
+WorkTimeSchedule -> InstanceSet: InstanceSet
+
+
+WorkTimeSchedule -> Name: Names
+
+
+WorkTimeSchedule -> ChangeSetMember: PropertiesCIMDataObject
+
+
+WorkTimeSchedule -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<BaseWork,`BaseWork`>>
+| 0..1
+| xref::class/BaseWork.adoc[`BaseWork`]
+| +++Time schedule for this work or work task.+++
+
+| <<ServiceRequest,`ServiceRequest`>>
+| 0..1
+| xref::class/ServiceRequest.adoc[`ServiceRequest`]
+| +++The service request for which the work time schedule exists+++
+
+| <<kind,`kind`>>
+| 0..1
+| xref::enumeration/WorkTimeScheduleKind.adoc[`WorkTimeScheduleKind`]
+| +++Kind of this work schedule.+++
+
+| <<Approver,`Approver`>>
+| 0..1
+| xref::class/Approver.adoc[`Approver`]
+| +++Approver of this document.+++
+
+| <<Author,`Author`>>
+| 0..1
+| xref::class/Author.adoc[`Author`]
+| +++Author of this document.+++
+
+| <<Editor,`Editor`>>
+| 0..1
+| xref::class/Editor.adoc[`Editor`]
+| +++Editor of this document.+++
+
+| <<Issuer,`Issuer`>>
+| 0..1
+| xref::class/Issuer.adoc[`Issuer`]
+| +++Issuer of this document.+++
+
+| <<MeterReadSchedule,`MeterReadSchedule`>>
+| 0..1
+| xref::class/MeterReadSchedule.adoc[`MeterReadSchedule`]
+| +++Meter read schedule for which the time schedule applies+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<authorName,`authorName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Name of the author of this document.+++
+
+| <<comment,`comment`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Free text comment.+++
+
+| <<createdDateTime,`createdDateTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time that this document was created.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<disabled,`disabled`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if this schedule is deactivated (disabled).+++
+
+| <<docStatus,`docStatus`>>
+| 0..1
+| xref::class/Status.adoc[`Status`]
+| +++Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status' attribute.
+Example values for 'docStatus.status' are draft, approved, cancelled, etc.+++
+
+| <<electronicAddress,`electronicAddress`>>
+| 0..1
+| xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+| +++Electronic address.+++
+
+| <<lastModifiedDateTime,`lastModifiedDateTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<offset,`offset`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++The offset from midnight (i.e., 0 h, 0 min, 0 s) for the periodic time points to begin. For example, for an interval meter that is set up for five minute intervals ('recurrencePeriod'=300=5 min), setting 'offset'=120=2 min would result in scheduled events to read the meter executing at 2 min, 7 min, 12 min, 17 min, 22 min, 27 min, 32 min, 37 min, 42 min, 47 min, 52 min, and 57 min past each hour.+++
+
+| <<recurrencePattern,`recurrencePattern`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Interval at which the scheduled action repeats (e.g., first Monday of every month, last day of the month, etc.).+++
+
+| <<recurrencePeriod,`recurrencePeriod`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Duration between time points, from the beginning of one period to the beginning of the next period. Note that a device like a meter may have multiple interval periods (e.g., 1 min, 5 min, 15 min, 30 min, or 60 min).+++
+
+| <<revisionNumber,`revisionNumber`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Revision number for this document.+++
+
+| <<scheduleInterval,`scheduleInterval`>>
+| 0..1
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++Schedule date and time interval.+++
+
+| <<status,`status`>>
+| 0..1
+| xref::class/Status.adoc[`Status`]
+| +++Status of subject matter (e.g., Agreement, Work) this document represents. For status of the document itself, use 'docStatus' attribute.+++
+
+| <<subject,`subject`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Document subject.+++
+
+| <<title,`title`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Document title.+++
+
+| <<type,`type`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).+++
+
+| <<ActivityRecord,`ActivityRecord`>>
+| 0..*
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+| +++The activity record for a document+++
+
+| <<ConfigurationEvents,`ConfigurationEvents`>>
+| 0..*
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this document.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+
+| <<TimePoints,`TimePoints`>>
+| 0..*
+| xref::class/TimePoint.adoc[`TimePoint`]
+| +++Sequence of time points belonging to this time schedule.+++
+|===
+
+'''
+
+
+//[discrete]
+[#ActivityRecord]
+=== `ActivityRecord`
++++The activity record for a document+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.ActivityRecord`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Approver]
+=== `Approver`
++++Approver of this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Approver`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Approver.adoc[`Approver`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#Author]
+=== `Author`
++++Author of this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Author`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Author.adoc[`Author`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#authorName]
+=== `authorName`
++++Name of the author of this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.authorName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#BaseWork]
+=== `BaseWork`
++++Time schedule for this work or work task.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WorkTimeSchedule.BaseWork`
+| Cardinality
+| 0..1
+| Type
+| xref::class/BaseWork.adoc[`BaseWork`]
+
+
+|===
+
+//[discrete]
+[#comment]
+=== `comment`
++++Free text comment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.comment`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#ConfigurationEvents]
+=== `ConfigurationEvents`
++++All configuration events created for this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.ConfigurationEvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#createdDateTime]
+=== `createdDateTime`
++++Date and time that this document was created.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.createdDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#disabled]
+=== `disabled`
++++True if this schedule is deactivated (disabled).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSchedule.disabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/TimeSchedule.adoc[`TimeSchedule`]
+
+
+|===
+
+//[discrete]
+[#docStatus]
+=== `docStatus`
++++Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status' attribute.
+Example values for 'docStatus.status' are draft, approved, cancelled, etc.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.docStatus`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#Editor]
+=== `Editor`
++++Editor of this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Editor`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Editor.adoc[`Editor`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#electronicAddress]
+=== `electronicAddress`
++++Electronic address.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.electronicAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Issuer]
+=== `Issuer`
++++Issuer of this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Issuer`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Issuer.adoc[`Issuer`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#kind]
+=== `kind`
++++Kind of this work schedule.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WorkTimeSchedule.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/WorkTimeScheduleKind.adoc[`WorkTimeScheduleKind`]
+
+
+|===
+
+//[discrete]
+[#lastModifiedDateTime]
+=== `lastModifiedDateTime`
++++Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.lastModifiedDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#MeterReadSchedule]
+=== `MeterReadSchedule`
++++Meter read schedule for which the time schedule applies+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSchedule.MeterReadSchedule`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MeterReadSchedule.adoc[`MeterReadSchedule`]
+
+| Inherited from
+| xref::class/TimeSchedule.adoc[`TimeSchedule`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#offset]
+=== `offset`
++++The offset from midnight (i.e., 0 h, 0 min, 0 s) for the periodic time points to begin. For example, for an interval meter that is set up for five minute intervals ('recurrencePeriod'=300=5 min), setting 'offset'=120=2 min would result in scheduled events to read the meter executing at 2 min, 7 min, 12 min, 17 min, 22 min, 27 min, 32 min, 37 min, 42 min, 47 min, 52 min, and 57 min past each hour.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSchedule.offset`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+| Inherited from
+| xref::class/TimeSchedule.adoc[`TimeSchedule`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#recurrencePattern]
+=== `recurrencePattern`
++++Interval at which the scheduled action repeats (e.g., first Monday of every month, last day of the month, etc.).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSchedule.recurrencePattern`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/TimeSchedule.adoc[`TimeSchedule`]
+
+
+|===
+
+//[discrete]
+[#recurrencePeriod]
+=== `recurrencePeriod`
++++Duration between time points, from the beginning of one period to the beginning of the next period. Note that a device like a meter may have multiple interval periods (e.g., 1 min, 5 min, 15 min, 30 min, or 60 min).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSchedule.recurrencePeriod`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+| Inherited from
+| xref::class/TimeSchedule.adoc[`TimeSchedule`]
+
+
+|===
+
+//[discrete]
+[#revisionNumber]
+=== `revisionNumber`
++++Revision number for this document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.revisionNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#scheduleInterval]
+=== `scheduleInterval`
++++Schedule date and time interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSchedule.scheduleInterval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+| Inherited from
+| xref::class/TimeSchedule.adoc[`TimeSchedule`]
+
+
+|===
+
+//[discrete]
+[#ServiceRequest]
+=== `ServiceRequest`
++++The service request for which the work time schedule exists+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WorkTimeSchedule.ServiceRequest`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ServiceRequest.adoc[`ServiceRequest`]
+
+
+|===
+
+//[discrete]
+[#status]
+=== `status`
++++Status of subject matter (e.g., Agreement, Work) this document represents. For status of the document itself, use 'docStatus' attribute.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#subject]
+=== `subject`
++++Document subject.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.subject`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#TimePoints]
+=== `TimePoints`
++++Sequence of time points belonging to this time schedule.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSchedule.TimePoints`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimePoint.adoc[`TimePoint`]
+
+| Inherited from
+| xref::class/TimeSchedule.adoc[`TimeSchedule`]
+
+
+|===
+
+//[discrete]
+[#title]
+=== `title`
++++Document title.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.title`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+//[discrete]
+[#type]
+=== `type`
++++Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+

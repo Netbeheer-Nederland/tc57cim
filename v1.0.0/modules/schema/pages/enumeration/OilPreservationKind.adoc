@@ -1,0 +1,45 @@
+= `OilPreservationKind`
+:toclevels: 4
+
+
++++Kind of oil preservation.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OilPreservationKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `conservator`
+| `cim:OilPreservationKind.conservator`
+| n/a
+
+| `freeBreathing`
+| `cim:OilPreservationKind.freeBreathing`
+| n/a
+
+| `nitrogenBlanket`
+| `cim:OilPreservationKind.nitrogenBlanket`
+| n/a
+
+| `other`
+| `cim:OilPreservationKind.other`
+| n/a
+|===

@@ -1,0 +1,39 @@
+= `MQSInstructionSource`
+:toclevels: 4
+
+
++++Valid values, for example: 
+INS - Instruction from RTM
+ACT - Actual instruction after the fact+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MQSInstructionSource`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ACT`
+| `cim:MQSInstructionSource.ACT`
+| n/a
+
+| `INS`
+| `cim:MQSInstructionSource.INS`
+| n/a
+|===

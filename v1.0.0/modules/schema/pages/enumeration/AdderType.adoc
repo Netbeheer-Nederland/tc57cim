@@ -1,0 +1,38 @@
+= `AdderType`
+:toclevels: 4
+
+
++++BASELI NE
+NEGOTIATED+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AdderType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `BASELINE`
+| `cim:AdderType.BASELINE`
+| n/a
+
+| `NEGOTIATED`
+| `cim:AdderType.NEGOTIATED`
+| n/a
+|===

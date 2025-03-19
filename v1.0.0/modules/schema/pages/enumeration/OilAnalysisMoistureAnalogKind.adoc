@@ -1,0 +1,61 @@
+= `OilAnalysisMoistureAnalogKind`
+:toclevels: 4
+
+
++++Analogs representing oil moisture analysis result.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OilAnalysisMoistureAnalogKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `dewPoint`
+| `cim:OilAnalysisMoistureAnalogKind.dewPoint`
+| n/a
+
+| `relativeSaturation`
+| `cim:OilAnalysisMoistureAnalogKind.relativeSaturation`
+| n/a
+
+| `relativeSaturationCalculated`
+| `cim:OilAnalysisMoistureAnalogKind.relativeSaturationCalculated`
+| n/a
+
+| `waterContent`
+| `cim:OilAnalysisMoistureAnalogKind.waterContent`
+| n/a
+
+| `waterContentMonitoredViaAluminumOxide`
+| `cim:OilAnalysisMoistureAnalogKind.waterContentMonitoredViaAluminumOxide`
+| n/a
+
+| `waterContentMonitoredViaCapacitance`
+| `cim:OilAnalysisMoistureAnalogKind.waterContentMonitoredViaCapacitance`
+| n/a
+
+| `waterContentMonitoredViaInfrared`
+| `cim:OilAnalysisMoistureAnalogKind.waterContentMonitoredViaInfrared`
+| n/a
+
+| `waterContentMonitoredViaOther`
+| `cim:OilAnalysisMoistureAnalogKind.waterContentMonitoredViaOther`
+| n/a
+|===

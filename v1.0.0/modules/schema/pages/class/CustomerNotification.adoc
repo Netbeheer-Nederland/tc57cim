@@ -1,0 +1,319 @@
+= `CustomerNotification`
+:toclevels: 4
+
+
++++Conditions for notifying the customer about the changes in the status of their service (e.g., outage restore, estimated restoration time, tariff or service level change, etc.)+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CustomerNotification`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`CustomerNotification`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+CustomerNotification {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Customer {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+TroubleTicket {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Incident {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+CustomerNotification -> Customer: Customer
+
+
+CustomerNotification -> TroubleTicket: TroubleTickets
+
+
+CustomerNotification -> Incident: Incident
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<Customer,`Customer`>>
+| 0..1
+| xref::class/Customer.adoc[`Customer`]
+| +++Customer requiring this notification.+++
+
+| <<Incident,`Incident`>>
+| 0..1
+| xref::class/Incident.adoc[`Incident`]
+| +++Incident as a subject of this customer notification.+++
+
+| <<contactType,`contactType`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Type of contact (e.g., phone, email, etc.).+++
+
+| <<contactValue,`contactValue`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Value of contact type (e.g., phone number, email address, etc.).+++
+
+| <<earliestDateTimeToCall,`earliestDateTimeToCall`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Earliest date time to call the customer.+++
+
+| <<latestDateTimeToCall,`latestDateTimeToCall`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Latest date time to call the customer.+++
+
+| <<trigger,`trigger`>>
+| 0..1
+| xref::enumeration/NotificationTriggerKind.adoc[`NotificationTriggerKind`]
+| +++Trigger for this notification.+++
+
+| <<TroubleTickets,`TroubleTickets`>>
+| 0..*
+| xref::class/TroubleTicket.adoc[`TroubleTicket`]
+| +++All trouble tickets with this notification.+++
+|===
+
+'''
+
+
+//[discrete]
+[#contactType]
+=== `contactType`
++++Type of contact (e.g., phone, email, etc.).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.contactType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#contactValue]
+=== `contactValue`
++++Value of contact type (e.g., phone number, email address, etc.).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.contactValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#Customer]
+=== `Customer`
++++Customer requiring this notification.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.Customer`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Customer.adoc[`Customer`]
+
+
+|===
+
+//[discrete]
+[#earliestDateTimeToCall]
+=== `earliestDateTimeToCall`
++++Earliest date time to call the customer.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.earliestDateTimeToCall`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#Incident]
+=== `Incident`
++++Incident as a subject of this customer notification.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.Incident`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Incident.adoc[`Incident`]
+
+
+|===
+
+//[discrete]
+[#latestDateTimeToCall]
+=== `latestDateTimeToCall`
++++Latest date time to call the customer.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.latestDateTimeToCall`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#trigger]
+=== `trigger`
++++Trigger for this notification.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.trigger`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/NotificationTriggerKind.adoc[`NotificationTriggerKind`]
+
+
+|===
+
+//[discrete]
+[#TroubleTickets]
+=== `TroubleTickets`
++++All trouble tickets with this notification.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.TroubleTickets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TroubleTicket.adoc[`TroubleTicket`]
+
+
+|===
+
+

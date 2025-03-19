@@ -1,0 +1,103 @@
+= `OASISMasterType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OASISMasterType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ATL_APNODE`
+| `cim:OASISMasterType.ATL_APNODE`
+| n/a
+
+| `ATL_AS_REGION`
+| `cim:OASISMasterType.ATL_AS_REGION`
+| n/a
+
+| `ATL_AS_REGION_MAP`
+| `cim:OASISMasterType.ATL_AS_REGION_MAP`
+| n/a
+
+| `ATL_HUB`
+| `cim:OASISMasterType.ATL_HUB`
+| n/a
+
+| `ATL_LAP`
+| `cim:OASISMasterType.ATL_LAP`
+| n/a
+
+| `ATL_LDF`
+| `cim:OASISMasterType.ATL_LDF`
+| n/a
+
+| `ATL_PNODE`
+| `cim:OASISMasterType.ATL_PNODE`
+| n/a
+
+| `ATL_PNODE_MAP`
+| `cim:OASISMasterType.ATL_PNODE_MAP`
+| n/a
+
+| `ATL_PUB`
+| `cim:OASISMasterType.ATL_PUB`
+| n/a
+
+| `ATL_PUB_SCHED`
+| `cim:OASISMasterType.ATL_PUB_SCHED`
+| n/a
+
+| `ATL_RESOURCE`
+| `cim:OASISMasterType.ATL_RESOURCE`
+| n/a
+
+| `ATL_RUC_ZONE`
+| `cim:OASISMasterType.ATL_RUC_ZONE`
+| n/a
+
+| `ATL_RUC_ZONE_MAP`
+| `cim:OASISMasterType.ATL_RUC_ZONE_MAP`
+| n/a
+
+| `ATL_STAT`
+| `cim:OASISMasterType.ATL_STAT`
+| n/a
+
+| `ATL_TAC_AREA`
+| `cim:OASISMasterType.ATL_TAC_AREA`
+| n/a
+
+| `ATL_TAC_AREA_MAP`
+| `cim:OASISMasterType.ATL_TAC_AREA_MAP`
+| n/a
+
+| `ATL_TI`
+| `cim:OASISMasterType.ATL_TI`
+| n/a
+
+| `ATL_TIEPOINT`
+| `cim:OASISMasterType.ATL_TIEPOINT`
+| n/a
+
+| `ATL_XREF`
+| `cim:OASISMasterType.ATL_XREF`
+| n/a
+|===

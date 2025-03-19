@@ -1,0 +1,45 @@
+= `TroubleSymptomsTree Kind`
+:toclevels: 4
+
+
++++The list of items that define the tree problem.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TroubleSymptomsTree%20Kind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `limbOnService`
+| `cim:TroubleSymptomsTree%20Kind.limbOnService`
+| n/a
+
+| `limbOnWire`
+| `cim:TroubleSymptomsTree%20Kind.limbOnWire`
+| n/a
+
+| `ok`
+| `cim:TroubleSymptomsTree%20Kind.ok`
+| n/a
+
+| `other`
+| `cim:TroubleSymptomsTree%20Kind.other`
+| n/a
+|===

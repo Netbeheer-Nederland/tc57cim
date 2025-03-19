@@ -1,0 +1,39 @@
+= `MPMTestMethodType`
+:toclevels: 4
+
+
++++Market power mitigation test method type.
+
+Tests with the normal (default) thresholds or tests with the alternate thresholds.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MPMTestMethodType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ALTERNATE`
+| `cim:MPMTestMethodType.ALTERNATE`
+| n/a
+
+| `NORMAL`
+| `cim:MPMTestMethodType.NORMAL`
+| n/a
+|===

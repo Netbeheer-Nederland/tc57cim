@@ -1,0 +1,41 @@
+= `GovHydro4ModelKind`
+:toclevels: 4
+
+
++++Possible types of GovHydro4 models.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:GovHydro4ModelKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `francisPelton`
+| `cim:GovHydro4ModelKind.francisPelton`
+| n/a
+
+| `kaplan`
+| `cim:GovHydro4ModelKind.kaplan`
+| n/a
+
+| `simple`
+| `cim:GovHydro4ModelKind.simple`
+| n/a
+|===

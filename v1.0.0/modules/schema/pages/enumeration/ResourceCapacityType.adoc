@@ -1,0 +1,61 @@
+= `ResourceCapacityType`
+:toclevels: 4
+
+
++++Resource capacity type.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ResourceCapacityType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `FO`
+| `cim:ResourceCapacityType.FO`
+| n/a
+
+| `MO`
+| `cim:ResourceCapacityType.MO`
+| n/a
+
+| `NR`
+| `cim:ResourceCapacityType.NR`
+| n/a
+
+| `RA`
+| `cim:ResourceCapacityType.RA`
+| n/a
+
+| `RD`
+| `cim:ResourceCapacityType.RD`
+| n/a
+
+| `RMR`
+| `cim:ResourceCapacityType.RMR`
+| n/a
+
+| `RU`
+| `cim:ResourceCapacityType.RU`
+| n/a
+
+| `SR`
+| `cim:ResourceCapacityType.SR`
+| n/a
+|===

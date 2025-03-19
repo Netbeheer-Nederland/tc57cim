@@ -1,0 +1,335 @@
+= `Earthquake`
+:toclevels: 4
+
+
++++An earthquake.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Earthquake`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+** xref::class/GeosphericPhenomenon.adoc[`GeosphericPhenomenon`]
+*** *`Earthquake`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+Earthquake {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RelativeDisplacement {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DateTimeInterval {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+EnvironmentalLocationType {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+PhenomenonClassification {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+EnvironmentalInformation {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+Earthquake -> RelativeDisplacement: focalDepth
+
+
+Earthquake -> DateTimeInterval: timeInterval
+
+
+Earthquake -> EnvironmentalLocationType: EnvironmentalLocationKind
+
+
+Earthquake -> PhenomenonClassification: PhenomenonClassification
+
+
+Earthquake -> EnvironmentalInformation: EnvironmentalInformation
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<focalDepth,`focalDepth`>>
+| 0..1
+| xref::class/RelativeDisplacement.adoc[`RelativeDisplacement`]
+| +++The depth below the earth's surface of the earthquake's focal point.+++
+
+| <<intensity,`intensity`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++The intensity of the earthquake as defined by the Modified Mercalli Intensity (MMI) scale. Possible values are 1-12, corresponding to I-XII.+++
+
+| <<magnitude,`magnitude`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The magnitude of the earthquake as defined on the Moment Magnitude (M<sub>w</sub>) scale, which measures the size of earthquakes in terms of the energy released. Must be greater than zero.+++
+
+| <<EnvironmentalInformation,`EnvironmentalInformation`>>
+| 0..1
+| xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+| +++The forecast or observation of which this phenomenon description is a part.+++
+
+| <<PhenomenonClassification,`PhenomenonClassification`>>
+| 0..1
+| xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+| +++The classification of this phenomenon.+++
+
+| <<timeInterval,`timeInterval`>>
+| 0..1
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++The timestamp of the phenomenon as a single point or time interval.+++
+
+| <<EnvironmentalLocationKind,`EnvironmentalLocationKind`>>
+| 0..*
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+| +++Location of relevance to this environmental phenomenon.+++
+|===
+
+'''
+
+
+//[discrete]
+[#EnvironmentalInformation]
+=== `EnvironmentalInformation`
++++The forecast or observation of which this phenomenon description is a part.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.EnvironmentalInformation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#EnvironmentalLocationKind]
+=== `EnvironmentalLocationKind`
++++Location of relevance to this environmental phenomenon.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.EnvironmentalLocationKind`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#focalDepth]
+=== `focalDepth`
++++The depth below the earth's surface of the earthquake's focal point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Earthquake.focalDepth`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RelativeDisplacement.adoc[`RelativeDisplacement`]
+
+
+|===
+
+//[discrete]
+[#intensity]
+=== `intensity`
++++The intensity of the earthquake as defined by the Modified Mercalli Intensity (MMI) scale. Possible values are 1-12, corresponding to I-XII.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Earthquake.intensity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#magnitude]
+=== `magnitude`
++++The magnitude of the earthquake as defined on the Moment Magnitude (M<sub>w</sub>) scale, which measures the size of earthquakes in terms of the energy released. Must be greater than zero.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Earthquake.magnitude`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#PhenomenonClassification]
+=== `PhenomenonClassification`
++++The classification of this phenomenon.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.PhenomenonClassification`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+//[discrete]
+[#timeInterval]
+=== `timeInterval`
++++The timestamp of the phenomenon as a single point or time interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.timeInterval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+

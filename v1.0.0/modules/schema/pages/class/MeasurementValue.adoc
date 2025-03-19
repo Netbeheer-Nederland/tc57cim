@@ -1,0 +1,728 @@
+= `MeasurementValue`
+:toclevels: 4
+
+
++++The current state for a measurement. A state value is an instance of a measurement from a specific source. Measurements can be associated with many state values, each representing a different source for the measurement.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MeasurementValue`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/IOPoint.adoc[`IOPoint`]
+*** *`MeasurementValue`*
+ **** xref::class/AccumulatorValue.adoc[`AccumulatorValue`]
+ **** xref::class/AnalogValue.adoc[`AnalogValue`]
+ **** xref::class/BaseReading.adoc[`BaseReading`]
+ **** xref::class/DiscreteValue.adoc[`DiscreteValue`]
+ **** xref::class/StringMeasurementValue.adoc[`StringMeasurementValue`]
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+MeasurementValue {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+RemoteSource {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+MeasurementValueQuality {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+MeasurementValueSource {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+CalculationMethodHierarchy {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ProcedureDataSet {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+OldPerson {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ProvidedBilateralPoint {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+IOPointSource {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+MeasurementValue -> RemoteSource: RemoteSource
+
+
+MeasurementValue -> MeasurementValueQuality: MeasurementValueQuality
+
+
+MeasurementValue -> MeasurementValueSource: MeasurementValueSource
+
+
+MeasurementValue -> CalculationMethodHierarchy: CalculationMethodHierarchy
+
+
+MeasurementValue -> ProcedureDataSet: ProcedureDataSet
+
+
+MeasurementValue -> OldPerson: ErpPerson
+
+
+MeasurementValue -> ProvidedBilateralPoint: BilateralToIOPoint
+
+
+MeasurementValue -> IOPointSource: IOPointSource
+
+
+MeasurementValue -> DiagramObject: DiagramObjects
+
+
+MeasurementValue -> InstanceSet: InstanceSet
+
+
+MeasurementValue -> Name: Names
+
+
+MeasurementValue -> ChangeSetMember: PropertiesCIMDataObject
+
+
+MeasurementValue -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<MeasurementValueSource,`MeasurementValueSource`>>
+| 1
+| xref::class/MeasurementValueSource.adoc[`MeasurementValueSource`]
+| +++A reference to the type of source that updates the MeasurementValue, e.g. SCADA, CCLink, manual, etc. User conventions for the names of sources are contained in the introduction to IEC 61970-301.+++
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<CalculationMethodHierarchy,`CalculationMethodHierarchy`>>
+| 0..1
+| xref::class/CalculationMethodHierarchy.adoc[`CalculationMethodHierarchy`]
+| n/a
+
+| <<ErpPerson,`ErpPerson`>>
+| 0..1
+| xref::class/OldPerson.adoc[`OldPerson`]
+| n/a
+
+| <<MeasurementValueQuality,`MeasurementValueQuality`>>
+| 0..1
+| xref::class/MeasurementValueQuality.adoc[`MeasurementValueQuality`]
+| +++A MeasurementValue has a MeasurementValueQuality associated with it.+++
+
+| <<RemoteSource,`RemoteSource`>>
+| 0..1
+| xref::class/RemoteSource.adoc[`RemoteSource`]
+| +++Link to the physical telemetered point associated with this measurement.+++
+
+| <<sensorAccuracy,`sensorAccuracy`>>
+| 0..1
+| xref::class/PerCent.adoc[`PerCent`]
+| +++The limit, expressed as a percentage of the sensor maximum, that errors will not exceed when the sensor is used under  reference conditions.+++
+
+| <<timeStamp,`timeStamp`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++The time when the value was last updated.+++
+
+| <<ProcedureDataSet,`ProcedureDataSet`>>
+| 0..*
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+| +++Procedure data set that applies to this mesurement value.+++
+
+| <<IOPointSource,`IOPointSource`>>
+| 0..1
+| xref::class/IOPointSource.adoc[`IOPointSource`]
+| +++Local merasurement value source for an ICCP point.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<BilateralToIOPoint,`BilateralToIOPoint`>>
+| 0..*
+| xref::class/ProvidedBilateralPoint.adoc[`ProvidedBilateralPoint`]
+| +++Bilateral ICCP point for the measurement or control.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#BilateralToIOPoint]
+=== `BilateralToIOPoint`
++++Bilateral ICCP point for the measurement or control.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IOPoint.BilateralToIOPoint`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProvidedBilateralPoint.adoc[`ProvidedBilateralPoint`]
+
+| Inherited from
+| xref::class/IOPoint.adoc[`IOPoint`]
+
+
+|===
+
+//[discrete]
+[#CalculationMethodHierarchy]
+=== `CalculationMethodHierarchy`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.CalculationMethodHierarchy`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CalculationMethodHierarchy.adoc[`CalculationMethodHierarchy`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ErpPerson]
+=== `ErpPerson`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.ErpPerson`
+| Cardinality
+| 0..1
+| Type
+| xref::class/OldPerson.adoc[`OldPerson`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#IOPointSource]
+=== `IOPointSource`
++++Local merasurement value source for an ICCP point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IOPoint.IOPointSource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IOPointSource.adoc[`IOPointSource`]
+
+| Inherited from
+| xref::class/IOPoint.adoc[`IOPoint`]
+
+
+|===
+
+//[discrete]
+[#MeasurementValueQuality]
+=== `MeasurementValueQuality`
++++A MeasurementValue has a MeasurementValueQuality associated with it.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.MeasurementValueQuality`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MeasurementValueQuality.adoc[`MeasurementValueQuality`]
+
+
+|===
+
+//[discrete]
+[#MeasurementValueSource]
+=== `MeasurementValueSource`
++++A reference to the type of source that updates the MeasurementValue, e.g. SCADA, CCLink, manual, etc. User conventions for the names of sources are contained in the introduction to IEC 61970-301.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.MeasurementValueSource`
+| Cardinality
+| 1
+| Type
+| xref::class/MeasurementValueSource.adoc[`MeasurementValueSource`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ProcedureDataSet]
+=== `ProcedureDataSet`
++++Procedure data set that applies to this mesurement value.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.ProcedureDataSet`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#RemoteSource]
+=== `RemoteSource`
++++Link to the physical telemetered point associated with this measurement.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.RemoteSource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RemoteSource.adoc[`RemoteSource`]
+
+
+|===
+
+//[discrete]
+[#sensorAccuracy]
+=== `sensorAccuracy`
++++The limit, expressed as a percentage of the sensor maximum, that errors will not exceed when the sensor is used under  reference conditions.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.sensorAccuracy`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#timeStamp]
+=== `timeStamp`
++++The time when the value was last updated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.timeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+

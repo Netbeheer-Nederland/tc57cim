@@ -1,0 +1,341 @@
+= `DERMonitorableParameter`
+:toclevels: 4
+
+
++++To define the DER monitorable parameters that will be forecasted and dispatched for a DER Group.  Each parameter is represented as a Y Value at a point in time or on a curve as a function of time, which is represented on the X axis.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DERMonitorableParameter`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`DERMonitorableParameter`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+DERMonitorableParameter {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DERCurveData {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+EndDeviceGroup {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DispatchSchedule {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+DERMonitorableParameter -> DERCurveData: DERCurveData
+
+
+DERMonitorableParameter -> EndDeviceGroup: EndDeviceGroup
+
+
+DERMonitorableParameter -> DispatchSchedule: DispatchSchedule
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<flowDirection,`flowDirection`>>
+| 1
+| xref::enumeration/FlowDirectionKind.adoc[`FlowDirectionKind`]
+| +++Kind of flow direction for reading/measured  values proper to some commodities such as, for example, energy, power, demand.+++
+
+| <<DERCurveData,`DERCurveData`>>
+| 0..1
+| xref::class/DERCurveData.adoc[`DERCurveData`]
+| +++Specifies the time dependent curve for a DER monitorable parameter+++
+
+| <<DERParameter,`DERParameter`>>
+| 0..1
+| xref::enumeration/DERParameterKind.adoc[`DERParameterKind`]
+| +++Defines the specific engineering value being forecasted or dispatched.+++
+
+| <<yMultiplier,`yMultiplier`>>
+| 0..1
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++The UnitMultiplier that is applied to the DERMonitorableParameter.+++
+
+| <<yUnit,`yUnit`>>
+| 0..1
+| xref::enumeration/DERUnitSymbol.adoc[`DERUnitSymbol`]
+| +++The DERUnitSymbol that is applied to the DERMonitorableParameter+++
+
+| <<yUnitInstalledMax,`yUnitInstalledMax`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The maximum value of the DERMonitorableParameter based on the installed capacity.+++
+
+| <<yUnitInstalledMin,`yUnitInstalledMin`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The minimum value of the DERMonitorableParameter based on the installed capacity.+++
+
+| <<DispatchSchedule,`DispatchSchedule`>>
+| 0..*
+| xref::class/DispatchSchedule.adoc[`DispatchSchedule`]
+| +++The schedule used for dispatching or forecasting the values of DER monitorable parameters over time.+++
+
+| <<EndDeviceGroup,`EndDeviceGroup`>>
+| 0..*
+| xref::class/EndDeviceGroup.adoc[`EndDeviceGroup`]
+| +++The DER Group having DER monitorable parameters.+++
+|===
+
+'''
+
+
+//[discrete]
+[#DERCurveData]
+=== `DERCurveData`
++++Specifies the time dependent curve for a DER monitorable parameter+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERMonitorableParameter.DERCurveData`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DERCurveData.adoc[`DERCurveData`]
+
+
+|===
+
+//[discrete]
+[#DERParameter]
+=== `DERParameter`
++++Defines the specific engineering value being forecasted or dispatched.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERMonitorableParameter.DERParameter`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/DERParameterKind.adoc[`DERParameterKind`]
+
+
+|===
+
+//[discrete]
+[#DispatchSchedule]
+=== `DispatchSchedule`
++++The schedule used for dispatching or forecasting the values of DER monitorable parameters over time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERMonitorableParameter.DispatchSchedule`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DispatchSchedule.adoc[`DispatchSchedule`]
+
+
+|===
+
+//[discrete]
+[#EndDeviceGroup]
+=== `EndDeviceGroup`
++++The DER Group having DER monitorable parameters.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERMonitorableParameter.EndDeviceGroup`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EndDeviceGroup.adoc[`EndDeviceGroup`]
+
+
+|===
+
+//[discrete]
+[#flowDirection]
+=== `flowDirection`
++++Kind of flow direction for reading/measured  values proper to some commodities such as, for example, energy, power, demand.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERMonitorableParameter.flowDirection`
+| Cardinality
+| 1
+| Type
+| xref::enumeration/FlowDirectionKind.adoc[`FlowDirectionKind`]
+
+
+|===
+
+//[discrete]
+[#yMultiplier]
+=== `yMultiplier`
++++The UnitMultiplier that is applied to the DERMonitorableParameter.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERMonitorableParameter.yMultiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+
+|===
+
+//[discrete]
+[#yUnit]
+=== `yUnit`
++++The DERUnitSymbol that is applied to the DERMonitorableParameter+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERMonitorableParameter.yUnit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/DERUnitSymbol.adoc[`DERUnitSymbol`]
+
+
+|===
+
+//[discrete]
+[#yUnitInstalledMax]
+=== `yUnitInstalledMax`
++++The maximum value of the DERMonitorableParameter based on the installed capacity.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERMonitorableParameter.yUnitInstalledMax`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#yUnitInstalledMin]
+=== `yUnitInstalledMin`
++++The minimum value of the DERMonitorableParameter based on the installed capacity.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERMonitorableParameter.yUnitInstalledMin`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+

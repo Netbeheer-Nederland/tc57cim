@@ -1,0 +1,288 @@
+= `BidPriceCap`
+:toclevels: 4
+
+
++++This class represent the bid price cap.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:BidPriceCap`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`BidPriceCap`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+BidPriceCap {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+MarketProduct {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+BidPriceCap -> MarketProduct: MarketProduct
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<MarketProduct,`MarketProduct`>>
+| 0..1
+| xref::class/MarketProduct.adoc[`MarketProduct`]
+| n/a
+
+| <<bidCeiling,`bidCeiling`>>
+| 0..1
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++Bid Ceiling ($/MWH)+++
+
+| <<bidCeilingAS,`bidCeilingAS`>>
+| 0..1
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++Bid Ceiling ($/MWH) for generic AS versus a specific market product+++
+
+| <<bidFloor,`bidFloor`>>
+| 0..1
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++Bid Floor, ($/MWH)+++
+
+| <<bidFloorAS,`bidFloorAS`>>
+| 0..1
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++Bid Floor ($/MWH) for generic AS versus a specific market product+++
+
+| <<defaultPrice,`defaultPrice`>>
+| 0..1
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++Bid Default Price($/MWH)+++
+
+| <<marketType,`marketType`>>
+| 0..1
+| xref::enumeration/MarketType.adoc[`MarketType`]
+| +++Market Type of the cap (DAM or RTM)+++
+|===
+
+'''
+
+
+//[discrete]
+[#bidCeiling]
+=== `bidCeiling`
++++Bid Ceiling ($/MWH)+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.bidCeiling`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+//[discrete]
+[#bidCeilingAS]
+=== `bidCeilingAS`
++++Bid Ceiling ($/MWH) for generic AS versus a specific market product+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.bidCeilingAS`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+//[discrete]
+[#bidFloor]
+=== `bidFloor`
++++Bid Floor, ($/MWH)+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.bidFloor`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+//[discrete]
+[#bidFloorAS]
+=== `bidFloorAS`
++++Bid Floor ($/MWH) for generic AS versus a specific market product+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.bidFloorAS`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+//[discrete]
+[#defaultPrice]
+=== `defaultPrice`
++++Bid Default Price($/MWH)+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.defaultPrice`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+//[discrete]
+[#MarketProduct]
+=== `MarketProduct`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.MarketProduct`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MarketProduct.adoc[`MarketProduct`]
+
+
+|===
+
+//[discrete]
+[#marketType]
+=== `marketType`
++++Market Type of the cap (DAM or RTM)+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.marketType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MarketType.adoc[`MarketType`]
+
+
+|===
+
+

@@ -1,0 +1,171 @@
+= `AllocationEnergyTypeCode`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AllocationEnergyTypeCode`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ACNG`
+| `cim:AllocationEnergyTypeCode.ACNG`
+| n/a
+
+| `BS`
+| `cim:AllocationEnergyTypeCode.BS`
+| n/a
+
+| `DAPE`
+| `cim:AllocationEnergyTypeCode.DAPE`
+| n/a
+
+| `DASE`
+| `cim:AllocationEnergyTypeCode.DASE`
+| n/a
+
+| `ESRT`
+| `cim:AllocationEnergyTypeCode.ESRT`
+| n/a
+
+| `ESYS`
+| `cim:AllocationEnergyTypeCode.ESYS`
+| n/a
+
+| `ETC`
+| `cim:AllocationEnergyTypeCode.ETC`
+| n/a
+
+| `HASE`
+| `cim:AllocationEnergyTypeCode.HASE`
+| n/a
+
+| `LMPM`
+| `cim:AllocationEnergyTypeCode.LMPM`
+| n/a
+
+| `MINL`
+| `cim:AllocationEnergyTypeCode.MINL`
+| n/a
+
+| `MLE`
+| `cim:AllocationEnergyTypeCode.MLE`
+| n/a
+
+| `MSSLFE`
+| `cim:AllocationEnergyTypeCode.MSSLFE`
+| n/a
+
+| `OE`
+| `cim:AllocationEnergyTypeCode.OE`
+| n/a
+
+| `OTHER`
+| `cim:AllocationEnergyTypeCode.OTHER`
+| n/a
+
+| `OVGN`
+| `cim:AllocationEnergyTypeCode.OVGN`
+| n/a
+
+| `PE`
+| `cim:AllocationEnergyTypeCode.PE`
+| n/a
+
+| `RCNG`
+| `cim:AllocationEnergyTypeCode.RCNG`
+| n/a
+
+| `RE`
+| `cim:AllocationEnergyTypeCode.RE`
+| n/a
+
+| `RED`
+| `cim:AllocationEnergyTypeCode.RED`
+| n/a
+
+| `RMRD`
+| `cim:AllocationEnergyTypeCode.RMRD`
+| n/a
+
+| `RMRH`
+| `cim:AllocationEnergyTypeCode.RMRH`
+| n/a
+
+| `RMRR`
+| `cim:AllocationEnergyTypeCode.RMRR`
+| n/a
+
+| `RMRS`
+| `cim:AllocationEnergyTypeCode.RMRS`
+| n/a
+
+| `RMRT`
+| `cim:AllocationEnergyTypeCode.RMRT`
+| n/a
+
+| `RSYS`
+| `cim:AllocationEnergyTypeCode.RSYS`
+| n/a
+
+| `RTSSE`
+| `cim:AllocationEnergyTypeCode.RTSSE`
+| n/a
+
+| `SDWN`
+| `cim:AllocationEnergyTypeCode.SDWN`
+| n/a
+
+| `SE`
+| `cim:AllocationEnergyTypeCode.SE`
+| n/a
+
+| `SLIC`
+| `cim:AllocationEnergyTypeCode.SLIC`
+| n/a
+
+| `SRE`
+| `cim:AllocationEnergyTypeCode.SRE`
+| n/a
+
+| `STRT`
+| `cim:AllocationEnergyTypeCode.STRT`
+| n/a
+
+| `SUMR`
+| `cim:AllocationEnergyTypeCode.SUMR`
+| n/a
+
+| `TCNG`
+| `cim:AllocationEnergyTypeCode.TCNG`
+| n/a
+
+| `TEST`
+| `cim:AllocationEnergyTypeCode.TEST`
+| n/a
+
+| `TOR`
+| `cim:AllocationEnergyTypeCode.TOR`
+| n/a
+
+| `VS`
+| `cim:AllocationEnergyTypeCode.VS`
+| n/a
+|===

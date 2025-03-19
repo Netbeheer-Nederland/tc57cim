@@ -1,0 +1,45 @@
+= `BusbarConfiguration`
+:toclevels: 4
+
+
++++Busbar layout for bay.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:BusbarConfiguration`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `doubleBus`
+| `cim:BusbarConfiguration.doubleBus`
+| n/a
+
+| `mainWithTransfer`
+| `cim:BusbarConfiguration.mainWithTransfer`
+| n/a
+
+| `ringBus`
+| `cim:BusbarConfiguration.ringBus`
+| n/a
+
+| `singleBus`
+| `cim:BusbarConfiguration.singleBus`
+| n/a
+|===

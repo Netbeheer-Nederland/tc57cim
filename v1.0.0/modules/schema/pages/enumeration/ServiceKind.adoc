@@ -1,0 +1,93 @@
+= `ServiceKind`
+:toclevels: 4
+
+
++++Kind of service.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ServiceKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `air`
+| `cim:ServiceKind.air`
+| n/a
+
+| `electricity`
+| `cim:ServiceKind.electricity`
+| n/a
+
+| `gas`
+| `cim:ServiceKind.gas`
+| n/a
+
+| `heat`
+| `cim:ServiceKind.heat`
+| n/a
+
+| `heatingFluid`
+| `cim:ServiceKind.heatingFluid`
+| n/a
+
+| `internet`
+| `cim:ServiceKind.internet`
+| n/a
+
+| `naturalGas`
+| `cim:ServiceKind.naturalGas`
+| n/a
+
+| `other`
+| `cim:ServiceKind.other`
+| n/a
+
+| `propane`
+| `cim:ServiceKind.propane`
+| n/a
+
+| `rates`
+| `cim:ServiceKind.rates`
+| n/a
+
+| `refuse`
+| `cim:ServiceKind.refuse`
+| n/a
+
+| `sewerage`
+| `cim:ServiceKind.sewerage`
+| n/a
+
+| `steam`
+| `cim:ServiceKind.steam`
+| n/a
+
+| `time`
+| `cim:ServiceKind.time`
+| n/a
+
+| `tvLicence`
+| `cim:ServiceKind.tvLicence`
+| n/a
+
+| `water`
+| `cim:ServiceKind.water`
+| n/a
+|===

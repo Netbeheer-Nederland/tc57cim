@@ -1,0 +1,61 @@
+= `RegulatingControlModeKind`
+:toclevels: 4
+
+
++++The kind of regulation model.   For example regulating voltage, reactive power, active power, etc.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:RegulatingControlModeKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `activePower`
+| `cim:RegulatingControlModeKind.activePower`
+| n/a
+
+| `admittance`
+| `cim:RegulatingControlModeKind.admittance`
+| n/a
+
+| `currentFlow`
+| `cim:RegulatingControlModeKind.currentFlow`
+| n/a
+
+| `powerFactor`
+| `cim:RegulatingControlModeKind.powerFactor`
+| n/a
+
+| `reactivePower`
+| `cim:RegulatingControlModeKind.reactivePower`
+| n/a
+
+| `temperature`
+| `cim:RegulatingControlModeKind.temperature`
+| n/a
+
+| `timeScheduled`
+| `cim:RegulatingControlModeKind.timeScheduled`
+| n/a
+
+| `voltage`
+| `cim:RegulatingControlModeKind.voltage`
+| n/a
+|===

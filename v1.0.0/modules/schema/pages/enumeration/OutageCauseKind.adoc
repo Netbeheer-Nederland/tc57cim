@@ -1,0 +1,49 @@
+= `OutageCauseKind`
+:toclevels: 4
+
+
++++This enumeration describes the primary cause of the outage - planned, unplanned, etc.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OutageCauseKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `animal`
+| `cim:OutageCauseKind.animal`
+| n/a
+
+| `lightingStrike`
+| `cim:OutageCauseKind.lightingStrike`
+| n/a
+
+| `lineDown`
+| `cim:OutageCauseKind.lineDown`
+| n/a
+
+| `poleDown`
+| `cim:OutageCauseKind.poleDown`
+| n/a
+
+| `treeDown`
+| `cim:OutageCauseKind.treeDown`
+| n/a
+|===
