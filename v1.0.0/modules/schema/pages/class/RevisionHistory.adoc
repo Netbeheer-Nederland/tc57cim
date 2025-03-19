@@ -1,0 +1,229 @@
+= `RevisionHistory`
+:toclevels: 4
+
+
++++History of changes made to a switching plan step after the switching plan has been approved.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RevisionHistory`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`RevisionHistory`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+RevisionHistory {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+SwitchingStep {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+RevisionHistory -> SwitchingStep: SwitchingStep
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<kind,`kind`>>
+| 1
+| xref::enumeration/RevisionKind.adoc[`RevisionKind`]
+| +++Kind of change, either void or added.+++
+
+| <<revisionAuthor,`revisionAuthor`>>
+| 1
+| https://w3id.org/linkml/String[`string`]
+| +++Person who made the change+++
+
+| <<revisionDateTime,`revisionDateTime`>>
+| 1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time of the change+++
+
+| <<revisionReason,`revisionReason`>>
+| 1
+| https://w3id.org/linkml/String[`string`]
+| +++Reason for making the change+++
+
+| <<SwitchingStep,`SwitchingStep`>>
+| 0..1
+| xref::class/SwitchingStep.adoc[`SwitchingStep`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#kind]
+=== `kind`
++++Kind of change, either void or added.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RevisionHistory.kind`
+| Cardinality
+| 1
+| Type
+| xref::enumeration/RevisionKind.adoc[`RevisionKind`]
+
+
+|===
+
+//[discrete]
+[#revisionAuthor]
+=== `revisionAuthor`
++++Person who made the change+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RevisionHistory.revisionAuthor`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#revisionDateTime]
+=== `revisionDateTime`
++++Date and time of the change+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RevisionHistory.revisionDateTime`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#revisionReason]
+=== `revisionReason`
++++Reason for making the change+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RevisionHistory.revisionReason`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#SwitchingStep]
+=== `SwitchingStep`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RevisionHistory.SwitchingStep`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SwitchingStep.adoc[`SwitchingStep`]
+
+
+|===
+
+

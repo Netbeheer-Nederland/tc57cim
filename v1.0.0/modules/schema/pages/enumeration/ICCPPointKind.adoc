@@ -1,0 +1,53 @@
+= `ICCPPointKind`
+:toclevels: 4
+
+
++++The kind of ICCP point that is to be conveyed.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ICCPPointKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `discrete`
+| `cim:ICCPPointKind.discrete`
+| n/a
+
+| `packedProtectionEvent`
+| `cim:ICCPPointKind.packedProtectionEvent`
+| n/a
+
+| `real`
+| `cim:ICCPPointKind.real`
+| n/a
+
+| `singleProtectionEvent`
+| `cim:ICCPPointKind.singleProtectionEvent`
+| n/a
+
+| `state`
+| `cim:ICCPPointKind.state`
+| n/a
+
+| `stateSupplemental`
+| `cim:ICCPPointKind.stateSupplemental`
+| n/a
+|===

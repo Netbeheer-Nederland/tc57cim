@@ -1,0 +1,73 @@
+= `CalculationIntervalUnitKind`
+:toclevels: 4
+
+
++++Units in which calculation interval period is defined.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CalculationIntervalUnitKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `cycle`
+| `cim:CalculationIntervalUnitKind.cycle`
+| n/a
+
+| `day`
+| `cim:CalculationIntervalUnitKind.day`
+| n/a
+
+| `hour`
+| `cim:CalculationIntervalUnitKind.hour`
+| n/a
+
+| `milliSecond`
+| `cim:CalculationIntervalUnitKind.milliSecond`
+| n/a
+
+| `minute`
+| `cim:CalculationIntervalUnitKind.minute`
+| n/a
+
+| `month`
+| `cim:CalculationIntervalUnitKind.month`
+| n/a
+
+| `perCycle`
+| `cim:CalculationIntervalUnitKind.perCycle`
+| n/a
+
+| `season`
+| `cim:CalculationIntervalUnitKind.season`
+| n/a
+
+| `second`
+| `cim:CalculationIntervalUnitKind.second`
+| n/a
+
+| `week`
+| `cim:CalculationIntervalUnitKind.week`
+| n/a
+
+| `year`
+| `cim:CalculationIntervalUnitKind.year`
+| n/a
+|===

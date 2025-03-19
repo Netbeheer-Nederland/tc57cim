@@ -1,0 +1,2977 @@
+= `RegisteredResource`
+:toclevels: 4
+
+
++++A resource that is registered through the market participant registration system. Examples include generating unit, load, and non-physical generator or load.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RegisteredResource`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+*** *`RegisteredResource`*
+ **** xref::class/RegisteredDistributedResource.adoc[`RegisteredDistributedResource`]
+ **** xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`]
+ **** xref::class/RegisteredInterTie.adoc[`RegisteredInterTie`]
+ **** xref::class/RegisteredLoad.adoc[`RegisteredLoad`]
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+RegisteredResource {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+DopInstruction {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ResourceGroup {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ResourceCertification {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MktConnectivityNode {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+SchedulingPoint {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+FormerReference {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+IntermittentResourceEligibility {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ResourceCapacity {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Reason {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ExpectedEnergyValues {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ResourceCertification {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ResourceLoadFollowingInst {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+LoadFollowingInst {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+AllocationResultValues {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RUCAwardInstruction {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MPMResourceStatus {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Commitments {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketParticipant {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+SubControlArea {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+AdjacentCASet {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+SubstitutionResourceList {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ResourceDispatchResults {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RMROperatorInput {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+OrgResOwnership {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ContractDistributionFactor {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RampRateCurve {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+TimeSeries {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DispatchInstReply {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+AggregateNode {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ForbiddenRegion {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DotInstruction {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+EnergyMarket {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Domain {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Instructions {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+HostControlArea {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Pnode {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ExPostResourceResults {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ResourceAwardInstruction {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MPMTestThreshold {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+LoadFollowingOperatorInput {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ControlAreaDesignation {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketObjectStatus {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DefaultBid {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ResourceVerifiableCosts {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Control {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Measurement {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PSRType {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ConfigurationEvent {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ReportingGroup {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+OperatingShare {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+AssetInfo {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+VerificationAction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ClearanceDocument {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+GenericAction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+PSREvent {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Asset {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Location {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+OperationalTag {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+RegisteredResource -> DopInstruction: DopInstruction
+
+
+RegisteredResource -> ResourceGroup: ResourceGroups
+
+
+RegisteredResource -> ResourceCertification: ResourceCertification
+
+
+RegisteredResource -> MktConnectivityNode: MktConnectivityNode
+
+
+RegisteredResource -> SchedulingPoint: InterTie
+
+
+RegisteredResource -> FormerReference: FormerReference
+
+
+RegisteredResource -> IntermittentResourceEligibility: IntermittentResourceEligibility
+
+
+RegisteredResource -> ResourceCapacity: ResourceCapacity
+
+
+RegisteredResource -> Reason: Reason
+
+
+RegisteredResource -> ExpectedEnergyValues: ExpectedEnergyValues
+
+
+RegisteredResource -> ResourceCertification: ResourceAncillaryServiceQualification
+
+
+RegisteredResource -> ResourceLoadFollowingInst: ResourceLoadFollowingInst
+
+
+RegisteredResource -> LoadFollowingInst: LoadFollowingInst
+
+
+RegisteredResource -> AllocationResultValues: AllocationResultValues
+
+
+RegisteredResource -> RUCAwardInstruction: RUCAwardInstruction
+
+
+RegisteredResource -> MPMResourceStatus: MPMResourceStatus
+
+
+RegisteredResource -> Commitments: Commitments
+
+
+RegisteredResource -> MarketParticipant: MarketParticipant
+
+
+RegisteredResource -> SubControlArea: SubControlArea
+
+
+RegisteredResource -> AdjacentCASet: AdjacentCASet
+
+
+RegisteredResource -> SubstitutionResourceList: SubstitutionResourceList
+
+
+RegisteredResource -> ResourceDispatchResults: ResourceDispatchResults
+
+
+RegisteredResource -> RMROperatorInput: RMROperatorInput
+
+
+RegisteredResource -> OrgResOwnership: OrgResOwnership
+
+
+RegisteredResource -> ContractDistributionFactor: ContractDistributionFactor
+
+
+RegisteredResource -> RampRateCurve: RampRateCurve
+
+
+RegisteredResource -> TimeSeries: TimeSeries
+
+
+RegisteredResource -> DispatchInstReply: DispatchInstReply
+
+
+RegisteredResource -> AggregateNode: AggregateNode
+
+
+RegisteredResource -> ForbiddenRegion: ForbiddenRegion
+
+
+RegisteredResource -> DotInstruction: DotInstruction
+
+
+RegisteredResource -> EnergyMarket: EnergyMarkets
+
+
+RegisteredResource -> Domain: Domain
+
+
+RegisteredResource -> Instructions: Instructions
+
+
+RegisteredResource -> HostControlArea: HostControlArea
+
+
+RegisteredResource -> Pnode: Pnode
+
+
+RegisteredResource -> ExPostResourceResults: ExPostResourceResults
+
+
+RegisteredResource -> ResourceAwardInstruction: ResourceAwardInstruction
+
+
+RegisteredResource -> MPMTestThreshold: MPMTestThreshold
+
+
+RegisteredResource -> LoadFollowingOperatorInput: LoadFollowingOperatorInput
+
+
+RegisteredResource -> ControlAreaDesignation: ControlAreaDesignation
+
+
+RegisteredResource -> MarketObjectStatus: MarketObjectStatus
+
+
+RegisteredResource -> DefaultBid: DefaultBid
+
+
+RegisteredResource -> ResourceVerifiableCosts: ResourceVerifiableCosts
+
+
+RegisteredResource -> Control: Controls
+
+
+RegisteredResource -> Measurement: Measurements
+
+
+RegisteredResource -> PSRType: PSRType
+
+
+RegisteredResource -> ConfigurationEvent: ConfigurationEvent
+
+
+RegisteredResource -> ReportingGroup: ReportingGroup
+
+
+RegisteredResource -> OperatingShare: OperatingShare
+
+
+RegisteredResource -> AssetInfo: AssetDatasheet
+
+
+RegisteredResource -> VerificationAction: VerificationAction
+
+
+RegisteredResource -> ClearanceDocument: Clearances
+
+
+RegisteredResource -> GenericAction: GenericAction
+
+
+RegisteredResource -> PSREvent: PSREvents
+
+
+RegisteredResource -> Asset: Assets
+
+
+RegisteredResource -> Location: Location
+
+
+RegisteredResource -> OperationalTag: OperationalTags
+
+
+RegisteredResource -> DiagramObject: DiagramObjects
+
+
+RegisteredResource -> InstanceSet: InstanceSet
+
+
+RegisteredResource -> Name: Names
+
+
+RegisteredResource -> ChangeSetMember: PropertiesCIMDataObject
+
+
+RegisteredResource -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<ACAFlag,`ACAFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Indication that this resource is associated with an Adjacent Control Area.+++
+
+| <<ASSPOptimizationFlag,`ASSPOptimizationFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Indication that the resource participates in the optimization process by default.+++
+
+| <<AdjacentCASet,`AdjacentCASet`>>
+| 0..1
+| xref::class/AdjacentCASet.adoc[`AdjacentCASet`]
+| n/a
+
+| <<AggregateNode,`AggregateNode`>>
+| 0..1
+| xref::class/AggregateNode.adoc[`AggregateNode`]
+| +++An AggregateNode may be associated with up to many RegisteredResources.+++
+
+| <<DefaultBid,`DefaultBid`>>
+| 0..1
+| xref::class/DefaultBid.adoc[`DefaultBid`]
+| n/a
+
+| <<ECAFlag,`ECAFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Indication that this resource is associated with an Embedded Control area.+++
+
+| <<HostControlArea,`HostControlArea`>>
+| 0..1
+| xref::class/HostControlArea.adoc[`HostControlArea`]
+| n/a
+
+| <<LMPMFlag,`LMPMFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++LMPM flag: indicates whether the resource is subject to the LMPM test (Yes/No).+++
+
+| <<MarketParticipant,`MarketParticipant`>>
+| 0..1
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+| n/a
+
+| <<MktConnectivityNode,`MktConnectivityNode`>>
+| 0..1
+| xref::class/MktConnectivityNode.adoc[`MktConnectivityNode`]
+| n/a
+
+| <<Pnode,`Pnode`>>
+| 0..1
+| xref::class/Pnode.adoc[`Pnode`]
+| +++A registered resource injects power at one or more connectivity nodes related to a pnode+++
+
+| <<ResourceVerifiableCosts,`ResourceVerifiableCosts`>>
+| 0..1
+| xref::class/ResourceVerifiableCosts.adoc[`ResourceVerifiableCosts`]
+| n/a
+
+| <<SMPMFlag,`SMPMFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++SMPM flag: indicates whether the resource is subject to the SMPM test (Yes/No).+++
+
+| <<commercialOpDate,`commercialOpDate`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Resource Commercial Operation Date.+++
+
+| <<contingencyAvailFlag,`contingencyAvailFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Contingent operating reserve availiability (Yes/No).  Resource is availiable to participate with capacity in contingency dispatch.+++
+
+| <<dispatchable,`dispatchable`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Dispatchable: indicates whether the resource is dispatchable. This implies that the resource intends to submit Energy bids/offers or Ancillary Services bids/offers, or self-provided schedules.+++
+
+| <<flexibleOfferFlag,`flexibleOfferFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Flexible offer flag (Y/N).+++
+
+| <<hourlyPredispatch,`hourlyPredispatch`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Indicates need to dispatch before the start of the operating hour. Only relevant in Real-Time Market. Applies to generation, intertie and participating load resource. Value (Y/N).+++
+
+| <<isAggregatedRes,`isAggregatedRes`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++A flag to indicate if a resource is an aggregated resource.+++
+
+| <<lastModified,`lastModified`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Indication of the last time this item was modified/versioned.+++
+
+| <<marketParticipationFlag,`marketParticipationFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Market Participation flag: indicates whether the resource participate in the market.+++
+
+| <<maxBaseSelfSchedQty ,`maxBaseSelfSchedQty `>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Maximum base self schedule quantity.+++
+
+| <<maxOnTime,`maxOnTime`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Maximum on time after start up.+++
+
+| <<minDispatchTime,`minDispatchTime`>>
+| 0..1
+| xref::class/Hours.adoc[`Hours`]
+| +++Minimum number of consecutive hours a resource shall be dispatched if bid is accepted.+++
+
+| <<minOffTime,`minOffTime`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Minimum off time after shut down.+++
+
+| <<minOnTime,`minOnTime`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Minimum on time after start up.+++
+
+| <<mustOfferFlag,`mustOfferFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Must offer flag: indicates whether the unit is subject to the must offer provisions (Y/N).+++
+
+| <<nonMarket,`nonMarket`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Flag to indicate that the Resource is not participating in the Market Operations.+++
+
+| <<pointOfDeliveryFlag,`pointOfDeliveryFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Indication that the registered resource is a Point of Delivery (YES) resource which implies there is a POD Loss Factor.+++
+
+| <<priceSetFlagDA,`priceSetFlagDA`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Price setting flag: indicates whether a resource is capable of setting the Market Clearing Price (Y) for the DA market, and if not, indicates whether the resource shall submit bids for energy at $ 0 (S) or not (N).
+
+Initially in the RegisteredGenerator class. It was moved to the RegisteredResource class for the participating load dispatch purpose.+++
+
+| <<priceSetFlagRT,`priceSetFlagRT`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Price setting flag: indicates whether a resource is capable of setting the Market Clearing Price (Y) for the RT market, and if not, indicates whether the resource shall submit bids for energy at $ 0 (S) or not (N).
+
+Initially in the RegisteredGenerator class. It was moved to the RegisteredResource class for the participating load dispatch purpose.+++
+
+| <<registrationStatus,`registrationStatus`>>
+| 0..1
+| xref::enumeration/ResourceRegistrationStatus.adoc[`ResourceRegistrationStatus`]
+| +++Registration Status of resource - Active, Mothballed, Planned, or Decommissioned.+++
+
+| <<resourceAdequacyFlag,`resourceAdequacyFlag`>>
+| 0..1
+| xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Indication that this resource participates in the resource adequacy function.+++
+
+| <<AllocationResultValues,`AllocationResultValues`>>
+| 0..*
+| xref::class/AllocationResultValues.adoc[`AllocationResultValues`]
+| n/a
+
+| <<Commitments,`Commitments`>>
+| 0..*
+| xref::class/Commitments.adoc[`Commitments`]
+| n/a
+
+| <<ContractDistributionFactor,`ContractDistributionFactor`>>
+| 0..*
+| xref::class/ContractDistributionFactor.adoc[`ContractDistributionFactor`]
+| n/a
+
+| <<ControlAreaDesignation,`ControlAreaDesignation`>>
+| 0..*
+| xref::class/ControlAreaDesignation.adoc[`ControlAreaDesignation`]
+| n/a
+
+| <<DispatchInstReply,`DispatchInstReply`>>
+| 0..*
+| xref::class/DispatchInstReply.adoc[`DispatchInstReply`]
+| n/a
+
+| <<Domain,`Domain`>>
+| 0..*
+| xref::class/Domain.adoc[`Domain`]
+| n/a
+
+| <<DopInstruction,`DopInstruction`>>
+| 0..*
+| xref::class/DopInstruction.adoc[`DopInstruction`]
+| n/a
+
+| <<DotInstruction,`DotInstruction`>>
+| 0..*
+| xref::class/DotInstruction.adoc[`DotInstruction`]
+| n/a
+
+| <<EnergyMarkets,`EnergyMarkets`>>
+| 0..*
+| xref::class/EnergyMarket.adoc[`EnergyMarket`]
+| n/a
+
+| <<ExPostResourceResults,`ExPostResourceResults`>>
+| 0..*
+| xref::class/ExPostResourceResults.adoc[`ExPostResourceResults`]
+| n/a
+
+| <<ExpectedEnergyValues,`ExpectedEnergyValues`>>
+| 0..*
+| xref::class/ExpectedEnergyValues.adoc[`ExpectedEnergyValues`]
+| n/a
+
+| <<ForbiddenRegion,`ForbiddenRegion`>>
+| 0..*
+| xref::class/ForbiddenRegion.adoc[`ForbiddenRegion`]
+| n/a
+
+| <<FormerReference,`FormerReference`>>
+| 0..*
+| xref::class/FormerReference.adoc[`FormerReference`]
+| n/a
+
+| <<Instructions,`Instructions`>>
+| 0..*
+| xref::class/Instructions.adoc[`Instructions`]
+| n/a
+
+| <<InterTie,`InterTie`>>
+| 0..*
+| xref::class/SchedulingPoint.adoc[`SchedulingPoint`]
+| n/a
+
+| <<IntermittentResourceEligibility,`IntermittentResourceEligibility`>>
+| 0..*
+| xref::class/IntermittentResourceEligibility.adoc[`IntermittentResourceEligibility`]
+| n/a
+
+| <<LoadFollowingInst,`LoadFollowingInst`>>
+| 0..*
+| xref::class/LoadFollowingInst.adoc[`LoadFollowingInst`]
+| n/a
+
+| <<LoadFollowingOperatorInput,`LoadFollowingOperatorInput`>>
+| 0..*
+| xref::class/LoadFollowingOperatorInput.adoc[`LoadFollowingOperatorInput`]
+| n/a
+
+| <<MPMResourceStatus,`MPMResourceStatus`>>
+| 0..*
+| xref::class/MPMResourceStatus.adoc[`MPMResourceStatus`]
+| n/a
+
+| <<MPMTestThreshold,`MPMTestThreshold`>>
+| 0..*
+| xref::class/MPMTestThreshold.adoc[`MPMTestThreshold`]
+| n/a
+
+| <<MarketObjectStatus,`MarketObjectStatus`>>
+| 0..*
+| xref::class/MarketObjectStatus.adoc[`MarketObjectStatus`]
+| n/a
+
+| <<OrgResOwnership,`OrgResOwnership`>>
+| 0..*
+| xref::class/OrgResOwnership.adoc[`OrgResOwnership`]
+| n/a
+
+| <<RMROperatorInput,`RMROperatorInput`>>
+| 0..*
+| xref::class/RMROperatorInput.adoc[`RMROperatorInput`]
+| n/a
+
+| <<RUCAwardInstruction,`RUCAwardInstruction`>>
+| 0..*
+| xref::class/RUCAwardInstruction.adoc[`RUCAwardInstruction`]
+| n/a
+
+| <<RampRateCurve,`RampRateCurve`>>
+| 0..*
+| xref::class/RampRateCurve.adoc[`RampRateCurve`]
+| n/a
+
+| <<Reason,`Reason`>>
+| 0..*
+| xref::class/Reason.adoc[`Reason`]
+| n/a
+
+| <<ResourceAncillaryServiceQualification,`ResourceAncillaryServiceQualification`>>
+| 0..*
+| xref::class/ResourceCertification.adoc[`ResourceCertification`]
+| +++RegisteredResources are qualified for resource ancillary service types (which include market product types as well as other types such as BlackStart) by the association to the class ResourceAncillaryServiceQualification.+++
+
+| <<ResourceAwardInstruction,`ResourceAwardInstruction`>>
+| 0..*
+| xref::class/ResourceAwardInstruction.adoc[`ResourceAwardInstruction`]
+| n/a
+
+| <<ResourceCapacity,`ResourceCapacity`>>
+| 0..*
+| xref::class/ResourceCapacity.adoc[`ResourceCapacity`]
+| n/a
+
+| <<ResourceCertification,`ResourceCertification`>>
+| 0..*
+| xref::class/ResourceCertification.adoc[`ResourceCertification`]
+| n/a
+
+| <<ResourceDispatchResults,`ResourceDispatchResults`>>
+| 0..*
+| xref::class/ResourceDispatchResults.adoc[`ResourceDispatchResults`]
+| n/a
+
+| <<ResourceGroups,`ResourceGroups`>>
+| 0..*
+| xref::class/ResourceGroup.adoc[`ResourceGroup`]
+| n/a
+
+| <<ResourceLoadFollowingInst,`ResourceLoadFollowingInst`>>
+| 0..*
+| xref::class/ResourceLoadFollowingInst.adoc[`ResourceLoadFollowingInst`]
+| n/a
+
+| <<SubControlArea,`SubControlArea`>>
+| 0..*
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+| n/a
+
+| <<SubstitutionResourceList,`SubstitutionResourceList`>>
+| 0..*
+| xref::class/SubstitutionResourceList.adoc[`SubstitutionResourceList`]
+| n/a
+
+| <<TimeSeries,`TimeSeries`>>
+| 0..*
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+| n/a
+
+| <<AssetDatasheet,`AssetDatasheet`>>
+| 0..1
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+| +++Datasheet information for this power system resource.+++
+
+| <<Location,`Location`>>
+| 0..1
+| xref::class/Location.adoc[`Location`]
+| +++Location of this power system resource.+++
+
+| <<PSRType,`PSRType`>>
+| 0..1
+| xref::class/PSRType.adoc[`PSRType`]
+| +++Custom classification for this power system resource.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<Assets,`Assets`>>
+| 0..*
+| xref::class/Asset.adoc[`Asset`]
+| +++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a single AC line segment.+++
+
+| <<Clearances,`Clearances`>>
+| 0..*
+| xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+| +++All clearances applicable to this power system resource.+++
+
+| <<ConfigurationEvent,`ConfigurationEvent`>>
+| 0..*
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this Power System resource.+++
+
+| <<Controls,`Controls`>>
+| 0..*
+| xref::class/Control.adoc[`Control`]
+| +++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or capacitor bank breaker actuator.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<GenericAction,`GenericAction`>>
+| 0..*
+| xref::class/GenericAction.adoc[`GenericAction`]
+| +++The generic action that is performed on the power system resource+++
+
+| <<Measurements,`Measurements`>>
+| 0..*
+| xref::class/Measurement.adoc[`Measurement`]
+| +++The measurements associated with this power system resource.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<OperatingShare,`OperatingShare`>>
+| 0..*
+| xref::class/OperatingShare.adoc[`OperatingShare`]
+| +++The operating shares of this power system resource.+++
+
+| <<OperationalTags,`OperationalTags`>>
+| 0..*
+| xref::class/OperationalTag.adoc[`OperationalTag`]
+| +++All operational tags placed on this power system resource.+++
+
+| <<PSREvents,`PSREvents`>>
+| 0..*
+| xref::class/PSREvent.adoc[`PSREvent`]
+| +++All events associated with this power system resource.+++
+
+| <<ReportingGroup,`ReportingGroup`>>
+| 0..*
+| xref::class/ReportingGroup.adoc[`ReportingGroup`]
+| +++Reporting groups to which this power system resource belongs.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+
+| <<VerificationAction,`VerificationAction`>>
+| 0..*
+| xref::class/VerificationAction.adoc[`VerificationAction`]
+| +++The verification action that is performed on the power system resource+++
+|===
+
+'''
+
+
+//[discrete]
+[#ACAFlag]
+=== `ACAFlag`
++++Indication that this resource is associated with an Adjacent Control Area.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ACAFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#AdjacentCASet]
+=== `AdjacentCASet`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.AdjacentCASet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AdjacentCASet.adoc[`AdjacentCASet`]
+
+
+|===
+
+//[discrete]
+[#AggregateNode]
+=== `AggregateNode`
++++An AggregateNode may be associated with up to many RegisteredResources.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.AggregateNode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AggregateNode.adoc[`AggregateNode`]
+
+
+|===
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#AllocationResultValues]
+=== `AllocationResultValues`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.AllocationResultValues`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AllocationResultValues.adoc[`AllocationResultValues`]
+
+
+|===
+
+//[discrete]
+[#AssetDatasheet]
+=== `AssetDatasheet`
++++Datasheet information for this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.AssetDatasheet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a single AC line segment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#ASSPOptimizationFlag]
+=== `ASSPOptimizationFlag`
++++Indication that the resource participates in the optimization process by default.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ASSPOptimizationFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#Clearances]
+=== `Clearances`
++++All clearances applicable to this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Clearances`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#commercialOpDate]
+=== `commercialOpDate`
++++Resource Commercial Operation Date.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.commercialOpDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#Commitments]
+=== `Commitments`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.Commitments`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Commitments.adoc[`Commitments`]
+
+
+|===
+
+//[discrete]
+[#ConfigurationEvent]
+=== `ConfigurationEvent`
++++All configuration events created for this Power System resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ConfigurationEvent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#contingencyAvailFlag]
+=== `contingencyAvailFlag`
++++Contingent operating reserve availiability (Yes/No).  Resource is availiable to participate with capacity in contingency dispatch.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.contingencyAvailFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#ContractDistributionFactor]
+=== `ContractDistributionFactor`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ContractDistributionFactor`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ContractDistributionFactor.adoc[`ContractDistributionFactor`]
+
+
+|===
+
+//[discrete]
+[#ControlAreaDesignation]
+=== `ControlAreaDesignation`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ControlAreaDesignation`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ControlAreaDesignation.adoc[`ControlAreaDesignation`]
+
+
+|===
+
+//[discrete]
+[#Controls]
+=== `Controls`
++++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or capacitor bank breaker actuator.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Controls`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Control.adoc[`Control`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#DefaultBid]
+=== `DefaultBid`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.DefaultBid`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DefaultBid.adoc[`DefaultBid`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#dispatchable]
+=== `dispatchable`
++++Dispatchable: indicates whether the resource is dispatchable. This implies that the resource intends to submit Energy bids/offers or Ancillary Services bids/offers, or self-provided schedules.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.dispatchable`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#DispatchInstReply]
+=== `DispatchInstReply`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.DispatchInstReply`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DispatchInstReply.adoc[`DispatchInstReply`]
+
+
+|===
+
+//[discrete]
+[#Domain]
+=== `Domain`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.Domain`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Domain.adoc[`Domain`]
+
+
+|===
+
+//[discrete]
+[#DopInstruction]
+=== `DopInstruction`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.DopInstruction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DopInstruction.adoc[`DopInstruction`]
+
+
+|===
+
+//[discrete]
+[#DotInstruction]
+=== `DotInstruction`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.DotInstruction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DotInstruction.adoc[`DotInstruction`]
+
+
+|===
+
+//[discrete]
+[#ECAFlag]
+=== `ECAFlag`
++++Indication that this resource is associated with an Embedded Control area.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ECAFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#EnergyMarkets]
+=== `EnergyMarkets`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.EnergyMarkets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnergyMarket.adoc[`EnergyMarket`]
+
+
+|===
+
+//[discrete]
+[#ExpectedEnergyValues]
+=== `ExpectedEnergyValues`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ExpectedEnergyValues`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ExpectedEnergyValues.adoc[`ExpectedEnergyValues`]
+
+
+|===
+
+//[discrete]
+[#ExPostResourceResults]
+=== `ExPostResourceResults`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ExPostResourceResults`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ExPostResourceResults.adoc[`ExPostResourceResults`]
+
+
+|===
+
+//[discrete]
+[#flexibleOfferFlag]
+=== `flexibleOfferFlag`
++++Flexible offer flag (Y/N).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.flexibleOfferFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#ForbiddenRegion]
+=== `ForbiddenRegion`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ForbiddenRegion`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ForbiddenRegion.adoc[`ForbiddenRegion`]
+
+
+|===
+
+//[discrete]
+[#FormerReference]
+=== `FormerReference`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.FormerReference`
+| Cardinality
+| 0..*
+| Type
+| xref::class/FormerReference.adoc[`FormerReference`]
+
+
+|===
+
+//[discrete]
+[#GenericAction]
+=== `GenericAction`
++++The generic action that is performed on the power system resource+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.GenericAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/GenericAction.adoc[`GenericAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#HostControlArea]
+=== `HostControlArea`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.HostControlArea`
+| Cardinality
+| 0..1
+| Type
+| xref::class/HostControlArea.adoc[`HostControlArea`]
+
+
+|===
+
+//[discrete]
+[#hourlyPredispatch]
+=== `hourlyPredispatch`
++++Indicates need to dispatch before the start of the operating hour. Only relevant in Real-Time Market. Applies to generation, intertie and participating load resource. Value (Y/N).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.hourlyPredispatch`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Instructions]
+=== `Instructions`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.Instructions`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Instructions.adoc[`Instructions`]
+
+
+|===
+
+//[discrete]
+[#IntermittentResourceEligibility]
+=== `IntermittentResourceEligibility`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.IntermittentResourceEligibility`
+| Cardinality
+| 0..*
+| Type
+| xref::class/IntermittentResourceEligibility.adoc[`IntermittentResourceEligibility`]
+
+
+|===
+
+//[discrete]
+[#InterTie]
+=== `InterTie`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.InterTie`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SchedulingPoint.adoc[`SchedulingPoint`]
+
+
+|===
+
+//[discrete]
+[#isAggregatedRes]
+=== `isAggregatedRes`
++++A flag to indicate if a resource is an aggregated resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.isAggregatedRes`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#lastModified]
+=== `lastModified`
++++Indication of the last time this item was modified/versioned.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.lastModified`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#LMPMFlag]
+=== `LMPMFlag`
++++LMPM flag: indicates whether the resource is subject to the LMPM test (Yes/No).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.LMPMFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#LoadFollowingInst]
+=== `LoadFollowingInst`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.LoadFollowingInst`
+| Cardinality
+| 0..*
+| Type
+| xref::class/LoadFollowingInst.adoc[`LoadFollowingInst`]
+
+
+|===
+
+//[discrete]
+[#LoadFollowingOperatorInput]
+=== `LoadFollowingOperatorInput`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.LoadFollowingOperatorInput`
+| Cardinality
+| 0..*
+| Type
+| xref::class/LoadFollowingOperatorInput.adoc[`LoadFollowingOperatorInput`]
+
+
+|===
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location of this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#MarketObjectStatus]
+=== `MarketObjectStatus`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.MarketObjectStatus`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketObjectStatus.adoc[`MarketObjectStatus`]
+
+
+|===
+
+//[discrete]
+[#MarketParticipant]
+=== `MarketParticipant`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.MarketParticipant`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+
+|===
+
+//[discrete]
+[#marketParticipationFlag]
+=== `marketParticipationFlag`
++++Market Participation flag: indicates whether the resource participate in the market.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.marketParticipationFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#maxBaseSelfSchedQty ]
+=== `maxBaseSelfSchedQty `
++++Maximum base self schedule quantity.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.maxBaseSelfSchedQty%20`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#maxOnTime]
+=== `maxOnTime`
++++Maximum on time after start up.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.maxOnTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#Measurements]
+=== `Measurements`
++++The measurements associated with this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Measurements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Measurement.adoc[`Measurement`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#minDispatchTime]
+=== `minDispatchTime`
++++Minimum number of consecutive hours a resource shall be dispatched if bid is accepted.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.minDispatchTime`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Hours.adoc[`Hours`]
+
+
+|===
+
+//[discrete]
+[#minOffTime]
+=== `minOffTime`
++++Minimum off time after shut down.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.minOffTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#minOnTime]
+=== `minOnTime`
++++Minimum on time after start up.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.minOnTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#MktConnectivityNode]
+=== `MktConnectivityNode`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.MktConnectivityNode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MktConnectivityNode.adoc[`MktConnectivityNode`]
+
+
+|===
+
+//[discrete]
+[#MPMResourceStatus]
+=== `MPMResourceStatus`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.MPMResourceStatus`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MPMResourceStatus.adoc[`MPMResourceStatus`]
+
+
+|===
+
+//[discrete]
+[#MPMTestThreshold]
+=== `MPMTestThreshold`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.MPMTestThreshold`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MPMTestThreshold.adoc[`MPMTestThreshold`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#mustOfferFlag]
+=== `mustOfferFlag`
++++Must offer flag: indicates whether the unit is subject to the must offer provisions (Y/N).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.mustOfferFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#nonMarket]
+=== `nonMarket`
++++Flag to indicate that the Resource is not participating in the Market Operations.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.nonMarket`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#OperatingShare]
+=== `OperatingShare`
++++The operating shares of this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperatingShare`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperatingShare.adoc[`OperatingShare`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#OperationalTags]
+=== `OperationalTags`
++++All operational tags placed on this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperationalTags`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperationalTag.adoc[`OperationalTag`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#OrgResOwnership]
+=== `OrgResOwnership`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.OrgResOwnership`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OrgResOwnership.adoc[`OrgResOwnership`]
+
+
+|===
+
+//[discrete]
+[#Pnode]
+=== `Pnode`
++++A registered resource injects power at one or more connectivity nodes related to a pnode+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.Pnode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Pnode.adoc[`Pnode`]
+
+
+|===
+
+//[discrete]
+[#pointOfDeliveryFlag]
+=== `pointOfDeliveryFlag`
++++Indication that the registered resource is a Point of Delivery (YES) resource which implies there is a POD Loss Factor.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.pointOfDeliveryFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#priceSetFlagDA]
+=== `priceSetFlagDA`
++++Price setting flag: indicates whether a resource is capable of setting the Market Clearing Price (Y) for the DA market, and if not, indicates whether the resource shall submit bids for energy at $ 0 (S) or not (N).
+
+Initially in the RegisteredGenerator class. It was moved to the RegisteredResource class for the participating load dispatch purpose.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.priceSetFlagDA`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#priceSetFlagRT]
+=== `priceSetFlagRT`
++++Price setting flag: indicates whether a resource is capable of setting the Market Clearing Price (Y) for the RT market, and if not, indicates whether the resource shall submit bids for energy at $ 0 (S) or not (N).
+
+Initially in the RegisteredGenerator class. It was moved to the RegisteredResource class for the participating load dispatch purpose.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.priceSetFlagRT`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#PSREvents]
+=== `PSREvents`
++++All events associated with this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSREvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PSREvent.adoc[`PSREvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#PSRType]
+=== `PSRType`
++++Custom classification for this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSRType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PSRType.adoc[`PSRType`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#RampRateCurve]
+=== `RampRateCurve`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.RampRateCurve`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RampRateCurve.adoc[`RampRateCurve`]
+
+
+|===
+
+//[discrete]
+[#Reason]
+=== `Reason`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.Reason`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Reason.adoc[`Reason`]
+
+
+|===
+
+//[discrete]
+[#registrationStatus]
+=== `registrationStatus`
++++Registration Status of resource - Active, Mothballed, Planned, or Decommissioned.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.registrationStatus`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ResourceRegistrationStatus.adoc[`ResourceRegistrationStatus`]
+
+
+|===
+
+//[discrete]
+[#ReportingGroup]
+=== `ReportingGroup`
++++Reporting groups to which this power system resource belongs.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ReportingGroup`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ReportingGroup.adoc[`ReportingGroup`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#resourceAdequacyFlag]
+=== `resourceAdequacyFlag`
++++Indication that this resource participates in the resource adequacy function.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.resourceAdequacyFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#ResourceAncillaryServiceQualification]
+=== `ResourceAncillaryServiceQualification`
++++RegisteredResources are qualified for resource ancillary service types (which include market product types as well as other types such as BlackStart) by the association to the class ResourceAncillaryServiceQualification.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ResourceAncillaryServiceQualification`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ResourceCertification.adoc[`ResourceCertification`]
+
+
+|===
+
+//[discrete]
+[#ResourceAwardInstruction]
+=== `ResourceAwardInstruction`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ResourceAwardInstruction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ResourceAwardInstruction.adoc[`ResourceAwardInstruction`]
+
+
+|===
+
+//[discrete]
+[#ResourceCapacity]
+=== `ResourceCapacity`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ResourceCapacity`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ResourceCapacity.adoc[`ResourceCapacity`]
+
+
+|===
+
+//[discrete]
+[#ResourceCertification]
+=== `ResourceCertification`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ResourceCertification`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ResourceCertification.adoc[`ResourceCertification`]
+
+
+|===
+
+//[discrete]
+[#ResourceDispatchResults]
+=== `ResourceDispatchResults`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ResourceDispatchResults`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ResourceDispatchResults.adoc[`ResourceDispatchResults`]
+
+
+|===
+
+//[discrete]
+[#ResourceGroups]
+=== `ResourceGroups`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ResourceGroups`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ResourceGroup.adoc[`ResourceGroup`]
+
+
+|===
+
+//[discrete]
+[#ResourceLoadFollowingInst]
+=== `ResourceLoadFollowingInst`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ResourceLoadFollowingInst`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ResourceLoadFollowingInst.adoc[`ResourceLoadFollowingInst`]
+
+
+|===
+
+//[discrete]
+[#ResourceVerifiableCosts]
+=== `ResourceVerifiableCosts`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.ResourceVerifiableCosts`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ResourceVerifiableCosts.adoc[`ResourceVerifiableCosts`]
+
+
+|===
+
+//[discrete]
+[#RMROperatorInput]
+=== `RMROperatorInput`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.RMROperatorInput`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RMROperatorInput.adoc[`RMROperatorInput`]
+
+
+|===
+
+//[discrete]
+[#RUCAwardInstruction]
+=== `RUCAwardInstruction`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.RUCAwardInstruction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RUCAwardInstruction.adoc[`RUCAwardInstruction`]
+
+
+|===
+
+//[discrete]
+[#SMPMFlag]
+=== `SMPMFlag`
++++SMPM flag: indicates whether the resource is subject to the SMPM test (Yes/No).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.SMPMFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+//[discrete]
+[#SubControlArea]
+=== `SubControlArea`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.SubControlArea`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+
+
+|===
+
+//[discrete]
+[#SubstitutionResourceList]
+=== `SubstitutionResourceList`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.SubstitutionResourceList`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SubstitutionResourceList.adoc[`SubstitutionResourceList`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredResource.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#VerificationAction]
+=== `VerificationAction`
++++The verification action that is performed on the power system resource+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.VerificationAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/VerificationAction.adoc[`VerificationAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+

@@ -1,0 +1,213 @@
+= `NonlinearShuntCompensatorPhasePoint`
+:toclevels: 4
+
+
++++A per phase non linear shunt compensator bank or section admittance value. The number of NonlinearShuntCompenstorPhasePoint instances associated with a NonlinearShuntCompensatorPhase shall be equal to ShuntCompensatorPhase.maximumSections. ShuntCompensator.sections shall only be set to one of the NonlinearShuntCompenstorPhasePoint.sectionNumber. There is no interpolation between NonlinearShuntCompenstorPhasePoint-s.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:NonlinearShuntCompensatorPhasePoint`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`NonlinearShuntCompensatorPhasePoint`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+NonlinearShuntCompensatorPhasePoint {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+NonlinearShuntCompensatorPhase {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+NonlinearShuntCompensatorPhasePoint -> NonlinearShuntCompensatorPhase: NonlinearShuntCompensatorPhase
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<NonlinearShuntCompensatorPhase,`NonlinearShuntCompensatorPhase`>>
+| 1
+| xref::class/NonlinearShuntCompensatorPhase.adoc[`NonlinearShuntCompensatorPhase`]
+| +++Non-linear shunt compensator phase owning this point.+++
+
+| <<b,`b`>>
+| 0..1
+| xref::class/Susceptance.adoc[`Susceptance`]
+| +++Positive sequence shunt (charging) susceptance per section.+++
+
+| <<g,`g`>>
+| 0..1
+| xref::class/Conductance.adoc[`Conductance`]
+| +++Positive sequence shunt (charging) conductance per section.+++
+
+| <<sectionNumber,`sectionNumber`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++The number of the section.+++
+|===
+
+'''
+
+
+//[discrete]
+[#b]
+=== `b`
++++Positive sequence shunt (charging) susceptance per section.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPhasePoint.b`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Susceptance.adoc[`Susceptance`]
+
+
+|===
+
+//[discrete]
+[#g]
+=== `g`
++++Positive sequence shunt (charging) conductance per section.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPhasePoint.g`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Conductance.adoc[`Conductance`]
+
+
+|===
+
+//[discrete]
+[#NonlinearShuntCompensatorPhase]
+=== `NonlinearShuntCompensatorPhase`
++++Non-linear shunt compensator phase owning this point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPhasePoint.NonlinearShuntCompensatorPhase`
+| Cardinality
+| 1
+| Type
+| xref::class/NonlinearShuntCompensatorPhase.adoc[`NonlinearShuntCompensatorPhase`]
+
+
+|===
+
+//[discrete]
+[#sectionNumber]
+=== `sectionNumber`
++++The number of the section.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPhasePoint.sectionNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+

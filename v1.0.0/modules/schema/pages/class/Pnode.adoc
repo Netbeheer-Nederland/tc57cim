@@ -1,0 +1,931 @@
+= `Pnode`
+:toclevels: 4
+
+
++++A pricing node is directly associated with a connectivity node.  It is a pricing location for which market participants submit their bids, offers, buy/sell CRRs, and settle.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Pnode`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`Pnode`*
+ *** xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+ *** xref::class/IndividualPnode.adoc[`IndividualPnode`]
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+Pnode {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+PnodeResults {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+TransactionBid {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MktMeasurement {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+CRRSegment {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RegisteredResource {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+TransactionBid {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+CRRSegment {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Trade {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ExPostPricingResults {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+SubControlArea {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RTO {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+FTR {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+OrgPnodeAllocation {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+CommodityDefinition {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+AggregateNode {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+Pnode -> PnodeResults: PnodeResults
+
+
+Pnode -> TransactionBid: DeliveryTransactionBids
+
+
+Pnode -> MktMeasurement: MktMeasurement
+
+
+Pnode -> CRRSegment: SinkCRRSegment
+
+
+Pnode -> RegisteredResource: RegisteredResources
+
+
+Pnode -> TransactionBid: ReceiptTransactionBids
+
+
+Pnode -> CRRSegment: SourceCRRSegment
+
+
+Pnode -> Trade: Trade
+
+
+Pnode -> ExPostPricingResults: ExPostResults
+
+
+Pnode -> SubControlArea: SubControlArea
+
+
+Pnode -> RTO: RTO
+
+
+Pnode -> FTR: FTRs
+
+
+Pnode -> OrgPnodeAllocation: OrgPnodeAllocation
+
+
+Pnode -> CommodityDefinition: CommodityDefinition
+
+
+Pnode -> AggregateNode: AggregateNode
+
+
+Pnode -> DiagramObject: DiagramObjects
+
+
+Pnode -> InstanceSet: InstanceSet
+
+
+Pnode -> Name: Names
+
+
+Pnode -> ChangeSetMember: PropertiesCIMDataObject
+
+
+Pnode -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<PnodeResults,`PnodeResults`>>
+| 1..*
+| xref::class/PnodeResults.adoc[`PnodeResults`]
+| n/a
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<RTO,`RTO`>>
+| 0..1
+| xref::class/RTO.adoc[`RTO`]
+| n/a
+
+| <<SubControlArea,`SubControlArea`>>
+| 0..1
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+| n/a
+
+| <<isPublic,`isPublic`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true, this Pnode is public (prices are published for DA/RT and FTR markets), otherwise it is private (location is not usable by market for bidding/FTRs/transactions).+++
+
+| <<AggregateNode,`AggregateNode`>>
+| 0..*
+| xref::class/AggregateNode.adoc[`AggregateNode`]
+| n/a
+
+| <<CommodityDefinition,`CommodityDefinition`>>
+| 0..*
+| xref::class/CommodityDefinition.adoc[`CommodityDefinition`]
+| n/a
+
+| <<DeliveryTransactionBids,`DeliveryTransactionBids`>>
+| 0..*
+| xref::class/TransactionBid.adoc[`TransactionBid`]
+| n/a
+
+| <<ExPostResults,`ExPostResults`>>
+| 0..*
+| xref::class/ExPostPricingResults.adoc[`ExPostPricingResults`]
+| n/a
+
+| <<FTRs,`FTRs`>>
+| 0..*
+| xref::class/FTR.adoc[`FTR`]
+| n/a
+
+| <<MktMeasurement,`MktMeasurement`>>
+| 0..*
+| xref::class/MktMeasurement.adoc[`MktMeasurement`]
+| +++Allows Measurements to be associated to Pnodes.+++
+
+| <<OrgPnodeAllocation,`OrgPnodeAllocation`>>
+| 0..*
+| xref::class/OrgPnodeAllocation.adoc[`OrgPnodeAllocation`]
+| n/a
+
+| <<ReceiptTransactionBids,`ReceiptTransactionBids`>>
+| 0..*
+| xref::class/TransactionBid.adoc[`TransactionBid`]
+| n/a
+
+| <<RegisteredResources,`RegisteredResources`>>
+| 0..*
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| +++A registered resource injects power at one or more connectivity nodes related to a pnode+++
+
+| <<SinkCRRSegment,`SinkCRRSegment`>>
+| 0..*
+| xref::class/CRRSegment.adoc[`CRRSegment`]
+| n/a
+
+| <<SourceCRRSegment,`SourceCRRSegment`>>
+| 0..*
+| xref::class/CRRSegment.adoc[`CRRSegment`]
+| n/a
+
+| <<Trade,`Trade`>>
+| 0..*
+| xref::class/Trade.adoc[`Trade`]
+| n/a
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#AggregateNode]
+=== `AggregateNode`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.AggregateNode`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AggregateNode.adoc[`AggregateNode`]
+
+
+|===
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#CommodityDefinition]
+=== `CommodityDefinition`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.CommodityDefinition`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CommodityDefinition.adoc[`CommodityDefinition`]
+
+
+|===
+
+//[discrete]
+[#DeliveryTransactionBids]
+=== `DeliveryTransactionBids`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.DeliveryTransactionBids`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TransactionBid.adoc[`TransactionBid`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ExPostResults]
+=== `ExPostResults`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.ExPostResults`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ExPostPricingResults.adoc[`ExPostPricingResults`]
+
+
+|===
+
+//[discrete]
+[#FTRs]
+=== `FTRs`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.FTRs`
+| Cardinality
+| 0..*
+| Type
+| xref::class/FTR.adoc[`FTR`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#isPublic]
+=== `isPublic`
++++If true, this Pnode is public (prices are published for DA/RT and FTR markets), otherwise it is private (location is not usable by market for bidding/FTRs/transactions).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.isPublic`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#MktMeasurement]
+=== `MktMeasurement`
++++Allows Measurements to be associated to Pnodes.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.MktMeasurement`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MktMeasurement.adoc[`MktMeasurement`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#OrgPnodeAllocation]
+=== `OrgPnodeAllocation`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.OrgPnodeAllocation`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OrgPnodeAllocation.adoc[`OrgPnodeAllocation`]
+
+
+|===
+
+//[discrete]
+[#PnodeResults]
+=== `PnodeResults`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.PnodeResults`
+| Cardinality
+| 1..*
+| Type
+| xref::class/PnodeResults.adoc[`PnodeResults`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ReceiptTransactionBids]
+=== `ReceiptTransactionBids`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.ReceiptTransactionBids`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TransactionBid.adoc[`TransactionBid`]
+
+
+|===
+
+//[discrete]
+[#RegisteredResources]
+=== `RegisteredResources`
++++A registered resource injects power at one or more connectivity nodes related to a pnode+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.RegisteredResources`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+//[discrete]
+[#RTO]
+=== `RTO`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.RTO`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RTO.adoc[`RTO`]
+
+
+|===
+
+//[discrete]
+[#SinkCRRSegment]
+=== `SinkCRRSegment`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.SinkCRRSegment`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CRRSegment.adoc[`CRRSegment`]
+
+
+|===
+
+//[discrete]
+[#SourceCRRSegment]
+=== `SourceCRRSegment`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.SourceCRRSegment`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CRRSegment.adoc[`CRRSegment`]
+
+
+|===
+
+//[discrete]
+[#SubControlArea]
+=== `SubControlArea`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.SubControlArea`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Trade]
+=== `Trade`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Pnode.Trade`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Trade.adoc[`Trade`]
+
+
+|===
+
+

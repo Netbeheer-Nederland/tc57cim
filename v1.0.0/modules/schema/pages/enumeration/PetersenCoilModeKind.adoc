@@ -1,0 +1,41 @@
+= `PetersenCoilModeKind`
+:toclevels: 4
+
+
++++The mode of operation for a Petersen coil.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:PetersenCoilModeKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `automaticPositioning`
+| `cim:PetersenCoilModeKind.automaticPositioning`
+| n/a
+
+| `fixed`
+| `cim:PetersenCoilModeKind.fixed`
+| n/a
+
+| `manual`
+| `cim:PetersenCoilModeKind.manual`
+| n/a
+|===

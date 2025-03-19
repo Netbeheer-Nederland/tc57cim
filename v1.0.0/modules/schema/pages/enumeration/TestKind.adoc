@@ -1,0 +1,49 @@
+= `TestKind`
+:toclevels: 4
+
+
++++The test applied to determine if the condition is met.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TestKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `equalTo`
+| `cim:TestKind.equalTo`
+| n/a
+
+| `greaterThan`
+| `cim:TestKind.greaterThan`
+| n/a
+
+| `greaterThanOrEqualTo`
+| `cim:TestKind.greaterThanOrEqualTo`
+| n/a
+
+| `lessThan`
+| `cim:TestKind.lessThan`
+| n/a
+
+| `lessThanOrEqualTo`
+| `cim:TestKind.lessThanOrEqualTo`
+| n/a
+|===

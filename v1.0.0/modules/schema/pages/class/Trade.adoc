@@ -1,0 +1,1039 @@
+= `Trade`
+:toclevels: 4
+
+
++++Inter Scheduling Coordinator Trades to model financial trades which may impact settlement.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Trade`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`Trade`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+Trade {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+TradeError {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RegisteredGenerator {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+SchedulingCoordinator {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+SchedulingCoordinator {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ActionRequest {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+SchedulingCoordinator {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+TradeProduct {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+SchedulingCoordinator {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Pnode {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+Trade -> TradeError: TradeError
+
+
+Trade -> RegisteredGenerator: RegisteredGenerator
+
+
+Trade -> SchedulingCoordinator: From_SC
+
+
+Trade -> SchedulingCoordinator: To_SC
+
+
+Trade -> ActionRequest: ActionRequest
+
+
+Trade -> SchedulingCoordinator: submitFromSchedulingCoordinator
+
+
+Trade -> TradeProduct: TradeProduct
+
+
+Trade -> SchedulingCoordinator: submitToSchedulingCoordinator
+
+
+Trade -> Pnode: Pnode
+
+
+Trade -> DiagramObject: DiagramObjects
+
+
+Trade -> InstanceSet: InstanceSet
+
+
+Trade -> Name: Names
+
+
+Trade -> ChangeSetMember: PropertiesCIMDataObject
+
+
+Trade -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<ActionRequest,`ActionRequest`>>
+| 1
+| xref::class/ActionRequest.adoc[`ActionRequest`]
+| n/a
+
+| <<From_SC,`From_SC`>>
+| 1
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+| n/a
+
+| <<To_SC,`To_SC`>>
+| 1
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+| n/a
+
+| <<TradeProduct,`TradeProduct`>>
+| 1
+| xref::class/TradeProduct.adoc[`TradeProduct`]
+| n/a
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<Pnode,`Pnode`>>
+| 0..1
+| xref::class/Pnode.adoc[`Pnode`]
+| n/a
+
+| <<RegisteredGenerator,`RegisteredGenerator`>>
+| 0..1
+| xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`]
+| n/a
+
+| <<adjustedTradeQuantity,`adjustedTradeQuantity`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The validated and current market accepted trade amount of a physical energy trade.+++
+
+| <<counterTradeQuantity,`counterTradeQuantity`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++MW quantity submitted by counter SC for the same trade+++
+
+| <<dependOnTradeName,`dependOnTradeName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The Depend On IST Name points to the unique IST Name in the chain of physical energy trades.+++
+
+| <<lastModified,`lastModified`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Time and date the trade was last modified.+++
+
+| <<marketType,`marketType`>>
+| 0..1
+| xref::enumeration/MarketType.adoc[`MarketType`]
+| n/a
+
+| <<startTime,`startTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Start time and date for which trade applies.+++
+
+| <<stopTime,`stopTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Stop time and date for which trade is applicable.+++
+
+| <<submitFromSchedulingCoordinator,`submitFromSchedulingCoordinator`>>
+| 0..1
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+| n/a
+
+| <<submitFromTimeStamp,`submitFromTimeStamp`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Timestamp of submittal of submit From Scheduling Coordinator Trade to Market Participant Bid Submittal+++
+
+| <<submitFromUser,`submitFromUser`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Userid of the submit From Scheduling Coordinator trade+++
+
+| <<submitToSchedulingCoordinator,`submitToSchedulingCoordinator`>>
+| 0..1
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+| n/a
+
+| <<submitToTimeStamp,`submitToTimeStamp`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Timestamp of submittal of submit To Scheduling Coordinator Trade to Market Participant Bid Submittal+++
+
+| <<submitToUser ,`submitToUser `>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Userid of the submit To Scheduling Coordinator trade+++
+
+| <<tradeQuantity,`tradeQuantity`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++tradeQuantity: 
+If tradeType = IST, The amount of an Energy Trade.  
+If tradeType = AST, The amount of an Ancillary Service Obligation Trade.  
+If tradeType = UCT, The amount of a Unit Commitment Obligation Trade.+++
+
+| <<tradeStatus,`tradeStatus`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Resulting status of the trade following the rule engine processing.+++
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| n/a
+
+| <<updateUser,`updateUser`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| n/a
+
+| <<TradeError,`TradeError`>>
+| 0..*
+| xref::class/TradeError.adoc[`TradeError`]
+| n/a
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#ActionRequest]
+=== `ActionRequest`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.ActionRequest`
+| Cardinality
+| 1
+| Type
+| xref::class/ActionRequest.adoc[`ActionRequest`]
+
+
+|===
+
+//[discrete]
+[#adjustedTradeQuantity]
+=== `adjustedTradeQuantity`
++++The validated and current market accepted trade amount of a physical energy trade.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.adjustedTradeQuantity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#counterTradeQuantity]
+=== `counterTradeQuantity`
++++MW quantity submitted by counter SC for the same trade+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.counterTradeQuantity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#dependOnTradeName]
+=== `dependOnTradeName`
++++The Depend On IST Name points to the unique IST Name in the chain of physical energy trades.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.dependOnTradeName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#From_SC]
+=== `From_SC`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.From_SC`
+| Cardinality
+| 1
+| Type
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#lastModified]
+=== `lastModified`
++++Time and date the trade was last modified.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.lastModified`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#marketType]
+=== `marketType`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.marketType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MarketType.adoc[`MarketType`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Pnode]
+=== `Pnode`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.Pnode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Pnode.adoc[`Pnode`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#RegisteredGenerator]
+=== `RegisteredGenerator`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.RegisteredGenerator`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`]
+
+
+|===
+
+//[discrete]
+[#startTime]
+=== `startTime`
++++Start time and date for which trade applies.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.startTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#stopTime]
+=== `stopTime`
++++Stop time and date for which trade is applicable.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.stopTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#submitFromSchedulingCoordinator]
+=== `submitFromSchedulingCoordinator`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.submitFromSchedulingCoordinator`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+
+
+|===
+
+//[discrete]
+[#submitFromTimeStamp]
+=== `submitFromTimeStamp`
++++Timestamp of submittal of submit From Scheduling Coordinator Trade to Market Participant Bid Submittal+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.submitFromTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#submitFromUser]
+=== `submitFromUser`
++++Userid of the submit From Scheduling Coordinator trade+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.submitFromUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#submitToSchedulingCoordinator]
+=== `submitToSchedulingCoordinator`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.submitToSchedulingCoordinator`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+
+
+|===
+
+//[discrete]
+[#submitToTimeStamp]
+=== `submitToTimeStamp`
++++Timestamp of submittal of submit To Scheduling Coordinator Trade to Market Participant Bid Submittal+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.submitToTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#submitToUser ]
+=== `submitToUser `
++++Userid of the submit To Scheduling Coordinator trade+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.submitToUser%20`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#To_SC]
+=== `To_SC`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.To_SC`
+| Cardinality
+| 1
+| Type
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+
+
+|===
+
+//[discrete]
+[#TradeError]
+=== `TradeError`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.TradeError`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TradeError.adoc[`TradeError`]
+
+
+|===
+
+//[discrete]
+[#TradeProduct]
+=== `TradeProduct`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.TradeProduct`
+| Cardinality
+| 1
+| Type
+| xref::class/TradeProduct.adoc[`TradeProduct`]
+
+
+|===
+
+//[discrete]
+[#tradeQuantity]
+=== `tradeQuantity`
++++tradeQuantity: 
+If tradeType = IST, The amount of an Energy Trade.  
+If tradeType = AST, The amount of an Ancillary Service Obligation Trade.  
+If tradeType = UCT, The amount of a Unit Commitment Obligation Trade.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.tradeQuantity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#tradeStatus]
+=== `tradeStatus`
++++Resulting status of the trade following the rule engine processing.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.tradeStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Trade.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+

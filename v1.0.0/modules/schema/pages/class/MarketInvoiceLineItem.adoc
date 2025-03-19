@@ -1,0 +1,453 @@
+= `MarketInvoiceLineItem`
+:toclevels: 4
+
+
++++An individual line item on an invoice.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MarketInvoiceLineItem`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MarketInvoiceLineItem`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+MarketInvoiceLineItem {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DateTimeInterval {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+MarketInvoice {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketInvoiceLineItem {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Settlement {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketInvoiceLineItem {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+MarketInvoiceLineItem -> DateTimeInterval: billPeriod
+
+
+MarketInvoiceLineItem -> MarketInvoice: MarketInvoice
+
+
+MarketInvoiceLineItem -> MarketInvoiceLineItem: ContainerMarketInvoiceLineItem
+
+
+MarketInvoiceLineItem -> Settlement: Settlement
+
+
+MarketInvoiceLineItem -> MarketInvoiceLineItem: ComponentMarketInvoiceLineItems
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<MarketInvoice,`MarketInvoice`>>
+| 1
+| xref::class/MarketInvoice.adoc[`MarketInvoice`]
+| n/a
+
+| <<ContainerMarketInvoiceLineItem,`ContainerMarketInvoiceLineItem`>>
+| 0..1
+| xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`]
+| n/a
+
+| <<billPeriod,`billPeriod`>>
+| 0..1
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++Bill period for the line item.+++
+
+| <<glAccount,`glAccount`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++General Ledger account code, shall be a valid combination.+++
+
+| <<glDateTime,`glDateTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Date and time line item will be posted to the General Ledger.+++
+
+| <<kind,`kind`>>
+| 0..1
+| xref::enumeration/MktInvoiceLineItemKind.adoc[`MktInvoiceLineItemKind`]
+| +++Kind of line item.+++
+
+| <<lineAmount,`lineAmount`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Amount due for this line item.+++
+
+| <<lineNumber,`lineNumber`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Line item number on invoice statement.+++
+
+| <<lineVersion,`lineVersion`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Version number of the bill run.+++
+
+| <<netAmount,`netAmount`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Net line item charge amount.+++
+
+| <<previousAmount,`previousAmount`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Previous line item charge amount.+++
+
+| <<ComponentMarketInvoiceLineItems,`ComponentMarketInvoiceLineItems`>>
+| 0..*
+| xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`]
+| n/a
+
+| <<Settlement,`Settlement`>>
+| 0..*
+| xref::class/Settlement.adoc[`Settlement`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#billPeriod]
+=== `billPeriod`
++++Bill period for the line item.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.billPeriod`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+//[discrete]
+[#ComponentMarketInvoiceLineItems]
+=== `ComponentMarketInvoiceLineItems`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.ComponentMarketInvoiceLineItems`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`]
+
+
+|===
+
+//[discrete]
+[#ContainerMarketInvoiceLineItem]
+=== `ContainerMarketInvoiceLineItem`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.ContainerMarketInvoiceLineItem`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`]
+
+
+|===
+
+//[discrete]
+[#glAccount]
+=== `glAccount`
++++General Ledger account code, shall be a valid combination.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.glAccount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#glDateTime]
+=== `glDateTime`
++++Date and time line item will be posted to the General Ledger.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.glDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#kind]
+=== `kind`
++++Kind of line item.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MktInvoiceLineItemKind.adoc[`MktInvoiceLineItemKind`]
+
+
+|===
+
+//[discrete]
+[#lineAmount]
+=== `lineAmount`
++++Amount due for this line item.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.lineAmount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#lineNumber]
+=== `lineNumber`
++++Line item number on invoice statement.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.lineNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#lineVersion]
+=== `lineVersion`
++++Version number of the bill run.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.lineVersion`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#MarketInvoice]
+=== `MarketInvoice`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.MarketInvoice`
+| Cardinality
+| 1
+| Type
+| xref::class/MarketInvoice.adoc[`MarketInvoice`]
+
+
+|===
+
+//[discrete]
+[#netAmount]
+=== `netAmount`
++++Net line item charge amount.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.netAmount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#previousAmount]
+=== `previousAmount`
++++Previous line item charge amount.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.previousAmount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#Settlement]
+=== `Settlement`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.Settlement`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Settlement.adoc[`Settlement`]
+
+
+|===
+
+

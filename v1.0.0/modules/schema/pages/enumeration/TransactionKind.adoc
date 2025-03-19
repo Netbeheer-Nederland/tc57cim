@@ -1,0 +1,81 @@
+= `TransactionKind`
+:toclevels: 4
+
+
++++Kind of transaction.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TransactionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `accountPayment`
+| `cim:TransactionKind.accountPayment`
+| n/a
+
+| `auxiliaryChargePayment`
+| `cim:TransactionKind.auxiliaryChargePayment`
+| n/a
+
+| `diversePayment`
+| `cim:TransactionKind.diversePayment`
+| n/a
+
+| `meterConfigurationToken`
+| `cim:TransactionKind.meterConfigurationToken`
+| n/a
+
+| `other`
+| `cim:TransactionKind.other`
+| n/a
+
+| `serviceChargePayment`
+| `cim:TransactionKind.serviceChargePayment`
+| n/a
+
+| `taxChargePayment`
+| `cim:TransactionKind.taxChargePayment`
+| n/a
+
+| `tokenCancellation`
+| `cim:TransactionKind.tokenCancellation`
+| n/a
+
+| `tokenExchange`
+| `cim:TransactionKind.tokenExchange`
+| n/a
+
+| `tokenFreeIssue`
+| `cim:TransactionKind.tokenFreeIssue`
+| n/a
+
+| `tokenGrant`
+| `cim:TransactionKind.tokenGrant`
+| n/a
+
+| `tokenSalePayment`
+| `cim:TransactionKind.tokenSalePayment`
+| n/a
+
+| `transactionReversal`
+| `cim:TransactionKind.transactionReversal`
+| n/a
+|===

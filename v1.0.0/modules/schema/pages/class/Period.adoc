@@ -1,0 +1,299 @@
+= `Period`
+:toclevels: 4
+
+
++++An identification of a time interval that may have a given resolution.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Period`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`Period`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+Period {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DateTimeInterval {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Reason {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketDocument {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+TimeSeries {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Point {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+Period -> DateTimeInterval: timeInterval
+
+
+Period -> Reason: Reason
+
+
+Period -> MarketDocument: MarketDocument
+
+
+Period -> TimeSeries: TimeSeries
+
+
+Period -> Point: Point
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<resolution,`resolution`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++The number of units of time that compose an individual step within a period.+++
+
+| <<timeInterval,`timeInterval`>>
+| 0..1
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++The start and end date and time for a given interval.+++
+
+| <<MarketDocument,`MarketDocument`>>
+| 0..*
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+| n/a
+
+| <<Point,`Point`>>
+| 0..*
+| xref::class/Point.adoc[`Point`]
+| n/a
+
+| <<Reason,`Reason`>>
+| 0..*
+| xref::class/Reason.adoc[`Reason`]
+| n/a
+
+| <<TimeSeries,`TimeSeries`>>
+| 0..*
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#MarketDocument]
+=== `MarketDocument`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Period.MarketDocument`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+
+
+|===
+
+//[discrete]
+[#Point]
+=== `Point`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Period.Point`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Point.adoc[`Point`]
+
+
+|===
+
+//[discrete]
+[#Reason]
+=== `Reason`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Period.Reason`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Reason.adoc[`Reason`]
+
+
+|===
+
+//[discrete]
+[#resolution]
+=== `resolution`
++++The number of units of time that compose an individual step within a period.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Period.resolution`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#timeInterval]
+=== `timeInterval`
++++The start and end date and time for a given interval.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Period.timeInterval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Period.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+

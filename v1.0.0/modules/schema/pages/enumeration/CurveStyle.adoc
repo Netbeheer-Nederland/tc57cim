@@ -1,0 +1,37 @@
+= `CurveStyle`
+:toclevels: 4
+
+
++++Style or shape of curve.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CurveStyle`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `constantYValue`
+| `cim:CurveStyle.constantYValue`
+| n/a
+
+| `straightLineYValues`
+| `cim:CurveStyle.straightLineYValues`
+| n/a
+|===

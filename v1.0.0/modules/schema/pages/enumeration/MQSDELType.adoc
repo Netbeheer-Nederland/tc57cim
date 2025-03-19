@@ -1,0 +1,43 @@
+= `MQSDELType`
+:toclevels: 4
+
+
++++ADD - add
+DEL - delete
+CHG - change+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MQSDELType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ADD`
+| `cim:MQSDELType.ADD`
+| n/a
+
+| `CHG`
+| `cim:MQSDELType.CHG`
+| n/a
+
+| `DEL`
+| `cim:MQSDELType.DEL`
+| n/a
+|===

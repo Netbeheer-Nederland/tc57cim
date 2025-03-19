@@ -1,0 +1,45 @@
+= `CalculationKind`
+:toclevels: 4
+
+
++++Categorisation of calculation operation that can be done to Measurement.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CalculationKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `div`
+| `cim:CalculationKind.div`
+| n/a
+
+| `mul`
+| `cim:CalculationKind.mul`
+| n/a
+
+| `sqrt`
+| `cim:CalculationKind.sqrt`
+| n/a
+
+| `sum`
+| `cim:CalculationKind.sum`
+| n/a
+|===

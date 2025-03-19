@@ -1,0 +1,29 @@
+= `NetworkModelProjectCollection`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:NetworkModelProjectCollection`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`NetworkModelProjectCollection`*
+
+
+== Slots
+
+
+This class has no slots.

@@ -1,0 +1,101 @@
+= `WireInsulationKind`
+:toclevels: 4
+
+
++++Kind of wire insulation.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:WireInsulationKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `asbestosAndVarnishedCambric`
+| `cim:WireInsulationKind.asbestosAndVarnishedCambric`
+| n/a
+
+| `beltedPilc`
+| `cim:WireInsulationKind.beltedPilc`
+| n/a
+
+| `butyl`
+| `cim:WireInsulationKind.butyl`
+| n/a
+
+| `crosslinkedPolyethylene`
+| `cim:WireInsulationKind.crosslinkedPolyethylene`
+| n/a
+
+| `ethylenePropyleneRubber`
+| `cim:WireInsulationKind.ethylenePropyleneRubber`
+| n/a
+
+| `highMolecularWeightPolyethylene`
+| `cim:WireInsulationKind.highMolecularWeightPolyethylene`
+| n/a
+
+| `highPressureFluidFilled`
+| `cim:WireInsulationKind.highPressureFluidFilled`
+| n/a
+
+| `lowCapacitanceRubber`
+| `cim:WireInsulationKind.lowCapacitanceRubber`
+| n/a
+
+| `oilPaper`
+| `cim:WireInsulationKind.oilPaper`
+| n/a
+
+| `other`
+| `cim:WireInsulationKind.other`
+| n/a
+
+| `ozoneResistantRubber`
+| `cim:WireInsulationKind.ozoneResistantRubber`
+| n/a
+
+| `rubber`
+| `cim:WireInsulationKind.rubber`
+| n/a
+
+| `siliconRubber`
+| `cim:WireInsulationKind.siliconRubber`
+| n/a
+
+| `treeResistantHighMolecularWeightPolyethylene`
+| `cim:WireInsulationKind.treeResistantHighMolecularWeightPolyethylene`
+| n/a
+
+| `treeRetardantCrosslinkedPolyethylene`
+| `cim:WireInsulationKind.treeRetardantCrosslinkedPolyethylene`
+| n/a
+
+| `unbeltedPilc`
+| `cim:WireInsulationKind.unbeltedPilc`
+| n/a
+
+| `varnishedCambricCloth`
+| `cim:WireInsulationKind.varnishedCambricCloth`
+| n/a
+
+| `varnishedDacronGlass`
+| `cim:WireInsulationKind.varnishedDacronGlass`
+| n/a
+|===

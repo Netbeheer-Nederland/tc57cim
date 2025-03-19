@@ -1,0 +1,927 @@
+= `GovSteamCC`
+:toclevels: 4
+
+
++++Cross compound turbine governor.  Unlike tandem compound units, cross compound units are not on the same shaft.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:GovSteamCC`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/CrossCompoundTurbineGovernorDynamics.adoc[`CrossCompoundTurbineGovernorDynamics`]
+**** *`GovSteamCC`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+GovSteamCC {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SynchronousMachineDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+SynchronousMachineDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GovSteamCC -> SynchronousMachineDynamics: LowPressureSynchronousMachineDynamics
+
+
+GovSteamCC -> SynchronousMachineDynamics: HighPressureSynchronousMachineDynamics
+
+
+GovSteamCC -> DiagramObject: DiagramObjects
+
+
+GovSteamCC -> InstanceSet: InstanceSet
+
+
+GovSteamCC -> Name: Names
+
+
+GovSteamCC -> ChangeSetMember: PropertiesCIMDataObject
+
+
+GovSteamCC -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<HighPressureSynchronousMachineDynamics,`HighPressureSynchronousMachineDynamics`>>
+| 1
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+| +++High-pressure synchronous machine with which this cross-compound turbine governor is associated.+++
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<LowPressureSynchronousMachineDynamics,`LowPressureSynchronousMachineDynamics`>>
+| 1
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+| +++Low-pressure synchronous machine with which this cross-compound turbine governor is associated.+++
+
+| <<dhp,`dhp`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++HP damping factor (<i>Dhp</i>).  Typical value = 0.+++
+
+| <<dlp,`dlp`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++LP damping factor (<i>Dlp</i>).  Typical value = 0.+++
+
+| <<fhp,`fhp`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Fraction of HP power ahead of reheater (<i>Fhp</i>).  Typical value = 0,3.+++
+
+| <<flp,`flp`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Fraction of LP power ahead of reheater (<i>Flp</i>).  Typical value = 0,7.+++
+
+| <<mwbase,`mwbase`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Base for power values (<i>MWbase</i>) (&gt; 0).  Unit = MW.+++
+
+| <<pmaxhp,`pmaxhp`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum HP value position (<i>Pmaxhp</i>).  Typical value = 1.+++
+
+| <<pmaxlp,`pmaxlp`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum LP value position (<i>Pmaxlp</i>).  Typical value = 1.+++
+
+| <<rhp,`rhp`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++HP governor droop (<i>Rhp</i>) (&gt; 0).  Typical value = 0,05.+++
+
+| <<rlp,`rlp`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++LP governor droop (<i>Rlp</i>) (&gt; 0).  Typical value = 0,05.+++
+
+| <<t1hp,`t1hp`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++HP governor time constant (<i>T1hp</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+| <<t1lp,`t1lp`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++LP governor time constant (<i>T1lp</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+| <<t3hp,`t3hp`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++HP turbine time constant (<i>T3hp</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+| <<t3lp,`t3lp`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++LP turbine time constant (<i>T3lp</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+| <<t4hp,`t4hp`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++HP turbine time constant (<i>T4hp</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+| <<t4lp,`t4lp`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++LP turbine time constant (<i>T4lp</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+| <<t5hp,`t5hp`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++HP reheater time constant (<i>T5hp</i>) (&gt;= 0).  Typical value = 10.+++
+
+| <<t5lp,`t5lp`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++LP reheater time constant (<i>T5lp</i>) (&gt;= 0).  Typical value = 10.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<enabled,`enabled`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#dhp]
+=== `dhp`
++++HP damping factor (<i>Dhp</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.dhp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#dlp]
+=== `dlp`
++++LP damping factor (<i>Dlp</i>).  Typical value = 0.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.dlp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+//[discrete]
+[#fhp]
+=== `fhp`
++++Fraction of HP power ahead of reheater (<i>Fhp</i>).  Typical value = 0,3.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.fhp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#flp]
+=== `flp`
++++Fraction of LP power ahead of reheater (<i>Flp</i>).  Typical value = 0,7.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.flp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#HighPressureSynchronousMachineDynamics]
+=== `HighPressureSynchronousMachineDynamics`
++++High-pressure synchronous machine with which this cross-compound turbine governor is associated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CrossCompoundTurbineGovernorDynamics.HighPressureSynchronousMachineDynamics`
+| Cardinality
+| 1
+| Type
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+
+| Inherited from
+| xref::class/CrossCompoundTurbineGovernorDynamics.adoc[`CrossCompoundTurbineGovernorDynamics`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#LowPressureSynchronousMachineDynamics]
+=== `LowPressureSynchronousMachineDynamics`
++++Low-pressure synchronous machine with which this cross-compound turbine governor is associated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CrossCompoundTurbineGovernorDynamics.LowPressureSynchronousMachineDynamics`
+| Cardinality
+| 1
+| Type
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+
+| Inherited from
+| xref::class/CrossCompoundTurbineGovernorDynamics.adoc[`CrossCompoundTurbineGovernorDynamics`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#mwbase]
+=== `mwbase`
++++Base for power values (<i>MWbase</i>) (&gt; 0).  Unit = MW.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.mwbase`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#pmaxhp]
+=== `pmaxhp`
++++Maximum HP value position (<i>Pmaxhp</i>).  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.pmaxhp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pmaxlp]
+=== `pmaxlp`
++++Maximum LP value position (<i>Pmaxlp</i>).  Typical value = 1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.pmaxlp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#rhp]
+=== `rhp`
++++HP governor droop (<i>Rhp</i>) (&gt; 0).  Typical value = 0,05.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.rhp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#rlp]
+=== `rlp`
++++LP governor droop (<i>Rlp</i>) (&gt; 0).  Typical value = 0,05.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.rlp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#t1hp]
+=== `t1hp`
++++HP governor time constant (<i>T1hp</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.t1hp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t1lp]
+=== `t1lp`
++++LP governor time constant (<i>T1lp</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.t1lp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t3hp]
+=== `t3hp`
++++HP turbine time constant (<i>T3hp</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.t3hp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t3lp]
+=== `t3lp`
++++LP turbine time constant (<i>T3lp</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.t3lp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t4hp]
+=== `t4hp`
++++HP turbine time constant (<i>T4hp</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.t4hp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t4lp]
+=== `t4lp`
++++LP turbine time constant (<i>T4lp</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.t4lp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t5hp]
+=== `t5hp`
++++HP reheater time constant (<i>T5hp</i>) (&gt;= 0).  Typical value = 10.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.t5hp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#t5lp]
+=== `t5lp`
++++LP reheater time constant (<i>T5lp</i>) (&gt;= 0).  Typical value = 10.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovSteamCC.t5lp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+

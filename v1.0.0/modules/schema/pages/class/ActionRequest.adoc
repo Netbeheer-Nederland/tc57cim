@@ -1,0 +1,197 @@
+= `ActionRequest`
+:toclevels: 4
+
+
++++Action request against an existing Trade.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ActionRequest`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ActionRequest`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ActionRequest {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Trade {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Bid {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+ActionRequest -> Trade: Trade
+
+
+ActionRequest -> Bid: Bid
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<actionName,`actionName`>>
+| 0..1
+| xref::enumeration/ActionType.adoc[`ActionType`]
+| +++Action name type for the action request.+++
+
+| <<Bid,`Bid`>>
+| 0..*
+| xref::class/Bid.adoc[`Bid`]
+| n/a
+
+| <<Trade,`Trade`>>
+| 0..*
+| xref::class/Trade.adoc[`Trade`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#actionName]
+=== `actionName`
++++Action name type for the action request.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActionRequest.actionName`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ActionType.adoc[`ActionType`]
+
+
+|===
+
+//[discrete]
+[#Bid]
+=== `Bid`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActionRequest.Bid`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+//[discrete]
+[#Trade]
+=== `Trade`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActionRequest.Trade`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Trade.adoc[`Trade`]
+
+
+|===
+
+

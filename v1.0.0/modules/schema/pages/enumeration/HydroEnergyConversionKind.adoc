@@ -1,0 +1,37 @@
+= `HydroEnergyConversionKind`
+:toclevels: 4
+
+
++++Specifies the capability of the hydro generating unit to convert energy as a generator or pump.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:HydroEnergyConversionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `generator`
+| `cim:HydroEnergyConversionKind.generator`
+| n/a
+
+| `pumpAndGenerator`
+| `cim:HydroEnergyConversionKind.pumpAndGenerator`
+| n/a
+|===

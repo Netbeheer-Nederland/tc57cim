@@ -1,0 +1,288 @@
+= `AreaReserveSpec`
+:toclevels: 4
+
+
++++The control area's reserve specification.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AreaReserveSpec`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`AreaReserveSpec`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+AreaReserveSpec {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+SubControlArea {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+AreaReserveSpec -> SubControlArea: SubControlArea
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<Description,`Description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Description of the object or instance.+++
+
+| <<lowerRegMarginReqt,`lowerRegMarginReqt`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Lower regulating margin requirement in MW, the amount of generation that can be dropped by control in 10 minutes+++
+
+| <<opReserveReqt,`opReserveReqt`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Operating reserve requirement in MW, where operating reserve is the generating capability that is fully available within 30 minutes. Operating reserve is composed of primary reserve (t less than 10 min) and secondary reserve (10 less than t less than 30 min).+++
+
+| <<primaryReserveReqt,`primaryReserveReqt`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Primary reserve requirement in MW, where primary reserve is generating capability that is fully available within 10 minutes. Primary reserve is composed of spinning reserve and quick-start reserve.+++
+
+| <<raiseRegMarginReqt,`raiseRegMarginReqt`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Raise regulating margin requirement in MW, the amount of generation that can be picked up by control in 10 minutes+++
+
+| <<spinningReserveReqt,`spinningReserveReqt`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Spinning reserve requirement in MW, spinning reserve is generating capability that is presently synchronized to the network and is fully available within 10 minutes+++
+
+| <<SubControlArea,`SubControlArea`>>
+| 0..*
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#Description]
+=== `Description`
++++Description of the object or instance.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AreaReserveSpec.Description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#lowerRegMarginReqt]
+=== `lowerRegMarginReqt`
++++Lower regulating margin requirement in MW, the amount of generation that can be dropped by control in 10 minutes+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AreaReserveSpec.lowerRegMarginReqt`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#opReserveReqt]
+=== `opReserveReqt`
++++Operating reserve requirement in MW, where operating reserve is the generating capability that is fully available within 30 minutes. Operating reserve is composed of primary reserve (t less than 10 min) and secondary reserve (10 less than t less than 30 min).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AreaReserveSpec.opReserveReqt`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#primaryReserveReqt]
+=== `primaryReserveReqt`
++++Primary reserve requirement in MW, where primary reserve is generating capability that is fully available within 10 minutes. Primary reserve is composed of spinning reserve and quick-start reserve.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AreaReserveSpec.primaryReserveReqt`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#raiseRegMarginReqt]
+=== `raiseRegMarginReqt`
++++Raise regulating margin requirement in MW, the amount of generation that can be picked up by control in 10 minutes+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AreaReserveSpec.raiseRegMarginReqt`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#spinningReserveReqt]
+=== `spinningReserveReqt`
++++Spinning reserve requirement in MW, spinning reserve is generating capability that is presently synchronized to the network and is fully available within 10 minutes+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AreaReserveSpec.spinningReserveReqt`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#SubControlArea]
+=== `SubControlArea`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AreaReserveSpec.SubControlArea`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+
+
+|===
+
+

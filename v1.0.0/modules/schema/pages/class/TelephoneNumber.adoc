@@ -1,0 +1,217 @@
+= `TelephoneNumber`
+:toclevels: 4
+
+
++++Telephone number.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TelephoneNumber`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`TelephoneNumber`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<areaCode,`areaCode`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Area or region code.+++
+
+| <<cityCode,`cityCode`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++City code.+++
+
+| <<countryCode,`countryCode`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Country code.+++
+
+| <<dialOut,`dialOut`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Dial out code, for instance to call outside an enterprise.+++
+
+| <<extension,`extension`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Extension for this telephone number.+++
+
+| <<internationalPrefix,`internationalPrefix`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Prefix used when calling an international number.+++
+
+| <<ituPhone,`ituPhone`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Phone number according to International Telecommunication Union (ITU) E.164.+++
+
+| <<localNumber,`localNumber`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Main (local) part of this telephone number.+++
+|===
+
+'''
+
+
+//[discrete]
+[#areaCode]
+=== `areaCode`
++++(if applicable) Area or region code.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.areaCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#cityCode]
+=== `cityCode`
++++City code.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.cityCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#countryCode]
+=== `countryCode`
++++Country code.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.countryCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#dialOut]
+=== `dialOut`
++++(if applicable) Dial out code, for instance to call outside an enterprise.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.dialOut`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#extension]
+=== `extension`
++++(if applicable) Extension for this telephone number.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.extension`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#internationalPrefix]
+=== `internationalPrefix`
++++(if applicable) Prefix used when calling an international number.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.internationalPrefix`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#ituPhone]
+=== `ituPhone`
++++Phone number according to International Telecommunication Union (ITU) E.164.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.ituPhone`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#localNumber]
+=== `localNumber`
++++Main (local) part of this telephone number.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.localNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+

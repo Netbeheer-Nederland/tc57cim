@@ -1,0 +1,69 @@
+= `ContractType`
+:toclevels: 4
+
+
++++Transmission Contract Type, For example:
+O - Other 
+TE - Transmission Export 
+TI - Transmission Import 
+ETC - Existing Transmission Contract 
+RMT - RMT Contract 
+TOR - Transmission Ownership Right  
+RMR - Reliability Must Run Contract 
+CVR - Converted contract+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ContractType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `CVR`
+| `cim:ContractType.CVR`
+| n/a
+
+| `ETC`
+| `cim:ContractType.ETC`
+| n/a
+
+| `O`
+| `cim:ContractType.O`
+| n/a
+
+| `RMR`
+| `cim:ContractType.RMR`
+| n/a
+
+| `RMT`
+| `cim:ContractType.RMT`
+| n/a
+
+| `TE`
+| `cim:ContractType.TE`
+| n/a
+
+| `TI`
+| `cim:ContractType.TI`
+| n/a
+
+| `TOR`
+| `cim:ContractType.TOR`
+| n/a
+|===

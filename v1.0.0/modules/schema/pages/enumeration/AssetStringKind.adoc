@@ -1,0 +1,33 @@
+= `AssetStringKind`
+:toclevels: 4
+
+
++++Definition of type of string useful in asset domain.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AssetStringKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `visualExamRemarks`
+| `cim:AssetStringKind.visualExamRemarks`
+| n/a
+|===

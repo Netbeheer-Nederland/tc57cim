@@ -1,0 +1,540 @@
+= `Delay`
+:toclevels: 4
+
+
++++All the measurements are filtered by a first lag element with a time constant TM.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Delay`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`Delay`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+Delay {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+IdcInverterControl {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+VDCOL {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+CCAinverter {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Pcontrol {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Qregulator {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+CCArectifierControl {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DCvoltageControl {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Umode {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Qlimiter {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+BlockingFunction {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Qmode {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PFmode {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+Delay -> IdcInverterControl: IdcInverterControl
+
+
+Delay -> VDCOL: VDCOL
+
+
+Delay -> CCAinverter: CCAinverter
+
+
+Delay -> Pcontrol: Pcontrol
+
+
+Delay -> Qregulator: Qregulator
+
+
+Delay -> CCArectifierControl: CCArectifierControl
+
+
+Delay -> DCvoltageControl: DCvoltageControl
+
+
+Delay -> Umode: Umode
+
+
+Delay -> Qlimiter: Qlimiter
+
+
+Delay -> BlockingFunction: BlockingFunction
+
+
+Delay -> Qmode: Qmode
+
+
+Delay -> PFmode: PFmode
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<BlockingFunction,`BlockingFunction`>>
+| 0..1
+| xref::class/BlockingFunction.adoc[`BlockingFunction`]
+| n/a
+
+| <<CCAinverter,`CCAinverter`>>
+| 0..1
+| xref::class/CCAinverter.adoc[`CCAinverter`]
+| n/a
+
+| <<CCArectifierControl,`CCArectifierControl`>>
+| 0..1
+| xref::class/CCArectifierControl.adoc[`CCArectifierControl`]
+| n/a
+
+| <<DCvoltageControl,`DCvoltageControl`>>
+| 0..1
+| xref::class/DCvoltageControl.adoc[`DCvoltageControl`]
+| n/a
+
+| <<IdcInverterControl,`IdcInverterControl`>>
+| 0..1
+| xref::class/IdcInverterControl.adoc[`IdcInverterControl`]
+| n/a
+
+| <<PFmode,`PFmode`>>
+| 0..1
+| xref::class/PFmode.adoc[`PFmode`]
+| n/a
+
+| <<Pcontrol,`Pcontrol`>>
+| 0..1
+| xref::class/Pcontrol.adoc[`Pcontrol`]
+| n/a
+
+| <<Qlimiter,`Qlimiter`>>
+| 0..1
+| xref::class/Qlimiter.adoc[`Qlimiter`]
+| n/a
+
+| <<Qmode,`Qmode`>>
+| 0..1
+| xref::class/Qmode.adoc[`Qmode`]
+| n/a
+
+| <<Qregulator,`Qregulator`>>
+| 0..1
+| xref::class/Qregulator.adoc[`Qregulator`]
+| n/a
+
+| <<Umode,`Umode`>>
+| 0..1
+| xref::class/Umode.adoc[`Umode`]
+| n/a
+
+| <<VDCOL,`VDCOL`>>
+| 0..1
+| xref::class/VDCOL.adoc[`VDCOL`]
+| n/a
+
+| <<tm,`tm`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Time constant.+++
+|===
+
+'''
+
+
+//[discrete]
+[#BlockingFunction]
+=== `BlockingFunction`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.BlockingFunction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/BlockingFunction.adoc[`BlockingFunction`]
+
+
+|===
+
+//[discrete]
+[#CCAinverter]
+=== `CCAinverter`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.CCAinverter`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CCAinverter.adoc[`CCAinverter`]
+
+
+|===
+
+//[discrete]
+[#CCArectifierControl]
+=== `CCArectifierControl`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.CCArectifierControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CCArectifierControl.adoc[`CCArectifierControl`]
+
+
+|===
+
+//[discrete]
+[#DCvoltageControl]
+=== `DCvoltageControl`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.DCvoltageControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DCvoltageControl.adoc[`DCvoltageControl`]
+
+
+|===
+
+//[discrete]
+[#IdcInverterControl]
+=== `IdcInverterControl`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.IdcInverterControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IdcInverterControl.adoc[`IdcInverterControl`]
+
+
+|===
+
+//[discrete]
+[#Pcontrol]
+=== `Pcontrol`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.Pcontrol`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Pcontrol.adoc[`Pcontrol`]
+
+
+|===
+
+//[discrete]
+[#PFmode]
+=== `PFmode`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.PFmode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PFmode.adoc[`PFmode`]
+
+
+|===
+
+//[discrete]
+[#Qlimiter]
+=== `Qlimiter`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.Qlimiter`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Qlimiter.adoc[`Qlimiter`]
+
+
+|===
+
+//[discrete]
+[#Qmode]
+=== `Qmode`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.Qmode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Qmode.adoc[`Qmode`]
+
+
+|===
+
+//[discrete]
+[#Qregulator]
+=== `Qregulator`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.Qregulator`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Qregulator.adoc[`Qregulator`]
+
+
+|===
+
+//[discrete]
+[#tm]
+=== `tm`
++++Time constant.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.tm`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#Umode]
+=== `Umode`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.Umode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Umode.adoc[`Umode`]
+
+
+|===
+
+//[discrete]
+[#VDCOL]
+=== `VDCOL`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.VDCOL`
+| Cardinality
+| 0..1
+| Type
+| xref::class/VDCOL.adoc[`VDCOL`]
+
+
+|===
+
+

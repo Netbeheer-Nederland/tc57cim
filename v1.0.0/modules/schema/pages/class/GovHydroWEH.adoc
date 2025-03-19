@@ -1,0 +1,1814 @@
+= `GovHydroWEH`
+:toclevels: 4
+
+
++++Woodward<sup>TM </sup>electric hydro governor. 
+[Footnote: Woodward electric hydro governors are an example of suitable products available commercially. This information is given for the convenience of users of this document and does not constitute an endorsement by IEC of these products.]+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:GovHydroWEH`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+**** *`GovHydroWEH`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+GovHydroWEH {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AsynchronousMachineDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+TurbineLoadControllerDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+SynchronousMachineDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GovHydroWEH -> AsynchronousMachineDynamics: AsynchronousMachineDynamics
+
+
+GovHydroWEH -> TurbineLoadControllerDynamics: TurbineLoadControllerDynamics
+
+
+GovHydroWEH -> SynchronousMachineDynamics: SynchronousMachineDynamics
+
+
+GovHydroWEH -> DiagramObject: DiagramObjects
+
+
+GovHydroWEH -> InstanceSet: InstanceSet
+
+
+GovHydroWEH -> Name: Names
+
+
+GovHydroWEH -> ChangeSetMember: PropertiesCIMDataObject
+
+
+GovHydroWEH -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<db,`db`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Speed deadband (<i>db</i>).+++
+
+| <<dicn,`dicn`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Value to allow the integral controller to advance beyond the gate limits (<i>Dicn</i>).+++
+
+| <<dpv,`dpv`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Value to allow the pilot valve controller to advance beyond the gate limits (<i>Dpv</i>).+++
+
+| <<dturb,`dturb`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Turbine damping factor (<i>Dturb</i>).  Unit = delta P (PU of <i>MWbase</i>) / delta speed (PU).+++
+
+| <<feedbackSignal,`feedbackSignal`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Feedback signal selection (<i>Sw</i>).
+true = PID output (if <i>R-Perm-Gate </i>= droop and <i>R-Perm-Pe </i>= 0)
+false = electrical power (if <i>R-Perm-Gate </i>= 0 and <i>R-Perm-Pe </i>= droop) or
+false = gate position (if R<i>-Perm-Gate </i>= droop and <i>R-Perm-Pe </i>= 0).
+Typical value = false.+++
+
+| <<fl1,`fl1`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flowgate 1 (<i>Fl1</i>).  Flow value for gate position point 1 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+| <<fl2,`fl2`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flowgate 2 (<i>Fl2</i>).  Flow value for gate position point 2 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+| <<fl3,`fl3`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flowgate 3 (<i>Fl3</i>).  Flow value for gate position point 3 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+| <<fl4,`fl4`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flowgate 4 (<i>Fl4</i>).  Flow value for gate position point 4 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+| <<fl5,`fl5`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flowgate 5 (<i>Fl5</i>).  Flow value for gate position point 5 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+| <<fp1,`fp1`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flow P1 (<i>Fp1</i>).  Turbine flow value for point 1 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<fp10,`fp10`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flow P10 (<i>Fp10</i>).  Turbine flow value for point 10 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<fp2,`fp2`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flow P2 (<i>Fp2</i>).  Turbine flow value for point 2 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<fp3,`fp3`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flow P3 (<i>Fp3</i>).  Turbine flow value for point 3 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<fp4,`fp4`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flow P4 (<i>Fp4</i>).  Turbine flow value for point 4 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<fp5,`fp5`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flow P5 (<i>Fp5</i>).  Turbine flow value for point 5 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<fp6,`fp6`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flow P6 (<i>Fp6</i>).  Turbine flow value for point 6 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<fp7,`fp7`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flow P7 (<i>Fp7</i>).  Turbine flow value for point 7 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<fp8,`fp8`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flow P8 (<i>Fp8</i>).  Turbine flow value for point 8 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<fp9,`fp9`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Flow P9 (<i>Fp9</i>).  Turbine flow value for point 9 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<gmax,`gmax`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum gate position (<i>Gmax</i>) (&gt; GovHydroWEH.gmin).+++
+
+| <<gmin,`gmin`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Minimum gate position (<i>Gmin</i>) (&lt; GovHydroWEH.gmax).+++
+
+| <<gtmxcl,`gtmxcl`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum gate closing rate (<i>Gtmxcl</i>).+++
+
+| <<gtmxop,`gtmxop`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Maximum gate opening rate (<i>Gtmxop</i>).+++
+
+| <<gv1,`gv1`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Gate 1 (<i>Gv1</i>).  Gate Position value for point 1 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+| <<gv2,`gv2`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Gate 2 (<i>Gv2</i>).  Gate Position value for point 2 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+| <<gv3,`gv3`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Gate 3 (<i>Gv3</i>).  Gate Position value for point 3 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+| <<gv4,`gv4`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Gate 4 (<i>Gv4</i>).  Gate Position value for point 4 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+| <<gv5,`gv5`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Gate 5 (<i>Gv5</i>).  Gate Position value for point 5 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+| <<kd,`kd`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Derivative controller derivative gain (<i>Kd</i>).+++
+
+| <<ki,`ki`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Derivative controller Integral gain (<i>Ki</i>).+++
+
+| <<kp,`kp`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Derivative control gain (<i>Kp</i>).+++
+
+| <<mwbase,`mwbase`>>
+| 0..1
+| xref::class/ActivePower.adoc[`ActivePower`]
+| +++Base for power values (<i>MWbase</i>) (&gt; 0).  Unit = MW.+++
+
+| <<pmss1,`pmss1`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Pmss flow P1 (<i>Pmss1</i>).  Mechanical power output for turbine flow point 1 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<pmss10,`pmss10`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Pmss flow P10 (<i>Pmss10</i>).  Mechanical power output for turbine flow point 10 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<pmss2,`pmss2`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Pmss flow P2 (<i>Pmss2</i>).  Mechanical power output for turbine flow point 2 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<pmss3,`pmss3`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Pmss flow P3 (<i>Pmss3</i>).  Mechanical power output for turbine flow point 3 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<pmss4,`pmss4`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Pmss flow P4 (<i>Pmss4</i>).  Mechanical power output for turbine flow point 4 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<pmss5,`pmss5`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Pmss flow P5 (<i>Pmss5</i>).  Mechanical power output for turbine flow point 5 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<pmss6,`pmss6`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Pmss flow P6 (<i>Pmss6</i>).  Mechanical power output for turbine flow point 6 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<pmss7,`pmss7`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Pmss flow P7 (<i>Pmss7</i>).  Mechanical power output for turbine flow point 7 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<pmss8,`pmss8`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Pmss flow P8 (<i>Pmss8</i>).  Mechanical power output for turbine flow point 8 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<pmss9,`pmss9`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Pmss flow P9 (<i>Pmss9</i>).  Mechanical power output for turbine flow point 9 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+| <<rpg,`rpg`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Permanent droop for governor output feedback (<i>R-Perm-Gate</i>).+++
+
+| <<rpp,`rpp`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Permanent droop for electrical power feedback (<i>R-Perm-Pe</i>).+++
+
+| <<td,`td`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Derivative controller time constant (<i>Td</i>) (&gt;= 0).  Limits the derivative characteristic beyond a breakdown frequency to avoid amplification of high-frequency noise.+++
+
+| <<tdv,`tdv`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Distributive valve time lag time constant (<i>Tdv</i>) (&gt;= 0).+++
+
+| <<tg,`tg`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Value to allow the distribution valve controller to advance beyond the gate movement rate limit (<i>Tg</i>) (&gt;= 0).+++
+
+| <<tp,`tp`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Pilot valve time lag time constant (<i>Tp</i>) (&gt;= 0).+++
+
+| <<tpe,`tpe`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Electrical power droop time constant (<i>Tpe</i>) (&gt;= 0).+++
+
+| <<tw,`tw`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++Water inertia time constant (<i>Tw</i>) (&gt; 0).+++
+
+| <<AsynchronousMachineDynamics,`AsynchronousMachineDynamics`>>
+| 0..1
+| xref::class/AsynchronousMachineDynamics.adoc[`AsynchronousMachineDynamics`]
+| +++Asynchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<SynchronousMachineDynamics,`SynchronousMachineDynamics`>>
+| 0..1
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+| +++Synchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.+++
+
+| <<TurbineLoadControllerDynamics,`TurbineLoadControllerDynamics`>>
+| 0..1
+| xref::class/TurbineLoadControllerDynamics.adoc[`TurbineLoadControllerDynamics`]
+| +++Turbine load controller providing input to this turbine-governor.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<enabled,`enabled`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#AsynchronousMachineDynamics]
+=== `AsynchronousMachineDynamics`
++++Asynchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineGovernorDynamics.AsynchronousMachineDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AsynchronousMachineDynamics.adoc[`AsynchronousMachineDynamics`]
+
+| Inherited from
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+
+|===
+
+//[discrete]
+[#db]
+=== `db`
++++Speed deadband (<i>db</i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.db`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#dicn]
+=== `dicn`
++++Value to allow the integral controller to advance beyond the gate limits (<i>Dicn</i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.dicn`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#dpv]
+=== `dpv`
++++Value to allow the pilot valve controller to advance beyond the gate limits (<i>Dpv</i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.dpv`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#dturb]
+=== `dturb`
++++Turbine damping factor (<i>Dturb</i>).  Unit = delta P (PU of <i>MWbase</i>) / delta speed (PU).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.dturb`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+//[discrete]
+[#feedbackSignal]
+=== `feedbackSignal`
++++Feedback signal selection (<i>Sw</i>).
+true = PID output (if <i>R-Perm-Gate </i>= droop and <i>R-Perm-Pe </i>= 0)
+false = electrical power (if <i>R-Perm-Gate </i>= 0 and <i>R-Perm-Pe </i>= droop) or
+false = gate position (if R<i>-Perm-Gate </i>= droop and <i>R-Perm-Pe </i>= 0).
+Typical value = false.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.feedbackSignal`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#fl1]
+=== `fl1`
++++Flowgate 1 (<i>Fl1</i>).  Flow value for gate position point 1 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fl1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fl2]
+=== `fl2`
++++Flowgate 2 (<i>Fl2</i>).  Flow value for gate position point 2 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fl2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fl3]
+=== `fl3`
++++Flowgate 3 (<i>Fl3</i>).  Flow value for gate position point 3 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fl3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fl4]
+=== `fl4`
++++Flowgate 4 (<i>Fl4</i>).  Flow value for gate position point 4 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fl4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fl5]
+=== `fl5`
++++Flowgate 5 (<i>Fl5</i>).  Flow value for gate position point 5 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fl5`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fp1]
+=== `fp1`
++++Flow P1 (<i>Fp1</i>).  Turbine flow value for point 1 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fp1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fp10]
+=== `fp10`
++++Flow P10 (<i>Fp10</i>).  Turbine flow value for point 10 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fp10`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fp2]
+=== `fp2`
++++Flow P2 (<i>Fp2</i>).  Turbine flow value for point 2 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fp2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fp3]
+=== `fp3`
++++Flow P3 (<i>Fp3</i>).  Turbine flow value for point 3 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fp3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fp4]
+=== `fp4`
++++Flow P4 (<i>Fp4</i>).  Turbine flow value for point 4 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fp4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fp5]
+=== `fp5`
++++Flow P5 (<i>Fp5</i>).  Turbine flow value for point 5 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fp5`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fp6]
+=== `fp6`
++++Flow P6 (<i>Fp6</i>).  Turbine flow value for point 6 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fp6`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fp7]
+=== `fp7`
++++Flow P7 (<i>Fp7</i>).  Turbine flow value for point 7 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fp7`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fp8]
+=== `fp8`
++++Flow P8 (<i>Fp8</i>).  Turbine flow value for point 8 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fp8`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#fp9]
+=== `fp9`
++++Flow P9 (<i>Fp9</i>).  Turbine flow value for point 9 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.fp9`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gmax]
+=== `gmax`
++++Maximum gate position (<i>Gmax</i>) (&gt; GovHydroWEH.gmin).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.gmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gmin]
+=== `gmin`
++++Minimum gate position (<i>Gmin</i>) (&lt; GovHydroWEH.gmax).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.gmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gtmxcl]
+=== `gtmxcl`
++++Maximum gate closing rate (<i>Gtmxcl</i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.gtmxcl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gtmxop]
+=== `gtmxop`
++++Maximum gate opening rate (<i>Gtmxop</i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.gtmxop`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gv1]
+=== `gv1`
++++Gate 1 (<i>Gv1</i>).  Gate Position value for point 1 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.gv1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gv2]
+=== `gv2`
++++Gate 2 (<i>Gv2</i>).  Gate Position value for point 2 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.gv2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gv3]
+=== `gv3`
++++Gate 3 (<i>Gv3</i>).  Gate Position value for point 3 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.gv3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gv4]
+=== `gv4`
++++Gate 4 (<i>Gv4</i>).  Gate Position value for point 4 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.gv4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#gv5]
+=== `gv5`
++++Gate 5 (<i>Gv5</i>).  Gate Position value for point 5 for lookup table representing water flow through the turbine as a function of gate position to produce steady state flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.gv5`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#kd]
+=== `kd`
++++Derivative controller derivative gain (<i>Kd</i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.kd`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#ki]
+=== `ki`
++++Derivative controller Integral gain (<i>Ki</i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.ki`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#kp]
+=== `kp`
++++Derivative control gain (<i>Kp</i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.kp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#mwbase]
+=== `mwbase`
++++Base for power values (<i>MWbase</i>) (&gt; 0).  Unit = MW.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.mwbase`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#pmss1]
+=== `pmss1`
++++Pmss flow P1 (<i>Pmss1</i>).  Mechanical power output for turbine flow point 1 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.pmss1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pmss10]
+=== `pmss10`
++++Pmss flow P10 (<i>Pmss10</i>).  Mechanical power output for turbine flow point 10 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.pmss10`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pmss2]
+=== `pmss2`
++++Pmss flow P2 (<i>Pmss2</i>).  Mechanical power output for turbine flow point 2 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.pmss2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pmss3]
+=== `pmss3`
++++Pmss flow P3 (<i>Pmss3</i>).  Mechanical power output for turbine flow point 3 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.pmss3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pmss4]
+=== `pmss4`
++++Pmss flow P4 (<i>Pmss4</i>).  Mechanical power output for turbine flow point 4 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.pmss4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pmss5]
+=== `pmss5`
++++Pmss flow P5 (<i>Pmss5</i>).  Mechanical power output for turbine flow point 5 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.pmss5`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pmss6]
+=== `pmss6`
++++Pmss flow P6 (<i>Pmss6</i>).  Mechanical power output for turbine flow point 6 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.pmss6`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pmss7]
+=== `pmss7`
++++Pmss flow P7 (<i>Pmss7</i>).  Mechanical power output for turbine flow point 7 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.pmss7`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pmss8]
+=== `pmss8`
++++Pmss flow P8 (<i>Pmss8</i>).  Mechanical power output for turbine flow point 8 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.pmss8`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#pmss9]
+=== `pmss9`
++++Pmss flow P9 (<i>Pmss9</i>).  Mechanical power output for turbine flow point 9 for lookup table representing PU mechanical power on machine MVA rating as a function of turbine flow.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.pmss9`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#rpg]
+=== `rpg`
++++Permanent droop for governor output feedback (<i>R-Perm-Gate</i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.rpg`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#rpp]
+=== `rpp`
++++Permanent droop for electrical power feedback (<i>R-Perm-Pe</i>).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.rpp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#SynchronousMachineDynamics]
+=== `SynchronousMachineDynamics`
++++Synchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineGovernorDynamics.SynchronousMachineDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+
+| Inherited from
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#td]
+=== `td`
++++Derivative controller time constant (<i>Td</i>) (&gt;= 0).  Limits the derivative characteristic beyond a breakdown frequency to avoid amplification of high-frequency noise.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.td`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tdv]
+=== `tdv`
++++Distributive valve time lag time constant (<i>Tdv</i>) (&gt;= 0).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.tdv`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tg]
+=== `tg`
++++Value to allow the distribution valve controller to advance beyond the gate movement rate limit (<i>Tg</i>) (&gt;= 0).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.tg`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tp]
+=== `tp`
++++Pilot valve time lag time constant (<i>Tp</i>) (&gt;= 0).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.tp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#tpe]
+=== `tpe`
++++Electrical power droop time constant (<i>Tpe</i>) (&gt;= 0).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.tpe`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#TurbineLoadControllerDynamics]
+=== `TurbineLoadControllerDynamics`
++++Turbine load controller providing input to this turbine-governor.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineGovernorDynamics.TurbineLoadControllerDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TurbineLoadControllerDynamics.adoc[`TurbineLoadControllerDynamics`]
+
+| Inherited from
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+
+|===
+
+//[discrete]
+[#tw]
+=== `tw`
++++Water inertia time constant (<i>Tw</i>) (&gt; 0).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroWEH.tw`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+

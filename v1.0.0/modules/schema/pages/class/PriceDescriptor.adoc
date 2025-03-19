@@ -1,0 +1,185 @@
+= `PriceDescriptor`
+:toclevels: 4
+
+
++++The price of a Commodity during a given time interval may change over time.  For example, a price may be forecasted a year ahead, a month ahead, a day ahead, an hour ahead, and in real time; this is defined using the MarketType. Additionally a price may have one or more components. For example, a locational marginal energy price may be the arithmetic sum of the system price, the congestion price, and the loss price.  The priceType enumeration is used determine if the price is the complete price (priceType="total") or one of potentially many constituent components.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PriceDescriptor`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`PriceDescriptor`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+PriceDescriptor {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+CommodityPrice {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+PriceDescriptor -> CommodityPrice: CommodityPrice
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<CommodityPrice,`CommodityPrice`>>
+| 1..*
+| xref::class/CommodityPrice.adoc[`CommodityPrice`]
+| n/a
+
+| <<marketType,`marketType`>>
+| 0..1
+| xref::enumeration/MarketType.adoc[`MarketType`]
+| +++The time frame for the price, using the standard conventions associated with the MarketType enumeration.+++
+
+| <<priceType,`priceType`>>
+| 0..1
+| xref::enumeration/PriceTypeKind.adoc[`PriceTypeKind`]
+| +++The "kind" of price being described.  In general, the priceType will either be "total" to signify that the price is the price paid to buy or sell the commodity, sometimes referred to as an "all-in" price, or one of potentially many components.+++
+|===
+
+'''
+
+
+//[discrete]
+[#CommodityPrice]
+=== `CommodityPrice`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PriceDescriptor.CommodityPrice`
+| Cardinality
+| 1..*
+| Type
+| xref::class/CommodityPrice.adoc[`CommodityPrice`]
+
+
+|===
+
+//[discrete]
+[#marketType]
+=== `marketType`
++++The time frame for the price, using the standard conventions associated with the MarketType enumeration.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PriceDescriptor.marketType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MarketType.adoc[`MarketType`]
+
+
+|===
+
+//[discrete]
+[#priceType]
+=== `priceType`
++++The "kind" of price being described.  In general, the priceType will either be "total" to signify that the price is the price paid to buy or sell the commodity, sometimes referred to as an "all-in" price, or one of potentially many components.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PriceDescriptor.priceType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/PriceTypeKind.adoc[`PriceTypeKind`]
+
+
+|===
+
+

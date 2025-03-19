@@ -1,0 +1,57 @@
+= `PriceTypeKind`
+:toclevels: 4
+
+
++++Value of this enumeration for different prices include "total" for the complete/full/all-in price, "congestion" for the congestion cost associated with the total price, the "loss" for the loss price associated with the total price, "capacity" for prices related to installed or reserved capacity, "mileage" for use-based accounting, "system" for system-wide/copper-plate prices, and "delivery" for distribution-based prices.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:PriceTypeKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `capacity`
+| `cim:PriceTypeKind.capacity`
+| n/a
+
+| `congestion`
+| `cim:PriceTypeKind.congestion`
+| n/a
+
+| `delivery`
+| `cim:PriceTypeKind.delivery`
+| n/a
+
+| `loss`
+| `cim:PriceTypeKind.loss`
+| n/a
+
+| `mileage`
+| `cim:PriceTypeKind.mileage`
+| n/a
+
+| `system`
+| `cim:PriceTypeKind.system`
+| n/a
+
+| `total`
+| `cim:PriceTypeKind.total`
+| n/a
+|===

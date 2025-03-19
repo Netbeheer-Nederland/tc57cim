@@ -1,0 +1,49 @@
+= `DispatchResponseType`
+:toclevels: 4
+
+
++++For example:
+NON_RESPONSE
+ACCEPT
+DECLINE
+PARTIAL+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:DispatchResponseType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ACCEPT`
+| `cim:DispatchResponseType.ACCEPT`
+| n/a
+
+| `DECLINE`
+| `cim:DispatchResponseType.DECLINE`
+| n/a
+
+| `NON_RESPONSE`
+| `cim:DispatchResponseType.NON_RESPONSE`
+| n/a
+
+| `PARTIAL`
+| `cim:DispatchResponseType.PARTIAL`
+| n/a
+|===

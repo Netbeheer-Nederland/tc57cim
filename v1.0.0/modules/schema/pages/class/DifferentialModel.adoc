@@ -1,0 +1,31 @@
+= `DifferentialModel`
+:toclevels: 4
+
+
++++A set of statements describing the changes in the network model. The statement is defined in the incremental model.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DifferentialModel`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`DifferentialModel`*
+
+
+== Slots
+
+
+This class has no slots.

@@ -1,0 +1,263 @@
+= `TransmissionInterfaceRightEntitlement`
+:toclevels: 4
+
+
++++This is formally called the branch group ETC/TOR entitlement with the inclusion of CVR as ETC. This could be also used to represent the TR entitlement on a POR/POD.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TransmissionInterfaceRightEntitlement`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`TransmissionInterfaceRightEntitlement`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+TransmissionInterfaceRightEntitlement {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ContractRight {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Flowgate {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+TransmissionInterfaceRightEntitlement -> ContractRight: ContractRight
+
+
+TransmissionInterfaceRightEntitlement -> Flowgate: Flowgate
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<ContractRight,`ContractRight`>>
+| 1
+| xref::class/ContractRight.adoc[`ContractRight`]
+| n/a
+
+| <<Flowgate,`Flowgate`>>
+| 0..1
+| xref::class/Flowgate.adoc[`Flowgate`]
+| n/a
+
+| <<POD,`POD`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++point of delivery+++
+
+| <<POR,`POR`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++point of receipt+++
+
+| <<entitlement,`entitlement`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++the entitlement+++
+
+| <<startOperatingDate,`startOperatingDate`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Operating date and hour when the entitlement applies+++
+|===
+
+'''
+
+
+//[discrete]
+[#ContractRight]
+=== `ContractRight`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionInterfaceRightEntitlement.ContractRight`
+| Cardinality
+| 1
+| Type
+| xref::class/ContractRight.adoc[`ContractRight`]
+
+
+|===
+
+//[discrete]
+[#entitlement]
+=== `entitlement`
++++the entitlement+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionInterfaceRightEntitlement.entitlement`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#Flowgate]
+=== `Flowgate`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionInterfaceRightEntitlement.Flowgate`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Flowgate.adoc[`Flowgate`]
+
+
+|===
+
+//[discrete]
+[#POD]
+=== `POD`
++++point of delivery+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionInterfaceRightEntitlement.POD`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#POR]
+=== `POR`
++++point of receipt+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionInterfaceRightEntitlement.POR`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#startOperatingDate]
+=== `startOperatingDate`
++++Operating date and hour when the entitlement applies+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionInterfaceRightEntitlement.startOperatingDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+

@@ -1,0 +1,229 @@
+= `LoadFollowingInst`
+:toclevels: 4
+
+
++++Metered SubSystem Load Following Instruction.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:LoadFollowingInst`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`LoadFollowingInst`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+LoadFollowingInst {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RegisteredResource {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+LoadFollowingInst -> RegisteredResource: RegisteredResource
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<RegisteredResource,`RegisteredResource`>>
+| 1
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| n/a
+
+| <<endTime,`endTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Instruction End Time+++
+
+| <<loadFollowingMW,`loadFollowingMW`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Load Following MW Positive for follow-up and negative for follow-down+++
+
+| <<mssInstructionID,`mssInstructionID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Unique instruction id per instruction, assigned by the SC and provided to ADS. ADS passes through.+++
+
+| <<startTime,`startTime`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Instruction Start Time+++
+|===
+
+'''
+
+
+//[discrete]
+[#endTime]
+=== `endTime`
++++Instruction End Time+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadFollowingInst.endTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#loadFollowingMW]
+=== `loadFollowingMW`
++++Load Following MW Positive for follow-up and negative for follow-down+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadFollowingInst.loadFollowingMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#mssInstructionID]
+=== `mssInstructionID`
++++Unique instruction id per instruction, assigned by the SC and provided to ADS. ADS passes through.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadFollowingInst.mssInstructionID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadFollowingInst.RegisteredResource`
+| Cardinality
+| 1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+//[discrete]
+[#startTime]
+=== `startTime`
++++Instruction Start Time+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadFollowingInst.startTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+

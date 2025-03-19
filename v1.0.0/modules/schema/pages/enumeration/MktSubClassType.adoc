@@ -1,0 +1,75 @@
+= `MktSubClassType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MktSubClassType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `Branch_Group_Derates`
+| `cim:MktSubClassType.Branch_Group_Derates`
+| n/a
+
+| `Day_Ahead_Final_Market_Info`
+| `cim:MktSubClassType.Day_Ahead_Final_Market_Info`
+| n/a
+
+| `Day_Ahead_Forecast_Information`
+| `cim:MktSubClassType.Day_Ahead_Forecast_Information`
+| n/a
+
+| `Day_Ahead_Interim_Market_Info`
+| `cim:MktSubClassType.Day_Ahead_Interim_Market_Info`
+| n/a
+
+| `Day_Ahead_RMR`
+| `cim:MktSubClassType.Day_Ahead_RMR`
+| n/a
+
+| `Forecasted_UDC_Direct_Access_Load`
+| `cim:MktSubClassType.Forecasted_UDC_Direct_Access_Load`
+| n/a
+
+| `Hour_Ahead_Market_Info`
+| `cim:MktSubClassType.Hour_Ahead_Market_Info`
+| n/a
+
+| `Hourly_Expost_Market_Info`
+| `cim:MktSubClassType.Hourly_Expost_Market_Info`
+| n/a
+
+| `Public_Bid_Data`
+| `cim:MktSubClassType.Public_Bid_Data`
+| n/a
+
+| `Ten_Min_Expost_Market_Info`
+| `cim:MktSubClassType.Ten_Min_Expost_Market_Info`
+| n/a
+
+| `TTC/ATC_Forecast_Information`
+| `cim:MktSubClassType.TTC/ATC_Forecast_Information`
+| n/a
+
+| `TTC/ATC_Hourly_Forecast`
+| `cim:MktSubClassType.TTC/ATC_Hourly_Forecast`
+| n/a
+|===

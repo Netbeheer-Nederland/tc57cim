@@ -1,0 +1,405 @@
+= `TroubleSymptoms`
+:toclevels: 4
+
+
++++Trouble symptoms reported by person reporting the trouble.  The symptoms provide clues to utility personnel analyzing the ticket to help identify the root cause of the problem.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TroubleSymptoms`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`TroubleSymptoms`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+TroubleSymptoms {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+TroubleTicket {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+TroubleSymptoms -> TroubleTicket: TroubleTicket
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<troubleSymptomsExtent,`troubleSymptomsExtent`>>
+| 1
+| xref::enumeration/TroubleSymptomsExtentKind.adoc[`TroubleSymptomsExtentKind`]
+| +++The extent of the problem being reported.+++
+
+| <<troubleSymptomsExtentOther,`troubleSymptomsExtentOther`>>
+| 1
+| https://w3id.org/linkml/String[`string`]
+| +++The extent of the problem being reported that does not fit any of the enumeration values.+++
+
+| <<troubleSymptomsLight,`troubleSymptomsLight`>>
+| 1
+| xref::enumeration/TroubleSymptomsLightKind.adoc[`TroubleSymptomsLightKind`]
+| +++The problem with lights being reported.+++
+
+| <<troubleSymptomsLightOther,`troubleSymptomsLightOther`>>
+| 1
+| https://w3id.org/linkml/String[`string`]
+| +++The problem with lights being reported that does not fit any of the enumeration values+++
+
+| <<troubleSymptomsPole,`troubleSymptomsPole`>>
+| 1
+| xref::enumeration/TroubleSymptomsPoleKind.adoc[`TroubleSymptomsPoleKind`]
+| +++The problem with pole being reported.+++
+
+| <<troubleSymptomsPoleOther,`troubleSymptomsPoleOther`>>
+| 1
+| https://w3id.org/linkml/String[`string`]
+| +++The problem with pole being reported that does not fit any of the enumeration values+++
+
+| <<troubleSymptomsTransformer,`troubleSymptomsTransformer`>>
+| 1
+| xref::enumeration/TroubleSymptomsTransformerKind.adoc[`TroubleSymptomsTransformerKind`]
+| +++The problem with transformer being reported.+++
+
+| <<troubleSymptomsTransformerOther,`troubleSymptomsTransformerOther`>>
+| 1
+| https://w3id.org/linkml/String[`string`]
+| +++The problem with transformer being reported that does not fit any of the enumeration values+++
+
+| <<troubleSymptomsTree,`troubleSymptomsTree`>>
+| 1
+| xref::enumeration/TroubleSymptomsTree Kind.adoc[`TroubleSymptomsTree Kind`]
+| +++The problem with tree being reported.+++
+
+| <<troubleSymptomsTreeOther,`troubleSymptomsTreeOther`>>
+| 1
+| https://w3id.org/linkml/String[`string`]
+| +++The problem with tree being reported that does not fit any of the enumeration values+++
+
+| <<troubleSymptomsWire,`troubleSymptomsWire`>>
+| 1
+| xref::enumeration/TroubleSymptomsWireKind.adoc[`TroubleSymptomsWireKind`]
+| +++The problem with wire being reported.+++
+
+| <<troubleSymptomsWireOther,`troubleSymptomsWireOther`>>
+| 1
+| https://w3id.org/linkml/String[`string`]
+| +++The problem with wire being reported that does not fit any of the enumeration values+++
+
+| <<TroubleTicket,`TroubleTicket`>>
+| 0..1
+| xref::class/TroubleTicket.adoc[`TroubleTicket`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#troubleSymptomsExtent]
+=== `troubleSymptomsExtent`
++++The extent of the problem being reported.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.troubleSymptomsExtent`
+| Cardinality
+| 1
+| Type
+| xref::enumeration/TroubleSymptomsExtentKind.adoc[`TroubleSymptomsExtentKind`]
+
+
+|===
+
+//[discrete]
+[#troubleSymptomsExtentOther]
+=== `troubleSymptomsExtentOther`
++++The extent of the problem being reported that does not fit any of the enumeration values.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.troubleSymptomsExtentOther`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#troubleSymptomsLight]
+=== `troubleSymptomsLight`
++++The problem with lights being reported.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.troubleSymptomsLight`
+| Cardinality
+| 1
+| Type
+| xref::enumeration/TroubleSymptomsLightKind.adoc[`TroubleSymptomsLightKind`]
+
+
+|===
+
+//[discrete]
+[#troubleSymptomsLightOther]
+=== `troubleSymptomsLightOther`
++++The problem with lights being reported that does not fit any of the enumeration values+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.troubleSymptomsLightOther`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#troubleSymptomsPole]
+=== `troubleSymptomsPole`
++++The problem with pole being reported.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.troubleSymptomsPole`
+| Cardinality
+| 1
+| Type
+| xref::enumeration/TroubleSymptomsPoleKind.adoc[`TroubleSymptomsPoleKind`]
+
+
+|===
+
+//[discrete]
+[#troubleSymptomsPoleOther]
+=== `troubleSymptomsPoleOther`
++++The problem with pole being reported that does not fit any of the enumeration values+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.troubleSymptomsPoleOther`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#troubleSymptomsTransformer]
+=== `troubleSymptomsTransformer`
++++The problem with transformer being reported.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.troubleSymptomsTransformer`
+| Cardinality
+| 1
+| Type
+| xref::enumeration/TroubleSymptomsTransformerKind.adoc[`TroubleSymptomsTransformerKind`]
+
+
+|===
+
+//[discrete]
+[#troubleSymptomsTransformerOther]
+=== `troubleSymptomsTransformerOther`
++++The problem with transformer being reported that does not fit any of the enumeration values+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.troubleSymptomsTransformerOther`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#troubleSymptomsTree]
+=== `troubleSymptomsTree`
++++The problem with tree being reported.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.troubleSymptomsTree`
+| Cardinality
+| 1
+| Type
+| xref::enumeration/TroubleSymptomsTree Kind.adoc[`TroubleSymptomsTree Kind`]
+
+
+|===
+
+//[discrete]
+[#troubleSymptomsTreeOther]
+=== `troubleSymptomsTreeOther`
++++The problem with tree being reported that does not fit any of the enumeration values+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.troubleSymptomsTreeOther`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#troubleSymptomsWire]
+=== `troubleSymptomsWire`
++++The problem with wire being reported.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.troubleSymptomsWire`
+| Cardinality
+| 1
+| Type
+| xref::enumeration/TroubleSymptomsWireKind.adoc[`TroubleSymptomsWireKind`]
+
+
+|===
+
+//[discrete]
+[#troubleSymptomsWireOther]
+=== `troubleSymptomsWireOther`
++++The problem with wire being reported that does not fit any of the enumeration values+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.troubleSymptomsWireOther`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#TroubleTicket]
+=== `TroubleTicket`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleSymptoms.TroubleTicket`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TroubleTicket.adoc[`TroubleTicket`]
+
+
+|===
+
+

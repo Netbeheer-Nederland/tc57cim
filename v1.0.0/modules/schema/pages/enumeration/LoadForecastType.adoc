@@ -1,0 +1,37 @@
+= `LoadForecastType`
+:toclevels: 4
+
+
++++Load forecast zone types.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:LoadForecastType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `LFZ`
+| `cim:LoadForecastType.LFZ`
+| n/a
+
+| `LZMS`
+| `cim:LoadForecastType.LZMS`
+| n/a
+|===

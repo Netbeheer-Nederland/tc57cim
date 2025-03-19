@@ -1,0 +1,53 @@
+= `TroubleSymptomsWireKind`
+:toclevels: 4
+
+
++++The list of items that define the wire problem.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TroubleSymptomsWireKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `digIn`
+| `cim:TroubleSymptomsWireKind.digIn`
+| n/a
+
+| `ok`
+| `cim:TroubleSymptomsWireKind.ok`
+| n/a
+
+| `other`
+| `cim:TroubleSymptomsWireKind.other`
+| n/a
+
+| `serviceDown`
+| `cim:TroubleSymptomsWireKind.serviceDown`
+| n/a
+
+| `wireburning`
+| `cim:TroubleSymptomsWireKind.wireburning`
+| n/a
+
+| `wireDown`
+| `cim:TroubleSymptomsWireKind.wireDown`
+| n/a
+|===

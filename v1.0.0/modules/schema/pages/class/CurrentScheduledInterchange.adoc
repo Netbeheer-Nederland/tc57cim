@@ -1,0 +1,187 @@
+= `CurrentScheduledInterchange`
+:toclevels: 4
+
+
++++Control area current net tie (scheduled interchange) sent to real time dispatch.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CurrentScheduledInterchange`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`CurrentScheduledInterchange`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+CurrentScheduledInterchange {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+InternalControlArea {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+CurrentScheduledInterchange -> InternalControlArea: InternalControlArea
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InternalControlArea,`InternalControlArea`>>
+| 1
+| xref::class/InternalControlArea.adoc[`InternalControlArea`]
+| n/a
+
+| <<currentNetTieMW,`currentNetTieMW`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Current control area net tie MW (the sum of the tie line flows, i.e the sum of flows into and out of the control area), the current instantaneous scheduled interchange.+++
+
+| <<useEmergencySchedule,`useEmergencySchedule`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Use Emergency Schedule 
+Attribute Usage: Emergency use indicator, false = Emergency Schedular OFF, true = Emergency Schedular ON.+++
+|===
+
+'''
+
+
+//[discrete]
+[#currentNetTieMW]
+=== `currentNetTieMW`
++++Current control area net tie MW (the sum of the tie line flows, i.e the sum of flows into and out of the control area), the current instantaneous scheduled interchange.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurrentScheduledInterchange.currentNetTieMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#InternalControlArea]
+=== `InternalControlArea`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurrentScheduledInterchange.InternalControlArea`
+| Cardinality
+| 1
+| Type
+| xref::class/InternalControlArea.adoc[`InternalControlArea`]
+
+
+|===
+
+//[discrete]
+[#useEmergencySchedule]
+=== `useEmergencySchedule`
++++Use Emergency Schedule 
+Attribute Usage: Emergency use indicator, false = Emergency Schedular OFF, true = Emergency Schedular ON.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurrentScheduledInterchange.useEmergencySchedule`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+

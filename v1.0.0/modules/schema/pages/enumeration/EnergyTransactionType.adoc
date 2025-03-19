@@ -1,0 +1,41 @@
+= `EnergyTransactionType`
+:toclevels: 4
+
+
++++Defines the state of a transaction.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:EnergyTransactionType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `approve`
+| `cim:EnergyTransactionType.approve`
+| n/a
+
+| `deny`
+| `cim:EnergyTransactionType.deny`
+| n/a
+
+| `study`
+| `cim:EnergyTransactionType.study`
+| n/a
+|===

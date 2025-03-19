@@ -1,0 +1,57 @@
+= `FacilityKind`
+:toclevels: 4
+
+
++++Types of facilities at which an asset can be deployed.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:FacilityKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `distributionPoleTop`
+| `cim:FacilityKind.distributionPoleTop`
+| n/a
+
+| `substationDistribution`
+| `cim:FacilityKind.substationDistribution`
+| n/a
+
+| `substationFossilPlant`
+| `cim:FacilityKind.substationFossilPlant`
+| n/a
+
+| `substationHydroPlant`
+| `cim:FacilityKind.substationHydroPlant`
+| n/a
+
+| `substationNuclearPlant`
+| `cim:FacilityKind.substationNuclearPlant`
+| n/a
+
+| `substationSubTransmission`
+| `cim:FacilityKind.substationSubTransmission`
+| n/a
+
+| `substationTransmission`
+| `cim:FacilityKind.substationTransmission`
+| n/a
+|===

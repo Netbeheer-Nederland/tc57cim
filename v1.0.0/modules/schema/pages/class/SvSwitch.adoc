@@ -1,0 +1,186 @@
+= `SvSwitch`
+:toclevels: 4
+
+
++++State variable for switch.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SvSwitch`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/StateVariable.adoc[`StateVariable`]
+** *`SvSwitch`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+SvSwitch {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Switch {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+SvSwitch -> Switch: Switch
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<Switch,`Switch`>>
+| 1
+| xref::class/Switch.adoc[`Switch`]
+| +++The switch associated with the switch state.+++
+
+| <<open,`open`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++The attribute tells if the computed state of the switch is considered open.+++
+
+| <<phase,`phase`>>
+| 0..1
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++The terminal phase at which the connection is applied.   If missing, the injection is assumed to be balanced among non-neutral phases.+++
+|===
+
+'''
+
+
+//[discrete]
+[#open]
+=== `open`
++++The attribute tells if the computed state of the switch is considered open.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvSwitch.open`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#phase]
+=== `phase`
++++The terminal phase at which the connection is applied.   If missing, the injection is assumed to be balanced among non-neutral phases.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvSwitch.phase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+//[discrete]
+[#Switch]
+=== `Switch`
++++The switch associated with the switch state.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvSwitch.Switch`
+| Cardinality
+| 1
+| Type
+| xref::class/Switch.adoc[`Switch`]
+
+
+|===
+
+

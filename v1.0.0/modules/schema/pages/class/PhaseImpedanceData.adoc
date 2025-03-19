@@ -1,0 +1,330 @@
+= `PhaseImpedanceData`
+:toclevels: 4
+
+
++++Impedance and conductance matrix element values. 
+The diagonal elements are described by the elements having the same toPhase and fromPhase value and the off diagonal elements have different toPhase and fromPhase values.  The matrix can also be stored in symmetric lower triangular format using the row and column attributes, which map to ACLineSegmentPhase.sequenceNumber.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PhaseImpedanceData`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`PhaseImpedanceData`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+PhaseImpedanceData {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+PerLengthPhaseImpedance {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+PhaseImpedanceData -> PerLengthPhaseImpedance: PhaseImpedance
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<PhaseImpedance,`PhaseImpedance`>>
+| 1
+| xref::class/PerLengthPhaseImpedance.adoc[`PerLengthPhaseImpedance`]
+| +++Conductor phase impedance to which this data belongs.+++
+
+| <<b,`b`>>
+| 0..1
+| xref::class/SusceptancePerLength.adoc[`SusceptancePerLength`]
+| +++Susceptance matrix element value, per length of unit.+++
+
+| <<column,`column`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++The matrix element's column number, in the range 1 to row. Only the lower triangle needs to be stored. This column number matches ACLineSegmentPhase.sequenceNumber.+++
+
+| <<fromPhase,`fromPhase`>>
+| 0..1
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++Refer to the class description.+++
+
+| <<g,`g`>>
+| 0..1
+| xref::class/ConductancePerLength.adoc[`ConductancePerLength`]
+| +++Conductance matrix element value, per length of unit.+++
+
+| <<r,`r`>>
+| 0..1
+| xref::class/ResistancePerLength.adoc[`ResistancePerLength`]
+| +++Resistance matrix element value, per length of unit.+++
+
+| <<row,`row`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++The matrix element’s row number, in the range 1 to PerLengthPhaseImpedance.conductorCount. Only the lower triangle needs to be stored. This row number matches ACLineSegmentPhase.sequenceNumber.+++
+
+| <<toPhase,`toPhase`>>
+| 0..1
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++Refer to the class description.+++
+
+| <<x,`x`>>
+| 0..1
+| xref::class/ReactancePerLength.adoc[`ReactancePerLength`]
+| +++Reactance matrix element value, per length of unit.+++
+|===
+
+'''
+
+
+//[discrete]
+[#b]
+=== `b`
++++Susceptance matrix element value, per length of unit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.b`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SusceptancePerLength.adoc[`SusceptancePerLength`]
+
+
+|===
+
+//[discrete]
+[#column]
+=== `column`
++++The matrix element's column number, in the range 1 to row. Only the lower triangle needs to be stored. This column number matches ACLineSegmentPhase.sequenceNumber.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.column`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#fromPhase]
+=== `fromPhase`
++++Refer to the class description.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.fromPhase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+//[discrete]
+[#g]
+=== `g`
++++Conductance matrix element value, per length of unit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.g`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ConductancePerLength.adoc[`ConductancePerLength`]
+
+
+|===
+
+//[discrete]
+[#PhaseImpedance]
+=== `PhaseImpedance`
++++Conductor phase impedance to which this data belongs.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.PhaseImpedance`
+| Cardinality
+| 1
+| Type
+| xref::class/PerLengthPhaseImpedance.adoc[`PerLengthPhaseImpedance`]
+
+
+|===
+
+//[discrete]
+[#r]
+=== `r`
++++Resistance matrix element value, per length of unit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.r`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ResistancePerLength.adoc[`ResistancePerLength`]
+
+
+|===
+
+//[discrete]
+[#row]
+=== `row`
++++The matrix element’s row number, in the range 1 to PerLengthPhaseImpedance.conductorCount. Only the lower triangle needs to be stored. This row number matches ACLineSegmentPhase.sequenceNumber.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.row`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#toPhase]
+=== `toPhase`
++++Refer to the class description.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.toPhase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+//[discrete]
+[#x]
+=== `x`
++++Reactance matrix element value, per length of unit.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.x`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReactancePerLength.adoc[`ReactancePerLength`]
+
+
+|===
+
+

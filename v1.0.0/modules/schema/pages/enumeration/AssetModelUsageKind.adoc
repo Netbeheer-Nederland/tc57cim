@@ -1,0 +1,61 @@
+= `AssetModelUsageKind`
+:toclevels: 4
+
+
++++Usage for an asset model.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AssetModelUsageKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `customerSubstation`
+| `cim:AssetModelUsageKind.customerSubstation`
+| n/a
+
+| `distributionOverhead`
+| `cim:AssetModelUsageKind.distributionOverhead`
+| n/a
+
+| `distributionUnderground`
+| `cim:AssetModelUsageKind.distributionUnderground`
+| n/a
+
+| `other`
+| `cim:AssetModelUsageKind.other`
+| n/a
+
+| `streetlight`
+| `cim:AssetModelUsageKind.streetlight`
+| n/a
+
+| `substation`
+| `cim:AssetModelUsageKind.substation`
+| n/a
+
+| `transmission`
+| `cim:AssetModelUsageKind.transmission`
+| n/a
+
+| `unknown`
+| `cim:AssetModelUsageKind.unknown`
+| n/a
+|===

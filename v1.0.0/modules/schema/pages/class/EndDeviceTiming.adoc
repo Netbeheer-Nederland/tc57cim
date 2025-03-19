@@ -1,0 +1,210 @@
+= `EndDeviceTiming`
+:toclevels: 4
+
+
++++Timing for the control actions of end devices.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EndDeviceTiming`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`EndDeviceTiming`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+EndDeviceTiming {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+
+DateTimeInterval {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+EndDeviceTiming -> DateTimeInterval: interval
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<duration,`duration`>>
+| 0..1
+| xref::class/Minutes.adoc[`Minutes`]
+| +++Duration of the end device control action or the business event that is the subject of the end device control.+++
+
+| <<durationIndefinite,`durationIndefinite`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if 'duration' is indefinite.+++
+
+| <<interval,`interval`>>
+| 0..1
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++Start and end time of an interval during which end device control actions are to be executed.+++
+
+| <<randomisation,`randomisation`>>
+| 0..1
+| xref::enumeration/RandomisationKind.adoc[`RandomisationKind`]
+| +++Kind of randomisation to be applied to the end device control actions to be executed.+++
+|===
+
+'''
+
+
+//[discrete]
+[#duration]
+=== `duration`
++++Duration of the end device control action or the business event that is the subject of the end device control.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceTiming.duration`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Minutes.adoc[`Minutes`]
+
+
+|===
+
+//[discrete]
+[#durationIndefinite]
+=== `durationIndefinite`
++++True if 'duration' is indefinite.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceTiming.durationIndefinite`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#interval]
+=== `interval`
++++Start and end time of an interval during which end device control actions are to be executed.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceTiming.interval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+//[discrete]
+[#randomisation]
+=== `randomisation`
++++Kind of randomisation to be applied to the end device control actions to be executed.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceTiming.randomisation`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/RandomisationKind.adoc[`RandomisationKind`]
+
+
+|===
+
+

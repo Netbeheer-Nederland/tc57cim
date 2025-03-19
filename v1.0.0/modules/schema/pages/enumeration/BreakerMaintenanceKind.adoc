@@ -1,0 +1,41 @@
+= `BreakerMaintenanceKind`
+:toclevels: 4
+
+
++++Possible types of breaker maintenance work.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:BreakerMaintenanceKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `externalOutOfService`
+| `cim:BreakerMaintenanceKind.externalOutOfService`
+| n/a
+
+| `internalOutOfService`
+| `cim:BreakerMaintenanceKind.internalOutOfService`
+| n/a
+
+| `interrupterOverhaul`
+| `cim:BreakerMaintenanceKind.interrupterOverhaul`
+| n/a
+|===

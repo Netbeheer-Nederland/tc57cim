@@ -1,0 +1,41 @@
+= `Source`
+:toclevels: 4
+
+
++++Source gives information related to the origin of a value.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:Source`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `DEFAULTED`
+| `cim:Source.DEFAULTED`
+| n/a
+
+| `PROCESS`
+| `cim:Source.PROCESS`
+| n/a
+
+| `SUBSTITUTED`
+| `cim:Source.SUBSTITUTED`
+| n/a
+|===

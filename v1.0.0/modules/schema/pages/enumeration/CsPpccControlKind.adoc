@@ -1,0 +1,41 @@
+= `CsPpccControlKind`
+:toclevels: 4
+
+
++++Active power control modes for HVDC line operating as Current Source Converter.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CsPpccControlKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `activePower`
+| `cim:CsPpccControlKind.activePower`
+| n/a
+
+| `dcCurrent`
+| `cim:CsPpccControlKind.dcCurrent`
+| n/a
+
+| `dcVoltage`
+| `cim:CsPpccControlKind.dcVoltage`
+| n/a
+|===

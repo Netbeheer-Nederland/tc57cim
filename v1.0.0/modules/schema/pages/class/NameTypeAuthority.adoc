@@ -1,0 +1,185 @@
+= `NameTypeAuthority`
+:toclevels: 4
+
+
++++Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:NameTypeAuthority`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`NameTypeAuthority`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+NameTypeAuthority {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+NameType {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+NameTypeAuthority -> NameType: NameTypes
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Description of the name type authority.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Name of the name type authority.+++
+
+| <<NameTypes,`NameTypes`>>
+| 0..*
+| xref::class/NameType.adoc[`NameType`]
+| +++All name types managed by this authority.+++
+|===
+
+'''
+
+
+//[discrete]
+[#description]
+=== `description`
++++Description of the name type authority.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NameTypeAuthority.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++Name of the name type authority.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NameTypeAuthority.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#NameTypes]
+=== `NameTypes`
++++All name types managed by this authority.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NameTypeAuthority.NameTypes`
+| Cardinality
+| 0..*
+| Type
+| xref::class/NameType.adoc[`NameType`]
+
+
+|===
+
+

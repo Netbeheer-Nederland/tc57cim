@@ -1,0 +1,41 @@
+= `UsagePointConnectedKind`
+:toclevels: 4
+
+
++++State of the usage point with respect to connection to the network.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:UsagePointConnectedKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `connected`
+| `cim:UsagePointConnectedKind.connected`
+| n/a
+
+| `logicallyDisconnected`
+| `cim:UsagePointConnectedKind.logicallyDisconnected`
+| n/a
+
+| `physicallyDisconnected`
+| `cim:UsagePointConnectedKind.physicallyDisconnected`
+| n/a
+|===

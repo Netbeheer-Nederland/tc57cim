@@ -1,0 +1,267 @@
+= `DefaultBidCurveData`
+:toclevels: 4
+
+
++++Curve data for default bid curve and startup cost curve.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DefaultBidCurveData`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/CurveData.adoc[`CurveData`]
+** *`DefaultBidCurveData`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+DefaultBidCurveData {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Curve {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+DefaultBidCurveData -> Curve: Curve
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<Curve,`Curve`>>
+| 1
+| xref::class/Curve.adoc[`Curve`]
+| +++The curve of  this curve data point.+++
+
+| <<bidSegmentCalcType,`bidSegmentCalcType`>>
+| 0..1
+| xref::enumeration/BidCalculationBasis.adoc[`BidCalculationBasis`]
+| +++Type of calculation basis used to define the default bid segment curve.+++
+
+| <<xvalue,`xvalue`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The data value of the X-axis variable,  depending on the X-axis units.+++
+
+| <<y1value,`y1value`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The data value of the  first Y-axis variable, depending on the Y-axis units.+++
+
+| <<y2value,`y2value`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The data value of the second Y-axis variable (if present), depending on the Y-axis units.+++
+
+| <<y3value,`y3value`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The data value of the third Y-axis variable (if present), depending on the Y-axis units.+++
+|===
+
+'''
+
+
+//[discrete]
+[#bidSegmentCalcType]
+=== `bidSegmentCalcType`
++++Type of calculation basis used to define the default bid segment curve.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DefaultBidCurveData.bidSegmentCalcType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/BidCalculationBasis.adoc[`BidCalculationBasis`]
+
+
+|===
+
+//[discrete]
+[#Curve]
+=== `Curve`
++++The curve of  this curve data point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.Curve`
+| Cardinality
+| 1
+| Type
+| xref::class/Curve.adoc[`Curve`]
+
+| Inherited from
+| xref::class/CurveData.adoc[`CurveData`]
+
+
+|===
+
+//[discrete]
+[#xvalue]
+=== `xvalue`
++++The data value of the X-axis variable,  depending on the X-axis units.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.xvalue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/CurveData.adoc[`CurveData`]
+
+
+|===
+
+//[discrete]
+[#y1value]
+=== `y1value`
++++The data value of the  first Y-axis variable, depending on the Y-axis units.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.y1value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/CurveData.adoc[`CurveData`]
+
+
+|===
+
+//[discrete]
+[#y2value]
+=== `y2value`
++++The data value of the second Y-axis variable (if present), depending on the Y-axis units.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.y2value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/CurveData.adoc[`CurveData`]
+
+
+|===
+
+//[discrete]
+[#y3value]
+=== `y3value`
++++The data value of the third Y-axis variable (if present), depending on the Y-axis units.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.y3value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/CurveData.adoc[`CurveData`]
+
+
+|===
+
+

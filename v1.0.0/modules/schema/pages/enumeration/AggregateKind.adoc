@@ -1,0 +1,89 @@
+= `AggregateKind`
+:toclevels: 4
+
+
++++Kind of aggregation for read / measured values from multiple end points.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AggregateKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `average`
+| `cim:AggregateKind.average`
+| n/a
+
+| `excess`
+| `cim:AggregateKind.excess`
+| n/a
+
+| `fifthMaximum`
+| `cim:AggregateKind.fifthMaximum`
+| n/a
+
+| `fourthMaximum`
+| `cim:AggregateKind.fourthMaximum`
+| n/a
+
+| `highThreshold`
+| `cim:AggregateKind.highThreshold`
+| n/a
+
+| `lowThreshold`
+| `cim:AggregateKind.lowThreshold`
+| n/a
+
+| `maximum`
+| `cim:AggregateKind.maximum`
+| n/a
+
+| `minimum`
+| `cim:AggregateKind.minimum`
+| n/a
+
+| `nominal`
+| `cim:AggregateKind.nominal`
+| n/a
+
+| `none`
+| `cim:AggregateKind.none`
+| n/a
+
+| `normal`
+| `cim:AggregateKind.normal`
+| n/a
+
+| `secondMaximum`
+| `cim:AggregateKind.secondMaximum`
+| n/a
+
+| `secondMinimum`
+| `cim:AggregateKind.secondMinimum`
+| n/a
+
+| `sum`
+| `cim:AggregateKind.sum`
+| n/a
+
+| `thirdMaximum`
+| `cim:AggregateKind.thirdMaximum`
+| n/a
+|===

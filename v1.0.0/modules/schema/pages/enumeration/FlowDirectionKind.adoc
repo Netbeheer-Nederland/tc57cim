@@ -1,0 +1,113 @@
+= `FlowDirectionKind`
+:toclevels: 4
+
+
++++Kind of flow direction for reading/measured  values proper to some commodities such as, for example, energy, power, demand.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:FlowDirectionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `forward`
+| `cim:FlowDirectionKind.forward`
+| n/a
+
+| `lagging`
+| `cim:FlowDirectionKind.lagging`
+| n/a
+
+| `leading`
+| `cim:FlowDirectionKind.leading`
+| n/a
+
+| `net`
+| `cim:FlowDirectionKind.net`
+| n/a
+
+| `none`
+| `cim:FlowDirectionKind.none`
+| n/a
+
+| `q1minusQ4`
+| `cim:FlowDirectionKind.q1minusQ4`
+| n/a
+
+| `q1plusQ2`
+| `cim:FlowDirectionKind.q1plusQ2`
+| n/a
+
+| `q1plusQ3`
+| `cim:FlowDirectionKind.q1plusQ3`
+| n/a
+
+| `q1plusQ4`
+| `cim:FlowDirectionKind.q1plusQ4`
+| n/a
+
+| `q2minusQ3`
+| `cim:FlowDirectionKind.q2minusQ3`
+| n/a
+
+| `q2plusQ3`
+| `cim:FlowDirectionKind.q2plusQ3`
+| n/a
+
+| `q2plusQ4`
+| `cim:FlowDirectionKind.q2plusQ4`
+| n/a
+
+| `q3minusQ2`
+| `cim:FlowDirectionKind.q3minusQ2`
+| n/a
+
+| `q3plusQ4`
+| `cim:FlowDirectionKind.q3plusQ4`
+| n/a
+
+| `quadrant1`
+| `cim:FlowDirectionKind.quadrant1`
+| n/a
+
+| `quadrant2`
+| `cim:FlowDirectionKind.quadrant2`
+| n/a
+
+| `quadrant3`
+| `cim:FlowDirectionKind.quadrant3`
+| n/a
+
+| `quadrant4`
+| `cim:FlowDirectionKind.quadrant4`
+| n/a
+
+| `reverse`
+| `cim:FlowDirectionKind.reverse`
+| n/a
+
+| `total`
+| `cim:FlowDirectionKind.total`
+| n/a
+
+| `totalByPhase`
+| `cim:FlowDirectionKind.totalByPhase`
+| n/a
+|===

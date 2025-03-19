@@ -1,0 +1,59 @@
+= `FScale`
+:toclevels: 4
+
+
++++Fujita scale (referred to as EF-scale starting in 2007) for tornado damage.  A set of wind estimates (not measurements) based on damage. It uses three-second gusts estimated at the point of damage based on a judgment of 8 levels of damage to 28 indicators. These estimates vary with height and exposure.  
+The 3 second gust is not the same wind as in standard surface observations.
+Enumerations based on NOAA conventions.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:FScale`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `five`
+| `cim:FScale.five`
+| n/a
+
+| `four`
+| `cim:FScale.four`
+| n/a
+
+| `minusNine`
+| `cim:FScale.minusNine`
+| n/a
+
+| `one`
+| `cim:FScale.one`
+| n/a
+
+| `three`
+| `cim:FScale.three`
+| n/a
+
+| `two`
+| `cim:FScale.two`
+| n/a
+
+| `zero`
+| `cim:FScale.zero`
+| n/a
+|===

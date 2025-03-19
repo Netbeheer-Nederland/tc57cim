@@ -1,0 +1,1385 @@
+= `Series`
+:toclevels: 4
+
+
++++A set of similar physical or conceptual objects defined for the same period or point of time.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Series`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/TimeSeries.adoc[`TimeSeries`]
+*** *`Series`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+Series {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Series {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Series {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+FlowDirection {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketParticipant {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DateAndOrTime {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+EnvironmentalMonitoringStation {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Period {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Domain {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketDocument {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketEvaluationPoint {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Reason {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ConstraintDuration {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+AttributeInstanceComponent {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Unit {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Price {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Auction {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MktPSRType {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Quantity {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RegisteredResource {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketObjectStatus {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Point {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+Series -> Series: SelfSeries
+
+
+Series -> Series: Series
+
+
+Series -> FlowDirection: FlowDirection
+
+
+Series -> MarketParticipant: MarketParticipant
+
+
+Series -> DateAndOrTime: DateAndOrTime
+
+
+Series -> EnvironmentalMonitoringStation: EnvironmentalMonitoringStation
+
+
+Series -> Period: Period
+
+
+Series -> Domain: Domain
+
+
+Series -> MarketDocument: MarketDocument
+
+
+Series -> MarketEvaluationPoint: MarketEvaluationPoint
+
+
+Series -> Reason: Reason
+
+
+Series -> ConstraintDuration: ConstraintDuration
+
+
+Series -> AttributeInstanceComponent: AttributeInstanceComponent
+
+
+Series -> Unit: Unit
+
+
+Series -> Price: Price
+
+
+Series -> Auction: Auction
+
+
+Series -> MktPSRType: MktPSRType
+
+
+Series -> Quantity: Quantity
+
+
+Series -> RegisteredResource: RegisteredResource
+
+
+Series -> MarketObjectStatus: MarketObjectStatus
+
+
+Series -> Point: Point
+
+
+Series -> DiagramObject: DiagramObjects
+
+
+Series -> InstanceSet: InstanceSet
+
+
+Series -> Name: Names
+
+
+Series -> ChangeSetMember: PropertiesCIMDataObject
+
+
+Series -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<lastUpdateDate,`lastUpdateDate`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++The date of the last update related to this market object.+++
+
+| <<methodType,`methodType`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Type of method used in the business process related to this Series, e.g. metering method.+++
+
+| <<registrationDate,`registrationDate`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++For a market object, the date of registration of a contract, e.g. the date of change of supplier for a customer.+++
+
+| <<SelfSeries,`SelfSeries`>>
+| 0..*
+| xref::class/Series.adoc[`Series`]
+| n/a
+
+| <<Series,`Series`>>
+| 0..*
+| xref::class/Series.adoc[`Series`]
+| n/a
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<businessType,`businessType`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The identification of the nature of the time series.+++
+
+| <<cancelledTS,`cancelledTS`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++An indicator stating that the TimeSeries, identified by the mRID, is cancelled as well as all the values sent in a previous version of the TimeSeries in a previous document.+++
+
+| <<curveType,`curveType`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The coded representation of the type of curve being described.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<objectAggregation,`objectAggregation`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Identification of the object that is the common denominator used to aggregate a time series.+++
+
+| <<product,`product`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The type of the product such as Power, energy, reactive power, transport capacity that is the subject of the time series.+++
+
+| <<version,`version`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Version of the time series.+++
+
+| <<AttributeInstanceComponent,`AttributeInstanceComponent`>>
+| 0..*
+| xref::class/AttributeInstanceComponent.adoc[`AttributeInstanceComponent`]
+| n/a
+
+| <<Auction,`Auction`>>
+| 0..*
+| xref::class/Auction.adoc[`Auction`]
+| n/a
+
+| <<ConstraintDuration,`ConstraintDuration`>>
+| 0..*
+| xref::class/ConstraintDuration.adoc[`ConstraintDuration`]
+| n/a
+
+| <<DateAndOrTime,`DateAndOrTime`>>
+| 0..*
+| xref::class/DateAndOrTime.adoc[`DateAndOrTime`]
+| n/a
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Domain,`Domain`>>
+| 0..*
+| xref::class/Domain.adoc[`Domain`]
+| n/a
+
+| <<EnvironmentalMonitoringStation,`EnvironmentalMonitoringStation`>>
+| 0..*
+| xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+| n/a
+
+| <<FlowDirection,`FlowDirection`>>
+| 0..*
+| xref::class/FlowDirection.adoc[`FlowDirection`]
+| n/a
+
+| <<MarketDocument,`MarketDocument`>>
+| 0..*
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+| n/a
+
+| <<MarketEvaluationPoint,`MarketEvaluationPoint`>>
+| 0..*
+| xref::class/MarketEvaluationPoint.adoc[`MarketEvaluationPoint`]
+| n/a
+
+| <<MarketObjectStatus,`MarketObjectStatus`>>
+| 0..*
+| xref::class/MarketObjectStatus.adoc[`MarketObjectStatus`]
+| n/a
+
+| <<MarketParticipant,`MarketParticipant`>>
+| 0..*
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+| n/a
+
+| <<MktPSRType,`MktPSRType`>>
+| 0..*
+| xref::class/MktPSRType.adoc[`MktPSRType`]
+| n/a
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<Period,`Period`>>
+| 0..*
+| xref::class/Period.adoc[`Period`]
+| n/a
+
+| <<Point,`Point`>>
+| 0..*
+| xref::class/Point.adoc[`Point`]
+| n/a
+
+| <<Price,`Price`>>
+| 0..*
+| xref::class/Price.adoc[`Price`]
+| n/a
+
+| <<Quantity,`Quantity`>>
+| 0..*
+| xref::class/Quantity.adoc[`Quantity`]
+| n/a
+
+| <<Reason,`Reason`>>
+| 0..*
+| xref::class/Reason.adoc[`Reason`]
+| n/a
+
+| <<RegisteredResource,`RegisteredResource`>>
+| 0..*
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| n/a
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+
+| <<Unit,`Unit`>>
+| 0..*
+| xref::class/Unit.adoc[`Unit`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#AttributeInstanceComponent]
+=== `AttributeInstanceComponent`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.AttributeInstanceComponent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AttributeInstanceComponent.adoc[`AttributeInstanceComponent`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#Auction]
+=== `Auction`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Auction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Auction.adoc[`Auction`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#businessType]
+=== `businessType`
++++The identification of the nature of the time series.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.businessType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#cancelledTS]
+=== `cancelledTS`
++++An indicator stating that the TimeSeries, identified by the mRID, is cancelled as well as all the values sent in a previous version of the TimeSeries in a previous document.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.cancelledTS`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#ConstraintDuration]
+=== `ConstraintDuration`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.ConstraintDuration`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConstraintDuration.adoc[`ConstraintDuration`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#curveType]
+=== `curveType`
++++The coded representation of the type of curve being described.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.curveType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#DateAndOrTime]
+=== `DateAndOrTime`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.DateAndOrTime`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DateAndOrTime.adoc[`DateAndOrTime`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Domain]
+=== `Domain`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Domain`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Domain.adoc[`Domain`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#EnvironmentalMonitoringStation]
+=== `EnvironmentalMonitoringStation`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.EnvironmentalMonitoringStation`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#FlowDirection]
+=== `FlowDirection`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.FlowDirection`
+| Cardinality
+| 0..*
+| Type
+| xref::class/FlowDirection.adoc[`FlowDirection`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#lastUpdateDate]
+=== `lastUpdateDate`
++++The date of the last update related to this market object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Series.lastUpdateDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#MarketDocument]
+=== `MarketDocument`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.MarketDocument`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#MarketEvaluationPoint]
+=== `MarketEvaluationPoint`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.MarketEvaluationPoint`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketEvaluationPoint.adoc[`MarketEvaluationPoint`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#MarketObjectStatus]
+=== `MarketObjectStatus`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.MarketObjectStatus`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketObjectStatus.adoc[`MarketObjectStatus`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#MarketParticipant]
+=== `MarketParticipant`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.MarketParticipant`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#methodType]
+=== `methodType`
++++Type of method used in the business process related to this Series, e.g. metering method.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Series.methodType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#MktPSRType]
+=== `MktPSRType`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.MktPSRType`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MktPSRType.adoc[`MktPSRType`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#objectAggregation]
+=== `objectAggregation`
++++Identification of the object that is the common denominator used to aggregate a time series.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.objectAggregation`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#Period]
+=== `Period`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Period`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Period.adoc[`Period`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#Point]
+=== `Point`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Point`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Point.adoc[`Point`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#Price]
+=== `Price`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Price`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Price.adoc[`Price`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#product]
+=== `product`
++++The type of the product such as Power, energy, reactive power, transport capacity that is the subject of the time series.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.product`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Quantity]
+=== `Quantity`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Quantity`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Quantity.adoc[`Quantity`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#Reason]
+=== `Reason`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Reason`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Reason.adoc[`Reason`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.RegisteredResource`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#registrationDate]
+=== `registrationDate`
++++For a market object, the date of registration of a contract, e.g. the date of change of supplier for a customer.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Series.registrationDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#SelfSeries]
+=== `SelfSeries`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Series.SelfSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Series.adoc[`Series`]
+
+
+|===
+
+//[discrete]
+[#Series]
+=== `Series`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Series.Series`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Series.adoc[`Series`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Unit]
+=== `Unit`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Unit`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Unit.adoc[`Unit`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+//[discrete]
+[#version]
+=== `version`
++++Version of the time series.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.version`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+

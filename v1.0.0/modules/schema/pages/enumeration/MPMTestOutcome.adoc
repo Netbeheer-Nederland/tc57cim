@@ -1,0 +1,49 @@
+= `MPMTestOutcome`
+:toclevels: 4
+
+
++++For example:
+Passed
+Failed
+Disabled
+Skipped+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MPMTestOutcome`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `D`
+| `cim:MPMTestOutcome.D`
+| n/a
+
+| `F`
+| `cim:MPMTestOutcome.F`
+| n/a
+
+| `P`
+| `cim:MPMTestOutcome.P`
+| n/a
+
+| `S`
+| `cim:MPMTestOutcome.S`
+| n/a
+|===

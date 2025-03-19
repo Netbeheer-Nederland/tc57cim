@@ -1,0 +1,45 @@
+= `GeneratorControlSource`
+:toclevels: 4
+
+
++++The source of controls for a generating unit.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:GeneratorControlSource`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `offAGC`
+| `cim:GeneratorControlSource.offAGC`
+| n/a
+
+| `onAGC`
+| `cim:GeneratorControlSource.onAGC`
+| n/a
+
+| `plantControl`
+| `cim:GeneratorControlSource.plantControl`
+| n/a
+
+| `unavailable`
+| `cim:GeneratorControlSource.unavailable`
+| n/a
+|===

@@ -1,0 +1,45 @@
+= `ExcST7BOELselectorKind`
+:toclevels: 4
+
+
++++Types of connections for the OEL input used for static excitation systems type 7B.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ExcST7BOELselectorKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `addVref`
+| `cim:ExcST7BOELselectorKind.addVref`
+| n/a
+
+| `inputLVgate`
+| `cim:ExcST7BOELselectorKind.inputLVgate`
+| n/a
+
+| `noOELinput`
+| `cim:ExcST7BOELselectorKind.noOELinput`
+| n/a
+
+| `outputLVgate`
+| `cim:ExcST7BOELselectorKind.outputLVgate`
+| n/a
+|===

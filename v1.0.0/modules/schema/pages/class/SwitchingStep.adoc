@@ -1,0 +1,275 @@
+= `SwitchingStep`
+:toclevels: 4
+
+
++++Atomic switching step; can be part of a switching step group, or part of a switching plan.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SwitchingStep`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`SwitchingStep`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+SwitchingStep {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+SwitchingStepGroup {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+RevisionHistory {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+SwitchingAction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+SwitchingStep -> SwitchingStepGroup: SwitchingStepGroup
+
+
+SwitchingStep -> RevisionHistory: RevisionHistory
+
+
+SwitchingStep -> SwitchingAction: SwitchingAction
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<RevisionHistory,`RevisionHistory`>>
+| 1
+| xref::class/RevisionHistory.adoc[`RevisionHistory`]
+| n/a
+
+| <<SwitchingAction,`SwitchingAction`>>
+| 1
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+| +++The switching action that is associated to the switching step.+++
+
+| <<isFreeSequence,`isFreeSequence`>>
+| 1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++For a step, if isFreeSequence is set to false or is not specified, all of the steps in the group must be executed in the order defined by the sequenceNumber attribute. The sequenceNumber for a step has a different meaning when there are two or more sequential steps that have the isFreeSequence attribute set to true. Execution must still be performed in sequenceNumber order until a set of two or more steps that have isFreeSequence set to true is encountered. In this case, these steps can be executed in any sequence, until a step is encountered that has isFreeSequence set to false. All of the steps preceding this step must be executed before the step can be executed.+++
+
+| <<sequenceNumber,`sequenceNumber`>>
+| 1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Order of this activity in the sequence of activities within the switching plan.+++
+
+| <<subStepSequenceNumber,`subStepSequenceNumber`>>
+| 1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Supports compound switching steps that are made up of several sub steps.+++
+
+| <<SwitchingStepGroup,`SwitchingStepGroup`>>
+| 0..1
+| xref::class/SwitchingStepGroup.adoc[`SwitchingStepGroup`]
+| +++The switching step group that contains the switching steps.+++
+|===
+
+'''
+
+
+//[discrete]
+[#isFreeSequence]
+=== `isFreeSequence`
++++For a step, if isFreeSequence is set to false or is not specified, all of the steps in the group must be executed in the order defined by the sequenceNumber attribute. The sequenceNumber for a step has a different meaning when there are two or more sequential steps that have the isFreeSequence attribute set to true. Execution must still be performed in sequenceNumber order until a set of two or more steps that have isFreeSequence set to true is encountered. In this case, these steps can be executed in any sequence, until a step is encountered that has isFreeSequence set to false. All of the steps preceding this step must be executed before the step can be executed.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingStep.isFreeSequence`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#RevisionHistory]
+=== `RevisionHistory`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingStep.RevisionHistory`
+| Cardinality
+| 1
+| Type
+| xref::class/RevisionHistory.adoc[`RevisionHistory`]
+
+
+|===
+
+//[discrete]
+[#sequenceNumber]
+=== `sequenceNumber`
++++Order of this activity in the sequence of activities within the switching plan.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingStep.sequenceNumber`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#subStepSequenceNumber]
+=== `subStepSequenceNumber`
++++Supports compound switching steps that are made up of several sub steps.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingStep.subStepSequenceNumber`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#SwitchingAction]
+=== `SwitchingAction`
++++The switching action that is associated to the switching step.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingStep.SwitchingAction`
+| Cardinality
+| 1
+| Type
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+
+|===
+
+//[discrete]
+[#SwitchingStepGroup]
+=== `SwitchingStepGroup`
++++The switching step group that contains the switching steps.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingStep.SwitchingStepGroup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SwitchingStepGroup.adoc[`SwitchingStepGroup`]
+
+
+|===
+
+

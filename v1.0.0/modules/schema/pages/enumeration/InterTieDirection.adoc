@@ -1,0 +1,37 @@
+= `InterTieDirection`
+:toclevels: 4
+
+
++++Direction of an intertie.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:InterTieDirection`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `E`
+| `cim:InterTieDirection.E`
+| n/a
+
+| `I`
+| `cim:InterTieDirection.I`
+| n/a
+|===

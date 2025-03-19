@@ -1,0 +1,49 @@
+= `RandomisationKind`
+:toclevels: 4
+
+
++++Kind of randomisation to be applied to control the timing of end device control commands and/or the definition of demand response and load control events. Value other than 'none' is typically used to mitigate potential deleterious effects of simultaneous operation of multiple devices.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:RandomisationKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `default`
+| `cim:RandomisationKind.default`
+| n/a
+
+| `end`
+| `cim:RandomisationKind.end`
+| n/a
+
+| `none`
+| `cim:RandomisationKind.none`
+| n/a
+
+| `start`
+| `cim:RandomisationKind.start`
+| n/a
+
+| `startAndEnd`
+| `cim:RandomisationKind.startAndEnd`
+| n/a
+|===

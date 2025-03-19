@@ -1,0 +1,725 @@
+= `RemoteInputSignal`
+:toclevels: 4
+
+
++++Supports connection to a terminal associated with a remote bus from which an input signal of a specific type is coming.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RemoteInputSignal`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`RemoteInputSignal`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+RemoteInputSignal {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Terminal {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+VoltageCompensatorDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindPlantDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+UnderexcitationLimiterDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiscontinuousExcitationControlDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindTurbineType1or2Dynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+WindTurbineType3or4Dynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PowerSystemStabilizerDynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PFVArControllerType1Dynamics {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+RemoteInputSignal -> Terminal: Terminal
+
+
+RemoteInputSignal -> VoltageCompensatorDynamics: VoltageCompensatorDynamics
+
+
+RemoteInputSignal -> WindPlantDynamics: WindPlantDynamics
+
+
+RemoteInputSignal -> UnderexcitationLimiterDynamics: UnderexcitationLimiterDynamics
+
+
+RemoteInputSignal -> DiscontinuousExcitationControlDynamics: DiscontinuousExcitationControlDynamics
+
+
+RemoteInputSignal -> WindTurbineType1or2Dynamics: WindTurbineType1or2Dynamics
+
+
+RemoteInputSignal -> WindTurbineType3or4Dynamics: WindTurbineType3or4Dynamics
+
+
+RemoteInputSignal -> PowerSystemStabilizerDynamics: PowerSystemStabilizerDynamics
+
+
+RemoteInputSignal -> PFVArControllerType1Dynamics: PFVArControllerType1Dynamics
+
+
+RemoteInputSignal -> DiagramObject: DiagramObjects
+
+
+RemoteInputSignal -> InstanceSet: InstanceSet
+
+
+RemoteInputSignal -> Name: Names
+
+
+RemoteInputSignal -> ChangeSetMember: PropertiesCIMDataObject
+
+
+RemoteInputSignal -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<Terminal,`Terminal`>>
+| 1
+| xref::class/Terminal.adoc[`Terminal`]
+| +++Remote terminal with which this input signal is associated.+++
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<DiscontinuousExcitationControlDynamics,`DiscontinuousExcitationControlDynamics`>>
+| 0..1
+| xref::class/DiscontinuousExcitationControlDynamics.adoc[`DiscontinuousExcitationControlDynamics`]
+| +++Discontinuous excitation control model using this remote input signal.+++
+
+| <<PFVArControllerType1Dynamics,`PFVArControllerType1Dynamics`>>
+| 0..1
+| xref::class/PFVArControllerType1Dynamics.adoc[`PFVArControllerType1Dynamics`]
+| +++Power factor or VAr controller type 1 model using this remote input signal.+++
+
+| <<PowerSystemStabilizerDynamics,`PowerSystemStabilizerDynamics`>>
+| 0..1
+| xref::class/PowerSystemStabilizerDynamics.adoc[`PowerSystemStabilizerDynamics`]
+| +++Power system stabilizer model using this remote input signal.+++
+
+| <<UnderexcitationLimiterDynamics,`UnderexcitationLimiterDynamics`>>
+| 0..1
+| xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+| +++Underexcitation limiter model using this remote input signal.+++
+
+| <<VoltageCompensatorDynamics,`VoltageCompensatorDynamics`>>
+| 0..1
+| xref::class/VoltageCompensatorDynamics.adoc[`VoltageCompensatorDynamics`]
+| +++Voltage compensator model using this remote input signal.+++
+
+| <<WindPlantDynamics,`WindPlantDynamics`>>
+| 0..1
+| xref::class/WindPlantDynamics.adoc[`WindPlantDynamics`]
+| +++The wind plant using the remote signal.+++
+
+| <<WindTurbineType1or2Dynamics,`WindTurbineType1or2Dynamics`>>
+| 0..1
+| xref::class/WindTurbineType1or2Dynamics.adoc[`WindTurbineType1or2Dynamics`]
+| +++Wind generator type 1 or type 2 model using this remote input signal.+++
+
+| <<WindTurbineType3or4Dynamics,`WindTurbineType3or4Dynamics`>>
+| 0..1
+| xref::class/WindTurbineType3or4Dynamics.adoc[`WindTurbineType3or4Dynamics`]
+| +++Wind turbine type 3 or type 4 models using this remote input signal.+++
+
+| <<remoteSignalType,`remoteSignalType`>>
+| 0..1
+| xref::enumeration/RemoteSignalKind.adoc[`RemoteSignalKind`]
+| +++Type of input signal.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiscontinuousExcitationControlDynamics]
+=== `DiscontinuousExcitationControlDynamics`
++++Discontinuous excitation control model using this remote input signal.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteInputSignal.DiscontinuousExcitationControlDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DiscontinuousExcitationControlDynamics.adoc[`DiscontinuousExcitationControlDynamics`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#PFVArControllerType1Dynamics]
+=== `PFVArControllerType1Dynamics`
++++Power factor or VAr controller type 1 model using this remote input signal.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteInputSignal.PFVArControllerType1Dynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PFVArControllerType1Dynamics.adoc[`PFVArControllerType1Dynamics`]
+
+
+|===
+
+//[discrete]
+[#PowerSystemStabilizerDynamics]
+=== `PowerSystemStabilizerDynamics`
++++Power system stabilizer model using this remote input signal.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteInputSignal.PowerSystemStabilizerDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PowerSystemStabilizerDynamics.adoc[`PowerSystemStabilizerDynamics`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#remoteSignalType]
+=== `remoteSignalType`
++++Type of input signal.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteInputSignal.remoteSignalType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/RemoteSignalKind.adoc[`RemoteSignalKind`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Terminal]
+=== `Terminal`
++++Remote terminal with which this input signal is associated.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteInputSignal.Terminal`
+| Cardinality
+| 1
+| Type
+| xref::class/Terminal.adoc[`Terminal`]
+
+
+|===
+
+//[discrete]
+[#UnderexcitationLimiterDynamics]
+=== `UnderexcitationLimiterDynamics`
++++Underexcitation limiter model using this remote input signal.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteInputSignal.UnderexcitationLimiterDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+
+
+|===
+
+//[discrete]
+[#VoltageCompensatorDynamics]
+=== `VoltageCompensatorDynamics`
++++Voltage compensator model using this remote input signal.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteInputSignal.VoltageCompensatorDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/VoltageCompensatorDynamics.adoc[`VoltageCompensatorDynamics`]
+
+
+|===
+
+//[discrete]
+[#WindPlantDynamics]
+=== `WindPlantDynamics`
++++The wind plant using the remote signal.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteInputSignal.WindPlantDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindPlantDynamics.adoc[`WindPlantDynamics`]
+
+
+|===
+
+//[discrete]
+[#WindTurbineType1or2Dynamics]
+=== `WindTurbineType1or2Dynamics`
++++Wind generator type 1 or type 2 model using this remote input signal.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteInputSignal.WindTurbineType1or2Dynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindTurbineType1or2Dynamics.adoc[`WindTurbineType1or2Dynamics`]
+
+
+|===
+
+//[discrete]
+[#WindTurbineType3or4Dynamics]
+=== `WindTurbineType3or4Dynamics`
++++Wind turbine type 3 or type 4 models using this remote input signal.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RemoteInputSignal.WindTurbineType3or4Dynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindTurbineType3or4Dynamics.adoc[`WindTurbineType3or4Dynamics`]
+
+
+|===
+
+

@@ -1,0 +1,67 @@
+= `SelfSchedTypeRawBid`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SelfSchedTypeRawBid`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `BAS`
+| `cim:SelfSchedTypeRawBid.BAS`
+| n/a
+
+| `ETC`
+| `cim:SelfSchedTypeRawBid.ETC`
+| n/a
+
+| `LOF`
+| `cim:SelfSchedTypeRawBid.LOF`
+| n/a
+
+| `LPT`
+| `cim:SelfSchedTypeRawBid.LPT`
+| n/a
+
+| `PT`
+| `cim:SelfSchedTypeRawBid.PT`
+| n/a
+
+| `RA`
+| `cim:SelfSchedTypeRawBid.RA`
+| n/a
+
+| `RMT`
+| `cim:SelfSchedTypeRawBid.RMT`
+| n/a
+
+| `SP`
+| `cim:SelfSchedTypeRawBid.SP`
+| n/a
+
+| `TOR`
+| `cim:SelfSchedTypeRawBid.TOR`
+| n/a
+
+| `WHL`
+| `cim:SelfSchedTypeRawBid.WHL`
+| n/a
+|===

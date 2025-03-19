@@ -1,0 +1,219 @@
+= `ObjectCreation`
+:toclevels: 4
+
+
++++An object is to be created in the context.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ObjectCreation`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+** *`ObjectCreation`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ObjectCreation {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+IdentifiedObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+IdentifiedObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+ObjectCreation -> ChangeSet: Changeset
+
+
+ObjectCreation -> IdentifiedObject: PropertiesObject
+
+
+ObjectCreation -> IdentifiedObject: TargetObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<TargetObject,`TargetObject`>>
+| 1
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+| +++The registered CIM object.+++
+
+| <<Changeset,`Changeset`>>
+| 0..1
+| xref::class/ChangeSet.adoc[`ChangeSet`]
+| +++Dataset containing the data objects.+++
+
+| <<PropertiesObject,`PropertiesObject`>>
+| 0..1
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+| +++The CIM object holding the properties of this dataset context.   Sometimes properties are not required and only the reference to the registered object is required.+++
+|===
+
+'''
+
+
+//[discrete]
+[#Changeset]
+=== `Changeset`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChangeSetMember.Changeset`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSet.adoc[`ChangeSet`]
+
+| Inherited from
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+
+|===
+
+//[discrete]
+[#PropertiesObject]
+=== `PropertiesObject`
++++The CIM object holding the properties of this dataset context.   Sometimes properties are not required and only the reference to the registered object is required.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChangeSetMember.PropertiesObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| Inherited from
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+
+|===
+
+//[discrete]
+[#TargetObject]
+=== `TargetObject`
++++The registered CIM object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChangeSetMember.TargetObject`
+| Cardinality
+| 1
+| Type
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| Inherited from
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+
+|===
+
+

@@ -1,0 +1,433 @@
+= `PanPricingDetail`
+:toclevels: 4
+
+
++++Detail for a single price command/action.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PanPricingDetail`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`PanPricingDetail`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+PanPricingDetail {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+PanPricing {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+PanPricingDetail -> PanPricing: PanPricing
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<PanPricing,`PanPricing`>>
+| 0..1
+| xref::class/PanPricing.adoc[`PanPricing`]
+| +++PAN pricing command/action issuing this price detail.+++
+
+| <<alternateCostDelivered,`alternateCostDelivered`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Alternative measure of the cost of the energy consumed. An example might be the emissions of CO2 for each kWh of electricity consumed providing a measure of the environmental cost.+++
+
+| <<alternateCostUnit,`alternateCostUnit`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Cost unit for the alternate cost delivered field. One example is kg of CO2 per unit of measure.+++
+
+| <<currentTimeDate,`currentTimeDate`>>
+| 0..1
+| https://w3id.org/linkml/Date[`date`]
+| +++Current time as determined by a PAN device.+++
+
+| <<generationPrice,`generationPrice`>>
+| 0..1
+| xref::class/Money.adoc[`Money`]
+| +++Price of the commodity measured in base unit of currency per 'unitOfMeasure'.+++
+
+| <<generationPriceRatio,`generationPriceRatio`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Ratio of 'generationPrice' to the "normal" price chosen by the commodity provider.+++
+
+| <<price,`price`>>
+| 0..1
+| xref::class/Money.adoc[`Money`]
+| +++Price of the commodity measured in base unit of currency per 'unitOfMeasure'.+++
+
+| <<priceRatio,`priceRatio`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Ratio of 'price' to the "normal" price chosen by the commodity provider.+++
+
+| <<priceTier,`priceTier`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Pricing tier as chosen by the commodity provider.+++
+
+| <<priceTierCount,`priceTierCount`>>
+| 0..1
+| https://w3id.org/linkml/Integer[`integer`]
+| +++Maximum number of price tiers available.+++
+
+| <<priceTierLabel,`priceTierLabel`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Label for price tier.+++
+
+| <<rateLabel,`rateLabel`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Label of the current billing rate specified by commodity provider.+++
+
+| <<registerTier,`registerTier`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Register tier accumulating usage information.+++
+
+| <<unitOfMeasure,`unitOfMeasure`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Defines commodity as well as its base unit of measure.+++
+|===
+
+'''
+
+
+//[discrete]
+[#alternateCostDelivered]
+=== `alternateCostDelivered`
++++Alternative measure of the cost of the energy consumed. An example might be the emissions of CO2 for each kWh of electricity consumed providing a measure of the environmental cost.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.alternateCostDelivered`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#alternateCostUnit]
+=== `alternateCostUnit`
++++Cost unit for the alternate cost delivered field. One example is kg of CO2 per unit of measure.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.alternateCostUnit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#currentTimeDate]
+=== `currentTimeDate`
++++Current time as determined by a PAN device.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.currentTimeDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+//[discrete]
+[#generationPrice]
+=== `generationPrice`
++++Price of the commodity measured in base unit of currency per 'unitOfMeasure'.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.generationPrice`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+//[discrete]
+[#generationPriceRatio]
+=== `generationPriceRatio`
++++Ratio of 'generationPrice' to the "normal" price chosen by the commodity provider.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.generationPriceRatio`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#PanPricing]
+=== `PanPricing`
++++PAN pricing command/action issuing this price detail.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.PanPricing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PanPricing.adoc[`PanPricing`]
+
+
+|===
+
+//[discrete]
+[#price]
+=== `price`
++++Price of the commodity measured in base unit of currency per 'unitOfMeasure'.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.price`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+//[discrete]
+[#priceRatio]
+=== `priceRatio`
++++Ratio of 'price' to the "normal" price chosen by the commodity provider.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.priceRatio`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#priceTier]
+=== `priceTier`
++++Pricing tier as chosen by the commodity provider.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.priceTier`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#priceTierCount]
+=== `priceTierCount`
++++Maximum number of price tiers available.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.priceTierCount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+//[discrete]
+[#priceTierLabel]
+=== `priceTierLabel`
++++Label for price tier.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.priceTierLabel`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#rateLabel]
+=== `rateLabel`
++++Label of the current billing rate specified by commodity provider.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.rateLabel`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#registerTier]
+=== `registerTier`
++++Register tier accumulating usage information.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.registerTier`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#unitOfMeasure]
+=== `unitOfMeasure`
++++Defines commodity as well as its base unit of measure.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.unitOfMeasure`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+

@@ -1,0 +1,1278 @@
+= `CombustionTurbine`
+:toclevels: 4
+
+
++++A prime mover that is typically fuelled by gas or light oil.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CombustionTurbine`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+*** xref::class/PrimeMover.adoc[`PrimeMover`]
+**** *`CombustionTurbine`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+CombustionTurbine {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AirCompressor {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+HeatRecoveryBoiler {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+CTTempActivePowerCurve {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+SynchronousMachine {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Control {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Measurement {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PSRType {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ConfigurationEvent {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ReportingGroup {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+OperatingShare {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+AssetInfo {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+VerificationAction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+ClearanceDocument {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+GenericAction {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+PSREvent {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Asset {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+Location {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+OperationalTag {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+DiagramObject {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+InstanceSet {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Name {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ChangeSetMember {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+CombustionTurbine -> AirCompressor: AirCompressor
+
+
+CombustionTurbine -> HeatRecoveryBoiler: HeatRecoveryBoiler
+
+
+CombustionTurbine -> CTTempActivePowerCurve: CTTempActivePowerCurve
+
+
+CombustionTurbine -> SynchronousMachine: SynchronousMachines
+
+
+CombustionTurbine -> Control: Controls
+
+
+CombustionTurbine -> Measurement: Measurements
+
+
+CombustionTurbine -> PSRType: PSRType
+
+
+CombustionTurbine -> ConfigurationEvent: ConfigurationEvent
+
+
+CombustionTurbine -> ReportingGroup: ReportingGroup
+
+
+CombustionTurbine -> OperatingShare: OperatingShare
+
+
+CombustionTurbine -> AssetInfo: AssetDatasheet
+
+
+CombustionTurbine -> VerificationAction: VerificationAction
+
+
+CombustionTurbine -> ClearanceDocument: Clearances
+
+
+CombustionTurbine -> GenericAction: GenericAction
+
+
+CombustionTurbine -> PSREvent: PSREvents
+
+
+CombustionTurbine -> Asset: Assets
+
+
+CombustionTurbine -> Location: Location
+
+
+CombustionTurbine -> OperationalTag: OperationalTags
+
+
+CombustionTurbine -> DiagramObject: DiagramObjects
+
+
+CombustionTurbine -> InstanceSet: InstanceSet
+
+
+CombustionTurbine -> Name: Names
+
+
+CombustionTurbine -> ChangeSetMember: PropertiesCIMDataObject
+
+
+CombustionTurbine -> ChangeSetMember: TargetingCIMDataObject
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<InstanceSet,`InstanceSet`>>
+| 1
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+
+| <<AirCompressor,`AirCompressor`>>
+| 0..1
+| xref::class/AirCompressor.adoc[`AirCompressor`]
+| +++A CAES air compressor is driven by combustion turbine.+++
+
+| <<CTTempActivePowerCurve,`CTTempActivePowerCurve`>>
+| 0..1
+| xref::class/CTTempActivePowerCurve.adoc[`CTTempActivePowerCurve`]
+| +++A combustion turbine may have an active power versus ambient temperature relationship.+++
+
+| <<HeatRecoveryBoiler,`HeatRecoveryBoiler`>>
+| 0..1
+| xref::class/HeatRecoveryBoiler.adoc[`HeatRecoveryBoiler`]
+| +++A combustion turbine may have a heat recovery boiler for making steam.+++
+
+| <<ambientTemp,`ambientTemp`>>
+| 0..1
+| xref::class/Temperature.adoc[`Temperature`]
+| +++Default ambient temperature to be used in modelling applications.+++
+
+| <<auxPowerVersusFrequency,`auxPowerVersusFrequency`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Off-nominal frequency effect on turbine auxiliaries. Per unit reduction in auxiliary active power consumption versus per unit reduction in frequency (from rated frequency).+++
+
+| <<auxPowerVersusVoltage,`auxPowerVersusVoltage`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Off-nominal voltage effect on turbine auxiliaries. Per unit reduction in auxiliary active power consumption versus per unit reduction in auxiliary bus voltage (from a specified voltage level).+++
+
+| <<capabilityVersusFrequency,`capabilityVersusFrequency`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Off-nominal frequency effect on turbine capability. Per unit reduction in unit active power capability versus per unit reduction in frequency (from rated frequency).+++
+
+| <<heatRecoveryFlag,`heatRecoveryFlag`>>
+| 0..1
+| https://w3id.org/linkml/Boolean[`boolean`]
+| +++Flag that is set to true if the combustion turbine is associated with a heat recovery boiler.+++
+
+| <<powerVariationByTemp,`powerVariationByTemp`>>
+| 0..1
+| xref::class/PU.adoc[`PU`]
+| +++Per unit change in power per (versus) unit change in ambient temperature.+++
+
+| <<referenceTemp,`referenceTemp`>>
+| 0..1
+| xref::class/Temperature.adoc[`Temperature`]
+| +++Reference temperature at which the output of the turbine was defined.+++
+
+| <<timeConstant,`timeConstant`>>
+| 0..1
+| xref::class/Seconds.adoc[`Seconds`]
+| +++The time constant for the turbine.+++
+
+| <<AssetDatasheet,`AssetDatasheet`>>
+| 0..1
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+| +++Datasheet information for this power system resource.+++
+
+| <<Location,`Location`>>
+| 0..1
+| xref::class/Location.adoc[`Location`]
+| +++Location of this power system resource.+++
+
+| <<PSRType,`PSRType`>>
+| 0..1
+| xref::class/PSRType.adoc[`PSRType`]
+| +++Custom classification for this power system resource.+++
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+
+| <<aliasName,`aliasName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+| <<description,`description`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+| <<mRID,`mRID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+| <<name,`name`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+
+| <<primeMoverRating,`primeMoverRating`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++Rating of prime mover.+++
+
+| <<Assets,`Assets`>>
+| 0..*
+| xref::class/Asset.adoc[`Asset`]
+| +++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a single AC line segment.+++
+
+| <<Clearances,`Clearances`>>
+| 0..*
+| xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+| +++All clearances applicable to this power system resource.+++
+
+| <<ConfigurationEvent,`ConfigurationEvent`>>
+| 0..*
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this Power System resource.+++
+
+| <<Controls,`Controls`>>
+| 0..*
+| xref::class/Control.adoc[`Control`]
+| +++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or capacitor bank breaker actuator.+++
+
+| <<DiagramObjects,`DiagramObjects`>>
+| 0..*
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+
+| <<GenericAction,`GenericAction`>>
+| 0..*
+| xref::class/GenericAction.adoc[`GenericAction`]
+| +++The generic action that is performed on the power system resource+++
+
+| <<Measurements,`Measurements`>>
+| 0..*
+| xref::class/Measurement.adoc[`Measurement`]
+| +++The measurements associated with this power system resource.+++
+
+| <<Names,`Names`>>
+| 0..*
+| xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+
+| <<OperatingShare,`OperatingShare`>>
+| 0..*
+| xref::class/OperatingShare.adoc[`OperatingShare`]
+| +++The operating shares of this power system resource.+++
+
+| <<OperationalTags,`OperationalTags`>>
+| 0..*
+| xref::class/OperationalTag.adoc[`OperationalTag`]
+| +++All operational tags placed on this power system resource.+++
+
+| <<PSREvents,`PSREvents`>>
+| 0..*
+| xref::class/PSREvent.adoc[`PSREvent`]
+| +++All events associated with this power system resource.+++
+
+| <<ReportingGroup,`ReportingGroup`>>
+| 0..*
+| xref::class/ReportingGroup.adoc[`ReportingGroup`]
+| +++Reporting groups to which this power system resource belongs.+++
+
+| <<SynchronousMachines,`SynchronousMachines`>>
+| 0..*
+| xref::class/SynchronousMachine.adoc[`SynchronousMachine`]
+| +++Synchronous machines this Prime mover drives.+++
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..*
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+
+| <<VerificationAction,`VerificationAction`>>
+| 0..*
+| xref::class/VerificationAction.adoc[`VerificationAction`]
+| +++The verification action that is performed on the power system resource+++
+|===
+
+'''
+
+
+//[discrete]
+[#AirCompressor]
+=== `AirCompressor`
++++A CAES air compressor is driven by combustion turbine.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombustionTurbine.AirCompressor`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AirCompressor.adoc[`AirCompressor`]
+
+
+|===
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#ambientTemp]
+=== `ambientTemp`
++++Default ambient temperature to be used in modelling applications.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombustionTurbine.ambientTemp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Temperature.adoc[`Temperature`]
+
+
+|===
+
+//[discrete]
+[#AssetDatasheet]
+=== `AssetDatasheet`
++++Datasheet information for this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.AssetDatasheet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a single AC line segment.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#auxPowerVersusFrequency]
+=== `auxPowerVersusFrequency`
++++Off-nominal frequency effect on turbine auxiliaries. Per unit reduction in auxiliary active power consumption versus per unit reduction in frequency (from rated frequency).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombustionTurbine.auxPowerVersusFrequency`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#auxPowerVersusVoltage]
+=== `auxPowerVersusVoltage`
++++Off-nominal voltage effect on turbine auxiliaries. Per unit reduction in auxiliary active power consumption versus per unit reduction in auxiliary bus voltage (from a specified voltage level).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombustionTurbine.auxPowerVersusVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#capabilityVersusFrequency]
+=== `capabilityVersusFrequency`
++++Off-nominal frequency effect on turbine capability. Per unit reduction in unit active power capability versus per unit reduction in frequency (from rated frequency).+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombustionTurbine.capabilityVersusFrequency`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#Clearances]
+=== `Clearances`
++++All clearances applicable to this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Clearances`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#ConfigurationEvent]
+=== `ConfigurationEvent`
++++All configuration events created for this Power System resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ConfigurationEvent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#Controls]
+=== `Controls`
++++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or capacitor bank breaker actuator.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Controls`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Control.adoc[`Control`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#CTTempActivePowerCurve]
+=== `CTTempActivePowerCurve`
++++A combustion turbine may have an active power versus ambient temperature relationship.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombustionTurbine.CTTempActivePowerCurve`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CTTempActivePowerCurve.adoc[`CTTempActivePowerCurve`]
+
+
+|===
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#GenericAction]
+=== `GenericAction`
++++The generic action that is performed on the power system resource+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.GenericAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/GenericAction.adoc[`GenericAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#HeatRecoveryBoiler]
+=== `HeatRecoveryBoiler`
++++A combustion turbine may have a heat recovery boiler for making steam.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombustionTurbine.HeatRecoveryBoiler`
+| Cardinality
+| 0..1
+| Type
+| xref::class/HeatRecoveryBoiler.adoc[`HeatRecoveryBoiler`]
+
+
+|===
+
+//[discrete]
+[#heatRecoveryFlag]
+=== `heatRecoveryFlag`
++++Flag that is set to true if the combustion turbine is associated with a heat recovery boiler.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombustionTurbine.heatRecoveryFlag`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location of this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#Measurements]
+=== `Measurements`
++++The measurements associated with this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Measurements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Measurement.adoc[`Measurement`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#OperatingShare]
+=== `OperatingShare`
++++The operating shares of this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperatingShare`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperatingShare.adoc[`OperatingShare`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#OperationalTags]
+=== `OperationalTags`
++++All operational tags placed on this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperationalTags`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperationalTag.adoc[`OperationalTag`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#powerVariationByTemp]
+=== `powerVariationByTemp`
++++Per unit change in power per (versus) unit change in ambient temperature.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombustionTurbine.powerVariationByTemp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+//[discrete]
+[#primeMoverRating]
+=== `primeMoverRating`
++++Rating of prime mover.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PrimeMover.primeMoverRating`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/PrimeMover.adoc[`PrimeMover`]
+
+
+|===
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#PSREvents]
+=== `PSREvents`
++++All events associated with this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSREvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PSREvent.adoc[`PSREvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#PSRType]
+=== `PSRType`
++++Custom classification for this power system resource.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSRType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PSRType.adoc[`PSRType`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#referenceTemp]
+=== `referenceTemp`
++++Reference temperature at which the output of the turbine was defined.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombustionTurbine.referenceTemp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Temperature.adoc[`Temperature`]
+
+
+|===
+
+//[discrete]
+[#ReportingGroup]
+=== `ReportingGroup`
++++Reporting groups to which this power system resource belongs.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ReportingGroup`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ReportingGroup.adoc[`ReportingGroup`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+//[discrete]
+[#SynchronousMachines]
+=== `SynchronousMachines`
++++Synchronous machines this Prime mover drives.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PrimeMover.SynchronousMachines`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SynchronousMachine.adoc[`SynchronousMachine`]
+
+| Inherited from
+| xref::class/PrimeMover.adoc[`PrimeMover`]
+
+
+|===
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#timeConstant]
+=== `timeConstant`
++++The time constant for the turbine.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombustionTurbine.timeConstant`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+//[discrete]
+[#VerificationAction]
+=== `VerificationAction`
++++The verification action that is performed on the power system resource+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.VerificationAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/VerificationAction.adoc[`VerificationAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+

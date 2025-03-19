@@ -1,0 +1,57 @@
+= `InterruptingMediumKind`
+:toclevels: 4
+
+
++++Kinds of interrupting mediums.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:InterruptingMediumKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `airBlast`
+| `cim:InterruptingMediumKind.airBlast`
+| n/a
+
+| `airMagnetic`
+| `cim:InterruptingMediumKind.airMagnetic`
+| n/a
+
+| `bulkOil`
+| `cim:InterruptingMediumKind.bulkOil`
+| n/a
+
+| `gasSinglePressure`
+| `cim:InterruptingMediumKind.gasSinglePressure`
+| n/a
+
+| `gasTwoPressure`
+| `cim:InterruptingMediumKind.gasTwoPressure`
+| n/a
+
+| `minimumOil`
+| `cim:InterruptingMediumKind.minimumOil`
+| n/a
+
+| `vacuum`
+| `cim:InterruptingMediumKind.vacuum`
+| n/a
+|===

@@ -1,0 +1,265 @@
+= `CommodityPrice`
+:toclevels: 4
+
+
++++The CommodityPrice class is used to define the price of a commodity during a given time interval.  The interval may be long, e.g. a year, or very short, e.g. 5 minutes.  There will be many instances of the CommodityPrice class for each instance of the CommodityDefinition to which it is associated.  Note that there may be more than once price associated with a given interval and these variances are described by the association (or associations) with the PriceDescriptor class.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CommodityPrice`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`CommodityPrice`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+CommodityPrice {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+DateTimeInterval {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+PriceDescriptor {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+CommodityDefinition {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+PnodeClearing {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+CommodityPrice -> DateTimeInterval: timeIntervalPeriod
+
+
+CommodityPrice -> PriceDescriptor: PriceDescriptor
+
+
+CommodityPrice -> CommodityDefinition: CommodityDefinition
+
+
+CommodityPrice -> PnodeClearing: PnodeClearing
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<CommodityDefinition,`CommodityDefinition`>>
+| 1
+| xref::class/CommodityDefinition.adoc[`CommodityDefinition`]
+| n/a
+
+| <<PriceDescriptor,`PriceDescriptor`>>
+| 1
+| xref::class/PriceDescriptor.adoc[`PriceDescriptor`]
+| n/a
+
+| <<PnodeClearing,`PnodeClearing`>>
+| 0..1
+| xref::class/PnodeClearing.adoc[`PnodeClearing`]
+| n/a
+
+| <<timeIntervalPeriod,`timeIntervalPeriod`>>
+| 0..1
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++The time interval over which the CommodityPrice is valid, using the standard conventions associated with the DateTimeInterval class.+++
+
+| <<value,`value`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| +++The price of the Commodity, expressed as a floating point value with the currency and unit of measure defined in the associated CommodityDefinition class.+++
+|===
+
+'''
+
+
+//[discrete]
+[#CommodityDefinition]
+=== `CommodityDefinition`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CommodityPrice.CommodityDefinition`
+| Cardinality
+| 1
+| Type
+| xref::class/CommodityDefinition.adoc[`CommodityDefinition`]
+
+
+|===
+
+//[discrete]
+[#PnodeClearing]
+=== `PnodeClearing`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CommodityPrice.PnodeClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PnodeClearing.adoc[`PnodeClearing`]
+
+
+|===
+
+//[discrete]
+[#PriceDescriptor]
+=== `PriceDescriptor`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CommodityPrice.PriceDescriptor`
+| Cardinality
+| 1
+| Type
+| xref::class/PriceDescriptor.adoc[`PriceDescriptor`]
+
+
+|===
+
+//[discrete]
+[#timeIntervalPeriod]
+=== `timeIntervalPeriod`
++++The time interval over which the CommodityPrice is valid, using the standard conventions associated with the DateTimeInterval class.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CommodityPrice.timeIntervalPeriod`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+//[discrete]
+[#value]
+=== `value`
++++The price of the Commodity, expressed as a floating point value with the currency and unit of measure defined in the associated CommodityDefinition class.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CommodityPrice.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+

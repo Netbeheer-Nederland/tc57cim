@@ -1,0 +1,151 @@
+= `BankAccountDetail`
+:toclevels: 4
+
+
++++Details of a bank account.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:BankAccountDetail`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`BankAccountDetail`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<accountNumber,`accountNumber`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Operational account reference number.+++
+
+| <<bankName,`bankName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Name of bank where account is held.+++
+
+| <<branchCode,`branchCode`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Branch of bank where account is held.+++
+
+| <<holderID,`holderID`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++National identity number (or equivalent) of account holder.+++
+
+| <<holderName,`holderName`>>
+| 0..1
+| https://w3id.org/linkml/String[`string`]
+| +++Name of account holder.+++
+|===
+
+'''
+
+
+//[discrete]
+[#accountNumber]
+=== `accountNumber`
++++Operational account reference number.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BankAccountDetail.accountNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#bankName]
+=== `bankName`
++++Name of bank where account is held.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BankAccountDetail.bankName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#branchCode]
+=== `branchCode`
++++Branch of bank where account is held.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BankAccountDetail.branchCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#holderID]
+=== `holderID`
++++National identity number (or equivalent) of account holder.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BankAccountDetail.holderID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+//[discrete]
+[#holderName]
+=== `holderName`
++++Name of account holder.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BankAccountDetail.holderName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+

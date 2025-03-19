@@ -1,0 +1,63 @@
+= `OASISMeasType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OASISMeasType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `%`
+| `cim:OASISMeasType.%25`
+| n/a
+
+| `FACTOR`
+| `cim:OASISMeasType.FACTOR`
+| n/a
+
+| `FLAG`
+| `cim:OASISMeasType.FLAG`
+| n/a
+
+| `INTEGER`
+| `cim:OASISMeasType.INTEGER`
+| n/a
+
+| `MW`
+| `cim:OASISMeasType.MW`
+| n/a
+
+| `MWh`
+| `cim:OASISMeasType.MWh`
+| n/a
+
+| `US$`
+| `cim:OASISMeasType.US%24`
+| n/a
+
+| `US$/MW`
+| `cim:OASISMeasType.US%24/MW`
+| n/a
+
+| `US$/MWh`
+| `cim:OASISMeasType.US%24/MWh`
+| n/a
+|===

@@ -1,0 +1,197 @@
+= `ExPostMarketRegionResults`
+:toclevels: 4
+
+
++++Model of expost calculation of cleared MW on a region basis.  Includes cleared price.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ExPostMarketRegionResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ExPostMarketRegionResults`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ExPostMarketRegionResults {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+ExPostMarketRegion {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+MarketRegion {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+ExPostMarketRegionResults -> ExPostMarketRegion: ExPostMarketRegion
+
+
+ExPostMarketRegionResults -> MarketRegion: MarketRegion
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<ExPostMarketRegion,`ExPostMarketRegion`>>
+| 1
+| xref::class/ExPostMarketRegion.adoc[`ExPostMarketRegion`]
+| n/a
+
+| <<MarketRegion,`MarketRegion`>>
+| 1
+| xref::class/MarketRegion.adoc[`MarketRegion`]
+| n/a
+
+| <<exPostClearedPrice,`exPostClearedPrice`>>
+| 0..1
+| https://w3id.org/linkml/Float[`float`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#exPostClearedPrice]
+=== `exPostClearedPrice`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostMarketRegionResults.exPostClearedPrice`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+//[discrete]
+[#ExPostMarketRegion]
+=== `ExPostMarketRegion`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostMarketRegionResults.ExPostMarketRegion`
+| Cardinality
+| 1
+| Type
+| xref::class/ExPostMarketRegion.adoc[`ExPostMarketRegion`]
+
+
+|===
+
+//[discrete]
+[#MarketRegion]
+=== `MarketRegion`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostMarketRegionResults.MarketRegion`
+| Cardinality
+| 1
+| Type
+| xref::class/MarketRegion.adoc[`MarketRegion`]
+
+
+|===
+
+

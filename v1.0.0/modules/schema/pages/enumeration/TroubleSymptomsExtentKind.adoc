@@ -1,0 +1,49 @@
+= `TroubleSymptomsExtentKind`
+:toclevels: 4
+
+
++++The enumerated values that define the extent of the problem.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TroubleSymptomsExtentKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `entireNeighbourhood`
+| `cim:TroubleSymptomsExtentKind.entireNeighbourhood`
+| n/a
+
+| `neighbour`
+| `cim:TroubleSymptomsExtentKind.neighbour`
+| n/a
+
+| `ok`
+| `cim:TroubleSymptomsExtentKind.ok`
+| n/a
+
+| `other`
+| `cim:TroubleSymptomsExtentKind.other`
+| n/a
+
+| `singleCustomer`
+| `cim:TroubleSymptomsExtentKind.singleCustomer`
+| n/a
+|===

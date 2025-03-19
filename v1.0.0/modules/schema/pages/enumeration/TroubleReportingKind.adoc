@@ -1,0 +1,61 @@
+= `TroubleReportingKind`
+:toclevels: 4
+
+
++++Kind of trouble reporting.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TroubleReportingKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `app`
+| `cim:TroubleReportingKind.app`
+| n/a
+
+| `call`
+| `cim:TroubleReportingKind.call`
+| n/a
+
+| `email`
+| `cim:TroubleReportingKind.email`
+| n/a
+
+| `ivr`
+| `cim:TroubleReportingKind.ivr`
+| n/a
+
+| `letter`
+| `cim:TroubleReportingKind.letter`
+| n/a
+
+| `other`
+| `cim:TroubleReportingKind.other`
+| n/a
+
+| `sms`
+| `cim:TroubleReportingKind.sms`
+| n/a
+
+| `web`
+| `cim:TroubleReportingKind.web`
+| n/a
+|===

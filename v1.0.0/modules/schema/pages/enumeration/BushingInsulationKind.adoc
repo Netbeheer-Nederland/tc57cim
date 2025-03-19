@@ -1,0 +1,53 @@
+= `BushingInsulationKind`
+:toclevels: 4
+
+
++++Insulation kind for bushings.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:BushingInsulationKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `compound`
+| `cim:BushingInsulationKind.compound`
+| n/a
+
+| `oilImpregnatedPaper`
+| `cim:BushingInsulationKind.oilImpregnatedPaper`
+| n/a
+
+| `other`
+| `cim:BushingInsulationKind.other`
+| n/a
+
+| `resinBondedPaper`
+| `cim:BushingInsulationKind.resinBondedPaper`
+| n/a
+
+| `resinImpregnatedPaper`
+| `cim:BushingInsulationKind.resinImpregnatedPaper`
+| n/a
+
+| `solidPorcelain`
+| `cim:BushingInsulationKind.solidPorcelain`
+| n/a
+|===

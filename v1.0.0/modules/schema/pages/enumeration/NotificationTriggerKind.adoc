@@ -1,0 +1,49 @@
+= `NotificationTriggerKind`
+:toclevels: 4
+
+
++++Kind of trigger to notify customer.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:NotificationTriggerKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `etrChange`
+| `cim:NotificationTriggerKind.etrChange`
+| n/a
+
+| `informDispatched`
+| `cim:NotificationTriggerKind.informDispatched`
+| n/a
+
+| `initialEtr`
+| `cim:NotificationTriggerKind.initialEtr`
+| n/a
+
+| `powerOut`
+| `cim:NotificationTriggerKind.powerOut`
+| n/a
+
+| `powerRestored`
+| `cim:NotificationTriggerKind.powerRestored`
+| n/a
+|===

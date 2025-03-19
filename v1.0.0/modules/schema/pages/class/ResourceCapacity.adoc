@@ -1,0 +1,269 @@
+= `ResourceCapacity`
+:toclevels: 4
+
+
++++This class model the various capacities of a resource. A resource may have numbers of capacities related to operating, ancillary services, energy trade and so forth. Capacities may be defined for active power or reactive power.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ResourceCapacity`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ResourceCapacity`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+ResourceCapacity {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RegisteredResource {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+ResourceCapacity -> RegisteredResource: RegisteredResource
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<capacityType,`capacityType`>>
+| 0..1
+| xref::enumeration/ResourceCapacityType.adoc[`ResourceCapacityType`]
+| +++capacity type
+
+The types are but not limited to:
+
+Regulation Up
+Regulation Dn
+Spinning Reserve
+Non-Spinning Reserve
+FOO capacity
+MOO capacity+++
+
+| <<defaultCapacity,`defaultCapacity`>>
+| 0..1
+| https://w3id.org/linkml/Double[`double`]
+| +++default capacity+++
+
+| <<maximumCapacity,`maximumCapacity`>>
+| 0..1
+| https://w3id.org/linkml/Double[`double`]
+| +++maximum capacity+++
+
+| <<minimumCapacity,`minimumCapacity`>>
+| 0..1
+| https://w3id.org/linkml/Double[`double`]
+| +++minimum capacity+++
+
+| <<unitSymbol,`unitSymbol`>>
+| 0..1
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+| +++Unit selection for the capacity values.+++
+
+| <<RegisteredResource,`RegisteredResource`>>
+| 0..*
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| n/a
+|===
+
+'''
+
+
+//[discrete]
+[#capacityType]
+=== `capacityType`
++++capacity type
+
+The types are but not limited to:
+
+Regulation Up
+Regulation Dn
+Spinning Reserve
+Non-Spinning Reserve
+FOO capacity
+MOO capacity+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCapacity.capacityType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ResourceCapacityType.adoc[`ResourceCapacityType`]
+
+
+|===
+
+//[discrete]
+[#defaultCapacity]
+=== `defaultCapacity`
++++default capacity+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCapacity.defaultCapacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Double[`double`]
+
+
+|===
+
+//[discrete]
+[#maximumCapacity]
+=== `maximumCapacity`
++++maximum capacity+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCapacity.maximumCapacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Double[`double`]
+
+
+|===
+
+//[discrete]
+[#minimumCapacity]
+=== `minimumCapacity`
++++minimum capacity+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCapacity.minimumCapacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Double[`double`]
+
+
+|===
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCapacity.RegisteredResource`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+//[discrete]
+[#unitSymbol]
+=== `unitSymbol`
++++Unit selection for the capacity values.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCapacity.unitSymbol`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+
+
+|===
+
+

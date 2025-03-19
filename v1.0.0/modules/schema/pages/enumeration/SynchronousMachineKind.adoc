@@ -1,0 +1,57 @@
+= `SynchronousMachineKind`
+:toclevels: 4
+
+
++++Synchronous machine type.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SynchronousMachineKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `condenser`
+| `cim:SynchronousMachineKind.condenser`
+| n/a
+
+| `generator`
+| `cim:SynchronousMachineKind.generator`
+| n/a
+
+| `generatorOrCondenser`
+| `cim:SynchronousMachineKind.generatorOrCondenser`
+| n/a
+
+| `generatorOrCondenserOrMotor`
+| `cim:SynchronousMachineKind.generatorOrCondenserOrMotor`
+| n/a
+
+| `generatorOrMotor`
+| `cim:SynchronousMachineKind.generatorOrMotor`
+| n/a
+
+| `motor`
+| `cim:SynchronousMachineKind.motor`
+| n/a
+
+| `motorOrCondenser`
+| `cim:SynchronousMachineKind.motorOrCondenser`
+| n/a
+|===

@@ -1,0 +1,41 @@
+= `CheckOutType`
+:toclevels: 4
+
+
++++To indicate a check out type such as adjusted capacity or dispatch capacity.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CheckOutType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `AFTER_THE_FACT`
+| `cim:CheckOutType.AFTER_THE_FACT`
+| n/a
+
+| `PRE_HOUR`
+| `cim:CheckOutType.PRE_HOUR`
+| n/a
+
+| `PRE_SCHEDULE`
+| `cim:CheckOutType.PRE_SCHEDULE`
+| n/a
+|===
