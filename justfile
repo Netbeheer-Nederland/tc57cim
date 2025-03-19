@@ -18,8 +18,6 @@ build: clean _post-process-linkml-schema generate-documentation
     @echo "Building project…"
     @echo
     cp -r "artifacts/information_models" "artifacts/documentation/modules/schema/attachments/"
-    cp -r "artifacts/schemas" "artifacts/documentation/modules/schema/attachments/"
-    cp -r "artifacts/examples" "artifacts/documentation/modules/schema/attachments/"
     @echo "… OK."
     @echo
     @echo "All project artifacts have been generated and post-processed, and can found in: artifacts/"
@@ -148,49 +146,6 @@ _post-process-linkml-schema:
     @echo "… OK."
     @echo
 
-# Edit the schema
-[group("schema")]
-edit-schema:
-    @${VISUAL:-${EDITOR:-nano}} information_models/im_tc57cim.schema.linkml.yml
-
-# Show definition of the class identified by the provided CURIE
-[group("schema")]
-get-definition curie:
-    yq '.classes.* | select(.class_uri == "{{curie}}")' information_models/im_tc57cim.schema.linkml.yml
-
-# List all classes in the schema
-[group("schema")]
-list-classes:
-    yq '.classes.* | key' information_models/im_tc57cim.schema.linkml.yml
-
-# Create new draft
-[group("version-control")]
-create-draft name:
-    @echo "Creating new draft…"
-    @echo
-    @echo "Creating and tracking new draft branch…"
-    @echo
-    git checkout -b {{shell(major_branch_name) + "." + name}}
-    git commit --allow-empty -m "Start working on draft"
-    git push -u origin {{shell(major_branch_name) + "." + name}}
-    @echo
-    @echo "Creating new draft pull request…"
-    @echo
-    gh pr create --base {{shell(major_branch_name)}} --draft
-    @echo "… OK."
-    @echo
-
-# Finish draft
-[group("version-control")]
-finish-draft:
-    @echo "Finishing draft…"
-    @echo
-    @echo "Marking draft pull request as ready for review…"
-    @echo
-    gh pr ready
-    @echo "… OK."
-    @echo
-
 # Preview version
 [group("version-control")]
 preview-version:
@@ -251,49 +206,3 @@ generate-documentation: _post-process-linkml-schema
     @echo
     @echo -e "Generated documentation files at: artifacts/documentation"
     @echo
-
-# Generate example data
-[group("generators")]
-generate-example-data: _post-process-linkml-schema
-    @echo "Generating JSON example data…"
-    @echo
-    mkdir -p "artifacts/examples"
-    for example_file in examples/*.yml; do \
-        [ -f "$example_file" ] || continue; \
-        poetry run gen-linkml-profile  \
-            convert \
-            "$example_file" \
-            --out "artifacts/${example_file%.*}.json"; \
-    done
-    @echo "… OK."
-    @echo
-    @echo -e "Generated example JSON data at: artifacts/examples"
-    @echo
-
-# Generate JSON Schema
-[group("generators")]
-generate-json-schema: _post-process-linkml-schema
-    @echo "Generating JSON Schema…"
-    @echo
-    mkdir -p "artifacts/schemas/json_schema"
-    poetry run gen-json-schema \
-        --not-closed \
-        "artifacts/information_models/im_tc57cim.schema.linkml.yml" \
-        > "artifacts/schemas/json_schema/im_tc57cim.json_schema.json"
-    @echo "… OK."
-    @echo
-    @echo "Generated JSON Schema at: artifacts/schemas/json_schema/im_tc57cim.json_schema.json"
-    @echo
-
-# Validate example data
-[group("validate")]
-validate-example-data: generate-json-schema generate-example-data
-    @echo "Validating example data against JSON schema…"
-    @echo
-    for example_file in artifacts/examples/*.json; do \
-        [ -f "$example_file" ] || continue; \
-        poetry run check-jsonschema --schemafile "artifacts/schemas/json_schema/im_tc57cim.json_schema.json" $example_file; \
-    done
-    @echo "… OK."
-    @echo
-
