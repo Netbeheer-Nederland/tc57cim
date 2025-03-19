@@ -14,7 +14,7 @@ _default:
 
 # Build the project
 [group("project")]
-build: clean _post-process-linkml-schema generate-json-schema generate-documentation generate-example-data validate-example-data
+build: clean _post-process-linkml-schema generate-documentation
     @echo "Building project…"
     @echo
     cp -r "artifacts/information_models" "artifacts/documentation/modules/schema/attachments/"
