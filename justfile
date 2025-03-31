@@ -200,7 +200,8 @@ generate-documentation: _post-process-linkml-schema
     mkdir -p "artifacts/documentation/modules/schema"
     poetry run python -m linkml_asciidoc_generator.main \
         "artifacts/information_models/im_tc57cim.schema.linkml.yml" \
-        "artifacts/documentation/modules/schema"
+        "artifacts/documentation/modules/schema" \
+        "--no-relations-diagrams"
     echo "- modules/schema/nav.adoc" >> artifacts/documentation/antora.yml
     @echo "… OK."
     @echo
