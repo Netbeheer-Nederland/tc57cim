@@ -1,0 +1,1096 @@
+= `WireInfo`
+:toclevels: 4
+
+
++++Wire data that can be specified per line segment phase, or for the line segment as a whole in case its phases all have the same wire characteristics.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:WireInfo`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/AssetInfo.adoc[`AssetInfo`]
+*** *`WireInfo`*
+ **** xref::class/CableInfo.adoc[`CableInfo`]
+ **** xref::class/OverheadWireInfo.adoc[`OverheadWireInfo`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ACLineSegmentPhase,`ACLineSegmentPhase`>>
+//| [[slots_table.ACLineSegmentPhase]]<<ACLineSegmentPhase,`ACLineSegmentPhase`>>
+| 0..* +
+xref::class/ACLineSegmentPhase.adoc[`ACLineSegmentPhase`]
+| +++AC line segment phase information associated with this wire information.+++
+| _n/a_
+
+| <<WirePhaseInfo,`WirePhaseInfo`>>
+//| [[slots_table.WirePhaseInfo]]<<WirePhaseInfo,`WirePhaseInfo`>>
+| 0..* +
+xref::class/WirePhaseInfo.adoc[`WirePhaseInfo`]
+| +++Wire phase information associated with this wire information.+++
+| _n/a_
+
+| <<coreRadius,`coreRadius`>>
+//| [[slots_table.coreRadius]]<<coreRadius,`coreRadius`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++(if there is a different core material) Radius of the central core.+++
+| _n/a_
+
+| <<coreStrandCount,`coreStrandCount`>>
+//| [[slots_table.coreStrandCount]]<<coreStrandCount,`coreStrandCount`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++(if used) Number of strands in the steel core.+++
+| _n/a_
+
+| <<gmr,`gmr`>>
+//| [[slots_table.gmr]]<<gmr,`gmr`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++Geometric mean radius. If we replace the conductor by a thin walled tube of radius GMR, then its reactance is identical to...+++
+| _n/a_
+
+| <<insulated,`insulated`>>
+//| [[slots_table.insulated]]<<insulated,`insulated`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if conductor is insulated.+++
+| _n/a_
+
+| <<insulationMaterial,`insulationMaterial`>>
+//| [[slots_table.insulationMaterial]]<<insulationMaterial,`insulationMaterial`>>
+| 0..1 +
+xref::enumeration/WireInsulationKind.adoc[`WireInsulationKind`]
+| +++(if insulated conductor) Material used for insulation.+++
+| _n/a_
+
+| <<insulationThickness,`insulationThickness`>>
+//| [[slots_table.insulationThickness]]<<insulationThickness,`insulationThickness`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++(if insulated conductor) Thickness of the insulation.+++
+| _n/a_
+
+| <<material,`material`>>
+//| [[slots_table.material]]<<material,`material`>>
+| 0..1 +
+xref::enumeration/WireMaterialKind.adoc[`WireMaterialKind`]
+| +++Conductor material.+++
+| _n/a_
+
+| <<rAC25,`rAC25`>>
+//| [[slots_table.rAC25]]<<rAC25,`rAC25`>>
+| 0..1 +
+xref::class/ResistancePerLength.adoc[`ResistancePerLength`]
+| +++AC resistance per unit length of the conductor at 25 °C.+++
+| _n/a_
+
+| <<rAC50,`rAC50`>>
+//| [[slots_table.rAC50]]<<rAC50,`rAC50`>>
+| 0..1 +
+xref::class/ResistancePerLength.adoc[`ResistancePerLength`]
+| +++AC resistance per unit length of the conductor at 50 °C.+++
+| _n/a_
+
+| <<rAC75,`rAC75`>>
+//| [[slots_table.rAC75]]<<rAC75,`rAC75`>>
+| 0..1 +
+xref::class/ResistancePerLength.adoc[`ResistancePerLength`]
+| +++AC resistance per unit length of the conductor at 75 °C.+++
+| _n/a_
+
+| <<rDC20,`rDC20`>>
+//| [[slots_table.rDC20]]<<rDC20,`rDC20`>>
+| 0..1 +
+xref::class/ResistancePerLength.adoc[`ResistancePerLength`]
+| +++DC resistance per unit length of the conductor at 20 °C.+++
+| _n/a_
+
+| <<radius,`radius`>>
+//| [[slots_table.radius]]<<radius,`radius`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++Outside radius of the wire.+++
+| _n/a_
+
+| <<ratedCurrent,`ratedCurrent`>>
+//| [[slots_table.ratedCurrent]]<<ratedCurrent,`ratedCurrent`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++Current carrying capacity of the wire under stated thermal conditions.+++
+| _n/a_
+
+| <<sizeDescription,`sizeDescription`>>
+//| [[slots_table.sizeDescription]]<<sizeDescription,`sizeDescription`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Describes the wire gauge or cross section (e.g., 4/0, #2, 336.5).+++
+| _n/a_
+
+| <<strandCount,`strandCount`>>
+//| [[slots_table.strandCount]]<<strandCount,`strandCount`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Number of strands in the conductor.+++
+| _n/a_
+
+| <<Assets,`Assets`>>
+//| [[slots_table.Assets]]<<Assets,`Assets`>>
+| 0..* +
+xref::class/Asset.adoc[`Asset`]
+| +++All assets described by this data.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<CatalogAssetType,`CatalogAssetType`>>
+//| [[slots_table.CatalogAssetType]]<<CatalogAssetType,`CatalogAssetType`>>
+| 0..1 +
+xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+| +++Asset information (nameplate) for this catalog asset type.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<PowerSystemResources,`PowerSystemResources`>>
+//| [[slots_table.PowerSystemResources]]<<PowerSystemResources,`PowerSystemResources`>>
+| 0..* +
+xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+| +++All power system resources with this datasheet information.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<ProductAssetModel,`ProductAssetModel`>>
+//| [[slots_table.ProductAssetModel]]<<ProductAssetModel,`ProductAssetModel`>>
+| 0..1 +
+xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+| +++Product asset model which conforms to this catalog asset type.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#ACLineSegmentPhase]
+=== `ACLineSegmentPhase`
++++AC line segment phase information associated with this wire information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.ACLineSegmentPhase`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ACLineSegmentPhase.adoc[`ACLineSegmentPhase`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ACLineSegmentPhase,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets described by this data.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Assets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CatalogAssetType]
+=== `CatalogAssetType`
++++Asset information (nameplate) for this catalog asset type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.CatalogAssetType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CatalogAssetType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#coreRadius]
+=== `coreRadius`
++++(if there is a different core material) Radius of the central core.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.coreRadius`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.coreRadius,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#coreStrandCount]
+=== `coreStrandCount`
++++(if used) Number of strands in the steel core.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.coreStrandCount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.coreStrandCount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#gmr]
+=== `gmr`
++++Geometric mean radius. If we replace the conductor by a thin walled tube of radius GMR, then its reactance is identical to the reactance of the actual conductor.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.gmr`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.gmr,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#insulated]
+=== `insulated`
++++True if conductor is insulated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.insulated`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.insulated,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#insulationMaterial]
+=== `insulationMaterial`
++++(if insulated conductor) Material used for insulation.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.insulationMaterial`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/WireInsulationKind.adoc[`WireInsulationKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.insulationMaterial,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#insulationThickness]
+=== `insulationThickness`
++++(if insulated conductor) Thickness of the insulation.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.insulationThickness`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.insulationThickness,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#material]
+=== `material`
++++Conductor material.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.material`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/WireMaterialKind.adoc[`WireMaterialKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.material,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PowerSystemResources]
+=== `PowerSystemResources`
++++All power system resources with this datasheet information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.PowerSystemResources`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PowerSystemResources,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ProductAssetModel]
+=== `ProductAssetModel`
++++Product asset model which conforms to this catalog asset type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.ProductAssetModel`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ProductAssetModel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rAC25]
+=== `rAC25`
++++AC resistance per unit length of the conductor at 25 °C.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.rAC25`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ResistancePerLength.adoc[`ResistancePerLength`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rAC25,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rAC50]
+=== `rAC50`
++++AC resistance per unit length of the conductor at 50 °C.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.rAC50`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ResistancePerLength.adoc[`ResistancePerLength`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rAC50,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rAC75]
+=== `rAC75`
++++AC resistance per unit length of the conductor at 75 °C.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.rAC75`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ResistancePerLength.adoc[`ResistancePerLength`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rAC75,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#radius]
+=== `radius`
++++Outside radius of the wire.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.radius`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.radius,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ratedCurrent]
+=== `ratedCurrent`
++++Current carrying capacity of the wire under stated thermal conditions.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.ratedCurrent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ratedCurrent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rDC20]
+=== `rDC20`
++++DC resistance per unit length of the conductor at 20 °C.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.rDC20`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ResistancePerLength.adoc[`ResistancePerLength`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rDC20,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sizeDescription]
+=== `sizeDescription`
++++Describes the wire gauge or cross section (e.g., 4/0, #2, 336.5).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.sizeDescription`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sizeDescription,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#strandCount]
+=== `strandCount`
++++Number of strands in the conductor.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.strandCount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.strandCount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WirePhaseInfo]
+=== `WirePhaseInfo`
++++Wire phase information associated with this wire information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WireInfo.WirePhaseInfo`
+| Cardinality
+| 0..*
+| Type
+| xref::class/WirePhaseInfo.adoc[`WirePhaseInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WirePhaseInfo,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ACLineSegmentPhase.adoc[`ACLineSegmentPhase`] | xref::class/ACLineSegmentPhase.adoc#WireInfo[`WireInfo`]
+
+
+
+| xref::class/WirePhaseInfo.adoc[`WirePhaseInfo`] | xref::class/WirePhaseInfo.adoc#WireInfo[`WireInfo`]
+
+
+|===
+

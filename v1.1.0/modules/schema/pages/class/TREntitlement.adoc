@@ -1,0 +1,160 @@
+= `TREntitlement`
+:toclevels: 4
+
+
++++A Transmission Right(TR) can be a chain of TR's or on individual. 
+
+When a transmission right is not a chain, this is formally the ETC/TOR Entitlement for each ETC/TOR contract with the inclusion of CVR(Converted Rights) as an ETC. This is the sum of all entitlements on all related transmission interfaces for the same TR.
+
+When TR is a chain, its entitlement is the minimum of all entitlements for the individual TRs in the chain.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TREntitlement`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`TREntitlement`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<TransmissionContractRight,`TransmissionContractRight`>>
+//| [[slots_table.TransmissionContractRight]]<<TransmissionContractRight,`TransmissionContractRight`>>
+| 1 +
+xref::class/ContractRight.adoc[`ContractRight`]
+| _n/a_
+| _n/a_
+
+| <<entitlement,`entitlement`>>
+//| [[slots_table.entitlement]]<<entitlement,`entitlement`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The entitlement+++
+| _n/a_
+
+| <<startOperatingDate,`startOperatingDate`>>
+//| [[slots_table.startOperatingDate]]<<startOperatingDate,`startOperatingDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Operating date and hour when the entitlement applies+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#entitlement]
+=== `entitlement`
++++The entitlement+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TREntitlement.entitlement`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.entitlement,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startOperatingDate]
+=== `startOperatingDate`
++++Operating date and hour when the entitlement applies+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TREntitlement.startOperatingDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startOperatingDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TransmissionContractRight]
+=== `TransmissionContractRight`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TREntitlement.TransmissionContractRight`
+| Cardinality
+| 1
+| Type
+| xref::class/ContractRight.adoc[`ContractRight`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TransmissionContractRight,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ContractRight.adoc[`ContractRight`] | xref::class/ContractRight.adoc#TREntitlement[`TREntitlement`]
+
+
+|===
+

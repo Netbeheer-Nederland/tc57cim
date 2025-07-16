@@ -1,0 +1,52 @@
+= `ResourceCertificationType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ResourceCertificationType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `GT`
+| `cim:ResourceCertificationType.GT`
+| n/a
+
+| `IR`
+| `cim:ResourceCertificationType.IR`
+| n/a
+
+| `NR`
+| `cim:ResourceCertificationType.NR`
+| n/a
+
+| `RG`
+| `cim:ResourceCertificationType.RG`
+| n/a
+
+| `SR`
+| `cim:ResourceCertificationType.SR`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

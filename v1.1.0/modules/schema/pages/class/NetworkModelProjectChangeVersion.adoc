@@ -1,0 +1,660 @@
+= `NetworkModelProjectChangeVersion`
+:toclevels: 4
+
+
++++Describes the status and the planned implementation of the associated change set into the as-built model.    New instances of this class with new identity are instantiated upon changes to the content of this class or changes to the associated change set.  Instances of this class are considered immutable.  The case audit trail can reference this immutable data to exactly reproduce a case.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:NetworkModelProjectChangeVersion`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`NetworkModelProjectChangeVersion`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ChangeSet,`ChangeSet`>>
+//| [[slots_table.ChangeSet]]<<ChangeSet,`ChangeSet`>>
+| 0..1 +
+xref::class/ChangeSet.adoc[`ChangeSet`]
+| +++The details of model changes for this project.   The change set should have a new identifier if it changes.+++
+| _n/a_
+
+| <<NetworkModelProjectChange,`NetworkModelProjectChange`>>
+//| [[slots_table.NetworkModelProjectChange]]<<NetworkModelProjectChange,`NetworkModelProjectChange`>>
+| 1 +
+xref::class/NetworkModelProjectChange.adoc[`NetworkModelProjectChange`]
+| +++The persistent network model project change to which this version applies.+++
+| _n/a_
+
+| <<NetworkModelProjectState,`NetworkModelProjectState`>>
+//| [[slots_table.NetworkModelProjectState]]<<NetworkModelProjectState,`NetworkModelProjectState`>>
+| 0..1 +
+xref::class/NetworkModelProjectState.adoc[`NetworkModelProjectState`]
+| +++The state of this network model project version.+++
+| _n/a_
+
+| <<SupercededBy,`SupercededBy`>>
+//| [[slots_table.SupercededBy]]<<SupercededBy,`SupercededBy`>>
+| 0..1 +
+xref::class/NetworkModelProjectChangeVersion.adoc[`NetworkModelProjectChangeVersion`]
+| +++The project version that will supercede this project version.+++
+| _n/a_
+
+| <<Supercedes,`Supercedes`>>
+//| [[slots_table.Supercedes]]<<Supercedes,`Supercedes`>>
+| 0..1 +
+xref::class/NetworkModelProjectChangeVersion.adoc[`NetworkModelProjectChangeVersion`]
+| +++Project version that is being superceded.+++
+| _n/a_
+
+| <<comment,`comment`>>
+//| [[slots_table.comment]]<<comment,`comment`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++A user provided comment describing the changes in this version from the previous version.+++
+| _n/a_
+
+| <<effectiveDateTime,`effectiveDateTime`>>
+//| [[slots_table.effectiveDateTime]]<<effectiveDateTime,`effectiveDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The date/time the change set is included in the model.+++
+| _n/a_
+
+| <<timeStamp,`timeStamp`>>
+//| [[slots_table.timeStamp]]<<timeStamp,`timeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The date/time this version was finalized and thus made immutable.+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ChangeSet]
+=== `ChangeSet`
++++The details of model changes for this project.   The change set should have a new identifier if it changes.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NetworkModelProjectChangeVersion.ChangeSet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSet.adoc[`ChangeSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ChangeSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#comment]
+=== `comment`
++++A user provided comment describing the changes in this version from the previous version.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NetworkModelProjectChangeVersion.comment`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.comment,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#effectiveDateTime]
+=== `effectiveDateTime`
++++The date/time the change set is included in the model.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NetworkModelProjectChangeVersion.effectiveDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.effectiveDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#NetworkModelProjectChange]
+=== `NetworkModelProjectChange`
++++The persistent network model project change to which this version applies.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NetworkModelProjectChangeVersion.NetworkModelProjectChange`
+| Cardinality
+| 1
+| Type
+| xref::class/NetworkModelProjectChange.adoc[`NetworkModelProjectChange`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.NetworkModelProjectChange,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#NetworkModelProjectState]
+=== `NetworkModelProjectState`
++++The state of this network model project version.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NetworkModelProjectChangeVersion.NetworkModelProjectState`
+| Cardinality
+| 0..1
+| Type
+| xref::class/NetworkModelProjectState.adoc[`NetworkModelProjectState`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.NetworkModelProjectState,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SupercededBy]
+=== `SupercededBy`
++++The project version that will supercede this project version.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NetworkModelProjectChangeVersion.SupercededBy`
+| Cardinality
+| 0..1
+| Type
+| xref::class/NetworkModelProjectChangeVersion.adoc[`NetworkModelProjectChangeVersion`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SupercededBy,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Supercedes]
+=== `Supercedes`
++++Project version that is being superceded.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NetworkModelProjectChangeVersion.Supercedes`
+| Cardinality
+| 0..1
+| Type
+| xref::class/NetworkModelProjectChangeVersion.adoc[`NetworkModelProjectChangeVersion`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Supercedes,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeStamp]
+=== `timeStamp`
++++The date/time this version was finalized and thus made immutable.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NetworkModelProjectChangeVersion.timeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeStamp,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ChangeSet.adoc[`ChangeSet`] | xref::class/ChangeSet.adoc#NetworkModelProjectChangeVersion[`NetworkModelProjectChangeVersion`]
+
+
+
+| xref::class/NetworkModelProjectChange.adoc[`NetworkModelProjectChange`] | xref::class/NetworkModelProjectChange.adoc#NetworkModelProjectChangeVersion[`NetworkModelProjectChangeVersion`]
+
+
+
+| xref::class/NetworkModelProjectChangeVersion.adoc[`NetworkModelProjectChangeVersion`] | xref::class/NetworkModelProjectChangeVersion.adoc#Supercedes[`Supercedes`]
+
+
+
+| xref::class/NetworkModelProjectState.adoc[`NetworkModelProjectState`] | xref::class/NetworkModelProjectState.adoc#NetworkModelProjectChangeVersion[`NetworkModelProjectChangeVersion`]
+
+
+|===
+

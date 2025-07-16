@@ -1,0 +1,72 @@
+= `CableConstructionKind`
+:toclevels: 4
+
+
++++Kind of cable construction.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CableConstructionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `compacted`
+| `cim:CableConstructionKind.compacted`
+| n/a
+
+| `compressed`
+| `cim:CableConstructionKind.compressed`
+| n/a
+
+| `other`
+| `cim:CableConstructionKind.other`
+| n/a
+
+| `sector`
+| `cim:CableConstructionKind.sector`
+| n/a
+
+| `segmental`
+| `cim:CableConstructionKind.segmental`
+| n/a
+
+| `solid`
+| `cim:CableConstructionKind.solid`
+| n/a
+
+| `stranded`
+| `cim:CableConstructionKind.stranded`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CableInfo.adoc[`CableInfo`] | xref::class/CableInfo.adoc#constructionKind[`constructionKind`]
+
+
+|===
+

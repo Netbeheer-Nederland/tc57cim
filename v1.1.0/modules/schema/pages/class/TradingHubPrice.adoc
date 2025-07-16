@@ -1,0 +1,222 @@
+= `TradingHubPrice`
+:toclevels: 4
+
+
++++Models prices at Trading Hubs, interval based.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TradingHubPrice`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`TradingHubPrice`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<TradingHubValues,`TradingHubValues`>>
+//| [[slots_table.TradingHubValues]]<<TradingHubValues,`TradingHubValues`>>
+| 1..* +
+xref::class/TradingHubValues.adoc[`TradingHubValues`]
+| _n/a_
+| _n/a_
+
+| <<intervalStartTime,`intervalStartTime`>>
+//| [[slots_table.intervalStartTime]]<<intervalStartTime,`intervalStartTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<marketType,`marketType`>>
+//| [[slots_table.marketType]]<<marketType,`marketType`>>
+| 0..1 +
+xref::enumeration/MarketType.adoc[`MarketType`]
+| _n/a_
+| _n/a_
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+//| [[slots_table.updateTimeStamp]]<<updateTimeStamp,`updateTimeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<updateUser,`updateUser`>>
+//| [[slots_table.updateUser]]<<updateUser,`updateUser`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#intervalStartTime]
+=== `intervalStartTime`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TradingHubPrice.intervalStartTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalStartTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marketType]
+=== `marketType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TradingHubPrice.marketType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MarketType.adoc[`MarketType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marketType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TradingHubValues]
+=== `TradingHubValues`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TradingHubPrice.TradingHubValues`
+| Cardinality
+| 1..*
+| Type
+| xref::class/TradingHubValues.adoc[`TradingHubValues`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TradingHubValues,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TradingHubPrice.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateTimeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TradingHubPrice.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateUser,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TradingHubValues.adoc[`TradingHubValues`] | xref::class/TradingHubValues.adoc#TradingHubPrice[`TradingHubPrice`]
+
+
+|===
+

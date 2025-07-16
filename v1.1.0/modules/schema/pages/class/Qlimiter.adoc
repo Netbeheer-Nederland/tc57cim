@@ -1,0 +1,125 @@
+= `Qlimiter`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Qlimiter`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`Qlimiter`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Delay,`Delay`>>
+//| [[slots_table.Delay]]<<Delay,`Delay`>>
+| 1 +
+xref::class/Delay.adoc[`Delay`]
+| _n/a_
+| _n/a_
+
+| <<VSCtype1,`VSCtype1`>>
+//| [[slots_table.VSCtype1]]<<VSCtype1,`VSCtype1`>>
+| 0..1 +
+xref::class/VSCtype1.adoc[`VSCtype1`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#Delay]
+=== `Delay`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Qlimiter.Delay`
+| Cardinality
+| 1
+| Type
+| xref::class/Delay.adoc[`Delay`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Delay,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VSCtype1]
+=== `VSCtype1`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Qlimiter.VSCtype1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/VSCtype1.adoc[`VSCtype1`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VSCtype1,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Delay.adoc[`Delay`] | xref::class/Delay.adoc#Qlimiter[`Qlimiter`]
+
+
+
+| xref::class/VSCtype1.adoc[`VSCtype1`] | xref::class/VSCtype1.adoc#Qlimiter[`Qlimiter`]
+
+
+|===
+

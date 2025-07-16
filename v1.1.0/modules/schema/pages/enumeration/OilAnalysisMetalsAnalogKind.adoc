@@ -1,0 +1,156 @@
+= `OilAnalysisMetalsAnalogKind`
+:toclevels: 4
+
+
++++Analogs representing oil metals and elements analysis result.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OilAnalysisMetalsAnalogKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `aluminum`
+| `cim:OilAnalysisMetalsAnalogKind.aluminum`
+| n/a
+
+| `aluminumParticulate`
+| `cim:OilAnalysisMetalsAnalogKind.aluminumParticulate`
+| n/a
+
+| `barium`
+| `cim:OilAnalysisMetalsAnalogKind.barium`
+| n/a
+
+| `boron`
+| `cim:OilAnalysisMetalsAnalogKind.boron`
+| n/a
+
+| `cadmium`
+| `cim:OilAnalysisMetalsAnalogKind.cadmium`
+| n/a
+
+| `calcium`
+| `cim:OilAnalysisMetalsAnalogKind.calcium`
+| n/a
+
+| `chromium`
+| `cim:OilAnalysisMetalsAnalogKind.chromium`
+| n/a
+
+| `copper`
+| `cim:OilAnalysisMetalsAnalogKind.copper`
+| n/a
+
+| `copperParticulate`
+| `cim:OilAnalysisMetalsAnalogKind.copperParticulate`
+| n/a
+
+| `iron`
+| `cim:OilAnalysisMetalsAnalogKind.iron`
+| n/a
+
+| `ironParticulate`
+| `cim:OilAnalysisMetalsAnalogKind.ironParticulate`
+| n/a
+
+| `lead`
+| `cim:OilAnalysisMetalsAnalogKind.lead`
+| n/a
+
+| `leadParticulate`
+| `cim:OilAnalysisMetalsAnalogKind.leadParticulate`
+| n/a
+
+| `lithium`
+| `cim:OilAnalysisMetalsAnalogKind.lithium`
+| n/a
+
+| `magnesium`
+| `cim:OilAnalysisMetalsAnalogKind.magnesium`
+| n/a
+
+| `molybdenum`
+| `cim:OilAnalysisMetalsAnalogKind.molybdenum`
+| n/a
+
+| `nickel`
+| `cim:OilAnalysisMetalsAnalogKind.nickel`
+| n/a
+
+| `phosphorus`
+| `cim:OilAnalysisMetalsAnalogKind.phosphorus`
+| n/a
+
+| `silicon`
+| `cim:OilAnalysisMetalsAnalogKind.silicon`
+| n/a
+
+| `silver`
+| `cim:OilAnalysisMetalsAnalogKind.silver`
+| n/a
+
+| `silverParticulate`
+| `cim:OilAnalysisMetalsAnalogKind.silverParticulate`
+| n/a
+
+| `sodium`
+| `cim:OilAnalysisMetalsAnalogKind.sodium`
+| n/a
+
+| `tin`
+| `cim:OilAnalysisMetalsAnalogKind.tin`
+| n/a
+
+| `titanium`
+| `cim:OilAnalysisMetalsAnalogKind.titanium`
+| n/a
+
+| `tungsten`
+| `cim:OilAnalysisMetalsAnalogKind.tungsten`
+| n/a
+
+| `vanadium`
+| `cim:OilAnalysisMetalsAnalogKind.vanadium`
+| n/a
+
+| `zinc`
+| `cim:OilAnalysisMetalsAnalogKind.zinc`
+| n/a
+
+| `zincParticulate`
+| `cim:OilAnalysisMetalsAnalogKind.zincParticulate`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/OilAnalysisMetalsAnalog.adoc[`OilAnalysisMetalsAnalog`] | xref::class/OilAnalysisMetalsAnalog.adoc#kind[`kind`]
+
+
+|===
+

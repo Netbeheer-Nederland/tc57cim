@@ -1,0 +1,52 @@
+= `DobleStandardEditionKind`
+:toclevels: 4
+
+
++++List of editions for Doble standards.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:DobleStandardEditionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `none`
+| `cim:DobleStandardEditionKind.none`
+| n/a
+
+| `unknown`
+| `cim:DobleStandardEditionKind.unknown`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/DobleStandard.adoc[`DobleStandard`] | xref::class/DobleStandard.adoc#standardEdition[`standardEdition`]
+
+
+|===
+

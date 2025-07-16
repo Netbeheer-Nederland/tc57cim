@@ -1,0 +1,156 @@
+= `RepairItem`
+:toclevels: 4
+
+
++++Asset component to be repaired or problem area to be corrected.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RepairItem`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`RepairItem`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<RepairWorkTask,`RepairWorkTask`>>
+//| [[slots_table.RepairWorkTask]]<<RepairWorkTask,`RepairWorkTask`>>
+| 0..* +
+xref::class/RepairWorkTask.adoc[`RepairWorkTask`]
+| +++Repair work task under which breaker item of this type is repaired.+++
+| _n/a_
+
+| <<breakerRepairItem,`breakerRepairItem`>>
+//| [[slots_table.breakerRepairItem]]<<breakerRepairItem,`breakerRepairItem`>>
+| 0..1 +
+xref::enumeration/BreakerRepairItemKind.adoc[`BreakerRepairItemKind`]
+| +++Breaker component or problem area which is the focus of this maintenance work task (for work tasks related to breakers only).+++
+| _n/a_
+
+| <<transformerRepairItem,`transformerRepairItem`>>
+//| [[slots_table.transformerRepairItem]]<<transformerRepairItem,`transformerRepairItem`>>
+| 0..1 +
+xref::enumeration/TransformerRepairItemKind.adoc[`TransformerRepairItemKind`]
+| +++Transformer component or problem area which is the focus of this maintenance work task (for work tasks related to transformers only).+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#breakerRepairItem]
+=== `breakerRepairItem`
++++Breaker component or problem area which is the focus of this maintenance work task (for work tasks related to breakers only).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RepairItem.breakerRepairItem`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/BreakerRepairItemKind.adoc[`BreakerRepairItemKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.breakerRepairItem,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RepairWorkTask]
+=== `RepairWorkTask`
++++Repair work task under which breaker item of this type is repaired.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RepairItem.RepairWorkTask`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RepairWorkTask.adoc[`RepairWorkTask`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RepairWorkTask,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#transformerRepairItem]
+=== `transformerRepairItem`
++++Transformer component or problem area which is the focus of this maintenance work task (for work tasks related to transformers only).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RepairItem.transformerRepairItem`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/TransformerRepairItemKind.adoc[`TransformerRepairItemKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.transformerRepairItem,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RepairWorkTask.adoc[`RepairWorkTask`] | xref::class/RepairWorkTask.adoc#BreakerRepairItem[`BreakerRepairItem`]
+
+
+|===
+

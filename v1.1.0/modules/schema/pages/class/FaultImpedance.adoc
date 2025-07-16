@@ -1,0 +1,189 @@
+= `FaultImpedance`
+:toclevels: 4
+
+
++++Impedance description for the fault.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:FaultImpedance`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`FaultImpedance`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<rGround,`rGround`>>
+//| [[slots_table.rGround]]<<rGround,`rGround`>>
+| 0..1 +
+xref::class/Resistance.adoc[`Resistance`]
+| +++The resistance of the fault between phases and ground.+++
+| _n/a_
+
+| <<rLineToLine,`rLineToLine`>>
+//| [[slots_table.rLineToLine]]<<rLineToLine,`rLineToLine`>>
+| 0..1 +
+xref::class/Resistance.adoc[`Resistance`]
+| +++The resistance of the fault between phases.+++
+| _n/a_
+
+| <<xGround,`xGround`>>
+//| [[slots_table.xGround]]<<xGround,`xGround`>>
+| 0..1 +
+xref::class/Reactance.adoc[`Reactance`]
+| +++The reactance of the fault between phases and ground.+++
+| _n/a_
+
+| <<xLineToLine,`xLineToLine`>>
+//| [[slots_table.xLineToLine]]<<xLineToLine,`xLineToLine`>>
+| 0..1 +
+xref::class/Reactance.adoc[`Reactance`]
+| +++The reactance of the fault between phases.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#rGround]
+=== `rGround`
++++The resistance of the fault between phases and ground.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FaultImpedance.rGround`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Resistance.adoc[`Resistance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rGround,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rLineToLine]
+=== `rLineToLine`
++++The resistance of the fault between phases.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FaultImpedance.rLineToLine`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Resistance.adoc[`Resistance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rLineToLine,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#xGround]
+=== `xGround`
++++The reactance of the fault between phases and ground.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FaultImpedance.xGround`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reactance.adoc[`Reactance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.xGround,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#xLineToLine]
+=== `xLineToLine`
++++The reactance of the fault between phases.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FaultImpedance.xLineToLine`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reactance.adoc[`Reactance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.xLineToLine,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Fault.adoc[`Fault`] | xref::class/Fault.adoc#impedance[`impedance`]
+
+
+|===
+

@@ -1,0 +1,290 @@
+= `Voltage`
+:toclevels: 4
+
+
++++Electrical voltage, can be both AC and DC.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Voltage`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Voltage.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Voltage.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Voltage.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ACDCConverter.adoc[`ACDCConverter`] | xref::class/ACDCConverter.adoc#valveU0[`valveU0`]
+
+
+
+| xref::class/BaseVoltage.adoc[`BaseVoltage`] | xref::class/BaseVoltage.adoc#nominalVoltage[`nominalVoltage`]
+
+
+
+| xref::class/BusbarSectionInfo.adoc[`BusbarSectionInfo`] | xref::class/BusbarSectionInfo.adoc#ratedVoltage[`ratedVoltage`]
+
+
+
+| xref::class/BushingInfo.adoc[`BushingInfo`] | xref::class/BushingInfo.adoc#ratedVoltage[`ratedVoltage`]
+
+
+
+| xref::class/CompositeSwitchInfo.adoc[`CompositeSwitchInfo`] | xref::class/CompositeSwitchInfo.adoc#ratedVoltage[`ratedVoltage`]
+
+
+
+| xref::class/CurrentTransformerInfo.adoc[`CurrentTransformerInfo`] | xref::class/CurrentTransformerInfo.adoc#kneePointVoltage[`kneePointVoltage`]
+
+
+
+| xref::class/DCConductingEquipment.adoc[`DCConductingEquipment`] | xref::class/DCConductingEquipment.adoc#ratedUdc[`ratedUdc`]
+
+
+
+| xref::class/EndDeviceInfo.adoc[`EndDeviceInfo`] | xref::class/EndDeviceInfo.adoc#ratedVoltage[`ratedVoltage`]
+
+
+
+| xref::class/EnergySource.adoc[`EnergySource`] | xref::class/EnergySource.adoc#voltageMagnitude[`voltageMagnitude`]
+
+
+
+| xref::class/EquivalentInjection.adoc[`EquivalentInjection`] | xref::class/EquivalentInjection.adoc#regulationTarget[`regulationTarget`]
+
+
+
+| xref::class/FrequencyConverter.adoc[`FrequencyConverter`] | xref::class/FrequencyConverter.adoc#minU[`minU`]
+
+
+
+| xref::class/NoLoadTest.adoc[`NoLoadTest`] | xref::class/NoLoadTest.adoc#energisedEndVoltage[`energisedEndVoltage`]
+
+
+
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`] | xref::class/OldSwitchInfo.adoc#dielectricStrength[`dielectricStrength`]
+
+
+
+| xref::class/OldTransformerTankInfo.adoc[`OldTransformerTankInfo`] | xref::class/OldTransformerTankInfo.adoc#neutralBIL[`neutralBIL`]
+
+
+
+| xref::class/OpenCircuitTest.adoc[`OpenCircuitTest`] | xref::class/OpenCircuitTest.adoc#openEndVoltage[`openEndVoltage`]
+
+
+
+| xref::class/OperatingMechanismInfo.adoc[`OperatingMechanismInfo`] | xref::class/OperatingMechanismInfo.adoc#tripVoltage[`tripVoltage`]
+
+
+
+| xref::class/PetersenCoil.adoc[`PetersenCoil`] | xref::class/PetersenCoil.adoc#nominalU[`nominalU`]
+
+
+
+| xref::class/PotentialTransformerInfo.adoc[`PotentialTransformerInfo`] | xref::class/PotentialTransformerInfo.adoc#ratedVoltage[`ratedVoltage`]
+
+
+
+| xref::class/PowerElectronicsConnection.adoc[`PowerElectronicsConnection`] | xref::class/PowerElectronicsConnection.adoc#ratedU[`ratedU`]
+
+
+
+| xref::class/PowerQualityPricing.adoc[`PowerQualityPricing`] | xref::class/PowerQualityPricing.adoc#normalLowVoltLimit[`normalLowVoltLimit`]
+
+
+
+| xref::class/PowerTransformer.adoc[`PowerTransformer`] | xref::class/PowerTransformer.adoc#highSideMinOperatingU[`highSideMinOperatingU`]
+
+
+
+| xref::class/PowerTransformerEnd.adoc[`PowerTransformerEnd`] | xref::class/PowerTransformerEnd.adoc#ratedU[`ratedU`]
+
+
+
+| xref::class/RemoteConnectDisconnectInfo.adoc[`RemoteConnectDisconnectInfo`] | xref::class/RemoteConnectDisconnectInfo.adoc#customerVoltageLimit[`customerVoltageLimit`]
+
+
+
+| xref::class/RotatingMachine.adoc[`RotatingMachine`] | xref::class/RotatingMachine.adoc#ratedU[`ratedU`]
+
+
+
+| xref::class/ScheduledVoltageLimitValue.adoc[`ScheduledVoltageLimitValue`] | xref::class/ScheduledVoltageLimitValue.adoc#value[`value`]
+
+
+
+| xref::class/SeriesCompensator.adoc[`SeriesCompensator`] | xref::class/SeriesCompensator.adoc#varistorVoltageThreshold[`varistorVoltageThreshold`]
+
+
+
+| xref::class/ShuntCompensator.adoc[`ShuntCompensator`] | xref::class/ShuntCompensator.adoc#nomU[`nomU`]
+
+
+
+| xref::class/ShuntCompensatorInfo.adoc[`ShuntCompensatorInfo`] | xref::class/ShuntCompensatorInfo.adoc#ratedVoltage[`ratedVoltage`]
+
+
+
+| xref::class/StaticVarCompensator.adoc[`StaticVarCompensator`] | xref::class/StaticVarCompensator.adoc#voltageSetPoint[`voltageSetPoint`]
+
+
+
+| xref::class/Structure.adoc[`Structure`] | xref::class/Structure.adoc#ratedVoltage[`ratedVoltage`]
+
+
+
+| xref::class/SurgeArresterInfo.adoc[`SurgeArresterInfo`] | xref::class/SurgeArresterInfo.adoc#switchingImpulseDischargeVoltage[`switchingImpulseDischargeVoltage`]
+
+
+
+| xref::class/SvVoltage.adoc[`SvVoltage`] | xref::class/SvVoltage.adoc#v[`v`]
+
+
+
+| xref::class/SwitchInfo.adoc[`SwitchInfo`] | xref::class/SwitchInfo.adoc#ratedVoltage[`ratedVoltage`]
+
+
+
+| xref::class/SynchrocheckRelay.adoc[`SynchrocheckRelay`] | xref::class/SynchrocheckRelay.adoc#maxVoltDiff[`maxVoltDiff`]
+
+
+
+| xref::class/SynchronousMachine.adoc[`SynchronousMachine`] | xref::class/SynchronousMachine.adoc#minU[`minU`]
+
+
+
+| xref::class/TapChanger.adoc[`TapChanger`] | xref::class/TapChanger.adoc#neutralU[`neutralU`]
+
+
+
+| xref::class/TapChangerControl.adoc[`TapChangerControl`] | xref::class/TapChangerControl.adoc#limitVoltage[`limitVoltage`]
+
+
+
+| xref::class/TapChangerInfo.adoc[`TapChangerInfo`] | xref::class/TapChangerInfo.adoc#ratedVoltage[`ratedVoltage`]
+
+
+
+| xref::class/TransformerEnd.adoc[`TransformerEnd`] | xref::class/TransformerEnd.adoc#magBaseU[`magBaseU`]
+
+
+
+| xref::class/TransformerEndInfo.adoc[`TransformerEndInfo`] | xref::class/TransformerEndInfo.adoc#ratedU[`ratedU`]
+
+
+
+| xref::class/TransformerObservation.adoc[`TransformerObservation`] | xref::class/TransformerObservation.adoc#oilDielectricStrength[`oilDielectricStrength`]
+
+
+
+| xref::class/UsagePoint.adoc[`UsagePoint`] | xref::class/UsagePoint.adoc#nominalServiceVoltage[`nominalServiceVoltage`]
+
+
+
+| xref::class/VoltageLevel.adoc[`VoltageLevel`] | xref::class/VoltageLevel.adoc#lowVoltageLimit[`lowVoltageLimit`]
+
+
+
+| xref::class/VoltageLimit.adoc[`VoltageLimit`] | xref::class/VoltageLimit.adoc#value[`value`]
+
+
+
+| xref::class/VsConverter.adoc[`VsConverter`] | xref::class/VsConverter.adoc#uv[`uv`]
+
+
+|===
+

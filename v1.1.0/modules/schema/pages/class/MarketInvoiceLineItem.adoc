@@ -1,0 +1,494 @@
+= `MarketInvoiceLineItem`
+:toclevels: 4
+
+
++++An individual line item on an invoice.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MarketInvoiceLineItem`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MarketInvoiceLineItem`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ComponentMarketInvoiceLineItems,`ComponentMarketInvoiceLineItems`>>
+//| [[slots_table.ComponentMarketInvoiceLineItems]]<<ComponentMarketInvoiceLineItems,`ComponentMarketInvoiceLineItems`>>
+| 0..* +
+xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`]
+| _n/a_
+| _n/a_
+
+| <<ContainerMarketInvoiceLineItem,`ContainerMarketInvoiceLineItem`>>
+//| [[slots_table.ContainerMarketInvoiceLineItem]]<<ContainerMarketInvoiceLineItem,`ContainerMarketInvoiceLineItem`>>
+| 0..1 +
+xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`]
+| _n/a_
+| _n/a_
+
+| <<MarketInvoice,`MarketInvoice`>>
+//| [[slots_table.MarketInvoice]]<<MarketInvoice,`MarketInvoice`>>
+| 1 +
+xref::class/MarketInvoice.adoc[`MarketInvoice`]
+| _n/a_
+| _n/a_
+
+| <<Settlement,`Settlement`>>
+//| [[slots_table.Settlement]]<<Settlement,`Settlement`>>
+| 0..* +
+xref::class/Settlement.adoc[`Settlement`]
+| _n/a_
+| _n/a_
+
+| <<billPeriod,`billPeriod`>>
+//| [[slots_table.billPeriod]]<<billPeriod,`billPeriod`>>
+| 0..1 +
+xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++Bill period for the line item.+++
+| _n/a_
+
+| <<glAccount,`glAccount`>>
+//| [[slots_table.glAccount]]<<glAccount,`glAccount`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++General Ledger account code, shall be a valid combination.+++
+| _n/a_
+
+| <<glDateTime,`glDateTime`>>
+//| [[slots_table.glDateTime]]<<glDateTime,`glDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time line item will be posted to the General Ledger.+++
+| _n/a_
+
+| <<kind,`kind`>>
+//| [[slots_table.kind]]<<kind,`kind`>>
+| 0..1 +
+xref::enumeration/MktInvoiceLineItemKind.adoc[`MktInvoiceLineItemKind`]
+| +++Kind of line item.+++
+| _n/a_
+
+| <<lineAmount,`lineAmount`>>
+//| [[slots_table.lineAmount]]<<lineAmount,`lineAmount`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Amount due for this line item.+++
+| _n/a_
+
+| <<lineNumber,`lineNumber`>>
+//| [[slots_table.lineNumber]]<<lineNumber,`lineNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Line item number on invoice statement.+++
+| _n/a_
+
+| <<lineVersion,`lineVersion`>>
+//| [[slots_table.lineVersion]]<<lineVersion,`lineVersion`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Version number of the bill run.+++
+| _n/a_
+
+| <<netAmount,`netAmount`>>
+//| [[slots_table.netAmount]]<<netAmount,`netAmount`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Net line item charge amount.+++
+| _n/a_
+
+| <<previousAmount,`previousAmount`>>
+//| [[slots_table.previousAmount]]<<previousAmount,`previousAmount`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Previous line item charge amount.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#billPeriod]
+=== `billPeriod`
++++Bill period for the line item.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.billPeriod`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.billPeriod,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ComponentMarketInvoiceLineItems]
+=== `ComponentMarketInvoiceLineItems`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.ComponentMarketInvoiceLineItems`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ComponentMarketInvoiceLineItems,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ContainerMarketInvoiceLineItem]
+=== `ContainerMarketInvoiceLineItem`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.ContainerMarketInvoiceLineItem`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ContainerMarketInvoiceLineItem,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#glAccount]
+=== `glAccount`
++++General Ledger account code, shall be a valid combination.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.glAccount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.glAccount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#glDateTime]
+=== `glDateTime`
++++Date and time line item will be posted to the General Ledger.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.glDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.glDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kind]
+=== `kind`
++++Kind of line item.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MktInvoiceLineItemKind.adoc[`MktInvoiceLineItemKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lineAmount]
+=== `lineAmount`
++++Amount due for this line item.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.lineAmount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lineAmount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lineNumber]
+=== `lineNumber`
++++Line item number on invoice statement.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.lineNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lineNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lineVersion]
+=== `lineVersion`
++++Version number of the bill run.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.lineVersion`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lineVersion,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketInvoice]
+=== `MarketInvoice`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.MarketInvoice`
+| Cardinality
+| 1
+| Type
+| xref::class/MarketInvoice.adoc[`MarketInvoice`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketInvoice,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#netAmount]
+=== `netAmount`
++++Net line item charge amount.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.netAmount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.netAmount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#previousAmount]
+=== `previousAmount`
++++Previous line item charge amount.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.previousAmount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.previousAmount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Settlement]
+=== `Settlement`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoiceLineItem.Settlement`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Settlement.adoc[`Settlement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Settlement,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketInvoice.adoc[`MarketInvoice`] | xref::class/MarketInvoice.adoc#MarketInvoiceLineItems[`MarketInvoiceLineItems`]
+
+
+
+| xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`] | xref::class/MarketInvoiceLineItem.adoc#ComponentMarketInvoiceLineItems[`ComponentMarketInvoiceLineItems`]
+
+
+
+| xref::class/Settlement.adoc[`Settlement`] | xref::class/Settlement.adoc#MarketInvoiceLineItem[`MarketInvoiceLineItem`]
+
+
+|===
+

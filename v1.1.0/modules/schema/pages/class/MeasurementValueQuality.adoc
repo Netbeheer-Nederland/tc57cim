@@ -1,0 +1,525 @@
+= `MeasurementValueQuality`
+:toclevels: 4
+
+
++++Measurement quality flags. Bits 0-10 are defined for substation automation in IEC 61850-7-3. Bits 11-15 are reserved for future expansion by that document. Bits 16-31 are reserved for EMS applications.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MeasurementValueQuality`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/Quality61850.adoc[`Quality61850`]
+** *`MeasurementValueQuality`*
+ *** xref::class/AnalogMeasurementValueQuality.adoc[`AnalogMeasurementValueQuality`]
+ *** xref::class/DiscreteMeasurementValueQuality.adoc[`DiscreteMeasurementValueQuality`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MeasurementValue,`MeasurementValue`>>
+//| [[slots_table.MeasurementValue]]<<MeasurementValue,`MeasurementValue`>>
+| 1 +
+xref::class/MeasurementValue.adoc[`MeasurementValue`]
+| +++A MeasurementValue has a MeasurementValueQuality associated with it.+++
+| _n/a_
+
+| <<badReference,`badReference`>>
+//| [[slots_table.badReference]]<<badReference,`badReference`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Measurement value may be incorrect due to a reference being out of calibration.+++
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+| <<estimatorReplaced,`estimatorReplaced`>>
+//| [[slots_table.estimatorReplaced]]<<estimatorReplaced,`estimatorReplaced`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Value has been replaced by State Estimator. estimatorReplaced is not an IEC61850 quality bit but has been put in this class...+++
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+| <<failure,`failure`>>
+//| [[slots_table.failure]]<<failure,`failure`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++This identifier indicates that a supervision function has detected an internal or external failure, e.g. communication failure.+++
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+| <<oldData,`oldData`>>
+//| [[slots_table.oldData]]<<oldData,`oldData`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Measurement value is old and possibly invalid, as it has not been successfully updated during a specified time interval.+++
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+| <<operatorBlocked,`operatorBlocked`>>
+//| [[slots_table.operatorBlocked]]<<operatorBlocked,`operatorBlocked`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Measurement value is blocked and hence unavailable for transmission.+++
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+| <<oscillatory,`oscillatory`>>
+//| [[slots_table.oscillatory]]<<oscillatory,`oscillatory`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++To prevent some overload of the communication it is sensible to detect and suppress oscillating (fast changing) binary...+++
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+| <<outOfRange,`outOfRange`>>
+//| [[slots_table.outOfRange]]<<outOfRange,`outOfRange`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Measurement value is beyond a predefined range of value.+++
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+| <<overFlow,`overFlow`>>
+//| [[slots_table.overFlow]]<<overFlow,`overFlow`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Measurement value is beyond the capability of being  represented properly. For example, a counter value overflows from...+++
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+| <<source,`source`>>
+//| [[slots_table.source]]<<source,`source`>>
+| 0..1 +
+xref::enumeration/Source.adoc[`Source`]
+| +++Source gives information related to the origin of a value. The value may be acquired from the process, defaulted or substituted.+++
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+| <<suspect,`suspect`>>
+//| [[slots_table.suspect]]<<suspect,`suspect`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++A correlation function has detected that the value is not consistent with other values. Typically set by a network State Estimator.+++
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+| <<test,`test`>>
+//| [[slots_table.test]]<<test,`test`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Measurement value is transmitted for test purposes.+++
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+| <<validity,`validity`>>
+//| [[slots_table.validity]]<<validity,`validity`>>
+| 0..1 +
+xref::enumeration/Validity.adoc[`Validity`]
+| +++Validity of the measurement value.+++
+| xref::class/Quality61850.adoc[`Quality61850`]
+|===
+
+'''
+
+
+//[discrete]
+[#badReference]
+=== `badReference`
++++Measurement value may be incorrect due to a reference being out of calibration.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quality61850.badReference`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.badReference,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#estimatorReplaced]
+=== `estimatorReplaced`
++++Value has been replaced by State Estimator. estimatorReplaced is not an IEC61850 quality bit but has been put in this class for convenience.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quality61850.estimatorReplaced`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.estimatorReplaced,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#failure]
+=== `failure`
++++This identifier indicates that a supervision function has detected an internal or external failure, e.g. communication failure.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quality61850.failure`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.failure,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MeasurementValue]
+=== `MeasurementValue`
++++A MeasurementValue has a MeasurementValueQuality associated with it.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValueQuality.MeasurementValue`
+| Cardinality
+| 1
+| Type
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MeasurementValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#oldData]
+=== `oldData`
++++Measurement value is old and possibly invalid, as it has not been successfully updated during a specified time interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quality61850.oldData`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.oldData,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#operatorBlocked]
+=== `operatorBlocked`
++++Measurement value is blocked and hence unavailable for transmission.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quality61850.operatorBlocked`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.operatorBlocked,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#oscillatory]
+=== `oscillatory`
++++To prevent some overload of the communication it is sensible to detect and suppress oscillating (fast changing) binary inputs. If a signal changes in a defined time twice in the same direction (from 0 to 1 or from 1 to 0) then oscillation is detected and the detail quality identifier "oscillatory" is set. If it is detected a configured numbers of transient changes could be passed by. In this time the validity status "questionable" is set. If after this defined numbers of changes the signal is still in the oscillating state the value shall be set either to the opposite state of the previous stable value or to a defined default value. In this case the validity status "questionable" is reset and "invalid" is set as long as the signal is oscillating. If it is configured such that no transient changes should be passed by then the validity status "invalid" is set immediately in addition to the detail quality identifier "oscillatory" (used for status information only).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quality61850.oscillatory`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.oscillatory,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#outOfRange]
+=== `outOfRange`
++++Measurement value is beyond a predefined range of value.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quality61850.outOfRange`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.outOfRange,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#overFlow]
+=== `overFlow`
++++Measurement value is beyond the capability of being  represented properly. For example, a counter value overflows from maximum count back to a value of zero.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quality61850.overFlow`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.overFlow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#source]
+=== `source`
++++Source gives information related to the origin of a value. The value may be acquired from the process, defaulted or substituted.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quality61850.source`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/Source.adoc[`Source`]
+
+| Inherited from
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.source,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#suspect]
+=== `suspect`
++++A correlation function has detected that the value is not consistent with other values. Typically set by a network State Estimator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quality61850.suspect`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.suspect,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#test]
+=== `test`
++++Measurement value is transmitted for test purposes.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quality61850.test`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.test,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#validity]
+=== `validity`
++++Validity of the measurement value.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quality61850.validity`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/Validity.adoc[`Validity`]
+
+| Inherited from
+| xref::class/Quality61850.adoc[`Quality61850`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.validity,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MeasurementValue.adoc[`MeasurementValue`] | xref::class/MeasurementValue.adoc#MeasurementValueQuality[`MeasurementValueQuality`]
+
+
+|===
+

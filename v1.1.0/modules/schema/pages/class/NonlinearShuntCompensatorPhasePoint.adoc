@@ -1,0 +1,189 @@
+= `NonlinearShuntCompensatorPhasePoint`
+:toclevels: 4
+
+
++++A per phase non linear shunt compensator bank or section admittance value. The number of NonlinearShuntCompenstorPhasePoint instances associated with a NonlinearShuntCompensatorPhase shall be equal to ShuntCompensatorPhase.maximumSections. ShuntCompensator.sections shall only be set to one of the NonlinearShuntCompenstorPhasePoint.sectionNumber. There is no interpolation between NonlinearShuntCompenstorPhasePoint-s.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:NonlinearShuntCompensatorPhasePoint`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`NonlinearShuntCompensatorPhasePoint`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<NonlinearShuntCompensatorPhase,`NonlinearShuntCompensatorPhase`>>
+//| [[slots_table.NonlinearShuntCompensatorPhase]]<<NonlinearShuntCompensatorPhase,`NonlinearShuntCompensatorPhase`>>
+| 1 +
+xref::class/NonlinearShuntCompensatorPhase.adoc[`NonlinearShuntCompensatorPhase`]
+| +++Non-linear shunt compensator phase owning this point.+++
+| _n/a_
+
+| <<b,`b`>>
+//| [[slots_table.b]]<<b,`b`>>
+| 0..1 +
+xref::class/Susceptance.adoc[`Susceptance`]
+| +++Positive sequence shunt (charging) susceptance per section.+++
+| _n/a_
+
+| <<g,`g`>>
+//| [[slots_table.g]]<<g,`g`>>
+| 0..1 +
+xref::class/Conductance.adoc[`Conductance`]
+| +++Positive sequence shunt (charging) conductance per section.+++
+| _n/a_
+
+| <<sectionNumber,`sectionNumber`>>
+//| [[slots_table.sectionNumber]]<<sectionNumber,`sectionNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++The number of the section.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#b]
+=== `b`
++++Positive sequence shunt (charging) susceptance per section.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPhasePoint.b`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Susceptance.adoc[`Susceptance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.b,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#g]
+=== `g`
++++Positive sequence shunt (charging) conductance per section.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPhasePoint.g`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Conductance.adoc[`Conductance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.g,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#NonlinearShuntCompensatorPhase]
+=== `NonlinearShuntCompensatorPhase`
++++Non-linear shunt compensator phase owning this point.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPhasePoint.NonlinearShuntCompensatorPhase`
+| Cardinality
+| 1
+| Type
+| xref::class/NonlinearShuntCompensatorPhase.adoc[`NonlinearShuntCompensatorPhase`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.NonlinearShuntCompensatorPhase,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sectionNumber]
+=== `sectionNumber`
++++The number of the section.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPhasePoint.sectionNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sectionNumber,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/NonlinearShuntCompensatorPhase.adoc[`NonlinearShuntCompensatorPhase`] | xref::class/NonlinearShuntCompensatorPhase.adoc#NonlinearShuntCompensatorPhasePoints[`NonlinearShuntCompensatorPhasePoints`]
+
+
+|===
+

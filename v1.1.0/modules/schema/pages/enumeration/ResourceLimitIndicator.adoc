@@ -1,0 +1,52 @@
+= `ResourceLimitIndicator`
+:toclevels: 4
+
+
++++Locational AS Flags indicating whether the Upper or Lower Bound limit of the AS regional procurement is binding.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ResourceLimitIndicator`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `LOWER`
+| `cim:ResourceLimitIndicator.LOWER`
+| n/a
+
+| `UPPER`
+| `cim:ResourceLimitIndicator.UPPER`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketRegionResults.adoc[`MarketRegionResults`] | xref::class/MarketRegionResults.adoc#limitFlag[`limitFlag`]
+
+
+|===
+

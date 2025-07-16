@@ -1,0 +1,160 @@
+= `BranchGroupTerminal`
+:toclevels: 4
+
+
++++A specific directed terminal flow for a branch group.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:BranchGroupTerminal`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`BranchGroupTerminal`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<BranchGroup,`BranchGroup`>>
+//| [[slots_table.BranchGroup]]<<BranchGroup,`BranchGroup`>>
+| 1 +
+xref::class/BranchGroup.adoc[`BranchGroup`]
+| +++The branch group to which the directed branch group terminals belong.+++
+| _n/a_
+
+| <<Terminal,`Terminal`>>
+//| [[slots_table.Terminal]]<<Terminal,`Terminal`>>
+| 1 +
+xref::class/Terminal.adoc[`Terminal`]
+| +++The terminal to be summed.+++
+| _n/a_
+
+| <<positiveFlowIn,`positiveFlowIn`>>
+//| [[slots_table.positiveFlowIn]]<<positiveFlowIn,`positiveFlowIn`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++The flow into the terminal is summed if set true.   The flow out of the terminal is summed if set false.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#BranchGroup]
+=== `BranchGroup`
++++The branch group to which the directed branch group terminals belong.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchGroupTerminal.BranchGroup`
+| Cardinality
+| 1
+| Type
+| xref::class/BranchGroup.adoc[`BranchGroup`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.BranchGroup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#positiveFlowIn]
+=== `positiveFlowIn`
++++The flow into the terminal is summed if set true.   The flow out of the terminal is summed if set false.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchGroupTerminal.positiveFlowIn`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.positiveFlowIn,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Terminal]
+=== `Terminal`
++++The terminal to be summed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchGroupTerminal.Terminal`
+| Cardinality
+| 1
+| Type
+| xref::class/Terminal.adoc[`Terminal`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Terminal,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/BranchGroup.adoc[`BranchGroup`] | xref::class/BranchGroup.adoc#BranchGroupTerminal[`BranchGroupTerminal`]
+
+
+
+| xref::class/Terminal.adoc[`Terminal`] | xref::class/Terminal.adoc#BranchGroupTerminal[`BranchGroupTerminal`]
+
+
+|===
+

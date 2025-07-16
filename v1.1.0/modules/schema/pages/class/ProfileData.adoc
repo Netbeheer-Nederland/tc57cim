@@ -1,0 +1,321 @@
+= `ProfileData`
+:toclevels: 4
+
+
++++Data for profile.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ProfileData`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ProfileData`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Profile,`Profile`>>
+//| [[slots_table.Profile]]<<Profile,`Profile`>>
+| 0..* +
+xref::class/Profile.adoc[`Profile`]
+| +++A profile has profile data associated with it.+++
+| _n/a_
+
+| <<bidPrice,`bidPrice`>>
+//| [[slots_table.bidPrice]]<<bidPrice,`bidPrice`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Bid price associated with contract+++
+| _n/a_
+
+| <<capacityLevel,`capacityLevel`>>
+//| [[slots_table.capacityLevel]]<<capacityLevel,`capacityLevel`>>
+| 0..1 +
+xref::class/ActivePower.adoc[`ActivePower`]
+| +++Capacity level for the profile, in MW.+++
+| _n/a_
+
+| <<energyLevel,`energyLevel`>>
+//| [[slots_table.energyLevel]]<<energyLevel,`energyLevel`>>
+| 0..1 +
+xref::class/RealEnergy.adoc[`RealEnergy`]
+| +++Energy level for the profile, in MWH.+++
+| _n/a_
+
+| <<minimumLevel,`minimumLevel`>>
+//| [[slots_table.minimumLevel]]<<minimumLevel,`minimumLevel`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Minimum MW value of contract+++
+| _n/a_
+
+| <<sequenceNumber,`sequenceNumber`>>
+//| [[slots_table.sequenceNumber]]<<sequenceNumber,`sequenceNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Sequence to provide item numbering for the profile. { greater than or equal to 1 }+++
+| _n/a_
+
+| <<startDateTime,`startDateTime`>>
+//| [[slots_table.startDateTime]]<<startDateTime,`startDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Start date/time for this profile.+++
+| _n/a_
+
+| <<stopDateTime,`stopDateTime`>>
+//| [[slots_table.stopDateTime]]<<stopDateTime,`stopDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Stop date/time for this profile.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#bidPrice]
+=== `bidPrice`
++++Bid price associated with contract+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProfileData.bidPrice`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bidPrice,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#capacityLevel]
+=== `capacityLevel`
++++Capacity level for the profile, in MW.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProfileData.capacityLevel`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.capacityLevel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#energyLevel]
+=== `energyLevel`
++++Energy level for the profile, in MWH.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProfileData.energyLevel`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RealEnergy.adoc[`RealEnergy`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.energyLevel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minimumLevel]
+=== `minimumLevel`
++++Minimum MW value of contract+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProfileData.minimumLevel`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minimumLevel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Profile]
+=== `Profile`
++++A profile has profile data associated with it.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProfileData.Profile`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Profile.adoc[`Profile`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Profile,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sequenceNumber]
+=== `sequenceNumber`
++++Sequence to provide item numbering for the profile. { greater than or equal to 1 }+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProfileData.sequenceNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sequenceNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startDateTime]
+=== `startDateTime`
++++Start date/time for this profile.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProfileData.startDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#stopDateTime]
+=== `stopDateTime`
++++Stop date/time for this profile.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProfileData.stopDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.stopDateTime,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Profile.adoc[`Profile`] | xref::class/Profile.adoc#ProfileDatas[`ProfileDatas`]
+
+
+|===
+

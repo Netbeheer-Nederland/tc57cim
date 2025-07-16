@@ -1,0 +1,84 @@
+= `TempEquipActionKind`
+:toclevels: 4
+
+
++++Kind of action on temporary equipment (such as cut, jumper, ground, energy source).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TempEquipActionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `connect`
+| `cim:TempEquipActionKind.connect`
+| n/a
+
+| `disconnect`
+| `cim:TempEquipActionKind.disconnect`
+| n/a
+
+| `place`
+| `cim:TempEquipActionKind.place`
+| n/a
+
+| `remove`
+| `cim:TempEquipActionKind.remove`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ClampAction.adoc[`ClampAction`] | xref::class/ClampAction.adoc#kind[`kind`]
+
+
+
+| xref::class/CutAction.adoc[`CutAction`] | xref::class/CutAction.adoc#kind[`kind`]
+
+
+
+| xref::class/EnergyConsumerAction.adoc[`EnergyConsumerAction`] | xref::class/EnergyConsumerAction.adoc#kind[`kind`]
+
+
+
+| xref::class/EnergySourceAction.adoc[`EnergySourceAction`] | xref::class/EnergySourceAction.adoc#kind[`kind`]
+
+
+
+| xref::class/GroundAction.adoc[`GroundAction`] | xref::class/GroundAction.adoc#kind[`kind`]
+
+
+
+| xref::class/JumperAction.adoc[`JumperAction`] | xref::class/JumperAction.adoc#kind[`kind`]
+
+
+
+| xref::class/ShuntCompensatorAction.adoc[`ShuntCompensatorAction`] | xref::class/ShuntCompensatorAction.adoc#kind[`kind`]
+
+
+|===
+

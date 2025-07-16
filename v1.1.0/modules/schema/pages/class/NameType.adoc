@@ -1,0 +1,194 @@
+= `NameType`
+:toclevels: 4
+
+
++++Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName as defined in CIM version 14. The definition from CIM14 is:
+The localName is a human readable name of the object. It is a free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:NameType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`NameType`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<NameTypeAuthority,`NameTypeAuthority`>>
+//| [[slots_table.NameTypeAuthority]]<<NameTypeAuthority,`NameTypeAuthority`>>
+| 0..1 +
+xref::class/NameTypeAuthority.adoc[`NameTypeAuthority`]
+| +++Authority responsible for managing names of this type.+++
+| _n/a_
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this type.+++
+| _n/a_
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Description of the name type.+++
+| _n/a_
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of the name type.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#description]
+=== `description`
++++Description of the name type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NameType.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++Name of the name type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NameType.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NameType.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#NameTypeAuthority]
+=== `NameTypeAuthority`
++++Authority responsible for managing names of this type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NameType.NameTypeAuthority`
+| Cardinality
+| 0..1
+| Type
+| xref::class/NameTypeAuthority.adoc[`NameTypeAuthority`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.NameTypeAuthority,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Name.adoc[`Name`] | xref::class/Name.adoc#NameType[`NameType`]
+
+
+
+| xref::class/NameTypeAuthority.adoc[`NameTypeAuthority`] | xref::class/NameTypeAuthority.adoc#NameTypes[`NameTypes`]
+
+
+|===
+

@@ -1,0 +1,778 @@
+= `VsCapabilityCurve`
+:toclevels: 4
+
+
++++The P-Q capability curve for a voltage source converter, with P on X-axis and Qmin and Qmax on Y1-axis and Y2-axis.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:VsCapabilityCurve`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Curve.adoc[`Curve`]
+*** *`VsCapabilityCurve`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<VsConverterDCSides,`VsConverterDCSides`>>
+//| [[slots_table.VsConverterDCSides]]<<VsConverterDCSides,`VsConverterDCSides`>>
+| 0..* +
+xref::class/VsConverter.adoc[`VsConverter`]
+| +++All converters with this capability curve.+++
+| _n/a_
+
+| <<CurveDatas,`CurveDatas`>>
+//| [[slots_table.CurveDatas]]<<CurveDatas,`CurveDatas`>>
+| 0..* +
+xref::class/CurveData.adoc[`CurveData`]
+| +++The point data values that define this curve.+++
+| xref::class/Curve.adoc[`Curve`]
+
+| <<curveStyle,`curveStyle`>>
+//| [[slots_table.curveStyle]]<<curveStyle,`curveStyle`>>
+| 0..1 +
+xref::enumeration/CurveStyle.adoc[`CurveStyle`]
+| +++The style or shape of the curve.+++
+| xref::class/Curve.adoc[`Curve`]
+
+| <<xMultiplier,`xMultiplier`>>
+//| [[slots_table.xMultiplier]]<<xMultiplier,`xMultiplier`>>
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++Multiplier for X-axis.+++
+| xref::class/Curve.adoc[`Curve`]
+
+| <<xUnit,`xUnit`>>
+//| [[slots_table.xUnit]]<<xUnit,`xUnit`>>
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+| +++The X-axis units of measure.+++
+| xref::class/Curve.adoc[`Curve`]
+
+| <<y1Multiplier,`y1Multiplier`>>
+//| [[slots_table.y1Multiplier]]<<y1Multiplier,`y1Multiplier`>>
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++Multiplier for Y1-axis.+++
+| xref::class/Curve.adoc[`Curve`]
+
+| <<y1Unit,`y1Unit`>>
+//| [[slots_table.y1Unit]]<<y1Unit,`y1Unit`>>
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+| +++The Y1-axis units of measure.+++
+| xref::class/Curve.adoc[`Curve`]
+
+| <<y2Multiplier,`y2Multiplier`>>
+//| [[slots_table.y2Multiplier]]<<y2Multiplier,`y2Multiplier`>>
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++Multiplier for Y2-axis.+++
+| xref::class/Curve.adoc[`Curve`]
+
+| <<y2Unit,`y2Unit`>>
+//| [[slots_table.y2Unit]]<<y2Unit,`y2Unit`>>
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+| +++The Y2-axis units of measure.+++
+| xref::class/Curve.adoc[`Curve`]
+
+| <<y3Multiplier,`y3Multiplier`>>
+//| [[slots_table.y3Multiplier]]<<y3Multiplier,`y3Multiplier`>>
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++Multiplier for Y3-axis.+++
+| xref::class/Curve.adoc[`Curve`]
+
+| <<y3Unit,`y3Unit`>>
+//| [[slots_table.y3Unit]]<<y3Unit,`y3Unit`>>
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+| +++The Y3-axis units of measure.+++
+| xref::class/Curve.adoc[`Curve`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CurveDatas]
+=== `CurveDatas`
++++The point data values that define this curve.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Curve.CurveDatas`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CurveData.adoc[`CurveData`]
+
+| Inherited from
+| xref::class/Curve.adoc[`Curve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CurveDatas,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#curveStyle]
+=== `curveStyle`
++++The style or shape of the curve.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Curve.curveStyle`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/CurveStyle.adoc[`CurveStyle`]
+
+| Inherited from
+| xref::class/Curve.adoc[`Curve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.curveStyle,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VsConverterDCSides]
+=== `VsConverterDCSides`
++++All converters with this capability curve.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:VsCapabilityCurve.VsConverterDCSides`
+| Cardinality
+| 0..*
+| Type
+| xref::class/VsConverter.adoc[`VsConverter`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VsConverterDCSides,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#xMultiplier]
+=== `xMultiplier`
++++Multiplier for X-axis.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Curve.xMultiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+| Inherited from
+| xref::class/Curve.adoc[`Curve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.xMultiplier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#xUnit]
+=== `xUnit`
++++The X-axis units of measure.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Curve.xUnit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+
+| Inherited from
+| xref::class/Curve.adoc[`Curve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.xUnit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#y1Multiplier]
+=== `y1Multiplier`
++++Multiplier for Y1-axis.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Curve.y1Multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+| Inherited from
+| xref::class/Curve.adoc[`Curve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.y1Multiplier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#y1Unit]
+=== `y1Unit`
++++The Y1-axis units of measure.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Curve.y1Unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+
+| Inherited from
+| xref::class/Curve.adoc[`Curve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.y1Unit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#y2Multiplier]
+=== `y2Multiplier`
++++Multiplier for Y2-axis.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Curve.y2Multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+| Inherited from
+| xref::class/Curve.adoc[`Curve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.y2Multiplier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#y2Unit]
+=== `y2Unit`
++++The Y2-axis units of measure.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Curve.y2Unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+
+| Inherited from
+| xref::class/Curve.adoc[`Curve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.y2Unit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#y3Multiplier]
+=== `y3Multiplier`
++++Multiplier for Y3-axis.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Curve.y3Multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+| Inherited from
+| xref::class/Curve.adoc[`Curve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.y3Multiplier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#y3Unit]
+=== `y3Unit`
++++The Y3-axis units of measure.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Curve.y3Unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+
+| Inherited from
+| xref::class/Curve.adoc[`Curve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.y3Unit,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/VsConverter.adoc[`VsConverter`] | xref::class/VsConverter.adoc#CapabilityCurve[`CapabilityCurve`]
+
+
+|===
+

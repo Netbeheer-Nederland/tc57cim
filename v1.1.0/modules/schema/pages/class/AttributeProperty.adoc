@@ -1,0 +1,189 @@
+= `AttributeProperty`
+:toclevels: 4
+
+
++++Property for a particular attribute that contains name and value.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AttributeProperty`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`AttributeProperty`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MktUserAttribute,`MktUserAttribute`>>
+//| [[slots_table.MktUserAttribute]]<<MktUserAttribute,`MktUserAttribute`>>
+| 1 +
+xref::class/MktUserAttribute.adoc[`MktUserAttribute`]
+| _n/a_
+| _n/a_
+
+| <<propertyName,`propertyName`>>
+//| [[slots_table.propertyName]]<<propertyName,`propertyName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+
+| <<propertyValue,`propertyValue`>>
+//| [[slots_table.propertyValue]]<<propertyValue,`propertyValue`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+
+| <<sequence,`sequence`>>
+//| [[slots_table.sequence]]<<sequence,`sequence`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#MktUserAttribute]
+=== `MktUserAttribute`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AttributeProperty.MktUserAttribute`
+| Cardinality
+| 1
+| Type
+| xref::class/MktUserAttribute.adoc[`MktUserAttribute`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktUserAttribute,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#propertyName]
+=== `propertyName`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AttributeProperty.propertyName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.propertyName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#propertyValue]
+=== `propertyValue`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AttributeProperty.propertyValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.propertyValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sequence]
+=== `sequence`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AttributeProperty.sequence`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sequence,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MktUserAttribute.adoc[`MktUserAttribute`] | xref::class/MktUserAttribute.adoc#AttributeProperty[`AttributeProperty`]
+
+
+|===
+

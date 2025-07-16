@@ -1,0 +1,226 @@
+= `AttributeInstanceComponent`
+:toclevels: 4
+
+
++++A class used to provide information about an attribute.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AttributeInstanceComponent`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`AttributeInstanceComponent`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MarketDocument,`MarketDocument`>>
+//| [[slots_table.MarketDocument]]<<MarketDocument,`MarketDocument`>>
+| 0..* +
+xref::class/MarketDocument.adoc[`MarketDocument`]
+| _n/a_
+| _n/a_
+
+| <<TimeSeries,`TimeSeries`>>
+//| [[slots_table.TimeSeries]]<<TimeSeries,`TimeSeries`>>
+| 0..* +
+xref::class/TimeSeries.adoc[`TimeSeries`]
+| _n/a_
+| _n/a_
+
+| <<attribute,`attribute`>>
+//| [[slots_table.attribute]]<<attribute,`attribute`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The identification of the formal name of an attribute.+++
+| _n/a_
+
+| <<attributeValue,`attributeValue`>>
+//| [[slots_table.attributeValue]]<<attributeValue,`attributeValue`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The instance value of the attribute.+++
+| _n/a_
+
+| <<position,`position`>>
+//| [[slots_table.position]]<<position,`position`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++A sequential value representing a relative sequence number.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#attribute]
+=== `attribute`
++++The identification of the formal name of an attribute.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AttributeInstanceComponent.attribute`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.attribute,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#attributeValue]
+=== `attributeValue`
++++The instance value of the attribute.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AttributeInstanceComponent.attributeValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.attributeValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketDocument]
+=== `MarketDocument`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AttributeInstanceComponent.MarketDocument`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketDocument,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#position]
+=== `position`
++++A sequential value representing a relative sequence number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AttributeInstanceComponent.position`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.position,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AttributeInstanceComponent.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TimeSeries,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketDocument.adoc[`MarketDocument`] | xref::class/MarketDocument.adoc#AttributeInstanceComponent[`AttributeInstanceComponent`]
+
+
+
+| xref::class/TimeSeries.adoc[`TimeSeries`] | xref::class/TimeSeries.adoc#AttributeInstanceComponent[`AttributeInstanceComponent`]
+
+
+|===
+

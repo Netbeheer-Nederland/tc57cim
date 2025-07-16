@@ -1,0 +1,808 @@
+= `EndDeviceGroup`
+:toclevels: 4
+
+
++++Abstraction for management of group communications within a two-way AMR system or the data for a group of related end devices. Commands can be issued to all of the end devices that belong to the group using a defined group address and the underlying AMR communication infrastructure. A DERGroup and a PANDeviceGroup is an EndDeviceGroup.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EndDeviceGroup`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`EndDeviceGroup`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<DER Function,`DER Function`>>
+//| [[slots_table.DER Function]]<<DER Function,`DER Function`>>
+| 0..* +
+xref::class/DERFunction.adoc[`DERFunction`]
+| +++The DER functions that are applied to the DER Group.+++
+| _n/a_
+
+| <<DERFunction,`DERFunction`>>
+//| [[slots_table.DERFunction]]<<DERFunction,`DERFunction`>>
+| 0..1 +
+xref::class/DERFunction.adoc[`DERFunction`]
+| +++Functions supported by the DER Group+++
+| _n/a_
+
+| <<DERGroupDispatch,`DERGroupDispatch`>>
+//| [[slots_table.DERGroupDispatch]]<<DERGroupDispatch,`DERGroupDispatch`>>
+| 0..* +
+xref::class/DERGroupDispatch.adoc[`DERGroupDispatch`]
+| +++An individual dispatch for a DER Group.+++
+| _n/a_
+
+| <<DERGroupForecast,`DERGroupForecast`>>
+//| [[slots_table.DERGroupForecast]]<<DERGroupForecast,`DERGroupForecast`>>
+| 1..* +
+xref::class/DERGroupForecast.adoc[`DERGroupForecast`]
+| +++An individual forecast for a DER Group.+++
+| _n/a_
+
+| <<DERMonitorableParameter,`DERMonitorableParameter`>>
+//| [[slots_table.DERMonitorableParameter]]<<DERMonitorableParameter,`DERMonitorableParameter`>>
+| 0..* +
+xref::class/DERMonitorableParameter.adoc[`DERMonitorableParameter`]
+| +++The DER monitorable parameters associated with a DER Group.+++
+| _n/a_
+
+| <<DemandResponsePrograms,`DemandResponsePrograms`>>
+//| [[slots_table.DemandResponsePrograms]]<<DemandResponsePrograms,`DemandResponsePrograms`>>
+| 0..* +
+xref::class/DemandResponseProgram.adoc[`DemandResponseProgram`]
+| +++All demand response programs this group of end devices is enrolled in.+++
+| _n/a_
+
+| <<EndDeviceControls,`EndDeviceControls`>>
+//| [[slots_table.EndDeviceControls]]<<EndDeviceControls,`EndDeviceControls`>>
+| 0..* +
+xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+| +++All end device controls sending commands to this end device group.+++
+| _n/a_
+
+| <<EndDevices,`EndDevices`>>
+//| [[slots_table.EndDevices]]<<EndDevices,`EndDevices`>>
+| 0..* +
+xref::class/EndDevice.adoc[`EndDevice`]
+| +++All end devices this end device group refers to.+++
+| _n/a_
+
+| <<MeterReadSchedule,`MeterReadSchedule`>>
+//| [[slots_table.MeterReadSchedule]]<<MeterReadSchedule,`MeterReadSchedule`>>
+| 0..1 +
+xref::class/MeterReadSchedule.adoc[`MeterReadSchedule`]
+| +++Meter read schedule that applies to the end device group+++
+| _n/a_
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| +++Current status information relevant to a group.+++
+| _n/a_
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Type of this group.+++
+| _n/a_
+
+| <<version,`version`>>
+//| [[slots_table.version]]<<version,`version`>>
+| 0..1 +
+xref::class/Version.adoc[`Version`]
+| +++version of this group+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DemandResponsePrograms]
+=== `DemandResponsePrograms`
++++All demand response programs this group of end devices is enrolled in.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceGroup.DemandResponsePrograms`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DemandResponseProgram.adoc[`DemandResponseProgram`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DemandResponsePrograms,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DER Function]
+=== `DER Function`
++++The DER functions that are applied to the DER Group.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceGroup.DER%20Function`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DERFunction.adoc[`DERFunction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DER Function,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DERFunction]
+=== `DERFunction`
++++Functions supported by the DER Group+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceGroup.DERFunction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DERFunction.adoc[`DERFunction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DERFunction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DERGroupDispatch]
+=== `DERGroupDispatch`
++++An individual dispatch for a DER Group.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceGroup.DERGroupDispatch`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DERGroupDispatch.adoc[`DERGroupDispatch`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DERGroupDispatch,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DERGroupForecast]
+=== `DERGroupForecast`
++++An individual forecast for a DER Group.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceGroup.DERGroupForecast`
+| Cardinality
+| 1..*
+| Type
+| xref::class/DERGroupForecast.adoc[`DERGroupForecast`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DERGroupForecast,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DERMonitorableParameter]
+=== `DERMonitorableParameter`
++++The DER monitorable parameters associated with a DER Group.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceGroup.DERMonitorableParameter`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DERMonitorableParameter.adoc[`DERMonitorableParameter`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DERMonitorableParameter,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EndDeviceControls]
+=== `EndDeviceControls`
++++All end device controls sending commands to this end device group.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceGroup.EndDeviceControls`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EndDeviceControls,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EndDevices]
+=== `EndDevices`
++++All end devices this end device group refers to.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceGroup.EndDevices`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EndDevice.adoc[`EndDevice`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EndDevices,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MeterReadSchedule]
+=== `MeterReadSchedule`
++++Meter read schedule that applies to the end device group+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceGroup.MeterReadSchedule`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MeterReadSchedule.adoc[`MeterReadSchedule`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MeterReadSchedule,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++Current status information relevant to a group.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceGroup.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++Type of this group.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceGroup.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#version]
+=== `version`
++++version of this group+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceGroup.version`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Version.adoc[`Version`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.version,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/DemandResponseProgram.adoc[`DemandResponseProgram`] | xref::class/DemandResponseProgram.adoc#EndDeviceGroups[`EndDeviceGroups`]
+
+
+
+| xref::class/DERFunction.adoc[`DERFunction`] | xref::class/DERFunction.adoc#EndDeviceGroup[`EndDeviceGroup`]
+
+
+
+| xref::class/DERGroupDispatch.adoc[`DERGroupDispatch`] | xref::class/DERGroupDispatch.adoc#EndDeviceGroup[`EndDeviceGroup`]
+
+
+
+| xref::class/DERGroupForecast.adoc[`DERGroupForecast`] | xref::class/DERGroupForecast.adoc#EndDeviceGroup[`EndDeviceGroup`]
+
+
+
+| xref::class/DERMonitorableParameter.adoc[`DERMonitorableParameter`] | xref::class/DERMonitorableParameter.adoc#EndDeviceGroup[`EndDeviceGroup`]
+
+
+
+| xref::class/EndDevice.adoc[`EndDevice`] | xref::class/EndDevice.adoc#EndDeviceGroups[`EndDeviceGroups`]
+
+
+
+| xref::class/EndDeviceControl.adoc[`EndDeviceControl`] | xref::class/EndDeviceControl.adoc#EndDeviceGroups[`EndDeviceGroups`]
+
+
+
+| xref::class/MeterReadSchedule.adoc[`MeterReadSchedule`] | xref::class/MeterReadSchedule.adoc#EndDeviceGroup[`EndDeviceGroup`]
+
+
+|===
+

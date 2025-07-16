@@ -1,0 +1,60 @@
+= `ExecutionType`
+:toclevels: 4
+
+
++++Execution types of Market Runs.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ExecutionType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `DA`
+| `cim:ExecutionType.DA`
+| n/a
+
+| `HASP`
+| `cim:ExecutionType.HASP`
+| n/a
+
+| `RTD`
+| `cim:ExecutionType.RTD`
+| n/a
+
+| `RTPD`
+| `cim:ExecutionType.RTPD`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketRun.adoc[`MarketRun`] | xref::class/MarketRun.adoc#executionType[`executionType`]
+
+
+|===
+

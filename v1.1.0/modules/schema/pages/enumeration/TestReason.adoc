@@ -1,0 +1,60 @@
+= `TestReason`
+:toclevels: 4
+
+
++++Reason for test.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TestReason`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `postOilTreatment`
+| `cim:TestReason.postOilTreatment`
+| n/a
+
+| `postOperationFault`
+| `cim:TestReason.postOperationFault`
+| n/a
+
+| `postRepair`
+| `cim:TestReason.postRepair`
+| n/a
+
+| `routine`
+| `cim:TestReason.routine`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/LabTestDataSet.adoc[`LabTestDataSet`] | xref::class/LabTestDataSet.adoc#reasonForTest[`reasonForTest`]
+
+
+|===
+

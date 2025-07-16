@@ -1,0 +1,222 @@
+= `LoadFollowingInst`
+:toclevels: 4
+
+
++++Metered SubSystem Load Following Instruction.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:LoadFollowingInst`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`LoadFollowingInst`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<endTime,`endTime`>>
+//| [[slots_table.endTime]]<<endTime,`endTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Instruction End Time+++
+| _n/a_
+
+| <<loadFollowingMW,`loadFollowingMW`>>
+//| [[slots_table.loadFollowingMW]]<<loadFollowingMW,`loadFollowingMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Load Following MW Positive for follow-up and negative for follow-down+++
+| _n/a_
+
+| <<mssInstructionID,`mssInstructionID`>>
+//| [[slots_table.mssInstructionID]]<<mssInstructionID,`mssInstructionID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Unique instruction id per instruction, assigned by the SC and provided to ADS. ADS passes through.+++
+| _n/a_
+
+| <<startTime,`startTime`>>
+//| [[slots_table.startTime]]<<startTime,`startTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Instruction Start Time+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#endTime]
+=== `endTime`
++++Instruction End Time+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadFollowingInst.endTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.endTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#loadFollowingMW]
+=== `loadFollowingMW`
++++Load Following MW Positive for follow-up and negative for follow-down+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadFollowingInst.loadFollowingMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.loadFollowingMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mssInstructionID]
+=== `mssInstructionID`
++++Unique instruction id per instruction, assigned by the SC and provided to ADS. ADS passes through.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadFollowingInst.mssInstructionID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mssInstructionID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadFollowingInst.RegisteredResource`
+| Cardinality
+| 1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startTime]
+=== `startTime`
++++Instruction Start Time+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadFollowingInst.startTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startTime,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#LoadFollowingInst[`LoadFollowingInst`]
+
+
+|===
+

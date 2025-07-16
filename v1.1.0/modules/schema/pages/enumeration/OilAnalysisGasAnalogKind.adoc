@@ -1,0 +1,144 @@
+= `OilAnalysisGasAnalogKind`
+:toclevels: 4
+
+
++++Analogs representing oil dissolved gas analysis result.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OilAnalysisGasAnalogKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `acetylene`
+| `cim:OilAnalysisGasAnalogKind.acetylene`
+| n/a
+
+| `butane`
+| `cim:OilAnalysisGasAnalogKind.butane`
+| n/a
+
+| `carbon`
+| `cim:OilAnalysisGasAnalogKind.carbon`
+| n/a
+
+| `carbon3`
+| `cim:OilAnalysisGasAnalogKind.carbon3`
+| n/a
+
+| `carbon4`
+| `cim:OilAnalysisGasAnalogKind.carbon4`
+| n/a
+
+| `carbonDioxide`
+| `cim:OilAnalysisGasAnalogKind.carbonDioxide`
+| n/a
+
+| `carbonMonoxide`
+| `cim:OilAnalysisGasAnalogKind.carbonMonoxide`
+| n/a
+
+| `equivalentTCGPercent`
+| `cim:OilAnalysisGasAnalogKind.equivalentTCGPercent`
+| n/a
+
+| `estimatedSafeHandlingLimit`
+| `cim:OilAnalysisGasAnalogKind.estimatedSafeHandlingLimit`
+| n/a
+
+| `ethane`
+| `cim:OilAnalysisGasAnalogKind.ethane`
+| n/a
+
+| `ethylene`
+| `cim:OilAnalysisGasAnalogKind.ethylene`
+| n/a
+
+| `hydran`
+| `cim:OilAnalysisGasAnalogKind.hydran`
+| n/a
+
+| `hydranPredicted`
+| `cim:OilAnalysisGasAnalogKind.hydranPredicted`
+| n/a
+
+| `hydrogen`
+| `cim:OilAnalysisGasAnalogKind.hydrogen`
+| n/a
+
+| `isobutane`
+| `cim:OilAnalysisGasAnalogKind.isobutane`
+| n/a
+
+| `methane`
+| `cim:OilAnalysisGasAnalogKind.methane`
+| n/a
+
+| `nitrogen`
+| `cim:OilAnalysisGasAnalogKind.nitrogen`
+| n/a
+
+| `oxygen`
+| `cim:OilAnalysisGasAnalogKind.oxygen`
+| n/a
+
+| `propane`
+| `cim:OilAnalysisGasAnalogKind.propane`
+| n/a
+
+| `propene`
+| `cim:OilAnalysisGasAnalogKind.propene`
+| n/a
+
+| `totalCombustibleGasPercent`
+| `cim:OilAnalysisGasAnalogKind.totalCombustibleGasPercent`
+| n/a
+
+| `totalDissolvedCombustibleGas`
+| `cim:OilAnalysisGasAnalogKind.totalDissolvedCombustibleGas`
+| n/a
+
+| `totalDissolvedGasPercent`
+| `cim:OilAnalysisGasAnalogKind.totalDissolvedGasPercent`
+| n/a
+
+| `totalHeatGas`
+| `cim:OilAnalysisGasAnalogKind.totalHeatGas`
+| n/a
+
+| `totalPartialPressure`
+| `cim:OilAnalysisGasAnalogKind.totalPartialPressure`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/OilAnalysisGasAnalog.adoc[`OilAnalysisGasAnalog`] | xref::class/OilAnalysisGasAnalog.adoc#kind[`kind`]
+
+
+|===
+

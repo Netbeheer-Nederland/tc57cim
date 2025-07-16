@@ -1,0 +1,60 @@
+= `CleanTradeProductType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CleanTradeProductType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `APN`
+| `cim:CleanTradeProductType.APN`
+| n/a
+
+| `CPT`
+| `cim:CleanTradeProductType.CPT`
+| n/a
+
+| `NRT`
+| `cim:CleanTradeProductType.NRT`
+| n/a
+
+| `PHY`
+| `cim:CleanTradeProductType.PHY`
+| n/a
+
+| `RDT`
+| `cim:CleanTradeProductType.RDT`
+| n/a
+
+| `RUT`
+| `cim:CleanTradeProductType.RUT`
+| n/a
+
+| `SRT`
+| `cim:CleanTradeProductType.SRT`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

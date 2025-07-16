@@ -1,0 +1,156 @@
+= `SchedulingCoordinatorUser`
+:toclevels: 4
+
+
++++Describing users of a Scheduling Coordinator.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SchedulingCoordinatorUser`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`SchedulingCoordinatorUser`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<SchedulingCoordinator,`SchedulingCoordinator`>>
+//| [[slots_table.SchedulingCoordinator]]<<SchedulingCoordinator,`SchedulingCoordinator`>>
+| 1 +
+xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+| _n/a_
+| _n/a_
+
+| <<loginID,`loginID`>>
+//| [[slots_table.loginID]]<<loginID,`loginID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Login ID+++
+| _n/a_
+
+| <<loginRole,`loginRole`>>
+//| [[slots_table.loginRole]]<<loginRole,`loginRole`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Assigned roles (these are roles with either Read or Read/Write privileges on different Market Systems)+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#loginID]
+=== `loginID`
++++Login ID+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SchedulingCoordinatorUser.loginID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.loginID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#loginRole]
+=== `loginRole`
++++Assigned roles (these are roles with either Read or Read/Write privileges on different Market Systems)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SchedulingCoordinatorUser.loginRole`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.loginRole,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SchedulingCoordinator]
+=== `SchedulingCoordinator`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SchedulingCoordinatorUser.SchedulingCoordinator`
+| Cardinality
+| 1
+| Type
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SchedulingCoordinator,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`] | xref::class/SchedulingCoordinator.adoc#SchedulingCoordinatorUser[`SchedulingCoordinatorUser`]
+
+
+|===
+

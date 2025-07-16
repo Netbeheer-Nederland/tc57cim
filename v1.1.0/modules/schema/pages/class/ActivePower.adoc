@@ -1,0 +1,450 @@
+= `ActivePower`
+:toclevels: 4
+
+
++++Product of RMS value of the voltage and the RMS value of the in-phase component of the current.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:ActivePower`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:ActivePower.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:ActivePower.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:ActivePower.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ACDCConverter.adoc[`ACDCConverter`] | xref::class/ACDCConverter.adoc#targetPpcc[`targetPpcc`]
+
+
+
+| xref::class/ActivePowerLimit.adoc[`ActivePowerLimit`] | xref::class/ActivePowerLimit.adoc#value[`value`]
+
+
+
+| xref::class/AreaReserveSpec.adoc[`AreaReserveSpec`] | xref::class/AreaReserveSpec.adoc#spinningReserveReqt[`spinningReserveReqt`]
+
+
+
+| xref::class/AsynchronousMachine.adoc[`AsynchronousMachine`] | xref::class/AsynchronousMachine.adoc#ratedMechanicalPower[`ratedMechanicalPower`]
+
+
+
+| xref::class/BlockDispatchOrder.adoc[`BlockDispatchOrder`] | xref::class/BlockDispatchOrder.adoc#p[`p`]
+
+
+
+| xref::class/BranchGroup.adoc[`BranchGroup`] | xref::class/BranchGroup.adoc#minimumActivePower[`minimumActivePower`]
+
+
+
+| xref::class/CAESPlant.adoc[`CAESPlant`] | xref::class/CAESPlant.adoc#ratedCapacityP[`ratedCapacityP`]
+
+
+
+| xref::class/CogenerationPlant.adoc[`CogenerationPlant`] | xref::class/CogenerationPlant.adoc#ratedP[`ratedP`]
+
+
+
+| xref::class/CombinedCyclePlant.adoc[`CombinedCyclePlant`] | xref::class/CombinedCyclePlant.adoc#combCyclePlantRating[`combCyclePlantRating`]
+
+
+
+| xref::class/ControlArea.adoc[`ControlArea`] | xref::class/ControlArea.adoc#pTolerance[`pTolerance`]
+
+
+
+| xref::class/CurrentTransformer.adoc[`CurrentTransformer`] | xref::class/CurrentTransformer.adoc#coreBurden[`coreBurden`]
+
+
+
+| xref::class/DispatchInstReply.adoc[`DispatchInstReply`] | xref::class/DispatchInstReply.adoc#clearedMW[`clearedMW`]
+
+
+
+| xref::class/DistributedResourceActualEvent.adoc[`DistributedResourceActualEvent`] | xref::class/DistributedResourceActualEvent.adoc#totalPowerAdjustment[`totalPowerAdjustment`]
+
+
+
+| xref::class/DopInstruction.adoc[`DopInstruction`] | xref::class/DopInstruction.adoc#mwDOP[`mwDOP`]
+
+
+
+| xref::class/EnergyConsumer.adoc[`EnergyConsumer`] | xref::class/EnergyConsumer.adoc#pfixed[`pfixed`]
+
+
+
+| xref::class/EnergyConsumerPhase.adoc[`EnergyConsumerPhase`] | xref::class/EnergyConsumerPhase.adoc#pfixed[`pfixed`]
+
+
+
+| xref::class/EnergyGroup.adoc[`EnergyGroup`] | xref::class/EnergyGroup.adoc#p[`p`]
+
+
+
+| xref::class/EnergySource.adoc[`EnergySource`] | xref::class/EnergySource.adoc#pMin[`pMin`]
+
+
+
+| xref::class/EnergyTransaction.adoc[`EnergyTransaction`] | xref::class/EnergyTransaction.adoc#receiptPointP[`receiptPointP`]
+
+
+
+| xref::class/EquivalentInjection.adoc[`EquivalentInjection`] | xref::class/EquivalentInjection.adoc#p[`p`]
+
+
+
+| xref::class/ExternalNetworkInjection.adoc[`ExternalNetworkInjection`] | xref::class/ExternalNetworkInjection.adoc#p[`p`]
+
+
+
+| xref::class/Flowgate.adoc[`Flowgate`] | xref::class/Flowgate.adoc#importMWRating[`importMWRating`]
+
+
+
+| xref::class/FossilFuel.adoc[`FossilFuel`] | xref::class/FossilFuel.adoc#lowBreakpointP[`lowBreakpointP`]
+
+
+
+| xref::class/FrequencyConverter.adoc[`FrequencyConverter`] | xref::class/FrequencyConverter.adoc#minP[`minP`]
+
+
+
+| xref::class/FTR.adoc[`FTR`] | xref::class/FTR.adoc#baseEnergy[`baseEnergy`]
+
+
+
+| xref::class/GeneralClearingResults.adoc[`GeneralClearingResults`] | xref::class/GeneralClearingResults.adoc#loadForecast[`loadForecast`]
+
+
+
+| xref::class/GeneratingBid.adoc[`GeneratingBid`] | xref::class/GeneratingBid.adoc#minEmergencyMW[`minEmergencyMW`]
+
+
+
+| xref::class/GeneratingUnit.adoc[`GeneratingUnit`] | xref::class/GeneratingUnit.adoc#ratedNetMaxP[`ratedNetMaxP`]
+
+
+
+| xref::class/GeneratorTypeAsset.adoc[`GeneratorTypeAsset`] | xref::class/GeneratorTypeAsset.adoc#minP[`minP`]
+
+
+
+| xref::class/GovCT1.adoc[`GovCT1`] | xref::class/GovCT1.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovCT2.adoc[`GovCT2`] | xref::class/GovCT2.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovGAST.adoc[`GovGAST`] | xref::class/GovGAST.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovGAST1.adoc[`GovGAST1`] | xref::class/GovGAST1.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovGAST2.adoc[`GovGAST2`] | xref::class/GovGAST2.adoc#trate[`trate`]
+
+
+
+| xref::class/GovGASTWD.adoc[`GovGASTWD`] | xref::class/GovGASTWD.adoc#trate[`trate`]
+
+
+
+| xref::class/GovHydro1.adoc[`GovHydro1`] | xref::class/GovHydro1.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovHydro2.adoc[`GovHydro2`] | xref::class/GovHydro2.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovHydro3.adoc[`GovHydro3`] | xref::class/GovHydro3.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovHydro4.adoc[`GovHydro4`] | xref::class/GovHydro4.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovHydroDD.adoc[`GovHydroDD`] | xref::class/GovHydroDD.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovHydroIEEE0.adoc[`GovHydroIEEE0`] | xref::class/GovHydroIEEE0.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovHydroIEEE2.adoc[`GovHydroIEEE2`] | xref::class/GovHydroIEEE2.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovHydroPID.adoc[`GovHydroPID`] | xref::class/GovHydroPID.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovHydroPID2.adoc[`GovHydroPID2`] | xref::class/GovHydroPID2.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovHydroR.adoc[`GovHydroR`] | xref::class/GovHydroR.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovHydroWEH.adoc[`GovHydroWEH`] | xref::class/GovHydroWEH.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovHydroWPID.adoc[`GovHydroWPID`] | xref::class/GovHydroWPID.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovSteam0.adoc[`GovSteam0`] | xref::class/GovSteam0.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovSteam1.adoc[`GovSteam1`] | xref::class/GovSteam1.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovSteamCC.adoc[`GovSteamCC`] | xref::class/GovSteamCC.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovSteamEU.adoc[`GovSteamEU`] | xref::class/GovSteamEU.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovSteamFV2.adoc[`GovSteamFV2`] | xref::class/GovSteamFV2.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovSteamFV3.adoc[`GovSteamFV3`] | xref::class/GovSteamFV3.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovSteamIEEE1.adoc[`GovSteamIEEE1`] | xref::class/GovSteamIEEE1.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/GovSteamSGO.adoc[`GovSteamSGO`] | xref::class/GovSteamSGO.adoc#mwbase[`mwbase`]
+
+
+
+| xref::class/HeatInputCurve.adoc[`HeatInputCurve`] | xref::class/HeatInputCurve.adoc#auxPowerOffset[`auxPowerOffset`]
+
+
+
+| xref::class/HydroPowerPlant.adoc[`HydroPowerPlant`] | xref::class/HydroPowerPlant.adoc#pumpRatedP[`pumpRatedP`]
+
+
+
+| xref::class/HydroPump.adoc[`HydroPump`] | xref::class/HydroPump.adoc#pumpPowerAtMinHead[`pumpPowerAtMinHead`]
+
+
+
+| xref::class/HydroTurbine.adoc[`HydroTurbine`] | xref::class/HydroTurbine.adoc#turbineRating[`turbineRating`]
+
+
+
+| xref::class/LoadBid.adoc[`LoadBid`] | xref::class/LoadBid.adoc#minLoadReduction[`minLoadReduction`]
+
+
+
+| xref::class/OrgPnodeAllocation.adoc[`OrgPnodeAllocation`] | xref::class/OrgPnodeAllocation.adoc#maxMWAllocation[`maxMWAllocation`]
+
+
+
+| xref::class/PowerElectronicsConnection.adoc[`PowerElectronicsConnection`] | xref::class/PowerElectronicsConnection.adoc#p[`p`]
+
+
+
+| xref::class/PowerElectronicsConnectionPhase.adoc[`PowerElectronicsConnectionPhase`] | xref::class/PowerElectronicsConnectionPhase.adoc#p[`p`]
+
+
+
+| xref::class/PowerElectronicsUnit.adoc[`PowerElectronicsUnit`] | xref::class/PowerElectronicsUnit.adoc#minP[`minP`]
+
+
+
+| xref::class/ProfileData.adoc[`ProfileData`] | xref::class/ProfileData.adoc#capacityLevel[`capacityLevel`]
+
+
+
+| xref::class/ProportionalDistributionComponent.adoc[`ProportionalDistributionComponent`] | xref::class/ProportionalDistributionComponent.adoc#distributionFactor[`distributionFactor`]
+
+
+
+| xref::class/RegisteredControllableLoad.adoc[`RegisteredControllableLoad`] | xref::class/RegisteredControllableLoad.adoc#minLoadReduction[`minLoadReduction`]
+
+
+
+| xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`] | xref::class/RegisteredGenerator.adoc#nameplateCapacity[`nameplateCapacity`]
+
+
+
+| xref::class/RegulatingLimit.adoc[`RegulatingLimit`] | xref::class/RegulatingLimit.adoc#lowLimit[`lowLimit`]
+
+
+
+| xref::class/RemoteConnectDisconnectInfo.adoc[`RemoteConnectDisconnectInfo`] | xref::class/RemoteConnectDisconnectInfo.adoc#powerLimit[`powerLimit`]
+
+
+
+| xref::class/RotatingMachine.adoc[`RotatingMachine`] | xref::class/RotatingMachine.adoc#p[`p`]
+
+
+
+| xref::class/ScheduledActivePowerLimitValue.adoc[`ScheduledActivePowerLimitValue`] | xref::class/ScheduledActivePowerLimitValue.adoc#value[`value`]
+
+
+
+| xref::class/SecurityConstraints.adoc[`SecurityConstraints`] | xref::class/SecurityConstraints.adoc#minMW[`minMW`]
+
+
+
+| xref::class/SecurityConstraintsClearing.adoc[`SecurityConstraintsClearing`] | xref::class/SecurityConstraintsClearing.adoc#mwLimit[`mwLimit`]
+
+
+
+| xref::class/StartupModel.adoc[`StartupModel`] | xref::class/StartupModel.adoc#stbyAuxP[`stbyAuxP`]
+
+
+
+| xref::class/Streetlight.adoc[`Streetlight`] | xref::class/Streetlight.adoc#lightRating[`lightRating`]
+
+
+
+| xref::class/SvInjection.adoc[`SvInjection`] | xref::class/SvInjection.adoc#pInjection[`pInjection`]
+
+
+
+| xref::class/SvPowerFlow.adoc[`SvPowerFlow`] | xref::class/SvPowerFlow.adoc#p[`p`]
+
+
+
+| xref::class/SynchronousMachine.adoc[`SynchronousMachine`] | xref::class/SynchronousMachine.adoc#condenserP[`condenserP`]
+
+
+
+| xref::class/TiePoint.adoc[`TiePoint`] | xref::class/TiePoint.adoc#tiePointMWRating[`tiePointMWRating`]
+
+
+
+| xref::class/TopologicalNode.adoc[`TopologicalNode`] | xref::class/TopologicalNode.adoc#pInjection[`pInjection`]
+
+
+
+| xref::class/TransmissionPath.adoc[`TransmissionPath`] | xref::class/TransmissionPath.adoc#totalTransferCapability[`totalTransferCapability`]
+
+
+
+| xref::class/TurbLCFB1.adoc[`TurbLCFB1`] | xref::class/TurbLCFB1.adoc#pmwset[`pmwset`]
+
+
+
+| xref::class/UnitInitialConditions.adoc[`UnitInitialConditions`] | xref::class/UnitInitialConditions.adoc#resourceMW[`resourceMW`]
+
+
+
+| xref::class/UsagePoint.adoc[`UsagePoint`] | xref::class/UsagePoint.adoc#ratedPower[`ratedPower`]
+
+
+|===
+

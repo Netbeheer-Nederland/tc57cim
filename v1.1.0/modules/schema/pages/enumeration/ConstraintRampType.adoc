@@ -1,0 +1,52 @@
+= `ConstraintRampType`
+:toclevels: 4
+
+
++++Constraint Ramp type.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ConstraintRampType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `FAST`
+| `cim:ConstraintRampType.FAST`
+| n/a
+
+| `SLOW`
+| `cim:ConstraintRampType.SLOW`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RampRateCurve.adoc[`RampRateCurve`] | xref::class/RampRateCurve.adoc#constraintRampType[`constraintRampType`]
+
+
+|===
+

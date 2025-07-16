@@ -1,0 +1,197 @@
+= `AceTariffType`
+:toclevels: 4
+
+
++++The Area Control Error tariff type that is applied or used.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AceTariffType`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`AceTariffType`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MarketDocument,`MarketDocument`>>
+//| [[slots_table.MarketDocument]]<<MarketDocument,`MarketDocument`>>
+| 0..* +
+xref::class/MarketDocument.adoc[`MarketDocument`]
+| _n/a_
+| _n/a_
+
+| <<Point,`Point`>>
+//| [[slots_table.Point]]<<Point,`Point`>>
+| 0..* +
+xref::class/Point.adoc[`Point`]
+| _n/a_
+| _n/a_
+
+| <<Unit,`Unit`>>
+//| [[slots_table.Unit]]<<Unit,`Unit`>>
+| 0..* +
+xref::class/Unit.adoc[`Unit`]
+| _n/a_
+| _n/a_
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The coded type of an ACE tariff.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#MarketDocument]
+=== `MarketDocument`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AceTariffType.MarketDocument`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketDocument,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Point]
+=== `Point`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AceTariffType.Point`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Point.adoc[`Point`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Point,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++The coded type of an ACE tariff.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AceTariffType.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Unit]
+=== `Unit`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AceTariffType.Unit`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Unit.adoc[`Unit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Unit,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketDocument.adoc[`MarketDocument`] | xref::class/MarketDocument.adoc#AceTariffType[`AceTariffType`]
+
+
+
+| xref::class/Point.adoc[`Point`] | xref::class/Point.adoc#AceTariffType[`AceTariffType`]
+
+
+
+| xref::class/Unit.adoc[`Unit`] | xref::class/Unit.adoc#AceTariffType[`AceTariffType`]
+
+
+|===
+

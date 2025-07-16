@@ -1,0 +1,255 @@
+= `Cheque`
+:toclevels: 4
+
+
++++The actual tender when it is a type of cheque.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Cheque`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`Cheque`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Tender,`Tender`>>
+//| [[slots_table.Tender]]<<Tender,`Tender`>>
+| 1 +
+xref::class/Tender.adoc[`Tender`]
+| +++Payment tender the cheque is being used for.+++
+| _n/a_
+
+| <<bankAccountDetail,`bankAccountDetail`>>
+//| [[slots_table.bankAccountDetail]]<<bankAccountDetail,`bankAccountDetail`>>
+| 0..1 +
+xref::class/BankAccountDetail.adoc[`BankAccountDetail`]
+| +++Details of the account holder and bank.+++
+| _n/a_
+
+| <<chequeNumber,`chequeNumber`>>
+//| [[slots_table.chequeNumber]]<<chequeNumber,`chequeNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Cheque reference number as printed on the cheque.+++
+| _n/a_
+
+| <<date,`date`>>
+//| [[slots_table.date]]<<date,`date`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date when cheque becomes valid.+++
+| _n/a_
+
+| <<kind,`kind`>>
+//| [[slots_table.kind]]<<kind,`kind`>>
+| 0..1 +
+xref::enumeration/ChequeKind.adoc[`ChequeKind`]
+| +++Kind of cheque.+++
+| _n/a_
+
+| <<micrNumber,`micrNumber`>>
+//| [[slots_table.micrNumber]]<<micrNumber,`micrNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The magnetic ink character recognition number printed on the cheque.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#bankAccountDetail]
+=== `bankAccountDetail`
++++Details of the account holder and bank.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Cheque.bankAccountDetail`
+| Cardinality
+| 0..1
+| Type
+| xref::class/BankAccountDetail.adoc[`BankAccountDetail`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bankAccountDetail,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#chequeNumber]
+=== `chequeNumber`
++++Cheque reference number as printed on the cheque.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Cheque.chequeNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.chequeNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#date]
+=== `date`
++++Date when cheque becomes valid.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Cheque.date`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.date,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kind]
+=== `kind`
++++Kind of cheque.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Cheque.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ChequeKind.adoc[`ChequeKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#micrNumber]
+=== `micrNumber`
++++The magnetic ink character recognition number printed on the cheque.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Cheque.micrNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.micrNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Tender]
+=== `Tender`
++++Payment tender the cheque is being used for.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Cheque.Tender`
+| Cardinality
+| 1
+| Type
+| xref::class/Tender.adoc[`Tender`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Tender,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Tender.adoc[`Tender`] | xref::class/Tender.adoc#Cheque[`Cheque`]
+
+
+|===
+

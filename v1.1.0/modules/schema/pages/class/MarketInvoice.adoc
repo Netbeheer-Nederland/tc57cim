@@ -1,0 +1,424 @@
+= `MarketInvoice`
+:toclevels: 4
+
+
++++A roll up of invoice line items. The whole invoice has a due date and amount to be paid, with information such as customer, banks etc. being obtained through associations. The invoice roll up is based on individual line items that each contain amounts and descriptions for specific services or products.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MarketInvoice`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MarketInvoice`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MajorChargeGroup,`MajorChargeGroup`>>
+//| [[slots_table.MajorChargeGroup]]<<MajorChargeGroup,`MajorChargeGroup`>>
+| 1..* +
+xref::class/MajorChargeGroup.adoc[`MajorChargeGroup`]
+| _n/a_
+| _n/a_
+
+| <<MarketInvoiceLineItems,`MarketInvoiceLineItems`>>
+//| [[slots_table.MarketInvoiceLineItems]]<<MarketInvoiceLineItems,`MarketInvoiceLineItems`>>
+| 0..* +
+xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`]
+| _n/a_
+| _n/a_
+
+| <<amount,`amount`>>
+//| [[slots_table.amount]]<<amount,`amount`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Total amount due on this invoice based on line items and applicable adjustments.+++
+| _n/a_
+
+| <<billMediaKind,`billMediaKind`>>
+//| [[slots_table.billMediaKind]]<<billMediaKind,`billMediaKind`>>
+| 0..1 +
+xref::enumeration/MktBillMediaKind.adoc[`MktBillMediaKind`]
+| +++Kind of media by which the CustomerBillingInfo was delivered.+++
+| _n/a_
+
+| <<dueDate,`dueDate`>>
+//| [[slots_table.dueDate]]<<dueDate,`dueDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Calculated date upon which the Invoice amount is due.+++
+| _n/a_
+
+| <<kind,`kind`>>
+//| [[slots_table.kind]]<<kind,`kind`>>
+| 0..1 +
+xref::enumeration/MktAccountKind.adoc[`MktAccountKind`]
+| +++Kind of invoice (default is 'sales').+++
+| _n/a_
+
+| <<mailedDate,`mailedDate`>>
+//| [[slots_table.mailedDate]]<<mailedDate,`mailedDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date on which the customer billing statement/invoice was printed/mailed.+++
+| _n/a_
+
+| <<proForma,`proForma`>>
+//| [[slots_table.proForma]]<<proForma,`proForma`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if payment is to be paid by a Customer to accept a particular ErpQuote (with associated Design) and have work...+++
+| _n/a_
+
+| <<referenceNumber,`referenceNumber`>>
+//| [[slots_table.referenceNumber]]<<referenceNumber,`referenceNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Number of an invoice to be reference by this invoice.+++
+| _n/a_
+
+| <<transactionDateTime,`transactionDateTime`>>
+//| [[slots_table.transactionDateTime]]<<transactionDateTime,`transactionDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time when the invoice is issued.+++
+| _n/a_
+
+| <<transferType,`transferType`>>
+//| [[slots_table.transferType]]<<transferType,`transferType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Type of invoice transfer.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#amount]
+=== `amount`
++++Total amount due on this invoice based on line items and applicable adjustments.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoice.amount`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.amount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#billMediaKind]
+=== `billMediaKind`
++++Kind of media by which the CustomerBillingInfo was delivered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoice.billMediaKind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MktBillMediaKind.adoc[`MktBillMediaKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.billMediaKind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dueDate]
+=== `dueDate`
++++Calculated date upon which the Invoice amount is due.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoice.dueDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dueDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kind]
+=== `kind`
++++Kind of invoice (default is 'sales').+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoice.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MktAccountKind.adoc[`MktAccountKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mailedDate]
+=== `mailedDate`
++++Date on which the customer billing statement/invoice was printed/mailed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoice.mailedDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mailedDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MajorChargeGroup]
+=== `MajorChargeGroup`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoice.MajorChargeGroup`
+| Cardinality
+| 1..*
+| Type
+| xref::class/MajorChargeGroup.adoc[`MajorChargeGroup`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MajorChargeGroup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketInvoiceLineItems]
+=== `MarketInvoiceLineItems`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoice.MarketInvoiceLineItems`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketInvoiceLineItems,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#proForma]
+=== `proForma`
++++True if payment is to be paid by a Customer to accept a particular ErpQuote (with associated Design) and have work initiated, at which time an associated ErpInvoice should automatically be generated. EprPayment.subjectStatus satisfies terms specificed in the ErpQuote.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoice.proForma`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.proForma,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#referenceNumber]
+=== `referenceNumber`
++++Number of an invoice to be reference by this invoice.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoice.referenceNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.referenceNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#transactionDateTime]
+=== `transactionDateTime`
++++Date and time when the invoice is issued.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoice.transactionDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.transactionDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#transferType]
+=== `transferType`
++++Type of invoice transfer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketInvoice.transferType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.transferType,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MajorChargeGroup.adoc[`MajorChargeGroup`] | xref::class/MajorChargeGroup.adoc#MarketInvoice[`MarketInvoice`]
+
+
+
+| xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`] | xref::class/MarketInvoiceLineItem.adoc#MarketInvoice[`MarketInvoice`]
+
+
+|===
+

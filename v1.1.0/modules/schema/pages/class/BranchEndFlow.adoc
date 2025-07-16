@@ -1,0 +1,465 @@
+= `BranchEndFlow`
+:toclevels: 4
+
+
++++Dynamic flows and ratings associated with a branch end.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:BranchEndFlow`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`BranchEndFlow`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MktACLineSegmentEndAFlow,`MktACLineSegmentEndAFlow`>>
+//| [[slots_table.MktACLineSegmentEndAFlow]]<<MktACLineSegmentEndAFlow,`MktACLineSegmentEndAFlow`>>
+| 0..* +
+xref::class/MktACLineSegment.adoc[`MktACLineSegment`]
+| _n/a_
+| _n/a_
+
+| <<MktACLineSegmentEndBFlow,`MktACLineSegmentEndBFlow`>>
+//| [[slots_table.MktACLineSegmentEndBFlow]]<<MktACLineSegmentEndBFlow,`MktACLineSegmentEndBFlow`>>
+| 0..* +
+xref::class/MktACLineSegment.adoc[`MktACLineSegment`]
+| _n/a_
+| _n/a_
+
+| <<MktPowerTransformerEndAFlow,`MktPowerTransformerEndAFlow`>>
+//| [[slots_table.MktPowerTransformerEndAFlow]]<<MktPowerTransformerEndAFlow,`MktPowerTransformerEndAFlow`>>
+| 0..* +
+xref::class/MktPowerTransformer.adoc[`MktPowerTransformer`]
+| _n/a_
+| _n/a_
+
+| <<MktPowerTransformerEndBFlow,`MktPowerTransformerEndBFlow`>>
+//| [[slots_table.MktPowerTransformerEndBFlow]]<<MktPowerTransformerEndBFlow,`MktPowerTransformerEndBFlow`>>
+| 0..* +
+xref::class/MktPowerTransformer.adoc[`MktPowerTransformer`]
+| _n/a_
+| _n/a_
+
+| <<MktSeriesCompensatorEndBFlow,`MktSeriesCompensatorEndBFlow`>>
+//| [[slots_table.MktSeriesCompensatorEndBFlow]]<<MktSeriesCompensatorEndBFlow,`MktSeriesCompensatorEndBFlow`>>
+| 0..* +
+xref::class/MktSeriesCompensator.adoc[`MktSeriesCompensator`]
+| _n/a_
+| _n/a_
+
+| <<MktSeriresCompensatorEndAFlow,`MktSeriresCompensatorEndAFlow`>>
+//| [[slots_table.MktSeriresCompensatorEndAFlow]]<<MktSeriresCompensatorEndAFlow,`MktSeriresCompensatorEndAFlow`>>
+| 0..* +
+xref::class/MktSeriesCompensator.adoc[`MktSeriesCompensator`]
+| _n/a_
+| _n/a_
+
+| <<loadDumpRating,`loadDumpRating`>>
+//| [[slots_table.loadDumpRating]]<<loadDumpRating,`loadDumpRating`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The Load Dump Rating for the branch+++
+| _n/a_
+
+| <<longTermRating,`longTermRating`>>
+//| [[slots_table.longTermRating]]<<longTermRating,`longTermRating`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The Long Term Rating for the branch+++
+| _n/a_
+
+| <<mVARFlow,`mVARFlow`>>
+//| [[slots_table.mVARFlow]]<<mVARFlow,`mVARFlow`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The MVAR flow on the branch 
+Attribute Usage: Reactive power flow at the series device, transformer, phase shifter, or line end+++
+| _n/a_
+
+| <<mwFlow,`mwFlow`>>
+//| [[slots_table.mwFlow]]<<mwFlow,`mwFlow`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The MW flow on the branch 
+Attribute Usage: Active power flow at the series device, transformer, phase shifter, or line end+++
+| _n/a_
+
+| <<normalRating,`normalRating`>>
+//| [[slots_table.normalRating]]<<normalRating,`normalRating`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The Normal Rating for the branch+++
+| _n/a_
+
+| <<shortTermRating,`shortTermRating`>>
+//| [[slots_table.shortTermRating]]<<shortTermRating,`shortTermRating`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The Short Term Rating for the branch+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#loadDumpRating]
+=== `loadDumpRating`
++++The Load Dump Rating for the branch+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchEndFlow.loadDumpRating`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.loadDumpRating,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#longTermRating]
+=== `longTermRating`
++++The Long Term Rating for the branch+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchEndFlow.longTermRating`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.longTermRating,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktACLineSegmentEndAFlow]
+=== `MktACLineSegmentEndAFlow`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchEndFlow.MktACLineSegmentEndAFlow`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MktACLineSegment.adoc[`MktACLineSegment`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktACLineSegmentEndAFlow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktACLineSegmentEndBFlow]
+=== `MktACLineSegmentEndBFlow`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchEndFlow.MktACLineSegmentEndBFlow`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MktACLineSegment.adoc[`MktACLineSegment`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktACLineSegmentEndBFlow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktPowerTransformerEndAFlow]
+=== `MktPowerTransformerEndAFlow`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchEndFlow.MktPowerTransformerEndAFlow`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MktPowerTransformer.adoc[`MktPowerTransformer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktPowerTransformerEndAFlow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktPowerTransformerEndBFlow]
+=== `MktPowerTransformerEndBFlow`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchEndFlow.MktPowerTransformerEndBFlow`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MktPowerTransformer.adoc[`MktPowerTransformer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktPowerTransformerEndBFlow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktSeriesCompensatorEndBFlow]
+=== `MktSeriesCompensatorEndBFlow`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchEndFlow.MktSeriesCompensatorEndBFlow`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MktSeriesCompensator.adoc[`MktSeriesCompensator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktSeriesCompensatorEndBFlow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktSeriresCompensatorEndAFlow]
+=== `MktSeriresCompensatorEndAFlow`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchEndFlow.MktSeriresCompensatorEndAFlow`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MktSeriesCompensator.adoc[`MktSeriesCompensator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktSeriresCompensatorEndAFlow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mVARFlow]
+=== `mVARFlow`
++++The MVAR flow on the branch 
+Attribute Usage: Reactive power flow at the series device, transformer, phase shifter, or line end+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchEndFlow.mVARFlow`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mVARFlow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mwFlow]
+=== `mwFlow`
++++The MW flow on the branch 
+Attribute Usage: Active power flow at the series device, transformer, phase shifter, or line end+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchEndFlow.mwFlow`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mwFlow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#normalRating]
+=== `normalRating`
++++The Normal Rating for the branch+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchEndFlow.normalRating`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.normalRating,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#shortTermRating]
+=== `shortTermRating`
++++The Short Term Rating for the branch+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BranchEndFlow.shortTermRating`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.shortTermRating,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MktACLineSegment.adoc[`MktACLineSegment`] | xref::class/MktACLineSegment.adoc#EndAFlow[`EndAFlow`]
+
+
+
+| xref::class/MktPowerTransformer.adoc[`MktPowerTransformer`] | xref::class/MktPowerTransformer.adoc#EndBFlow[`EndBFlow`]
+
+
+
+| xref::class/MktSeriesCompensator.adoc[`MktSeriesCompensator`] | xref::class/MktSeriesCompensator.adoc#EndBFlow[`EndBFlow`]
+
+
+|===
+

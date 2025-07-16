@@ -1,0 +1,222 @@
+= `TownDetail`
+:toclevels: 4
+
+
++++Town details, in the context of address.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TownDetail`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`TownDetail`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<code,`code`>>
+//| [[slots_table.code]]<<code,`code`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Town code.+++
+| _n/a_
+
+| <<country,`country`>>
+//| [[slots_table.country]]<<country,`country`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of the country.+++
+| _n/a_
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Town name.+++
+| _n/a_
+
+| <<section,`section`>>
+//| [[slots_table.section]]<<section,`section`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Town section. For example, it is common for there to be 36 sections per township.+++
+| _n/a_
+
+| <<stateOrProvince,`stateOrProvince`>>
+//| [[slots_table.stateOrProvince]]<<stateOrProvince,`stateOrProvince`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of the state or province.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#code]
+=== `code`
++++Town code.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TownDetail.code`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.code,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#country]
+=== `country`
++++Name of the country.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TownDetail.country`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.country,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++Town name.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TownDetail.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#section]
+=== `section`
++++Town section. For example, it is common for there to be 36 sections per township.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TownDetail.section`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.section,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#stateOrProvince]
+=== `stateOrProvince`
++++Name of the state or province.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TownDetail.stateOrProvince`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.stateOrProvince,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/StreetAddress.adoc[`StreetAddress`] | xref::class/StreetAddress.adoc#townDetail[`townDetail`]
+
+
+|===
+

@@ -1,0 +1,56 @@
+= `ExcREXSFeedbackSignalKind`
+:toclevels: 4
+
+
++++Types of rate feedback signals.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ExcREXSFeedbackSignalKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `fieldCurrent`
+| `cim:ExcREXSFeedbackSignalKind.fieldCurrent`
+| n/a
+
+| `fieldVoltage`
+| `cim:ExcREXSFeedbackSignalKind.fieldVoltage`
+| n/a
+
+| `outputVoltage`
+| `cim:ExcREXSFeedbackSignalKind.outputVoltage`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ExcREXS.adoc[`ExcREXS`] | xref::class/ExcREXS.adoc#fbf[`fbf`]
+
+
+|===
+

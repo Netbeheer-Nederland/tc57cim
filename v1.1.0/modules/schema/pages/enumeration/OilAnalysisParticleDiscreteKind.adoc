@@ -1,0 +1,48 @@
+= `OilAnalysisParticleDiscreteKind`
+:toclevels: 4
+
+
++++Discretes representing oil particulate analysis result.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OilAnalysisParticleDiscreteKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `opacity`
+| `cim:OilAnalysisParticleDiscreteKind.opacity`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/OilAnalysisParticleDiscrete.adoc[`OilAnalysisParticleDiscrete`] | xref::class/OilAnalysisParticleDiscrete.adoc#kind[`kind`]
+
+
+|===
+

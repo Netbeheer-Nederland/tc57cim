@@ -1,0 +1,146 @@
+= `Susceptance`
+:toclevels: 4
+
+
++++Imaginary part of admittance.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Susceptance`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Susceptance.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Susceptance.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Susceptance.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ACLineSegment.adoc[`ACLineSegment`] | xref::class/ACLineSegment.adoc#bch[`bch`]
+
+
+
+| xref::class/EquivalentShunt.adoc[`EquivalentShunt`] | xref::class/EquivalentShunt.adoc#b[`b`]
+
+
+
+| xref::class/LinearShuntCompensator.adoc[`LinearShuntCompensator`] | xref::class/LinearShuntCompensator.adoc#bPerSection[`bPerSection`]
+
+
+
+| xref::class/LinearShuntCompensatorPhase.adoc[`LinearShuntCompensatorPhase`] | xref::class/LinearShuntCompensatorPhase.adoc#bPerSection[`bPerSection`]
+
+
+
+| xref::class/MutualCoupling.adoc[`MutualCoupling`] | xref::class/MutualCoupling.adoc#b0ch[`b0ch`]
+
+
+
+| xref::class/NonlinearShuntCompensatorPhasePoint.adoc[`NonlinearShuntCompensatorPhasePoint`] | xref::class/NonlinearShuntCompensatorPhasePoint.adoc#b[`b`]
+
+
+
+| xref::class/NonlinearShuntCompensatorPoint.adoc[`NonlinearShuntCompensatorPoint`] | xref::class/NonlinearShuntCompensatorPoint.adoc#b0[`b0`]
+
+
+
+| xref::class/PowerTransformerEnd.adoc[`PowerTransformerEnd`] | xref::class/PowerTransformerEnd.adoc#b0[`b0`]
+
+
+
+| xref::class/TransformerCoreAdmittance.adoc[`TransformerCoreAdmittance`] | xref::class/TransformerCoreAdmittance.adoc#b0[`b0`]
+
+
+|===
+

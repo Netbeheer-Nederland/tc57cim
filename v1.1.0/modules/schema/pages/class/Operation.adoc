@@ -1,0 +1,88 @@
+= `Operation`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Operation`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`Operation`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<NetworkModelCaseDefinition,`NetworkModelCaseDefinition`>>
+//| [[slots_table.NetworkModelCaseDefinition]]<<NetworkModelCaseDefinition,`NetworkModelCaseDefinition`>>
+| 1 +
+xref::class/NetworkModelCaseDefinition.adoc[`NetworkModelCaseDefinition`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#NetworkModelCaseDefinition]
+=== `NetworkModelCaseDefinition`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Operation.NetworkModelCaseDefinition`
+| Cardinality
+| 1
+| Type
+| xref::class/NetworkModelCaseDefinition.adoc[`NetworkModelCaseDefinition`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.NetworkModelCaseDefinition,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/NetworkModelCaseDefinition.adoc[`NetworkModelCaseDefinition`] | xref::class/NetworkModelCaseDefinition.adoc#Operation[`Operation`]
+
+
+|===
+

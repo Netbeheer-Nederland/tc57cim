@@ -1,0 +1,426 @@
+= `ExPostResourceResults`
+:toclevels: 4
+
+
++++Model of ex-post pricing of resources contains components of LMPs: energy, congestion, loss. Resource based.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ExPostResourceResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ExPostResourceResults`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ExPostResource,`ExPostResource`>>
+//| [[slots_table.ExPostResource]]<<ExPostResource,`ExPostResource`>>
+| 1 +
+xref::class/ExPostResource.adoc[`ExPostResource`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<congestionLMP,`congestionLMP`>>
+//| [[slots_table.congestionLMP]]<<congestionLMP,`congestionLMP`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++LMP component in USD (deprecated)+++
+| _n/a_
+
+| <<desiredMW,`desiredMW`>>
+//| [[slots_table.desiredMW]]<<desiredMW,`desiredMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Desired output of unit+++
+| _n/a_
+
+| <<dispatchRate,`dispatchRate`>>
+//| [[slots_table.dispatchRate]]<<dispatchRate,`dispatchRate`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Unit Dispatch rate from real time unit dispatch.+++
+| _n/a_
+
+| <<lmp,`lmp`>>
+//| [[slots_table.lmp]]<<lmp,`lmp`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++LMP (Local Marginal Price) in USD at the equipment (deprecated)+++
+| _n/a_
+
+| <<lossLMP,`lossLMP`>>
+//| [[slots_table.lossLMP]]<<lossLMP,`lossLMP`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++loss lmp (deprecated)+++
+| _n/a_
+
+| <<maxEconomicMW,`maxEconomicMW`>>
+//| [[slots_table.maxEconomicMW]]<<maxEconomicMW,`maxEconomicMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Economic Maximum MW+++
+| _n/a_
+
+| <<minEconomicMW,`minEconomicMW`>>
+//| [[slots_table.minEconomicMW]]<<minEconomicMW,`minEconomicMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Economic Minimum MW+++
+| _n/a_
+
+| <<resourceMW,`resourceMW`>>
+//| [[slots_table.resourceMW]]<<resourceMW,`resourceMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Current MW output of the equipment 
+Attribute Usage: Information purposes - Information purposes - Output of LPA engine.+++
+| _n/a_
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::enumeration/EquipmentStatusType.adoc[`EquipmentStatusType`]
+| +++Status of equipment+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#congestionLMP]
+=== `congestionLMP`
++++LMP component in USD (deprecated)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.congestionLMP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.congestionLMP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#desiredMW]
+=== `desiredMW`
++++Desired output of unit+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.desiredMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.desiredMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dispatchRate]
+=== `dispatchRate`
++++Unit Dispatch rate from real time unit dispatch.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.dispatchRate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dispatchRate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ExPostResource]
+=== `ExPostResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.ExPostResource`
+| Cardinality
+| 1
+| Type
+| xref::class/ExPostResource.adoc[`ExPostResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ExPostResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lmp]
+=== `lmp`
++++LMP (Local Marginal Price) in USD at the equipment (deprecated)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.lmp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lmp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lossLMP]
+=== `lossLMP`
++++loss lmp (deprecated)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.lossLMP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lossLMP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxEconomicMW]
+=== `maxEconomicMW`
++++Economic Maximum MW+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.maxEconomicMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxEconomicMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minEconomicMW]
+=== `minEconomicMW`
++++Economic Minimum MW+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.minEconomicMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minEconomicMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#resourceMW]
+=== `resourceMW`
++++Current MW output of the equipment 
+Attribute Usage: Information purposes - Information purposes - Output of LPA engine.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.resourceMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.resourceMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++Status of equipment+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostResourceResults.status`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/EquipmentStatusType.adoc[`EquipmentStatusType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ExPostResource.adoc[`ExPostResource`] | xref::class/ExPostResource.adoc#ExPostResourceResults[`ExPostResourceResults`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#ExPostResourceResults[`ExPostResourceResults`]
+
+
+|===
+

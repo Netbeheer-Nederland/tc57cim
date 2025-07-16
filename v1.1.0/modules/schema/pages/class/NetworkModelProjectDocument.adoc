@@ -1,0 +1,88 @@
+= `NetworkModelProjectDocument`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:NetworkModelProjectDocument`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`NetworkModelProjectDocument`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<NetworkModelProjectComponent,`NetworkModelProjectComponent`>>
+//| [[slots_table.NetworkModelProjectComponent]]<<NetworkModelProjectComponent,`NetworkModelProjectComponent`>>
+| 0..* +
+xref::class/NetworkModelProjectComponent.adoc[`NetworkModelProjectComponent`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#NetworkModelProjectComponent]
+=== `NetworkModelProjectComponent`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NetworkModelProjectDocument.NetworkModelProjectComponent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/NetworkModelProjectComponent.adoc[`NetworkModelProjectComponent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.NetworkModelProjectComponent,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/NetworkModelProjectComponent.adoc[`NetworkModelProjectComponent`] | xref::class/NetworkModelProjectComponent.adoc#NetworkModelProjectDocument[`NetworkModelProjectDocument`]
+
+
+|===
+

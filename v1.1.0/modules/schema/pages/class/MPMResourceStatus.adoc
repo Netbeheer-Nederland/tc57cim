@@ -1,0 +1,201 @@
+= `MPMResourceStatus`
+:toclevels: 4
+
+
++++Model of results of Market Power tests, gives status of resource for the associated interval.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MPMResourceStatus`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MPMResourceStatus`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MPMTestCategory,`MPMTestCategory`>>
+//| [[slots_table.MPMTestCategory]]<<MPMTestCategory,`MPMTestCategory`>>
+| 1 +
+xref::class/MPMTestCategory.adoc[`MPMTestCategory`]
+| _n/a_
+| _n/a_
+
+| <<MitigatedBidClearing,`MitigatedBidClearing`>>
+//| [[slots_table.MitigatedBidClearing]]<<MitigatedBidClearing,`MitigatedBidClearing`>>
+| 1..* +
+xref::class/MitigatedBidClearing.adoc[`MitigatedBidClearing`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<resourceStatus,`resourceStatus`>>
+//| [[slots_table.resourceStatus]]<<resourceStatus,`resourceStatus`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Interval Test Status
+
+'N' - not applicable+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#MitigatedBidClearing]
+=== `MitigatedBidClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMResourceStatus.MitigatedBidClearing`
+| Cardinality
+| 1..*
+| Type
+| xref::class/MitigatedBidClearing.adoc[`MitigatedBidClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MitigatedBidClearing,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MPMTestCategory]
+=== `MPMTestCategory`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMResourceStatus.MPMTestCategory`
+| Cardinality
+| 1
+| Type
+| xref::class/MPMTestCategory.adoc[`MPMTestCategory`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MPMTestCategory,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMResourceStatus.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#resourceStatus]
+=== `resourceStatus`
++++Interval Test Status
+
+'N' - not applicable+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMResourceStatus.resourceStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.resourceStatus,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MitigatedBidClearing.adoc[`MitigatedBidClearing`] | xref::class/MitigatedBidClearing.adoc#MPMResourceStatus[`MPMResourceStatus`]
+
+
+
+| xref::class/MPMTestCategory.adoc[`MPMTestCategory`] | xref::class/MPMTestCategory.adoc#MPMResourceStatus[`MPMResourceStatus`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#MPMResourceStatus[`MPMResourceStatus`]
+
+
+|===
+

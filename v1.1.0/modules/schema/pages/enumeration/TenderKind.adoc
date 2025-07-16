@@ -1,0 +1,64 @@
+= `TenderKind`
+:toclevels: 4
+
+
++++Kind of tender.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TenderKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `card`
+| `cim:TenderKind.card`
+| n/a
+
+| `cash`
+| `cim:TenderKind.cash`
+| n/a
+
+| `cheque`
+| `cim:TenderKind.cheque`
+| n/a
+
+| `other`
+| `cim:TenderKind.other`
+| n/a
+
+| `unspecified`
+| `cim:TenderKind.unspecified`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Tender.adoc[`Tender`] | xref::class/Tender.adoc#kind[`kind`]
+
+
+|===
+

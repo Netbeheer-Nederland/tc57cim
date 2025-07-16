@@ -1,0 +1,124 @@
+= `SinglePhaseKind`
+:toclevels: 4
+
+
++++Enumeration of single phase identifiers. Allows designation of single phases for both transmission and distribution equipment, circuits and loads.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SinglePhaseKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `A`
+| `cim:SinglePhaseKind.A`
+| n/a
+
+| `B`
+| `cim:SinglePhaseKind.B`
+| n/a
+
+| `C`
+| `cim:SinglePhaseKind.C`
+| n/a
+
+| `N`
+| `cim:SinglePhaseKind.N`
+| n/a
+
+| `s1`
+| `cim:SinglePhaseKind.s1`
+| n/a
+
+| `s2`
+| `cim:SinglePhaseKind.s2`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ACLineSegmentPhase.adoc[`ACLineSegmentPhase`] | xref::class/ACLineSegmentPhase.adoc#phase[`phase`]
+
+
+
+| xref::class/EnergyConsumerPhase.adoc[`EnergyConsumerPhase`] | xref::class/EnergyConsumerPhase.adoc#phase[`phase`]
+
+
+
+| xref::class/EnergySourcePhase.adoc[`EnergySourcePhase`] | xref::class/EnergySourcePhase.adoc#phase[`phase`]
+
+
+
+| xref::class/PhaseImpedanceData.adoc[`PhaseImpedanceData`] | xref::class/PhaseImpedanceData.adoc#toPhase[`toPhase`]
+
+
+
+| xref::class/PowerElectronicsConnectionPhase.adoc[`PowerElectronicsConnectionPhase`] | xref::class/PowerElectronicsConnectionPhase.adoc#phase[`phase`]
+
+
+
+| xref::class/ShuntCompensatorPhase.adoc[`ShuntCompensatorPhase`] | xref::class/ShuntCompensatorPhase.adoc#phase[`phase`]
+
+
+
+| xref::class/SvInjection.adoc[`SvInjection`] | xref::class/SvInjection.adoc#phase[`phase`]
+
+
+
+| xref::class/SvPowerFlow.adoc[`SvPowerFlow`] | xref::class/SvPowerFlow.adoc#phase[`phase`]
+
+
+
+| xref::class/SvShuntCompensatorSections.adoc[`SvShuntCompensatorSections`] | xref::class/SvShuntCompensatorSections.adoc#phase[`phase`]
+
+
+
+| xref::class/SvStatus.adoc[`SvStatus`] | xref::class/SvStatus.adoc#phase[`phase`]
+
+
+
+| xref::class/SvSwitch.adoc[`SvSwitch`] | xref::class/SvSwitch.adoc#phase[`phase`]
+
+
+
+| xref::class/SvVoltage.adoc[`SvVoltage`] | xref::class/SvVoltage.adoc#phase[`phase`]
+
+
+
+| xref::class/SwitchPhase.adoc[`SwitchPhase`] | xref::class/SwitchPhase.adoc#phaseSide2[`phaseSide2`]
+
+
+
+| xref::class/WirePhaseInfo.adoc[`WirePhaseInfo`] | xref::class/WirePhaseInfo.adoc#phaseInfo[`phaseInfo`]
+
+
+
+| xref::class/WireSegmentPhase.adoc[`WireSegmentPhase`] | xref::class/WireSegmentPhase.adoc#phase[`phase`]
+
+
+|===
+

@@ -1,0 +1,267 @@
+= `Period`
+:toclevels: 4
+
+
++++An identification of a time interval that may have a given resolution.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Period`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`Period`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MarketDocument,`MarketDocument`>>
+//| [[slots_table.MarketDocument]]<<MarketDocument,`MarketDocument`>>
+| 0..* +
+xref::class/MarketDocument.adoc[`MarketDocument`]
+| _n/a_
+| _n/a_
+
+| <<Point,`Point`>>
+//| [[slots_table.Point]]<<Point,`Point`>>
+| 0..* +
+xref::class/Point.adoc[`Point`]
+| _n/a_
+| _n/a_
+
+| <<Reason,`Reason`>>
+//| [[slots_table.Reason]]<<Reason,`Reason`>>
+| 0..* +
+xref::class/Reason.adoc[`Reason`]
+| _n/a_
+| _n/a_
+
+| <<TimeSeries,`TimeSeries`>>
+//| [[slots_table.TimeSeries]]<<TimeSeries,`TimeSeries`>>
+| 0..* +
+xref::class/TimeSeries.adoc[`TimeSeries`]
+| _n/a_
+| _n/a_
+
+| <<resolution,`resolution`>>
+//| [[slots_table.resolution]]<<resolution,`resolution`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++The number of units of time that compose an individual step within a period.+++
+| _n/a_
+
+| <<timeInterval,`timeInterval`>>
+//| [[slots_table.timeInterval]]<<timeInterval,`timeInterval`>>
+| 0..1 +
+xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++The start and end date and time for a given interval.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#MarketDocument]
+=== `MarketDocument`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Period.MarketDocument`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketDocument,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Point]
+=== `Point`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Period.Point`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Point.adoc[`Point`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Point,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Reason]
+=== `Reason`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Period.Reason`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Reason.adoc[`Reason`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Reason,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#resolution]
+=== `resolution`
++++The number of units of time that compose an individual step within a period.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Period.resolution`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.resolution,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeInterval]
+=== `timeInterval`
++++The start and end date and time for a given interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Period.timeInterval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeInterval,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Period.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TimeSeries,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketDocument.adoc[`MarketDocument`] | xref::class/MarketDocument.adoc#Period[`Period`]
+
+
+
+| xref::class/Point.adoc[`Point`] | xref::class/Point.adoc#Period[`Period`]
+
+
+
+| xref::class/Reason.adoc[`Reason`] | xref::class/Reason.adoc#Period[`Period`]
+
+
+
+| xref::class/TimeSeries.adoc[`TimeSeries`] | xref::class/TimeSeries.adoc#Period[`Period`]
+
+
+|===
+

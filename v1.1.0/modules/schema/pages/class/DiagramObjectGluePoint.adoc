@@ -1,0 +1,90 @@
+= `DiagramObjectGluePoint`
+:toclevels: 4
+
+
++++This is used for grouping diagram object points from different diagram objects that are considered to be glued together in a diagram even if they are not at the exact same coordinates.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DiagramObjectGluePoint`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`DiagramObjectGluePoint`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<DiagramObjectPoints,`DiagramObjectPoints`>>
+//| [[slots_table.DiagramObjectPoints]]<<DiagramObjectPoints,`DiagramObjectPoints`>>
+| 1..* +
+xref::class/DiagramObjectPoint.adoc[`DiagramObjectPoint`]
+| +++A diagram object glue point is associated with 2 or more object points that are considered to be 'glued' together.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#DiagramObjectPoints]
+=== `DiagramObjectPoints`
++++A diagram object glue point is associated with 2 or more object points that are considered to be 'glued' together.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectGluePoint.DiagramObjectPoints`
+| Cardinality
+| 1..*
+| Type
+| xref::class/DiagramObjectPoint.adoc[`DiagramObjectPoint`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjectPoints,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/DiagramObjectPoint.adoc[`DiagramObjectPoint`] | xref::class/DiagramObjectPoint.adoc#DiagramObjectGluePoint[`DiagramObjectGluePoint`]
+
+
+|===
+

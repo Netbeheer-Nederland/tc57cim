@@ -1,0 +1,222 @@
+= `Card`
+:toclevels: 4
+
+
++++Documentation of the tender when it is a type of card (credit, debit, etc).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Card`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`Card`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Tender,`Tender`>>
+//| [[slots_table.Tender]]<<Tender,`Tender`>>
+| 1 +
+xref::class/Tender.adoc[`Tender`]
+| +++Payment tender this card is being used for.+++
+| _n/a_
+
+| <<accountHolderName,`accountHolderName`>>
+//| [[slots_table.accountHolderName]]<<accountHolderName,`accountHolderName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of account holder.+++
+| _n/a_
+
+| <<cvNumber,`cvNumber`>>
+//| [[slots_table.cvNumber]]<<cvNumber,`cvNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The card verification number.+++
+| _n/a_
+
+| <<expiryDate,`expiryDate`>>
+//| [[slots_table.expiryDate]]<<expiryDate,`expiryDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The date when this card expires.+++
+| _n/a_
+
+| <<pan,`pan`>>
+//| [[slots_table.pan]]<<pan,`pan`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The primary account number.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#accountHolderName]
+=== `accountHolderName`
++++Name of account holder.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Card.accountHolderName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.accountHolderName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cvNumber]
+=== `cvNumber`
++++The card verification number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Card.cvNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cvNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#expiryDate]
+=== `expiryDate`
++++The date when this card expires.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Card.expiryDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.expiryDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pan]
+=== `pan`
++++The primary account number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Card.pan`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pan,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Tender]
+=== `Tender`
++++Payment tender this card is being used for.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Card.Tender`
+| Cardinality
+| 1
+| Type
+| xref::class/Tender.adoc[`Tender`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Tender,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Tender.adoc[`Tender`] | xref::class/Tender.adoc#Card[`Card`]
+
+
+|===
+

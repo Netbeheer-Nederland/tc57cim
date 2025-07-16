@@ -1,0 +1,72 @@
+= `GateLogicKind`
+:toclevels: 4
+
+
++++Define the different logical operations.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:GateLogicKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `and`
+| `cim:GateLogicKind.and`
+| n/a
+
+| `nand`
+| `cim:GateLogicKind.nand`
+| n/a
+
+| `nor`
+| `cim:GateLogicKind.nor`
+| n/a
+
+| `not`
+| `cim:GateLogicKind.not`
+| n/a
+
+| `or`
+| `cim:GateLogicKind.or`
+| n/a
+
+| `xnor`
+| `cim:GateLogicKind.xnor`
+| n/a
+
+| `xor`
+| `cim:GateLogicKind.xor`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Gate.adoc[`Gate`] | xref::class/Gate.adoc#kind[`kind`]
+
+
+|===
+

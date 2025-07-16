@@ -1,0 +1,112 @@
+= `ISOStandardEditionKind`
+:toclevels: 4
+
+
++++List of editions for ISO standards.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ISOStandardEditionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `1973`
+| `cim:ISOStandardEditionKind.1973`
+| n/a
+
+| `1974`
+| `cim:ISOStandardEditionKind.1974`
+| n/a
+
+| `1976`
+| `cim:ISOStandardEditionKind.1976`
+| n/a
+
+| `1983`
+| `cim:ISOStandardEditionKind.1983`
+| n/a
+
+| `1985`
+| `cim:ISOStandardEditionKind.1985`
+| n/a
+
+| `1988`
+| `cim:ISOStandardEditionKind.1988`
+| n/a
+
+| `1992`
+| `cim:ISOStandardEditionKind.1992`
+| n/a
+
+| `1993`
+| `cim:ISOStandardEditionKind.1993`
+| n/a
+
+| `1994`
+| `cim:ISOStandardEditionKind.1994`
+| n/a
+
+| `1994/Cor1:1997`
+| `cim:ISOStandardEditionKind.1994/Cor1%3A1997`
+| n/a
+
+| `1998`
+| `cim:ISOStandardEditionKind.1998`
+| n/a
+
+| `2000`
+| `cim:ISOStandardEditionKind.2000`
+| n/a
+
+| `2002`
+| `cim:ISOStandardEditionKind.2002`
+| n/a
+
+| `2005`
+| `cim:ISOStandardEditionKind.2005`
+| n/a
+
+| `2008`
+| `cim:ISOStandardEditionKind.2008`
+| n/a
+
+| `none`
+| `cim:ISOStandardEditionKind.none`
+| n/a
+
+| `unknown`
+| `cim:ISOStandardEditionKind.unknown`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ISOStandard.adoc[`ISOStandard`] | xref::class/ISOStandard.adoc#standardEdition[`standardEdition`]
+
+
+|===
+

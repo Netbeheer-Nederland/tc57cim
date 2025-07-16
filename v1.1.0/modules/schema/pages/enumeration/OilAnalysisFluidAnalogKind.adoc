@@ -1,0 +1,188 @@
+= `OilAnalysisFluidAnalogKind`
+:toclevels: 4
+
+
++++Analogs representing oil fluid test analysis result.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OilAnalysisFluidAnalogKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `acidNumber`
+| `cim:OilAnalysisFluidAnalogKind.acidNumber`
+| n/a
+
+| `additiveDBDS`
+| `cim:OilAnalysisFluidAnalogKind.additiveDBDS`
+| n/a
+
+| `aromatics`
+| `cim:OilAnalysisFluidAnalogKind.aromatics`
+| n/a
+
+| `carbonyl`
+| `cim:OilAnalysisFluidAnalogKind.carbonyl`
+| n/a
+
+| `density`
+| `cim:OilAnalysisFluidAnalogKind.density`
+| n/a
+
+| `dielectricBreakdown`
+| `cim:OilAnalysisFluidAnalogKind.dielectricBreakdown`
+| n/a
+
+| `dissipationFactor`
+| `cim:OilAnalysisFluidAnalogKind.dissipationFactor`
+| n/a
+
+| `dissipationFactorPercent`
+| `cim:OilAnalysisFluidAnalogKind.dissipationFactorPercent`
+| n/a
+
+| `duration61125MethodC`
+| `cim:OilAnalysisFluidAnalogKind.duration61125MethodC`
+| n/a
+
+| `firePoint`
+| `cim:OilAnalysisFluidAnalogKind.firePoint`
+| n/a
+
+| `flashPointClosedCup`
+| `cim:OilAnalysisFluidAnalogKind.flashPointClosedCup`
+| n/a
+
+| `flashPointOpenCup`
+| `cim:OilAnalysisFluidAnalogKind.flashPointOpenCup`
+| n/a
+
+| `inductionTime`
+| `cim:OilAnalysisFluidAnalogKind.inductionTime`
+| n/a
+
+| `inhibitor61125MethodC`
+| `cim:OilAnalysisFluidAnalogKind.inhibitor61125MethodC`
+| n/a
+
+| `interfacialTension`
+| `cim:OilAnalysisFluidAnalogKind.interfacialTension`
+| n/a
+
+| `kinematicViscosity`
+| `cim:OilAnalysisFluidAnalogKind.kinematicViscosity`
+| n/a
+
+| `oxidation`
+| `cim:OilAnalysisFluidAnalogKind.oxidation`
+| n/a
+
+| `oxidationInhibitorD2668`
+| `cim:OilAnalysisFluidAnalogKind.oxidationInhibitorD2668`
+| n/a
+
+| `oxidationInhibitorDBP`
+| `cim:OilAnalysisFluidAnalogKind.oxidationInhibitorDBP`
+| n/a
+
+| `oxidationInhibitorDBPC`
+| `cim:OilAnalysisFluidAnalogKind.oxidationInhibitorDBPC`
+| n/a
+
+| `passivatorBTA`
+| `cim:OilAnalysisFluidAnalogKind.passivatorBTA`
+| n/a
+
+| `passivatorContent`
+| `cim:OilAnalysisFluidAnalogKind.passivatorContent`
+| n/a
+
+| `passivatorIrgamet39`
+| `cim:OilAnalysisFluidAnalogKind.passivatorIrgamet39`
+| n/a
+
+| `passivatorTTA`
+| `cim:OilAnalysisFluidAnalogKind.passivatorTTA`
+| n/a
+
+| `petroleumOrigin`
+| `cim:OilAnalysisFluidAnalogKind.petroleumOrigin`
+| n/a
+
+| `pourPoint`
+| `cim:OilAnalysisFluidAnalogKind.pourPoint`
+| n/a
+
+| `pourPointAutomatic`
+| `cim:OilAnalysisFluidAnalogKind.pourPointAutomatic`
+| n/a
+
+| `powerFactorPercent`
+| `cim:OilAnalysisFluidAnalogKind.powerFactorPercent`
+| n/a
+
+| `resistivity`
+| `cim:OilAnalysisFluidAnalogKind.resistivity`
+| n/a
+
+| `sedimentAndSludgePercent`
+| `cim:OilAnalysisFluidAnalogKind.sedimentAndSludgePercent`
+| n/a
+
+| `sludge`
+| `cim:OilAnalysisFluidAnalogKind.sludge`
+| n/a
+
+| `solubleAcids`
+| `cim:OilAnalysisFluidAnalogKind.solubleAcids`
+| n/a
+
+| `specificGravity`
+| `cim:OilAnalysisFluidAnalogKind.specificGravity`
+| n/a
+
+| `staticElectrification`
+| `cim:OilAnalysisFluidAnalogKind.staticElectrification`
+| n/a
+
+| `totalAcids`
+| `cim:OilAnalysisFluidAnalogKind.totalAcids`
+| n/a
+
+| `volatileAcids`
+| `cim:OilAnalysisFluidAnalogKind.volatileAcids`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/OilAnalysisFluidAnalog.adoc[`OilAnalysisFluidAnalog`] | xref::class/OilAnalysisFluidAnalog.adoc#kind[`kind`]
+
+
+|===
+

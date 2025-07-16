@@ -1,0 +1,286 @@
+= `PerCent`
+:toclevels: 4
+
+
++++Percentage on a defined base.   For example, specify as 100 to indicate at the defined base.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:PerCent`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++Normally 0 to 100 on a defined base.+++
+| +++Normally 0 to 100 on a defined base.+++
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:PerCent.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:PerCent.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
++++Normally 0 to 100 on a defined base.+++
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:PerCent.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Asset.adoc[`Asset`] | xref::class/Asset.adoc#initialLossOfLife[`initialLossOfLife`]
+
+
+
+| xref::class/AsynchronousMachine.adoc[`AsynchronousMachine`] | xref::class/AsynchronousMachine.adoc#efficiency[`efficiency`]
+
+
+
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`] | xref::class/AtmosphericPhenomenon.adoc#minCoverage[`minCoverage`]
+
+
+
+| xref::class/AuxiliaryAgreement.adoc[`AuxiliaryAgreement`] | xref::class/AuxiliaryAgreement.adoc#vendPortionArrear[`vendPortionArrear`]
+
+
+
+| xref::class/BushingInfo.adoc[`BushingInfo`] | xref::class/BushingInfo.adoc#c2PowerFactor[`c2PowerFactor`]
+
+
+
+| xref::class/Charge.adoc[`Charge`] | xref::class/Charge.adoc#variablePortion[`variablePortion`]
+
+
+
+| xref::class/CurrentTransformer.adoc[`CurrentTransformer`] | xref::class/CurrentTransformer.adoc#accuracyLimit[`accuracyLimit`]
+
+
+
+| xref::class/DispatchSchedule.adoc[`DispatchSchedule`] | xref::class/DispatchSchedule.adoc#confidence[`confidence`]
+
+
+
+| xref::class/EnergyConsumer.adoc[`EnergyConsumer`] | xref::class/EnergyConsumer.adoc#qfixedPct[`qfixedPct`]
+
+
+
+| xref::class/EnergyConsumerPhase.adoc[`EnergyConsumerPhase`] | xref::class/EnergyConsumerPhase.adoc#qfixedPct[`qfixedPct`]
+
+
+
+| xref::class/EnvironmentalCodedValue.adoc[`EnvironmentalCodedValue`] | xref::class/EnvironmentalCodedValue.adoc#probabilityPercent[`probabilityPercent`]
+
+
+
+| xref::class/FossilFuel.adoc[`FossilFuel`] | xref::class/FossilFuel.adoc#fuelMixture[`fuelMixture`]
+
+
+
+| xref::class/GateInputPin.adoc[`GateInputPin`] | xref::class/GateInputPin.adoc#thresholdPercentage[`thresholdPercentage`]
+
+
+
+| xref::class/GeneratingUnit.adoc[`GeneratingUnit`] | xref::class/GeneratingUnit.adoc#totalEfficiency[`totalEfficiency`]
+
+
+
+| xref::class/LightningStrike.adoc[`LightningStrike`] | xref::class/LightningStrike.adoc#errorEllipseConfidence[`errorEllipseConfidence`]
+
+
+
+| xref::class/LimitScalingLimit.adoc[`LimitScalingLimit`] | xref::class/LimitScalingLimit.adoc#limitScalingPercent[`limitScalingPercent`]
+
+
+
+| xref::class/LoadRatio.adoc[`LoadRatio`] | xref::class/LoadRatio.adoc#share[`share`]
+
+
+
+| xref::class/MeasurementValue.adoc[`MeasurementValue`] | xref::class/MeasurementValue.adoc#sensorAccuracy[`sensorAccuracy`]
+
+
+
+| xref::class/MPMTestResults.adoc[`MPMTestResults`] | xref::class/MPMTestResults.adoc#marginPercent[`marginPercent`]
+
+
+
+| xref::class/MPMTestThreshold.adoc[`MPMTestThreshold`] | xref::class/MPMTestThreshold.adoc#percent[`percent`]
+
+
+
+| xref::class/NoLoadTest.adoc[`NoLoadTest`] | xref::class/NoLoadTest.adoc#excitingCurrentZero[`excitingCurrentZero`]
+
+
+
+| xref::class/OperatingShare.adoc[`OperatingShare`] | xref::class/OperatingShare.adoc#percentage[`percentage`]
+
+
+
+| xref::class/OperatonalLimitTypeScaling.adoc[`OperatonalLimitTypeScaling`] | xref::class/OperatonalLimitTypeScaling.adoc#scalingPercent[`scalingPercent`]
+
+
+
+| xref::class/OrgResOwnership.adoc[`OrgResOwnership`] | xref::class/OrgResOwnership.adoc#ownershipPercent[`ownershipPercent`]
+
+
+
+| xref::class/Ownership.adoc[`Ownership`] | xref::class/Ownership.adoc#share[`share`]
+
+
+
+| xref::class/PanDemandResponse.adoc[`PanDemandResponse`] | xref::class/PanDemandResponse.adoc#dutyCycle[`dutyCycle`]
+
+
+
+| xref::class/PhaseTapChangerNonLinear.adoc[`PhaseTapChangerNonLinear`] | xref::class/PhaseTapChangerNonLinear.adoc#voltageStepIncrement[`voltageStepIncrement`]
+
+
+
+| xref::class/PowerCutZone.adoc[`PowerCutZone`] | xref::class/PowerCutZone.adoc#cutLevel2[`cutLevel2`]
+
+
+
+| xref::class/ProtectiveActionAdjustment.adoc[`ProtectiveActionAdjustment`] | xref::class/ProtectiveActionAdjustment.adoc#byPercentage[`byPercentage`]
+
+
+
+| xref::class/RatioTapChanger.adoc[`RatioTapChanger`] | xref::class/RatioTapChanger.adoc#stepVoltageIncrement[`stepVoltageIncrement`]
+
+
+
+| xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`] | xref::class/RegisteredGenerator.adoc#capacityFactor[`capacityFactor`]
+
+
+
+| xref::class/ReliabilityInfo.adoc[`ReliabilityInfo`] | xref::class/ReliabilityInfo.adoc#momFailureRate[`momFailureRate`]
+
+
+
+| xref::class/ResourceOperationMaintenanceCost.adoc[`ResourceOperationMaintenanceCost`] | xref::class/ResourceOperationMaintenanceCost.adoc#solidfuelPercentAboveLowSustainedLimit[`solidfuelPercentAboveLowSustainedLimit`]
+
+
+
+| xref::class/ResourceStartupCost.adoc[`ResourceStartupCost`] | xref::class/ResourceStartupCost.adoc#solidfuelPercentLowSustainedLimit[`solidfuelPercentLowSustainedLimit`]
+
+
+
+| xref::class/ShortCircuitTest.adoc[`ShortCircuitTest`] | xref::class/ShortCircuitTest.adoc#voltage[`voltage`]
+
+
+
+| xref::class/Specimen.adoc[`Specimen`] | xref::class/Specimen.adoc#humidityAtSampling[`humidityAtSampling`]
+
+
+
+| xref::class/SynchronousMachine.adoc[`SynchronousMachine`] | xref::class/SynchronousMachine.adoc#voltageRegulationRange[`voltageRegulationRange`]
+
+
+
+| xref::class/TapChangerInfo.adoc[`TapChangerInfo`] | xref::class/TapChangerInfo.adoc#stepVoltageIncrement[`stepVoltageIncrement`]
+
+
+
+| xref::class/TapChangerTablePoint.adoc[`TapChangerTablePoint`] | xref::class/TapChangerTablePoint.adoc#x[`x`]
+
+
+
+| xref::class/TapeShieldCableInfo.adoc[`TapeShieldCableInfo`] | xref::class/TapeShieldCableInfo.adoc#tapeLap[`tapeLap`]
+
+
+
+| xref::class/TemperatureDependentLimitPoint.adoc[`TemperatureDependentLimitPoint`] | xref::class/TemperatureDependentLimitPoint.adoc#limitPercent[`limitPercent`]
+
+
+
+| xref::class/TransformerEnd.adoc[`TransformerEnd`] | xref::class/TransformerEnd.adoc#magSatFlux[`magSatFlux`]
+
+
+
+| xref::class/VsConverter.adoc[`VsConverter`] | xref::class/VsConverter.adoc#qShare[`qShare`]
+
+
+
+| xref::class/WorkActivityRecord.adoc[`WorkActivityRecord`] | xref::class/WorkActivityRecord.adoc#percentComplete[`percentComplete`]
+
+
+|===
+

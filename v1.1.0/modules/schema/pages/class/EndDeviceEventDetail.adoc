@@ -1,0 +1,156 @@
+= `EndDeviceEventDetail`
+:toclevels: 4
+
+
++++Name-value pair, specific to end device events.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EndDeviceEventDetail`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`EndDeviceEventDetail`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<EndDeviceEvent,`EndDeviceEvent`>>
+//| [[slots_table.EndDeviceEvent]]<<EndDeviceEvent,`EndDeviceEvent`>>
+| 0..1 +
+xref::class/EndDeviceEvent.adoc[`EndDeviceEvent`]
+| +++End device owning this detail.+++
+| _n/a_
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name.+++
+| _n/a_
+
+| <<value,`value`>>
+//| [[slots_table.value]]<<value,`value`>>
+| 0..1 +
+xref::class/StringQuantity.adoc[`StringQuantity`]
+| +++Value, including unit information.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#EndDeviceEvent]
+=== `EndDeviceEvent`
++++End device owning this detail.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceEventDetail.EndDeviceEvent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EndDeviceEvent.adoc[`EndDeviceEvent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EndDeviceEvent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++Name.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceEventDetail.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value]
+=== `value`
++++Value, including unit information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceEventDetail.value`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StringQuantity.adoc[`StringQuantity`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EndDeviceEvent.adoc[`EndDeviceEvent`] | xref::class/EndDeviceEvent.adoc#EndDeviceEventDetails[`EndDeviceEventDetails`]
+
+
+|===
+

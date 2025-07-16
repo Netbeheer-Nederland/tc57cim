@@ -1,0 +1,261 @@
+= `DefaultBidCurveData`
+:toclevels: 4
+
+
++++Curve data for default bid curve and startup cost curve.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DefaultBidCurveData`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/CurveData.adoc[`CurveData`]
+** *`DefaultBidCurveData`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<bidSegmentCalcType,`bidSegmentCalcType`>>
+//| [[slots_table.bidSegmentCalcType]]<<bidSegmentCalcType,`bidSegmentCalcType`>>
+| 0..1 +
+xref::enumeration/BidCalculationBasis.adoc[`BidCalculationBasis`]
+| +++Type of calculation basis used to define the default bid segment curve.+++
+| _n/a_
+
+| <<Curve,`Curve`>>
+//| [[slots_table.Curve]]<<Curve,`Curve`>>
+| 1 +
+xref::class/Curve.adoc[`Curve`]
+| +++The curve of  this curve data point.+++
+| xref::class/CurveData.adoc[`CurveData`]
+
+| <<xvalue,`xvalue`>>
+//| [[slots_table.xvalue]]<<xvalue,`xvalue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The data value of the X-axis variable,  depending on the X-axis units.+++
+| xref::class/CurveData.adoc[`CurveData`]
+
+| <<y1value,`y1value`>>
+//| [[slots_table.y1value]]<<y1value,`y1value`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The data value of the  first Y-axis variable, depending on the Y-axis units.+++
+| xref::class/CurveData.adoc[`CurveData`]
+
+| <<y2value,`y2value`>>
+//| [[slots_table.y2value]]<<y2value,`y2value`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The data value of the second Y-axis variable (if present), depending on the Y-axis units.+++
+| xref::class/CurveData.adoc[`CurveData`]
+
+| <<y3value,`y3value`>>
+//| [[slots_table.y3value]]<<y3value,`y3value`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The data value of the third Y-axis variable (if present), depending on the Y-axis units.+++
+| xref::class/CurveData.adoc[`CurveData`]
+|===
+
+'''
+
+
+//[discrete]
+[#bidSegmentCalcType]
+=== `bidSegmentCalcType`
++++Type of calculation basis used to define the default bid segment curve.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DefaultBidCurveData.bidSegmentCalcType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/BidCalculationBasis.adoc[`BidCalculationBasis`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bidSegmentCalcType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Curve]
+=== `Curve`
++++The curve of  this curve data point.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.Curve`
+| Cardinality
+| 1
+| Type
+| xref::class/Curve.adoc[`Curve`]
+
+| Inherited from
+| xref::class/CurveData.adoc[`CurveData`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Curve,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#xvalue]
+=== `xvalue`
++++The data value of the X-axis variable,  depending on the X-axis units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.xvalue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/CurveData.adoc[`CurveData`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.xvalue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#y1value]
+=== `y1value`
++++The data value of the  first Y-axis variable, depending on the Y-axis units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.y1value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/CurveData.adoc[`CurveData`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.y1value,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#y2value]
+=== `y2value`
++++The data value of the second Y-axis variable (if present), depending on the Y-axis units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.y2value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/CurveData.adoc[`CurveData`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.y2value,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#y3value]
+=== `y3value`
++++The data value of the third Y-axis variable (if present), depending on the Y-axis units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.y3value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/CurveData.adoc[`CurveData`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.y3value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

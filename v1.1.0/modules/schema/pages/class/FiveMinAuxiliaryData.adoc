@@ -1,0 +1,189 @@
+= `FiveMinAuxiliaryData`
+:toclevels: 4
+
+
++++Models 5-Minutes Auxiliary Data.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:FiveMinAuxiliaryData`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`FiveMinAuxiliaryData`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AuxillaryValues,`AuxillaryValues`>>
+//| [[slots_table.AuxillaryValues]]<<AuxillaryValues,`AuxillaryValues`>>
+| 1..* +
+xref::class/AuxiliaryValues.adoc[`AuxiliaryValues`]
+| _n/a_
+| _n/a_
+
+| <<intervalStartTime,`intervalStartTime`>>
+//| [[slots_table.intervalStartTime]]<<intervalStartTime,`intervalStartTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+//| [[slots_table.updateTimeStamp]]<<updateTimeStamp,`updateTimeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<updateUser,`updateUser`>>
+//| [[slots_table.updateUser]]<<updateUser,`updateUser`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#AuxillaryValues]
+=== `AuxillaryValues`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FiveMinAuxiliaryData.AuxillaryValues`
+| Cardinality
+| 1..*
+| Type
+| xref::class/AuxiliaryValues.adoc[`AuxiliaryValues`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AuxillaryValues,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#intervalStartTime]
+=== `intervalStartTime`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FiveMinAuxiliaryData.intervalStartTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalStartTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FiveMinAuxiliaryData.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateTimeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FiveMinAuxiliaryData.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateUser,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AuxiliaryValues.adoc[`AuxiliaryValues`] | xref::class/AuxiliaryValues.adoc#FiveMinAuxillaryData[`FiveMinAuxillaryData`]
+
+
+|===
+

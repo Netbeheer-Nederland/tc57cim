@@ -1,0 +1,164 @@
+= `ChangeSetMember`
+:toclevels: 4
+
+
++++A CRUD-style data object.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ChangeSetMember`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`ChangeSetMember`*
+ ** xref::class/ObjectCreation.adoc[`ObjectCreation`]
+ ** xref::class/ObjectDeletion.adoc[`ObjectDeletion`]
+ ** xref::class/ObjectModification.adoc[`ObjectModification`]
+ ** xref::class/ObjectReverseModification.adoc[`ObjectReverseModification`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Changeset,`Changeset`>>
+//| [[slots_table.Changeset]]<<Changeset,`Changeset`>>
+| 0..1 +
+xref::class/ChangeSet.adoc[`ChangeSet`]
+| +++Dataset containing the data objects.+++
+| _n/a_
+
+| <<PropertiesObject,`PropertiesObject`>>
+//| [[slots_table.PropertiesObject]]<<PropertiesObject,`PropertiesObject`>>
+| 0..1 +
+xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+| +++The CIM object holding the properties of this dataset context.   Sometimes properties are not required and only the...+++
+| _n/a_
+
+| <<TargetObject,`TargetObject`>>
+//| [[slots_table.TargetObject]]<<TargetObject,`TargetObject`>>
+| 1 +
+xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+| +++The registered CIM object.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#Changeset]
+=== `Changeset`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChangeSetMember.Changeset`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSet.adoc[`ChangeSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Changeset,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesObject]
+=== `PropertiesObject`
++++The CIM object holding the properties of this dataset context.   Sometimes properties are not required and only the reference to the registered object is required.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChangeSetMember.PropertiesObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetObject]
+=== `TargetObject`
++++The registered CIM object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChangeSetMember.TargetObject`
+| Cardinality
+| 1
+| Type
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetObject,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ChangeSet.adoc[`ChangeSet`] | xref::class/ChangeSet.adoc#ChangeSetMember[`ChangeSetMember`]
+
+
+
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`] | xref::class/IdentifiedObject.adoc#TargetingCIMDataObject[`TargetingCIMDataObject`]
+
+
+|===
+

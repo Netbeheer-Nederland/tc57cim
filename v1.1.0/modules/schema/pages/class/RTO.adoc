@@ -1,0 +1,1514 @@
+= `RTO`
+:toclevels: 4
+
+
++++Regional transmission operator.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RTO`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Organisation.adoc[`Organisation`]
+*** xref::class/MarketParticipant.adoc[`MarketParticipant`]
+**** *`RTO`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AdjacentCASet,`AdjacentCASet`>>
+//| [[slots_table.AdjacentCASet]]<<AdjacentCASet,`AdjacentCASet`>>
+| 0..* +
+xref::class/AdjacentCASet.adoc[`AdjacentCASet`]
+| _n/a_
+| _n/a_
+
+| <<AggregateNode,`AggregateNode`>>
+//| [[slots_table.AggregateNode]]<<AggregateNode,`AggregateNode`>>
+| 0..* +
+xref::class/AggregateNode.adoc[`AggregateNode`]
+| _n/a_
+| _n/a_
+
+| <<CommodityDefinition,`CommodityDefinition`>>
+//| [[slots_table.CommodityDefinition]]<<CommodityDefinition,`CommodityDefinition`>>
+| 0..* +
+xref::class/CommodityDefinition.adoc[`CommodityDefinition`]
+| _n/a_
+| _n/a_
+
+| <<EnergyMarkets,`EnergyMarkets`>>
+//| [[slots_table.EnergyMarkets]]<<EnergyMarkets,`EnergyMarkets`>>
+| 0..* +
+xref::class/EnergyMarket.adoc[`EnergyMarket`]
+| _n/a_
+| _n/a_
+
+| <<FuelRegion,`FuelRegion`>>
+//| [[slots_table.FuelRegion]]<<FuelRegion,`FuelRegion`>>
+| 0..* +
+xref::class/FuelRegion.adoc[`FuelRegion`]
+| _n/a_
+| _n/a_
+
+| <<HostControlArea,`HostControlArea`>>
+//| [[slots_table.HostControlArea]]<<HostControlArea,`HostControlArea`>>
+| 0..* +
+xref::class/HostControlArea.adoc[`HostControlArea`]
+| _n/a_
+| _n/a_
+
+| <<LocalReliabilityArea,`LocalReliabilityArea`>>
+//| [[slots_table.LocalReliabilityArea]]<<LocalReliabilityArea,`LocalReliabilityArea`>>
+| 0..* +
+xref::class/LocalReliabilityArea.adoc[`LocalReliabilityArea`]
+| _n/a_
+| _n/a_
+
+| <<MSSAggregation,`MSSAggregation`>>
+//| [[slots_table.MSSAggregation]]<<MSSAggregation,`MSSAggregation`>>
+| 0..* +
+xref::class/MSSAggregation.adoc[`MSSAggregation`]
+| _n/a_
+| _n/a_
+
+| <<MktConnectivityNode,`MktConnectivityNode`>>
+//| [[slots_table.MktConnectivityNode]]<<MktConnectivityNode,`MktConnectivityNode`>>
+| 0..* +
+xref::class/MktConnectivityNode.adoc[`MktConnectivityNode`]
+| _n/a_
+| _n/a_
+
+| <<Pnodes,`Pnodes`>>
+//| [[slots_table.Pnodes]]<<Pnodes,`Pnodes`>>
+| 0..* +
+xref::class/Pnode.adoc[`Pnode`]
+| _n/a_
+| _n/a_
+
+| <<ResourceGroupReqs,`ResourceGroupReqs`>>
+//| [[slots_table.ResourceGroupReqs]]<<ResourceGroupReqs,`ResourceGroupReqs`>>
+| 0..* +
+xref::class/ResourceGroupReq.adoc[`ResourceGroupReq`]
+| _n/a_
+| _n/a_
+
+| <<SecurityConstraints,`SecurityConstraints`>>
+//| [[slots_table.SecurityConstraints]]<<SecurityConstraints,`SecurityConstraints`>>
+| 0..* +
+xref::class/SecurityConstraints.adoc[`SecurityConstraints`]
+| _n/a_
+| _n/a_
+
+| <<SecurityConstraintsLinear,`SecurityConstraintsLinear`>>
+//| [[slots_table.SecurityConstraintsLinear]]<<SecurityConstraintsLinear,`SecurityConstraintsLinear`>>
+| 0..* +
+xref::class/SecurityConstraintSum.adoc[`SecurityConstraintSum`]
+| _n/a_
+| _n/a_
+
+| <<SubControlArea,`SubControlArea`>>
+//| [[slots_table.SubControlArea]]<<SubControlArea,`SubControlArea`>>
+| 0..* +
+xref::class/SubControlArea.adoc[`SubControlArea`]
+| _n/a_
+| _n/a_
+
+| <<TransmissionContractRight,`TransmissionContractRight`>>
+//| [[slots_table.TransmissionContractRight]]<<TransmissionContractRight,`TransmissionContractRight`>>
+| 0..* +
+xref::class/ContractRight.adoc[`ContractRight`]
+| _n/a_
+| _n/a_
+
+| <<TransmissionRightChain,`TransmissionRightChain`>>
+//| [[slots_table.TransmissionRightChain]]<<TransmissionRightChain,`TransmissionRightChain`>>
+| 0..* +
+xref::class/TransmissionRightChain.adoc[`TransmissionRightChain`]
+| _n/a_
+| _n/a_
+
+| <<Bid,`Bid`>>
+//| [[slots_table.Bid]]<<Bid,`Bid`>>
+| 0..* +
+xref::class/Bid.adoc[`Bid`]
+| _n/a_
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+| <<MarketDocument,`MarketDocument`>>
+//| [[slots_table.MarketDocument]]<<MarketDocument,`MarketDocument`>>
+| 0..* +
+xref::class/MarketDocument.adoc[`MarketDocument`]
+| _n/a_
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+| <<MarketPerson,`MarketPerson`>>
+//| [[slots_table.MarketPerson]]<<MarketPerson,`MarketPerson`>>
+| 0..* +
+xref::class/MarketPerson.adoc[`MarketPerson`]
+| _n/a_
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+| <<MarketRole,`MarketRole`>>
+//| [[slots_table.MarketRole]]<<MarketRole,`MarketRole`>>
+| 0..* +
+xref::class/MarketRole.adoc[`MarketRole`]
+| _n/a_
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..* +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+| <<SchedulingCoordinator,`SchedulingCoordinator`>>
+//| [[slots_table.SchedulingCoordinator]]<<SchedulingCoordinator,`SchedulingCoordinator`>>
+| 0..* +
+xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+| _n/a_
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+| <<TimeSeries,`TimeSeries`>>
+//| [[slots_table.TimeSeries]]<<TimeSeries,`TimeSeries`>>
+| 0..* +
+xref::class/TimeSeries.adoc[`TimeSeries`]
+| _n/a_
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+| <<ParentOrganisation,`ParentOrganisation`>>
+//| [[slots_table.ParentOrganisation]]<<ParentOrganisation,`ParentOrganisation`>>
+| 0..1 +
+xref::class/ParentOrganization.adoc[`ParentOrganization`]
+| +++Parent organisation of this organisation.+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<Roles,`Roles`>>
+//| [[slots_table.Roles]]<<Roles,`Roles`>>
+| 0..* +
+xref::class/OrganisationRole.adoc[`OrganisationRole`]
+| +++All roles of this organisation.+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<SwitchingPlanRequest,`SwitchingPlanRequest`>>
+//| [[slots_table.SwitchingPlanRequest]]<<SwitchingPlanRequest,`SwitchingPlanRequest`>>
+| 0..* +
+xref::class/SwitchingPlanRequest.adoc[`SwitchingPlanRequest`]
+| +++The switching plan requested by the requesting organization+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<electronicAddress,`electronicAddress`>>
+//| [[slots_table.electronicAddress]]<<electronicAddress,`electronicAddress`>>
+| 0..1 +
+xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+| +++Electronic address.+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<phone1,`phone1`>>
+//| [[slots_table.phone1]]<<phone1,`phone1`>>
+| 0..1 +
+xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+| +++Phone number.+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<phone2,`phone2`>>
+//| [[slots_table.phone2]]<<phone2,`phone2`>>
+| 0..1 +
+xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+| +++Additional phone number.+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<postalAddress,`postalAddress`>>
+//| [[slots_table.postalAddress]]<<postalAddress,`postalAddress`>>
+| 0..1 +
+xref::class/StreetAddress.adoc[`StreetAddress`]
+| +++Postal address, potentially different than 'streetAddress' (e.g., another city).+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<streetAddress,`streetAddress`>>
+//| [[slots_table.streetAddress]]<<streetAddress,`streetAddress`>>
+| 0..1 +
+xref::class/StreetAddress.adoc[`StreetAddress`]
+| +++Street address.+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#AdjacentCASet]
+=== `AdjacentCASet`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.AdjacentCASet`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AdjacentCASet.adoc[`AdjacentCASet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AdjacentCASet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AggregateNode]
+=== `AggregateNode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.AggregateNode`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AggregateNode.adoc[`AggregateNode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AggregateNode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Bid]
+=== `Bid`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.Bid`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Bid.adoc[`Bid`]
+
+| Inherited from
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Bid,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CommodityDefinition]
+=== `CommodityDefinition`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.CommodityDefinition`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CommodityDefinition.adoc[`CommodityDefinition`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CommodityDefinition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#electronicAddress]
+=== `electronicAddress`
++++Electronic address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.electronicAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.electronicAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnergyMarkets]
+=== `EnergyMarkets`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.EnergyMarkets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnergyMarket.adoc[`EnergyMarket`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnergyMarkets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#FuelRegion]
+=== `FuelRegion`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.FuelRegion`
+| Cardinality
+| 0..*
+| Type
+| xref::class/FuelRegion.adoc[`FuelRegion`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.FuelRegion,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#HostControlArea]
+=== `HostControlArea`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.HostControlArea`
+| Cardinality
+| 0..*
+| Type
+| xref::class/HostControlArea.adoc[`HostControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.HostControlArea,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#LocalReliabilityArea]
+=== `LocalReliabilityArea`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.LocalReliabilityArea`
+| Cardinality
+| 0..*
+| Type
+| xref::class/LocalReliabilityArea.adoc[`LocalReliabilityArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.LocalReliabilityArea,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketDocument]
+=== `MarketDocument`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.MarketDocument`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+
+| Inherited from
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketDocument,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketPerson]
+=== `MarketPerson`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.MarketPerson`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketPerson.adoc[`MarketPerson`]
+
+| Inherited from
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketPerson,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketRole]
+=== `MarketRole`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.MarketRole`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketRole.adoc[`MarketRole`]
+
+| Inherited from
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketRole,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktConnectivityNode]
+=== `MktConnectivityNode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.MktConnectivityNode`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MktConnectivityNode.adoc[`MktConnectivityNode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktConnectivityNode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MSSAggregation]
+=== `MSSAggregation`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.MSSAggregation`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MSSAggregation.adoc[`MSSAggregation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MSSAggregation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ParentOrganisation]
+=== `ParentOrganisation`
++++Parent organisation of this organisation.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.ParentOrganisation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ParentOrganization.adoc[`ParentOrganization`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ParentOrganisation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phone1]
+=== `phone1`
++++Phone number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.phone1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phone1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phone2]
+=== `phone2`
++++Additional phone number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.phone2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phone2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Pnodes]
+=== `Pnodes`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.Pnodes`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Pnode.adoc[`Pnode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Pnodes,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#postalAddress]
+=== `postalAddress`
++++Postal address, potentially different than 'streetAddress' (e.g., another city).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.postalAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StreetAddress.adoc[`StreetAddress`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.postalAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.RegisteredResource`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+| Inherited from
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ResourceGroupReqs]
+=== `ResourceGroupReqs`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.ResourceGroupReqs`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ResourceGroupReq.adoc[`ResourceGroupReq`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ResourceGroupReqs,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Roles]
+=== `Roles`
++++All roles of this organisation.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.Roles`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OrganisationRole.adoc[`OrganisationRole`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Roles,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SchedulingCoordinator]
+=== `SchedulingCoordinator`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.SchedulingCoordinator`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+
+| Inherited from
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SchedulingCoordinator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SecurityConstraints]
+=== `SecurityConstraints`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.SecurityConstraints`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SecurityConstraints.adoc[`SecurityConstraints`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SecurityConstraints,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SecurityConstraintsLinear]
+=== `SecurityConstraintsLinear`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.SecurityConstraintsLinear`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SecurityConstraintSum.adoc[`SecurityConstraintSum`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SecurityConstraintsLinear,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#streetAddress]
+=== `streetAddress`
++++Street address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.streetAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StreetAddress.adoc[`StreetAddress`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.streetAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SubControlArea]
+=== `SubControlArea`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.SubControlArea`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SubControlArea,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SwitchingPlanRequest]
+=== `SwitchingPlanRequest`
++++The switching plan requested by the requesting organization+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.SwitchingPlanRequest`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SwitchingPlanRequest.adoc[`SwitchingPlanRequest`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SwitchingPlanRequest,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+| Inherited from
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TimeSeries,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TransmissionContractRight]
+=== `TransmissionContractRight`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.TransmissionContractRight`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ContractRight.adoc[`ContractRight`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TransmissionContractRight,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TransmissionRightChain]
+=== `TransmissionRightChain`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RTO.TransmissionRightChain`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TransmissionRightChain.adoc[`TransmissionRightChain`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TransmissionRightChain,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AdjacentCASet.adoc[`AdjacentCASet`] | xref::class/AdjacentCASet.adoc#RTO[`RTO`]
+
+
+
+| xref::class/AggregateNode.adoc[`AggregateNode`] | xref::class/AggregateNode.adoc#RTO[`RTO`]
+
+
+
+| xref::class/CommodityDefinition.adoc[`CommodityDefinition`] | xref::class/CommodityDefinition.adoc#RTO[`RTO`]
+
+
+
+| xref::class/ContractRight.adoc[`ContractRight`] | xref::class/ContractRight.adoc#RTO[`RTO`]
+
+
+
+| xref::class/EnergyMarket.adoc[`EnergyMarket`] | xref::class/EnergyMarket.adoc#RTO[`RTO`]
+
+
+
+| xref::class/FuelRegion.adoc[`FuelRegion`] | xref::class/FuelRegion.adoc#RTO[`RTO`]
+
+
+
+| xref::class/HostControlArea.adoc[`HostControlArea`] | xref::class/HostControlArea.adoc#RTO[`RTO`]
+
+
+
+| xref::class/LocalReliabilityArea.adoc[`LocalReliabilityArea`] | xref::class/LocalReliabilityArea.adoc#RTO[`RTO`]
+
+
+
+| xref::class/MktConnectivityNode.adoc[`MktConnectivityNode`] | xref::class/MktConnectivityNode.adoc#RTO[`RTO`]
+
+
+
+| xref::class/MSSAggregation.adoc[`MSSAggregation`] | xref::class/MSSAggregation.adoc#RTO[`RTO`]
+
+
+
+| xref::class/Pnode.adoc[`Pnode`] | xref::class/Pnode.adoc#RTO[`RTO`]
+
+
+
+| xref::class/ResourceGroupReq.adoc[`ResourceGroupReq`] | xref::class/ResourceGroupReq.adoc#RTOs[`RTOs`]
+
+
+
+| xref::class/SecurityConstraints.adoc[`SecurityConstraints`] | xref::class/SecurityConstraints.adoc#RTO[`RTO`]
+
+
+
+| xref::class/SecurityConstraintSum.adoc[`SecurityConstraintSum`] | xref::class/SecurityConstraintSum.adoc#RTO[`RTO`]
+
+
+
+| xref::class/SubControlArea.adoc[`SubControlArea`] | xref::class/SubControlArea.adoc#RTO[`RTO`]
+
+
+
+| xref::class/TransmissionRightChain.adoc[`TransmissionRightChain`] | xref::class/TransmissionRightChain.adoc#RTO[`RTO`]
+
+
+|===
+

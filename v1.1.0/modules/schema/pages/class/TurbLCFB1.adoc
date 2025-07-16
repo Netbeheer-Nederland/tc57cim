@@ -1,0 +1,865 @@
+= `TurbLCFB1`
+:toclevels: 4
+
+
++++Turbine load controller model developed by WECC.  This model represents a supervisory turbine load controller that acts to maintain turbine power at a set value by continuous adjustment of the turbine governor speed-load reference. This model is intended to represent slow reset 'outer loop' controllers managing the action of the turbine governor.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TurbLCFB1`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/TurbineLoadControllerDynamics.adoc[`TurbineLoadControllerDynamics`]
+**** *`TurbLCFB1`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<db,`db`>>
+//| [[slots_table.db]]<<db,`db`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Controller deadband (<i>db</i>).  Typical value = 0.+++
+| _n/a_
+
+| <<emax,`emax`>>
+//| [[slots_table.emax]]<<emax,`emax`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum control error (<i>Emax</i>) (see parameter detail 4).  Typical value = 0,02.+++
+| _n/a_
+
+| <<fb,`fb`>>
+//| [[slots_table.fb]]<<fb,`fb`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Frequency bias gain (<i>Fb</i>).  Typical value = 0.+++
+| _n/a_
+
+| <<fbf,`fbf`>>
+//| [[slots_table.fbf]]<<fbf,`fbf`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Frequency bias flag (<i>Fbf</i>).
+true = enable frequency bias
+false = disable frequency bias.
+Typical value = false.+++
+| _n/a_
+
+| <<irmax,`irmax`>>
+//| [[slots_table.irmax]]<<irmax,`irmax`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum turbine speed/load reference bias (<i>Irmax</i>) (see parameter detail 3).  Typical value = 0.+++
+| _n/a_
+
+| <<ki,`ki`>>
+//| [[slots_table.ki]]<<ki,`ki`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Integral gain (<i>Ki</i>).  Typical value = 0.+++
+| _n/a_
+
+| <<kp,`kp`>>
+//| [[slots_table.kp]]<<kp,`kp`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Proportional gain (<i>Kp</i>).  Typical value = 0.+++
+| _n/a_
+
+| <<mwbase,`mwbase`>>
+//| [[slots_table.mwbase]]<<mwbase,`mwbase`>>
+| 0..1 +
+xref::class/ActivePower.adoc[`ActivePower`]
+| +++Base for power values (<i>MWbase</i>) (&gt; 0).  Unit = MW.+++
+| _n/a_
+
+| <<pbf,`pbf`>>
+//| [[slots_table.pbf]]<<pbf,`pbf`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Power controller flag (<i>Pbf</i>).
+true = enable load controller
+false = disable load controller.
+Typical value = false.+++
+| _n/a_
+
+| <<pmwset,`pmwset`>>
+//| [[slots_table.pmwset]]<<pmwset,`pmwset`>>
+| 0..1 +
+xref::class/ActivePower.adoc[`ActivePower`]
+| +++Power controller setpoint (<i>Pmwset</i>) (see parameter detail 1).  Unit = MW. Typical value = 0.+++
+| _n/a_
+
+| <<speedReferenceGovernor,`speedReferenceGovernor`>>
+//| [[slots_table.speedReferenceGovernor]]<<speedReferenceGovernor,`speedReferenceGovernor`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Type of turbine governor reference (<i>Type</i>).
+true = speed reference governor
+false = load reference...+++
+| _n/a_
+
+| <<tpelec,`tpelec`>>
+//| [[slots_table.tpelec]]<<tpelec,`tpelec`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Power transducer time constant (<i>Tpelec</i>) (&gt;= 0).  Typical value = 0.+++
+| _n/a_
+
+| <<TurbineGovernorDynamics,`TurbineGovernorDynamics`>>
+//| [[slots_table.TurbineGovernorDynamics]]<<TurbineGovernorDynamics,`TurbineGovernorDynamics`>>
+| 1 +
+xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+| +++Turbine-governor controlled by this turbine load controller.+++
+| xref::class/TurbineLoadControllerDynamics.adoc[`TurbineLoadControllerDynamics`]
+
+| <<enabled,`enabled`>>
+//| [[slots_table.enabled]]<<enabled,`enabled`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#db]
+=== `db`
++++Controller deadband (<i>db</i>).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbLCFB1.db`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.db,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#emax]
+=== `emax`
++++Maximum control error (<i>Emax</i>) (see parameter detail 4).  Typical value = 0,02.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbLCFB1.emax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.emax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.enabled,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#fb]
+=== `fb`
++++Frequency bias gain (<i>Fb</i>).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbLCFB1.fb`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.fb,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#fbf]
+=== `fbf`
++++Frequency bias flag (<i>Fbf</i>).
+true = enable frequency bias
+false = disable frequency bias.
+Typical value = false.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbLCFB1.fbf`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.fbf,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#irmax]
+=== `irmax`
++++Maximum turbine speed/load reference bias (<i>Irmax</i>) (see parameter detail 3).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbLCFB1.irmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.irmax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ki]
+=== `ki`
++++Integral gain (<i>Ki</i>).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbLCFB1.ki`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ki,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kp]
+=== `kp`
++++Proportional gain (<i>Kp</i>).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbLCFB1.kp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mwbase]
+=== `mwbase`
++++Base for power values (<i>MWbase</i>) (&gt; 0).  Unit = MW.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbLCFB1.mwbase`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mwbase,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pbf]
+=== `pbf`
++++Power controller flag (<i>Pbf</i>).
+true = enable load controller
+false = disable load controller.
+Typical value = false.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbLCFB1.pbf`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pbf,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pmwset]
+=== `pmwset`
++++Power controller setpoint (<i>Pmwset</i>) (see parameter detail 1).  Unit = MW. Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbLCFB1.pmwset`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pmwset,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#speedReferenceGovernor]
+=== `speedReferenceGovernor`
++++Type of turbine governor reference (<i>Type</i>).
+true = speed reference governor
+false = load reference governor.
+Typical value = true.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbLCFB1.speedReferenceGovernor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.speedReferenceGovernor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tpelec]
+=== `tpelec`
++++Power transducer time constant (<i>Tpelec</i>) (&gt;= 0).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbLCFB1.tpelec`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tpelec,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TurbineGovernorDynamics]
+=== `TurbineGovernorDynamics`
++++Turbine-governor controlled by this turbine load controller.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineLoadControllerDynamics.TurbineGovernorDynamics`
+| Cardinality
+| 1
+| Type
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+| Inherited from
+| xref::class/TurbineLoadControllerDynamics.adoc[`TurbineLoadControllerDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TurbineGovernorDynamics,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

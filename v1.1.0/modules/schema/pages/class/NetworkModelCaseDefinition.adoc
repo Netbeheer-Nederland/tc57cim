@@ -1,0 +1,90 @@
+= `NetworkModelCaseDefinition`
+:toclevels: 4
+
+
++++Instructions to build a network model case, including when appropriate the results.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:NetworkModelCaseDefinition`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`NetworkModelCaseDefinition`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Operation,`Operation`>>
+//| [[slots_table.Operation]]<<Operation,`Operation`>>
+| 0..* +
+xref::class/Operation.adoc[`Operation`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#Operation]
+=== `Operation`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NetworkModelCaseDefinition.Operation`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Operation.adoc[`Operation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Operation,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Operation.adoc[`Operation`] | xref::class/Operation.adoc#NetworkModelCaseDefinition[`NetworkModelCaseDefinition`]
+
+
+|===
+

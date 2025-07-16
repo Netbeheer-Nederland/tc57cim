@@ -1,0 +1,59 @@
+= `CostBasis`
+:toclevels: 4
+
+
++++For example:
+Bid Cost
+Proxy Cost
+Registered Cost+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CostBasis`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `BIDC`
+| `cim:CostBasis.BIDC`
+| n/a
+
+| `PRXC`
+| `cim:CostBasis.PRXC`
+| n/a
+
+| `REGC`
+| `cim:CostBasis.REGC`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`] | xref::class/RegisteredGenerator.adoc#startUpCostBasis[`startUpCostBasis`]
+
+
+|===
+

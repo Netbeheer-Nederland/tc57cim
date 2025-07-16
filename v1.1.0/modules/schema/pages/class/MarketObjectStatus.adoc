@@ -1,0 +1,160 @@
+= `MarketObjectStatus`
+:toclevels: 4
+
+
++++The condition or position of an object with regard to its standing.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MarketObjectStatus`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MarketObjectStatus`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..* +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<TimeSeries,`TimeSeries`>>
+//| [[slots_table.TimeSeries]]<<TimeSeries,`TimeSeries`>>
+| 0..* +
+xref::class/TimeSeries.adoc[`TimeSeries`]
+| _n/a_
+| _n/a_
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The coded condition or position of an object with regard to its standing.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketObjectStatus.RegisteredResource`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++The coded condition or position of an object with regard to its standing.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketObjectStatus.status`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketObjectStatus.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TimeSeries,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#MarketObjectStatus[`MarketObjectStatus`]
+
+
+
+| xref::class/TimeSeries.adoc[`TimeSeries`] | xref::class/TimeSeries.adoc#MarketObjectStatus[`MarketObjectStatus`]
+
+
+|===
+

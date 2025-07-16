@@ -1,0 +1,182 @@
+= `AngleDegrees`
+:toclevels: 4
+
+
++++Measurement of angle in degrees.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:AngleDegrees`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:AngleDegrees.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:AngleDegrees.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:AngleDegrees.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CsConverter.adoc[`CsConverter`] | xref::class/CsConverter.adoc#targetGamma[`targetGamma`]
+
+
+
+| xref::class/DiagramObject.adoc[`DiagramObject`] | xref::class/DiagramObject.adoc#rotation[`rotation`]
+
+
+
+| xref::class/ExcIEEEST3A.adoc[`ExcIEEEST3A`] | xref::class/ExcIEEEST3A.adoc#thetap[`thetap`]
+
+
+
+| xref::class/ExcIEEEST4B.adoc[`ExcIEEEST4B`] | xref::class/ExcIEEEST4B.adoc#thetap[`thetap`]
+
+
+
+| xref::class/ExcST3A.adoc[`ExcST3A`] | xref::class/ExcST3A.adoc#thetap[`thetap`]
+
+
+
+| xref::class/ExcST4B.adoc[`ExcST4B`] | xref::class/ExcST4B.adoc#thetap[`thetap`]
+
+
+
+| xref::class/OpenCircuitTest.adoc[`OpenCircuitTest`] | xref::class/OpenCircuitTest.adoc#phaseShift[`phaseShift`]
+
+
+
+| xref::class/PhaseTapChangerAsymmetrical.adoc[`PhaseTapChangerAsymmetrical`] | xref::class/PhaseTapChangerAsymmetrical.adoc#windingConnectionAngle[`windingConnectionAngle`]
+
+
+
+| xref::class/PhaseTapChangerLinear.adoc[`PhaseTapChangerLinear`] | xref::class/PhaseTapChangerLinear.adoc#stepPhaseShiftIncrement[`stepPhaseShiftIncrement`]
+
+
+
+| xref::class/PhaseTapChangerTablePoint.adoc[`PhaseTapChangerTablePoint`] | xref::class/PhaseTapChangerTablePoint.adoc#angle[`angle`]
+
+
+
+| xref::class/PowerTransformer.adoc[`PowerTransformer`] | xref::class/PowerTransformer.adoc#beforeShortCircuitAnglePf[`beforeShortCircuitAnglePf`]
+
+
+
+| xref::class/StructureSupport.adoc[`StructureSupport`] | xref::class/StructureSupport.adoc#direction[`direction`]
+
+
+
+| xref::class/SvVoltage.adoc[`SvVoltage`] | xref::class/SvVoltage.adoc#angle[`angle`]
+
+
+
+| xref::class/TapChangerInfo.adoc[`TapChangerInfo`] | xref::class/TapChangerInfo.adoc#stepPhaseIncrement[`stepPhaseIncrement`]
+
+
+
+| xref::class/VsConverter.adoc[`VsConverter`] | xref::class/VsConverter.adoc#targetPhasePcc[`targetPhasePcc`]
+
+
+
+| xref::class/WindAeroOneDimIEC.adoc[`WindAeroOneDimIEC`] | xref::class/WindAeroOneDimIEC.adoc#thetaomega[`thetaomega`]
+
+
+
+| xref::class/WindAeroTwoDimIEC.adoc[`WindAeroTwoDimIEC`] | xref::class/WindAeroTwoDimIEC.adoc#thetazero[`thetazero`]
+
+
+
+| xref::class/WindContPitchAngleIEC.adoc[`WindContPitchAngleIEC`] | xref::class/WindContPitchAngleIEC.adoc#thetamin[`thetamin`]
+
+
+|===
+

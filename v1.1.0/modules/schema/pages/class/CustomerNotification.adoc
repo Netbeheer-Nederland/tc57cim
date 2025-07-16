@@ -1,0 +1,329 @@
+= `CustomerNotification`
+:toclevels: 4
+
+
++++Conditions for notifying the customer about the changes in the status of their service (e.g., outage restore, estimated restoration time, tariff or service level change, etc.)+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CustomerNotification`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`CustomerNotification`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Customer,`Customer`>>
+//| [[slots_table.Customer]]<<Customer,`Customer`>>
+| 0..1 +
+xref::class/Customer.adoc[`Customer`]
+| +++Customer requiring this notification.+++
+| _n/a_
+
+| <<Incident,`Incident`>>
+//| [[slots_table.Incident]]<<Incident,`Incident`>>
+| 0..1 +
+xref::class/Incident.adoc[`Incident`]
+| +++Incident as a subject of this customer notification.+++
+| _n/a_
+
+| <<TroubleTickets,`TroubleTickets`>>
+//| [[slots_table.TroubleTickets]]<<TroubleTickets,`TroubleTickets`>>
+| 0..* +
+xref::class/TroubleTicket.adoc[`TroubleTicket`]
+| +++All trouble tickets with this notification.+++
+| _n/a_
+
+| <<contactType,`contactType`>>
+//| [[slots_table.contactType]]<<contactType,`contactType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Type of contact (e.g., phone, email, etc.).+++
+| _n/a_
+
+| <<contactValue,`contactValue`>>
+//| [[slots_table.contactValue]]<<contactValue,`contactValue`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Value of contact type (e.g., phone number, email address, etc.).+++
+| _n/a_
+
+| <<earliestDateTimeToCall,`earliestDateTimeToCall`>>
+//| [[slots_table.earliestDateTimeToCall]]<<earliestDateTimeToCall,`earliestDateTimeToCall`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Earliest date time to call the customer.+++
+| _n/a_
+
+| <<latestDateTimeToCall,`latestDateTimeToCall`>>
+//| [[slots_table.latestDateTimeToCall]]<<latestDateTimeToCall,`latestDateTimeToCall`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Latest date time to call the customer.+++
+| _n/a_
+
+| <<trigger,`trigger`>>
+//| [[slots_table.trigger]]<<trigger,`trigger`>>
+| 0..1 +
+xref::enumeration/NotificationTriggerKind.adoc[`NotificationTriggerKind`]
+| +++Trigger for this notification.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#contactType]
+=== `contactType`
++++Type of contact (e.g., phone, email, etc.).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.contactType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.contactType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#contactValue]
+=== `contactValue`
++++Value of contact type (e.g., phone number, email address, etc.).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.contactValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.contactValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Customer]
+=== `Customer`
++++Customer requiring this notification.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.Customer`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Customer.adoc[`Customer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Customer,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#earliestDateTimeToCall]
+=== `earliestDateTimeToCall`
++++Earliest date time to call the customer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.earliestDateTimeToCall`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.earliestDateTimeToCall,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Incident]
+=== `Incident`
++++Incident as a subject of this customer notification.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.Incident`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Incident.adoc[`Incident`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Incident,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#latestDateTimeToCall]
+=== `latestDateTimeToCall`
++++Latest date time to call the customer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.latestDateTimeToCall`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.latestDateTimeToCall,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#trigger]
+=== `trigger`
++++Trigger for this notification.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.trigger`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/NotificationTriggerKind.adoc[`NotificationTriggerKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.trigger,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TroubleTickets]
+=== `TroubleTickets`
++++All trouble tickets with this notification.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CustomerNotification.TroubleTickets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TroubleTicket.adoc[`TroubleTicket`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TroubleTickets,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Customer.adoc[`Customer`] | xref::class/Customer.adoc#CustomerNotifications[`CustomerNotifications`]
+
+
+
+| xref::class/Incident.adoc[`Incident`] | xref::class/Incident.adoc#CustomerNotifications[`CustomerNotifications`]
+
+
+
+| xref::class/TroubleTicket.adoc[`TroubleTicket`] | xref::class/TroubleTicket.adoc#Notification[`Notification`]
+
+
+|===
+

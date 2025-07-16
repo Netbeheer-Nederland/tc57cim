@@ -1,0 +1,80 @@
+= `ComTechnologyKind`
+:toclevels: 4
+
+
++++Kind of communication technology.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ComTechnologyKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `cellular`
+| `cim:ComTechnologyKind.cellular`
+| n/a
+
+| `ethernet`
+| `cim:ComTechnologyKind.ethernet`
+| n/a
+
+| `homePlug`
+| `cim:ComTechnologyKind.homePlug`
+| n/a
+
+| `pager`
+| `cim:ComTechnologyKind.pager`
+| n/a
+
+| `phone`
+| `cim:ComTechnologyKind.phone`
+| n/a
+
+| `plc`
+| `cim:ComTechnologyKind.plc`
+| n/a
+
+| `rf`
+| `cim:ComTechnologyKind.rf`
+| n/a
+
+| `rfMesh`
+| `cim:ComTechnologyKind.rfMesh`
+| n/a
+
+| `zigbee`
+| `cim:ComTechnologyKind.zigbee`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ComFunction.adoc[`ComFunction`] | xref::class/ComFunction.adoc#technology[`technology`]
+
+
+|===
+

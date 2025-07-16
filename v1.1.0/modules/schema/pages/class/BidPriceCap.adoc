@@ -1,0 +1,288 @@
+= `BidPriceCap`
+:toclevels: 4
+
+
++++This class represent the bid price cap.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:BidPriceCap`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`BidPriceCap`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MarketProduct,`MarketProduct`>>
+//| [[slots_table.MarketProduct]]<<MarketProduct,`MarketProduct`>>
+| 0..1 +
+xref::class/MarketProduct.adoc[`MarketProduct`]
+| _n/a_
+| _n/a_
+
+| <<bidCeiling,`bidCeiling`>>
+//| [[slots_table.bidCeiling]]<<bidCeiling,`bidCeiling`>>
+| 0..1 +
+xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++Bid Ceiling ($/MWH)+++
+| _n/a_
+
+| <<bidCeilingAS,`bidCeilingAS`>>
+//| [[slots_table.bidCeilingAS]]<<bidCeilingAS,`bidCeilingAS`>>
+| 0..1 +
+xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++Bid Ceiling ($/MWH) for generic AS versus a specific market product+++
+| _n/a_
+
+| <<bidFloor,`bidFloor`>>
+//| [[slots_table.bidFloor]]<<bidFloor,`bidFloor`>>
+| 0..1 +
+xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++Bid Floor, ($/MWH)+++
+| _n/a_
+
+| <<bidFloorAS,`bidFloorAS`>>
+//| [[slots_table.bidFloorAS]]<<bidFloorAS,`bidFloorAS`>>
+| 0..1 +
+xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++Bid Floor ($/MWH) for generic AS versus a specific market product+++
+| _n/a_
+
+| <<defaultPrice,`defaultPrice`>>
+//| [[slots_table.defaultPrice]]<<defaultPrice,`defaultPrice`>>
+| 0..1 +
+xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++Bid Default Price($/MWH)+++
+| _n/a_
+
+| <<marketType,`marketType`>>
+//| [[slots_table.marketType]]<<marketType,`marketType`>>
+| 0..1 +
+xref::enumeration/MarketType.adoc[`MarketType`]
+| +++Market Type of the cap (DAM or RTM)+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#bidCeiling]
+=== `bidCeiling`
++++Bid Ceiling ($/MWH)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.bidCeiling`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bidCeiling,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bidCeilingAS]
+=== `bidCeilingAS`
++++Bid Ceiling ($/MWH) for generic AS versus a specific market product+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.bidCeilingAS`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bidCeilingAS,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bidFloor]
+=== `bidFloor`
++++Bid Floor, ($/MWH)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.bidFloor`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bidFloor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bidFloorAS]
+=== `bidFloorAS`
++++Bid Floor ($/MWH) for generic AS versus a specific market product+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.bidFloorAS`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bidFloorAS,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#defaultPrice]
+=== `defaultPrice`
++++Bid Default Price($/MWH)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.defaultPrice`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.defaultPrice,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketProduct]
+=== `MarketProduct`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.MarketProduct`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MarketProduct.adoc[`MarketProduct`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketProduct,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marketType]
+=== `marketType`
++++Market Type of the cap (DAM or RTM)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BidPriceCap.marketType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MarketType.adoc[`MarketType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marketType,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketProduct.adoc[`MarketProduct`] | xref::class/MarketProduct.adoc#BidPriceCap[`BidPriceCap`]
+
+
+|===
+

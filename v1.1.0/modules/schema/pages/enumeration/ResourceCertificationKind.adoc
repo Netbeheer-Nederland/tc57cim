@@ -1,0 +1,92 @@
+= `ResourceCertificationKind`
+:toclevels: 4
+
+
++++Types used for resource certification.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ResourceCertificationKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `BLACKSTART`
+| `cim:ResourceCertificationKind.BLACKSTART`
+| n/a
+
+| `Capacity`
+| `cim:ResourceCertificationKind.Capacity`
+| n/a
+
+| `DemandSideResponse`
+| `cim:ResourceCertificationKind.DemandSideResponse`
+| n/a
+
+| `Energy`
+| `cim:ResourceCertificationKind.Energy`
+| n/a
+
+| `IntermittentResource`
+| `cim:ResourceCertificationKind.IntermittentResource`
+| n/a
+
+| `NonSpinningReserve`
+| `cim:ResourceCertificationKind.NonSpinningReserve`
+| n/a
+
+| `RegulationDown`
+| `cim:ResourceCertificationKind.RegulationDown`
+| n/a
+
+| `RegulationUp`
+| `cim:ResourceCertificationKind.RegulationUp`
+| n/a
+
+| `ReliabilityMustRun`
+| `cim:ResourceCertificationKind.ReliabilityMustRun`
+| n/a
+
+| `ReliabilityUnitCommitment`
+| `cim:ResourceCertificationKind.ReliabilityUnitCommitment`
+| n/a
+
+| `SpinningReserve`
+| `cim:ResourceCertificationKind.SpinningReserve`
+| n/a
+
+| `SynchronousCondenser`
+| `cim:ResourceCertificationKind.SynchronousCondenser`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ResourceCertification.adoc[`ResourceCertification`] | xref::class/ResourceCertification.adoc#type[`type`]
+
+
+|===
+

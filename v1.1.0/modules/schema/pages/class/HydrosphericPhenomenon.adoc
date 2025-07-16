@@ -1,0 +1,195 @@
+= `HydrosphericPhenomenon`
+:toclevels: 4
+
+
++++A hydrospheric phenomenon.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:HydrosphericPhenomenon`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+** *`HydrosphericPhenomenon`*
+ *** xref::class/Flood.adoc[`Flood`]
+ *** xref::class/Tsunami.adoc[`Tsunami`]
+ *** xref::class/Whirlpool.adoc[`Whirlpool`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<EnvironmentalInformation,`EnvironmentalInformation`>>
+//| [[slots_table.EnvironmentalInformation]]<<EnvironmentalInformation,`EnvironmentalInformation`>>
+| 0..1 +
+xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+| +++The forecast or observation of which this phenomenon description is a part.+++
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+| <<EnvironmentalLocationKind,`EnvironmentalLocationKind`>>
+//| [[slots_table.EnvironmentalLocationKind]]<<EnvironmentalLocationKind,`EnvironmentalLocationKind`>>
+| 0..* +
+xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+| +++Location of relevance to this environmental phenomenon.+++
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+| <<PhenomenonClassification,`PhenomenonClassification`>>
+//| [[slots_table.PhenomenonClassification]]<<PhenomenonClassification,`PhenomenonClassification`>>
+| 0..1 +
+xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+| +++The classification of this phenomenon.+++
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+| <<timeInterval,`timeInterval`>>
+//| [[slots_table.timeInterval]]<<timeInterval,`timeInterval`>>
+| 0..1 +
+xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++The timestamp of the phenomenon as a single point or time interval.+++
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+|===
+
+'''
+
+
+//[discrete]
+[#EnvironmentalInformation]
+=== `EnvironmentalInformation`
++++The forecast or observation of which this phenomenon description is a part.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.EnvironmentalInformation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalInformation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnvironmentalLocationKind]
+=== `EnvironmentalLocationKind`
++++Location of relevance to this environmental phenomenon.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.EnvironmentalLocationKind`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalLocationKind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PhenomenonClassification]
+=== `PhenomenonClassification`
++++The classification of this phenomenon.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.PhenomenonClassification`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PhenomenonClassification,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeInterval]
+=== `timeInterval`
++++The timestamp of the phenomenon as a single point or time interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.timeInterval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeInterval,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

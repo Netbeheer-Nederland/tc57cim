@@ -1,0 +1,127 @@
+= `Ratio`
+:toclevels: 4
+
+
++++Fraction specified explicitly with a numerator and denominator, which can be used to calculate the quotient.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Ratio`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`Ratio`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<denominator,`denominator`>>
+//| [[slots_table.denominator]]<<denominator,`denominator`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The part of a fraction that is below the line and that functions as the divisor of the numerator.+++
+| _n/a_
+
+| <<numerator,`numerator`>>
+//| [[slots_table.numerator]]<<numerator,`numerator`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The part of a fraction that is above the line and signifies the number to be divided by the denominator.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#denominator]
+=== `denominator`
++++The part of a fraction that is below the line and that functions as the divisor of the numerator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Ratio.denominator`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.denominator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#numerator]
+=== `numerator`
++++The part of a fraction that is above the line and signifies the number to be divided by the denominator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Ratio.numerator`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.numerator,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CurrentTransformerInfo.adoc[`CurrentTransformerInfo`] | xref::class/CurrentTransformerInfo.adoc#tertiaryRatio[`tertiaryRatio`]
+
+
+
+| xref::class/PotentialTransformerInfo.adoc[`PotentialTransformerInfo`] | xref::class/PotentialTransformerInfo.adoc#tertiaryRatio[`tertiaryRatio`]
+
+
+|===
+

@@ -1,0 +1,261 @@
+= `TransferInterfaceSolution`
+:toclevels: 4
+
+
++++TNA Interface Definitions from OPF for VSA.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TransferInterfaceSolution`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`TransferInterfaceSolution`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| << MktContingencyA,` MktContingencyA`>>
+//| [[slots_table. MktContingencyA]]<< MktContingencyA,` MktContingencyA`>>
+| 0..1 +
+xref::class/MktContingency.adoc[`MktContingency`]
+| _n/a_
+| _n/a_
+
+| <<MktContingencyB,`MktContingencyB`>>
+//| [[slots_table.MktContingencyB]]<<MktContingencyB,`MktContingencyB`>>
+| 0..1 +
+xref::class/MktContingency.adoc[`MktContingency`]
+| _n/a_
+| _n/a_
+
+| <<TransferInterface,`TransferInterface`>>
+//| [[slots_table.TransferInterface]]<<TransferInterface,`TransferInterface`>>
+| 1 +
+xref::class/TransferInterface.adoc[`TransferInterface`]
+| _n/a_
+| _n/a_
+
+| <<interfaceMargin,`interfaceMargin`>>
+//| [[slots_table.interfaceMargin]]<<interfaceMargin,`interfaceMargin`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The margin for the interface+++
+| _n/a_
+
+| <<postTransferMW,`postTransferMW`>>
+//| [[slots_table.postTransferMW]]<<postTransferMW,`postTransferMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Post Transfer MW for step+++
+| _n/a_
+
+| <<transferLimit,`transferLimit`>>
+//| [[slots_table.transferLimit]]<<transferLimit,`transferLimit`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Transfer Interface + Limit 
+Attribute Usage: The absoloute of the maximum flow on the transfer interface. This is a...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[# MktContingencyA]
+=== ` MktContingencyA`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransferInterfaceSolution.%20MktContingencyA`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MktContingency.adoc[`MktContingency`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table. MktContingencyA,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#interfaceMargin]
+=== `interfaceMargin`
++++The margin for the interface+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransferInterfaceSolution.interfaceMargin`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.interfaceMargin,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktContingencyB]
+=== `MktContingencyB`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransferInterfaceSolution.MktContingencyB`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MktContingency.adoc[`MktContingency`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktContingencyB,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#postTransferMW]
+=== `postTransferMW`
++++Post Transfer MW for step+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransferInterfaceSolution.postTransferMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.postTransferMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TransferInterface]
+=== `TransferInterface`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransferInterfaceSolution.TransferInterface`
+| Cardinality
+| 1
+| Type
+| xref::class/TransferInterface.adoc[`TransferInterface`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TransferInterface,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#transferLimit]
+=== `transferLimit`
++++Transfer Interface + Limit 
+Attribute Usage: The absoloute of the maximum flow on the transfer interface. This is a positive MW value.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransferInterfaceSolution.transferLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.transferLimit,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MktContingency.adoc[`MktContingency`] | xref::class/MktContingency.adoc#TransferInterfaceSolutionA[`TransferInterfaceSolutionA`]
+
+
+
+| xref::class/TransferInterface.adoc[`TransferInterface`] | xref::class/TransferInterface.adoc#TransferInterfaceSolution[`TransferInterfaceSolution`]
+
+
+|===
+

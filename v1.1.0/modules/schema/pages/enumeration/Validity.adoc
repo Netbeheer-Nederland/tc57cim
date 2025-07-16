@@ -1,0 +1,56 @@
+= `Validity`
+:toclevels: 4
+
+
++++Validity for MeasurementValue.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:Validity`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `GOOD`
+| `cim:Validity.GOOD`
+| n/a
+
+| `INVALID`
+| `cim:Validity.INVALID`
+| n/a
+
+| `QUESTIONABLE`
+| `cim:Validity.QUESTIONABLE`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Quality61850.adoc[`Quality61850`] | xref::class/Quality61850.adoc#validity[`validity`]
+
+
+|===
+

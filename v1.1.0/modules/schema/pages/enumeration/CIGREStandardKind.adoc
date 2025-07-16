@@ -1,0 +1,48 @@
+= `CIGREStandardKind`
+:toclevels: 4
+
+
++++List of CIGRE standards.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CIGREStandardKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `TB 170`
+| `cim:CIGREStandardKind.TB%20170`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CIGREStandard.adoc[`CIGREStandard`] | xref::class/CIGREStandard.adoc#standardNumber[`standardNumber`]
+
+
+|===
+

@@ -1,0 +1,56 @@
+= `OperationalLimitDirectionKind`
+:toclevels: 4
+
+
++++The direction attribute describes the side of  a limit that is a violation.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OperationalLimitDirectionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `absoluteValue`
+| `cim:OperationalLimitDirectionKind.absoluteValue`
+| n/a
+
+| `high`
+| `cim:OperationalLimitDirectionKind.high`
+| n/a
+
+| `low`
+| `cim:OperationalLimitDirectionKind.low`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/OperationalLimitType.adoc[`OperationalLimitType`] | xref::class/OperationalLimitType.adoc#direction[`direction`]
+
+
+|===
+

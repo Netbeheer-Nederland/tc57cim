@@ -1,0 +1,56 @@
+= `ServiceMultiplierKind`
+:toclevels: 4
+
+
++++Kind of service multiplier.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ServiceMultiplierKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ctRatio`
+| `cim:ServiceMultiplierKind.ctRatio`
+| n/a
+
+| `ptRatio`
+| `cim:ServiceMultiplierKind.ptRatio`
+| n/a
+
+| `transformerRatio`
+| `cim:ServiceMultiplierKind.transformerRatio`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ServiceMultiplier.adoc[`ServiceMultiplier`] | xref::class/ServiceMultiplier.adoc#kind[`kind`]
+
+
+|===
+

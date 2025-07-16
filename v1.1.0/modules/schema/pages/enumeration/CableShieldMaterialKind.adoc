@@ -1,0 +1,64 @@
+= `CableShieldMaterialKind`
+:toclevels: 4
+
+
++++Kind of cable shield material.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CableShieldMaterialKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `aluminum`
+| `cim:CableShieldMaterialKind.aluminum`
+| n/a
+
+| `copper`
+| `cim:CableShieldMaterialKind.copper`
+| n/a
+
+| `lead`
+| `cim:CableShieldMaterialKind.lead`
+| n/a
+
+| `other`
+| `cim:CableShieldMaterialKind.other`
+| n/a
+
+| `steel`
+| `cim:CableShieldMaterialKind.steel`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CableInfo.adoc[`CableInfo`] | xref::class/CableInfo.adoc#shieldMaterial[`shieldMaterial`]
+
+
+|===
+

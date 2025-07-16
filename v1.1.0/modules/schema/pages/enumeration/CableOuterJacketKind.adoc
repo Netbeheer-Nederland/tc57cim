@@ -1,0 +1,72 @@
+= `CableOuterJacketKind`
+:toclevels: 4
+
+
++++Kind of cable outer jacket.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CableOuterJacketKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `insulating`
+| `cim:CableOuterJacketKind.insulating`
+| n/a
+
+| `linearLowDensityPolyethylene`
+| `cim:CableOuterJacketKind.linearLowDensityPolyethylene`
+| n/a
+
+| `none`
+| `cim:CableOuterJacketKind.none`
+| n/a
+
+| `other`
+| `cim:CableOuterJacketKind.other`
+| n/a
+
+| `polyethylene`
+| `cim:CableOuterJacketKind.polyethylene`
+| n/a
+
+| `pvc`
+| `cim:CableOuterJacketKind.pvc`
+| n/a
+
+| `semiconducting`
+| `cim:CableOuterJacketKind.semiconducting`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CableInfo.adoc[`CableInfo`] | xref::class/CableInfo.adoc#outerJacketKind[`outerJacketKind`]
+
+
+|===
+

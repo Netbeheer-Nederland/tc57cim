@@ -1,0 +1,64 @@
+= `WorkActionKind`
+:toclevels: 4
+
+
++++Kinds of activities to be performed on a Compatible Unit.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:WorkActionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `abandon`
+| `cim:WorkActionKind.abandon`
+| n/a
+
+| `install`
+| `cim:WorkActionKind.install`
+| n/a
+
+| `remove`
+| `cim:WorkActionKind.remove`
+| n/a
+
+| `transfer`
+| `cim:WorkActionKind.transfer`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/DesignLocationCU.adoc[`DesignLocationCU`] | xref::class/DesignLocationCU.adoc#cuAction[`cuAction`]
+
+
+
+| xref::class/PropertyUnit.adoc[`PropertyUnit`] | xref::class/PropertyUnit.adoc#activityCode[`activityCode`]
+
+
+|===
+

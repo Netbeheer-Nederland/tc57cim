@@ -1,0 +1,519 @@
+= `PanPricingDetail`
+:toclevels: 4
+
+
++++Detail for a single price command/action.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PanPricingDetail`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`PanPricingDetail`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<PanPricing,`PanPricing`>>
+//| [[slots_table.PanPricing]]<<PanPricing,`PanPricing`>>
+| 0..1 +
+xref::class/PanPricing.adoc[`PanPricing`]
+| +++PAN pricing command/action issuing this price detail.+++
+| _n/a_
+
+| <<alternateCostDelivered,`alternateCostDelivered`>>
+//| [[slots_table.alternateCostDelivered]]<<alternateCostDelivered,`alternateCostDelivered`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Alternative measure of the cost of the energy consumed. An example might be the emissions of CO2 for each kWh of electricity...+++
+| _n/a_
+
+| <<alternateCostUnit,`alternateCostUnit`>>
+//| [[slots_table.alternateCostUnit]]<<alternateCostUnit,`alternateCostUnit`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Cost unit for the alternate cost delivered field. One example is kg of CO2 per unit of measure.+++
+| _n/a_
+
+| <<currentTimeDate,`currentTimeDate`>>
+//| [[slots_table.currentTimeDate]]<<currentTimeDate,`currentTimeDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Current time as determined by a PAN device.+++
+| _n/a_
+
+| <<generationPrice,`generationPrice`>>
+//| [[slots_table.generationPrice]]<<generationPrice,`generationPrice`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Price of the commodity measured in base unit of currency per 'unitOfMeasure'.+++
+| _n/a_
+
+| <<generationPriceRatio,`generationPriceRatio`>>
+//| [[slots_table.generationPriceRatio]]<<generationPriceRatio,`generationPriceRatio`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Ratio of 'generationPrice' to the "normal" price chosen by the commodity provider.+++
+| _n/a_
+
+| <<price,`price`>>
+//| [[slots_table.price]]<<price,`price`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Price of the commodity measured in base unit of currency per 'unitOfMeasure'.+++
+| _n/a_
+
+| <<priceRatio,`priceRatio`>>
+//| [[slots_table.priceRatio]]<<priceRatio,`priceRatio`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Ratio of 'price' to the "normal" price chosen by the commodity provider.+++
+| _n/a_
+
+| <<priceTier,`priceTier`>>
+//| [[slots_table.priceTier]]<<priceTier,`priceTier`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Pricing tier as chosen by the commodity provider.+++
+| _n/a_
+
+| <<priceTierCount,`priceTierCount`>>
+//| [[slots_table.priceTierCount]]<<priceTierCount,`priceTierCount`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Maximum number of price tiers available.+++
+| _n/a_
+
+| <<priceTierLabel,`priceTierLabel`>>
+//| [[slots_table.priceTierLabel]]<<priceTierLabel,`priceTierLabel`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Label for price tier.+++
+| _n/a_
+
+| <<rateLabel,`rateLabel`>>
+//| [[slots_table.rateLabel]]<<rateLabel,`rateLabel`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Label of the current billing rate specified by commodity provider.+++
+| _n/a_
+
+| <<registerTier,`registerTier`>>
+//| [[slots_table.registerTier]]<<registerTier,`registerTier`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Register tier accumulating usage information.+++
+| _n/a_
+
+| <<unitOfMeasure,`unitOfMeasure`>>
+//| [[slots_table.unitOfMeasure]]<<unitOfMeasure,`unitOfMeasure`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Defines commodity as well as its base unit of measure.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#alternateCostDelivered]
+=== `alternateCostDelivered`
++++Alternative measure of the cost of the energy consumed. An example might be the emissions of CO2 for each kWh of electricity consumed providing a measure of the environmental cost.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.alternateCostDelivered`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.alternateCostDelivered,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#alternateCostUnit]
+=== `alternateCostUnit`
++++Cost unit for the alternate cost delivered field. One example is kg of CO2 per unit of measure.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.alternateCostUnit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.alternateCostUnit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#currentTimeDate]
+=== `currentTimeDate`
++++Current time as determined by a PAN device.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.currentTimeDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.currentTimeDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#generationPrice]
+=== `generationPrice`
++++Price of the commodity measured in base unit of currency per 'unitOfMeasure'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.generationPrice`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.generationPrice,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#generationPriceRatio]
+=== `generationPriceRatio`
++++Ratio of 'generationPrice' to the "normal" price chosen by the commodity provider.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.generationPriceRatio`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.generationPriceRatio,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PanPricing]
+=== `PanPricing`
++++PAN pricing command/action issuing this price detail.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.PanPricing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PanPricing.adoc[`PanPricing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PanPricing,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#price]
+=== `price`
++++Price of the commodity measured in base unit of currency per 'unitOfMeasure'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.price`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.price,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#priceRatio]
+=== `priceRatio`
++++Ratio of 'price' to the "normal" price chosen by the commodity provider.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.priceRatio`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.priceRatio,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#priceTier]
+=== `priceTier`
++++Pricing tier as chosen by the commodity provider.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.priceTier`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.priceTier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#priceTierCount]
+=== `priceTierCount`
++++Maximum number of price tiers available.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.priceTierCount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.priceTierCount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#priceTierLabel]
+=== `priceTierLabel`
++++Label for price tier.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.priceTierLabel`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.priceTierLabel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rateLabel]
+=== `rateLabel`
++++Label of the current billing rate specified by commodity provider.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.rateLabel`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rateLabel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#registerTier]
+=== `registerTier`
++++Register tier accumulating usage information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.registerTier`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.registerTier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#unitOfMeasure]
+=== `unitOfMeasure`
++++Defines commodity as well as its base unit of measure.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricingDetail.unitOfMeasure`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.unitOfMeasure,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/PanPricing.adoc[`PanPricing`] | xref::class/PanPricing.adoc#PanPricingDetails[`PanPricingDetails`]
+
+
+|===
+

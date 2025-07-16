@@ -1,0 +1,72 @@
+= `RevenueKind`
+:toclevels: 4
+
+
++++Accounting classification of the type of revenue collected for the customer agreement, typically used to break down accounts for revenue accounting.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:RevenueKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `commercial`
+| `cim:RevenueKind.commercial`
+| n/a
+
+| `industrial`
+| `cim:RevenueKind.industrial`
+| n/a
+
+| `irrigation`
+| `cim:RevenueKind.irrigation`
+| n/a
+
+| `nonResidential`
+| `cim:RevenueKind.nonResidential`
+| n/a
+
+| `other`
+| `cim:RevenueKind.other`
+| n/a
+
+| `residential`
+| `cim:RevenueKind.residential`
+| n/a
+
+| `streetLight`
+| `cim:RevenueKind.streetLight`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/PricingStructure.adoc[`PricingStructure`] | xref::class/PricingStructure.adoc#revenueKind[`revenueKind`]
+
+
+|===
+

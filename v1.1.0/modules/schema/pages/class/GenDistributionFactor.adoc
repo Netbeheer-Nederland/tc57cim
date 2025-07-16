@@ -1,0 +1,197 @@
+= `GenDistributionFactor`
+:toclevels: 4
+
+
++++This class models the generation distribution factors. This class needs to be used along with the AggregatedPnode and the IndividualPnode to show the distribution of each individual party.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:GenDistributionFactor`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`GenDistributionFactor`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AggregatedPnode,`AggregatedPnode`>>
+//| [[slots_table.AggregatedPnode]]<<AggregatedPnode,`AggregatedPnode`>>
+| 0..1 +
+xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+| _n/a_
+| _n/a_
+
+| <<DistributionFactorSet,`DistributionFactorSet`>>
+//| [[slots_table.DistributionFactorSet]]<<DistributionFactorSet,`DistributionFactorSet`>>
+| 0..* +
+xref::class/DistributionFactorSet.adoc[`DistributionFactorSet`]
+| _n/a_
+| _n/a_
+
+| <<IndividualPnode,`IndividualPnode`>>
+//| [[slots_table.IndividualPnode]]<<IndividualPnode,`IndividualPnode`>>
+| 0..1 +
+xref::class/IndividualPnode.adoc[`IndividualPnode`]
+| _n/a_
+| _n/a_
+
+| <<factor,`factor`>>
+//| [[slots_table.factor]]<<factor,`factor`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Used to calculate generation "participation" of an individual pnond in an AggregatePnode.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#AggregatedPnode]
+=== `AggregatedPnode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GenDistributionFactor.AggregatedPnode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AggregatedPnode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DistributionFactorSet]
+=== `DistributionFactorSet`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GenDistributionFactor.DistributionFactorSet`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DistributionFactorSet.adoc[`DistributionFactorSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DistributionFactorSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#factor]
+=== `factor`
++++Used to calculate generation "participation" of an individual pnond in an AggregatePnode.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GenDistributionFactor.factor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.factor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#IndividualPnode]
+=== `IndividualPnode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GenDistributionFactor.IndividualPnode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IndividualPnode.adoc[`IndividualPnode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.IndividualPnode,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`] | xref::class/AggregatedPnode.adoc#GenDistributionFactor[`GenDistributionFactor`]
+
+
+
+| xref::class/DistributionFactorSet.adoc[`DistributionFactorSet`] | xref::class/DistributionFactorSet.adoc#GenDistributionFactor[`GenDistributionFactor`]
+
+
+
+| xref::class/IndividualPnode.adoc[`IndividualPnode`] | xref::class/IndividualPnode.adoc#GenDistributionFactor[`GenDistributionFactor`]
+
+
+|===
+

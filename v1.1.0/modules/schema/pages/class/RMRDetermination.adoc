@@ -1,0 +1,127 @@
+= `RMRDetermination`
+:toclevels: 4
+
+
++++Indicates whether unit is a reliablity must run unit: required to be on to satisfy Grid Code Reliablitiy criteria, load demand, or voltage support.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RMRDetermination`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`RMRDetermination`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Bid,`Bid`>>
+//| [[slots_table.Bid]]<<Bid,`Bid`>>
+| 0..1 +
+xref::class/Bid.adoc[`Bid`]
+| _n/a_
+| _n/a_
+
+| <<MitigatedBidClearing,`MitigatedBidClearing`>>
+//| [[slots_table.MitigatedBidClearing]]<<MitigatedBidClearing,`MitigatedBidClearing`>>
+| 1..* +
+xref::class/MitigatedBidClearing.adoc[`MitigatedBidClearing`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#Bid]
+=== `Bid`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RMRDetermination.Bid`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Bid,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MitigatedBidClearing]
+=== `MitigatedBidClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RMRDetermination.MitigatedBidClearing`
+| Cardinality
+| 1..*
+| Type
+| xref::class/MitigatedBidClearing.adoc[`MitigatedBidClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MitigatedBidClearing,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Bid.adoc[`Bid`] | xref::class/Bid.adoc#RMRDetermination[`RMRDetermination`]
+
+
+
+| xref::class/MitigatedBidClearing.adoc[`MitigatedBidClearing`] | xref::class/MitigatedBidClearing.adoc#RMRDetermination[`RMRDetermination`]
+
+
+|===
+

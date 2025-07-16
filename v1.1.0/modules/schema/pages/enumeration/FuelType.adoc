@@ -1,0 +1,96 @@
+= `FuelType`
+:toclevels: 4
+
+
++++Type of fuel.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:FuelType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `brownCoalLignite`
+| `cim:FuelType.brownCoalLignite`
+| n/a
+
+| `coal`
+| `cim:FuelType.coal`
+| n/a
+
+| `coalDerivedGas`
+| `cim:FuelType.coalDerivedGas`
+| n/a
+
+| `gas`
+| `cim:FuelType.gas`
+| n/a
+
+| `hardCoal`
+| `cim:FuelType.hardCoal`
+| n/a
+
+| `lignite`
+| `cim:FuelType.lignite`
+| n/a
+
+| `oil`
+| `cim:FuelType.oil`
+| n/a
+
+| `oilShale`
+| `cim:FuelType.oilShale`
+| n/a
+
+| `other`
+| `cim:FuelType.other`
+| n/a
+
+| `peat`
+| `cim:FuelType.peat`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/FossilFuel.adoc[`FossilFuel`] | xref::class/FossilFuel.adoc#fossilFuelType[`fossilFuelType`]
+
+
+
+| xref::class/FuelAllocationSchedule.adoc[`FuelAllocationSchedule`] | xref::class/FuelAllocationSchedule.adoc#fuelType[`fuelType`]
+
+
+
+| xref::class/StartIgnFuelCurve.adoc[`StartIgnFuelCurve`] | xref::class/StartIgnFuelCurve.adoc#ignitionFuelType[`ignitionFuelType`]
+
+
+
+| xref::class/StartMainFuelCurve.adoc[`StartMainFuelCurve`] | xref::class/StartMainFuelCurve.adoc#mainFuelType[`mainFuelType`]
+
+
+|===
+

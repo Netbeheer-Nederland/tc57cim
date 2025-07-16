@@ -1,0 +1,783 @@
+= `OperatingMechanismInfo`
+:toclevels: 4
+
+
++++Breaker operating mechanism datasheet information.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:OperatingMechanismInfo`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/AssetInfo.adoc[`AssetInfo`]
+*** *`OperatingMechanismInfo`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<closeAmps,`closeAmps`>>
+//| [[slots_table.closeAmps]]<<closeAmps,`closeAmps`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++Close current (nominal).+++
+| _n/a_
+
+| <<closeVoltage,`closeVoltage`>>
+//| [[slots_table.closeVoltage]]<<closeVoltage,`closeVoltage`>>
+| 0..1 +
+xref::class/Voltage.adoc[`Voltage`]
+| +++Close voltage in volts DC.+++
+| _n/a_
+
+| <<mechanismKind,`mechanismKind`>>
+//| [[slots_table.mechanismKind]]<<mechanismKind,`mechanismKind`>>
+| 0..1 +
+xref::enumeration/OperatingMechanismKind.adoc[`OperatingMechanismKind`]
+| +++Kind of breaker operating mechanism.+++
+| _n/a_
+
+| <<motorRunCurrent,`motorRunCurrent`>>
+//| [[slots_table.motorRunCurrent]]<<motorRunCurrent,`motorRunCurrent`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++Rated motor run current in amps.+++
+| _n/a_
+
+| <<motorStartCurrent,`motorStartCurrent`>>
+//| [[slots_table.motorStartCurrent]]<<motorStartCurrent,`motorStartCurrent`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++Rated motor start current in amps.+++
+| _n/a_
+
+| <<motorVoltage,`motorVoltage`>>
+//| [[slots_table.motorVoltage]]<<motorVoltage,`motorVoltage`>>
+| 0..1 +
+xref::class/Voltage.adoc[`Voltage`]
+| +++Nominal motor voltage in volts DC.+++
+| _n/a_
+
+| <<tripAmps,`tripAmps`>>
+//| [[slots_table.tripAmps]]<<tripAmps,`tripAmps`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++Trip current (nominal).+++
+| _n/a_
+
+| <<tripVoltage,`tripVoltage`>>
+//| [[slots_table.tripVoltage]]<<tripVoltage,`tripVoltage`>>
+| 0..1 +
+xref::class/Voltage.adoc[`Voltage`]
+| +++Trip voltage in volts DC.+++
+| _n/a_
+
+| <<Assets,`Assets`>>
+//| [[slots_table.Assets]]<<Assets,`Assets`>>
+| 0..* +
+xref::class/Asset.adoc[`Asset`]
+| +++All assets described by this data.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<CatalogAssetType,`CatalogAssetType`>>
+//| [[slots_table.CatalogAssetType]]<<CatalogAssetType,`CatalogAssetType`>>
+| 0..1 +
+xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+| +++Asset information (nameplate) for this catalog asset type.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<PowerSystemResources,`PowerSystemResources`>>
+//| [[slots_table.PowerSystemResources]]<<PowerSystemResources,`PowerSystemResources`>>
+| 0..* +
+xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+| +++All power system resources with this datasheet information.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<ProductAssetModel,`ProductAssetModel`>>
+//| [[slots_table.ProductAssetModel]]<<ProductAssetModel,`ProductAssetModel`>>
+| 0..1 +
+xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+| +++Product asset model which conforms to this catalog asset type.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets described by this data.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Assets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CatalogAssetType]
+=== `CatalogAssetType`
++++Asset information (nameplate) for this catalog asset type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.CatalogAssetType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CatalogAssetType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#closeAmps]
+=== `closeAmps`
++++Close current (nominal).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingMechanismInfo.closeAmps`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.closeAmps,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#closeVoltage]
+=== `closeVoltage`
++++Close voltage in volts DC.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingMechanismInfo.closeVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.closeVoltage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mechanismKind]
+=== `mechanismKind`
++++Kind of breaker operating mechanism.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingMechanismInfo.mechanismKind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/OperatingMechanismKind.adoc[`OperatingMechanismKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mechanismKind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#motorRunCurrent]
+=== `motorRunCurrent`
++++Rated motor run current in amps.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingMechanismInfo.motorRunCurrent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.motorRunCurrent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#motorStartCurrent]
+=== `motorStartCurrent`
++++Rated motor start current in amps.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingMechanismInfo.motorStartCurrent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.motorStartCurrent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#motorVoltage]
+=== `motorVoltage`
++++Nominal motor voltage in volts DC.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingMechanismInfo.motorVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.motorVoltage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PowerSystemResources]
+=== `PowerSystemResources`
++++All power system resources with this datasheet information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.PowerSystemResources`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PowerSystemResources,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ProductAssetModel]
+=== `ProductAssetModel`
++++Product asset model which conforms to this catalog asset type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.ProductAssetModel`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ProductAssetModel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tripAmps]
+=== `tripAmps`
++++Trip current (nominal).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingMechanismInfo.tripAmps`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tripAmps,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tripVoltage]
+=== `tripVoltage`
++++Trip voltage in volts DC.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingMechanismInfo.tripVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tripVoltage,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

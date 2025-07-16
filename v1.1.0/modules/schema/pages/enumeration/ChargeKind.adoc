@@ -1,0 +1,64 @@
+= `ChargeKind`
+:toclevels: 4
+
+
++++Kind of charge.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ChargeKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `auxiliaryCharge`
+| `cim:ChargeKind.auxiliaryCharge`
+| n/a
+
+| `consumptionCharge`
+| `cim:ChargeKind.consumptionCharge`
+| n/a
+
+| `demandCharge`
+| `cim:ChargeKind.demandCharge`
+| n/a
+
+| `other`
+| `cim:ChargeKind.other`
+| n/a
+
+| `taxCharge`
+| `cim:ChargeKind.taxCharge`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Charge.adoc[`Charge`] | xref::class/Charge.adoc#kind[`kind`]
+
+
+|===
+

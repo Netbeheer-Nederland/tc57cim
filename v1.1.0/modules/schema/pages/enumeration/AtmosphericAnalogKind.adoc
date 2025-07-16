@@ -1,0 +1,160 @@
+= `AtmosphericAnalogKind`
+:toclevels: 4
+
+
++++Kinds of analogs (floats)  measuring an atmospheric condition.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AtmosphericAnalogKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `albedo`
+| `cim:AtmosphericAnalogKind.albedo`
+| n/a
+
+| `ambientTemperature`
+| `cim:AtmosphericAnalogKind.ambientTemperature`
+| n/a
+
+| `atmosphericPressure`
+| `cim:AtmosphericAnalogKind.atmosphericPressure`
+| n/a
+
+| `ceiling`
+| `cim:AtmosphericAnalogKind.ceiling`
+| n/a
+
+| `dewPoint`
+| `cim:AtmosphericAnalogKind.dewPoint`
+| n/a
+
+| `heatIndex`
+| `cim:AtmosphericAnalogKind.heatIndex`
+| n/a
+
+| `horizontalVisibility`
+| `cim:AtmosphericAnalogKind.horizontalVisibility`
+| n/a
+
+| `humidity`
+| `cim:AtmosphericAnalogKind.humidity`
+| n/a
+
+| `ice`
+| `cim:AtmosphericAnalogKind.ice`
+| n/a
+
+| `illuminanceDiffuseHorizontal`
+| `cim:AtmosphericAnalogKind.illuminanceDiffuseHorizontal`
+| n/a
+
+| `illuminanceDirectNormal`
+| `cim:AtmosphericAnalogKind.illuminanceDirectNormal`
+| n/a
+
+| `illuminanceGlobalHorizontal`
+| `cim:AtmosphericAnalogKind.illuminanceGlobalHorizontal`
+| n/a
+
+| `irradianceDiffuseHorizonal`
+| `cim:AtmosphericAnalogKind.irradianceDiffuseHorizonal`
+| n/a
+
+| `irradianceDirectNormal`
+| `cim:AtmosphericAnalogKind.irradianceDirectNormal`
+| n/a
+
+| `irradianceExtraTerrestrialHorizontal`
+| `cim:AtmosphericAnalogKind.irradianceExtraTerrestrialHorizontal`
+| n/a
+
+| `irradianceExtraTerrestrialVertical`
+| `cim:AtmosphericAnalogKind.irradianceExtraTerrestrialVertical`
+| n/a
+
+| `irradianceGlobalHorizontal`
+| `cim:AtmosphericAnalogKind.irradianceGlobalHorizontal`
+| n/a
+
+| `luminanceZenith`
+| `cim:AtmosphericAnalogKind.luminanceZenith`
+| n/a
+
+| `precipitation`
+| `cim:AtmosphericAnalogKind.precipitation`
+| n/a
+
+| `rain`
+| `cim:AtmosphericAnalogKind.rain`
+| n/a
+
+| `skyCoverageOpaque`
+| `cim:AtmosphericAnalogKind.skyCoverageOpaque`
+| n/a
+
+| `skyCoverageTotal`
+| `cim:AtmosphericAnalogKind.skyCoverageTotal`
+| n/a
+
+| `snow`
+| `cim:AtmosphericAnalogKind.snow`
+| n/a
+
+| `verticalVisibility`
+| `cim:AtmosphericAnalogKind.verticalVisibility`
+| n/a
+
+| `windChill`
+| `cim:AtmosphericAnalogKind.windChill`
+| n/a
+
+| `windSpeedGust`
+| `cim:AtmosphericAnalogKind.windSpeedGust`
+| n/a
+
+| `windSpeedInstantaneous`
+| `cim:AtmosphericAnalogKind.windSpeedInstantaneous`
+| n/a
+
+| `windSpeedPeak`
+| `cim:AtmosphericAnalogKind.windSpeedPeak`
+| n/a
+
+| `windSpeedSustained`
+| `cim:AtmosphericAnalogKind.windSpeedSustained`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AtmosphericAnalog.adoc[`AtmosphericAnalog`] | xref::class/AtmosphericAnalog.adoc#kind[`kind`]
+
+
+|===
+

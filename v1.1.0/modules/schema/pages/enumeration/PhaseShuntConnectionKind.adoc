@@ -1,0 +1,68 @@
+= `PhaseShuntConnectionKind`
+:toclevels: 4
+
+
++++The configuration of phase connections for a single terminal device such as a load or capacitor.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:PhaseShuntConnectionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `D`
+| `cim:PhaseShuntConnectionKind.D`
+| n/a
+
+| `G`
+| `cim:PhaseShuntConnectionKind.G`
+| n/a
+
+| `I`
+| `cim:PhaseShuntConnectionKind.I`
+| n/a
+
+| `Y`
+| `cim:PhaseShuntConnectionKind.Y`
+| n/a
+
+| `Yn`
+| `cim:PhaseShuntConnectionKind.Yn`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EnergyConsumer.adoc[`EnergyConsumer`] | xref::class/EnergyConsumer.adoc#phaseConnection[`phaseConnection`]
+
+
+
+| xref::class/ShuntCompensator.adoc[`ShuntCompensator`] | xref::class/ShuntCompensator.adoc#phaseConnection[`phaseConnection`]
+
+
+|===
+

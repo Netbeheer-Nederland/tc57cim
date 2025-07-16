@@ -1,0 +1,170 @@
+= `ApparentPower`
+:toclevels: 4
+
+
++++Product of the RMS value of the voltage and the RMS value of the current.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:ApparentPower`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:ApparentPower.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:ApparentPower.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:ApparentPower.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ACDCConverter.adoc[`ACDCConverter`] | xref::class/ACDCConverter.adoc#baseS[`baseS`]
+
+
+
+| xref::class/ApparentPowerLimit.adoc[`ApparentPowerLimit`] | xref::class/ApparentPowerLimit.adoc#value[`value`]
+
+
+
+| xref::class/BasePower.adoc[`BasePower`] | xref::class/BasePower.adoc#basePower[`basePower`]
+
+
+
+| xref::class/CoolingPowerRating.adoc[`CoolingPowerRating`] | xref::class/CoolingPowerRating.adoc#powerRating[`powerRating`]
+
+
+
+| xref::class/ExcSK.adoc[`ExcSK`] | xref::class/ExcSK.adoc#sbase[`sbase`]
+
+
+
+| xref::class/OldTransformerEndInfo.adoc[`OldTransformerEndInfo`] | xref::class/OldTransformerEndInfo.adoc#hourOverLoadRating[`hourOverLoadRating`]
+
+
+
+| xref::class/PowerElectronicsConnection.adoc[`PowerElectronicsConnection`] | xref::class/PowerElectronicsConnection.adoc#ratedS[`ratedS`]
+
+
+
+| xref::class/PowerTransformerEnd.adoc[`PowerTransformerEnd`] | xref::class/PowerTransformerEnd.adoc#ratedS[`ratedS`]
+
+
+
+| xref::class/RotatingMachine.adoc[`RotatingMachine`] | xref::class/RotatingMachine.adoc#ratedS[`ratedS`]
+
+
+
+| xref::class/ScheduledApparentPowerLimitValue.adoc[`ScheduledApparentPowerLimitValue`] | xref::class/ScheduledApparentPowerLimitValue.adoc#value[`value`]
+
+
+
+| xref::class/ShortCircuitTest.adoc[`ShortCircuitTest`] | xref::class/ShortCircuitTest.adoc#power[`power`]
+
+
+
+| xref::class/ShuntCompensatorInfo.adoc[`ShuntCompensatorInfo`] | xref::class/ShuntCompensatorInfo.adoc#maxPowerLoss[`maxPowerLoss`]
+
+
+
+| xref::class/TapChangerInfo.adoc[`TapChangerInfo`] | xref::class/TapChangerInfo.adoc#ratedApparentPower[`ratedApparentPower`]
+
+
+
+| xref::class/TransformerEndInfo.adoc[`TransformerEndInfo`] | xref::class/TransformerEndInfo.adoc#shortTermS[`shortTermS`]
+
+
+
+| xref::class/TransformerTest.adoc[`TransformerTest`] | xref::class/TransformerTest.adoc#basePower[`basePower`]
+
+
+|===
+

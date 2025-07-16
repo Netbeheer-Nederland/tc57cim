@@ -1,0 +1,125 @@
+= `CCArectifierControl`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CCArectifierControl`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`CCArectifierControl`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<CSCtype1,`CSCtype1`>>
+//| [[slots_table.CSCtype1]]<<CSCtype1,`CSCtype1`>>
+| 0..1 +
+xref::class/CSCtype1.adoc[`CSCtype1`]
+| _n/a_
+| _n/a_
+
+| <<Delay,`Delay`>>
+//| [[slots_table.Delay]]<<Delay,`Delay`>>
+| 1 +
+xref::class/Delay.adoc[`Delay`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#CSCtype1]
+=== `CSCtype1`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CCArectifierControl.CSCtype1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CSCtype1.adoc[`CSCtype1`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CSCtype1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Delay]
+=== `Delay`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CCArectifierControl.Delay`
+| Cardinality
+| 1
+| Type
+| xref::class/Delay.adoc[`Delay`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Delay,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CSCtype1.adoc[`CSCtype1`] | xref::class/CSCtype1.adoc#CCArectifierControl[`CCArectifierControl`]
+
+
+
+| xref::class/Delay.adoc[`Delay`] | xref::class/Delay.adoc#CCArectifierControl[`CCArectifierControl`]
+
+
+|===
+

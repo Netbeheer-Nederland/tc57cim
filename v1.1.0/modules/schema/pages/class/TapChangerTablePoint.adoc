@@ -1,0 +1,254 @@
+= `TapChangerTablePoint`
+:toclevels: 4
+
+
++++Describes each tap step in the tabular curve.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TapChangerTablePoint`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`TapChangerTablePoint`*
+ ** xref::class/PhaseTapChangerTablePoint.adoc[`PhaseTapChangerTablePoint`]
+ ** xref::class/RatioTapChangerTablePoint.adoc[`RatioTapChangerTablePoint`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<b,`b`>>
+//| [[slots_table.b]]<<b,`b`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++The magnetizing branch susceptance deviation as a percentage of nominal value. The actual susceptance is calculated as...+++
+| _n/a_
+
+| <<g,`g`>>
+//| [[slots_table.g]]<<g,`g`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++The magnetizing branch conductance deviation as a percentage of nominal value. The actual conductance is calculated as...+++
+| _n/a_
+
+| <<r,`r`>>
+//| [[slots_table.r]]<<r,`r`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++The resistance deviation as a percentage of nominal value. The actual reactance is calculated as follows:
+calculated...+++
+| _n/a_
+
+| <<ratio,`ratio`>>
+//| [[slots_table.ratio]]<<ratio,`ratio`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The voltage at the tap step divided by rated voltage of the transformer end having the tap changer. Hence this is a value...+++
+| _n/a_
+
+| <<step,`step`>>
+//| [[slots_table.step]]<<step,`step`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++The tap step.+++
+| _n/a_
+
+| <<x,`x`>>
+//| [[slots_table.x]]<<x,`x`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++The series reactance deviation as a percentage of nominal value. The actual reactance is calculated as follows:
+calculated...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#b]
+=== `b`
++++The magnetizing branch susceptance deviation as a percentage of nominal value. The actual susceptance is calculated as follows:
+calculated magnetizing susceptance = b(nominal) * (1 + b(from this class)/100).   The b(nominal) is defined as the static magnetizing susceptance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerTablePoint.b`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.b,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#g]
+=== `g`
++++The magnetizing branch conductance deviation as a percentage of nominal value. The actual conductance is calculated as follows:
+calculated magnetizing conductance = g(nominal) * (1 + g(from this class)/100).   The g(nominal) is defined as the static magnetizing conductance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerTablePoint.g`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.g,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#r]
+=== `r`
++++The resistance deviation as a percentage of nominal value. The actual reactance is calculated as follows:
+calculated resistance = r(nominal) * (1 + r(from this class)/100).   The r(nominal) is defined as the static resistance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerTablePoint.r`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.r,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ratio]
+=== `ratio`
++++The voltage at the tap step divided by rated voltage of the transformer end having the tap changer. Hence this is a value close to one.
+For example, if the ratio at step 1 is 1.01, and the rated voltage of the transformer end is 110kV, then the voltage obtained by setting the tap changer to step 1 to is 111.1kV.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerTablePoint.ratio`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ratio,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#step]
+=== `step`
++++The tap step.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerTablePoint.step`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.step,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#x]
+=== `x`
++++The series reactance deviation as a percentage of nominal value. The actual reactance is calculated as follows:
+calculated reactance = x(nominal) * (1 + x(from this class)/100).   The x(nominal) is defined as the static series reactance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerTablePoint.x`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.x,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

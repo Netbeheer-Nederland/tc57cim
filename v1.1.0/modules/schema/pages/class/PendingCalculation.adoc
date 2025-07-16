@@ -1,0 +1,292 @@
+= `PendingCalculation`
+:toclevels: 4
+
+
++++When present, a scalar conversion that needs to be applied to every IntervalReading.value contained in IntervalBlock. This conversion results in a new associated ReadingType, reflecting the true dimensions of IntervalReading values after the conversion.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PendingCalculation`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`PendingCalculation`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<IntervalBlocks,`IntervalBlocks`>>
+//| [[slots_table.IntervalBlocks]]<<IntervalBlocks,`IntervalBlocks`>>
+| 0..* +
+xref::class/IntervalBlock.adoc[`IntervalBlock`]
+| +++All blocks of interval reading values to which this pending conversion applies.+++
+| _n/a_
+
+| <<ReadingType,`ReadingType`>>
+//| [[slots_table.ReadingType]]<<ReadingType,`ReadingType`>>
+| 1 +
+xref::class/ReadingType.adoc[`ReadingType`]
+| +++Reading type resulting from this pending conversion.+++
+| _n/a_
+
+| <<multiplyBeforeAdd,`multiplyBeforeAdd`>>
+//| [[slots_table.multiplyBeforeAdd]]<<multiplyBeforeAdd,`multiplyBeforeAdd`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Whether scalars should be applied before adding the 'offset'.+++
+| _n/a_
+
+| <<offset,`offset`>>
+//| [[slots_table.offset]]<<offset,`offset`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++(if applicable) Offset to be added as well as multiplication using scalars.+++
+| _n/a_
+
+| <<scalarDenominator,`scalarDenominator`>>
+//| [[slots_table.scalarDenominator]]<<scalarDenominator,`scalarDenominator`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++(if scalar is rational number) When 'IntervalReading.value' is multiplied by 'scalarNumerator' and divided by this value, it...+++
+| _n/a_
+
+| <<scalarFloat,`scalarFloat`>>
+//| [[slots_table.scalarFloat]]<<scalarFloat,`scalarFloat`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++(if scalar is floating number) When multiplied with 'IntervalReading.value', it causes a unit of measure conversion to...+++
+| _n/a_
+
+| <<scalarNumerator,`scalarNumerator`>>
+//| [[slots_table.scalarNumerator]]<<scalarNumerator,`scalarNumerator`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++(if scalar is integer or rational number)  When the scalar is a simple integer, and this attribute is presented alone and...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#IntervalBlocks]
+=== `IntervalBlocks`
++++All blocks of interval reading values to which this pending conversion applies.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PendingCalculation.IntervalBlocks`
+| Cardinality
+| 0..*
+| Type
+| xref::class/IntervalBlock.adoc[`IntervalBlock`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.IntervalBlocks,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#multiplyBeforeAdd]
+=== `multiplyBeforeAdd`
++++Whether scalars should be applied before adding the 'offset'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PendingCalculation.multiplyBeforeAdd`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.multiplyBeforeAdd,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#offset]
+=== `offset`
++++(if applicable) Offset to be added as well as multiplication using scalars.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PendingCalculation.offset`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.offset,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ReadingType]
+=== `ReadingType`
++++Reading type resulting from this pending conversion.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PendingCalculation.ReadingType`
+| Cardinality
+| 1
+| Type
+| xref::class/ReadingType.adoc[`ReadingType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ReadingType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#scalarDenominator]
+=== `scalarDenominator`
++++(if scalar is rational number) When 'IntervalReading.value' is multiplied by 'scalarNumerator' and divided by this value, it causes a unit of measure conversion to occur, resulting in the 'ReadingType.unit'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PendingCalculation.scalarDenominator`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.scalarDenominator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#scalarFloat]
+=== `scalarFloat`
++++(if scalar is floating number) When multiplied with 'IntervalReading.value', it causes a unit of measure conversion to occur, according to the 'ReadingType.unit'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PendingCalculation.scalarFloat`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.scalarFloat,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#scalarNumerator]
+=== `scalarNumerator`
++++(if scalar is integer or rational number)  When the scalar is a simple integer, and this attribute is presented alone and multiplied with 'IntervalReading.value', it causes a unit of measure conversion to occur, resulting in the 'ReadingType.unit'. It is never used in conjunction with 'scalarFloat', only with 'scalarDenominator'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PendingCalculation.scalarNumerator`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.scalarNumerator,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/IntervalBlock.adoc[`IntervalBlock`] | xref::class/IntervalBlock.adoc#PendingCalculation[`PendingCalculation`]
+
+
+
+| xref::class/ReadingType.adoc[`ReadingType`] | xref::class/ReadingType.adoc#PendingCalculation[`PendingCalculation`]
+
+
+|===
+

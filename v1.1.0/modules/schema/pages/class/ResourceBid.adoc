@@ -1,0 +1,1991 @@
+= `ResourceBid`
+:toclevels: 4
+
+
++++Energy bid for generation, load, or virtual type for the whole of the market-trading period (i.e., one day in day ahead market or one hour in the real time market).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ResourceBid`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Document.adoc[`Document`]
+*** xref::class/Bid.adoc[`Bid`]
+**** *`ResourceBid`*
+ ***** xref::class/GeneratingBid.adoc[`GeneratingBid`]
+ ***** xref::class/InterTieBid.adoc[`InterTieBid`]
+ ***** xref::class/LoadBid.adoc[`LoadBid`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<BidError,`BidError`>>
+//| [[slots_table.BidError]]<<BidError,`BidError`>>
+| 0..* +
+xref::class/BidError.adoc[`BidError`]
+| _n/a_
+| _n/a_
+
+| <<aggregationFlag,`aggregationFlag`>>
+//| [[slots_table.aggregationFlag]]<<aggregationFlag,`aggregationFlag`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Aggregation flag 
+0: individual resource level
+1: Aggregated node location
+2: Aggregated price location)+++
+| _n/a_
+
+| <<bidStatus,`bidStatus`>>
+//| [[slots_table.bidStatus]]<<bidStatus,`bidStatus`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+
+| <<commodityType,`commodityType`>>
+//| [[slots_table.commodityType]]<<commodityType,`commodityType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Energy product (commodity) type:
+'En' - Energy
+'Ru' - Regulation Up
+'Rd' - Regulation Dn
+'Sr' - Spinning Reserve
+'Nr' -...+++
+| _n/a_
+
+| <<contingencyAvailFlag,`contingencyAvailFlag`>>
+//| [[slots_table.contingencyAvailFlag]]<<contingencyAvailFlag,`contingencyAvailFlag`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++contingent operating reserve availiability (Yes/No). Resource is availiable to participate with capacity only in contingency...+++
+| _n/a_
+
+| <<createdISO,`createdISO`>>
+//| [[slots_table.createdISO]]<<createdISO,`createdISO`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++A Yes indicates that this bid was created by the ISO.+++
+| _n/a_
+
+| <<energyMaxDay,`energyMaxDay`>>
+//| [[slots_table.energyMaxDay]]<<energyMaxDay,`energyMaxDay`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Maximum amount of energy per day which can be produced during the trading period in MWh+++
+| _n/a_
+
+| <<energyMinDay,`energyMinDay`>>
+//| [[slots_table.energyMinDay]]<<energyMinDay,`energyMinDay`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Minimum amount of energy per day which has to be produced during the trading period in MWh+++
+| _n/a_
+
+| <<marketSepFlag,`marketSepFlag`>>
+//| [[slots_table.marketSepFlag]]<<marketSepFlag,`marketSepFlag`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Market Separation Flag
+
+'Y' - Enforce market separation constraints for this bid 
+'N' - Don't enforce market separation...+++
+| _n/a_
+
+| <<minDispatchTime,`minDispatchTime`>>
+//| [[slots_table.minDispatchTime]]<<minDispatchTime,`minDispatchTime`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++minimum number of consecutive hours a resource shall be dispatched if bid is accepted+++
+| _n/a_
+
+| <<resourceLoadingType,`resourceLoadingType`>>
+//| [[slots_table.resourceLoadingType]]<<resourceLoadingType,`resourceLoadingType`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Resource loading curve type
+1 - step-wise continuous loading
+2 - piece-wise linear continuous loading
+3 - block loading+++
+| _n/a_
+
+| <<shutDownsMaxDay,`shutDownsMaxDay`>>
+//| [[slots_table.shutDownsMaxDay]]<<shutDownsMaxDay,`shutDownsMaxDay`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Maximum number of shutdowns per day.+++
+| _n/a_
+
+| <<shutDownsMaxWeek,`shutDownsMaxWeek`>>
+//| [[slots_table.shutDownsMaxWeek]]<<shutDownsMaxWeek,`shutDownsMaxWeek`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Maximum number of shutdowns per week.+++
+| _n/a_
+
+| <<startUpsMaxDay,`startUpsMaxDay`>>
+//| [[slots_table.startUpsMaxDay]]<<startUpsMaxDay,`startUpsMaxDay`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Maximum number of startups per day.+++
+| _n/a_
+
+| <<startUpsMaxWeek,`startUpsMaxWeek`>>
+//| [[slots_table.startUpsMaxWeek]]<<startUpsMaxWeek,`startUpsMaxWeek`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Maximum number of startups per week.+++
+| _n/a_
+
+| <<virtual,`virtual`>>
+//| [[slots_table.virtual]]<<virtual,`virtual`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if bid is virtual.  Bid is assumed to be non-virtual if attribute is absent+++
+| _n/a_
+
+| <<ActionRequest,`ActionRequest`>>
+//| [[slots_table.ActionRequest]]<<ActionRequest,`ActionRequest`>>
+| 1 +
+xref::class/ActionRequest.adoc[`ActionRequest`]
+| _n/a_
+| xref::class/Bid.adoc[`Bid`]
+
+| <<BidHourlySchedule,`BidHourlySchedule`>>
+//| [[slots_table.BidHourlySchedule]]<<BidHourlySchedule,`BidHourlySchedule`>>
+| 0..* +
+xref::class/BidHourlySchedule.adoc[`BidHourlySchedule`]
+| _n/a_
+| xref::class/Bid.adoc[`Bid`]
+
+| <<ChargeProfiles,`ChargeProfiles`>>
+//| [[slots_table.ChargeProfiles]]<<ChargeProfiles,`ChargeProfiles`>>
+| 0..* +
+xref::class/ChargeProfile.adoc[`ChargeProfile`]
+| _n/a_
+| xref::class/Bid.adoc[`Bid`]
+
+| <<EnergyMarket,`EnergyMarket`>>
+//| [[slots_table.EnergyMarket]]<<EnergyMarket,`EnergyMarket`>>
+| 1 +
+xref::class/EnergyMarket.adoc[`EnergyMarket`]
+| _n/a_
+| xref::class/Bid.adoc[`Bid`]
+
+| <<MarketParticipant,`MarketParticipant`>>
+//| [[slots_table.MarketParticipant]]<<MarketParticipant,`MarketParticipant`>>
+| 0..1 +
+xref::class/MarketParticipant.adoc[`MarketParticipant`]
+| _n/a_
+| xref::class/Bid.adoc[`Bid`]
+
+| <<MitigatedBid,`MitigatedBid`>>
+//| [[slots_table.MitigatedBid]]<<MitigatedBid,`MitigatedBid`>>
+| 0..* +
+xref::class/MitigatedBid.adoc[`MitigatedBid`]
+| _n/a_
+| xref::class/Bid.adoc[`Bid`]
+
+| <<MitigatedBidSegment,`MitigatedBidSegment`>>
+//| [[slots_table.MitigatedBidSegment]]<<MitigatedBidSegment,`MitigatedBidSegment`>>
+| 0..* +
+xref::class/MitigatedBidSegment.adoc[`MitigatedBidSegment`]
+| _n/a_
+| xref::class/Bid.adoc[`Bid`]
+
+| <<ProductBids,`ProductBids`>>
+//| [[slots_table.ProductBids]]<<ProductBids,`ProductBids`>>
+| 1..* +
+xref::class/ProductBid.adoc[`ProductBid`]
+| +++A bid comprises one or more product bids of market products+++
+| xref::class/Bid.adoc[`Bid`]
+
+| <<RMRDetermination,`RMRDetermination`>>
+//| [[slots_table.RMRDetermination]]<<RMRDetermination,`RMRDetermination`>>
+| 0..* +
+xref::class/RMRDetermination.adoc[`RMRDetermination`]
+| _n/a_
+| xref::class/Bid.adoc[`Bid`]
+
+| <<marketType,`marketType`>>
+//| [[slots_table.marketType]]<<marketType,`marketType`>>
+| 0..1 +
+xref::enumeration/MarketType.adoc[`MarketType`]
+| +++The market type, DAM or RTM.+++
+| xref::class/Bid.adoc[`Bid`]
+
+| <<startTime,`startTime`>>
+//| [[slots_table.startTime]]<<startTime,`startTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Start time and date for which bid applies.+++
+| xref::class/Bid.adoc[`Bid`]
+
+| <<stopTime,`stopTime`>>
+//| [[slots_table.stopTime]]<<stopTime,`stopTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Stop time and date for which bid is applicable.+++
+| xref::class/Bid.adoc[`Bid`]
+
+| <<ActivityRecord,`ActivityRecord`>>
+//| [[slots_table.ActivityRecord]]<<ActivityRecord,`ActivityRecord`>>
+| 0..* +
+xref::class/ActivityRecord.adoc[`ActivityRecord`]
+| +++The activity record for a document+++
+| xref::class/Document.adoc[`Document`]
+
+| <<Approver,`Approver`>>
+//| [[slots_table.Approver]]<<Approver,`Approver`>>
+| 0..1 +
+xref::class/Approver.adoc[`Approver`]
+| +++Approver of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<Author,`Author`>>
+//| [[slots_table.Author]]<<Author,`Author`>>
+| 0..1 +
+xref::class/Author.adoc[`Author`]
+| +++Author of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<ConfigurationEvents,`ConfigurationEvents`>>
+//| [[slots_table.ConfigurationEvents]]<<ConfigurationEvents,`ConfigurationEvents`>>
+| 0..* +
+xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<Editor,`Editor`>>
+//| [[slots_table.Editor]]<<Editor,`Editor`>>
+| 0..1 +
+xref::class/Editor.adoc[`Editor`]
+| +++Editor of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<Issuer,`Issuer`>>
+//| [[slots_table.Issuer]]<<Issuer,`Issuer`>>
+| 0..1 +
+xref::class/Issuer.adoc[`Issuer`]
+| +++Issuer of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<authorName,`authorName`>>
+//| [[slots_table.authorName]]<<authorName,`authorName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of the author of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<comment,`comment`>>
+//| [[slots_table.comment]]<<comment,`comment`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Free text comment.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<createdDateTime,`createdDateTime`>>
+//| [[slots_table.createdDateTime]]<<createdDateTime,`createdDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time that this document was created.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<docStatus,`docStatus`>>
+//| [[slots_table.docStatus]]<<docStatus,`docStatus`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| +++Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status'...+++
+| xref::class/Document.adoc[`Document`]
+
+| <<electronicAddress,`electronicAddress`>>
+//| [[slots_table.electronicAddress]]<<electronicAddress,`electronicAddress`>>
+| 0..1 +
+xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+| +++Electronic address.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<lastModifiedDateTime,`lastModifiedDateTime`>>
+//| [[slots_table.lastModifiedDateTime]]<<lastModifiedDateTime,`lastModifiedDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<revisionNumber,`revisionNumber`>>
+//| [[slots_table.revisionNumber]]<<revisionNumber,`revisionNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Revision number for this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| +++Status of subject matter (e.g., Agreement, Work) this document represents. For status of the document itself, use...+++
+| xref::class/Document.adoc[`Document`]
+
+| <<subject,`subject`>>
+//| [[slots_table.subject]]<<subject,`subject`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Document subject.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<title,`title`>>
+//| [[slots_table.title]]<<title,`title`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Document title.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems...+++
+| xref::class/Document.adoc[`Document`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#ActionRequest]
+=== `ActionRequest`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Bid.ActionRequest`
+| Cardinality
+| 1
+| Type
+| xref::class/ActionRequest.adoc[`ActionRequest`]
+
+| Inherited from
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ActionRequest,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ActivityRecord]
+=== `ActivityRecord`
++++The activity record for a document+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.ActivityRecord`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ActivityRecord,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#aggregationFlag]
+=== `aggregationFlag`
++++Aggregation flag 
+0: individual resource level
+1: Aggregated node location
+2: Aggregated price location)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.aggregationFlag`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aggregationFlag,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Approver]
+=== `Approver`
++++Approver of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Approver`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Approver.adoc[`Approver`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Approver,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Author]
+=== `Author`
++++Author of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Author`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Author.adoc[`Author`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Author,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#authorName]
+=== `authorName`
++++Name of the author of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.authorName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.authorName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#BidError]
+=== `BidError`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.BidError`
+| Cardinality
+| 0..*
+| Type
+| xref::class/BidError.adoc[`BidError`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.BidError,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#BidHourlySchedule]
+=== `BidHourlySchedule`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Bid.BidHourlySchedule`
+| Cardinality
+| 0..*
+| Type
+| xref::class/BidHourlySchedule.adoc[`BidHourlySchedule`]
+
+| Inherited from
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.BidHourlySchedule,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bidStatus]
+=== `bidStatus`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.bidStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bidStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ChargeProfiles]
+=== `ChargeProfiles`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Bid.ChargeProfiles`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChargeProfile.adoc[`ChargeProfile`]
+
+| Inherited from
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ChargeProfiles,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#comment]
+=== `comment`
++++Free text comment.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.comment`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.comment,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#commodityType]
+=== `commodityType`
++++Energy product (commodity) type:
+'En' - Energy
+'Ru' - Regulation Up
+'Rd' - Regulation Dn
+'Sr' - Spinning Reserve
+'Nr' - Non-Spinning Reserve
+'Or' - Operating Reserve+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.commodityType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.commodityType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConfigurationEvents]
+=== `ConfigurationEvents`
++++All configuration events created for this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.ConfigurationEvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConfigurationEvents,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#contingencyAvailFlag]
+=== `contingencyAvailFlag`
++++contingent operating reserve availiability (Yes/No). Resource is availiable to participate with capacity only in contingency dispatch.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.contingencyAvailFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.contingencyAvailFlag,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#createdDateTime]
+=== `createdDateTime`
++++Date and time that this document was created.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.createdDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.createdDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#createdISO]
+=== `createdISO`
++++A Yes indicates that this bid was created by the ISO.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.createdISO`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.createdISO,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#docStatus]
+=== `docStatus`
++++Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status' attribute.
+Example values for 'docStatus.status' are draft, approved, cancelled, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.docStatus`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.docStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Editor]
+=== `Editor`
++++Editor of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Editor`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Editor.adoc[`Editor`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Editor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#electronicAddress]
+=== `electronicAddress`
++++Electronic address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.electronicAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.electronicAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnergyMarket]
+=== `EnergyMarket`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Bid.EnergyMarket`
+| Cardinality
+| 1
+| Type
+| xref::class/EnergyMarket.adoc[`EnergyMarket`]
+
+| Inherited from
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnergyMarket,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#energyMaxDay]
+=== `energyMaxDay`
++++Maximum amount of energy per day which can be produced during the trading period in MWh+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.energyMaxDay`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.energyMaxDay,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#energyMinDay]
+=== `energyMinDay`
++++Minimum amount of energy per day which has to be produced during the trading period in MWh+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.energyMinDay`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.energyMinDay,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Issuer]
+=== `Issuer`
++++Issuer of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Issuer`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Issuer.adoc[`Issuer`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Issuer,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lastModifiedDateTime]
+=== `lastModifiedDateTime`
++++Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.lastModifiedDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lastModifiedDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketParticipant]
+=== `MarketParticipant`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Bid.MarketParticipant`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+| Inherited from
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketParticipant,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marketSepFlag]
+=== `marketSepFlag`
++++Market Separation Flag
+
+'Y' - Enforce market separation constraints for this bid 
+'N' - Don't enforce market separation constraints for this bid.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.marketSepFlag`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marketSepFlag,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marketType]
+=== `marketType`
++++The market type, DAM or RTM.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Bid.marketType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MarketType.adoc[`MarketType`]
+
+| Inherited from
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marketType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minDispatchTime]
+=== `minDispatchTime`
++++minimum number of consecutive hours a resource shall be dispatched if bid is accepted+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.minDispatchTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minDispatchTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MitigatedBid]
+=== `MitigatedBid`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Bid.MitigatedBid`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MitigatedBid.adoc[`MitigatedBid`]
+
+| Inherited from
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MitigatedBid,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MitigatedBidSegment]
+=== `MitigatedBidSegment`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Bid.MitigatedBidSegment`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MitigatedBidSegment.adoc[`MitigatedBidSegment`]
+
+| Inherited from
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MitigatedBidSegment,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ProductBids]
+=== `ProductBids`
++++A bid comprises one or more product bids of market products+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Bid.ProductBids`
+| Cardinality
+| 1..*
+| Type
+| xref::class/ProductBid.adoc[`ProductBid`]
+
+| Inherited from
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ProductBids,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#resourceLoadingType]
+=== `resourceLoadingType`
++++Resource loading curve type
+1 - step-wise continuous loading
+2 - piece-wise linear continuous loading
+3 - block loading+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.resourceLoadingType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.resourceLoadingType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#revisionNumber]
+=== `revisionNumber`
++++Revision number for this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.revisionNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.revisionNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RMRDetermination]
+=== `RMRDetermination`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Bid.RMRDetermination`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RMRDetermination.adoc[`RMRDetermination`]
+
+| Inherited from
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RMRDetermination,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#shutDownsMaxDay]
+=== `shutDownsMaxDay`
++++Maximum number of shutdowns per day.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.shutDownsMaxDay`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.shutDownsMaxDay,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#shutDownsMaxWeek]
+=== `shutDownsMaxWeek`
++++Maximum number of shutdowns per week.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.shutDownsMaxWeek`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.shutDownsMaxWeek,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startTime]
+=== `startTime`
++++Start time and date for which bid applies.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Bid.startTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startUpsMaxDay]
+=== `startUpsMaxDay`
++++Maximum number of startups per day.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.startUpsMaxDay`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startUpsMaxDay,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startUpsMaxWeek]
+=== `startUpsMaxWeek`
++++Maximum number of startups per week.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.startUpsMaxWeek`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startUpsMaxWeek,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++Status of subject matter (e.g., Agreement, Work) this document represents. For status of the document itself, use 'docStatus' attribute.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#stopTime]
+=== `stopTime`
++++Stop time and date for which bid is applicable.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Bid.stopTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.stopTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#subject]
+=== `subject`
++++Document subject.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.subject`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.subject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#title]
+=== `title`
++++Document title.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.title`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.title,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#virtual]
+=== `virtual`
++++True if bid is virtual.  Bid is assumed to be non-virtual if attribute is absent+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceBid.virtual`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.virtual,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/BidError.adoc[`BidError`] | xref::class/BidError.adoc#ResourceBid[`ResourceBid`]
+
+
+|===
+

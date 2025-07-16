@@ -1,0 +1,257 @@
+= `HVDCLookUpTable`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:HVDCLookUpTable`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`HVDCLookUpTable`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Qregulator,`Qregulator`>>
+//| [[slots_table.Qregulator]]<<Qregulator,`Qregulator`>>
+| 0..1 +
+xref::class/Qregulator.adoc[`Qregulator`]
+| _n/a_
+| _n/a_
+
+| <<VDCOL,`VDCOL`>>
+//| [[slots_table.VDCOL]]<<VDCOL,`VDCOL`>>
+| 0..1 +
+xref::class/VDCOL.adoc[`VDCOL`]
+| _n/a_
+| _n/a_
+
+| <<functionKind,`functionKind`>>
+//| [[slots_table.functionKind]]<<functionKind,`functionKind`>>
+| 0..1 +
+xref::enumeration/LookUpTableFunctionKind.adoc[`LookUpTableFunctionKind`]
+| _n/a_
+| _n/a_
+
+| <<input,`input`>>
+//| [[slots_table.input]]<<input,`input`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<output,`output`>>
+//| [[slots_table.output]]<<output,`output`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<sequence,`sequence`>>
+//| [[slots_table.sequence]]<<sequence,`sequence`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#functionKind]
+=== `functionKind`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HVDCLookUpTable.functionKind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/LookUpTableFunctionKind.adoc[`LookUpTableFunctionKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.functionKind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#input]
+=== `input`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HVDCLookUpTable.input`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.input,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#output]
+=== `output`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HVDCLookUpTable.output`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.output,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Qregulator]
+=== `Qregulator`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HVDCLookUpTable.Qregulator`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Qregulator.adoc[`Qregulator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Qregulator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sequence]
+=== `sequence`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HVDCLookUpTable.sequence`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sequence,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VDCOL]
+=== `VDCOL`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HVDCLookUpTable.VDCOL`
+| Cardinality
+| 0..1
+| Type
+| xref::class/VDCOL.adoc[`VDCOL`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VDCOL,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Qregulator.adoc[`Qregulator`] | xref::class/Qregulator.adoc#HVDClookUpTable[`HVDClookUpTable`]
+
+
+
+| xref::class/VDCOL.adoc[`VDCOL`] | xref::class/VDCOL.adoc#HVDCLookUpTable[`HVDCLookUpTable`]
+
+
+|===
+

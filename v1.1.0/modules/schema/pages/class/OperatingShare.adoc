@@ -1,0 +1,160 @@
+= `OperatingShare`
+:toclevels: 4
+
+
++++Specifies the operations contract relationship between a power system resource and a contract participant.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:OperatingShare`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`OperatingShare`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<OperatingParticipant,`OperatingParticipant`>>
+//| [[slots_table.OperatingParticipant]]<<OperatingParticipant,`OperatingParticipant`>>
+| 1 +
+xref::class/OperatingParticipant.adoc[`OperatingParticipant`]
+| +++The operating participant having this share with the associated power system resource.+++
+| _n/a_
+
+| <<PowerSystemResource,`PowerSystemResource`>>
+//| [[slots_table.PowerSystemResource]]<<PowerSystemResource,`PowerSystemResource`>>
+| 1 +
+xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+| +++The power system resource to which the share applies.+++
+| _n/a_
+
+| <<percentage,`percentage`>>
+//| [[slots_table.percentage]]<<percentage,`percentage`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage operational ownership between the pair (power system resource and operating participant) associated with this...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#OperatingParticipant]
+=== `OperatingParticipant`
++++The operating participant having this share with the associated power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingShare.OperatingParticipant`
+| Cardinality
+| 1
+| Type
+| xref::class/OperatingParticipant.adoc[`OperatingParticipant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperatingParticipant,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#percentage]
+=== `percentage`
++++Percentage operational ownership between the pair (power system resource and operating participant) associated with this share. The total percentage ownership for a power system resource should add to 100%.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingShare.percentage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.percentage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PowerSystemResource]
+=== `PowerSystemResource`
++++The power system resource to which the share applies.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatingShare.PowerSystemResource`
+| Cardinality
+| 1
+| Type
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PowerSystemResource,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/OperatingParticipant.adoc[`OperatingParticipant`] | xref::class/OperatingParticipant.adoc#OperatingShare[`OperatingShare`]
+
+
+
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`] | xref::class/PowerSystemResource.adoc#OperatingShare[`OperatingShare`]
+
+
+|===
+

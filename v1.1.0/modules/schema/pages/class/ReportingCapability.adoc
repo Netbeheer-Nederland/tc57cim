@@ -1,0 +1,226 @@
+= `ReportingCapability`
+:toclevels: 4
+
+
++++<font color="#0f0f0f">Definition of one set of reporting capabilities for this monitoring station. The associated EnvironmentalValueSets describe the maximum range of possible environmental values the station is capable of returning.  This attribute is intended primarily to assist a utility in managing its stations. </font>+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ReportingCapability`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ReportingCapability`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<EnvironmentalAnalog,`EnvironmentalAnalog`>>
+//| [[slots_table.EnvironmentalAnalog]]<<EnvironmentalAnalog,`EnvironmentalAnalog`>>
+| 0..* +
+xref::class/EnvironmentalAnalog.adoc[`EnvironmentalAnalog`]
+| +++One of the environmental value sets expressing one of the reporting capabilities.+++
+| _n/a_
+
+| <<EnvironmentalMonitoringStation,`EnvironmentalMonitoringStation`>>
+//| [[slots_table.EnvironmentalMonitoringStation]]<<EnvironmentalMonitoringStation,`EnvironmentalMonitoringStation`>>
+| 1 +
+xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+| +++The environmental monitoring station to which this set of reporting capabilities belong.+++
+| _n/a_
+
+| <<reportingIntervalPeriod,`reportingIntervalPeriod`>>
+//| [[slots_table.reportingIntervalPeriod]]<<reportingIntervalPeriod,`reportingIntervalPeriod`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Number of units of time making up reporting period.+++
+| _n/a_
+
+| <<reportingIntervalType,`reportingIntervalType`>>
+//| [[slots_table.reportingIntervalType]]<<reportingIntervalType,`reportingIntervalType`>>
+| 0..1 +
+xref::enumeration/CalculationIntervalUnitKind.adoc[`CalculationIntervalUnitKind`]
+| +++Unit of time in which reporting period is expressed.+++
+| _n/a_
+
+| <<reportingMethod,`reportingMethod`>>
+//| [[slots_table.reportingMethod]]<<reportingMethod,`reportingMethod`>>
+| 0..1 +
+xref::enumeration/ReportingMethodKind.adoc[`ReportingMethodKind`]
+| +++Indicates how the weather station reports observations.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#EnvironmentalAnalog]
+=== `EnvironmentalAnalog`
++++One of the environmental value sets expressing one of the reporting capabilities.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReportingCapability.EnvironmentalAnalog`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalAnalog.adoc[`EnvironmentalAnalog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalAnalog,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnvironmentalMonitoringStation]
+=== `EnvironmentalMonitoringStation`
++++The environmental monitoring station to which this set of reporting capabilities belong.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReportingCapability.EnvironmentalMonitoringStation`
+| Cardinality
+| 1
+| Type
+| xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalMonitoringStation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reportingIntervalPeriod]
+=== `reportingIntervalPeriod`
++++Number of units of time making up reporting period.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReportingCapability.reportingIntervalPeriod`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reportingIntervalPeriod,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reportingIntervalType]
+=== `reportingIntervalType`
++++Unit of time in which reporting period is expressed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReportingCapability.reportingIntervalType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/CalculationIntervalUnitKind.adoc[`CalculationIntervalUnitKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reportingIntervalType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reportingMethod]
+=== `reportingMethod`
++++Indicates how the weather station reports observations.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReportingCapability.reportingMethod`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ReportingMethodKind.adoc[`ReportingMethodKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reportingMethod,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EnvironmentalAnalog.adoc[`EnvironmentalAnalog`] | xref::class/EnvironmentalAnalog.adoc#ReportingCapability[`ReportingCapability`]
+
+
+
+| xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`] | xref::class/EnvironmentalMonitoringStation.adoc#ReportingCapability[`ReportingCapability`]
+
+
+|===
+

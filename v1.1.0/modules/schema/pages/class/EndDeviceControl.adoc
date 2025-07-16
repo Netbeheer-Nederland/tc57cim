@@ -1,0 +1,899 @@
+= `EndDeviceControl`
+:toclevels: 4
+
+
++++Instructs an end device (or an end device group) to perform a specified action.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EndDeviceControl`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`EndDeviceControl`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<EndDeviceAction,`EndDeviceAction`>>
+//| [[slots_table.EndDeviceAction]]<<EndDeviceAction,`EndDeviceAction`>>
+| 0..1 +
+xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+| +++End device action issued by this end device control.+++
+| _n/a_
+
+| <<EndDeviceControlType,`EndDeviceControlType`>>
+//| [[slots_table.EndDeviceControlType]]<<EndDeviceControlType,`EndDeviceControlType`>>
+| 1 +
+xref::class/EndDeviceControlType.adoc[`EndDeviceControlType`]
+| +++Type of this end device control.+++
+| _n/a_
+
+| <<EndDeviceGroups,`EndDeviceGroups`>>
+//| [[slots_table.EndDeviceGroups]]<<EndDeviceGroups,`EndDeviceGroups`>>
+| 0..* +
+xref::class/EndDeviceGroup.adoc[`EndDeviceGroup`]
+| +++All end device groups receiving commands from this end device control.+++
+| _n/a_
+
+| <<EndDevices,`EndDevices`>>
+//| [[slots_table.EndDevices]]<<EndDevices,`EndDevices`>>
+| 0..* +
+xref::class/EndDevice.adoc[`EndDevice`]
+| +++All end devices receiving commands from this end device control.+++
+| _n/a_
+
+| <<UsagePointGroups,`UsagePointGroups`>>
+//| [[slots_table.UsagePointGroups]]<<UsagePointGroups,`UsagePointGroups`>>
+| 0..* +
+xref::class/UsagePointGroup.adoc[`UsagePointGroup`]
+| +++All usage point groups receiving commands from this end device control.+++
+| _n/a_
+
+| <<UsagePoints,`UsagePoints`>>
+//| [[slots_table.UsagePoints]]<<UsagePoints,`UsagePoints`>>
+| 0..* +
+xref::class/UsagePoint.adoc[`UsagePoint`]
+| +++All usage points receiving commands from this end device control.+++
+| _n/a_
+
+| <<drProgramLevel,`drProgramLevel`>>
+//| [[slots_table.drProgramLevel]]<<drProgramLevel,`drProgramLevel`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Level of a demand response program request, where 0=emergency. Note: Attribute is not defined on DemandResponseProgram as it...+++
+| _n/a_
+
+| <<drProgramMandatory,`drProgramMandatory`>>
+//| [[slots_table.drProgramMandatory]]<<drProgramMandatory,`drProgramMandatory`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Whether a demand response program request is mandatory. Note: Attribute is not defined on DemandResponseProgram as it is not...+++
+| _n/a_
+
+| <<issuerID,`issuerID`>>
+//| [[slots_table.issuerID]]<<issuerID,`issuerID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Unique identifier of the business entity originating an end device control.+++
+| _n/a_
+
+| <<issuerTrackingID,`issuerTrackingID`>>
+//| [[slots_table.issuerTrackingID]]<<issuerTrackingID,`issuerTrackingID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Identifier assigned by the initiator (e.g. retail electric provider) of an end device control action to uniquely identify...+++
+| _n/a_
+
+| <<priceSignal,`priceSignal`>>
+//| [[slots_table.priceSignal]]<<priceSignal,`priceSignal`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++(if applicable) Price signal used as parameter for this end device control.+++
+| _n/a_
+
+| <<primaryDeviceTiming,`primaryDeviceTiming`>>
+//| [[slots_table.primaryDeviceTiming]]<<primaryDeviceTiming,`primaryDeviceTiming`>>
+| 0..1 +
+xref::class/EndDeviceTiming.adoc[`EndDeviceTiming`]
+| +++Timing for the control actions performed on the device identified in the end device control.+++
+| _n/a_
+
+| <<reason,`reason`>>
+//| [[slots_table.reason]]<<reason,`reason`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Reason for the control action that allows to determine how to continue processing. For example, disconnect meter command may...+++
+| _n/a_
+
+| <<scheduledInterval,`scheduledInterval`>>
+//| [[slots_table.scheduledInterval]]<<scheduledInterval,`scheduledInterval`>>
+| 0..1 +
+xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++(if control has scheduled duration) Date and time interval the control has been scheduled to execute within.+++
+| _n/a_
+
+| <<secondaryDeviceTiming,`secondaryDeviceTiming`>>
+//| [[slots_table.secondaryDeviceTiming]]<<secondaryDeviceTiming,`secondaryDeviceTiming`>>
+| 0..1 +
+xref::class/EndDeviceTiming.adoc[`EndDeviceTiming`]
+| +++Timing for the control actions performed by devices that are responding to event related information sent to the primary...+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#drProgramLevel]
+=== `drProgramLevel`
++++Level of a demand response program request, where 0=emergency. Note: Attribute is not defined on DemandResponseProgram as it is not its inherent property (it serves to control it).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.drProgramLevel`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.drProgramLevel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#drProgramMandatory]
+=== `drProgramMandatory`
++++Whether a demand response program request is mandatory. Note: Attribute is not defined on DemandResponseProgram as it is not its inherent property (it serves to control it).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.drProgramMandatory`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.drProgramMandatory,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EndDeviceAction]
+=== `EndDeviceAction`
++++End device action issued by this end device control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.EndDeviceAction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EndDeviceAction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EndDeviceControlType]
+=== `EndDeviceControlType`
++++Type of this end device control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.EndDeviceControlType`
+| Cardinality
+| 1
+| Type
+| xref::class/EndDeviceControlType.adoc[`EndDeviceControlType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EndDeviceControlType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EndDeviceGroups]
+=== `EndDeviceGroups`
++++All end device groups receiving commands from this end device control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.EndDeviceGroups`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EndDeviceGroup.adoc[`EndDeviceGroup`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EndDeviceGroups,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EndDevices]
+=== `EndDevices`
++++All end devices receiving commands from this end device control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.EndDevices`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EndDevice.adoc[`EndDevice`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EndDevices,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#issuerID]
+=== `issuerID`
++++Unique identifier of the business entity originating an end device control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.issuerID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.issuerID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#issuerTrackingID]
+=== `issuerTrackingID`
++++Identifier assigned by the initiator (e.g. retail electric provider) of an end device control action to uniquely identify the demand response event, text message, or other subject of the control action. Can be used when cancelling an event or text message request or to identify the originating event or text message in a consequential end device event.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.issuerTrackingID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.issuerTrackingID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#priceSignal]
+=== `priceSignal`
++++(if applicable) Price signal used as parameter for this end device control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.priceSignal`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.priceSignal,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#primaryDeviceTiming]
+=== `primaryDeviceTiming`
++++Timing for the control actions performed on the device identified in the end device control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.primaryDeviceTiming`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EndDeviceTiming.adoc[`EndDeviceTiming`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.primaryDeviceTiming,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reason]
+=== `reason`
++++Reason for the control action that allows to determine how to continue processing. For example, disconnect meter command may require different processing by the receiving system if it has been issued for a network-related reason (protection) or for a payment-related reason.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.reason`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reason,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#scheduledInterval]
+=== `scheduledInterval`
++++(if control has scheduled duration) Date and time interval the control has been scheduled to execute within.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.scheduledInterval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.scheduledInterval,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#secondaryDeviceTiming]
+=== `secondaryDeviceTiming`
++++Timing for the control actions performed by devices that are responding to event related information sent to the primary device indicated in the end device control.  For example, load control actions performed by a PAN device in response to demand response event information sent to a PAN gateway server.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.secondaryDeviceTiming`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EndDeviceTiming.adoc[`EndDeviceTiming`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.secondaryDeviceTiming,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#UsagePointGroups]
+=== `UsagePointGroups`
++++All usage point groups receiving commands from this end device control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.UsagePointGroups`
+| Cardinality
+| 0..*
+| Type
+| xref::class/UsagePointGroup.adoc[`UsagePointGroup`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.UsagePointGroups,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#UsagePoints]
+=== `UsagePoints`
++++All usage points receiving commands from this end device control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceControl.UsagePoints`
+| Cardinality
+| 0..*
+| Type
+| xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.UsagePoints,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EndDevice.adoc[`EndDevice`] | xref::class/EndDevice.adoc#EndDeviceControls[`EndDeviceControls`]
+
+
+
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`] | xref::class/EndDeviceAction.adoc#EndDeviceControl[`EndDeviceControl`]
+
+
+
+| xref::class/EndDeviceControlType.adoc[`EndDeviceControlType`] | xref::class/EndDeviceControlType.adoc#EndDeviceControls[`EndDeviceControls`]
+
+
+
+| xref::class/EndDeviceGroup.adoc[`EndDeviceGroup`] | xref::class/EndDeviceGroup.adoc#EndDeviceControls[`EndDeviceControls`]
+
+
+
+| xref::class/UsagePoint.adoc[`UsagePoint`] | xref::class/UsagePoint.adoc#EndDeviceControls[`EndDeviceControls`]
+
+
+
+| xref::class/UsagePointGroup.adoc[`UsagePointGroup`] | xref::class/UsagePointGroup.adoc#EndDeviceControls[`EndDeviceControls`]
+
+
+|===
+

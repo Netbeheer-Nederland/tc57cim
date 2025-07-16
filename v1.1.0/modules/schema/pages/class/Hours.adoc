@@ -1,0 +1,138 @@
+= `Hours`
+:toclevels: 4
+
+
++++Time specified in hours.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Hours`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Hours.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Hours.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Hours.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CULaborItem.adoc[`CULaborItem`] | xref::class/CULaborItem.adoc#laborDuration[`laborDuration`]
+
+
+
+| xref::class/LaborItem.adoc[`LaborItem`] | xref::class/LaborItem.adoc#laborDuration[`laborDuration`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#minDispatchTime[`minDispatchTime`]
+
+
+
+| xref::class/ReliabilityInfo.adoc[`ReliabilityInfo`] | xref::class/ReliabilityInfo.adoc#mTTR[`mTTR`]
+
+
+
+| xref::class/ShuntCompensatorControl.adoc[`ShuntCompensatorControl`] | xref::class/ShuntCompensatorControl.adoc#switchOperationCycle[`switchOperationCycle`]
+
+
+
+| xref::class/StartupModel.adoc[`StartupModel`] | xref::class/StartupModel.adoc#minimumRunTime[`minimumRunTime`]
+
+
+
+| xref::class/WorkTask.adoc[`WorkTask`] | xref::class/WorkTask.adoc#laborHours[`laborHours`]
+
+
+|===
+

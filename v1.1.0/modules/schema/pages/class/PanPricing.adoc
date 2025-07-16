@@ -1,0 +1,304 @@
+= `PanPricing`
+:toclevels: 4
+
+
++++PAN action/command used to issue pricing information to a PAN device.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PanPricing`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+** *`PanPricing`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<PanPricingDetails,`PanPricingDetails`>>
+//| [[slots_table.PanPricingDetails]]<<PanPricingDetails,`PanPricingDetails`>>
+| 0..* +
+xref::class/PanPricingDetail.adoc[`PanPricingDetail`]
+| +++All pricing details issued by this PAN pricing command/action.+++
+| _n/a_
+
+| <<providerID,`providerID`>>
+//| [[slots_table.providerID]]<<providerID,`providerID`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Unique identifier for the commodity provider.+++
+| _n/a_
+
+| <<EndDeviceControl,`EndDeviceControl`>>
+//| [[slots_table.EndDeviceControl]]<<EndDeviceControl,`EndDeviceControl`>>
+| 0..1 +
+xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+| +++End device control issuing this end device action.+++
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+| <<command,`command`>>
+//| [[slots_table.command]]<<command,`command`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Command text.+++
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+| <<duration,`duration`>>
+//| [[slots_table.duration]]<<duration,`duration`>>
+| 0..1 +
+xref::class/Minutes.adoc[`Minutes`]
+| +++Amount of time the action of this control is to remain active.+++
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+| <<durationIndefinite,`durationIndefinite`>>
+//| [[slots_table.durationIndefinite]]<<durationIndefinite,`durationIndefinite`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the action of this control is indefinite.+++
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+| <<startDateTime,`startDateTime`>>
+//| [[slots_table.startDateTime]]<<startDateTime,`startDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Start date and time for action of this control.+++
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+|===
+
+'''
+
+
+//[discrete]
+[#command]
+=== `command`
++++Command text.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.command`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.command,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#duration]
+=== `duration`
++++Amount of time the action of this control is to remain active.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.duration`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Minutes.adoc[`Minutes`]
+
+| Inherited from
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.duration,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#durationIndefinite]
+=== `durationIndefinite`
++++True if the action of this control is indefinite.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.durationIndefinite`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.durationIndefinite,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EndDeviceControl]
+=== `EndDeviceControl`
++++End device control issuing this end device action.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.EndDeviceControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+
+| Inherited from
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EndDeviceControl,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PanPricingDetails]
+=== `PanPricingDetails`
++++All pricing details issued by this PAN pricing command/action.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricing.PanPricingDetails`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PanPricingDetail.adoc[`PanPricingDetail`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PanPricingDetails,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#providerID]
+=== `providerID`
++++Unique identifier for the commodity provider.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanPricing.providerID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.providerID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startDateTime]
+=== `startDateTime`
++++Start date and time for action of this control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.startDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startDateTime,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/PanPricingDetail.adoc[`PanPricingDetail`] | xref::class/PanPricingDetail.adoc#PanPricing[`PanPricing`]
+
+
+|===
+

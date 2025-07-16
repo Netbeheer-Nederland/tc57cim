@@ -1,0 +1,1177 @@
+= `WindContQIEC`
+:toclevels: 4
+
+
++++Q control model.
+Reference: IEC 61400-27-1:2015, 5.6.5.7.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:WindContQIEC`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`WindContQIEC`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<WindTurbineType3or4IEC,`WindTurbineType3or4IEC`>>
+//| [[slots_table.WindTurbineType3or4IEC]]<<WindTurbineType3or4IEC,`WindTurbineType3or4IEC`>>
+| 1 +
+xref::class/WindTurbineType3or4IEC.adoc[`WindTurbineType3or4IEC`]
+| +++Wind turbine type 3 or type 4 model with which this reactive control model is associated.+++
+| _n/a_
+
+| <<iqh1,`iqh1`>>
+//| [[slots_table.iqh1]]<<iqh1,`iqh1`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum reactive current injection during dip (<i>i</i><i><sub>qh1</sub></i>). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<iqmax,`iqmax`>>
+//| [[slots_table.iqmax]]<<iqmax,`iqmax`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum reactive current injection (<i>i</i><i><sub>qmax</sub></i>) (&gt; WindContQIEC.iqmin). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<iqmin,`iqmin`>>
+//| [[slots_table.iqmin]]<<iqmin,`iqmin`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Minimum reactive current injection (<i>i</i><i><sub>qmin</sub></i>) (&lt; WindContQIEC.iqmax). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<iqpost,`iqpost`>>
+//| [[slots_table.iqpost]]<<iqpost,`iqpost`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Post fault reactive current injection (<i>i</i><i><sub>qpost</sub></i>). It is a project-dependent parameter.+++
+| _n/a_
+
+| <<kiq,`kiq`>>
+//| [[slots_table.kiq]]<<kiq,`kiq`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Reactive power PI controller integration gain (<i>K</i><i><sub>I,q</sub></i>). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<kiu,`kiu`>>
+//| [[slots_table.kiu]]<<kiu,`kiu`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Voltage PI controller integration gain (<i>K</i><i><sub>I,u</sub></i>). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<kpq,`kpq`>>
+//| [[slots_table.kpq]]<<kpq,`kpq`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Reactive power PI controller proportional gain (<i>K</i><i><sub>P,q</sub></i>). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<kpu,`kpu`>>
+//| [[slots_table.kpu]]<<kpu,`kpu`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Voltage PI controller proportional gain (<i>K</i><i><sub>P,u</sub></i>). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<kqv,`kqv`>>
+//| [[slots_table.kqv]]<<kqv,`kqv`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Voltage scaling factor for UVRT current (<i>K</i><i><sub>qv</sub></i>). It is a project-dependent parameter.+++
+| _n/a_
+
+| <<rdroop,`rdroop`>>
+//| [[slots_table.rdroop]]<<rdroop,`rdroop`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Resistive component of voltage drop impedance (<i>r</i><i><sub>droop</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+| _n/a_
+
+| <<tpfiltq,`tpfiltq`>>
+//| [[slots_table.tpfiltq]]<<tpfiltq,`tpfiltq`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Power measurement filter time constant (<i>T</i><i><sub>pfiltq</sub></i>) (&gt;= 0). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<tpost,`tpost`>>
+//| [[slots_table.tpost]]<<tpost,`tpost`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Length of time period where post fault reactive power is injected (<i>T</i><i><sub>post</sub></i>) (&gt;= 0). It is a...+++
+| _n/a_
+
+| <<tqord,`tqord`>>
+//| [[slots_table.tqord]]<<tqord,`tqord`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Time constant in reactive power order lag (<i>T</i><i><sub>qord</sub></i>) (&gt;= 0). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<tufiltq,`tufiltq`>>
+//| [[slots_table.tufiltq]]<<tufiltq,`tufiltq`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Voltage measurement filter time constant (<i>T</i><i><sub>ufiltq</sub></i>) (&gt;= 0). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<udb1,`udb1`>>
+//| [[slots_table.udb1]]<<udb1,`udb1`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Voltage deadband lower limit (<i>u</i><i><sub>db1</sub></i>). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<udb2,`udb2`>>
+//| [[slots_table.udb2]]<<udb2,`udb2`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Voltage deadband upper limit (<i>u</i><i><sub>db2</sub></i>). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<umax,`umax`>>
+//| [[slots_table.umax]]<<umax,`umax`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum voltage in voltage PI controller integral term (<i>u</i><i><sub>max</sub></i>) (&gt; WindContQIEC.umin). It is a...+++
+| _n/a_
+
+| <<umin,`umin`>>
+//| [[slots_table.umin]]<<umin,`umin`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Minimum voltage in voltage PI controller integral term (<i>u</i><i><sub>min</sub></i>) (&lt; WindContQIEC.umax). It is a...+++
+| _n/a_
+
+| <<uqdip,`uqdip`>>
+//| [[slots_table.uqdip]]<<uqdip,`uqdip`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Voltage threshold for UVRT detection in Q control (<i>u</i><i><sub>qdip</sub></i>). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<uref0,`uref0`>>
+//| [[slots_table.uref0]]<<uref0,`uref0`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++User-defined bias in voltage reference (<i>u</i><i><sub>ref0</sub></i>). It is a case-dependent parameter.+++
+| _n/a_
+
+| <<windQcontrolModesType,`windQcontrolModesType`>>
+//| [[slots_table.windQcontrolModesType]]<<windQcontrolModesType,`windQcontrolModesType`>>
+| 0..1 +
+xref::enumeration/WindQcontrolModeKind.adoc[`WindQcontrolModeKind`]
+| +++Types of general wind turbine Q control modes (<i>M</i><i><sub>qG</sub></i>).  It is a project-dependent parameter.+++
+| _n/a_
+
+| <<windUVRTQcontrolModesType,`windUVRTQcontrolModesType`>>
+//| [[slots_table.windUVRTQcontrolModesType]]<<windUVRTQcontrolModesType,`windUVRTQcontrolModesType`>>
+| 0..1 +
+xref::enumeration/WindUVRTQcontrolModeKind.adoc[`WindUVRTQcontrolModeKind`]
+| +++Types of UVRT Q control modes (<i>M</i><i><sub>qUVRT</sub></i>). It is a project-dependent parameter.+++
+| _n/a_
+
+| <<xdroop,`xdroop`>>
+//| [[slots_table.xdroop]]<<xdroop,`xdroop`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Inductive component of voltage drop impedance (<i>x</i><i><sub>droop</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#iqh1]
+=== `iqh1`
++++Maximum reactive current injection during dip (<i>i</i><i><sub>qh1</sub></i>). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.iqh1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.iqh1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#iqmax]
+=== `iqmax`
++++Maximum reactive current injection (<i>i</i><i><sub>qmax</sub></i>) (&gt; WindContQIEC.iqmin). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.iqmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.iqmax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#iqmin]
+=== `iqmin`
++++Minimum reactive current injection (<i>i</i><i><sub>qmin</sub></i>) (&lt; WindContQIEC.iqmax). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.iqmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.iqmin,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#iqpost]
+=== `iqpost`
++++Post fault reactive current injection (<i>i</i><i><sub>qpost</sub></i>). It is a project-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.iqpost`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.iqpost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kiq]
+=== `kiq`
++++Reactive power PI controller integration gain (<i>K</i><i><sub>I,q</sub></i>). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.kiq`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kiq,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kiu]
+=== `kiu`
++++Voltage PI controller integration gain (<i>K</i><i><sub>I,u</sub></i>). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.kiu`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kiu,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kpq]
+=== `kpq`
++++Reactive power PI controller proportional gain (<i>K</i><i><sub>P,q</sub></i>). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.kpq`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kpq,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kpu]
+=== `kpu`
++++Voltage PI controller proportional gain (<i>K</i><i><sub>P,u</sub></i>). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.kpu`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kpu,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kqv]
+=== `kqv`
++++Voltage scaling factor for UVRT current (<i>K</i><i><sub>qv</sub></i>). It is a project-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.kqv`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kqv,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rdroop]
+=== `rdroop`
++++Resistive component of voltage drop impedance (<i>r</i><i><sub>droop</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.rdroop`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rdroop,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tpfiltq]
+=== `tpfiltq`
++++Power measurement filter time constant (<i>T</i><i><sub>pfiltq</sub></i>) (&gt;= 0). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.tpfiltq`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tpfiltq,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tpost]
+=== `tpost`
++++Length of time period where post fault reactive power is injected (<i>T</i><i><sub>post</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.tpost`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tpost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tqord]
+=== `tqord`
++++Time constant in reactive power order lag (<i>T</i><i><sub>qord</sub></i>) (&gt;= 0). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.tqord`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tqord,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tufiltq]
+=== `tufiltq`
++++Voltage measurement filter time constant (<i>T</i><i><sub>ufiltq</sub></i>) (&gt;= 0). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.tufiltq`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tufiltq,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#udb1]
+=== `udb1`
++++Voltage deadband lower limit (<i>u</i><i><sub>db1</sub></i>). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.udb1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.udb1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#udb2]
+=== `udb2`
++++Voltage deadband upper limit (<i>u</i><i><sub>db2</sub></i>). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.udb2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.udb2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#umax]
+=== `umax`
++++Maximum voltage in voltage PI controller integral term (<i>u</i><i><sub>max</sub></i>) (&gt; WindContQIEC.umin). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.umax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.umax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#umin]
+=== `umin`
++++Minimum voltage in voltage PI controller integral term (<i>u</i><i><sub>min</sub></i>) (&lt; WindContQIEC.umax). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.umin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.umin,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#uqdip]
+=== `uqdip`
++++Voltage threshold for UVRT detection in Q control (<i>u</i><i><sub>qdip</sub></i>). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.uqdip`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.uqdip,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#uref0]
+=== `uref0`
++++User-defined bias in voltage reference (<i>u</i><i><sub>ref0</sub></i>). It is a case-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.uref0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.uref0,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#windQcontrolModesType]
+=== `windQcontrolModesType`
++++Types of general wind turbine Q control modes (<i>M</i><i><sub>qG</sub></i>).  It is a project-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.windQcontrolModesType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/WindQcontrolModeKind.adoc[`WindQcontrolModeKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.windQcontrolModesType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindTurbineType3or4IEC]
+=== `WindTurbineType3or4IEC`
++++Wind turbine type 3 or type 4 model with which this reactive control model is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.WindTurbineType3or4IEC`
+| Cardinality
+| 1
+| Type
+| xref::class/WindTurbineType3or4IEC.adoc[`WindTurbineType3or4IEC`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindTurbineType3or4IEC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#windUVRTQcontrolModesType]
+=== `windUVRTQcontrolModesType`
++++Types of UVRT Q control modes (<i>M</i><i><sub>qUVRT</sub></i>). It is a project-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.windUVRTQcontrolModesType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/WindUVRTQcontrolModeKind.adoc[`WindUVRTQcontrolModeKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.windUVRTQcontrolModesType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#xdroop]
+=== `xdroop`
++++Inductive component of voltage drop impedance (<i>x</i><i><sub>droop</sub></i>) (&gt;= 0). It is a project-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContQIEC.xdroop`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.xdroop,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/WindTurbineType3or4IEC.adoc[`WindTurbineType3or4IEC`] | xref::class/WindTurbineType3or4IEC.adoc#WIndContQIEC[`WIndContQIEC`]
+
+
+|===
+

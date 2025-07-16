@@ -1,0 +1,302 @@
+= `Quantity`
+:toclevels: 4
+
+
++++Description of quantities needed in the data exchange. 
+The type of the quantity is described either by the role of the association or the type attribute.
+The quality attribute provides the information about the quality of the quantity (measured, estimated, etc.).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Quantity`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`Quantity`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Detail_Quantity,`Detail_Quantity`>>
+//| [[slots_table.Detail_Quantity]]<<Detail_Quantity,`Detail_Quantity`>>
+| 0..* +
+xref::class/Quantity.adoc[`Quantity`]
+| +++Additional information related to the associated quantity.+++
+| _n/a_
+
+| <<Domain,`Domain`>>
+//| [[slots_table.Domain]]<<Domain,`Domain`>>
+| 0..* +
+xref::class/Domain.adoc[`Domain`]
+| _n/a_
+| _n/a_
+
+| <<Point,`Point`>>
+//| [[slots_table.Point]]<<Point,`Point`>>
+| 0..* +
+xref::class/Point.adoc[`Point`]
+| _n/a_
+| _n/a_
+
+| <<TimeSeries,`TimeSeries`>>
+//| [[slots_table.TimeSeries]]<<TimeSeries,`TimeSeries`>>
+| 0..* +
+xref::class/TimeSeries.adoc[`TimeSeries`]
+| _n/a_
+| _n/a_
+
+| <<quality,`quality`>>
+//| [[slots_table.quality]]<<quality,`quality`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The quality of the information being provided. This quality may be estimated, not available, as provided, etc.+++
+| _n/a_
+
+| <<quantity,`quantity`>>
+//| [[slots_table.quantity]]<<quantity,`quantity`>>
+| 0..1 +
+xref::class/Quantity.adoc[`Quantity`]
+| _n/a_
+| _n/a_
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description of the type of the quantity.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#Detail_Quantity]
+=== `Detail_Quantity`
++++Additional information related to the associated quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.Detail_Quantity`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Quantity.adoc[`Quantity`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Detail_Quantity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Domain]
+=== `Domain`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.Domain`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Domain.adoc[`Domain`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Domain,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Point]
+=== `Point`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.Point`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Point.adoc[`Point`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Point,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#quality]
+=== `quality`
++++The quality of the information being provided. This quality may be estimated, not available, as provided, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.quality`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.quality,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#quantity]
+=== `quantity`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.quantity`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Quantity.adoc[`Quantity`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.quantity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TimeSeries,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++The description of the type of the quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Quantity.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Domain.adoc[`Domain`] | xref::class/Domain.adoc#Quantity[`Quantity`]
+
+
+
+| xref::class/Point.adoc[`Point`] | xref::class/Point.adoc#Quantity[`Quantity`]
+
+
+
+| xref::class/Quantity.adoc[`Quantity`] | xref::class/Quantity.adoc#Detail_Quantity[`Detail_Quantity`]
+
+
+
+| xref::class/TimeSeries.adoc[`TimeSeries`] | xref::class/TimeSeries.adoc#Quantity[`Quantity`]
+
+
+|===
+

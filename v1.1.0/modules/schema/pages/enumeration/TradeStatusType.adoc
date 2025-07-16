@@ -1,0 +1,88 @@
+= `TradeStatusType`
+:toclevels: 4
+
+
++++RJ - Rejected Trade
+I - Invalid Trade
+V - Valid Trade
+M - Modified Trade
+CV - Conditionally Valid Trade
+CM - Conditionally Modified Trade
+CI - Conditionally Invalid Trade
+CX - Cancelled Trade
+O - Obsolete Trade
+MT - Matched Trade
+U - Unmatched Trade+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TradeStatusType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `CI`
+| `cim:TradeStatusType.CI`
+| n/a
+
+| `CM`
+| `cim:TradeStatusType.CM`
+| n/a
+
+| `CV`
+| `cim:TradeStatusType.CV`
+| n/a
+
+| `CX`
+| `cim:TradeStatusType.CX`
+| n/a
+
+| `I`
+| `cim:TradeStatusType.I`
+| n/a
+
+| `M`
+| `cim:TradeStatusType.M`
+| n/a
+
+| `MT`
+| `cim:TradeStatusType.MT`
+| n/a
+
+| `O`
+| `cim:TradeStatusType.O`
+| n/a
+
+| `RJ`
+| `cim:TradeStatusType.RJ`
+| n/a
+
+| `U`
+| `cim:TradeStatusType.U`
+| n/a
+
+| `V`
+| `cim:TradeStatusType.V`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

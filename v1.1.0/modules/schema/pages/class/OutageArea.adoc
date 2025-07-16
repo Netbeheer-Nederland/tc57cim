@@ -1,0 +1,189 @@
+= `OutageArea`
+:toclevels: 4
+
+
++++This defines the area covered by the Outage.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:OutageArea`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`OutageArea`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Outage,`Outage`>>
+//| [[slots_table.Outage]]<<Outage,`Outage`>>
+| 0..* +
+xref::class/Outage.adoc[`Outage`]
+| +++The outage associated with the outage area.+++
+| _n/a_
+
+| <<earliestReportedTime,`earliestReportedTime`>>
+//| [[slots_table.earliestReportedTime]]<<earliestReportedTime,`earliestReportedTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++This is the reported time of the first outage report+++
+| _n/a_
+
+| <<metersServed,`metersServed`>>
+//| [[slots_table.metersServed]]<<metersServed,`metersServed`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++defines the number of meters served in the defined area.+++
+| _n/a_
+
+| <<outageAreaKind,`outageAreaKind`>>
+//| [[slots_table.outageAreaKind]]<<outageAreaKind,`outageAreaKind`>>
+| 0..1 +
+xref::enumeration/AreaKind.adoc[`AreaKind`]
+| +++defines the type of area that has the outage - county, state, zipcode, etc.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#earliestReportedTime]
+=== `earliestReportedTime`
++++This is the reported time of the first outage report+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OutageArea.earliestReportedTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.earliestReportedTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#metersServed]
+=== `metersServed`
++++defines the number of meters served in the defined area.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OutageArea.metersServed`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.metersServed,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Outage]
+=== `Outage`
++++The outage associated with the outage area.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OutageArea.Outage`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Outage.adoc[`Outage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Outage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#outageAreaKind]
+=== `outageAreaKind`
++++defines the type of area that has the outage - county, state, zipcode, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OutageArea.outageAreaKind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/AreaKind.adoc[`AreaKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.outageAreaKind,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Outage.adoc[`Outage`] | xref::class/Outage.adoc#OutageArea[`OutageArea`]
+
+
+|===
+

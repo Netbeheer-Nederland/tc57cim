@@ -1,0 +1,52 @@
+= `EmissionValueSource`
+:toclevels: 4
+
+
++++The source of the emission value.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:EmissionValueSource`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `calculated`
+| `cim:EmissionValueSource.calculated`
+| n/a
+
+| `measured`
+| `cim:EmissionValueSource.measured`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EmissionAccount.adoc[`EmissionAccount`] | xref::class/EmissionAccount.adoc#emissionValueSource[`emissionValueSource`]
+
+
+|===
+

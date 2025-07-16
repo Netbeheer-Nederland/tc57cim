@@ -1,0 +1,259 @@
+= `DiagramObjectPoint`
+:toclevels: 4
+
+
++++A point in a given space defined by 3 coordinates and associated to a diagram object.  The coordinates may be positive or negative as the origin does not have to be in the corner of a diagram.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DiagramObjectPoint`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`DiagramObjectPoint`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<DiagramObject,`DiagramObject`>>
+//| [[slots_table.DiagramObject]]<<DiagramObject,`DiagramObject`>>
+| 1 +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram object with which the points are associated.+++
+| _n/a_
+
+| <<DiagramObjectGluePoint,`DiagramObjectGluePoint`>>
+//| [[slots_table.DiagramObjectGluePoint]]<<DiagramObjectGluePoint,`DiagramObjectGluePoint`>>
+| 0..1 +
+xref::class/DiagramObjectGluePoint.adoc[`DiagramObjectGluePoint`]
+| +++The 'glue' point to which this point is associated.+++
+| _n/a_
+
+| <<sequenceNumber,`sequenceNumber`>>
+//| [[slots_table.sequenceNumber]]<<sequenceNumber,`sequenceNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++The sequence position of the point, used for defining the order of points for diagram objects acting as a polyline or...+++
+| _n/a_
+
+| <<xPosition,`xPosition`>>
+//| [[slots_table.xPosition]]<<xPosition,`xPosition`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The X coordinate of this point.+++
+| _n/a_
+
+| <<yPosition,`yPosition`>>
+//| [[slots_table.yPosition]]<<yPosition,`yPosition`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The Y coordinate of this point.+++
+| _n/a_
+
+| <<zPosition,`zPosition`>>
+//| [[slots_table.zPosition]]<<zPosition,`zPosition`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The Z coordinate of this point.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#DiagramObject]
+=== `DiagramObject`
++++The diagram object with which the points are associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectPoint.DiagramObject`
+| Cardinality
+| 1
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjectGluePoint]
+=== `DiagramObjectGluePoint`
++++The 'glue' point to which this point is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectPoint.DiagramObjectGluePoint`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DiagramObjectGluePoint.adoc[`DiagramObjectGluePoint`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjectGluePoint,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sequenceNumber]
+=== `sequenceNumber`
++++The sequence position of the point, used for defining the order of points for diagram objects acting as a polyline or polygon with more than one point. The attribute shall be a positive value.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectPoint.sequenceNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sequenceNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#xPosition]
+=== `xPosition`
++++The X coordinate of this point.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectPoint.xPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.xPosition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#yPosition]
+=== `yPosition`
++++The Y coordinate of this point.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectPoint.yPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.yPosition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#zPosition]
+=== `zPosition`
++++The Z coordinate of this point.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DiagramObjectPoint.zPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.zPosition,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/DiagramObject.adoc[`DiagramObject`] | xref::class/DiagramObject.adoc#DiagramObjectPoints[`DiagramObjectPoints`]
+
+
+
+| xref::class/DiagramObjectGluePoint.adoc[`DiagramObjectGluePoint`] | xref::class/DiagramObjectGluePoint.adoc#DiagramObjectPoints[`DiagramObjectPoints`]
+
+
+|===
+

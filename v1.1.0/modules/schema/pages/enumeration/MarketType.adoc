@@ -1,0 +1,108 @@
+= `MarketType`
+:toclevels: 4
+
+
++++Market type.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MarketType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `DAM`
+| `cim:MarketType.DAM`
+| n/a
+
+| `HAM`
+| `cim:MarketType.HAM`
+| n/a
+
+| `RTM`
+| `cim:MarketType.RTM`
+| n/a
+
+| `RUC`
+| `cim:MarketType.RUC`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AuxiliaryCost.adoc[`AuxiliaryCost`] | xref::class/AuxiliaryCost.adoc#marketType[`marketType`]
+
+
+
+| xref::class/Bid.adoc[`Bid`] | xref::class/Bid.adoc#marketType[`marketType`]
+
+
+
+| xref::class/BidPriceCap.adoc[`BidPriceCap`] | xref::class/BidPriceCap.adoc#marketType[`marketType`]
+
+
+
+| xref::class/ContractRight.adoc[`ContractRight`] | xref::class/ContractRight.adoc#latestSchedMktType[`latestSchedMktType`]
+
+
+
+| xref::class/DistributionFactorSet.adoc[`DistributionFactorSet`] | xref::class/DistributionFactorSet.adoc#marketType[`marketType`]
+
+
+
+| xref::class/InterchangeSchedule.adoc[`InterchangeSchedule`] | xref::class/InterchangeSchedule.adoc#marketType[`marketType`]
+
+
+
+| xref::class/MarketRun.adoc[`MarketRun`] | xref::class/MarketRun.adoc#marketType[`marketType`]
+
+
+
+| xref::class/MPMTestThreshold.adoc[`MPMTestThreshold`] | xref::class/MPMTestThreshold.adoc#marketType[`marketType`]
+
+
+
+| xref::class/PlannedMarket.adoc[`PlannedMarket`] | xref::class/PlannedMarket.adoc#marketType[`marketType`]
+
+
+
+| xref::class/PriceDescriptor.adoc[`PriceDescriptor`] | xref::class/PriceDescriptor.adoc#marketType[`marketType`]
+
+
+
+| xref::class/ResourceCertification.adoc[`ResourceCertification`] | xref::class/ResourceCertification.adoc#market[`market`]
+
+
+
+| xref::class/Trade.adoc[`Trade`] | xref::class/Trade.adoc#marketType[`marketType`]
+
+
+
+| xref::class/TradingHubPrice.adoc[`TradingHubPrice`] | xref::class/TradingHubPrice.adoc#marketType[`marketType`]
+
+
+|===
+

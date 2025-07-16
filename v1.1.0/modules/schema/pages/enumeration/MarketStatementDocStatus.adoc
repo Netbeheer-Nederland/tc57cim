@@ -1,0 +1,42 @@
+= `MarketStatementDocStatus`
+:toclevels: 4
+
+
++++market statement document status+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MarketStatementDocStatus`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `APPROVED`
+| `cim:MarketStatementDocStatus.APPROVED`
+| n/a
+
+| `CANCELLED`
+| `cim:MarketStatementDocStatus.CANCELLED`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

@@ -1,0 +1,166 @@
+= `Temperature`
+:toclevels: 4
+
+
++++Value of temperature in degrees Celsius.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Temperature`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Temperature.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Temperature.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Temperature.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ACLineSegment.adoc[`ACLineSegment`] | xref::class/ACLineSegment.adoc#shortCircuitEndTemperature[`shortCircuitEndTemperature`]
+
+
+
+| xref::class/AssetAnalog.adoc[`AssetAnalog`] | xref::class/AssetAnalog.adoc#reportingTemperature[`reportingTemperature`]
+
+
+
+| xref::class/CableInfo.adoc[`CableInfo`] | xref::class/CableInfo.adoc#nominalTemperature[`nominalTemperature`]
+
+
+
+| xref::class/CombustionTurbine.adoc[`CombustionTurbine`] | xref::class/CombustionTurbine.adoc#referenceTemp[`referenceTemp`]
+
+
+
+| xref::class/GovGAST2.adoc[`GovGAST2`] | xref::class/GovGAST2.adoc#tr[`tr`]
+
+
+
+| xref::class/GovGAST3.adoc[`GovGAST3`] | xref::class/GovGAST3.adoc#tt[`tt`]
+
+
+
+| xref::class/GovGASTWD.adoc[`GovGASTWD`] | xref::class/GovGASTWD.adoc#tr[`tr`]
+
+
+
+| xref::class/OilSpecimen.adoc[`OilSpecimen`] | xref::class/OilSpecimen.adoc#oilSampleTemperature[`oilSampleTemperature`]
+
+
+
+| xref::class/PanDemandResponse.adoc[`PanDemandResponse`] | xref::class/PanDemandResponse.adoc#heatingSetpoint[`heatingSetpoint`]
+
+
+
+| xref::class/ReactiveCapabilityCurve.adoc[`ReactiveCapabilityCurve`] | xref::class/ReactiveCapabilityCurve.adoc#coolantTemperature[`coolantTemperature`]
+
+
+
+| xref::class/Specimen.adoc[`Specimen`] | xref::class/Specimen.adoc#ambientTemperatureAtSampling[`ambientTemperatureAtSampling`]
+
+
+
+| xref::class/TemperatureDependentLimitPoint.adoc[`TemperatureDependentLimitPoint`] | xref::class/TemperatureDependentLimitPoint.adoc#temperature[`temperature`]
+
+
+
+| xref::class/TransformerObservation.adoc[`TransformerObservation`] | xref::class/TransformerObservation.adoc#topOilTemp[`topOilTemp`]
+
+
+
+| xref::class/TransformerTest.adoc[`TransformerTest`] | xref::class/TransformerTest.adoc#temperature[`temperature`]
+
+
+|===
+

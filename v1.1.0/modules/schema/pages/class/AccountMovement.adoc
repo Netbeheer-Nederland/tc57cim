@@ -1,0 +1,156 @@
+= `AccountMovement`
+:toclevels: 4
+
+
++++Credit/debit movements for an account.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AccountMovement`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`AccountMovement`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<amount,`amount`>>
+//| [[slots_table.amount]]<<amount,`amount`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Amount that was credited to/debited from an account. For example: payment received/interest charge on arrears.+++
+| _n/a_
+
+| <<dateTime,`dateTime`>>
+//| [[slots_table.dateTime]]<<dateTime,`dateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time when the credit/debit transaction was performed.+++
+| _n/a_
+
+| <<reason,`reason`>>
+//| [[slots_table.reason]]<<reason,`reason`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Reason for credit/debit transaction on an account. Example: payment received/arrears interest levied.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#amount]
+=== `amount`
++++Amount that was credited to/debited from an account. For example: payment received/interest charge on arrears.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AccountMovement.amount`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.amount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dateTime]
+=== `dateTime`
++++Date and time when the credit/debit transaction was performed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AccountMovement.dateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reason]
+=== `reason`
++++Reason for credit/debit transaction on an account. Example: payment received/arrears interest levied.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AccountMovement.reason`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reason,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AuxiliaryAccount.adoc[`AuxiliaryAccount`] | xref::class/AuxiliaryAccount.adoc#lastDebit[`lastDebit`]
+
+
+|===
+

@@ -1,0 +1,255 @@
+= `NonlinearShuntCompensatorPoint`
+:toclevels: 4
+
+
++++A non linear shunt compensator bank or section admittance value. The number of NonlinearShuntCompenstorPoint instances associated with a NonlinearShuntCompensator shall be equal to ShuntCompensator.maximumSections. ShuntCompensator.sections shall only be set to one of the NonlinearShuntCompenstorPoint.sectionNumber. There is no interpolation between NonlinearShuntCompenstorPoint-s.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:NonlinearShuntCompensatorPoint`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`NonlinearShuntCompensatorPoint`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<NonlinearShuntCompensator,`NonlinearShuntCompensator`>>
+//| [[slots_table.NonlinearShuntCompensator]]<<NonlinearShuntCompensator,`NonlinearShuntCompensator`>>
+| 1 +
+xref::class/NonlinearShuntCompensator.adoc[`NonlinearShuntCompensator`]
+| +++Non-linear shunt compensator owning this point.+++
+| _n/a_
+
+| <<b,`b`>>
+//| [[slots_table.b]]<<b,`b`>>
+| 0..1 +
+xref::class/Susceptance.adoc[`Susceptance`]
+| +++Positive sequence shunt (charging) susceptance per section.+++
+| _n/a_
+
+| <<b0,`b0`>>
+//| [[slots_table.b0]]<<b0,`b0`>>
+| 0..1 +
+xref::class/Susceptance.adoc[`Susceptance`]
+| +++Zero sequence shunt (charging) susceptance per section.+++
+| _n/a_
+
+| <<g,`g`>>
+//| [[slots_table.g]]<<g,`g`>>
+| 0..1 +
+xref::class/Conductance.adoc[`Conductance`]
+| +++Positive sequence shunt (charging) conductance per section.+++
+| _n/a_
+
+| <<g0,`g0`>>
+//| [[slots_table.g0]]<<g0,`g0`>>
+| 0..1 +
+xref::class/Conductance.adoc[`Conductance`]
+| +++Zero sequence shunt (charging) conductance per section.+++
+| _n/a_
+
+| <<sectionNumber,`sectionNumber`>>
+//| [[slots_table.sectionNumber]]<<sectionNumber,`sectionNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++The number of the section.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#b]
+=== `b`
++++Positive sequence shunt (charging) susceptance per section.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPoint.b`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Susceptance.adoc[`Susceptance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.b,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#b0]
+=== `b0`
++++Zero sequence shunt (charging) susceptance per section.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPoint.b0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Susceptance.adoc[`Susceptance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.b0,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#g]
+=== `g`
++++Positive sequence shunt (charging) conductance per section.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPoint.g`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Conductance.adoc[`Conductance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.g,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#g0]
+=== `g0`
++++Zero sequence shunt (charging) conductance per section.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPoint.g0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Conductance.adoc[`Conductance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.g0,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#NonlinearShuntCompensator]
+=== `NonlinearShuntCompensator`
++++Non-linear shunt compensator owning this point.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPoint.NonlinearShuntCompensator`
+| Cardinality
+| 1
+| Type
+| xref::class/NonlinearShuntCompensator.adoc[`NonlinearShuntCompensator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.NonlinearShuntCompensator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sectionNumber]
+=== `sectionNumber`
++++The number of the section.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NonlinearShuntCompensatorPoint.sectionNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sectionNumber,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/NonlinearShuntCompensator.adoc[`NonlinearShuntCompensator`] | xref::class/NonlinearShuntCompensator.adoc#NonlinearShuntCompensatorPoints[`NonlinearShuntCompensatorPoints`]
+
+
+|===
+

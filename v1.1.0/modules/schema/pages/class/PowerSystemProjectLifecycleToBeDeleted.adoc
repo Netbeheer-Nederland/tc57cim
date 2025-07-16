@@ -1,0 +1,179 @@
+= `PowerSystemProjectLifecycleToBeDeleted`
+:toclevels: 4
+
+
++++Represent the base lifecycle of a functional model change that could be a construction of new elements.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PowerSystemProjectLifecycleToBeDeleted`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`PowerSystemProjectLifecycleToBeDeleted`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<cancelled,`cancelled`>>
+//| [[slots_table.cancelled]]<<cancelled,`cancelled`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The date the Power System Project is in cancelled stage.+++
+| _n/a_
+
+| <<committed,`committed`>>
+//| [[slots_table.committed]]<<committed,`committed`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The date Power System Project is in committed stage.+++
+| _n/a_
+
+| <<inBuild,`inBuild`>>
+//| [[slots_table.inBuild]]<<inBuild,`inBuild`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The date Power System Project is in build stage.+++
+| _n/a_
+
+| <<inPlan,`inPlan`>>
+//| [[slots_table.inPlan]]<<inPlan,`inPlan`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The date Power System Project is in planning stage.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#cancelled]
+=== `cancelled`
++++The date the Power System Project is in cancelled stage.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemProjectLifecycleToBeDeleted.cancelled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cancelled,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#committed]
+=== `committed`
++++The date Power System Project is in committed stage.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemProjectLifecycleToBeDeleted.committed`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.committed,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#inBuild]
+=== `inBuild`
++++The date Power System Project is in build stage.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemProjectLifecycleToBeDeleted.inBuild`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.inBuild,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#inPlan]
+=== `inPlan`
++++The date Power System Project is in planning stage.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemProjectLifecycleToBeDeleted.inPlan`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.inPlan,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

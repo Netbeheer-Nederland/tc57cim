@@ -1,0 +1,486 @@
+= `StreetDetail`
+:toclevels: 4
+
+
++++Street details, in the context of address.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:StreetDetail`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`StreetDetail`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<addressGeneral,`addressGeneral`>>
+//| [[slots_table.addressGeneral]]<<addressGeneral,`addressGeneral`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++First line of a free form address or some additional address information (for example a mail stop).+++
+| _n/a_
+
+| <<addressGeneral2,`addressGeneral2`>>
+//| [[slots_table.addressGeneral2]]<<addressGeneral2,`addressGeneral2`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Second line of a free form address.+++
+| _n/a_
+
+| <<addressGeneral3,`addressGeneral3`>>
+//| [[slots_table.addressGeneral3]]<<addressGeneral3,`addressGeneral3`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Third line of a free form address.+++
+| _n/a_
+
+| <<buildingName,`buildingName`>>
+//| [[slots_table.buildingName]]<<buildingName,`buildingName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(if applicable) In certain cases the physical location of the place of interest does not have a direct point of entry from...+++
+| _n/a_
+
+| <<code,`code`>>
+//| [[slots_table.code]]<<code,`code`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Utilities often make use of external reference systems, such as those of the town-planner's department or...+++
+| _n/a_
+
+| <<floorIdentification,`floorIdentification`>>
+//| [[slots_table.floorIdentification]]<<floorIdentification,`floorIdentification`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The identification by name or number, expressed as text, of the floor in the building as part of this address.+++
+| _n/a_
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of the street.+++
+| _n/a_
+
+| <<number,`number`>>
+//| [[slots_table.number]]<<number,`number`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Designator of the specific location on the street.+++
+| _n/a_
+
+| <<prefix,`prefix`>>
+//| [[slots_table.prefix]]<<prefix,`prefix`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Prefix to the street name. For example: North, South, East, West.+++
+| _n/a_
+
+| <<suffix,`suffix`>>
+//| [[slots_table.suffix]]<<suffix,`suffix`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Suffix to the street name. For example: North, South, East, West.+++
+| _n/a_
+
+| <<suiteNumber,`suiteNumber`>>
+//| [[slots_table.suiteNumber]]<<suiteNumber,`suiteNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Number of the apartment or suite.+++
+| _n/a_
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Type of street. Examples include: street, circle, boulevard, avenue, road, drive, etc.+++
+| _n/a_
+
+| <<withinTownLimits,`withinTownLimits`>>
+//| [[slots_table.withinTownLimits]]<<withinTownLimits,`withinTownLimits`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if this street is within the legal geographical boundaries of the specified town (default).+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#addressGeneral]
+=== `addressGeneral`
++++First line of a free form address or some additional address information (for example a mail stop).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.addressGeneral`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.addressGeneral,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#addressGeneral2]
+=== `addressGeneral2`
++++(if applicable) Second line of a free form address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.addressGeneral2`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.addressGeneral2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#addressGeneral3]
+=== `addressGeneral3`
++++(if applicable) Third line of a free form address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.addressGeneral3`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.addressGeneral3,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#buildingName]
+=== `buildingName`
++++(if applicable) In certain cases the physical location of the place of interest does not have a direct point of entry from the street, but may be located inside a larger structure such as a building, complex, office block, apartment, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.buildingName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.buildingName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#code]
+=== `code`
++++(if applicable) Utilities often make use of external reference systems, such as those of the town-planner's department or surveyor general's mapping system, that allocate global reference codes to streets.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.code`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.code,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#floorIdentification]
+=== `floorIdentification`
++++The identification by name or number, expressed as text, of the floor in the building as part of this address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.floorIdentification`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.floorIdentification,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++Name of the street.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#number]
+=== `number`
++++Designator of the specific location on the street.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.number`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.number,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#prefix]
+=== `prefix`
++++Prefix to the street name. For example: North, South, East, West.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.prefix`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.prefix,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#suffix]
+=== `suffix`
++++Suffix to the street name. For example: North, South, East, West.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.suffix`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.suffix,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#suiteNumber]
+=== `suiteNumber`
++++Number of the apartment or suite.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.suiteNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.suiteNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++Type of street. Examples include: street, circle, boulevard, avenue, road, drive, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#withinTownLimits]
+=== `withinTownLimits`
++++True if this street is within the legal geographical boundaries of the specified town (default).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.withinTownLimits`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.withinTownLimits,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/StreetAddress.adoc[`StreetAddress`] | xref::class/StreetAddress.adoc#streetDetail[`streetDetail`]
+
+
+|===
+

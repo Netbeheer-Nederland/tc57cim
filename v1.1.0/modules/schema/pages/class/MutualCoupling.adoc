@@ -1,0 +1,714 @@
+= `MutualCoupling`
+:toclevels: 4
+
+
++++This class represents the zero sequence line mutual coupling.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MutualCoupling`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`MutualCoupling`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<First_Terminal,`First_Terminal`>>
+//| [[slots_table.First_Terminal]]<<First_Terminal,`First_Terminal`>>
+| 1 +
+xref::class/Terminal.adoc[`Terminal`]
+| +++The starting terminal for the calculation of distances along the first branch of the mutual coupling.  Normally...+++
+| _n/a_
+
+| <<Second_Terminal,`Second_Terminal`>>
+//| [[slots_table.Second_Terminal]]<<Second_Terminal,`Second_Terminal`>>
+| 1 +
+xref::class/Terminal.adoc[`Terminal`]
+| +++The starting terminal for the calculation of distances along the second branch of the mutual coupling.+++
+| _n/a_
+
+| <<b0ch,`b0ch`>>
+//| [[slots_table.b0ch]]<<b0ch,`b0ch`>>
+| 0..1 +
+xref::class/Susceptance.adoc[`Susceptance`]
+| +++Zero sequence mutual coupling shunt (charging) susceptance, uniformly distributed, of the entire line section.+++
+| _n/a_
+
+| <<distance11,`distance11`>>
+//| [[slots_table.distance11]]<<distance11,`distance11`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++Distance to the start of the coupled region from the first line's terminal having sequence number equal to 1.+++
+| _n/a_
+
+| <<distance12,`distance12`>>
+//| [[slots_table.distance12]]<<distance12,`distance12`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++Distance to the end of the coupled region from the first line's terminal with sequence number equal to 1.+++
+| _n/a_
+
+| <<distance21,`distance21`>>
+//| [[slots_table.distance21]]<<distance21,`distance21`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++Distance to the start of coupled region from the second line's terminal with sequence number equal to 1.+++
+| _n/a_
+
+| <<distance22,`distance22`>>
+//| [[slots_table.distance22]]<<distance22,`distance22`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++Distance to the end of coupled region from the second line's terminal with sequence number equal to 1.+++
+| _n/a_
+
+| <<g0ch,`g0ch`>>
+//| [[slots_table.g0ch]]<<g0ch,`g0ch`>>
+| 0..1 +
+xref::class/Conductance.adoc[`Conductance`]
+| +++Zero sequence mutual coupling shunt (charging) conductance, uniformly distributed, of the entire line section.+++
+| _n/a_
+
+| <<r0,`r0`>>
+//| [[slots_table.r0]]<<r0,`r0`>>
+| 0..1 +
+xref::class/Resistance.adoc[`Resistance`]
+| +++Zero sequence branch-to-branch mutual impedance coupling, resistance.+++
+| _n/a_
+
+| <<x0,`x0`>>
+//| [[slots_table.x0]]<<x0,`x0`>>
+| 0..1 +
+xref::class/Reactance.adoc[`Reactance`]
+| +++Zero sequence branch-to-branch mutual impedance coupling, reactance.+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#b0ch]
+=== `b0ch`
++++Zero sequence mutual coupling shunt (charging) susceptance, uniformly distributed, of the entire line section.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MutualCoupling.b0ch`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Susceptance.adoc[`Susceptance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.b0ch,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#distance11]
+=== `distance11`
++++Distance to the start of the coupled region from the first line's terminal having sequence number equal to 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MutualCoupling.distance11`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.distance11,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#distance12]
+=== `distance12`
++++Distance to the end of the coupled region from the first line's terminal with sequence number equal to 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MutualCoupling.distance12`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.distance12,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#distance21]
+=== `distance21`
++++Distance to the start of coupled region from the second line's terminal with sequence number equal to 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MutualCoupling.distance21`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.distance21,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#distance22]
+=== `distance22`
++++Distance to the end of coupled region from the second line's terminal with sequence number equal to 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MutualCoupling.distance22`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.distance22,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#First_Terminal]
+=== `First_Terminal`
++++The starting terminal for the calculation of distances along the first branch of the mutual coupling.  Normally MutualCoupling would only be used for terminals of AC line segments.  The first and second terminals of a mutual coupling should point to different AC line segments.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MutualCoupling.First_Terminal`
+| Cardinality
+| 1
+| Type
+| xref::class/Terminal.adoc[`Terminal`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.First_Terminal,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#g0ch]
+=== `g0ch`
++++Zero sequence mutual coupling shunt (charging) conductance, uniformly distributed, of the entire line section.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MutualCoupling.g0ch`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Conductance.adoc[`Conductance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.g0ch,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#r0]
+=== `r0`
++++Zero sequence branch-to-branch mutual impedance coupling, resistance.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MutualCoupling.r0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Resistance.adoc[`Resistance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.r0,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Second_Terminal]
+=== `Second_Terminal`
++++The starting terminal for the calculation of distances along the second branch of the mutual coupling.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MutualCoupling.Second_Terminal`
+| Cardinality
+| 1
+| Type
+| xref::class/Terminal.adoc[`Terminal`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Second_Terminal,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#x0]
+=== `x0`
++++Zero sequence branch-to-branch mutual impedance coupling, reactance.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MutualCoupling.x0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reactance.adoc[`Reactance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.x0,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Terminal.adoc[`Terminal`] | xref::class/Terminal.adoc#HasSecondMutualCoupling[`HasSecondMutualCoupling`]
+
+
+|===
+

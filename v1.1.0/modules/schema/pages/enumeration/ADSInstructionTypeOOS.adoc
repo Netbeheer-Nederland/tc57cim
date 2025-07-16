@@ -1,0 +1,48 @@
+= `ADSInstructionTypeOOS`
+:toclevels: 4
+
+
++++MIN_CONSTRAINT
+MAX_CONSTRAINT
+FIXED_CONSTRAINT+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ADSInstructionTypeOOS`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `FIXED_CONSTRAINT`
+| `cim:ADSInstructionTypeOOS.FIXED_CONSTRAINT`
+| n/a
+
+| `MAX_CONSTRAINT`
+| `cim:ADSInstructionTypeOOS.MAX_CONSTRAINT`
+| n/a
+
+| `MIN_CONSTRAINT`
+| `cim:ADSInstructionTypeOOS.MIN_CONSTRAINT`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

@@ -1,0 +1,48 @@
+= `ProjectStatusKind`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ProjectStatusKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `cancelled`
+| `cim:ProjectStatusKind.cancelled`
+| n/a
+
+| `closed`
+| `cim:ProjectStatusKind.closed`
+| n/a
+
+| `draft`
+| `cim:ProjectStatusKind.draft`
+| n/a
+
+| `frozen`
+| `cim:ProjectStatusKind.frozen`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

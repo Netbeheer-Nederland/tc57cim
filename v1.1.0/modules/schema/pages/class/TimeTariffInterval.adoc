@@ -1,0 +1,230 @@
+= `TimeTariffInterval`
+:toclevels: 4
+
+
++++One of a sequence of time intervals defined in terms of real time. It is typically used in association with TariffProfile to define the intervals in a time of use tariff structure, where startDateTime simultaneously determines the starting point of this interval and the ending point of the previous interval.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TimeTariffInterval`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`TimeTariffInterval`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Charges,`Charges`>>
+//| [[slots_table.Charges]]<<Charges,`Charges`>>
+| 0..* +
+xref::class/Charge.adoc[`Charge`]
+| +++All charges used to define this time tariff interval.+++
+| _n/a_
+
+| <<ConsumptionTariffIntervals,`ConsumptionTariffIntervals`>>
+//| [[slots_table.ConsumptionTariffIntervals]]<<ConsumptionTariffIntervals,`ConsumptionTariffIntervals`>>
+| 0..* +
+xref::class/ConsumptionTariffInterval.adoc[`ConsumptionTariffInterval`]
+| +++All consumption tariff intervals that introduce variation in this time of use tariff interval; allows to express e.g., peak...+++
+| _n/a_
+
+| <<TariffProfiles,`TariffProfiles`>>
+//| [[slots_table.TariffProfiles]]<<TariffProfiles,`TariffProfiles`>>
+| 0..* +
+xref::class/TariffProfile.adoc[`TariffProfile`]
+| +++All tariff profiles defined by this time tariff interval.+++
+| _n/a_
+
+| <<sequenceNumber,`sequenceNumber`>>
+//| [[slots_table.sequenceNumber]]<<sequenceNumber,`sequenceNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++A sequential reference that defines the identity of this interval and its relative position with respect to other intervals...+++
+| _n/a_
+
+| <<startTime,`startTime`>>
+//| [[slots_table.startTime]]<<startTime,`startTime`>>
+| 0..1 +
+https://w3id.org/linkml/Time[`time`]
+| +++A real time marker that defines the starting time (typically it is the time of day) for this interval. The interval extends...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#Charges]
+=== `Charges`
++++All charges used to define this time tariff interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeTariffInterval.Charges`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Charge.adoc[`Charge`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Charges,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConsumptionTariffIntervals]
+=== `ConsumptionTariffIntervals`
++++All consumption tariff intervals that introduce variation in this time of use tariff interval; allows to express e.g., peak hour prices that are different with different consumption blocks.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeTariffInterval.ConsumptionTariffIntervals`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConsumptionTariffInterval.adoc[`ConsumptionTariffInterval`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConsumptionTariffIntervals,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sequenceNumber]
+=== `sequenceNumber`
++++A sequential reference that defines the identity of this interval and its relative position with respect to other intervals in a sequence of intervals.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeTariffInterval.sequenceNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sequenceNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startTime]
+=== `startTime`
++++A real time marker that defines the starting time (typically it is the time of day) for this interval. The interval extends to the start of the next interval or until it is reset to the start of the first interval by TariffProfile.tariffCycle.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeTariffInterval.startTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Time[`time`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TariffProfiles]
+=== `TariffProfiles`
++++All tariff profiles defined by this time tariff interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeTariffInterval.TariffProfiles`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TariffProfile.adoc[`TariffProfile`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TariffProfiles,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Charge.adoc[`Charge`] | xref::class/Charge.adoc#TimeTariffIntervals[`TimeTariffIntervals`]
+
+
+
+| xref::class/ConsumptionTariffInterval.adoc[`ConsumptionTariffInterval`] | xref::class/ConsumptionTariffInterval.adoc#TouTariffIntervals[`TouTariffIntervals`]
+
+
+
+| xref::class/TariffProfile.adoc[`TariffProfile`] | xref::class/TariffProfile.adoc#TimeTariffIntervals[`TimeTariffIntervals`]
+
+
+|===
+

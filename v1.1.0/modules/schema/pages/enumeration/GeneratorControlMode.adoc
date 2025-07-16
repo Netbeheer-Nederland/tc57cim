@@ -1,0 +1,52 @@
+= `GeneratorControlMode`
+:toclevels: 4
+
+
++++Unit control modes.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:GeneratorControlMode`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `pulse`
+| `cim:GeneratorControlMode.pulse`
+| n/a
+
+| `setpoint`
+| `cim:GeneratorControlMode.setpoint`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/GeneratingUnit.adoc[`GeneratingUnit`] | xref::class/GeneratingUnit.adoc#genControlMode[`genControlMode`]
+
+
+|===
+

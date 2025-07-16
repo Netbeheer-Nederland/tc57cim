@@ -1,0 +1,1391 @@
+= `HostControlArea`
+:toclevels: 4
+
+
++++A HostControlArea has a set of tie points and a set of generator controls (i.e., AGC). It also has a total load, including transmission and distribution losses.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:HostControlArea`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+*** *`HostControlArea`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AdjacentCASet,`AdjacentCASet`>>
+//| [[slots_table.AdjacentCASet]]<<AdjacentCASet,`AdjacentCASet`>>
+| 0..1 +
+xref::class/AdjacentCASet.adoc[`AdjacentCASet`]
+| _n/a_
+| _n/a_
+
+| <<BidSelfSched,`BidSelfSched`>>
+//| [[slots_table.BidSelfSched]]<<BidSelfSched,`BidSelfSched`>>
+| 0..* +
+xref::class/BidSelfSched.adoc[`BidSelfSched`]
+| _n/a_
+| _n/a_
+
+| <<CnodeDistributionFactor,`CnodeDistributionFactor`>>
+//| [[slots_table.CnodeDistributionFactor]]<<CnodeDistributionFactor,`CnodeDistributionFactor`>>
+| 0..* +
+xref::class/CnodeDistributionFactor.adoc[`CnodeDistributionFactor`]
+| _n/a_
+| _n/a_
+
+| <<Controls,`Controls`>>
+//| [[slots_table.Controls]]<<Controls,`Controls`>>
+| 1 +
+xref::class/ControlAreaOperator.adoc[`ControlAreaOperator`]
+| +++A ControlAreaCompany controls a ControlArea.+++
+| _n/a_
+
+| <<Flowgate,`Flowgate`>>
+//| [[slots_table.Flowgate]]<<Flowgate,`Flowgate`>>
+| 0..* +
+xref::class/Flowgate.adoc[`Flowgate`]
+| _n/a_
+| _n/a_
+
+| <<LossClearingResults,`LossClearingResults`>>
+//| [[slots_table.LossClearingResults]]<<LossClearingResults,`LossClearingResults`>>
+| 0..* +
+xref::class/LossClearingResults.adoc[`LossClearingResults`]
+| _n/a_
+| _n/a_
+
+| <<RTO,`RTO`>>
+//| [[slots_table.RTO]]<<RTO,`RTO`>>
+| 1 +
+xref::class/RTO.adoc[`RTO`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..* +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<SubControlAreas,`SubControlAreas`>>
+//| [[slots_table.SubControlAreas]]<<SubControlAreas,`SubControlAreas`>>
+| 0..* +
+xref::class/SubControlArea.adoc[`SubControlArea`]
+| +++The interchange area  may operate as a control area+++
+| _n/a_
+
+| <<SysLoadDistribuFactor,`SysLoadDistribuFactor`>>
+//| [[slots_table.SysLoadDistribuFactor]]<<SysLoadDistribuFactor,`SysLoadDistribuFactor`>>
+| 0..* +
+xref::class/SysLoadDistributionFactor.adoc[`SysLoadDistributionFactor`]
+| _n/a_
+| _n/a_
+
+| <<TransferInterface,`TransferInterface`>>
+//| [[slots_table.TransferInterface]]<<TransferInterface,`TransferInterface`>>
+| 0..* +
+xref::class/TransferInterface.adoc[`TransferInterface`]
+| _n/a_
+| _n/a_
+
+| <<areaControlMode,`areaControlMode`>>
+//| [[slots_table.areaControlMode]]<<areaControlMode,`areaControlMode`>>
+| 0..1 +
+xref::enumeration/AreaControlMode.adoc[`AreaControlMode`]
+| +++The area's present control mode: (CF = constant frequency) or (CTL = constant tie-line) or (TLB = tie-line bias) or (OFF =...+++
+| _n/a_
+
+| <<freqSetPoint,`freqSetPoint`>>
+//| [[slots_table.freqSetPoint]]<<freqSetPoint,`freqSetPoint`>>
+| 0..1 +
+xref::class/Frequency.adoc[`Frequency`]
+| +++The present power system frequency set point for automatic generation control+++
+| _n/a_
+
+| <<frequencyBiasFactor,`frequencyBiasFactor`>>
+//| [[slots_table.frequencyBiasFactor]]<<frequencyBiasFactor,`frequencyBiasFactor`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The control area's frequency bias factor, in MW/0.1 Hz, for automatic generation control (AGC)+++
+| _n/a_
+
+| <<AssetDatasheet,`AssetDatasheet`>>
+//| [[slots_table.AssetDatasheet]]<<AssetDatasheet,`AssetDatasheet`>>
+| 0..1 +
+xref::class/AssetInfo.adoc[`AssetInfo`]
+| +++Datasheet information for this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Assets,`Assets`>>
+//| [[slots_table.Assets]]<<Assets,`Assets`>>
+| 0..* +
+xref::class/Asset.adoc[`Asset`]
+| +++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a...+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Clearances,`Clearances`>>
+//| [[slots_table.Clearances]]<<Clearances,`Clearances`>>
+| 0..* +
+xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+| +++All clearances applicable to this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<ConfigurationEvent,`ConfigurationEvent`>>
+//| [[slots_table.ConfigurationEvent]]<<ConfigurationEvent,`ConfigurationEvent`>>
+| 0..* +
+xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this Power System resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Controls,`Controls`>>
+//| [[slots_table.Controls]]<<Controls,`Controls`>>
+| 0..* +
+xref::class/Control.adoc[`Control`]
+| +++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or...+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<GenericAction,`GenericAction`>>
+//| [[slots_table.GenericAction]]<<GenericAction,`GenericAction`>>
+| 0..* +
+xref::class/GenericAction.adoc[`GenericAction`]
+| +++The generic action that is performed on the power system resource+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Location,`Location`>>
+//| [[slots_table.Location]]<<Location,`Location`>>
+| 0..1 +
+xref::class/Location.adoc[`Location`]
+| +++Location of this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Measurements,`Measurements`>>
+//| [[slots_table.Measurements]]<<Measurements,`Measurements`>>
+| 0..* +
+xref::class/Measurement.adoc[`Measurement`]
+| +++The measurements associated with this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<OperatingShare,`OperatingShare`>>
+//| [[slots_table.OperatingShare]]<<OperatingShare,`OperatingShare`>>
+| 0..* +
+xref::class/OperatingShare.adoc[`OperatingShare`]
+| +++The operating shares of this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<OperationalTags,`OperationalTags`>>
+//| [[slots_table.OperationalTags]]<<OperationalTags,`OperationalTags`>>
+| 0..* +
+xref::class/OperationalTag.adoc[`OperationalTag`]
+| +++All operational tags placed on this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<PSREvents,`PSREvents`>>
+//| [[slots_table.PSREvents]]<<PSREvents,`PSREvents`>>
+| 0..* +
+xref::class/PSREvent.adoc[`PSREvent`]
+| +++All events associated with this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<PSRType,`PSRType`>>
+//| [[slots_table.PSRType]]<<PSRType,`PSRType`>>
+| 0..1 +
+xref::class/PSRType.adoc[`PSRType`]
+| +++Custom classification for this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<ReportingGroup,`ReportingGroup`>>
+//| [[slots_table.ReportingGroup]]<<ReportingGroup,`ReportingGroup`>>
+| 0..* +
+xref::class/ReportingGroup.adoc[`ReportingGroup`]
+| +++Reporting groups to which this power system resource belongs.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<VerificationAction,`VerificationAction`>>
+//| [[slots_table.VerificationAction]]<<VerificationAction,`VerificationAction`>>
+| 0..* +
+xref::class/VerificationAction.adoc[`VerificationAction`]
+| +++The verification action that is performed on the power system resource+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#AdjacentCASet]
+=== `AdjacentCASet`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.AdjacentCASet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AdjacentCASet.adoc[`AdjacentCASet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AdjacentCASet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#areaControlMode]
+=== `areaControlMode`
++++The area's present control mode: (CF = constant frequency) or (CTL = constant tie-line) or (TLB = tie-line bias) or (OFF = off control)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.areaControlMode`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/AreaControlMode.adoc[`AreaControlMode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.areaControlMode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AssetDatasheet]
+=== `AssetDatasheet`
++++Datasheet information for this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.AssetDatasheet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AssetDatasheet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a single AC line segment.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Assets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#BidSelfSched]
+=== `BidSelfSched`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.BidSelfSched`
+| Cardinality
+| 0..*
+| Type
+| xref::class/BidSelfSched.adoc[`BidSelfSched`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.BidSelfSched,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Clearances]
+=== `Clearances`
++++All clearances applicable to this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Clearances`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Clearances,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CnodeDistributionFactor]
+=== `CnodeDistributionFactor`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.CnodeDistributionFactor`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CnodeDistributionFactor.adoc[`CnodeDistributionFactor`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CnodeDistributionFactor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConfigurationEvent]
+=== `ConfigurationEvent`
++++All configuration events created for this Power System resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ConfigurationEvent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConfigurationEvent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Controls]
+=== `Controls`
++++A ControlAreaCompany controls a ControlArea.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.Controls`
+| Cardinality
+| 1
+| Type
+| xref::class/ControlAreaOperator.adoc[`ControlAreaOperator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Controls,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Controls]
+=== `Controls`
++++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or capacitor bank breaker actuator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Controls`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Control.adoc[`Control`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Controls,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Flowgate]
+=== `Flowgate`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.Flowgate`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Flowgate.adoc[`Flowgate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Flowgate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#freqSetPoint]
+=== `freqSetPoint`
++++The present power system frequency set point for automatic generation control+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.freqSetPoint`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Frequency.adoc[`Frequency`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.freqSetPoint,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#frequencyBiasFactor]
+=== `frequencyBiasFactor`
++++The control area's frequency bias factor, in MW/0.1 Hz, for automatic generation control (AGC)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.frequencyBiasFactor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.frequencyBiasFactor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#GenericAction]
+=== `GenericAction`
++++The generic action that is performed on the power system resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.GenericAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/GenericAction.adoc[`GenericAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.GenericAction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location of this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Location,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#LossClearingResults]
+=== `LossClearingResults`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.LossClearingResults`
+| Cardinality
+| 0..*
+| Type
+| xref::class/LossClearingResults.adoc[`LossClearingResults`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.LossClearingResults,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Measurements]
+=== `Measurements`
++++The measurements associated with this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Measurements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Measurement.adoc[`Measurement`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Measurements,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperatingShare]
+=== `OperatingShare`
++++The operating shares of this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperatingShare`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperatingShare.adoc[`OperatingShare`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperatingShare,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperationalTags]
+=== `OperationalTags`
++++All operational tags placed on this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperationalTags`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperationalTag.adoc[`OperationalTag`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperationalTags,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PSREvents]
+=== `PSREvents`
++++All events associated with this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSREvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PSREvent.adoc[`PSREvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PSREvents,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PSRType]
+=== `PSRType`
++++Custom classification for this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSRType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PSRType.adoc[`PSRType`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PSRType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.RegisteredResource`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ReportingGroup]
+=== `ReportingGroup`
++++Reporting groups to which this power system resource belongs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ReportingGroup`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ReportingGroup.adoc[`ReportingGroup`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ReportingGroup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RTO]
+=== `RTO`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.RTO`
+| Cardinality
+| 1
+| Type
+| xref::class/RTO.adoc[`RTO`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RTO,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SubControlAreas]
+=== `SubControlAreas`
++++The interchange area  may operate as a control area+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.SubControlAreas`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SubControlAreas,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SysLoadDistribuFactor]
+=== `SysLoadDistribuFactor`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.SysLoadDistribuFactor`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SysLoadDistributionFactor.adoc[`SysLoadDistributionFactor`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SysLoadDistribuFactor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TransferInterface]
+=== `TransferInterface`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:HostControlArea.TransferInterface`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TransferInterface.adoc[`TransferInterface`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TransferInterface,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VerificationAction]
+=== `VerificationAction`
++++The verification action that is performed on the power system resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.VerificationAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/VerificationAction.adoc[`VerificationAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VerificationAction,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AdjacentCASet.adoc[`AdjacentCASet`] | xref::class/AdjacentCASet.adoc#HostControlArea[`HostControlArea`]
+
+
+
+| xref::class/BidSelfSched.adoc[`BidSelfSched`] | xref::class/BidSelfSched.adoc#HostControlArea[`HostControlArea`]
+
+
+
+| xref::class/CnodeDistributionFactor.adoc[`CnodeDistributionFactor`] | xref::class/CnodeDistributionFactor.adoc#HostControlArea[`HostControlArea`]
+
+
+
+| xref::class/ControlAreaOperator.adoc[`ControlAreaOperator`] | xref::class/ControlAreaOperator.adoc#ControlledBy[`ControlledBy`]
+
+
+
+| xref::class/Flowgate.adoc[`Flowgate`] | xref::class/Flowgate.adoc#HostControlArea[`HostControlArea`]
+
+
+
+| xref::class/LossClearingResults.adoc[`LossClearingResults`] | xref::class/LossClearingResults.adoc#HostControlArea[`HostControlArea`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#HostControlArea[`HostControlArea`]
+
+
+
+| xref::class/RTO.adoc[`RTO`] | xref::class/RTO.adoc#HostControlArea[`HostControlArea`]
+
+
+
+| xref::class/SubControlArea.adoc[`SubControlArea`] | xref::class/SubControlArea.adoc#HostControlArea[`HostControlArea`]
+
+
+
+| xref::class/SysLoadDistributionFactor.adoc[`SysLoadDistributionFactor`] | xref::class/SysLoadDistributionFactor.adoc#HostControlArea[`HostControlArea`]
+
+
+
+| xref::class/TransferInterface.adoc[`TransferInterface`] | xref::class/TransferInterface.adoc#HostControlArea[`HostControlArea`]
+
+
+|===
+

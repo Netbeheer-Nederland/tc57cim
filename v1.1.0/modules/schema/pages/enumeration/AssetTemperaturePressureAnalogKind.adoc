@@ -1,0 +1,52 @@
+= `AssetTemperaturePressureAnalogKind`
+:toclevels: 4
+
+
++++Analogs representing temperatures or pressures related to assets.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AssetTemperaturePressureAnalogKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `oilPressureAtValve`
+| `cim:AssetTemperaturePressureAnalogKind.oilPressureAtValve`
+| n/a
+
+| `oilTemperatureAtValve`
+| `cim:AssetTemperaturePressureAnalogKind.oilTemperatureAtValve`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AssetTemperaturePressureAnalog.adoc[`AssetTemperaturePressureAnalog`] | xref::class/AssetTemperaturePressureAnalog.adoc#kind[`kind`]
+
+
+|===
+

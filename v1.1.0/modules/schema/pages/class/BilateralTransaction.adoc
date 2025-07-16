@@ -1,0 +1,327 @@
+= `BilateralTransaction`
+:toclevels: 4
+
+
++++Bilateral transaction+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:BilateralTransaction`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`BilateralTransaction`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<curtailTimeMax,`curtailTimeMax`>>
+//| [[slots_table.curtailTimeMax]]<<curtailTimeMax,`curtailTimeMax`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Maximum curtailment time in number of trading intervals+++
+| _n/a_
+
+| <<curtailTimeMin,`curtailTimeMin`>>
+//| [[slots_table.curtailTimeMin]]<<curtailTimeMin,`curtailTimeMin`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Minimum curtailment time in number of trading intervals+++
+| _n/a_
+
+| <<marketType,`marketType`>>
+//| [[slots_table.marketType]]<<marketType,`marketType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Market type (default=DA)
+DA - Day Ahead
+RT - Real Time
+HA - Hour Ahead+++
+| _n/a_
+
+| <<purchaseTimeMax,`purchaseTimeMax`>>
+//| [[slots_table.purchaseTimeMax]]<<purchaseTimeMax,`purchaseTimeMax`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Maximum purchase time in number of trading intervals+++
+| _n/a_
+
+| <<purchaseTimeMin,`purchaseTimeMin`>>
+//| [[slots_table.purchaseTimeMin]]<<purchaseTimeMin,`purchaseTimeMin`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Minimum purchase time in number of trading intervals+++
+| _n/a_
+
+| <<scope,`scope`>>
+//| [[slots_table.scope]]<<scope,`scope`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Transaction scope:
+'Internal' (default)
+'External'+++
+| _n/a_
+
+| <<totalTranChargeMax,`totalTranChargeMax`>>
+//| [[slots_table.totalTranChargeMax]]<<totalTranChargeMax,`totalTranChargeMax`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Maximum total transmission (congestion) charges in monetary units+++
+| _n/a_
+
+| <<transactionType,`transactionType`>>
+//| [[slots_table.transactionType]]<<transactionType,`transactionType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Transaction type (default 1)
+1 - Fixed
+2 - Dispatchable continuous
+3 - Dispatchable block-loading+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#curtailTimeMax]
+=== `curtailTimeMax`
++++Maximum curtailment time in number of trading intervals+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralTransaction.curtailTimeMax`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.curtailTimeMax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#curtailTimeMin]
+=== `curtailTimeMin`
++++Minimum curtailment time in number of trading intervals+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralTransaction.curtailTimeMin`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.curtailTimeMin,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marketType]
+=== `marketType`
++++Market type (default=DA)
+DA - Day Ahead
+RT - Real Time
+HA - Hour Ahead+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralTransaction.marketType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marketType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#purchaseTimeMax]
+=== `purchaseTimeMax`
++++Maximum purchase time in number of trading intervals+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralTransaction.purchaseTimeMax`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.purchaseTimeMax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#purchaseTimeMin]
+=== `purchaseTimeMin`
++++Minimum purchase time in number of trading intervals+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralTransaction.purchaseTimeMin`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.purchaseTimeMin,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#scope]
+=== `scope`
++++Transaction scope:
+'Internal' (default)
+'External'+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralTransaction.scope`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.scope,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#totalTranChargeMax]
+=== `totalTranChargeMax`
++++Maximum total transmission (congestion) charges in monetary units+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralTransaction.totalTranChargeMax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.totalTranChargeMax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#transactionType]
+=== `transactionType`
++++Transaction type (default 1)
+1 - Fixed
+2 - Dispatchable continuous
+3 - Dispatchable block-loading+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralTransaction.transactionType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.transactionType,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

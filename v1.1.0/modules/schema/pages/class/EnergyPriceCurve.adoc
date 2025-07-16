@@ -1,0 +1,127 @@
+= `EnergyPriceCurve`
+:toclevels: 4
+
+
++++Relationship between a price in $(or other monetary unit) /hour (Y-axis) and a MW value (X-axis).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EnergyPriceCurve`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`EnergyPriceCurve`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<EnergyTransactions,`EnergyTransactions`>>
+//| [[slots_table.EnergyTransactions]]<<EnergyTransactions,`EnergyTransactions`>>
+| 0..* +
+xref::class/EnergyTransaction.adoc[`EnergyTransaction`]
+| _n/a_
+| _n/a_
+
+| <<FTRs,`FTRs`>>
+//| [[slots_table.FTRs]]<<FTRs,`FTRs`>>
+| 0..* +
+xref::class/FTR.adoc[`FTR`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#EnergyTransactions]
+=== `EnergyTransactions`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnergyPriceCurve.EnergyTransactions`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnergyTransaction.adoc[`EnergyTransaction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnergyTransactions,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#FTRs]
+=== `FTRs`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnergyPriceCurve.FTRs`
+| Cardinality
+| 0..*
+| Type
+| xref::class/FTR.adoc[`FTR`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.FTRs,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EnergyTransaction.adoc[`EnergyTransaction`] | xref::class/EnergyTransaction.adoc#EnergyPriceCurves[`EnergyPriceCurves`]
+
+
+
+| xref::class/FTR.adoc[`FTR`] | xref::class/FTR.adoc#EnergyPriceCurve[`EnergyPriceCurve`]
+
+
+|===
+

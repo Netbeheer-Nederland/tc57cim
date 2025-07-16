@@ -1,0 +1,651 @@
+= `EndDeviceCapability`
+:toclevels: 4
+
+
++++Inherent capabilities of an end device (i.e., the functions it supports).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EndDeviceCapability`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`EndDeviceCapability`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<autonomousDst,`autonomousDst`>>
+//| [[slots_table.autonomousDst]]<<autonomousDst,`autonomousDst`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if autonomous DST (daylight saving time) function is supported.+++
+| _n/a_
+
+| <<communication,`communication`>>
+//| [[slots_table.communication]]<<communication,`communication`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if communication function is supported.+++
+| _n/a_
+
+| <<connectDisconnect,`connectDisconnect`>>
+//| [[slots_table.connectDisconnect]]<<connectDisconnect,`connectDisconnect`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if connect and disconnect function is supported.+++
+| _n/a_
+
+| <<demandResponse,`demandResponse`>>
+//| [[slots_table.demandResponse]]<<demandResponse,`demandResponse`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if demand response function is supported.+++
+| _n/a_
+
+| <<electricMetering,`electricMetering`>>
+//| [[slots_table.electricMetering]]<<electricMetering,`electricMetering`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if electric metering function is supported.+++
+| _n/a_
+
+| <<gasMetering,`gasMetering`>>
+//| [[slots_table.gasMetering]]<<gasMetering,`gasMetering`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if gas metering function is supported.+++
+| _n/a_
+
+| <<metrology,`metrology`>>
+//| [[slots_table.metrology]]<<metrology,`metrology`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if metrology function is supported.+++
+| _n/a_
+
+| <<onRequestRead,`onRequestRead`>>
+//| [[slots_table.onRequestRead]]<<onRequestRead,`onRequestRead`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if on request read function is supported.+++
+| _n/a_
+
+| <<outageHistory,`outageHistory`>>
+//| [[slots_table.outageHistory]]<<outageHistory,`outageHistory`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if outage history function is supported.+++
+| _n/a_
+
+| <<pressureCompensation,`pressureCompensation`>>
+//| [[slots_table.pressureCompensation]]<<pressureCompensation,`pressureCompensation`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if device performs pressure compensation for metered quantities.+++
+| _n/a_
+
+| <<pricingInfo,`pricingInfo`>>
+//| [[slots_table.pricingInfo]]<<pricingInfo,`pricingInfo`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if pricing information is supported.+++
+| _n/a_
+
+| <<pulseOutput,`pulseOutput`>>
+//| [[slots_table.pulseOutput]]<<pulseOutput,`pulseOutput`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if device produces pulse outputs.+++
+| _n/a_
+
+| <<relaysProgramming,`relaysProgramming`>>
+//| [[slots_table.relaysProgramming]]<<relaysProgramming,`relaysProgramming`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if relays programming function is supported.+++
+| _n/a_
+
+| <<reverseFlow,`reverseFlow`>>
+//| [[slots_table.reverseFlow]]<<reverseFlow,`reverseFlow`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if reverse flow function is supported.+++
+| _n/a_
+
+| <<superCompressibilityCompensation,`superCompressibilityCompensation`>>
+//| [[slots_table.superCompressibilityCompensation]]<<superCompressibilityCompensation,`superCompressibilityCompensation`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if device performs super compressibility compensation for metered quantities.+++
+| _n/a_
+
+| <<temperatureCompensation,`temperatureCompensation`>>
+//| [[slots_table.temperatureCompensation]]<<temperatureCompensation,`temperatureCompensation`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if device performs temperature compensation for metered quantities.+++
+| _n/a_
+
+| <<textMessage,`textMessage`>>
+//| [[slots_table.textMessage]]<<textMessage,`textMessage`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the displaying of text messages is supported.+++
+| _n/a_
+
+| <<waterMetering,`waterMetering`>>
+//| [[slots_table.waterMetering]]<<waterMetering,`waterMetering`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if water metering function is supported.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#autonomousDst]
+=== `autonomousDst`
++++True if autonomous DST (daylight saving time) function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.autonomousDst`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.autonomousDst,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#communication]
+=== `communication`
++++True if communication function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.communication`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.communication,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#connectDisconnect]
+=== `connectDisconnect`
++++True if connect and disconnect function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.connectDisconnect`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.connectDisconnect,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#demandResponse]
+=== `demandResponse`
++++True if demand response function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.demandResponse`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.demandResponse,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#electricMetering]
+=== `electricMetering`
++++True if electric metering function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.electricMetering`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.electricMetering,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#gasMetering]
+=== `gasMetering`
++++True if gas metering function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.gasMetering`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.gasMetering,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#metrology]
+=== `metrology`
++++True if metrology function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.metrology`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.metrology,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#onRequestRead]
+=== `onRequestRead`
++++True if on request read function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.onRequestRead`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.onRequestRead,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#outageHistory]
+=== `outageHistory`
++++True if outage history function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.outageHistory`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.outageHistory,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pressureCompensation]
+=== `pressureCompensation`
++++True if device performs pressure compensation for metered quantities.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.pressureCompensation`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pressureCompensation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pricingInfo]
+=== `pricingInfo`
++++True if pricing information is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.pricingInfo`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pricingInfo,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pulseOutput]
+=== `pulseOutput`
++++True if device produces pulse outputs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.pulseOutput`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pulseOutput,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#relaysProgramming]
+=== `relaysProgramming`
++++True if relays programming function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.relaysProgramming`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.relaysProgramming,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reverseFlow]
+=== `reverseFlow`
++++True if reverse flow function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.reverseFlow`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reverseFlow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#superCompressibilityCompensation]
+=== `superCompressibilityCompensation`
++++True if device performs super compressibility compensation for metered quantities.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.superCompressibilityCompensation`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.superCompressibilityCompensation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#temperatureCompensation]
+=== `temperatureCompensation`
++++True if device performs temperature compensation for metered quantities.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.temperatureCompensation`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.temperatureCompensation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#textMessage]
+=== `textMessage`
++++True if the displaying of text messages is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.textMessage`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.textMessage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#waterMetering]
+=== `waterMetering`
++++True if water metering function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceCapability.waterMetering`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.waterMetering,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EndDeviceInfo.adoc[`EndDeviceInfo`] | xref::class/EndDeviceInfo.adoc#capability[`capability`]
+
+
+|===
+

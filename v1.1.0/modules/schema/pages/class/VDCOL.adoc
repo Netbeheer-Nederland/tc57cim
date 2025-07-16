@@ -1,0 +1,162 @@
+= `VDCOL`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:VDCOL`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`VDCOL`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Delay,`Delay`>>
+//| [[slots_table.Delay]]<<Delay,`Delay`>>
+| 1 +
+xref::class/Delay.adoc[`Delay`]
+| _n/a_
+| _n/a_
+
+| <<HVDCLookUpTable,`HVDCLookUpTable`>>
+//| [[slots_table.HVDCLookUpTable]]<<HVDCLookUpTable,`HVDCLookUpTable`>>
+| 1..* +
+xref::class/HVDCLookUpTable.adoc[`HVDCLookUpTable`]
+| _n/a_
+| _n/a_
+
+| <<IdcInverterControl,`IdcInverterControl`>>
+//| [[slots_table.IdcInverterControl]]<<IdcInverterControl,`IdcInverterControl`>>
+| 0..1 +
+xref::class/IdcInverterControl.adoc[`IdcInverterControl`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#Delay]
+=== `Delay`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:VDCOL.Delay`
+| Cardinality
+| 1
+| Type
+| xref::class/Delay.adoc[`Delay`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Delay,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#HVDCLookUpTable]
+=== `HVDCLookUpTable`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:VDCOL.HVDCLookUpTable`
+| Cardinality
+| 1..*
+| Type
+| xref::class/HVDCLookUpTable.adoc[`HVDCLookUpTable`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.HVDCLookUpTable,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#IdcInverterControl]
+=== `IdcInverterControl`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:VDCOL.IdcInverterControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IdcInverterControl.adoc[`IdcInverterControl`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.IdcInverterControl,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Delay.adoc[`Delay`] | xref::class/Delay.adoc#VDCOL[`VDCOL`]
+
+
+
+| xref::class/HVDCLookUpTable.adoc[`HVDCLookUpTable`] | xref::class/HVDCLookUpTable.adoc#VDCOL[`VDCOL`]
+
+
+
+| xref::class/IdcInverterControl.adoc[`IdcInverterControl`] | xref::class/IdcInverterControl.adoc#VDCOL[`VDCOL`]
+
+
+|===
+

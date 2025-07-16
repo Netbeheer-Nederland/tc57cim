@@ -1,0 +1,227 @@
+= `SvPowerFlow`
+:toclevels: 4
+
+
++++State variable for power flow. Load convention is used for flow direction. This means flow out from the TopologicalNode into the equipment is positive.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SvPowerFlow`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/StateVariable.adoc[`StateVariable`]
+** *`SvPowerFlow`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<EnergyGroup,`EnergyGroup`>>
+//| [[slots_table.EnergyGroup]]<<EnergyGroup,`EnergyGroup`>>
+| 0..1 +
+xref::class/EnergyGroup.adoc[`EnergyGroup`]
+| _n/a_
+| _n/a_
+
+| <<Terminal,`Terminal`>>
+//| [[slots_table.Terminal]]<<Terminal,`Terminal`>>
+| 1 +
+xref::class/Terminal.adoc[`Terminal`]
+| +++The terminal associated with the power flow state variable.+++
+| _n/a_
+
+| <<p,`p`>>
+//| [[slots_table.p]]<<p,`p`>>
+| 0..1 +
+xref::class/ActivePower.adoc[`ActivePower`]
+| +++The active power flow. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the...+++
+| _n/a_
+
+| <<phase,`phase`>>
+//| [[slots_table.phase]]<<phase,`phase`>>
+| 0..1 +
+xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++The individual phase of the flow.   If unspecified, then assumed to be balanced among phases.+++
+| _n/a_
+
+| <<q,`q`>>
+//| [[slots_table.q]]<<q,`q`>>
+| 0..1 +
+xref::class/ReactivePower.adoc[`ReactivePower`]
+| +++The reactive power flow. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#EnergyGroup]
+=== `EnergyGroup`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvPowerFlow.EnergyGroup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnergyGroup.adoc[`EnergyGroup`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnergyGroup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#p]
+=== `p`
++++The active power flow. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvPowerFlow.p`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.p,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phase]
+=== `phase`
++++The individual phase of the flow.   If unspecified, then assumed to be balanced among phases.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvPowerFlow.phase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phase,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#q]
+=== `q`
++++The reactive power flow. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvPowerFlow.q`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReactivePower.adoc[`ReactivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.q,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Terminal]
+=== `Terminal`
++++The terminal associated with the power flow state variable.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvPowerFlow.Terminal`
+| Cardinality
+| 1
+| Type
+| xref::class/Terminal.adoc[`Terminal`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Terminal,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EnergyGroup.adoc[`EnergyGroup`] | xref::class/EnergyGroup.adoc#SvPowerFlow[`SvPowerFlow`]
+
+
+
+| xref::class/Terminal.adoc[`Terminal`] | xref::class/Terminal.adoc#SvPowerFlow[`SvPowerFlow`]
+
+
+|===
+

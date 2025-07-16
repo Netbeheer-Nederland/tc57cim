@@ -1,0 +1,68 @@
+= `CrewStatusKind`
+:toclevels: 4
+
+
++++Defines the current status of the Crew - assigned, arrived, etc.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CrewStatusKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `arrived`
+| `cim:CrewStatusKind.arrived`
+| n/a
+
+| `assigned`
+| `cim:CrewStatusKind.assigned`
+| n/a
+
+| `awaitingCrewAssignment`
+| `cim:CrewStatusKind.awaitingCrewAssignment`
+| n/a
+
+| `enroute`
+| `cim:CrewStatusKind.enroute`
+| n/a
+
+| `fieldComplete`
+| `cim:CrewStatusKind.fieldComplete`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/FieldDispatchStep.adoc[`FieldDispatchStep`] | xref::class/FieldDispatchStep.adoc#dispatchStatus[`dispatchStatus`]
+
+
+
+| xref::class/Outage.adoc[`Outage`] | xref::class/Outage.adoc#statusKind[`statusKind`]
+
+
+|===
+

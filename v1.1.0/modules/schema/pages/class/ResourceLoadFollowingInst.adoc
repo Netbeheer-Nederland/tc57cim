@@ -1,0 +1,292 @@
+= `ResourceLoadFollowingInst`
+:toclevels: 4
+
+
++++Model of market clearing results for resources that bid to follow load.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ResourceLoadFollowingInst`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ResourceLoadFollowingInst`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<ResourceClearing,`ResourceClearing`>>
+//| [[slots_table.ResourceClearing]]<<ResourceClearing,`ResourceClearing`>>
+| 0..1 +
+xref::class/ResourceClearing.adoc[`ResourceClearing`]
+| _n/a_
+| _n/a_
+
+| <<calcLoadFollowingMW,`calcLoadFollowingMW`>>
+//| [[slots_table.calcLoadFollowingMW]]<<calcLoadFollowingMW,`calcLoadFollowingMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++weighted average for RTPD and RTCD and same for RTID+++
+| _n/a_
+
+| <<dispWindowHighLimt,`dispWindowHighLimt`>>
+//| [[slots_table.dispWindowHighLimt]]<<dispWindowHighLimt,`dispWindowHighLimt`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<dispWindowLowLimt,`dispWindowLowLimt`>>
+//| [[slots_table.dispWindowLowLimt]]<<dispWindowLowLimt,`dispWindowLowLimt`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<instructionID,`instructionID`>>
+//| [[slots_table.instructionID]]<<instructionID,`instructionID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Unique instruction id per instruction, assigned by the SC and provided to ADS. ADS passes through.+++
+| _n/a_
+
+| <<intervalStartTime,`intervalStartTime`>>
+//| [[slots_table.intervalStartTime]]<<intervalStartTime,`intervalStartTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The start of the time interval for which requirement is defined.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#calcLoadFollowingMW]
+=== `calcLoadFollowingMW`
++++weighted average for RTPD and RTCD and same for RTID+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceLoadFollowingInst.calcLoadFollowingMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.calcLoadFollowingMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dispWindowHighLimt]
+=== `dispWindowHighLimt`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceLoadFollowingInst.dispWindowHighLimt`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dispWindowHighLimt,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dispWindowLowLimt]
+=== `dispWindowLowLimt`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceLoadFollowingInst.dispWindowLowLimt`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dispWindowLowLimt,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#instructionID]
+=== `instructionID`
++++Unique instruction id per instruction, assigned by the SC and provided to ADS. ADS passes through.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceLoadFollowingInst.instructionID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.instructionID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#intervalStartTime]
+=== `intervalStartTime`
++++The start of the time interval for which requirement is defined.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceLoadFollowingInst.intervalStartTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalStartTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceLoadFollowingInst.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ResourceClearing]
+=== `ResourceClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceLoadFollowingInst.ResourceClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ResourceClearing.adoc[`ResourceClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ResourceClearing,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#ResourceLoadFollowingInst[`ResourceLoadFollowingInst`]
+
+
+
+| xref::class/ResourceClearing.adoc[`ResourceClearing`] | xref::class/ResourceClearing.adoc#ResourceLoadFollowingInst[`ResourceLoadFollowingInst`]
+
+
+|===
+

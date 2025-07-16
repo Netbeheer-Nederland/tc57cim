@@ -1,0 +1,160 @@
+= `IECStandardEditionKind`
+:toclevels: 4
+
+
++++List of editions for IEC standards.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:IECStandardEditionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `1963`
+| `cim:IECStandardEditionKind.1963`
+| n/a
+
+| `1967`
+| `cim:IECStandardEditionKind.1967`
+| n/a
+
+| `1973`
+| `cim:IECStandardEditionKind.1973`
+| n/a
+
+| `1974`
+| `cim:IECStandardEditionKind.1974`
+| n/a
+
+| `1977`
+| `cim:IECStandardEditionKind.1977`
+| n/a
+
+| `1978`
+| `cim:IECStandardEditionKind.1978`
+| n/a
+
+| `1979`
+| `cim:IECStandardEditionKind.1979`
+| n/a
+
+| `1985`
+| `cim:IECStandardEditionKind.1985`
+| n/a
+
+| `1989`
+| `cim:IECStandardEditionKind.1989`
+| n/a
+
+| `1992`
+| `cim:IECStandardEditionKind.1992`
+| n/a
+
+| `1992/AMD1:2004`
+| `cim:IECStandardEditionKind.1992/AMD1%3A2004`
+| n/a
+
+| `1992/COR1:1992`
+| `cim:IECStandardEditionKind.1992/COR1%3A1992`
+| n/a
+
+| `1993`
+| `cim:IECStandardEditionKind.1993`
+| n/a
+
+| `1995`
+| `cim:IECStandardEditionKind.1995`
+| n/a
+
+| `1997`
+| `cim:IECStandardEditionKind.1997`
+| n/a
+
+| `1998`
+| `cim:IECStandardEditionKind.1998`
+| n/a
+
+| `2004`
+| `cim:IECStandardEditionKind.2004`
+| n/a
+
+| `2004/AMD1:2007`
+| `cim:IECStandardEditionKind.2004/AMD1%3A2007`
+| n/a
+
+| `2004/AMD1:2007CSV`
+| `cim:IECStandardEditionKind.2004/AMD1%3A2007CSV`
+| n/a
+
+| `2005`
+| `cim:IECStandardEditionKind.2005`
+| n/a
+
+| `2007`
+| `cim:IECStandardEditionKind.2007`
+| n/a
+
+| `2008`
+| `cim:IECStandardEditionKind.2008`
+| n/a
+
+| `2010`
+| `cim:IECStandardEditionKind.2010`
+| n/a
+
+| `2011`
+| `cim:IECStandardEditionKind.2011`
+| n/a
+
+| `2012`
+| `cim:IECStandardEditionKind.2012`
+| n/a
+
+| `2013`
+| `cim:IECStandardEditionKind.2013`
+| n/a
+
+| `2013/COR:2013`
+| `cim:IECStandardEditionKind.2013/COR%3A2013`
+| n/a
+
+| `none`
+| `cim:IECStandardEditionKind.none`
+| n/a
+
+| `unknown`
+| `cim:IECStandardEditionKind.unknown`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/IECStandard.adoc[`IECStandard`] | xref::class/IECStandard.adoc#standardEdition[`standardEdition`]
+
+
+|===
+

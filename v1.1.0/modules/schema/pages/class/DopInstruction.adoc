@@ -1,0 +1,364 @@
+= `DopInstruction`
+:toclevels: 4
+
+
++++Provides the necessary information (on a resource basis) to capture the Dispatch Operating Point (DOP) results on a Dispatch interval. This information is only relevant to the RT interval market.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DopInstruction`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`DopInstruction`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<InstructionClearingDOP,`InstructionClearingDOP`>>
+//| [[slots_table.InstructionClearingDOP]]<<InstructionClearingDOP,`InstructionClearingDOP`>>
+| 1..* +
+xref::class/InstructionClearingDOP.adoc[`InstructionClearingDOP`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResouce,`RegisteredResouce`>>
+//| [[slots_table.RegisteredResouce]]<<RegisteredResouce,`RegisteredResouce`>>
+| 0..1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<mwDOP,`mwDOP`>>
+//| [[slots_table.mwDOP]]<<mwDOP,`mwDOP`>>
+| 0..1 +
+xref::class/ActivePower.adoc[`ActivePower`]
+| +++Dispatched Operating Point (MW)+++
+| _n/a_
+
+| <<plotPriority,`plotPriority`>>
+//| [[slots_table.plotPriority]]<<plotPriority,`plotPriority`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++A value used to establish priority of the DOP when plotting.  This is only applicable when two DOPs exist for the same time,...+++
+| _n/a_
+
+| <<runIndicatorDOP,`runIndicatorDOP`>>
+//| [[slots_table.runIndicatorDOP]]<<runIndicatorDOP,`runIndicatorDOP`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Indication of DOP validity. 
+
+Shows the DOP is calculated from the latest run (YES). A NO indicator shows that the DOP is...+++
+| _n/a_
+
+| <<timestampDOP,`timestampDOP`>>
+//| [[slots_table.timestampDOP]]<<timestampDOP,`timestampDOP`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++DOP time stamp+++
+| _n/a_
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+//| [[slots_table.updateTimeStamp]]<<updateTimeStamp,`updateTimeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<updateType,`updateType`>>
+//| [[slots_table.updateType]]<<updateType,`updateType`>>
+| 0..1 +
+xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+| _n/a_
+| _n/a_
+
+| <<updateUser,`updateUser`>>
+//| [[slots_table.updateUser]]<<updateUser,`updateUser`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#InstructionClearingDOP]
+=== `InstructionClearingDOP`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DopInstruction.InstructionClearingDOP`
+| Cardinality
+| 1..*
+| Type
+| xref::class/InstructionClearingDOP.adoc[`InstructionClearingDOP`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstructionClearingDOP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mwDOP]
+=== `mwDOP`
++++Dispatched Operating Point (MW)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DopInstruction.mwDOP`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mwDOP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#plotPriority]
+=== `plotPriority`
++++A value used to establish priority of the DOP when plotting.  This is only applicable when two DOPs exist for the same time, but with different MW values.  E.g. when indicating a step in the curve.  Its used to determine if the curve steps up or down.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DopInstruction.plotPriority`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.plotPriority,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResouce]
+=== `RegisteredResouce`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DopInstruction.RegisteredResouce`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResouce,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#runIndicatorDOP]
+=== `runIndicatorDOP`
++++Indication of DOP validity. 
+
+Shows the DOP is calculated from the latest run (YES). A NO indicator shows that the DOP is copied from a previous execution.
+
+Up to 2 intervals can be missed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DopInstruction.runIndicatorDOP`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.runIndicatorDOP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timestampDOP]
+=== `timestampDOP`
++++DOP time stamp+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DopInstruction.timestampDOP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timestampDOP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DopInstruction.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateTimeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateType]
+=== `updateType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DopInstruction.updateType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DopInstruction.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateUser,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/InstructionClearingDOP.adoc[`InstructionClearingDOP`] | xref::class/InstructionClearingDOP.adoc#DopInstruction[`DopInstruction`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#DopInstruction[`DopInstruction`]
+
+
+|===
+

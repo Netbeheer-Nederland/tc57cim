@@ -1,0 +1,46 @@
+= `MarketStatementDocType`
+:toclevels: 4
+
+
++++market statement document type+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MarketStatementDocType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `CREDIT`
+| `cim:MarketStatementDocType.CREDIT`
+| n/a
+
+| `MARKET_INITIAL`
+| `cim:MarketStatementDocType.MARKET_INITIAL`
+| n/a
+
+| `MARKET_RECALC`
+| `cim:MarketStatementDocType.MARKET_RECALC`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

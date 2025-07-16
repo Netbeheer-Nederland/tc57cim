@@ -1,0 +1,160 @@
+= `ExPostMarketRegionResults`
+:toclevels: 4
+
+
++++Model of expost calculation of cleared MW on a region basis.  Includes cleared price.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ExPostMarketRegionResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ExPostMarketRegionResults`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ExPostMarketRegion,`ExPostMarketRegion`>>
+//| [[slots_table.ExPostMarketRegion]]<<ExPostMarketRegion,`ExPostMarketRegion`>>
+| 1 +
+xref::class/ExPostMarketRegion.adoc[`ExPostMarketRegion`]
+| _n/a_
+| _n/a_
+
+| <<MarketRegion,`MarketRegion`>>
+//| [[slots_table.MarketRegion]]<<MarketRegion,`MarketRegion`>>
+| 1 +
+xref::class/MarketRegion.adoc[`MarketRegion`]
+| _n/a_
+| _n/a_
+
+| <<exPostClearedPrice,`exPostClearedPrice`>>
+//| [[slots_table.exPostClearedPrice]]<<exPostClearedPrice,`exPostClearedPrice`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#exPostClearedPrice]
+=== `exPostClearedPrice`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostMarketRegionResults.exPostClearedPrice`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.exPostClearedPrice,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ExPostMarketRegion]
+=== `ExPostMarketRegion`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostMarketRegionResults.ExPostMarketRegion`
+| Cardinality
+| 1
+| Type
+| xref::class/ExPostMarketRegion.adoc[`ExPostMarketRegion`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ExPostMarketRegion,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketRegion]
+=== `MarketRegion`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostMarketRegionResults.MarketRegion`
+| Cardinality
+| 1
+| Type
+| xref::class/MarketRegion.adoc[`MarketRegion`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketRegion,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ExPostMarketRegion.adoc[`ExPostMarketRegion`] | xref::class/ExPostMarketRegion.adoc#ExPostMarketRegionResults[`ExPostMarketRegionResults`]
+
+
+
+| xref::class/MarketRegion.adoc[`MarketRegion`] | xref::class/MarketRegion.adoc#ExPostMarketRegionResults[`ExPostMarketRegionResults`]
+
+
+|===
+

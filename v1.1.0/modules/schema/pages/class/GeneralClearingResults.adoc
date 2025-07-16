@@ -1,0 +1,230 @@
+= `GeneralClearingResults`
+:toclevels: 4
+
+
++++Provides the adjusted load forecast value on a load forecast zone basis.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:GeneralClearingResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`GeneralClearingResults`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<GeneralClearing,`GeneralClearing`>>
+//| [[slots_table.GeneralClearing]]<<GeneralClearing,`GeneralClearing`>>
+| 0..1 +
+xref::class/GeneralClearing.adoc[`GeneralClearing`]
+| _n/a_
+| _n/a_
+
+| <<SubControlArea,`SubControlArea`>>
+//| [[slots_table.SubControlArea]]<<SubControlArea,`SubControlArea`>>
+| 0..1 +
+xref::class/SubControlArea.adoc[`SubControlArea`]
+| _n/a_
+| _n/a_
+
+| <<loadForecast,`loadForecast`>>
+//| [[slots_table.loadForecast]]<<loadForecast,`loadForecast`>>
+| 0..1 +
+xref::class/ActivePower.adoc[`ActivePower`]
+| +++Load Prediction/Forecast (MW), by Time Period (5', 10', 15')+++
+| _n/a_
+
+| <<totalLoad,`totalLoad`>>
+//| [[slots_table.totalLoad]]<<totalLoad,`totalLoad`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Amount of load in the control zone 
+Attribute Usage: hourly load value for the specific area+++
+| _n/a_
+
+| <<totalNetInterchange,`totalNetInterchange`>>
+//| [[slots_table.totalNetInterchange]]<<totalNetInterchange,`totalNetInterchange`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Amount of interchange for the control zone 
+Attribute Usage: hourly interchange value for the specific area+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#GeneralClearing]
+=== `GeneralClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneralClearingResults.GeneralClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/GeneralClearing.adoc[`GeneralClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.GeneralClearing,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#loadForecast]
+=== `loadForecast`
++++Load Prediction/Forecast (MW), by Time Period (5', 10', 15')+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneralClearingResults.loadForecast`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.loadForecast,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SubControlArea]
+=== `SubControlArea`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneralClearingResults.SubControlArea`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SubControlArea,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#totalLoad]
+=== `totalLoad`
++++Amount of load in the control zone 
+Attribute Usage: hourly load value for the specific area+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneralClearingResults.totalLoad`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.totalLoad,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#totalNetInterchange]
+=== `totalNetInterchange`
++++Amount of interchange for the control zone 
+Attribute Usage: hourly interchange value for the specific area+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneralClearingResults.totalNetInterchange`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.totalNetInterchange,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/GeneralClearing.adoc[`GeneralClearing`] | xref::class/GeneralClearing.adoc#GeneralClearingResults[`GeneralClearingResults`]
+
+
+
+| xref::class/SubControlArea.adoc[`SubControlArea`] | xref::class/SubControlArea.adoc#GeneralClearingResults[`GeneralClearingResults`]
+
+
+|===
+

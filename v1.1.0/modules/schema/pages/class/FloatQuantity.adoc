@@ -1,0 +1,160 @@
+= `FloatQuantity`
+:toclevels: 4
+
+
++++Quantity with float value and associated unit information.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:FloatQuantity`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`FloatQuantity`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<multiplier,`multiplier`>>
+//| [[slots_table.multiplier]]<<multiplier,`multiplier`>>
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++Unit multiplier of this quantity.+++
+| _n/a_
+
+| <<unit,`unit`>>
+//| [[slots_table.unit]]<<unit,`unit`>>
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+| +++Unit of this quantity.+++
+| _n/a_
+
+| <<value,`value`>>
+//| [[slots_table.value]]<<value,`value`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Value of this quantity.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
++++Unit multiplier of this quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FloatQuantity.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.multiplier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#unit]
+=== `unit`
++++Unit of this quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FloatQuantity.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.unit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value]
+=== `value`
++++Value of this quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FloatQuantity.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/OperationalRestriction.adoc[`OperationalRestriction`] | xref::class/OperationalRestriction.adoc#restrictedValue[`restrictedValue`]
+
+
+
+| xref::class/PassThroughBill.adoc[`PassThroughBill`] | xref::class/PassThroughBill.adoc#quantity[`quantity`]
+
+
+|===
+

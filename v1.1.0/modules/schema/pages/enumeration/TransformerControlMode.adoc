@@ -1,0 +1,52 @@
+= `TransformerControlMode`
+:toclevels: 4
+
+
++++Control modes for a transformer.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TransformerControlMode`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `reactive`
+| `cim:TransformerControlMode.reactive`
+| n/a
+
+| `volt`
+| `cim:TransformerControlMode.volt`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RatioTapChanger.adoc[`RatioTapChanger`] | xref::class/RatioTapChanger.adoc#tculControlMode[`tculControlMode`]
+
+
+|===
+

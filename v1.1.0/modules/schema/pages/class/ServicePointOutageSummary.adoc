@@ -1,0 +1,123 @@
+= `ServicePointOutageSummary`
+:toclevels: 4
+
+
++++Summary counts of service points affected by an outage. These counts are sometimes referred to as total and critical customer count.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ServicePointOutageSummary`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`ServicePointOutageSummary`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<criticalCount,`criticalCount`>>
+//| [[slots_table.criticalCount]]<<criticalCount,`criticalCount`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Number of critical service (delivery) points affected by an outage.+++
+| _n/a_
+
+| <<totalCount,`totalCount`>>
+//| [[slots_table.totalCount]]<<totalCount,`totalCount`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Number of all service (delivery) points affected by an outage.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#criticalCount]
+=== `criticalCount`
++++Number of critical service (delivery) points affected by an outage.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ServicePointOutageSummary.criticalCount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.criticalCount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#totalCount]
+=== `totalCount`
++++Number of all service (delivery) points affected by an outage.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ServicePointOutageSummary.totalCount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.totalCount,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Outage.adoc[`Outage`] | xref::class/Outage.adoc#summary[`summary`]
+
+
+|===
+

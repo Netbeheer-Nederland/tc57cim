@@ -1,0 +1,160 @@
+= `FlowDirection`
+:toclevels: 4
+
+
++++The coded identification of the direction of energy flow.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:FlowDirection`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`FlowDirection`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Point,`Point`>>
+//| [[slots_table.Point]]<<Point,`Point`>>
+| 0..* +
+xref::class/Point.adoc[`Point`]
+| _n/a_
+| _n/a_
+
+| <<TimeSeries,`TimeSeries`>>
+//| [[slots_table.TimeSeries]]<<TimeSeries,`TimeSeries`>>
+| 0..* +
+xref::class/TimeSeries.adoc[`TimeSeries`]
+| _n/a_
+| _n/a_
+
+| <<direction,`direction`>>
+//| [[slots_table.direction]]<<direction,`direction`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The coded identification of the direction of energy flow.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#direction]
+=== `direction`
++++The coded identification of the direction of energy flow.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowDirection.direction`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.direction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Point]
+=== `Point`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowDirection.Point`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Point.adoc[`Point`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Point,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowDirection.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TimeSeries,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Point.adoc[`Point`] | xref::class/Point.adoc#FlowDirection[`FlowDirection`]
+
+
+
+| xref::class/TimeSeries.adoc[`TimeSeries`] | xref::class/TimeSeries.adoc#FlowDirection[`FlowDirection`]
+
+
+|===
+

@@ -1,0 +1,189 @@
+= `LoadRatio`
+:toclevels: 4
+
+
++++Representing the ratio of the load share for the associated SC.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:LoadRatio`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`LoadRatio`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<SchedulingCoordinator,`SchedulingCoordinator`>>
+//| [[slots_table.SchedulingCoordinator]]<<SchedulingCoordinator,`SchedulingCoordinator`>>
+| 0..1 +
+xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+| _n/a_
+| _n/a_
+
+| <<intervalEndTime,`intervalEndTime`>>
+//| [[slots_table.intervalEndTime]]<<intervalEndTime,`intervalEndTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Interval End Time+++
+| _n/a_
+
+| <<intervalStartTime,`intervalStartTime`>>
+//| [[slots_table.intervalStartTime]]<<intervalStartTime,`intervalStartTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Interval Start Time+++
+| _n/a_
+
+| <<share,`share`>>
+//| [[slots_table.share]]<<share,`share`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Share in percentage of total Market load for the selected time interval.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#intervalEndTime]
+=== `intervalEndTime`
++++Interval End Time+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadRatio.intervalEndTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalEndTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#intervalStartTime]
+=== `intervalStartTime`
++++Interval Start Time+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadRatio.intervalStartTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalStartTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SchedulingCoordinator]
+=== `SchedulingCoordinator`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadRatio.SchedulingCoordinator`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SchedulingCoordinator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#share]
+=== `share`
++++Share in percentage of total Market load for the selected time interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadRatio.share`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.share,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`] | xref::class/SchedulingCoordinator.adoc#LoadRatio[`LoadRatio`]
+
+
+|===
+

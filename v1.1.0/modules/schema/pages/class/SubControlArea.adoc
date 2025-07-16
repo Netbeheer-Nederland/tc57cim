@@ -1,0 +1,1980 @@
+= `SubControlArea`
+:toclevels: 4
+
+
++++An area defined for the purpose of tracking interchange with surrounding areas via tie points; may or may not serve as a control area.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SubControlArea`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+*** *`SubControlArea`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AdjacentCASet,`AdjacentCASet`>>
+//| [[slots_table.AdjacentCASet]]<<AdjacentCASet,`AdjacentCASet`>>
+| 0..1 +
+xref::class/AdjacentCASet.adoc[`AdjacentCASet`]
+| _n/a_
+| _n/a_
+
+| <<AggregateNode,`AggregateNode`>>
+//| [[slots_table.AggregateNode]]<<AggregateNode,`AggregateNode`>>
+| 0..* +
+xref::class/AggregateNode.adoc[`AggregateNode`]
+| _n/a_
+| _n/a_
+
+| <<AreaReserveSpecification,`AreaReserveSpecification`>>
+//| [[slots_table.AreaReserveSpecification]]<<AreaReserveSpecification,`AreaReserveSpecification`>>
+| 1 +
+xref::class/AreaReserveSpec.adoc[`AreaReserveSpec`]
+| _n/a_
+| _n/a_
+
+| <<BidSelfSched,`BidSelfSched`>>
+//| [[slots_table.BidSelfSched]]<<BidSelfSched,`BidSelfSched`>>
+| 0..* +
+xref::class/BidSelfSched.adoc[`BidSelfSched`]
+| _n/a_
+| _n/a_
+
+| <<CnodeDistributionFactor,`CnodeDistributionFactor`>>
+//| [[slots_table.CnodeDistributionFactor]]<<CnodeDistributionFactor,`CnodeDistributionFactor`>>
+| 0..* +
+xref::class/CnodeDistributionFactor.adoc[`CnodeDistributionFactor`]
+| _n/a_
+| _n/a_
+
+| <<ControlAreaDesignation,`ControlAreaDesignation`>>
+//| [[slots_table.ControlAreaDesignation]]<<ControlAreaDesignation,`ControlAreaDesignation`>>
+| 0..* +
+xref::class/ControlAreaDesignation.adoc[`ControlAreaDesignation`]
+| _n/a_
+| _n/a_
+
+| <<ExPostLossResults,`ExPostLossResults`>>
+//| [[slots_table.ExPostLossResults]]<<ExPostLossResults,`ExPostLossResults`>>
+| 0..* +
+xref::class/ExPostLossResults.adoc[`ExPostLossResults`]
+| _n/a_
+| _n/a_
+
+| <<Export_EnergyTransactions,`Export_EnergyTransactions`>>
+//| [[slots_table.Export_EnergyTransactions]]<<Export_EnergyTransactions,`Export_EnergyTransactions`>>
+| 0..* +
+xref::class/EnergyTransaction.adoc[`EnergyTransaction`]
+| +++Energy is transferred between interchange areas+++
+| _n/a_
+
+| <<From_Flowgate,`From_Flowgate`>>
+//| [[slots_table.From_Flowgate]]<<From_Flowgate,`From_Flowgate`>>
+| 0..* +
+xref::class/Flowgate.adoc[`Flowgate`]
+| _n/a_
+| _n/a_
+
+| <<GeneralClearingResults,`GeneralClearingResults`>>
+//| [[slots_table.GeneralClearingResults]]<<GeneralClearingResults,`GeneralClearingResults`>>
+| 0..* +
+xref::class/GeneralClearingResults.adoc[`GeneralClearingResults`]
+| _n/a_
+| _n/a_
+
+| <<HostControlArea,`HostControlArea`>>
+//| [[slots_table.HostControlArea]]<<HostControlArea,`HostControlArea`>>
+| 1 +
+xref::class/HostControlArea.adoc[`HostControlArea`]
+| +++The interchange area  may operate as a control area+++
+| _n/a_
+
+| <<Import_EnergyTransactions,`Import_EnergyTransactions`>>
+//| [[slots_table.Import_EnergyTransactions]]<<Import_EnergyTransactions,`Import_EnergyTransactions`>>
+| 0..* +
+xref::class/EnergyTransaction.adoc[`EnergyTransaction`]
+| +++Energy is transferred between interchange areas+++
+| _n/a_
+
+| <<InadvertentAccount,`InadvertentAccount`>>
+//| [[slots_table.InadvertentAccount]]<<InadvertentAccount,`InadvertentAccount`>>
+| 0..* +
+xref::class/InadvertentAccount.adoc[`InadvertentAccount`]
+| +++A control area can have one or more net inadvertent interchange accounts+++
+| _n/a_
+
+| <<LossClearingResults,`LossClearingResults`>>
+//| [[slots_table.LossClearingResults]]<<LossClearingResults,`LossClearingResults`>>
+| 1..* +
+xref::class/LossClearingResults.adoc[`LossClearingResults`]
+| _n/a_
+| _n/a_
+
+| <<Pnode,`Pnode`>>
+//| [[slots_table.Pnode]]<<Pnode,`Pnode`>>
+| 0..* +
+xref::class/Pnode.adoc[`Pnode`]
+| _n/a_
+| _n/a_
+
+| <<RTO,`RTO`>>
+//| [[slots_table.RTO]]<<RTO,`RTO`>>
+| 1 +
+xref::class/RTO.adoc[`RTO`]
+| _n/a_
+| _n/a_
+
+| <<Receive_DynamicSchedules,`Receive_DynamicSchedules`>>
+//| [[slots_table.Receive_DynamicSchedules]]<<Receive_DynamicSchedules,`Receive_DynamicSchedules`>>
+| 0..* +
+xref::class/DynamicSchedule.adoc[`DynamicSchedule`]
+| +++A control area can receive dynamic schedules from other control areas+++
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..* +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<Send_DynamicSchedules,`Send_DynamicSchedules`>>
+//| [[slots_table.Send_DynamicSchedules]]<<Send_DynamicSchedules,`Send_DynamicSchedules`>>
+| 0..* +
+xref::class/DynamicSchedule.adoc[`DynamicSchedule`]
+| +++A control area can send dynamic schedules to other control areas+++
+| _n/a_
+
+| <<SideA_TieLines,`SideA_TieLines`>>
+//| [[slots_table.SideA_TieLines]]<<SideA_TieLines,`SideA_TieLines`>>
+| 0..* +
+xref::class/TieLine.adoc[`TieLine`]
+| +++The SubControlArea is on the A side of a collection of metered points which define the SubControlArea's boundary for a...+++
+| _n/a_
+
+| <<SideB_TieLines,`SideB_TieLines`>>
+//| [[slots_table.SideB_TieLines]]<<SideB_TieLines,`SideB_TieLines`>>
+| 0..* +
+xref::class/TieLine.adoc[`TieLine`]
+| +++The SubControlArea is on the B side of a collection of metered points which define the SubControlArea's boundary for a...+++
+| _n/a_
+
+| <<To_Flowgate,`To_Flowgate`>>
+//| [[slots_table.To_Flowgate]]<<To_Flowgate,`To_Flowgate`>>
+| 0..* +
+xref::class/Flowgate.adoc[`Flowgate`]
+| _n/a_
+| _n/a_
+
+| <<areaShortName,`areaShortName`>>
+//| [[slots_table.areaShortName]]<<areaShortName,`areaShortName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Market area short name, which is the regulation zone. It references AGC regulation zone name.+++
+| _n/a_
+
+| <<constantCoefficient,`constantCoefficient`>>
+//| [[slots_table.constantCoefficient]]<<constantCoefficient,`constantCoefficient`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Loss estimate constant coefficient+++
+| _n/a_
+
+| <<embeddedControlArea,`embeddedControlArea`>>
+//| [[slots_table.embeddedControlArea]]<<embeddedControlArea,`embeddedControlArea`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Used in conjunction with the InternalCA flag. If the InternalCA flag is YES, this flag does not apply. If the InternaCA flag...+++
+| _n/a_
+
+| <<internalCA,`internalCA`>>
+//| [[slots_table.internalCA]]<<internalCA,`internalCA`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++A Yes/No indication that this control area is contained internal to the system.+++
+| _n/a_
+
+| <<linearCoefficient,`linearCoefficient`>>
+//| [[slots_table.linearCoefficient]]<<linearCoefficient,`linearCoefficient`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Loss estimate linear coefficient+++
+| _n/a_
+
+| <<localCA,`localCA`>>
+//| [[slots_table.localCA]]<<localCA,`localCA`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Indication that this control area is the local control area.+++
+| _n/a_
+
+| <<maxSelfSchedMW,`maxSelfSchedMW`>>
+//| [[slots_table.maxSelfSchedMW]]<<maxSelfSchedMW,`maxSelfSchedMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Maximum amount of self schedule MWs allowed for an embedded control area.+++
+| _n/a_
+
+| <<minSelfSchedMW,`minSelfSchedMW`>>
+//| [[slots_table.minSelfSchedMW]]<<minSelfSchedMW,`minSelfSchedMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Minimum amount of self schedule MW allowed for an embedded control area.+++
+| _n/a_
+
+| <<quadraticCoefficient,`quadraticCoefficient`>>
+//| [[slots_table.quadraticCoefficient]]<<quadraticCoefficient,`quadraticCoefficient`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Loss estimate quadratic coefficient+++
+| _n/a_
+
+| <<AssetDatasheet,`AssetDatasheet`>>
+//| [[slots_table.AssetDatasheet]]<<AssetDatasheet,`AssetDatasheet`>>
+| 0..1 +
+xref::class/AssetInfo.adoc[`AssetInfo`]
+| +++Datasheet information for this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Assets,`Assets`>>
+//| [[slots_table.Assets]]<<Assets,`Assets`>>
+| 0..* +
+xref::class/Asset.adoc[`Asset`]
+| +++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a...+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Clearances,`Clearances`>>
+//| [[slots_table.Clearances]]<<Clearances,`Clearances`>>
+| 0..* +
+xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+| +++All clearances applicable to this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<ConfigurationEvent,`ConfigurationEvent`>>
+//| [[slots_table.ConfigurationEvent]]<<ConfigurationEvent,`ConfigurationEvent`>>
+| 0..* +
+xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this Power System resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Controls,`Controls`>>
+//| [[slots_table.Controls]]<<Controls,`Controls`>>
+| 0..* +
+xref::class/Control.adoc[`Control`]
+| +++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or...+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<GenericAction,`GenericAction`>>
+//| [[slots_table.GenericAction]]<<GenericAction,`GenericAction`>>
+| 0..* +
+xref::class/GenericAction.adoc[`GenericAction`]
+| +++The generic action that is performed on the power system resource+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Location,`Location`>>
+//| [[slots_table.Location]]<<Location,`Location`>>
+| 0..1 +
+xref::class/Location.adoc[`Location`]
+| +++Location of this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Measurements,`Measurements`>>
+//| [[slots_table.Measurements]]<<Measurements,`Measurements`>>
+| 0..* +
+xref::class/Measurement.adoc[`Measurement`]
+| +++The measurements associated with this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<OperatingShare,`OperatingShare`>>
+//| [[slots_table.OperatingShare]]<<OperatingShare,`OperatingShare`>>
+| 0..* +
+xref::class/OperatingShare.adoc[`OperatingShare`]
+| +++The operating shares of this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<OperationalTags,`OperationalTags`>>
+//| [[slots_table.OperationalTags]]<<OperationalTags,`OperationalTags`>>
+| 0..* +
+xref::class/OperationalTag.adoc[`OperationalTag`]
+| +++All operational tags placed on this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<PSREvents,`PSREvents`>>
+//| [[slots_table.PSREvents]]<<PSREvents,`PSREvents`>>
+| 0..* +
+xref::class/PSREvent.adoc[`PSREvent`]
+| +++All events associated with this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<PSRType,`PSRType`>>
+//| [[slots_table.PSRType]]<<PSRType,`PSRType`>>
+| 0..1 +
+xref::class/PSRType.adoc[`PSRType`]
+| +++Custom classification for this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<ReportingGroup,`ReportingGroup`>>
+//| [[slots_table.ReportingGroup]]<<ReportingGroup,`ReportingGroup`>>
+| 0..* +
+xref::class/ReportingGroup.adoc[`ReportingGroup`]
+| +++Reporting groups to which this power system resource belongs.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<VerificationAction,`VerificationAction`>>
+//| [[slots_table.VerificationAction]]<<VerificationAction,`VerificationAction`>>
+| 0..* +
+xref::class/VerificationAction.adoc[`VerificationAction`]
+| +++The verification action that is performed on the power system resource+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#AdjacentCASet]
+=== `AdjacentCASet`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.AdjacentCASet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AdjacentCASet.adoc[`AdjacentCASet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AdjacentCASet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AggregateNode]
+=== `AggregateNode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.AggregateNode`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AggregateNode.adoc[`AggregateNode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AggregateNode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AreaReserveSpecification]
+=== `AreaReserveSpecification`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.AreaReserveSpecification`
+| Cardinality
+| 1
+| Type
+| xref::class/AreaReserveSpec.adoc[`AreaReserveSpec`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AreaReserveSpecification,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#areaShortName]
+=== `areaShortName`
++++Market area short name, which is the regulation zone. It references AGC regulation zone name.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.areaShortName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.areaShortName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AssetDatasheet]
+=== `AssetDatasheet`
++++Datasheet information for this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.AssetDatasheet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AssetDatasheet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a single AC line segment.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Assets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#BidSelfSched]
+=== `BidSelfSched`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.BidSelfSched`
+| Cardinality
+| 0..*
+| Type
+| xref::class/BidSelfSched.adoc[`BidSelfSched`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.BidSelfSched,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Clearances]
+=== `Clearances`
++++All clearances applicable to this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Clearances`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Clearances,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CnodeDistributionFactor]
+=== `CnodeDistributionFactor`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.CnodeDistributionFactor`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CnodeDistributionFactor.adoc[`CnodeDistributionFactor`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CnodeDistributionFactor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConfigurationEvent]
+=== `ConfigurationEvent`
++++All configuration events created for this Power System resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ConfigurationEvent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConfigurationEvent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#constantCoefficient]
+=== `constantCoefficient`
++++Loss estimate constant coefficient+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.constantCoefficient`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.constantCoefficient,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ControlAreaDesignation]
+=== `ControlAreaDesignation`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.ControlAreaDesignation`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ControlAreaDesignation.adoc[`ControlAreaDesignation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ControlAreaDesignation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Controls]
+=== `Controls`
++++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or capacitor bank breaker actuator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Controls`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Control.adoc[`Control`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Controls,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#embeddedControlArea]
+=== `embeddedControlArea`
++++Used in conjunction with the InternalCA flag. If the InternalCA flag is YES, this flag does not apply. If the InternaCA flag is NO, this flag provides an indication of AdjacentCA (NO) or Embedded CA (YES).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.embeddedControlArea`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.embeddedControlArea,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Export_EnergyTransactions]
+=== `Export_EnergyTransactions`
++++Energy is transferred between interchange areas+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.Export_EnergyTransactions`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnergyTransaction.adoc[`EnergyTransaction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Export_EnergyTransactions,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ExPostLossResults]
+=== `ExPostLossResults`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.ExPostLossResults`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ExPostLossResults.adoc[`ExPostLossResults`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ExPostLossResults,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#From_Flowgate]
+=== `From_Flowgate`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.From_Flowgate`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Flowgate.adoc[`Flowgate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.From_Flowgate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#GeneralClearingResults]
+=== `GeneralClearingResults`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.GeneralClearingResults`
+| Cardinality
+| 0..*
+| Type
+| xref::class/GeneralClearingResults.adoc[`GeneralClearingResults`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.GeneralClearingResults,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#GenericAction]
+=== `GenericAction`
++++The generic action that is performed on the power system resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.GenericAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/GenericAction.adoc[`GenericAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.GenericAction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#HostControlArea]
+=== `HostControlArea`
++++The interchange area  may operate as a control area+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.HostControlArea`
+| Cardinality
+| 1
+| Type
+| xref::class/HostControlArea.adoc[`HostControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.HostControlArea,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Import_EnergyTransactions]
+=== `Import_EnergyTransactions`
++++Energy is transferred between interchange areas+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.Import_EnergyTransactions`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnergyTransaction.adoc[`EnergyTransaction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Import_EnergyTransactions,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InadvertentAccount]
+=== `InadvertentAccount`
++++A control area can have one or more net inadvertent interchange accounts+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.InadvertentAccount`
+| Cardinality
+| 0..*
+| Type
+| xref::class/InadvertentAccount.adoc[`InadvertentAccount`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InadvertentAccount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#internalCA]
+=== `internalCA`
++++A Yes/No indication that this control area is contained internal to the system.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.internalCA`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.internalCA,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#linearCoefficient]
+=== `linearCoefficient`
++++Loss estimate linear coefficient+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.linearCoefficient`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.linearCoefficient,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#localCA]
+=== `localCA`
++++Indication that this control area is the local control area.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.localCA`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.localCA,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location of this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Location,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#LossClearingResults]
+=== `LossClearingResults`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.LossClearingResults`
+| Cardinality
+| 1..*
+| Type
+| xref::class/LossClearingResults.adoc[`LossClearingResults`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.LossClearingResults,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxSelfSchedMW]
+=== `maxSelfSchedMW`
++++Maximum amount of self schedule MWs allowed for an embedded control area.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.maxSelfSchedMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxSelfSchedMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Measurements]
+=== `Measurements`
++++The measurements associated with this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Measurements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Measurement.adoc[`Measurement`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Measurements,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minSelfSchedMW]
+=== `minSelfSchedMW`
++++Minimum amount of self schedule MW allowed for an embedded control area.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.minSelfSchedMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minSelfSchedMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperatingShare]
+=== `OperatingShare`
++++The operating shares of this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperatingShare`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperatingShare.adoc[`OperatingShare`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperatingShare,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperationalTags]
+=== `OperationalTags`
++++All operational tags placed on this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperationalTags`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperationalTag.adoc[`OperationalTag`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperationalTags,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Pnode]
+=== `Pnode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.Pnode`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Pnode.adoc[`Pnode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Pnode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PSREvents]
+=== `PSREvents`
++++All events associated with this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSREvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PSREvent.adoc[`PSREvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PSREvents,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PSRType]
+=== `PSRType`
++++Custom classification for this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSRType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PSRType.adoc[`PSRType`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PSRType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#quadraticCoefficient]
+=== `quadraticCoefficient`
++++Loss estimate quadratic coefficient+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.quadraticCoefficient`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.quadraticCoefficient,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Receive_DynamicSchedules]
+=== `Receive_DynamicSchedules`
++++A control area can receive dynamic schedules from other control areas+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.Receive_DynamicSchedules`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DynamicSchedule.adoc[`DynamicSchedule`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Receive_DynamicSchedules,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.RegisteredResource`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ReportingGroup]
+=== `ReportingGroup`
++++Reporting groups to which this power system resource belongs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ReportingGroup`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ReportingGroup.adoc[`ReportingGroup`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ReportingGroup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RTO]
+=== `RTO`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.RTO`
+| Cardinality
+| 1
+| Type
+| xref::class/RTO.adoc[`RTO`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RTO,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Send_DynamicSchedules]
+=== `Send_DynamicSchedules`
++++A control area can send dynamic schedules to other control areas+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.Send_DynamicSchedules`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DynamicSchedule.adoc[`DynamicSchedule`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Send_DynamicSchedules,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SideA_TieLines]
+=== `SideA_TieLines`
++++The SubControlArea is on the A side of a collection of metered points which define the SubControlArea's boundary for a ControlAreaOperator or CustomerConsumer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.SideA_TieLines`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TieLine.adoc[`TieLine`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SideA_TieLines,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SideB_TieLines]
+=== `SideB_TieLines`
++++The SubControlArea is on the B side of a collection of metered points which define the SubControlArea's boundary for a ControlAreaOperator or CustomerConsumer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.SideB_TieLines`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TieLine.adoc[`TieLine`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SideB_TieLines,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#To_Flowgate]
+=== `To_Flowgate`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubControlArea.To_Flowgate`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Flowgate.adoc[`Flowgate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.To_Flowgate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VerificationAction]
+=== `VerificationAction`
++++The verification action that is performed on the power system resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.VerificationAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/VerificationAction.adoc[`VerificationAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VerificationAction,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AdjacentCASet.adoc[`AdjacentCASet`] | xref::class/AdjacentCASet.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/AggregateNode.adoc[`AggregateNode`] | xref::class/AggregateNode.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/AreaReserveSpec.adoc[`AreaReserveSpec`] | xref::class/AreaReserveSpec.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/BidSelfSched.adoc[`BidSelfSched`] | xref::class/BidSelfSched.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/CnodeDistributionFactor.adoc[`CnodeDistributionFactor`] | xref::class/CnodeDistributionFactor.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/ControlAreaDesignation.adoc[`ControlAreaDesignation`] | xref::class/ControlAreaDesignation.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/DynamicSchedule.adoc[`DynamicSchedule`] | xref::class/DynamicSchedule.adoc#Send_SubControlArea[`Send_SubControlArea`]
+
+
+
+| xref::class/EnergyTransaction.adoc[`EnergyTransaction`] | xref::class/EnergyTransaction.adoc#Export_SubControlArea[`Export_SubControlArea`]
+
+
+
+| xref::class/ExPostLossResults.adoc[`ExPostLossResults`] | xref::class/ExPostLossResults.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/Flowgate.adoc[`Flowgate`] | xref::class/Flowgate.adoc#To_SubControlArea[`To_SubControlArea`]
+
+
+
+| xref::class/GeneralClearingResults.adoc[`GeneralClearingResults`] | xref::class/GeneralClearingResults.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/HostControlArea.adoc[`HostControlArea`] | xref::class/HostControlArea.adoc#SubControlAreas[`SubControlAreas`]
+
+
+
+| xref::class/InadvertentAccount.adoc[`InadvertentAccount`] | xref::class/InadvertentAccount.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/LossClearingResults.adoc[`LossClearingResults`] | xref::class/LossClearingResults.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/Pnode.adoc[`Pnode`] | xref::class/Pnode.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/RTO.adoc[`RTO`] | xref::class/RTO.adoc#SubControlArea[`SubControlArea`]
+
+
+
+| xref::class/TieLine.adoc[`TieLine`] | xref::class/TieLine.adoc#SideA_SubControlArea[`SideA_SubControlArea`]
+
+
+|===
+

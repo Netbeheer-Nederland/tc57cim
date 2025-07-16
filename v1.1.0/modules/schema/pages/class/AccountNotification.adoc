@@ -1,0 +1,222 @@
+= `AccountNotification`
+:toclevels: 4
+
+
++++Notifications for move-in, move-out, delinquencies, etc.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AccountNotification`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`AccountNotification`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<CustomerAccount,`CustomerAccount`>>
+//| [[slots_table.CustomerAccount]]<<CustomerAccount,`CustomerAccount`>>
+| 1 +
+xref::class/CustomerAccount.adoc[`CustomerAccount`]
+| +++The customer account for which a notification is made+++
+| _n/a_
+
+| <<customerNotificationType,`customerNotificationType`>>
+//| [[slots_table.customerNotificationType]]<<customerNotificationType,`customerNotificationType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Notifications for move-in, move-out, delinquencies, planned outage, demand response programs, time of use, etc.+++
+| _n/a_
+
+| <<methodType,`methodType`>>
+//| [[slots_table.methodType]]<<methodType,`methodType`>>
+| 1 +
+https://w3id.org/linkml/String[`string`]
+| +++method of notification such as phone call, email, letter, door hanger, text message, etc.+++
+| _n/a_
+
+| <<note,`note`>>
+//| [[slots_table.note]]<<note,`note`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Free form text characterizing the notification.+++
+| _n/a_
+
+| <<time,`time`>>
+//| [[slots_table.time]]<<time,`time`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Time of notification - this is the time the notification was sent.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#CustomerAccount]
+=== `CustomerAccount`
++++The customer account for which a notification is made+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AccountNotification.CustomerAccount`
+| Cardinality
+| 1
+| Type
+| xref::class/CustomerAccount.adoc[`CustomerAccount`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CustomerAccount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#customerNotificationType]
+=== `customerNotificationType`
++++Notifications for move-in, move-out, delinquencies, planned outage, demand response programs, time of use, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AccountNotification.customerNotificationType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.customerNotificationType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#methodType]
+=== `methodType`
++++method of notification such as phone call, email, letter, door hanger, text message, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AccountNotification.methodType`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.methodType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#note]
+=== `note`
++++Free form text characterizing the notification.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AccountNotification.note`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.note,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#time]
+=== `time`
++++Time of notification - this is the time the notification was sent.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AccountNotification.time`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.time,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CustomerAccount.adoc[`CustomerAccount`] | xref::class/CustomerAccount.adoc#AccountNotification[`AccountNotification`]
+
+
+|===
+

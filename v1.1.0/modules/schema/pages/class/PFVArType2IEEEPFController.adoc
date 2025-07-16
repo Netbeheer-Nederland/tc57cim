@@ -1,0 +1,687 @@
+= `PFVArType2IEEEPFController`
+:toclevels: 4
+
+
++++IEEE PF controller type 2 which is a summing point type controller making up the outside loop of a two-loop system. This controller is implemented as a slow PI type controller. The voltage regulator forms the inner loop and is implemented as a fast controller.
+Reference: IEEE 421.5-2005, 11.4.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PFVArType2IEEEPFController`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/PFVArControllerType2Dynamics.adoc[`PFVArControllerType2Dynamics`]
+**** *`PFVArType2IEEEPFController`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<exlon,`exlon`>>
+//| [[slots_table.exlon]]<<exlon,`exlon`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Overexcitation or under excitation flag (<i>EXLON</i>)
+true = 1 (not in the overexcitation or underexcitation state,...+++
+| _n/a_
+
+| <<ki,`ki`>>
+//| [[slots_table.ki]]<<ki,`ki`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Integral gain of the pf controller (<i>K</i><i><sub>I</sub></i>).  Typical value = 1.+++
+| _n/a_
+
+| <<kp,`kp`>>
+//| [[slots_table.kp]]<<kp,`kp`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Proportional gain of the pf controller (<i>K</i><i><sub>P</sub></i>).  Typical value = 1.+++
+| _n/a_
+
+| <<pfref,`pfref`>>
+//| [[slots_table.pfref]]<<pfref,`pfref`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Power factor reference (<i>P</i><i><sub>FREF</sub></i>).+++
+| _n/a_
+
+| <<vclmt,`vclmt`>>
+//| [[slots_table.vclmt]]<<vclmt,`vclmt`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum output of the pf controller (<i>V</i><i><sub>CLMT</sub></i>).  Typical value = 0,1.+++
+| _n/a_
+
+| <<vref,`vref`>>
+//| [[slots_table.vref]]<<vref,`vref`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Voltage regulator reference (<i>V</i><i><sub>REF</sub></i>).+++
+| _n/a_
+
+| <<vs,`vs`>>
+//| [[slots_table.vs]]<<vs,`vs`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Generator sensing voltage (<i>V</i><i><sub>S</sub></i>).+++
+| _n/a_
+
+| <<ExcitationSystemDynamics,`ExcitationSystemDynamics`>>
+//| [[slots_table.ExcitationSystemDynamics]]<<ExcitationSystemDynamics,`ExcitationSystemDynamics`>>
+| 1 +
+xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+| +++Excitation system model with which this power factor or VAr controller type 2 is associated.+++
+| xref::class/PFVArControllerType2Dynamics.adoc[`PFVArControllerType2Dynamics`]
+
+| <<enabled,`enabled`>>
+//| [[slots_table.enabled]]<<enabled,`enabled`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.enabled,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ExcitationSystemDynamics]
+=== `ExcitationSystemDynamics`
++++Excitation system model with which this power factor or VAr controller type 2 is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PFVArControllerType2Dynamics.ExcitationSystemDynamics`
+| Cardinality
+| 1
+| Type
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+| Inherited from
+| xref::class/PFVArControllerType2Dynamics.adoc[`PFVArControllerType2Dynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ExcitationSystemDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#exlon]
+=== `exlon`
++++Overexcitation or under excitation flag (<i>EXLON</i>)
+true = 1 (not in the overexcitation or underexcitation state, integral action is active)
+false = 0 (in the overexcitation or underexcitation state, so integral action is disabled to allow the limiter to play its role).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PFVArType2IEEEPFController.exlon`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.exlon,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ki]
+=== `ki`
++++Integral gain of the pf controller (<i>K</i><i><sub>I</sub></i>).  Typical value = 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PFVArType2IEEEPFController.ki`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ki,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kp]
+=== `kp`
++++Proportional gain of the pf controller (<i>K</i><i><sub>P</sub></i>).  Typical value = 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PFVArType2IEEEPFController.kp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pfref]
+=== `pfref`
++++Power factor reference (<i>P</i><i><sub>FREF</sub></i>).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PFVArType2IEEEPFController.pfref`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pfref,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vclmt]
+=== `vclmt`
++++Maximum output of the pf controller (<i>V</i><i><sub>CLMT</sub></i>).  Typical value = 0,1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PFVArType2IEEEPFController.vclmt`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vclmt,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vref]
+=== `vref`
++++Voltage regulator reference (<i>V</i><i><sub>REF</sub></i>).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PFVArType2IEEEPFController.vref`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vref,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vs]
+=== `vs`
++++Generator sensing voltage (<i>V</i><i><sub>S</sub></i>).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PFVArType2IEEEPFController.vs`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vs,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

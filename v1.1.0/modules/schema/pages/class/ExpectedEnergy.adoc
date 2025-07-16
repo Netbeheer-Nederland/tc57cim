@@ -1,0 +1,189 @@
+= `ExpectedEnergy`
+:toclevels: 4
+
+
++++Model Expected Energy from Market Clearing, interval based.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ExpectedEnergy`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ExpectedEnergy`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ExpectedEnergyValues,`ExpectedEnergyValues`>>
+//| [[slots_table.ExpectedEnergyValues]]<<ExpectedEnergyValues,`ExpectedEnergyValues`>>
+| 1..* +
+xref::class/ExpectedEnergyValues.adoc[`ExpectedEnergyValues`]
+| _n/a_
+| _n/a_
+
+| <<intervalStartTime,`intervalStartTime`>>
+//| [[slots_table.intervalStartTime]]<<intervalStartTime,`intervalStartTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+//| [[slots_table.updateTimeStamp]]<<updateTimeStamp,`updateTimeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<updateUser,`updateUser`>>
+//| [[slots_table.updateUser]]<<updateUser,`updateUser`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#ExpectedEnergyValues]
+=== `ExpectedEnergyValues`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExpectedEnergy.ExpectedEnergyValues`
+| Cardinality
+| 1..*
+| Type
+| xref::class/ExpectedEnergyValues.adoc[`ExpectedEnergyValues`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ExpectedEnergyValues,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#intervalStartTime]
+=== `intervalStartTime`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExpectedEnergy.intervalStartTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalStartTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExpectedEnergy.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateTimeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExpectedEnergy.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateUser,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ExpectedEnergyValues.adoc[`ExpectedEnergyValues`] | xref::class/ExpectedEnergyValues.adoc#ExpectedEnergy[`ExpectedEnergy`]
+
+
+|===
+

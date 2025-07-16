@@ -1,0 +1,123 @@
+= `OilPrice`
+:toclevels: 4
+
+
++++Price of oil in monetary units.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:OilPrice`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`OilPrice`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<FuelRegion,`FuelRegion`>>
+//| [[slots_table.FuelRegion]]<<FuelRegion,`FuelRegion`>>
+| 1 +
+xref::class/FuelRegion.adoc[`FuelRegion`]
+| _n/a_
+| _n/a_
+
+| <<oilPriceIndex,`oilPriceIndex`>>
+//| [[slots_table.oilPriceIndex]]<<oilPriceIndex,`oilPriceIndex`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The average oil price at a defined fuel region.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#FuelRegion]
+=== `FuelRegion`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OilPrice.FuelRegion`
+| Cardinality
+| 1
+| Type
+| xref::class/FuelRegion.adoc[`FuelRegion`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.FuelRegion,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#oilPriceIndex]
+=== `oilPriceIndex`
++++The average oil price at a defined fuel region.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OilPrice.oilPriceIndex`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.oilPriceIndex,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/FuelRegion.adoc[`FuelRegion`] | xref::class/FuelRegion.adoc#OilPrice[`OilPrice`]
+
+
+|===
+

@@ -1,0 +1,688 @@
+= `ResourceDispatchResults`
+:toclevels: 4
+
+
++++The ResourceDispatchResults class provides market results that can be provided to a SC. The specific data provided consists of several indicators such as contingency flags, blocked start up, and RMR dispatch. It also provides the projected overall and the regulating status of the resource.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ResourceDispatchResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ResourceDispatchResults`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<ResourceClearing,`ResourceClearing`>>
+//| [[slots_table.ResourceClearing]]<<ResourceClearing,`ResourceClearing`>>
+| 0..1 +
+xref::class/ResourceClearing.adoc[`ResourceClearing`]
+| _n/a_
+| _n/a_
+
+| <<blockedDispatch,`blockedDispatch`>>
+//| [[slots_table.blockedDispatch]]<<blockedDispatch,`blockedDispatch`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Blocked Dispatch Indicator (Yes/No)+++
+| _n/a_
+
+| <<blockedPublishDOP,`blockedPublishDOP`>>
+//| [[slots_table.blockedPublishDOP]]<<blockedPublishDOP,`blockedPublishDOP`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Block sending DOP to ADS (Y/N)+++
+| _n/a_
+
+| <<contingencyFlag,`contingencyFlag`>>
+//| [[slots_table.contingencyFlag]]<<contingencyFlag,`contingencyFlag`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Contingent Operating Reserve Indicator (Yes/No).  Resource participating with AS capacity in contingency dispatch.+++
+| _n/a_
+
+| <<limitIndicator,`limitIndicator`>>
+//| [[slots_table.limitIndicator]]<<limitIndicator,`limitIndicator`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++indicate which limit is the constraints+++
+| _n/a_
+
+| <<lowerLimit,`lowerLimit`>>
+//| [[slots_table.lowerLimit]]<<lowerLimit,`lowerLimit`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++resource energy ramping lower limit+++
+| _n/a_
+
+| <<maxRampRate,`maxRampRate`>>
+//| [[slots_table.maxRampRate]]<<maxRampRate,`maxRampRate`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++maximum ramp rate+++
+| _n/a_
+
+| <<operatingLimitHigh,`operatingLimitHigh`>>
+//| [[slots_table.operatingLimitHigh]]<<operatingLimitHigh,`operatingLimitHigh`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The upper operating limit incorporating any derate used by the RTD for the Binding Interval.+++
+| _n/a_
+
+| <<operatingLimitLow,`operatingLimitLow`>>
+//| [[slots_table.operatingLimitLow]]<<operatingLimitLow,`operatingLimitLow`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The lower operating limit incorporating any derate used by the RTD for the Binding Interval.+++
+| _n/a_
+
+| <<penaltyDispatchIndicator,`penaltyDispatchIndicator`>>
+//| [[slots_table.penaltyDispatchIndicator]]<<penaltyDispatchIndicator,`penaltyDispatchIndicator`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Penalty Dispatch Indicator (Yes / No) indicating an un-economic adjustment.+++
+| _n/a_
+
+| <<regulatingLimitHigh,`regulatingLimitHigh`>>
+//| [[slots_table.regulatingLimitHigh]]<<regulatingLimitHigh,`regulatingLimitHigh`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The upper regulating limit incorporating any derate used by the RTD for the Binding Interval.+++
+| _n/a_
+
+| <<regulatingLimitLow,`regulatingLimitLow`>>
+//| [[slots_table.regulatingLimitLow]]<<regulatingLimitLow,`regulatingLimitLow`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The lower regulating limit incorporating any derate used by the RTD for the Binding Interval.+++
+| _n/a_
+
+| <<resourceStatus,`resourceStatus`>>
+//| [[slots_table.resourceStatus]]<<resourceStatus,`resourceStatus`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Unit Commitment Status (On/Off/Starting)+++
+| _n/a_
+
+| <<totalSchedule,`totalSchedule`>>
+//| [[slots_table.totalSchedule]]<<totalSchedule,`totalSchedule`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Resource total upward schedule.  total schedule = En + all AS per resource per interval+++
+| _n/a_
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+//| [[slots_table.updateTimeStamp]]<<updateTimeStamp,`updateTimeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<updateType,`updateType`>>
+//| [[slots_table.updateType]]<<updateType,`updateType`>>
+| 0..1 +
+xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+| _n/a_
+| _n/a_
+
+| <<updateUser,`updateUser`>>
+//| [[slots_table.updateUser]]<<updateUser,`updateUser`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+
+| <<upperLimit,`upperLimit`>>
+//| [[slots_table.upperLimit]]<<upperLimit,`upperLimit`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++resource energy ramping upper limit+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#blockedDispatch]
+=== `blockedDispatch`
++++Blocked Dispatch Indicator (Yes/No)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.blockedDispatch`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.blockedDispatch,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#blockedPublishDOP]
+=== `blockedPublishDOP`
++++Block sending DOP to ADS (Y/N)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.blockedPublishDOP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.blockedPublishDOP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#contingencyFlag]
+=== `contingencyFlag`
++++Contingent Operating Reserve Indicator (Yes/No).  Resource participating with AS capacity in contingency dispatch.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.contingencyFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.contingencyFlag,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#limitIndicator]
+=== `limitIndicator`
++++indicate which limit is the constraints+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.limitIndicator`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.limitIndicator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lowerLimit]
+=== `lowerLimit`
++++resource energy ramping lower limit+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.lowerLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lowerLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxRampRate]
+=== `maxRampRate`
++++maximum ramp rate+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.maxRampRate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxRampRate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#operatingLimitHigh]
+=== `operatingLimitHigh`
++++The upper operating limit incorporating any derate used by the RTD for the Binding Interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.operatingLimitHigh`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.operatingLimitHigh,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#operatingLimitLow]
+=== `operatingLimitLow`
++++The lower operating limit incorporating any derate used by the RTD for the Binding Interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.operatingLimitLow`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.operatingLimitLow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#penaltyDispatchIndicator]
+=== `penaltyDispatchIndicator`
++++Penalty Dispatch Indicator (Yes / No) indicating an un-economic adjustment.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.penaltyDispatchIndicator`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.penaltyDispatchIndicator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#regulatingLimitHigh]
+=== `regulatingLimitHigh`
++++The upper regulating limit incorporating any derate used by the RTD for the Binding Interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.regulatingLimitHigh`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.regulatingLimitHigh,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#regulatingLimitLow]
+=== `regulatingLimitLow`
++++The lower regulating limit incorporating any derate used by the RTD for the Binding Interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.regulatingLimitLow`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.regulatingLimitLow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ResourceClearing]
+=== `ResourceClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.ResourceClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ResourceClearing.adoc[`ResourceClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ResourceClearing,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#resourceStatus]
+=== `resourceStatus`
++++Unit Commitment Status (On/Off/Starting)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.resourceStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.resourceStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#totalSchedule]
+=== `totalSchedule`
++++Resource total upward schedule.  total schedule = En + all AS per resource per interval+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.totalSchedule`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.totalSchedule,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateTimeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateType]
+=== `updateType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.updateType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateUser,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#upperLimit]
+=== `upperLimit`
++++resource energy ramping upper limit+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDispatchResults.upperLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.upperLimit,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#ResourceDispatchResults[`ResourceDispatchResults`]
+
+
+
+| xref::class/ResourceClearing.adoc[`ResourceClearing`] | xref::class/ResourceClearing.adoc#ResourceDispatchResults[`ResourceDispatchResults`]
+
+
+|===
+

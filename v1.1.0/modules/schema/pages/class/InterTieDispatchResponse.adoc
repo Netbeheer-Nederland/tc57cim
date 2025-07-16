@@ -1,0 +1,255 @@
+= `InterTieDispatchResponse`
+:toclevels: 4
+
+
++++Response from an intertie resource acknowledging receipt of dispatch instructions.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:InterTieDispatchResponse`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`InterTieDispatchResponse`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<RegisteredInterTie,`RegisteredInterTie`>>
+//| [[slots_table.RegisteredInterTie]]<<RegisteredInterTie,`RegisteredInterTie`>>
+| 1 +
+xref::class/RegisteredInterTie.adoc[`RegisteredInterTie`]
+| _n/a_
+| _n/a_
+
+| <<acceptMW,`acceptMW`>>
+//| [[slots_table.acceptMW]]<<acceptMW,`acceptMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The accepted mw amount by the responder. aka response mw.+++
+| _n/a_
+
+| <<acceptStatus,`acceptStatus`>>
+//| [[slots_table.acceptStatus]]<<acceptStatus,`acceptStatus`>>
+| 0..1 +
+xref::enumeration/DispatchResponseType.adoc[`DispatchResponseType`]
+| +++The accept status submitted by the responder. Valid values are NON-RESPONSE, ACCEPT, DECLINE, PARTIAL.+++
+| _n/a_
+
+| <<clearedMW,`clearedMW`>>
+//| [[slots_table.clearedMW]]<<clearedMW,`clearedMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++MW amount associated with instruction.  For 5 minute binding dispatches, this is the Goto MW or DOT+++
+| _n/a_
+
+| <<passIndicator,`passIndicator`>>
+//| [[slots_table.passIndicator]]<<passIndicator,`passIndicator`>>
+| 0..1 +
+xref::enumeration/PassIndicatorType.adoc[`PassIndicatorType`]
+| +++Part of the Composite key that downstream app uses to match the instruction+++
+| _n/a_
+
+| <<startTime,`startTime`>>
+//| [[slots_table.startTime]]<<startTime,`startTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Part of the Composite key that downstream app uses to match the instruction+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#acceptMW]
+=== `acceptMW`
++++The accepted mw amount by the responder. aka response mw.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterTieDispatchResponse.acceptMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.acceptMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#acceptStatus]
+=== `acceptStatus`
++++The accept status submitted by the responder. Valid values are NON-RESPONSE, ACCEPT, DECLINE, PARTIAL.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterTieDispatchResponse.acceptStatus`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/DispatchResponseType.adoc[`DispatchResponseType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.acceptStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#clearedMW]
+=== `clearedMW`
++++MW amount associated with instruction.  For 5 minute binding dispatches, this is the Goto MW or DOT+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterTieDispatchResponse.clearedMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.clearedMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#passIndicator]
+=== `passIndicator`
++++Part of the Composite key that downstream app uses to match the instruction+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterTieDispatchResponse.passIndicator`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/PassIndicatorType.adoc[`PassIndicatorType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.passIndicator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredInterTie]
+=== `RegisteredInterTie`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterTieDispatchResponse.RegisteredInterTie`
+| Cardinality
+| 1
+| Type
+| xref::class/RegisteredInterTie.adoc[`RegisteredInterTie`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredInterTie,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startTime]
+=== `startTime`
++++Part of the Composite key that downstream app uses to match the instruction+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterTieDispatchResponse.startTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startTime,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RegisteredInterTie.adoc[`RegisteredInterTie`] | xref::class/RegisteredInterTie.adoc#InterTieDispatchResponse[`InterTieDispatchResponse`]
+
+
+|===
+

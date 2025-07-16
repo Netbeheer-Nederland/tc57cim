@@ -1,0 +1,156 @@
+= `PriceDescriptor`
+:toclevels: 4
+
+
++++The price of a Commodity during a given time interval may change over time.  For example, a price may be forecasted a year ahead, a month ahead, a day ahead, an hour ahead, and in real time; this is defined using the MarketType. Additionally a price may have one or more components. For example, a locational marginal energy price may be the arithmetic sum of the system price, the congestion price, and the loss price.  The priceType enumeration is used determine if the price is the complete price (priceType="total") or one of potentially many constituent components.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PriceDescriptor`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`PriceDescriptor`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<CommodityPrice,`CommodityPrice`>>
+//| [[slots_table.CommodityPrice]]<<CommodityPrice,`CommodityPrice`>>
+| 1..* +
+xref::class/CommodityPrice.adoc[`CommodityPrice`]
+| _n/a_
+| _n/a_
+
+| <<marketType,`marketType`>>
+//| [[slots_table.marketType]]<<marketType,`marketType`>>
+| 0..1 +
+xref::enumeration/MarketType.adoc[`MarketType`]
+| +++The time frame for the price, using the standard conventions associated with the MarketType enumeration.+++
+| _n/a_
+
+| <<priceType,`priceType`>>
+//| [[slots_table.priceType]]<<priceType,`priceType`>>
+| 0..1 +
+xref::enumeration/PriceTypeKind.adoc[`PriceTypeKind`]
+| +++The "kind" of price being described.  In general, the priceType will either be "total" to signify that the price is the...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#CommodityPrice]
+=== `CommodityPrice`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PriceDescriptor.CommodityPrice`
+| Cardinality
+| 1..*
+| Type
+| xref::class/CommodityPrice.adoc[`CommodityPrice`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CommodityPrice,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marketType]
+=== `marketType`
++++The time frame for the price, using the standard conventions associated with the MarketType enumeration.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PriceDescriptor.marketType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MarketType.adoc[`MarketType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marketType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#priceType]
+=== `priceType`
++++The "kind" of price being described.  In general, the priceType will either be "total" to signify that the price is the price paid to buy or sell the commodity, sometimes referred to as an "all-in" price, or one of potentially many components.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PriceDescriptor.priceType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/PriceTypeKind.adoc[`PriceTypeKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.priceType,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CommodityPrice.adoc[`CommodityPrice`] | xref::class/CommodityPrice.adoc#PriceDescriptor[`PriceDescriptor`]
+
+
+|===
+

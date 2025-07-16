@@ -1,0 +1,193 @@
+= `LineDetail`
+:toclevels: 4
+
+
++++Details on an amount line, with rounding, date and note.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:LineDetail`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`LineDetail`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<amount,`amount`>>
+//| [[slots_table.amount]]<<amount,`amount`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Amount for this line item.+++
+| _n/a_
+
+| <<dateTime,`dateTime`>>
+//| [[slots_table.dateTime]]<<dateTime,`dateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time when this line was created in the application process.+++
+| _n/a_
+
+| <<note,`note`>>
+//| [[slots_table.note]]<<note,`note`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Free format note relevant to this line.+++
+| _n/a_
+
+| <<rounding,`rounding`>>
+//| [[slots_table.rounding]]<<rounding,`rounding`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Totalised monetary value of all errors due to process rounding or truncating that is not reflected in 'amount'.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#amount]
+=== `amount`
++++Amount for this line item.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LineDetail.amount`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.amount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dateTime]
+=== `dateTime`
++++Date and time when this line was created in the application process.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LineDetail.dateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#note]
+=== `note`
++++Free format note relevant to this line.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LineDetail.note`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.note,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rounding]
+=== `rounding`
++++Totalised monetary value of all errors due to process rounding or truncating that is not reflected in 'amount'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LineDetail.rounding`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rounding,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Receipt.adoc[`Receipt`] | xref::class/Receipt.adoc#line[`line`]
+
+
+
+| xref::class/Transaction.adoc[`Transaction`] | xref::class/Transaction.adoc#line[`line`]
+
+
+|===
+

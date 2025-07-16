@@ -1,0 +1,222 @@
+= `FieldDispatchStep`
+:toclevels: 4
+
+
++++Details of the step in the field dispatch history.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:FieldDispatchStep`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`FieldDispatchStep`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<FieldDispatchHistory,`FieldDispatchHistory`>>
+//| [[slots_table.FieldDispatchHistory]]<<FieldDispatchHistory,`FieldDispatchHistory`>>
+| 1 +
+xref::class/FieldDispatchHistory.adoc[`FieldDispatchHistory`]
+| +++The dispatch history associated with the field dispatch step+++
+| _n/a_
+
+| <<dispatchStatus,`dispatchStatus`>>
+//| [[slots_table.dispatchStatus]]<<dispatchStatus,`dispatchStatus`>>
+| 1 +
+xref::enumeration/CrewStatusKind.adoc[`CrewStatusKind`]
+| +++The status of one or more crews dispatched to perform field work at one or more work sites+++
+| _n/a_
+
+| <<occurredDateTime,`occurredDateTime`>>
+//| [[slots_table.occurredDateTime]]<<occurredDateTime,`occurredDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The date and time at which the dispatch status occurred.+++
+| _n/a_
+
+| <<remarks,`remarks`>>
+//| [[slots_table.remarks]]<<remarks,`remarks`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++freeform comments related to the dispatch to perform field work.+++
+| _n/a_
+
+| <<sequenceNumber,`sequenceNumber`>>
+//| [[slots_table.sequenceNumber]]<<sequenceNumber,`sequenceNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++The sequence number of the field dispatch step within the field dispatch history.  Begins with 1 and increments up.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#dispatchStatus]
+=== `dispatchStatus`
++++The status of one or more crews dispatched to perform field work at one or more work sites+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FieldDispatchStep.dispatchStatus`
+| Cardinality
+| 1
+| Type
+| xref::enumeration/CrewStatusKind.adoc[`CrewStatusKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dispatchStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#FieldDispatchHistory]
+=== `FieldDispatchHistory`
++++The dispatch history associated with the field dispatch step+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FieldDispatchStep.FieldDispatchHistory`
+| Cardinality
+| 1
+| Type
+| xref::class/FieldDispatchHistory.adoc[`FieldDispatchHistory`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.FieldDispatchHistory,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#occurredDateTime]
+=== `occurredDateTime`
++++The date and time at which the dispatch status occurred.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FieldDispatchStep.occurredDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.occurredDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#remarks]
+=== `remarks`
++++freeform comments related to the dispatch to perform field work.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FieldDispatchStep.remarks`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.remarks,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sequenceNumber]
+=== `sequenceNumber`
++++The sequence number of the field dispatch step within the field dispatch history.  Begins with 1 and increments up.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FieldDispatchStep.sequenceNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sequenceNumber,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/FieldDispatchHistory.adoc[`FieldDispatchHistory`] | xref::class/FieldDispatchHistory.adoc#FieldDispatchStep[`FieldDispatchStep`]
+
+
+|===
+

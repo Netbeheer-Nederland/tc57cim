@@ -1,0 +1,193 @@
+= `InterTieResults`
+:toclevels: 4
+
+
++++Provides the tie point specific output from the market applications. Currently, this is defined as the loop flow compensation MW value.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:InterTieResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`InterTieResults`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Flowgate,`Flowgate`>>
+//| [[slots_table.Flowgate]]<<Flowgate,`Flowgate`>>
+| 1 +
+xref::class/Flowgate.adoc[`Flowgate`]
+| _n/a_
+| _n/a_
+
+| <<InterTieClearing,`InterTieClearing`>>
+//| [[slots_table.InterTieClearing]]<<InterTieClearing,`InterTieClearing`>>
+| 0..1 +
+xref::class/InterTieClearing.adoc[`InterTieClearing`]
+| _n/a_
+| _n/a_
+
+| <<baseMW,`baseMW`>>
+//| [[slots_table.baseMW]]<<baseMW,`baseMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Net Actual MW Flow+++
+| _n/a_
+
+| <<clearedValue,`clearedValue`>>
+//| [[slots_table.clearedValue]]<<clearedValue,`clearedValue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Net Dispatched MW+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#baseMW]
+=== `baseMW`
++++Net Actual MW Flow+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterTieResults.baseMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.baseMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#clearedValue]
+=== `clearedValue`
++++Net Dispatched MW+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterTieResults.clearedValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.clearedValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Flowgate]
+=== `Flowgate`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterTieResults.Flowgate`
+| Cardinality
+| 1
+| Type
+| xref::class/Flowgate.adoc[`Flowgate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Flowgate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InterTieClearing]
+=== `InterTieClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterTieResults.InterTieClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/InterTieClearing.adoc[`InterTieClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InterTieClearing,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Flowgate.adoc[`Flowgate`] | xref::class/Flowgate.adoc#InterTieResults[`InterTieResults`]
+
+
+
+| xref::class/InterTieClearing.adoc[`InterTieClearing`] | xref::class/InterTieClearing.adoc#InterTieResults[`InterTieResults`]
+
+
+|===
+

@@ -1,0 +1,193 @@
+= `PublicX509Certificate`
+:toclevels: 4
+
+
++++Used to convey information that will allow matching in order to determine which certificate to use.  Actual certificates are exchanged externally to the CIM exchange.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PublicX509Certificate`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`PublicX509Certificate`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ISOUpperLayer,`ISOUpperLayer`>>
+//| [[slots_table.ISOUpperLayer]]<<ISOUpperLayer,`ISOUpperLayer`>>
+| 0..1 +
+xref::class/ISOUpperLayer.adoc[`ISOUpperLayer`]
+| +++Application layer used with the certificate for mutual authentication.+++
+| _n/a_
+
+| <<TCPAccessPoint,`TCPAccessPoint`>>
+//| [[slots_table.TCPAccessPoint]]<<TCPAccessPoint,`TCPAccessPoint`>>
+| 0..1 +
+xref::class/TCPAccessPoint.adoc[`TCPAccessPoint`]
+| +++The association allows a certificate to be bound for use by TLS.+++
+| _n/a_
+
+| <<issuerName,`issuerName`>>
+//| [[slots_table.issuerName]]<<issuerName,`issuerName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Represents the CA that issued the certificate.  Defined to be per X.509.+++
+| _n/a_
+
+| <<serialNumber,`serialNumber`>>
+//| [[slots_table.serialNumber]]<<serialNumber,`serialNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Is the serial number of the certificate per X.509 definition.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#ISOUpperLayer]
+=== `ISOUpperLayer`
++++Application layer used with the certificate for mutual authentication.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PublicX509Certificate.ISOUpperLayer`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ISOUpperLayer.adoc[`ISOUpperLayer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ISOUpperLayer,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#issuerName]
+=== `issuerName`
++++Represents the CA that issued the certificate.  Defined to be per X.509.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PublicX509Certificate.issuerName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.issuerName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#serialNumber]
+=== `serialNumber`
++++Is the serial number of the certificate per X.509 definition.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PublicX509Certificate.serialNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.serialNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TCPAccessPoint]
+=== `TCPAccessPoint`
++++The association allows a certificate to be bound for use by TLS.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PublicX509Certificate.TCPAccessPoint`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TCPAccessPoint.adoc[`TCPAccessPoint`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TCPAccessPoint,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ISOUpperLayer.adoc[`ISOUpperLayer`] | xref::class/ISOUpperLayer.adoc#UpperLayerPublicX509Certificate[`UpperLayerPublicX509Certificate`]
+
+
+
+| xref::class/TCPAccessPoint.adoc[`TCPAccessPoint`] | xref::class/TCPAccessPoint.adoc#PublicX509Certificate[`PublicX509Certificate`]
+
+
+|===
+

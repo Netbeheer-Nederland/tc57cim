@@ -1,0 +1,60 @@
+= `InterTieDirection`
+:toclevels: 4
+
+
++++Direction of an intertie.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:InterTieDirection`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `E`
+| `cim:InterTieDirection.E`
+| n/a
+
+| `I`
+| `cim:InterTieDirection.I`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Flowgate.adoc[`Flowgate`] | xref::class/Flowgate.adoc#direction[`direction`]
+
+
+
+| xref::class/InterchangeSchedule.adoc[`InterchangeSchedule`] | xref::class/InterchangeSchedule.adoc#directionType[`directionType`]
+
+
+
+| xref::class/RegisteredInterTie.adoc[`RegisteredInterTie`] | xref::class/RegisteredInterTie.adoc#direction[`direction`]
+
+
+|===
+

@@ -1,0 +1,355 @@
+= `PhaseImpedanceData`
+:toclevels: 4
+
+
++++Impedance and conductance matrix element values. 
+The diagonal elements are described by the elements having the same toPhase and fromPhase value and the off diagonal elements have different toPhase and fromPhase values.  The matrix can also be stored in symmetric lower triangular format using the row and column attributes, which map to ACLineSegmentPhase.sequenceNumber.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PhaseImpedanceData`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`PhaseImpedanceData`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<PhaseImpedance,`PhaseImpedance`>>
+//| [[slots_table.PhaseImpedance]]<<PhaseImpedance,`PhaseImpedance`>>
+| 1 +
+xref::class/PerLengthPhaseImpedance.adoc[`PerLengthPhaseImpedance`]
+| +++Conductor phase impedance to which this data belongs.+++
+| _n/a_
+
+| <<b,`b`>>
+//| [[slots_table.b]]<<b,`b`>>
+| 0..1 +
+xref::class/SusceptancePerLength.adoc[`SusceptancePerLength`]
+| +++Susceptance matrix element value, per length of unit.+++
+| _n/a_
+
+| <<column,`column`>>
+//| [[slots_table.column]]<<column,`column`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++The matrix element's column number, in the range 1 to row. Only the lower triangle needs to be stored. This column number...+++
+| _n/a_
+
+| <<fromPhase,`fromPhase`>>
+//| [[slots_table.fromPhase]]<<fromPhase,`fromPhase`>>
+| 0..1 +
+xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++Refer to the class description.+++
+| _n/a_
+
+| <<g,`g`>>
+//| [[slots_table.g]]<<g,`g`>>
+| 0..1 +
+xref::class/ConductancePerLength.adoc[`ConductancePerLength`]
+| +++Conductance matrix element value, per length of unit.+++
+| _n/a_
+
+| <<r,`r`>>
+//| [[slots_table.r]]<<r,`r`>>
+| 0..1 +
+xref::class/ResistancePerLength.adoc[`ResistancePerLength`]
+| +++Resistance matrix element value, per length of unit.+++
+| _n/a_
+
+| <<row,`row`>>
+//| [[slots_table.row]]<<row,`row`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++The matrix element’s row number, in the range 1 to PerLengthPhaseImpedance.conductorCount. Only the lower triangle needs to...+++
+| _n/a_
+
+| <<toPhase,`toPhase`>>
+//| [[slots_table.toPhase]]<<toPhase,`toPhase`>>
+| 0..1 +
+xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++Refer to the class description.+++
+| _n/a_
+
+| <<x,`x`>>
+//| [[slots_table.x]]<<x,`x`>>
+| 0..1 +
+xref::class/ReactancePerLength.adoc[`ReactancePerLength`]
+| +++Reactance matrix element value, per length of unit.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#b]
+=== `b`
++++Susceptance matrix element value, per length of unit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.b`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SusceptancePerLength.adoc[`SusceptancePerLength`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.b,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#column]
+=== `column`
++++The matrix element's column number, in the range 1 to row. Only the lower triangle needs to be stored. This column number matches ACLineSegmentPhase.sequenceNumber.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.column`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.column,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#fromPhase]
+=== `fromPhase`
++++Refer to the class description.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.fromPhase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.fromPhase,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#g]
+=== `g`
++++Conductance matrix element value, per length of unit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.g`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ConductancePerLength.adoc[`ConductancePerLength`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.g,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PhaseImpedance]
+=== `PhaseImpedance`
++++Conductor phase impedance to which this data belongs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.PhaseImpedance`
+| Cardinality
+| 1
+| Type
+| xref::class/PerLengthPhaseImpedance.adoc[`PerLengthPhaseImpedance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PhaseImpedance,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#r]
+=== `r`
++++Resistance matrix element value, per length of unit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.r`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ResistancePerLength.adoc[`ResistancePerLength`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.r,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#row]
+=== `row`
++++The matrix element’s row number, in the range 1 to PerLengthPhaseImpedance.conductorCount. Only the lower triangle needs to be stored. This row number matches ACLineSegmentPhase.sequenceNumber.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.row`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.row,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#toPhase]
+=== `toPhase`
++++Refer to the class description.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.toPhase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.toPhase,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#x]
+=== `x`
++++Reactance matrix element value, per length of unit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PhaseImpedanceData.x`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReactancePerLength.adoc[`ReactancePerLength`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.x,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/PerLengthPhaseImpedance.adoc[`PerLengthPhaseImpedance`] | xref::class/PerLengthPhaseImpedance.adoc#PhaseImpedanceData[`PhaseImpedanceData`]
+
+
+|===
+

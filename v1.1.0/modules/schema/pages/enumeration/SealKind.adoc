@@ -1,0 +1,60 @@
+= `SealKind`
+:toclevels: 4
+
+
++++Kind of seal.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SealKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `lead`
+| `cim:SealKind.lead`
+| n/a
+
+| `lock`
+| `cim:SealKind.lock`
+| n/a
+
+| `other`
+| `cim:SealKind.other`
+| n/a
+
+| `steel`
+| `cim:SealKind.steel`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Seal.adoc[`Seal`] | xref::class/Seal.adoc#kind[`kind`]
+
+
+|===
+

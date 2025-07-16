@@ -1,0 +1,68 @@
+= `VsPpccControlKind`
+:toclevels: 4
+
+
++++Types applicable to the control of real power and/or DC voltage by voltage source converter.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:VsPpccControlKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `phasePcc`
+| `cim:VsPpccControlKind.phasePcc`
+| n/a
+
+| `pPcc`
+| `cim:VsPpccControlKind.pPcc`
+| n/a
+
+| `pPccAndUdcDroop`
+| `cim:VsPpccControlKind.pPccAndUdcDroop`
+| n/a
+
+| `pPccAndUdcDroopPilot`
+| `cim:VsPpccControlKind.pPccAndUdcDroopPilot`
+| n/a
+
+| `pPccAndUdcDroopWithCompensation`
+| `cim:VsPpccControlKind.pPccAndUdcDroopWithCompensation`
+| n/a
+
+| `udc`
+| `cim:VsPpccControlKind.udc`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/VsConverter.adoc[`VsConverter`] | xref::class/VsConverter.adoc#pPccControl[`pPccControl`]
+
+
+|===
+

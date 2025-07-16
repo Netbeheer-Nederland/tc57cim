@@ -1,0 +1,189 @@
+= `AccountingUnit`
+:toclevels: 4
+
+
++++Unit for accounting; use either 'energyUnit' or 'currencyUnit' to specify the unit for 'value'.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AccountingUnit`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`AccountingUnit`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<energyUnit,`energyUnit`>>
+//| [[slots_table.energyUnit]]<<energyUnit,`energyUnit`>>
+| 0..1 +
+xref::class/RealEnergy.adoc[`RealEnergy`]
+| +++Unit of service.+++
+| _n/a_
+
+| <<monetaryUnit,`monetaryUnit`>>
+//| [[slots_table.monetaryUnit]]<<monetaryUnit,`monetaryUnit`>>
+| 0..1 +
+xref::enumeration/Currency.adoc[`Currency`]
+| +++Unit of currency.+++
+| _n/a_
+
+| <<multiplier,`multiplier`>>
+//| [[slots_table.multiplier]]<<multiplier,`multiplier`>>
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++Multiplier for the 'energyUnit' or 'monetaryUnit'.+++
+| _n/a_
+
+| <<value,`value`>>
+//| [[slots_table.value]]<<value,`value`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Value expressed in applicable units.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#energyUnit]
+=== `energyUnit`
++++Unit of service.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AccountingUnit.energyUnit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RealEnergy.adoc[`RealEnergy`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.energyUnit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#monetaryUnit]
+=== `monetaryUnit`
++++Unit of currency.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AccountingUnit.monetaryUnit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/Currency.adoc[`Currency`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.monetaryUnit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
++++Multiplier for the 'energyUnit' or 'monetaryUnit'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AccountingUnit.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.multiplier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value]
+=== `value`
++++Value expressed in applicable units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AccountingUnit.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Charge.adoc[`Charge`] | xref::class/Charge.adoc#fixedPortion[`fixedPortion`]
+
+
+|===
+

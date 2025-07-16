@@ -1,0 +1,52 @@
+= `PotentialTransformerKind`
+:toclevels: 4
+
+
++++The construction kind of the potential transformer.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:PotentialTransformerKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `capacitiveCoupling`
+| `cim:PotentialTransformerKind.capacitiveCoupling`
+| n/a
+
+| `inductive`
+| `cim:PotentialTransformerKind.inductive`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/PotentialTransformer.adoc[`PotentialTransformer`] | xref::class/PotentialTransformer.adoc#type[`type`]
+
+
+|===
+

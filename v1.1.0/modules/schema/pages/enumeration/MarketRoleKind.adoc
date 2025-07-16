@@ -1,0 +1,250 @@
+= `MarketRoleKind`
+:toclevels: 4
+
+
++++Kind of market role an organisation can have. This list is not exhausted, as other roles may exist.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MarketRoleKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `BalanceResponsibleParty`
+| `cim:MarketRoleKind.BalanceResponsibleParty`
+| n/a
+
+| `BalanceSupplier`
+| `cim:MarketRoleKind.BalanceSupplier`
+| n/a
+
+| `balancingAuthority`
+| `cim:MarketRoleKind.balancingAuthority`
+| n/a
+
+| `BillingAgent`
+| `cim:MarketRoleKind.BillingAgent`
+| n/a
+
+| `BlockEnergyTrader`
+| `cim:MarketRoleKind.BlockEnergyTrader`
+| n/a
+
+| `CapacityCoordinator`
+| `cim:MarketRoleKind.CapacityCoordinator`
+| n/a
+
+| `CapacityTrader`
+| `cim:MarketRoleKind.CapacityTrader`
+| n/a
+
+| `competitiveRetailer`
+| `cim:MarketRoleKind.competitiveRetailer`
+| n/a
+
+| `complianceMonitor`
+| `cim:MarketRoleKind.complianceMonitor`
+| n/a
+
+| `Consumer`
+| `cim:MarketRoleKind.Consumer`
+| n/a
+
+| `ConsumptionResponsibleParty`
+| `cim:MarketRoleKind.ConsumptionResponsibleParty`
+| n/a
+
+| `ControlAreaOperator`
+| `cim:MarketRoleKind.ControlAreaOperator`
+| n/a
+
+| `ControlBlockOperator`
+| `cim:MarketRoleKind.ControlBlockOperator`
+| n/a
+
+| `CoordinationCenterOperator`
+| `cim:MarketRoleKind.CoordinationCenterOperator`
+| n/a
+
+| `distributionProvider`
+| `cim:MarketRoleKind.distributionProvider`
+| n/a
+
+| `energyServiceConsumer`
+| `cim:MarketRoleKind.energyServiceConsumer`
+| n/a
+
+| `generatorOperator`
+| `cim:MarketRoleKind.generatorOperator`
+| n/a
+
+| `generatorOwner`
+| `cim:MarketRoleKind.generatorOwner`
+| n/a
+
+| `GridAccessProvider`
+| `cim:MarketRoleKind.GridAccessProvider`
+| n/a
+
+| `GridOperator`
+| `cim:MarketRoleKind.GridOperator`
+| n/a
+
+| `ImbalanceSettlementResponsible`
+| `cim:MarketRoleKind.ImbalanceSettlementResponsible`
+| n/a
+
+| `interchangeAuthority`
+| `cim:MarketRoleKind.interchangeAuthority`
+| n/a
+
+| `InterconnectionTradeResponsible`
+| `cim:MarketRoleKind.InterconnectionTradeResponsible`
+| n/a
+
+| `loadServingEntity`
+| `cim:MarketRoleKind.loadServingEntity`
+| n/a
+
+| `MarketInformationAggregator`
+| `cim:MarketRoleKind.MarketInformationAggregator`
+| n/a
+
+| `MarketOperator`
+| `cim:MarketRoleKind.MarketOperator`
+| n/a
+
+| `MeterAdministrator`
+| `cim:MarketRoleKind.MeterAdministrator`
+| n/a
+
+| `MeteredDataAggregator`
+| `cim:MarketRoleKind.MeteredDataAggregator`
+| n/a
+
+| `MeteredDataCollector`
+| `cim:MarketRoleKind.MeteredDataCollector`
+| n/a
+
+| `MeteredDataResponsible`
+| `cim:MarketRoleKind.MeteredDataResponsible`
+| n/a
+
+| `MeteringPointAdministrator`
+| `cim:MarketRoleKind.MeteringPointAdministrator`
+| n/a
+
+| `MeterOperator`
+| `cim:MarketRoleKind.MeterOperator`
+| n/a
+
+| `MOLResponsible`
+| `cim:MarketRoleKind.MOLResponsible`
+| n/a
+
+| `NominationValidator`
+| `cim:MarketRoleKind.NominationValidator`
+| n/a
+
+| `PartyConnectedToTheGrid`
+| `cim:MarketRoleKind.PartyConnectedToTheGrid`
+| n/a
+
+| `planningAuthority`
+| `cim:MarketRoleKind.planningAuthority`
+| n/a
+
+| `Producer`
+| `cim:MarketRoleKind.Producer`
+| n/a
+
+| `ProductionResponsibleParty`
+| `cim:MarketRoleKind.ProductionResponsibleParty`
+| n/a
+
+| `purchasingSellingEntity`
+| `cim:MarketRoleKind.purchasingSellingEntity`
+| n/a
+
+| `ReconciliationAccountable`
+| `cim:MarketRoleKind.ReconciliationAccountable`
+| n/a
+
+| `ReconciliationResponsible`
+| `cim:MarketRoleKind.ReconciliationResponsible`
+| n/a
+
+| `reliabilityAuthority`
+| `cim:MarketRoleKind.reliabilityAuthority`
+| n/a
+
+| `ReserveAllocator`
+| `cim:MarketRoleKind.ReserveAllocator`
+| n/a
+
+| `resourcePlanner`
+| `cim:MarketRoleKind.resourcePlanner`
+| n/a
+
+| `ResourceProvider`
+| `cim:MarketRoleKind.ResourceProvider`
+| n/a
+
+| `SchedulingCoordinator`
+| `cim:MarketRoleKind.SchedulingCoordinator`
+| n/a
+
+| `standardsDeveloper`
+| `cim:MarketRoleKind.standardsDeveloper`
+| n/a
+
+| `SystemOperator`
+| `cim:MarketRoleKind.SystemOperator`
+| n/a
+
+| `TradeResponsibleParty`
+| `cim:MarketRoleKind.TradeResponsibleParty`
+| n/a
+
+| `TransmissionCapacityAllocator`
+| `cim:MarketRoleKind.TransmissionCapacityAllocator`
+| n/a
+
+| `transmissionOperator`
+| `cim:MarketRoleKind.transmissionOperator`
+| n/a
+
+| `transmissionOwner`
+| `cim:MarketRoleKind.transmissionOwner`
+| n/a
+
+| `transmissionPlanner`
+| `cim:MarketRoleKind.transmissionPlanner`
+| n/a
+
+| `transmissionServiceProvider`
+| `cim:MarketRoleKind.transmissionServiceProvider`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

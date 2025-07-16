@@ -1,0 +1,978 @@
+= `LoadStatic`
+:toclevels: 4
+
+
++++General static load. This model represents the sensitivity of the real and reactive power consumed by the load to the amplitude and frequency of the bus voltage.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:LoadStatic`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`LoadStatic`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<LoadAggregate,`LoadAggregate`>>
+//| [[slots_table.LoadAggregate]]<<LoadAggregate,`LoadAggregate`>>
+| 1 +
+xref::class/LoadAggregate.adoc[`LoadAggregate`]
+| +++Aggregate load to which this aggregate static load belongs.+++
+| _n/a_
+
+| <<ep1,`ep1`>>
+//| [[slots_table.ep1]]<<ep1,`ep1`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++First term voltage exponent for active power (<i>Ep1</i>).  Used only when .staticLoadModelType = exponential.+++
+| _n/a_
+
+| <<ep2,`ep2`>>
+//| [[slots_table.ep2]]<<ep2,`ep2`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Second term voltage exponent for active power (<i>Ep2</i>).  Used only when .staticLoadModelType = exponential.+++
+| _n/a_
+
+| <<ep3,`ep3`>>
+//| [[slots_table.ep3]]<<ep3,`ep3`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Third term voltage exponent for active power (<i>Ep3</i>).  Used only when .staticLoadModelType = exponential.+++
+| _n/a_
+
+| <<eq1,`eq1`>>
+//| [[slots_table.eq1]]<<eq1,`eq1`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++First term voltage exponent for reactive power (<i>Eq1</i>).  Used only when .staticLoadModelType = exponential.+++
+| _n/a_
+
+| <<eq2,`eq2`>>
+//| [[slots_table.eq2]]<<eq2,`eq2`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Second term voltage exponent for reactive power (<i>Eq2</i>).  Used only when .staticLoadModelType = exponential.+++
+| _n/a_
+
+| <<eq3,`eq3`>>
+//| [[slots_table.eq3]]<<eq3,`eq3`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Third term voltage exponent for reactive power (<i>Eq3</i>).  Used only when .staticLoadModelType = exponential.+++
+| _n/a_
+
+| <<kp1,`kp1`>>
+//| [[slots_table.kp1]]<<kp1,`kp1`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++First term voltage coefficient for active power (<i>K</i><i><sub>p1</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+| _n/a_
+
+| <<kp2,`kp2`>>
+//| [[slots_table.kp2]]<<kp2,`kp2`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Second term voltage coefficient for active power (<i>K</i><i><sub>p2</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+| _n/a_
+
+| <<kp3,`kp3`>>
+//| [[slots_table.kp3]]<<kp3,`kp3`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Third term voltage coefficient for active power (<i>K</i><i><sub>p3</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+| _n/a_
+
+| <<kp4,`kp4`>>
+//| [[slots_table.kp4]]<<kp4,`kp4`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Frequency coefficient for active power (<i>K</i><i><sub>p4</sub></i>)  (not = 0 if .staticLoadModelType = zIP2).  Used only...+++
+| _n/a_
+
+| <<kpf,`kpf`>>
+//| [[slots_table.kpf]]<<kpf,`kpf`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Frequency deviation coefficient for active power (<i>K</i><i><sub>pf</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+| _n/a_
+
+| <<kq1,`kq1`>>
+//| [[slots_table.kq1]]<<kq1,`kq1`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++First term voltage coefficient for reactive power (<i>K</i><i><sub>q1</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+| _n/a_
+
+| <<kq2,`kq2`>>
+//| [[slots_table.kq2]]<<kq2,`kq2`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Second term voltage coefficient for reactive power (<i>K</i><i><sub>q2</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+| _n/a_
+
+| <<kq3,`kq3`>>
+//| [[slots_table.kq3]]<<kq3,`kq3`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Third term voltage coefficient for reactive power (<i>K</i><i><sub>q3</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+| _n/a_
+
+| <<kq4,`kq4`>>
+//| [[slots_table.kq4]]<<kq4,`kq4`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Frequency coefficient for reactive power (<i>K</i><i><sub>q4</sub></i>)  (not = 0 when .staticLoadModelType = zIP2).  Used...+++
+| _n/a_
+
+| <<kqf,`kqf`>>
+//| [[slots_table.kqf]]<<kqf,`kqf`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Frequency deviation coefficient for reactive power (<i>K</i><i><sub>qf</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+| _n/a_
+
+| <<staticLoadModelType,`staticLoadModelType`>>
+//| [[slots_table.staticLoadModelType]]<<staticLoadModelType,`staticLoadModelType`>>
+| 0..1 +
+xref::enumeration/StaticLoadModelKind.adoc[`StaticLoadModelKind`]
+| +++Type of static load model.  Typical value = constantZ.+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ep1]
+=== `ep1`
++++First term voltage exponent for active power (<i>Ep1</i>).  Used only when .staticLoadModelType = exponential.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.ep1`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ep1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ep2]
+=== `ep2`
++++Second term voltage exponent for active power (<i>Ep2</i>).  Used only when .staticLoadModelType = exponential.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.ep2`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ep2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ep3]
+=== `ep3`
++++Third term voltage exponent for active power (<i>Ep3</i>).  Used only when .staticLoadModelType = exponential.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.ep3`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ep3,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#eq1]
+=== `eq1`
++++First term voltage exponent for reactive power (<i>Eq1</i>).  Used only when .staticLoadModelType = exponential.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.eq1`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.eq1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#eq2]
+=== `eq2`
++++Second term voltage exponent for reactive power (<i>Eq2</i>).  Used only when .staticLoadModelType = exponential.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.eq2`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.eq2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#eq3]
+=== `eq3`
++++Third term voltage exponent for reactive power (<i>Eq3</i>).  Used only when .staticLoadModelType = exponential.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.eq3`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.eq3,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kp1]
+=== `kp1`
++++First term voltage coefficient for active power (<i>K</i><i><sub>p1</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.kp1`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kp1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kp2]
+=== `kp2`
++++Second term voltage coefficient for active power (<i>K</i><i><sub>p2</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.kp2`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kp2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kp3]
+=== `kp3`
++++Third term voltage coefficient for active power (<i>K</i><i><sub>p3</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.kp3`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kp3,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kp4]
+=== `kp4`
++++Frequency coefficient for active power (<i>K</i><i><sub>p4</sub></i>)  (not = 0 if .staticLoadModelType = zIP2).  Used only when .staticLoadModelType = zIP2.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.kp4`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kp4,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kpf]
+=== `kpf`
++++Frequency deviation coefficient for active power (<i>K</i><i><sub>pf</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.kpf`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kpf,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kq1]
+=== `kq1`
++++First term voltage coefficient for reactive power (<i>K</i><i><sub>q1</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.kq1`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kq1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kq2]
+=== `kq2`
++++Second term voltage coefficient for reactive power (<i>K</i><i><sub>q2</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.kq2`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kq2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kq3]
+=== `kq3`
++++Third term voltage coefficient for reactive power (<i>K</i><i><sub>q3</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.kq3`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kq3,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kq4]
+=== `kq4`
++++Frequency coefficient for reactive power (<i>K</i><i><sub>q4</sub></i>)  (not = 0 when .staticLoadModelType = zIP2).  Used only when .staticLoadModelType - zIP2.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.kq4`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kq4,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kqf]
+=== `kqf`
++++Frequency deviation coefficient for reactive power (<i>K</i><i><sub>qf</sub></i>).  Not used when .staticLoadModelType = constantZ.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.kqf`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kqf,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#LoadAggregate]
+=== `LoadAggregate`
++++Aggregate load to which this aggregate static load belongs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.LoadAggregate`
+| Cardinality
+| 1
+| Type
+| xref::class/LoadAggregate.adoc[`LoadAggregate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.LoadAggregate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#staticLoadModelType]
+=== `staticLoadModelType`
++++Type of static load model.  Typical value = constantZ.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadStatic.staticLoadModelType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/StaticLoadModelKind.adoc[`StaticLoadModelKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.staticLoadModelType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/LoadAggregate.adoc[`LoadAggregate`] | xref::class/LoadAggregate.adoc#LoadStatic[`LoadStatic`]
+
+
+|===
+

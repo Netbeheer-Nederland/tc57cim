@@ -1,0 +1,189 @@
+= `EstimatedRestorationTime`
+:toclevels: 4
+
+
++++The Estimated Restoration Time (ERT) for a single outage+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EstimatedRestorationTime`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`EstimatedRestorationTime`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Outage,`Outage`>>
+//| [[slots_table.Outage]]<<Outage,`Outage`>>
+| 0..* +
+xref::class/Outage.adoc[`Outage`]
+| +++The outage associated with the estimated time the power will be restored.+++
+| _n/a_
+
+| <<confidenceKind,`confidenceKind`>>
+//| [[slots_table.confidenceKind]]<<confidenceKind,`confidenceKind`>>
+| 0..1 +
+xref::enumeration/ERTConfidenceKind.adoc[`ERTConfidenceKind`]
+| +++provides the confidence level that this ERT can be accomplished.  This may be changed/updated as needed.+++
+| _n/a_
+
+| <<ert,`ert`>>
+//| [[slots_table.ert]]<<ert,`ert`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++estimated time the outage will be restored+++
+| _n/a_
+
+| <<ertSource,`ertSource`>>
+//| [[slots_table.ertSource]]<<ertSource,`ertSource`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++defines the source that provided the ERT value.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#confidenceKind]
+=== `confidenceKind`
++++provides the confidence level that this ERT can be accomplished.  This may be changed/updated as needed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EstimatedRestorationTime.confidenceKind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ERTConfidenceKind.adoc[`ERTConfidenceKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.confidenceKind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ert]
+=== `ert`
++++estimated time the outage will be restored+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EstimatedRestorationTime.ert`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ert,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ertSource]
+=== `ertSource`
++++defines the source that provided the ERT value.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EstimatedRestorationTime.ertSource`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ertSource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Outage]
+=== `Outage`
++++The outage associated with the estimated time the power will be restored.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EstimatedRestorationTime.Outage`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Outage.adoc[`Outage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Outage,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Outage.adoc[`Outage`] | xref::class/Outage.adoc#EstimatedRestorationTime[`EstimatedRestorationTime`]
+
+
+|===
+

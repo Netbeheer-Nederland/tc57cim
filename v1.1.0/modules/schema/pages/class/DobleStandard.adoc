@@ -1,0 +1,123 @@
+= `DobleStandard`
+:toclevels: 4
+
+
++++Standard published by Doble.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DobleStandard`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`DobleStandard`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<standardEdition,`standardEdition`>>
+//| [[slots_table.standardEdition]]<<standardEdition,`standardEdition`>>
+| 0..1 +
+xref::enumeration/DobleStandardEditionKind.adoc[`DobleStandardEditionKind`]
+| +++Edition of Doble standard.+++
+| _n/a_
+
+| <<standardNumber,`standardNumber`>>
+//| [[slots_table.standardNumber]]<<standardNumber,`standardNumber`>>
+| 0..1 +
+xref::enumeration/DobleStandardKind.adoc[`DobleStandardKind`]
+| +++Doble standard number.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#standardEdition]
+=== `standardEdition`
++++Edition of Doble standard.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DobleStandard.standardEdition`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/DobleStandardEditionKind.adoc[`DobleStandardEditionKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardEdition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#standardNumber]
+=== `standardNumber`
++++Doble standard number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DobleStandard.standardNumber`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/DobleStandardKind.adoc[`DobleStandardKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardNumber,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TestStandard.adoc[`TestStandard`] | xref::class/TestStandard.adoc#testStandardDoble[`testStandardDoble`]
+
+
+|===
+

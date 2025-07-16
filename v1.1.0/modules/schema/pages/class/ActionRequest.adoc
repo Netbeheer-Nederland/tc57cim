@@ -1,0 +1,160 @@
+= `ActionRequest`
+:toclevels: 4
+
+
++++Action request against an existing Trade.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ActionRequest`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ActionRequest`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Bid,`Bid`>>
+//| [[slots_table.Bid]]<<Bid,`Bid`>>
+| 0..* +
+xref::class/Bid.adoc[`Bid`]
+| _n/a_
+| _n/a_
+
+| <<Trade,`Trade`>>
+//| [[slots_table.Trade]]<<Trade,`Trade`>>
+| 0..* +
+xref::class/Trade.adoc[`Trade`]
+| _n/a_
+| _n/a_
+
+| <<actionName,`actionName`>>
+//| [[slots_table.actionName]]<<actionName,`actionName`>>
+| 0..1 +
+xref::enumeration/ActionType.adoc[`ActionType`]
+| +++Action name type for the action request.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#actionName]
+=== `actionName`
++++Action name type for the action request.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActionRequest.actionName`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ActionType.adoc[`ActionType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.actionName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Bid]
+=== `Bid`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActionRequest.Bid`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Bid,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Trade]
+=== `Trade`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ActionRequest.Trade`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Trade.adoc[`Trade`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Trade,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Bid.adoc[`Bid`] | xref::class/Bid.adoc#ActionRequest[`ActionRequest`]
+
+
+
+| xref::class/Trade.adoc[`Trade`] | xref::class/Trade.adoc#ActionRequest[`ActionRequest`]
+
+
+|===
+

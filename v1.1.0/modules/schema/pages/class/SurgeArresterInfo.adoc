@@ -1,0 +1,816 @@
+= `SurgeArresterInfo`
+:toclevels: 4
+
+
++++Properties of surge arrester.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SurgeArresterInfo`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/AssetInfo.adoc[`AssetInfo`]
+*** *`SurgeArresterInfo`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<continuousOperatingVoltage,`continuousOperatingVoltage`>>
+//| [[slots_table.continuousOperatingVoltage]]<<continuousOperatingVoltage,`continuousOperatingVoltage`>>
+| 0..1 +
+xref::class/Voltage.adoc[`Voltage`]
+| +++Maximum continuous power frequency voltage allowed on the surge arrester.+++
+| _n/a_
+
+| <<isPolymer,`isPolymer`>>
+//| [[slots_table.isPolymer]]<<isPolymer,`isPolymer`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true, the arrester has a polymer housing, porcelain otherwise.+++
+| _n/a_
+
+| <<lightningImpulseDischargeVoltage,`lightningImpulseDischargeVoltage`>>
+//| [[slots_table.lightningImpulseDischargeVoltage]]<<lightningImpulseDischargeVoltage,`lightningImpulseDischargeVoltage`>>
+| 0..1 +
+xref::class/Voltage.adoc[`Voltage`]
+| +++Residual voltage during an 8x20 microsecond current impulse at the nominal discharge current level.+++
+| _n/a_
+
+| <<lineDischargeClass,`lineDischargeClass`>>
+//| [[slots_table.lineDischargeClass]]<<lineDischargeClass,`lineDischargeClass`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Determines the arrester energy discharge capability.  Choices are limited to 0 (none) through 5 (highest) by IEC 60099....+++
+| _n/a_
+
+| <<nominalDischargeCurrent,`nominalDischargeCurrent`>>
+//| [[slots_table.nominalDischargeCurrent]]<<nominalDischargeCurrent,`nominalDischargeCurrent`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++The lightning discharge current used to classify the arrester. Choices are limited to 1.5, 2.5, 5, 10, and 20 kA by IEC 60099.+++
+| _n/a_
+
+| <<pressureReliefClass,`pressureReliefClass`>>
+//| [[slots_table.pressureReliefClass]]<<pressureReliefClass,`pressureReliefClass`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++Fault current level at which all parts of the failed arrester lie within a circle prescribed by IEC 60099.+++
+| _n/a_
+
+| <<ratedVoltage,`ratedVoltage`>>
+//| [[slots_table.ratedVoltage]]<<ratedVoltage,`ratedVoltage`>>
+| 0..1 +
+xref::class/Voltage.adoc[`Voltage`]
+| +++The temporary overvoltage (TOV) level at power frequency that the surge arrester withstands for 10 seconds.+++
+| _n/a_
+
+| <<steepFrontDischargeVoltage,`steepFrontDischargeVoltage`>>
+//| [[slots_table.steepFrontDischargeVoltage]]<<steepFrontDischargeVoltage,`steepFrontDischargeVoltage`>>
+| 0..1 +
+xref::class/Voltage.adoc[`Voltage`]
+| +++Residual voltage during a current impulse with front time of 1 microsecond, and magnitude equal to the nominal discharge...+++
+| _n/a_
+
+| <<switchingImpulseDischargeVoltage,`switchingImpulseDischargeVoltage`>>
+//| [[slots_table.switchingImpulseDischargeVoltage]]<<switchingImpulseDischargeVoltage,`switchingImpulseDischargeVoltage`>>
+| 0..1 +
+xref::class/Voltage.adoc[`Voltage`]
+| +++Residual voltage during a current impulse with front time of at least 30 microseconds, and magnitude specified in IEC 60099...+++
+| _n/a_
+
+| <<Assets,`Assets`>>
+//| [[slots_table.Assets]]<<Assets,`Assets`>>
+| 0..* +
+xref::class/Asset.adoc[`Asset`]
+| +++All assets described by this data.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<CatalogAssetType,`CatalogAssetType`>>
+//| [[slots_table.CatalogAssetType]]<<CatalogAssetType,`CatalogAssetType`>>
+| 0..1 +
+xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+| +++Asset information (nameplate) for this catalog asset type.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<PowerSystemResources,`PowerSystemResources`>>
+//| [[slots_table.PowerSystemResources]]<<PowerSystemResources,`PowerSystemResources`>>
+| 0..* +
+xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+| +++All power system resources with this datasheet information.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<ProductAssetModel,`ProductAssetModel`>>
+//| [[slots_table.ProductAssetModel]]<<ProductAssetModel,`ProductAssetModel`>>
+| 0..1 +
+xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+| +++Product asset model which conforms to this catalog asset type.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets described by this data.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Assets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CatalogAssetType]
+=== `CatalogAssetType`
++++Asset information (nameplate) for this catalog asset type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.CatalogAssetType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CatalogAssetType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#continuousOperatingVoltage]
+=== `continuousOperatingVoltage`
++++Maximum continuous power frequency voltage allowed on the surge arrester.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SurgeArresterInfo.continuousOperatingVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.continuousOperatingVoltage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#isPolymer]
+=== `isPolymer`
++++If true, the arrester has a polymer housing, porcelain otherwise.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SurgeArresterInfo.isPolymer`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.isPolymer,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lightningImpulseDischargeVoltage]
+=== `lightningImpulseDischargeVoltage`
++++Residual voltage during an 8x20 microsecond current impulse at the nominal discharge current level.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SurgeArresterInfo.lightningImpulseDischargeVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lightningImpulseDischargeVoltage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lineDischargeClass]
+=== `lineDischargeClass`
++++Determines the arrester energy discharge capability.  Choices are limited to 0 (none) through 5 (highest) by IEC 60099. Classes 1..3 require a 10-kA nominal discharge current. Classes 4..5 require a 20-kA nominal discharge current. Lower nominal discharge currents must use class 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SurgeArresterInfo.lineDischargeClass`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lineDischargeClass,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#nominalDischargeCurrent]
+=== `nominalDischargeCurrent`
++++The lightning discharge current used to classify the arrester. Choices are limited to 1.5, 2.5, 5, 10, and 20 kA by IEC 60099.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SurgeArresterInfo.nominalDischargeCurrent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.nominalDischargeCurrent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PowerSystemResources]
+=== `PowerSystemResources`
++++All power system resources with this datasheet information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.PowerSystemResources`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PowerSystemResources,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pressureReliefClass]
+=== `pressureReliefClass`
++++Fault current level at which all parts of the failed arrester lie within a circle prescribed by IEC 60099.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SurgeArresterInfo.pressureReliefClass`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pressureReliefClass,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ProductAssetModel]
+=== `ProductAssetModel`
++++Product asset model which conforms to this catalog asset type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.ProductAssetModel`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ProductAssetModel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ratedVoltage]
+=== `ratedVoltage`
++++The temporary overvoltage (TOV) level at power frequency that the surge arrester withstands for 10 seconds.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SurgeArresterInfo.ratedVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ratedVoltage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#steepFrontDischargeVoltage]
+=== `steepFrontDischargeVoltage`
++++Residual voltage during a current impulse with front time of 1 microsecond, and magnitude equal to the nominal discharge current level.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SurgeArresterInfo.steepFrontDischargeVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.steepFrontDischargeVoltage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#switchingImpulseDischargeVoltage]
+=== `switchingImpulseDischargeVoltage`
++++Residual voltage during a current impulse with front time of at least 30 microseconds, and magnitude specified in IEC 60099 for the line discharge class. Does not apply to line discharge class 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SurgeArresterInfo.switchingImpulseDischargeVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.switchingImpulseDischargeVoltage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

@@ -1,0 +1,56 @@
+= `OASISMarketType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OASISMarketType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `All`
+| `cim:OASISMarketType.All`
+| n/a
+
+| `HASP`
+| `cim:OASISMarketType.HASP`
+| n/a
+
+| `IFM`
+| `cim:OASISMarketType.IFM`
+| n/a
+
+| `N/A`
+| `cim:OASISMarketType.N/A`
+| n/a
+
+| `RTM`
+| `cim:OASISMarketType.RTM`
+| n/a
+
+| `RUC`
+| `cim:OASISMarketType.RUC`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

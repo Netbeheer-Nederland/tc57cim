@@ -1,0 +1,858 @@
+= `StartupModel`
+:toclevels: 4
+
+
++++Unit start up characteristics depending on how long the unit has been off line.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:StartupModel`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`StartupModel`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<StartIgnFuelCurve,`StartIgnFuelCurve`>>
+//| [[slots_table.StartIgnFuelCurve]]<<StartIgnFuelCurve,`StartIgnFuelCurve`>>
+| 0..1 +
+xref::class/StartIgnFuelCurve.adoc[`StartIgnFuelCurve`]
+| +++The unit's startup model may have a startup ignition fuel curve.+++
+| _n/a_
+
+| <<StartMainFuelCurve,`StartMainFuelCurve`>>
+//| [[slots_table.StartMainFuelCurve]]<<StartMainFuelCurve,`StartMainFuelCurve`>>
+| 0..1 +
+xref::class/StartMainFuelCurve.adoc[`StartMainFuelCurve`]
+| +++The unit's startup model may have a startup main fuel curve.+++
+| _n/a_
+
+| <<StartRampCurve,`StartRampCurve`>>
+//| [[slots_table.StartRampCurve]]<<StartRampCurve,`StartRampCurve`>>
+| 0..1 +
+xref::class/StartRampCurve.adoc[`StartRampCurve`]
+| +++The unit's startup model may have a startup ramp curve.+++
+| _n/a_
+
+| <<ThermalGeneratingUnit,`ThermalGeneratingUnit`>>
+//| [[slots_table.ThermalGeneratingUnit]]<<ThermalGeneratingUnit,`ThermalGeneratingUnit`>>
+| 1 +
+xref::class/ThermalGeneratingUnit.adoc[`ThermalGeneratingUnit`]
+| +++A thermal generating unit may have a startup model.+++
+| _n/a_
+
+| <<fixedMaintCost,`fixedMaintCost`>>
+//| [[slots_table.fixedMaintCost]]<<fixedMaintCost,`fixedMaintCost`>>
+| 0..1 +
+xref::class/CostRate.adoc[`CostRate`]
+| +++Fixed maintenance cost.+++
+| _n/a_
+
+| <<hotStandbyHeat,`hotStandbyHeat`>>
+//| [[slots_table.hotStandbyHeat]]<<hotStandbyHeat,`hotStandbyHeat`>>
+| 0..1 +
+xref::class/HeatRate.adoc[`HeatRate`]
+| +++The amount of heat input per time unit required for hot standby operation.+++
+| _n/a_
+
+| <<incrementalMaintCost,`incrementalMaintCost`>>
+//| [[slots_table.incrementalMaintCost]]<<incrementalMaintCost,`incrementalMaintCost`>>
+| 0..1 +
+xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++Incremental maintenance cost.+++
+| _n/a_
+
+| <<minimumDownTime,`minimumDownTime`>>
+//| [[slots_table.minimumDownTime]]<<minimumDownTime,`minimumDownTime`>>
+| 0..1 +
+xref::class/Hours.adoc[`Hours`]
+| +++The minimum number of hours the unit must be down before restart.+++
+| _n/a_
+
+| <<minimumRunTime,`minimumRunTime`>>
+//| [[slots_table.minimumRunTime]]<<minimumRunTime,`minimumRunTime`>>
+| 0..1 +
+xref::class/Hours.adoc[`Hours`]
+| +++The minimum number of hours the unit must be operating before being allowed to shut down.+++
+| _n/a_
+
+| <<riskFactorCost,`riskFactorCost`>>
+//| [[slots_table.riskFactorCost]]<<riskFactorCost,`riskFactorCost`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++The opportunity cost associated with the return in monetary unit. This represents the restart's "share" of the unit...+++
+| _n/a_
+
+| <<startupCost,`startupCost`>>
+//| [[slots_table.startupCost]]<<startupCost,`startupCost`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Total miscellaneous start up costs.+++
+| _n/a_
+
+| <<startupDate,`startupDate`>>
+//| [[slots_table.startupDate]]<<startupDate,`startupDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The date and time of the most recent generating unit startup.+++
+| _n/a_
+
+| <<startupPriority,`startupPriority`>>
+//| [[slots_table.startupPriority]]<<startupPriority,`startupPriority`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Startup priority within control area where lower numbers indicate higher priorities.  More than one unit in an area may be...+++
+| _n/a_
+
+| <<stbyAuxP,`stbyAuxP`>>
+//| [[slots_table.stbyAuxP]]<<stbyAuxP,`stbyAuxP`>>
+| 0..1 +
+xref::class/ActivePower.adoc[`ActivePower`]
+| +++The unit's auxiliary active power consumption to maintain standby mode.+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#fixedMaintCost]
+=== `fixedMaintCost`
++++Fixed maintenance cost.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.fixedMaintCost`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostRate.adoc[`CostRate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.fixedMaintCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#hotStandbyHeat]
+=== `hotStandbyHeat`
++++The amount of heat input per time unit required for hot standby operation.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.hotStandbyHeat`
+| Cardinality
+| 0..1
+| Type
+| xref::class/HeatRate.adoc[`HeatRate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.hotStandbyHeat,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#incrementalMaintCost]
+=== `incrementalMaintCost`
++++Incremental maintenance cost.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.incrementalMaintCost`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.incrementalMaintCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minimumDownTime]
+=== `minimumDownTime`
++++The minimum number of hours the unit must be down before restart.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.minimumDownTime`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Hours.adoc[`Hours`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minimumDownTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minimumRunTime]
+=== `minimumRunTime`
++++The minimum number of hours the unit must be operating before being allowed to shut down.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.minimumRunTime`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Hours.adoc[`Hours`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minimumRunTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#riskFactorCost]
+=== `riskFactorCost`
++++The opportunity cost associated with the return in monetary unit. This represents the restart's "share" of the unit depreciation and risk of an event which would damage the unit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.riskFactorCost`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.riskFactorCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#StartIgnFuelCurve]
+=== `StartIgnFuelCurve`
++++The unit's startup model may have a startup ignition fuel curve.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.StartIgnFuelCurve`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StartIgnFuelCurve.adoc[`StartIgnFuelCurve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.StartIgnFuelCurve,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#StartMainFuelCurve]
+=== `StartMainFuelCurve`
++++The unit's startup model may have a startup main fuel curve.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.StartMainFuelCurve`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StartMainFuelCurve.adoc[`StartMainFuelCurve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.StartMainFuelCurve,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#StartRampCurve]
+=== `StartRampCurve`
++++The unit's startup model may have a startup ramp curve.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.StartRampCurve`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StartRampCurve.adoc[`StartRampCurve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.StartRampCurve,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startupCost]
+=== `startupCost`
++++Total miscellaneous start up costs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.startupCost`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startupCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startupDate]
+=== `startupDate`
++++The date and time of the most recent generating unit startup.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.startupDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startupDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startupPriority]
+=== `startupPriority`
++++Startup priority within control area where lower numbers indicate higher priorities.  More than one unit in an area may be assigned the same priority.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.startupPriority`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startupPriority,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#stbyAuxP]
+=== `stbyAuxP`
++++The unit's auxiliary active power consumption to maintain standby mode.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.stbyAuxP`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.stbyAuxP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ThermalGeneratingUnit]
+=== `ThermalGeneratingUnit`
++++A thermal generating unit may have a startup model.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StartupModel.ThermalGeneratingUnit`
+| Cardinality
+| 1
+| Type
+| xref::class/ThermalGeneratingUnit.adoc[`ThermalGeneratingUnit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ThermalGeneratingUnit,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/StartIgnFuelCurve.adoc[`StartIgnFuelCurve`] | xref::class/StartIgnFuelCurve.adoc#StartupModel[`StartupModel`]
+
+
+
+| xref::class/StartMainFuelCurve.adoc[`StartMainFuelCurve`] | xref::class/StartMainFuelCurve.adoc#StartupModel[`StartupModel`]
+
+
+
+| xref::class/StartRampCurve.adoc[`StartRampCurve`] | xref::class/StartRampCurve.adoc#StartupModel[`StartupModel`]
+
+
+
+| xref::class/ThermalGeneratingUnit.adoc[`ThermalGeneratingUnit`] | xref::class/ThermalGeneratingUnit.adoc#StartupModel[`StartupModel`]
+
+
+|===
+

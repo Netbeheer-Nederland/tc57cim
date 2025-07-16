@@ -1,0 +1,110 @@
+= `ApnodeType`
+:toclevels: 4
+
+
++++Aggregate Node Types for example:
+AG -  Aggregated Generation
+CPZ -  Custom Price Zone
+DPZ -  Default Price Zone
+LAP - Load Aggregation Point
+TH -  Trading  Hub
+SYS - System Zone
+CA - Control Area
+
+GA - generic aggregation
+EHV - 500 kV
+GH - generic hub
+ZN - zone
+INT - Interface
+BUS - Bus+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ApnodeType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `AG`
+| `cim:ApnodeType.AG`
+| n/a
+
+| `BUS`
+| `cim:ApnodeType.BUS`
+| n/a
+
+| `CA`
+| `cim:ApnodeType.CA`
+| n/a
+
+| `CPZ`
+| `cim:ApnodeType.CPZ`
+| n/a
+
+| `DCA`
+| `cim:ApnodeType.DCA`
+| n/a
+
+| `DPZ`
+| `cim:ApnodeType.DPZ`
+| n/a
+
+| `EHV`
+| `cim:ApnodeType.EHV`
+| n/a
+
+| `GA`
+| `cim:ApnodeType.GA`
+| n/a
+
+| `GH`
+| `cim:ApnodeType.GH`
+| n/a
+
+| `INT`
+| `cim:ApnodeType.INT`
+| n/a
+
+| `SYS`
+| `cim:ApnodeType.SYS`
+| n/a
+
+| `TH`
+| `cim:ApnodeType.TH`
+| n/a
+
+| `ZN`
+| `cim:ApnodeType.ZN`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`] | xref::class/AggregatedPnode.adoc#apnodeType[`apnodeType`]
+
+
+|===
+

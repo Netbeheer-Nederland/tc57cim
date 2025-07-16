@@ -1,0 +1,52 @@
+= `TowerConstructionKind`
+:toclevels: 4
+
+
++++Kind of tower construction.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TowerConstructionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `suspension`
+| `cim:TowerConstructionKind.suspension`
+| n/a
+
+| `tension`
+| `cim:TowerConstructionKind.tension`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Tower.adoc[`Tower`] | xref::class/Tower.adoc#constructionKind[`constructionKind`]
+
+
+|===
+

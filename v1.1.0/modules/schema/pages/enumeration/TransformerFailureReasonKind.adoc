@@ -1,0 +1,61 @@
+= `TransformerFailureReasonKind`
+:toclevels: 4
+
+
++++Reason for transformer failure.
+Note: This enumeration provides essential information to asset health analytics. The existing list is a starting point and is anticipated to be fleshed out further as requirements are better understood. (PAB 2016/01/09).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TransformerFailureReasonKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `bushingFailure`
+| `cim:TransformerFailureReasonKind.bushingFailure`
+| n/a
+
+| `lossOfOil`
+| `cim:TransformerFailureReasonKind.lossOfOil`
+| n/a
+
+| `oilRelatedFailure`
+| `cim:TransformerFailureReasonKind.oilRelatedFailure`
+| n/a
+
+| `poorOilQuality`
+| `cim:TransformerFailureReasonKind.poorOilQuality`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/FailureEvent.adoc[`FailureEvent`] | xref::class/FailureEvent.adoc#transformerFailureReason[`transformerFailureReason`]
+
+
+|===
+

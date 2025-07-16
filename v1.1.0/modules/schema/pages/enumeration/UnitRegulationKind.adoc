@@ -1,0 +1,56 @@
+= `UnitRegulationKind`
+:toclevels: 4
+
+
++++Unit regulation kind.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:UnitRegulationKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `0`
+| `cim:UnitRegulationKind.0`
+| n/a
+
+| `1`
+| `cim:UnitRegulationKind.1`
+| n/a
+
+| `2`
+| `cim:UnitRegulationKind.2`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`] | xref::class/RegisteredGenerator.adoc#regulationFlag[`regulationFlag`]
+
+
+|===
+

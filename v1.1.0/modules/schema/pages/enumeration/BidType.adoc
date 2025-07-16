@@ -1,0 +1,59 @@
+= `BidType`
+:toclevels: 4
+
+
++++For example:
+DEFAULT_ENERGY_BID
+DEFAULT_STARTUP_BID
+DEFAULT_MINIMUM_LOAD_BID+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:BidType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `DEFAULT_ENERGY_BID`
+| `cim:BidType.DEFAULT_ENERGY_BID`
+| n/a
+
+| `DEFAULT_MINIMUM_LOAD_BID`
+| `cim:BidType.DEFAULT_MINIMUM_LOAD_BID`
+| n/a
+
+| `DEFAULT_STARTUP_BID`
+| `cim:BidType.DEFAULT_STARTUP_BID`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/DefaultBid.adoc[`DefaultBid`] | xref::class/DefaultBid.adoc#bidType[`bidType`]
+
+
+|===
+

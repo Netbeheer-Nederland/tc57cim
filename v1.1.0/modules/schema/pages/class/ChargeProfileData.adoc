@@ -1,0 +1,226 @@
+= `ChargeProfileData`
+:toclevels: 4
+
+
++++Model of various charges associated with an energy profile to support billing and settlement.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ChargeProfileData`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ChargeProfileData`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<BillDeterminant,`BillDeterminant`>>
+//| [[slots_table.BillDeterminant]]<<BillDeterminant,`BillDeterminant`>>
+| 0..1 +
+xref::class/BillDeterminant.adoc[`BillDeterminant`]
+| _n/a_
+| _n/a_
+
+| <<ChargeProfile,`ChargeProfile`>>
+//| [[slots_table.ChargeProfile]]<<ChargeProfile,`ChargeProfile`>>
+| 0..1 +
+xref::class/ChargeProfile.adoc[`ChargeProfile`]
+| _n/a_
+| _n/a_
+
+| <<sequence,`sequence`>>
+//| [[slots_table.sequence]]<<sequence,`sequence`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++The sequence number of the profile.+++
+| _n/a_
+
+| <<timeStamp,`timeStamp`>>
+//| [[slots_table.timeStamp]]<<timeStamp,`timeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The date and time of an interval.+++
+| _n/a_
+
+| <<value,`value`>>
+//| [[slots_table.value]]<<value,`value`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The value of an interval given a profile type (amount, price, or quantity), subject to the UOM.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#BillDeterminant]
+=== `BillDeterminant`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChargeProfileData.BillDeterminant`
+| Cardinality
+| 0..1
+| Type
+| xref::class/BillDeterminant.adoc[`BillDeterminant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.BillDeterminant,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ChargeProfile]
+=== `ChargeProfile`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChargeProfileData.ChargeProfile`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChargeProfile.adoc[`ChargeProfile`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ChargeProfile,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sequence]
+=== `sequence`
++++The sequence number of the profile.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChargeProfileData.sequence`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sequence,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeStamp]
+=== `timeStamp`
++++The date and time of an interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChargeProfileData.timeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value]
+=== `value`
++++The value of an interval given a profile type (amount, price, or quantity), subject to the UOM.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChargeProfileData.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/BillDeterminant.adoc[`BillDeterminant`] | xref::class/BillDeterminant.adoc#ChargeProfileData[`ChargeProfileData`]
+
+
+
+| xref::class/ChargeProfile.adoc[`ChargeProfile`] | xref::class/ChargeProfile.adoc#ChargeProfileData[`ChargeProfileData`]
+
+
+|===
+

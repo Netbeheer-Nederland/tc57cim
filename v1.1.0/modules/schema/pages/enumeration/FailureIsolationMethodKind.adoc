@@ -1,0 +1,64 @@
+= `FailureIsolationMethodKind`
+:toclevels: 4
+
+
++++How the failure has been isolated.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:FailureIsolationMethodKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `breakerOperation`
+| `cim:FailureIsolationMethodKind.breakerOperation`
+| n/a
+
+| `burnedInTheClear`
+| `cim:FailureIsolationMethodKind.burnedInTheClear`
+| n/a
+
+| `fuse`
+| `cim:FailureIsolationMethodKind.fuse`
+| n/a
+
+| `manuallyIsolated`
+| `cim:FailureIsolationMethodKind.manuallyIsolated`
+| n/a
+
+| `other`
+| `cim:FailureIsolationMethodKind.other`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/FailureEvent.adoc[`FailureEvent`] | xref::class/FailureEvent.adoc#failureIsolationMethod[`failureIsolationMethod`]
+
+
+|===
+

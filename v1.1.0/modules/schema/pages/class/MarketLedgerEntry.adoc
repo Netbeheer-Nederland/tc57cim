@@ -1,0 +1,325 @@
+= `MarketLedgerEntry`
+:toclevels: 4
+
+
++++Details of an individual entry in a ledger, which was posted from a journal on the posted date.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MarketLedgerEntry`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MarketLedgerEntry`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MarketLedger,`MarketLedger`>>
+//| [[slots_table.MarketLedger]]<<MarketLedger,`MarketLedger`>>
+| 1 +
+xref::class/MarketLedger.adoc[`MarketLedger`]
+| _n/a_
+| _n/a_
+
+| <<Settlement,`Settlement`>>
+//| [[slots_table.Settlement]]<<Settlement,`Settlement`>>
+| 0..* +
+xref::class/Settlement.adoc[`Settlement`]
+| _n/a_
+| _n/a_
+
+| <<accountID,`accountID`>>
+//| [[slots_table.accountID]]<<accountID,`accountID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Account identifier for this entry.+++
+| _n/a_
+
+| <<accountKind,`accountKind`>>
+//| [[slots_table.accountKind]]<<accountKind,`accountKind`>>
+| 0..1 +
+xref::enumeration/MktAccountKind.adoc[`MktAccountKind`]
+| +++Kind of account for this entry.+++
+| _n/a_
+
+| <<amount,`amount`>>
+//| [[slots_table.amount]]<<amount,`amount`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++The amount of the debit or credit for this account.+++
+| _n/a_
+
+| <<postedDateTime,`postedDateTime`>>
+//| [[slots_table.postedDateTime]]<<postedDateTime,`postedDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time this entry was posted to the ledger.+++
+| _n/a_
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| +++Status of ledger entry.+++
+| _n/a_
+
+| <<transactionDateTime,`transactionDateTime`>>
+//| [[slots_table.transactionDateTime]]<<transactionDateTime,`transactionDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time journal entry was recorded.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#accountID]
+=== `accountID`
++++Account identifier for this entry.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketLedgerEntry.accountID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.accountID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#accountKind]
+=== `accountKind`
++++Kind of account for this entry.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketLedgerEntry.accountKind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MktAccountKind.adoc[`MktAccountKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.accountKind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#amount]
+=== `amount`
++++The amount of the debit or credit for this account.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketLedgerEntry.amount`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.amount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketLedger]
+=== `MarketLedger`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketLedgerEntry.MarketLedger`
+| Cardinality
+| 1
+| Type
+| xref::class/MarketLedger.adoc[`MarketLedger`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketLedger,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#postedDateTime]
+=== `postedDateTime`
++++Date and time this entry was posted to the ledger.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketLedgerEntry.postedDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.postedDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Settlement]
+=== `Settlement`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketLedgerEntry.Settlement`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Settlement.adoc[`Settlement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Settlement,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++Status of ledger entry.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketLedgerEntry.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#transactionDateTime]
+=== `transactionDateTime`
++++Date and time journal entry was recorded.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketLedgerEntry.transactionDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.transactionDateTime,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketLedger.adoc[`MarketLedger`] | xref::class/MarketLedger.adoc#MarketLedgerEntries[`MarketLedgerEntries`]
+
+
+
+| xref::class/Settlement.adoc[`Settlement`] | xref::class/Settlement.adoc#MarketLedgerEntry[`MarketLedgerEntry`]
+
+
+|===
+

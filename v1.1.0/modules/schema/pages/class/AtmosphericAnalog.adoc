@@ -1,0 +1,1276 @@
+= `AtmosphericAnalog`
+:toclevels: 4
+
+
++++Analog (float) measuring an atmospheric condition.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AtmosphericAnalog`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Measurement.adoc[`Measurement`]
+*** xref::class/Analog.adoc[`Analog`]
+**** xref::class/EnvironmentalAnalog.adoc[`EnvironmentalAnalog`]
+***** *`AtmosphericAnalog`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<kind,`kind`>>
+//| [[slots_table.kind]]<<kind,`kind`>>
+| 0..1 +
+xref::enumeration/AtmosphericAnalogKind.adoc[`AtmosphericAnalogKind`]
+| +++Kind of atmospheric analog.+++
+| _n/a_
+
+| <<ClassificationCondition,`ClassificationCondition`>>
+//| [[slots_table.ClassificationCondition]]<<ClassificationCondition,`ClassificationCondition`>>
+| 0..1 +
+xref::class/ClassificationCondition.adoc[`ClassificationCondition`]
+| +++Classification condition which this analog helps define.+++
+| xref::class/EnvironmentalAnalog.adoc[`EnvironmentalAnalog`]
+
+| <<EnvironmentalInformation,`EnvironmentalInformation`>>
+//| [[slots_table.EnvironmentalInformation]]<<EnvironmentalInformation,`EnvironmentalInformation`>>
+| 0..1 +
+xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+| +++Observation or forecast with which this environmental analog measurement is associated.+++
+| xref::class/EnvironmentalAnalog.adoc[`EnvironmentalAnalog`]
+
+| <<EnvironmentalMonitoringStation,`EnvironmentalMonitoringStation`>>
+//| [[slots_table.EnvironmentalMonitoringStation]]<<EnvironmentalMonitoringStation,`EnvironmentalMonitoringStation`>>
+| 0..1 +
+xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+| +++Monitoring station which provides this environmental analog measurement.+++
+| xref::class/EnvironmentalAnalog.adoc[`EnvironmentalAnalog`]
+
+| <<ReportingCapability,`ReportingCapability`>>
+//| [[slots_table.ReportingCapability]]<<ReportingCapability,`ReportingCapability`>>
+| 0..1 +
+xref::class/ReportingCapability.adoc[`ReportingCapability`]
+| +++The reporting capability this environmental value set helps define.+++
+| xref::class/EnvironmentalAnalog.adoc[`EnvironmentalAnalog`]
+
+| <<AnalogValues,`AnalogValues`>>
+//| [[slots_table.AnalogValues]]<<AnalogValues,`AnalogValues`>>
+| 0..* +
+xref::class/AnalogValue.adoc[`AnalogValue`]
+| +++The values connected to this measurement.+++
+| xref::class/Analog.adoc[`Analog`]
+
+| <<LimitSets,`LimitSets`>>
+//| [[slots_table.LimitSets]]<<LimitSets,`LimitSets`>>
+| 0..* +
+xref::class/AnalogLimitSet.adoc[`AnalogLimitSet`]
+| +++A measurement may have zero or more limit ranges defined for it.+++
+| xref::class/Analog.adoc[`Analog`]
+
+| <<maxValue,`maxValue`>>
+//| [[slots_table.maxValue]]<<maxValue,`maxValue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Normal value range maximum for any of the MeasurementValue.values. Used for scaling, e.g. in bar graphs or of telemetered raw values.+++
+| xref::class/Analog.adoc[`Analog`]
+
+| <<minValue,`minValue`>>
+//| [[slots_table.minValue]]<<minValue,`minValue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Normal value range minimum for any of the MeasurementValue.values. Used for scaling, e.g. in bar graphs or of telemetered raw values.+++
+| xref::class/Analog.adoc[`Analog`]
+
+| <<normalValue,`normalValue`>>
+//| [[slots_table.normalValue]]<<normalValue,`normalValue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Normal measurement value, e.g., used for percentage calculations.+++
+| xref::class/Analog.adoc[`Analog`]
+
+| <<positiveFlowIn,`positiveFlowIn`>>
+//| [[slots_table.positiveFlowIn]]<<positiveFlowIn,`positiveFlowIn`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true then this measurement is an active power, reactive power or current with the convention that a positive value...+++
+| xref::class/Analog.adoc[`Analog`]
+
+| <<Asset,`Asset`>>
+//| [[slots_table.Asset]]<<Asset,`Asset`>>
+| 0..1 +
+xref::class/Asset.adoc[`Asset`]
+| +++Asset that has a measurement+++
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<CalculationMethodHierarchy,`CalculationMethodHierarchy`>>
+//| [[slots_table.CalculationMethodHierarchy]]<<CalculationMethodHierarchy,`CalculationMethodHierarchy`>>
+| 0..1 +
+xref::class/CalculationMethodHierarchy.adoc[`CalculationMethodHierarchy`]
+| +++Calculation method hierarchy which applies to this analog.+++
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<Locations,`Locations`>>
+//| [[slots_table.Locations]]<<Locations,`Locations`>>
+| 0..* +
+xref::class/Location.adoc[`Location`]
+| +++Location of this measurement.+++
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<MeasurementAction,`MeasurementAction`>>
+//| [[slots_table.MeasurementAction]]<<MeasurementAction,`MeasurementAction`>>
+| 0..1 +
+xref::class/MeasurementAction.adoc[`MeasurementAction`]
+| +++The measurement action that is performed on the measurement+++
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<MeasurementCalculatorInput,`MeasurementCalculatorInput`>>
+//| [[slots_table.MeasurementCalculatorInput]]<<MeasurementCalculatorInput,`MeasurementCalculatorInput`>>
+| 0..* +
+xref::class/MeasurementCalculatorInput.adoc[`MeasurementCalculatorInput`]
+| _n/a_
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<PinMeasurement,`PinMeasurement`>>
+//| [[slots_table.PinMeasurement]]<<PinMeasurement,`PinMeasurement`>>
+| 0..* +
+xref::class/PinMeasurement.adoc[`PinMeasurement`]
+| _n/a_
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<PowerSystemResource,`PowerSystemResource`>>
+//| [[slots_table.PowerSystemResource]]<<PowerSystemResource,`PowerSystemResource`>>
+| 0..1 +
+xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+| +++The power system resource that contains the measurement.+++
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<Procedures,`Procedures`>>
+//| [[slots_table.Procedures]]<<Procedures,`Procedures`>>
+| 0..* +
+xref::class/Procedure.adoc[`Procedure`]
+| +++Measurements are specified in types of documents, such as procedures.+++
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<ProtectiveActionAdjustment,`ProtectiveActionAdjustment`>>
+//| [[slots_table.ProtectiveActionAdjustment]]<<ProtectiveActionAdjustment,`ProtectiveActionAdjustment`>>
+| 0..* +
+xref::class/ProtectiveActionAdjustment.adoc[`ProtectiveActionAdjustment`]
+| _n/a_
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<Terminal,`Terminal`>>
+//| [[slots_table.Terminal]]<<Terminal,`Terminal`>>
+| 0..1 +
+xref::class/ACDCTerminal.adoc[`ACDCTerminal`]
+| +++One or more measurements may be associated with a terminal in the network.+++
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<measurementType,`measurementType`>>
+//| [[slots_table.measurementType]]<<measurementType,`measurementType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Specifies the type of measurement.  For example, this specifies if the measurement represents an indoor temperature, outdoor...+++
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<phases,`phases`>>
+//| [[slots_table.phases]]<<phases,`phases`>>
+| 0..1 +
+xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+| +++Indicates to which phases the measurement applies and avoids the need to use 'measurementType' to also encode phase...+++
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<unitMultiplier,`unitMultiplier`>>
+//| [[slots_table.unitMultiplier]]<<unitMultiplier,`unitMultiplier`>>
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++The unit multiplier of the measured quantity.+++
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<unitSymbol,`unitSymbol`>>
+//| [[slots_table.unitSymbol]]<<unitSymbol,`unitSymbol`>>
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+| +++The unit of measure of the measured quantity.+++
+| xref::class/Measurement.adoc[`Measurement`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AnalogValues]
+=== `AnalogValues`
++++The values connected to this measurement.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Analog.AnalogValues`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AnalogValue.adoc[`AnalogValue`]
+
+| Inherited from
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AnalogValues,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Asset]
+=== `Asset`
++++Asset that has a measurement+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.Asset`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Asset,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CalculationMethodHierarchy]
+=== `CalculationMethodHierarchy`
++++Calculation method hierarchy which applies to this analog.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.CalculationMethodHierarchy`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CalculationMethodHierarchy.adoc[`CalculationMethodHierarchy`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CalculationMethodHierarchy,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ClassificationCondition]
+=== `ClassificationCondition`
++++Classification condition which this analog helps define.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalAnalog.ClassificationCondition`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ClassificationCondition.adoc[`ClassificationCondition`]
+
+| Inherited from
+| xref::class/EnvironmentalAnalog.adoc[`EnvironmentalAnalog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ClassificationCondition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnvironmentalInformation]
+=== `EnvironmentalInformation`
++++Observation or forecast with which this environmental analog measurement is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalAnalog.EnvironmentalInformation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+
+| Inherited from
+| xref::class/EnvironmentalAnalog.adoc[`EnvironmentalAnalog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalInformation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnvironmentalMonitoringStation]
+=== `EnvironmentalMonitoringStation`
++++Monitoring station which provides this environmental analog measurement.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalAnalog.EnvironmentalMonitoringStation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+
+| Inherited from
+| xref::class/EnvironmentalAnalog.adoc[`EnvironmentalAnalog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalMonitoringStation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kind]
+=== `kind`
++++Kind of atmospheric analog.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericAnalog.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/AtmosphericAnalogKind.adoc[`AtmosphericAnalogKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#LimitSets]
+=== `LimitSets`
++++A measurement may have zero or more limit ranges defined for it.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Analog.LimitSets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AnalogLimitSet.adoc[`AnalogLimitSet`]
+
+| Inherited from
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.LimitSets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Locations]
+=== `Locations`
++++Location of this measurement.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.Locations`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Locations,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxValue]
+=== `maxValue`
++++Normal value range maximum for any of the MeasurementValue.values. Used for scaling, e.g. in bar graphs or of telemetered raw values.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Analog.maxValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MeasurementAction]
+=== `MeasurementAction`
++++The measurement action that is performed on the measurement+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.MeasurementAction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MeasurementAction.adoc[`MeasurementAction`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MeasurementAction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MeasurementCalculatorInput]
+=== `MeasurementCalculatorInput`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.MeasurementCalculatorInput`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MeasurementCalculatorInput.adoc[`MeasurementCalculatorInput`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MeasurementCalculatorInput,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#measurementType]
+=== `measurementType`
++++Specifies the type of measurement.  For example, this specifies if the measurement represents an indoor temperature, outdoor temperature, bus voltage, line flow, etc.
+When the measurementType is set to "Specialization", the type of Measurement is defined in more detail by the specialized class which inherits from Measurement.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.measurementType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.measurementType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minValue]
+=== `minValue`
++++Normal value range minimum for any of the MeasurementValue.values. Used for scaling, e.g. in bar graphs or of telemetered raw values.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Analog.minValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#normalValue]
+=== `normalValue`
++++Normal measurement value, e.g., used for percentage calculations.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Analog.normalValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.normalValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phases]
+=== `phases`
++++Indicates to which phases the measurement applies and avoids the need to use 'measurementType' to also encode phase information (which would explode the types). The phase information in Measurement, along with 'measurementType' and 'phases' uniquely defines a Measurement for a device, based on normal network phase. Their meaning will not change when the computed energizing phasing is changed due to jumpers or other reasons.
+If the attribute is missing three phases (ABC) shall be assumed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.phases`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phases,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PinMeasurement]
+=== `PinMeasurement`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.PinMeasurement`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PinMeasurement.adoc[`PinMeasurement`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PinMeasurement,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#positiveFlowIn]
+=== `positiveFlowIn`
++++If true then this measurement is an active power, reactive power or current with the convention that a positive value measured at the Terminal means power is flowing into the related PowerSystemResource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Analog.positiveFlowIn`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.positiveFlowIn,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PowerSystemResource]
+=== `PowerSystemResource`
++++The power system resource that contains the measurement.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.PowerSystemResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PowerSystemResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Procedures]
+=== `Procedures`
++++Measurements are specified in types of documents, such as procedures.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.Procedures`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Procedure.adoc[`Procedure`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Procedures,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ProtectiveActionAdjustment]
+=== `ProtectiveActionAdjustment`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.ProtectiveActionAdjustment`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProtectiveActionAdjustment.adoc[`ProtectiveActionAdjustment`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ProtectiveActionAdjustment,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ReportingCapability]
+=== `ReportingCapability`
++++The reporting capability this environmental value set helps define.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalAnalog.ReportingCapability`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReportingCapability.adoc[`ReportingCapability`]
+
+| Inherited from
+| xref::class/EnvironmentalAnalog.adoc[`EnvironmentalAnalog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ReportingCapability,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Terminal]
+=== `Terminal`
++++One or more measurements may be associated with a terminal in the network.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.Terminal`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ACDCTerminal.adoc[`ACDCTerminal`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Terminal,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#unitMultiplier]
+=== `unitMultiplier`
++++The unit multiplier of the measured quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.unitMultiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.unitMultiplier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#unitSymbol]
+=== `unitSymbol`
++++The unit of measure of the measured quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Measurement.unitSymbol`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+
+| Inherited from
+| xref::class/Measurement.adoc[`Measurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.unitSymbol,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

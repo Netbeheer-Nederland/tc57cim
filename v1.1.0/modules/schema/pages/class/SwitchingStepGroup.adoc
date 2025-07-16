@@ -1,0 +1,259 @@
+= `SwitchingStepGroup`
+:toclevels: 4
+
+
++++A logical step, grouping atomic switching steps that are important to distinguish when they may change topology (e.g. placing a jumper between two cuts).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SwitchingStepGroup`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`SwitchingStepGroup`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<SwitchingPlan,`SwitchingPlan`>>
+//| [[slots_table.SwitchingPlan]]<<SwitchingPlan,`SwitchingPlan`>>
+| 0..1 +
+xref::class/SwitchingPlan.adoc[`SwitchingPlan`]
+| +++Switching plan to which this group belongs.+++
+| _n/a_
+
+| <<SwitchingStep,`SwitchingStep`>>
+//| [[slots_table.SwitchingStep]]<<SwitchingStep,`SwitchingStep`>>
+| 0..* +
+xref::class/SwitchingStep.adoc[`SwitchingStep`]
+| +++The switching steps that are part of the switching step group.+++
+| _n/a_
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Descriptive information concerning the switching step group.+++
+| _n/a_
+
+| <<isFreeSequence,`isFreeSequence`>>
+//| [[slots_table.isFreeSequence]]<<isFreeSequence,`isFreeSequence`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true, the sequence number serves for presentation purposes only, and the activity itself may be executed at any time.+++
+| _n/a_
+
+| <<purpose,`purpose`>>
+//| [[slots_table.purpose]]<<purpose,`purpose`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Describes the overall purpose of the steps in this switching step group.+++
+| _n/a_
+
+| <<sequenceNumber,`sequenceNumber`>>
+//| [[slots_table.sequenceNumber]]<<sequenceNumber,`sequenceNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Order of this activity in the sequence of activities within the switching plan.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#description]
+=== `description`
++++Descriptive information concerning the switching step group.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingStepGroup.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#isFreeSequence]
+=== `isFreeSequence`
++++If true, the sequence number serves for presentation purposes only, and the activity itself may be executed at any time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingStepGroup.isFreeSequence`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.isFreeSequence,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#purpose]
+=== `purpose`
++++Describes the overall purpose of the steps in this switching step group.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingStepGroup.purpose`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.purpose,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sequenceNumber]
+=== `sequenceNumber`
++++Order of this activity in the sequence of activities within the switching plan.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingStepGroup.sequenceNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sequenceNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SwitchingPlan]
+=== `SwitchingPlan`
++++Switching plan to which this group belongs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingStepGroup.SwitchingPlan`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SwitchingPlan.adoc[`SwitchingPlan`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SwitchingPlan,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SwitchingStep]
+=== `SwitchingStep`
++++The switching steps that are part of the switching step group.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingStepGroup.SwitchingStep`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SwitchingStep.adoc[`SwitchingStep`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SwitchingStep,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/SwitchingPlan.adoc[`SwitchingPlan`] | xref::class/SwitchingPlan.adoc#SwitchingStepGroups[`SwitchingStepGroups`]
+
+
+
+| xref::class/SwitchingStep.adoc[`SwitchingStep`] | xref::class/SwitchingStep.adoc#SwitchingStepGroup[`SwitchingStepGroup`]
+
+
+|===
+

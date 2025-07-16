@@ -1,0 +1,264 @@
+= `DistributionFactorSet`
+:toclevels: 4
+
+
++++A containing class that groups all the distribution factors within a market.   
+This is calculated daily for DA factors and hourly for RT factors.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DistributionFactorSet`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`DistributionFactorSet`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<GenDistributionFactor,`GenDistributionFactor`>>
+//| [[slots_table.GenDistributionFactor]]<<GenDistributionFactor,`GenDistributionFactor`>>
+| 0..* +
+xref::class/GenDistributionFactor.adoc[`GenDistributionFactor`]
+| _n/a_
+| _n/a_
+
+| <<LoadDistributionFactor,`LoadDistributionFactor`>>
+//| [[slots_table.LoadDistributionFactor]]<<LoadDistributionFactor,`LoadDistributionFactor`>>
+| 0..* +
+xref::class/LoadDistributionFactor.adoc[`LoadDistributionFactor`]
+| _n/a_
+| _n/a_
+
+| <<SysLoadDistribuFactor,`SysLoadDistribuFactor`>>
+//| [[slots_table.SysLoadDistribuFactor]]<<SysLoadDistribuFactor,`SysLoadDistribuFactor`>>
+| 0..* +
+xref::class/SysLoadDistributionFactor.adoc[`SysLoadDistributionFactor`]
+| _n/a_
+| _n/a_
+
+| <<intervalEndTime,`intervalEndTime`>>
+//| [[slots_table.intervalEndTime]]<<intervalEndTime,`intervalEndTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The end of the time interval for which requirement is defined.+++
+| _n/a_
+
+| <<intervalStartTime,`intervalStartTime`>>
+//| [[slots_table.intervalStartTime]]<<intervalStartTime,`intervalStartTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The start of the time interval for which requirement is defined.+++
+| _n/a_
+
+| <<marketType,`marketType`>>
+//| [[slots_table.marketType]]<<marketType,`marketType`>>
+| 0..1 +
+xref::enumeration/MarketType.adoc[`MarketType`]
+| +++Market type.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#GenDistributionFactor]
+=== `GenDistributionFactor`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DistributionFactorSet.GenDistributionFactor`
+| Cardinality
+| 0..*
+| Type
+| xref::class/GenDistributionFactor.adoc[`GenDistributionFactor`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.GenDistributionFactor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#intervalEndTime]
+=== `intervalEndTime`
++++The end of the time interval for which requirement is defined.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DistributionFactorSet.intervalEndTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalEndTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#intervalStartTime]
+=== `intervalStartTime`
++++The start of the time interval for which requirement is defined.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DistributionFactorSet.intervalStartTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalStartTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#LoadDistributionFactor]
+=== `LoadDistributionFactor`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DistributionFactorSet.LoadDistributionFactor`
+| Cardinality
+| 0..*
+| Type
+| xref::class/LoadDistributionFactor.adoc[`LoadDistributionFactor`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.LoadDistributionFactor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marketType]
+=== `marketType`
++++Market type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DistributionFactorSet.marketType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MarketType.adoc[`MarketType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marketType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SysLoadDistribuFactor]
+=== `SysLoadDistribuFactor`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DistributionFactorSet.SysLoadDistribuFactor`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SysLoadDistributionFactor.adoc[`SysLoadDistributionFactor`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SysLoadDistribuFactor,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/GenDistributionFactor.adoc[`GenDistributionFactor`] | xref::class/GenDistributionFactor.adoc#DistributionFactorSet[`DistributionFactorSet`]
+
+
+
+| xref::class/LoadDistributionFactor.adoc[`LoadDistributionFactor`] | xref::class/LoadDistributionFactor.adoc#DistributionFactorSet[`DistributionFactorSet`]
+
+
+
+| xref::class/SysLoadDistributionFactor.adoc[`SysLoadDistributionFactor`] | xref::class/SysLoadDistributionFactor.adoc#DistributionFactorSet[`DistributionFactorSet`]
+
+
+|===
+

@@ -1,0 +1,197 @@
+= `SysLoadDistributionFactor`
+:toclevels: 4
+
+
++++This class models the system distribution factors. This class needs to be used along with the HostControlArea and the ConnectivityNode to show the distribution of each individual party.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SysLoadDistributionFactor`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`SysLoadDistributionFactor`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<DistributionFactorSet,`DistributionFactorSet`>>
+//| [[slots_table.DistributionFactorSet]]<<DistributionFactorSet,`DistributionFactorSet`>>
+| 0..* +
+xref::class/DistributionFactorSet.adoc[`DistributionFactorSet`]
+| _n/a_
+| _n/a_
+
+| <<HostControlArea,`HostControlArea`>>
+//| [[slots_table.HostControlArea]]<<HostControlArea,`HostControlArea`>>
+| 1 +
+xref::class/HostControlArea.adoc[`HostControlArea`]
+| _n/a_
+| _n/a_
+
+| <<MktConnectivityNode,`MktConnectivityNode`>>
+//| [[slots_table.MktConnectivityNode]]<<MktConnectivityNode,`MktConnectivityNode`>>
+| 1 +
+xref::class/MktConnectivityNode.adoc[`MktConnectivityNode`]
+| _n/a_
+| _n/a_
+
+| <<factor,`factor`>>
+//| [[slots_table.factor]]<<factor,`factor`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Used to calculate load "participation" of a connectivity node in an host control area+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#DistributionFactorSet]
+=== `DistributionFactorSet`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SysLoadDistributionFactor.DistributionFactorSet`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DistributionFactorSet.adoc[`DistributionFactorSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DistributionFactorSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#factor]
+=== `factor`
++++Used to calculate load "participation" of a connectivity node in an host control area+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SysLoadDistributionFactor.factor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.factor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#HostControlArea]
+=== `HostControlArea`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SysLoadDistributionFactor.HostControlArea`
+| Cardinality
+| 1
+| Type
+| xref::class/HostControlArea.adoc[`HostControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.HostControlArea,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktConnectivityNode]
+=== `MktConnectivityNode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SysLoadDistributionFactor.MktConnectivityNode`
+| Cardinality
+| 1
+| Type
+| xref::class/MktConnectivityNode.adoc[`MktConnectivityNode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktConnectivityNode,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/DistributionFactorSet.adoc[`DistributionFactorSet`] | xref::class/DistributionFactorSet.adoc#SysLoadDistribuFactor[`SysLoadDistribuFactor`]
+
+
+
+| xref::class/HostControlArea.adoc[`HostControlArea`] | xref::class/HostControlArea.adoc#SysLoadDistribuFactor[`SysLoadDistribuFactor`]
+
+
+
+| xref::class/MktConnectivityNode.adoc[`MktConnectivityNode`] | xref::class/MktConnectivityNode.adoc#SysLoadDistribuFactor[`SysLoadDistribuFactor`]
+
+
+|===
+

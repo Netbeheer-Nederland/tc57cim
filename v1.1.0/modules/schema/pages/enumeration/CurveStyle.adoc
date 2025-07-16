@@ -1,0 +1,56 @@
+= `CurveStyle`
+:toclevels: 4
+
+
++++Style or shape of curve.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CurveStyle`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `constantYValue`
+| `cim:CurveStyle.constantYValue`
+| n/a
+
+| `straightLineYValues`
+| `cim:CurveStyle.straightLineYValues`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Curve.adoc[`Curve`] | xref::class/Curve.adoc#curveStyle[`curveStyle`]
+
+
+
+| xref::class/DispatchSchedule.adoc[`DispatchSchedule`] | xref::class/DispatchSchedule.adoc#curveStyleKind[`curveStyleKind`]
+
+
+|===
+

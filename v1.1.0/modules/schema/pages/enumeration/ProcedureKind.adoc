@@ -1,0 +1,64 @@
+= `ProcedureKind`
+:toclevels: 4
+
+
++++Kind of procedure.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ProcedureKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `diagnosis`
+| `cim:ProcedureKind.diagnosis`
+| n/a
+
+| `inspection`
+| `cim:ProcedureKind.inspection`
+| n/a
+
+| `maintenance`
+| `cim:ProcedureKind.maintenance`
+| n/a
+
+| `other`
+| `cim:ProcedureKind.other`
+| n/a
+
+| `test`
+| `cim:ProcedureKind.test`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Procedure.adoc[`Procedure`] | xref::class/Procedure.adoc#kind[`kind`]
+
+
+|===
+

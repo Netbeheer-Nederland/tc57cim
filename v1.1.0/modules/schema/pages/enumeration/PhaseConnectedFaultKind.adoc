@@ -1,0 +1,60 @@
+= `PhaseConnectedFaultKind`
+:toclevels: 4
+
+
++++The type of fault connection among phases.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:PhaseConnectedFaultKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `lineOpen`
+| `cim:PhaseConnectedFaultKind.lineOpen`
+| n/a
+
+| `lineToGround`
+| `cim:PhaseConnectedFaultKind.lineToGround`
+| n/a
+
+| `lineToLine`
+| `cim:PhaseConnectedFaultKind.lineToLine`
+| n/a
+
+| `lineToLineToGround`
+| `cim:PhaseConnectedFaultKind.lineToLineToGround`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Fault.adoc[`Fault`] | xref::class/Fault.adoc#kind[`kind`]
+
+
+|===
+

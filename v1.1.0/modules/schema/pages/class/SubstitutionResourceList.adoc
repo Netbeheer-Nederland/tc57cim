@@ -1,0 +1,160 @@
+= `SubstitutionResourceList`
+:toclevels: 4
+
+
++++List of resources that can be substituted for within the bounds of a Contract definition. This class has a precedence and a resource.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SubstitutionResourceList`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`SubstitutionResourceList`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<TransmissionContractRight,`TransmissionContractRight`>>
+//| [[slots_table.TransmissionContractRight]]<<TransmissionContractRight,`TransmissionContractRight`>>
+| 0..1 +
+xref::class/ContractRight.adoc[`ContractRight`]
+| _n/a_
+| _n/a_
+
+| <<precedence,`precedence`>>
+//| [[slots_table.precedence]]<<precedence,`precedence`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++An indicator of the order a resource should be substituted. The lower the number the higher the precedence.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#precedence]
+=== `precedence`
++++An indicator of the order a resource should be substituted. The lower the number the higher the precedence.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubstitutionResourceList.precedence`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.precedence,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubstitutionResourceList.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TransmissionContractRight]
+=== `TransmissionContractRight`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SubstitutionResourceList.TransmissionContractRight`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ContractRight.adoc[`ContractRight`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TransmissionContractRight,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ContractRight.adoc[`ContractRight`] | xref::class/ContractRight.adoc#SubstitutionResourceList[`SubstitutionResourceList`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#SubstitutionResourceList[`SubstitutionResourceList`]
+
+
+|===
+

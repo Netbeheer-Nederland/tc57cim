@@ -1,0 +1,123 @@
+= `SwitchStatus`
+:toclevels: 4
+
+
++++Optimal Power Flow or State Estimator Circuit Breaker Status.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SwitchStatus`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`SwitchStatus`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MktSwitch,`MktSwitch`>>
+//| [[slots_table.MktSwitch]]<<MktSwitch,`MktSwitch`>>
+| 1 +
+xref::class/MktSwitch.adoc[`MktSwitch`]
+| _n/a_
+| _n/a_
+
+| <<switchStatus,`switchStatus`>>
+//| [[slots_table.switchStatus]]<<switchStatus,`switchStatus`>>
+| 0..1 +
+xref::enumeration/SwitchStatusType.adoc[`SwitchStatusType`]
+| +++Circuit Breaker Status (closed or open) of the circuit breaker from the power flow.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#MktSwitch]
+=== `MktSwitch`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchStatus.MktSwitch`
+| Cardinality
+| 1
+| Type
+| xref::class/MktSwitch.adoc[`MktSwitch`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktSwitch,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#switchStatus]
+=== `switchStatus`
++++Circuit Breaker Status (closed or open) of the circuit breaker from the power flow.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchStatus.switchStatus`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SwitchStatusType.adoc[`SwitchStatusType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.switchStatus,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MktSwitch.adoc[`MktSwitch`] | xref::class/MktSwitch.adoc#SwitchStatus[`SwitchStatus`]
+
+
+|===
+

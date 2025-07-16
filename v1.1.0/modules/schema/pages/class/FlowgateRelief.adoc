@@ -1,0 +1,195 @@
+= `FlowgateRelief`
+:toclevels: 4
+
+
++++IDC (Interchange Distribution Calulator) sends data for a TLR (Transmission Loading Relief).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:FlowgateRelief`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`FlowgateRelief`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Flowgate,`Flowgate`>>
+//| [[slots_table.Flowgate]]<<Flowgate,`Flowgate`>>
+| 1 +
+xref::class/Flowgate.adoc[`Flowgate`]
+| _n/a_
+| _n/a_
+
+| <<effectiveDate,`effectiveDate`>>
+//| [[slots_table.effectiveDate]]<<effectiveDate,`effectiveDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date/Time when record becomes effective 
+Used to determine when a record becomes effective.+++
+| _n/a_
+
+| <<idcTargetMktFlow,`idcTargetMktFlow`>>
+//| [[slots_table.idcTargetMktFlow]]<<idcTargetMktFlow,`idcTargetMktFlow`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Energy Flow level that should be maintained according to the TLR rules as specified by the IDC. 
+For Realtime Markets use...+++
+| _n/a_
+
+| <<terminateDate,`terminateDate`>>
+//| [[slots_table.terminateDate]]<<terminateDate,`terminateDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date/Time when record is no longer effective 
+Used to determine when a record is no longer effective+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#effectiveDate]
+=== `effectiveDate`
++++Date/Time when record becomes effective 
+Used to determine when a record becomes effective.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowgateRelief.effectiveDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.effectiveDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Flowgate]
+=== `Flowgate`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowgateRelief.Flowgate`
+| Cardinality
+| 1
+| Type
+| xref::class/Flowgate.adoc[`Flowgate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Flowgate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#idcTargetMktFlow]
+=== `idcTargetMktFlow`
++++Energy Flow level that should be maintained according to the TLR rules as specified by the IDC. 
+For Realtime Markets use in dispatch to control constraints under TLR and calculate unconstrained market flows+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowgateRelief.idcTargetMktFlow`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.idcTargetMktFlow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#terminateDate]
+=== `terminateDate`
++++Date/Time when record is no longer effective 
+Used to determine when a record is no longer effective+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowgateRelief.terminateDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.terminateDate,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Flowgate.adoc[`Flowgate`] | xref::class/Flowgate.adoc#FlowgateRelief[`FlowgateRelief`]
+
+
+|===
+

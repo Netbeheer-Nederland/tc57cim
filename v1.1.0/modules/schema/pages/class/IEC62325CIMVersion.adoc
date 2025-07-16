@@ -1,0 +1,113 @@
+= `IEC62325CIMVersion`
+:toclevels: 4
+
+
++++IEC 62325 version number assigned to this UML model.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:IEC62325CIMVersion`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`IEC62325CIMVersion`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<date,`date`>>
+//| [[slots_table.date]]<<date,`date`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Form is YYYY-MM-DD for example for January 5, 2009 it is 2009-01-05.+++
+| _n/a_
+
+| <<version,`version`>>
+//| [[slots_table.version]]<<version,`version`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Form is IEC62325CIMXXvYY where XX is the major CIM package version and the YY is the minor version. For example IEC62325CIM10v03.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#date]
+=== `date`
++++Form is YYYY-MM-DD for example for January 5, 2009 it is 2009-01-05.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IEC62325CIMVersion.date`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.date,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#version]
+=== `version`
++++Form is IEC62325CIMXXvYY where XX is the major CIM package version and the YY is the minor version. For example IEC62325CIM10v03.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IEC62325CIMVersion.version`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.version,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

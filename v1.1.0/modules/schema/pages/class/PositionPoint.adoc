@@ -1,0 +1,255 @@
+= `PositionPoint`
+:toclevels: 4
+
+
++++Set of spatial coordinates that determine a point, defined in the coordinate system specified in 'Location.CoordinateSystem'. Use a single position point instance to describe a point-oriented location. Use a sequence of position points to describe a line-oriented object (physical location of non-point oriented objects like cables or lines), or area of an object (like a substation or a geographical zone - in this case, have first and last position point with the same values).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PositionPoint`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`PositionPoint`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Location,`Location`>>
+//| [[slots_table.Location]]<<Location,`Location`>>
+| 1 +
+xref::class/Location.adoc[`Location`]
+| +++Location described by this position point.+++
+| _n/a_
+
+| <<groupNumber,`groupNumber`>>
+//| [[slots_table.groupNumber]]<<groupNumber,`groupNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Zero-relative sequence number of this group within a series of points; used when there is a need to express disjoint groups...+++
+| _n/a_
+
+| <<sequenceNumber,`sequenceNumber`>>
+//| [[slots_table.sequenceNumber]]<<sequenceNumber,`sequenceNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Zero-relative sequence number of this point within a series of points.+++
+| _n/a_
+
+| <<xPosition,`xPosition`>>
+//| [[slots_table.xPosition]]<<xPosition,`xPosition`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++X axis position.+++
+| _n/a_
+
+| <<yPosition,`yPosition`>>
+//| [[slots_table.yPosition]]<<yPosition,`yPosition`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Y axis position.+++
+| _n/a_
+
+| <<zPosition,`zPosition`>>
+//| [[slots_table.zPosition]]<<zPosition,`zPosition`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Z axis position.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#groupNumber]
+=== `groupNumber`
++++Zero-relative sequence number of this group within a series of points; used when there is a need to express disjoint groups of points that are considered to be part of a single location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PositionPoint.groupNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.groupNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location described by this position point.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PositionPoint.Location`
+| Cardinality
+| 1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Location,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sequenceNumber]
+=== `sequenceNumber`
++++Zero-relative sequence number of this point within a series of points.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PositionPoint.sequenceNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sequenceNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#xPosition]
+=== `xPosition`
++++X axis position.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PositionPoint.xPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.xPosition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#yPosition]
+=== `yPosition`
++++Y axis position.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PositionPoint.yPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.yPosition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#zPosition]
+=== `zPosition`
++++(if applicable) Z axis position.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PositionPoint.zPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.zPosition,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Location.adoc[`Location`] | xref::class/Location.adoc#PositionPoints[`PositionPoints`]
+
+
+|===
+

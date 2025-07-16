@@ -1,0 +1,298 @@
+= `Money`
+:toclevels: 4
+
+
++++Amount of money.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Money`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Double[`double`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/Currency.adoc[`Currency`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Money.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Money.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/Currency.adoc[`Currency`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Money.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Double[`double`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AccessPermit.adoc[`AccessPermit`] | xref::class/AccessPermit.adoc#payment[`payment`]
+
+
+
+| xref::class/AccountMovement.adoc[`AccountMovement`] | xref::class/AccountMovement.adoc#amount[`amount`]
+
+
+
+| xref::class/Asset.adoc[`Asset`] | xref::class/Asset.adoc#purchasePrice[`purchasePrice`]
+
+
+
+| xref::class/AssetModelCatalogueItem.adoc[`AssetModelCatalogueItem`] | xref::class/AssetModelCatalogueItem.adoc#unitCost[`unitCost`]
+
+
+
+| xref::class/AuxiliaryAccount.adoc[`AuxiliaryAccount`] | xref::class/AuxiliaryAccount.adoc#principleAmount[`principleAmount`]
+
+
+
+| xref::class/AuxiliaryAgreement.adoc[`AuxiliaryAgreement`] | xref::class/AuxiliaryAgreement.adoc#minAmount[`minAmount`]
+
+
+
+| xref::class/BilateralTransaction.adoc[`BilateralTransaction`] | xref::class/BilateralTransaction.adoc#totalTranChargeMax[`totalTranChargeMax`]
+
+
+
+| xref::class/CashierShift.adoc[`CashierShift`] | xref::class/CashierShift.adoc#cashFloat[`cashFloat`]
+
+
+
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`] | xref::class/CatalogAssetType.adoc#estimatedUnitCost[`estimatedUnitCost`]
+
+
+
+| xref::class/CompatibleUnit.adoc[`CompatibleUnit`] | xref::class/CompatibleUnit.adoc#estCost[`estCost`]
+
+
+
+| xref::class/ContractorItem.adoc[`ContractorItem`] | xref::class/ContractorItem.adoc#cost[`cost`]
+
+
+
+| xref::class/CRRSegment.adoc[`CRRSegment`] | xref::class/CRRSegment.adoc#clearingPrice[`clearingPrice`]
+
+
+
+| xref::class/CUContractorItem.adoc[`CUContractorItem`] | xref::class/CUContractorItem.adoc#bidAmount[`bidAmount`]
+
+
+
+| xref::class/CustomerAccount.adoc[`CustomerAccount`] | xref::class/CustomerAccount.adoc#lastBillAmount[`lastBillAmount`]
+
+
+
+| xref::class/CustomerBillingInfo.adoc[`CustomerBillingInfo`] | xref::class/CustomerBillingInfo.adoc#pymtPlanAmt[`pymtPlanAmt`]
+
+
+
+| xref::class/Design.adoc[`Design`] | xref::class/Design.adoc#price[`price`]
+
+
+
+| xref::class/Due.adoc[`Due`] | xref::class/Due.adoc#principle[`principle`]
+
+
+
+| xref::class/EnergyTransaction.adoc[`EnergyTransaction`] | xref::class/EnergyTransaction.adoc#congestChargeMax[`congestChargeMax`]
+
+
+
+| xref::class/ErpInvoice.adoc[`ErpInvoice`] | xref::class/ErpInvoice.adoc#amount[`amount`]
+
+
+
+| xref::class/ErpJournalEntry.adoc[`ErpJournalEntry`] | xref::class/ErpJournalEntry.adoc#amount[`amount`]
+
+
+
+| xref::class/ErpLedgerEntry.adoc[`ErpLedgerEntry`] | xref::class/ErpLedgerEntry.adoc#amount[`amount`]
+
+
+
+| xref::class/ErpReqLineItem.adoc[`ErpReqLineItem`] | xref::class/ErpReqLineItem.adoc#cost[`cost`]
+
+
+
+| xref::class/FinancialInfo.adoc[`FinancialInfo`] | xref::class/FinancialInfo.adoc#financialValue[`financialValue`]
+
+
+
+| xref::class/GeneratingUnit.adoc[`GeneratingUnit`] | xref::class/GeneratingUnit.adoc#variableCost[`variableCost`]
+
+
+
+| xref::class/LaborItem.adoc[`LaborItem`] | xref::class/LaborItem.adoc#cost[`cost`]
+
+
+
+| xref::class/LineDetail.adoc[`LineDetail`] | xref::class/LineDetail.adoc#rounding[`rounding`]
+
+
+
+| xref::class/LoadBid.adoc[`LoadBid`] | xref::class/LoadBid.adoc#shutdownCost[`shutdownCost`]
+
+
+
+| xref::class/MarketInvoice.adoc[`MarketInvoice`] | xref::class/MarketInvoice.adoc#amount[`amount`]
+
+
+
+| xref::class/MarketLedgerEntry.adoc[`MarketLedgerEntry`] | xref::class/MarketLedgerEntry.adoc#amount[`amount`]
+
+
+
+| xref::class/MerchantAccount.adoc[`MerchantAccount`] | xref::class/MerchantAccount.adoc#provisionalBalance[`provisionalBalance`]
+
+
+
+| xref::class/MiscCostItem.adoc[`MiscCostItem`] | xref::class/MiscCostItem.adoc#costPerUnit[`costPerUnit`]
+
+
+
+| xref::class/NonStandardItem.adoc[`NonStandardItem`] | xref::class/NonStandardItem.adoc#amount[`amount`]
+
+
+
+| xref::class/OverheadCost.adoc[`OverheadCost`] | xref::class/OverheadCost.adoc#cost[`cost`]
+
+
+
+| xref::class/PanPricingDetail.adoc[`PanPricingDetail`] | xref::class/PanPricingDetail.adoc#price[`price`]
+
+
+
+| xref::class/PassThroughBill.adoc[`PassThroughBill`] | xref::class/PassThroughBill.adoc#taxAmount[`taxAmount`]
+
+
+
+| xref::class/Project.adoc[`Project`] | xref::class/Project.adoc#budget[`budget`]
+
+
+
+| xref::class/SecurityConstraintsClearing.adoc[`SecurityConstraintsClearing`] | xref::class/SecurityConstraintsClearing.adoc#shadowPrice[`shadowPrice`]
+
+
+
+| xref::class/ServiceGuarantee.adoc[`ServiceGuarantee`] | xref::class/ServiceGuarantee.adoc#payAmount[`payAmount`]
+
+
+
+| xref::class/Shift.adoc[`Shift`] | xref::class/Shift.adoc#transactionsGrandTotalRounding[`transactionsGrandTotalRounding`]
+
+
+
+| xref::class/ShutdownCurve.adoc[`ShutdownCurve`] | xref::class/ShutdownCurve.adoc#shutdownCost[`shutdownCost`]
+
+
+
+| xref::class/StartupModel.adoc[`StartupModel`] | xref::class/StartupModel.adoc#startupCost[`startupCost`]
+
+
+
+| xref::class/Tender.adoc[`Tender`] | xref::class/Tender.adoc#change[`change`]
+
+
+
+| xref::class/TypeMaterial.adoc[`TypeMaterial`] | xref::class/TypeMaterial.adoc#estUnitCost[`estUnitCost`]
+
+
+
+| xref::class/VendorShift.adoc[`VendorShift`] | xref::class/VendorShift.adoc#merchantDebitAmount[`merchantDebitAmount`]
+
+
+
+| xref::class/WorkBillingInfo.adoc[`WorkBillingInfo`] | xref::class/WorkBillingInfo.adoc#workPrice[`workPrice`]
+
+
+
+| xref::class/WorkCostDetail.adoc[`WorkCostDetail`] | xref::class/WorkCostDetail.adoc#amount[`amount`]
+
+
+
+| xref::class/WorkTask.adoc[`WorkTask`] | xref::class/WorkTask.adoc#toolCost[`toolCost`]
+
+
+|===
+

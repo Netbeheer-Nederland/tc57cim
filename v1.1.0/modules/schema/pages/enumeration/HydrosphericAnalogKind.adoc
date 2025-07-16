@@ -1,0 +1,64 @@
+= `HydrosphericAnalogKind`
+:toclevels: 4
+
+
++++Kinds of analogs (floats) measuring a hydrospheric condition.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:HydrosphericAnalogKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `floodLevel`
+| `cim:HydrosphericAnalogKind.floodLevel`
+| n/a
+
+| `stormSurgeHeight`
+| `cim:HydrosphericAnalogKind.stormSurgeHeight`
+| n/a
+
+| `surfaceTemperature`
+| `cim:HydrosphericAnalogKind.surfaceTemperature`
+| n/a
+
+| `waterTemperature`
+| `cim:HydrosphericAnalogKind.waterTemperature`
+| n/a
+
+| `waveHeight`
+| `cim:HydrosphericAnalogKind.waveHeight`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/HydrosphericAnalog.adoc[`HydrosphericAnalog`] | xref::class/HydrosphericAnalog.adoc#kind[`kind`]
+
+
+|===
+

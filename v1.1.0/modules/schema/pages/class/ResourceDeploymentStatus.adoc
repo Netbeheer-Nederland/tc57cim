@@ -1,0 +1,187 @@
+= `ResourceDeploymentStatus`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ResourceDeploymentStatus`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ResourceDeploymentStatus`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<InstructionClearing,`InstructionClearing`>>
+//| [[slots_table.InstructionClearing]]<<InstructionClearing,`InstructionClearing`>>
+| 0..1 +
+xref::class/InstructionClearing.adoc[`InstructionClearing`]
+| _n/a_
+| _n/a_
+
+| <<acceptComments,`acceptComments`>>
+//| [[slots_table.acceptComments]]<<acceptComments,`acceptComments`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Commenst to explain why the acceptance status. For example, to explain why a request is accepted only partially, instead of fully.+++
+| _n/a_
+
+| <<acceptStatus,`acceptStatus`>>
+//| [[slots_table.acceptStatus]]<<acceptStatus,`acceptStatus`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Status of the resource for this deployment. Values include (full compliance, partial compliance, opt-out, etc.)+++
+| _n/a_
+
+| <<resourceResponseMW,`resourceResponseMW`>>
+//| [[slots_table.resourceResponseMW]]<<resourceResponseMW,`resourceResponseMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The MW amount the resource can contribute for this deployment. This is from the DR provider - as a response? Or actual? Does...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#acceptComments]
+=== `acceptComments`
++++Commenst to explain why the acceptance status. For example, to explain why a request is accepted only partially, instead of fully.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDeploymentStatus.acceptComments`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.acceptComments,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#acceptStatus]
+=== `acceptStatus`
++++Status of the resource for this deployment. Values include (full compliance, partial compliance, opt-out, etc.)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDeploymentStatus.acceptStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.acceptStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstructionClearing]
+=== `InstructionClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDeploymentStatus.InstructionClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/InstructionClearing.adoc[`InstructionClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstructionClearing,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#resourceResponseMW]
+=== `resourceResponseMW`
++++The MW amount the resource can contribute for this deployment. This is from the DR provider - as a response? Or actual? Does this belong in settlement? Discuss more.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceDeploymentStatus.resourceResponseMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.resourceResponseMW,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/InstructionClearing.adoc[`InstructionClearing`] | xref::class/InstructionClearing.adoc#ResourceDeploymentStatus[`ResourceDeploymentStatus`]
+
+
+|===
+

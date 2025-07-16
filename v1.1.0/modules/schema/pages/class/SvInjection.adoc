@@ -1,0 +1,190 @@
+= `SvInjection`
+:toclevels: 4
+
+
++++The SvInjection reports the calculated bus injection minus the sum of the terminal flows. The terminal flow is positive out from the bus (load sign convention) and bus injection has positive flow into the bus. SvInjection may have the remainder after state estimation or slack after power flow calculation.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SvInjection`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/StateVariable.adoc[`StateVariable`]
+** *`SvInjection`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<TopologicalNode,`TopologicalNode`>>
+//| [[slots_table.TopologicalNode]]<<TopologicalNode,`TopologicalNode`>>
+| 1 +
+xref::class/TopologicalNode.adoc[`TopologicalNode`]
+| +++The topological node associated with the flow injection state variable.+++
+| _n/a_
+
+| <<pInjection,`pInjection`>>
+//| [[slots_table.pInjection]]<<pInjection,`pInjection`>>
+| 0..1 +
+xref::class/ActivePower.adoc[`ActivePower`]
+| +++The active power mismatch between calculated injection and initial injection.  Positive sign means injection into the...+++
+| _n/a_
+
+| <<phase,`phase`>>
+//| [[slots_table.phase]]<<phase,`phase`>>
+| 0..1 +
+xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++The terminal phase at which the connection is applied.   If missing, the injection is assumed to be balanced among...+++
+| _n/a_
+
+| <<qInjection,`qInjection`>>
+//| [[slots_table.qInjection]]<<qInjection,`qInjection`>>
+| 0..1 +
+xref::class/ReactivePower.adoc[`ReactivePower`]
+| +++The reactive power mismatch between calculated injection and initial injection.  Positive sign means injection into the...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#phase]
+=== `phase`
++++The terminal phase at which the connection is applied.   If missing, the injection is assumed to be balanced among non-neutral phases.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvInjection.phase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phase,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pInjection]
+=== `pInjection`
++++The active power mismatch between calculated injection and initial injection.  Positive sign means injection into the TopologicalNode (bus).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvInjection.pInjection`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pInjection,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#qInjection]
+=== `qInjection`
++++The reactive power mismatch between calculated injection and initial injection.  Positive sign means injection into the TopologicalNode (bus).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvInjection.qInjection`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReactivePower.adoc[`ReactivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.qInjection,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TopologicalNode]
+=== `TopologicalNode`
++++The topological node associated with the flow injection state variable.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvInjection.TopologicalNode`
+| Cardinality
+| 1
+| Type
+| xref::class/TopologicalNode.adoc[`TopologicalNode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TopologicalNode,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TopologicalNode.adoc[`TopologicalNode`] | xref::class/TopologicalNode.adoc#SvInjection[`SvInjection`]
+
+
+|===
+

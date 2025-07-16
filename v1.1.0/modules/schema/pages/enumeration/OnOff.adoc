@@ -1,0 +1,53 @@
+= `OnOff`
+:toclevels: 4
+
+
++++ON
+OFF+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OnOff`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `OFF`
+| `cim:OnOff.OFF`
+| n/a
+
+| `ON`
+| `cim:OnOff.ON`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/DefaultBid.adoc[`DefaultBid`] | xref::class/DefaultBid.adoc#peakFlag[`peakFlag`]
+
+
+|===
+

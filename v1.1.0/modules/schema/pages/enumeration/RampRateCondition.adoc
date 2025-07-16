@@ -1,0 +1,60 @@
+= `RampRateCondition`
+:toclevels: 4
+
+
++++Ramp rate condition.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:RampRateCondition`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `BEST`
+| `cim:RampRateCondition.BEST`
+| n/a
+
+| `NA`
+| `cim:RampRateCondition.NA`
+| n/a
+
+| `NORMAL`
+| `cim:RampRateCondition.NORMAL`
+| n/a
+
+| `WORST`
+| `cim:RampRateCondition.WORST`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RampRateCurve.adoc[`RampRateCurve`] | xref::class/RampRateCurve.adoc#condition[`condition`]
+
+
+|===
+

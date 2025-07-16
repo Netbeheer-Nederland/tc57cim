@@ -1,0 +1,834 @@
+= `DesignLocationCU`
+:toclevels: 4
+
+
++++Compatible unit at a given design location.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DesignLocationCU`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/WorkIdentifiedObject.adoc[`WorkIdentifiedObject`]
+*** *`DesignLocationCU`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<CUGroups,`CUGroups`>>
+//| [[slots_table.CUGroups]]<<CUGroups,`CUGroups`>>
+| 0..* +
+xref::class/CUGroup.adoc[`CUGroup`]
+| _n/a_
+| _n/a_
+
+| <<CompatibleUnits,`CompatibleUnits`>>
+//| [[slots_table.CompatibleUnits]]<<CompatibleUnits,`CompatibleUnits`>>
+| 0..* +
+xref::class/CompatibleUnit.adoc[`CompatibleUnit`]
+| _n/a_
+| _n/a_
+
+| <<ConditionFactors,`ConditionFactors`>>
+//| [[slots_table.ConditionFactors]]<<ConditionFactors,`ConditionFactors`>>
+| 0..* +
+xref::class/ConditionFactor.adoc[`ConditionFactor`]
+| _n/a_
+| _n/a_
+
+| <<DesignLocation,`DesignLocation`>>
+//| [[slots_table.DesignLocation]]<<DesignLocation,`DesignLocation`>>
+| 0..1 +
+xref::class/DesignLocation.adoc[`DesignLocation`]
+| _n/a_
+| _n/a_
+
+| <<Designs,`Designs`>>
+//| [[slots_table.Designs]]<<Designs,`Designs`>>
+| 0..* +
+xref::class/Design.adoc[`Design`]
+| _n/a_
+| _n/a_
+
+| <<WorkTasks,`WorkTasks`>>
+//| [[slots_table.WorkTasks]]<<WorkTasks,`WorkTasks`>>
+| 0..* +
+xref::class/OldWorkTask.adoc[`OldWorkTask`]
+| _n/a_
+| _n/a_
+
+| <<cuAccount,`cuAccount`>>
+//| [[slots_table.cuAccount]]<<cuAccount,`cuAccount`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++A code that helps direct accounting (capital, expense, or accounting treatment).+++
+| _n/a_
+
+| <<cuAction,`cuAction`>>
+//| [[slots_table.cuAction]]<<cuAction,`cuAction`>>
+| 0..1 +
+xref::enumeration/WorkActionKind.adoc[`WorkActionKind`]
+| +++A code that instructs the crew what action to perform.+++
+| _n/a_
+
+| <<cuQuantity,`cuQuantity`>>
+//| [[slots_table.cuQuantity]]<<cuQuantity,`cuQuantity`>>
+| 0..1 +
+xref::class/IntegerQuantity.adoc[`IntegerQuantity`]
+| +++The quantity of the CU being assigned to this location.+++
+| _n/a_
+
+| <<cuUsage,`cuUsage`>>
+//| [[slots_table.cuUsage]]<<cuUsage,`cuUsage`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++As the same CU can be used for different purposes and accounting purposes, usage must be specified. Examples include:...+++
+| _n/a_
+
+| <<removalDate,`removalDate`>>
+//| [[slots_table.removalDate]]<<removalDate,`removalDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Year when a CU that represents an asset is removed.+++
+| _n/a_
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| _n/a_
+| _n/a_
+
+| <<toBeEnergised,`toBeEnergised`>>
+//| [[slots_table.toBeEnergised]]<<toBeEnergised,`toBeEnergised`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if associated electrical equipment is intended to be energized while work is being performed.+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CompatibleUnits]
+=== `CompatibleUnits`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.CompatibleUnits`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CompatibleUnit.adoc[`CompatibleUnit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CompatibleUnits,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConditionFactors]
+=== `ConditionFactors`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.ConditionFactors`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConditionFactor.adoc[`ConditionFactor`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConditionFactors,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cuAccount]
+=== `cuAccount`
++++A code that helps direct accounting (capital, expense, or accounting treatment).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.cuAccount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cuAccount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cuAction]
+=== `cuAction`
++++A code that instructs the crew what action to perform.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.cuAction`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/WorkActionKind.adoc[`WorkActionKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cuAction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CUGroups]
+=== `CUGroups`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.CUGroups`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CUGroup.adoc[`CUGroup`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CUGroups,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cuQuantity]
+=== `cuQuantity`
++++The quantity of the CU being assigned to this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.cuQuantity`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IntegerQuantity.adoc[`IntegerQuantity`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cuQuantity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cuUsage]
+=== `cuUsage`
++++As the same CU can be used for different purposes and accounting purposes, usage must be specified. Examples include: distribution, transmission, substation.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.cuUsage`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cuUsage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DesignLocation]
+=== `DesignLocation`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.DesignLocation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DesignLocation.adoc[`DesignLocation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DesignLocation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Designs]
+=== `Designs`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.Designs`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Design.adoc[`Design`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Designs,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#removalDate]
+=== `removalDate`
++++Year when a CU that represents an asset is removed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.removalDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.removalDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#toBeEnergised]
+=== `toBeEnergised`
++++True if associated electrical equipment is intended to be energized while work is being performed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.toBeEnergised`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.toBeEnergised,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WorkTasks]
+=== `WorkTasks`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DesignLocationCU.WorkTasks`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OldWorkTask.adoc[`OldWorkTask`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WorkTasks,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CompatibleUnit.adoc[`CompatibleUnit`] | xref::class/CompatibleUnit.adoc#DesignLocationCUs[`DesignLocationCUs`]
+
+
+
+| xref::class/ConditionFactor.adoc[`ConditionFactor`] | xref::class/ConditionFactor.adoc#DesignLocationCUs[`DesignLocationCUs`]
+
+
+
+| xref::class/CUGroup.adoc[`CUGroup`] | xref::class/CUGroup.adoc#DesignLocationCUs[`DesignLocationCUs`]
+
+
+
+| xref::class/Design.adoc[`Design`] | xref::class/Design.adoc#DesignLocationsCUs[`DesignLocationsCUs`]
+
+
+
+| xref::class/DesignLocation.adoc[`DesignLocation`] | xref::class/DesignLocation.adoc#DesignLocationCUs[`DesignLocationCUs`]
+
+
+
+| xref::class/OldWorkTask.adoc[`OldWorkTask`] | xref::class/OldWorkTask.adoc#DesignLocationCUs[`DesignLocationCUs`]
+
+
+|===
+

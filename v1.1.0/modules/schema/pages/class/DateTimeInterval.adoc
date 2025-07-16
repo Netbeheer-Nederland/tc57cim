@@ -1,0 +1,251 @@
+= `DateTimeInterval`
+:toclevels: 4
+
+
++++Interval between two date and time points, where the interval includes the start time but excludes end time.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DateTimeInterval`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`DateTimeInterval`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<end,`end`>>
+//| [[slots_table.end]]<<end,`end`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++End date and time of this interval.  The end date and time where the interval is defined up to, but excluded.+++
+| _n/a_
+
+| <<start,`start`>>
+//| [[slots_table.start]]<<start,`start`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Start date and time of this interval.  The start date and time is included in the defined interval.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#end]
+=== `end`
++++End date and time of this interval.  The end date and time where the interval is defined up to, but excluded.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateTimeInterval.end`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.end,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#start]
+=== `start`
++++Start date and time of this interval.  The start date and time is included in the defined interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateTimeInterval.start`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.start,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Agreement.adoc[`Agreement`] | xref::class/Agreement.adoc#validityInterval[`validityInterval`]
+
+
+
+| xref::class/Appointment.adoc[`Appointment`] | xref::class/Appointment.adoc#meetingInterval[`meetingInterval`]
+
+
+
+| xref::class/Assignment.adoc[`Assignment`] | xref::class/Assignment.adoc#effectivePeriod[`effectivePeriod`]
+
+
+
+| xref::class/AvailablityPlan.adoc[`AvailablityPlan`] | xref::class/AvailablityPlan.adoc#validPeriod[`validPeriod`]
+
+
+
+| xref::class/BaseReading.adoc[`BaseReading`] | xref::class/BaseReading.adoc#timePeriod[`timePeriod`]
+
+
+
+| xref::class/Capability.adoc[`Capability`] | xref::class/Capability.adoc#validityInterval[`validityInterval`]
+
+
+
+| xref::class/CommodityPrice.adoc[`CommodityPrice`] | xref::class/CommodityPrice.adoc#timeIntervalPeriod[`timeIntervalPeriod`]
+
+
+
+| xref::class/DemandResponseProgram.adoc[`DemandResponseProgram`] | xref::class/DemandResponseProgram.adoc#validityInterval[`validityInterval`]
+
+
+
+| xref::class/EndDeviceControl.adoc[`EndDeviceControl`] | xref::class/EndDeviceControl.adoc#scheduledInterval[`scheduledInterval`]
+
+
+
+| xref::class/EndDeviceTiming.adoc[`EndDeviceTiming`] | xref::class/EndDeviceTiming.adoc#interval[`interval`]
+
+
+
+| xref::class/EnergyPriceIndex.adoc[`EnergyPriceIndex`] | xref::class/EnergyPriceIndex.adoc#validPeriod[`validPeriod`]
+
+
+
+| xref::class/EnvironmentalAlert.adoc[`EnvironmentalAlert`] | xref::class/EnvironmentalAlert.adoc#inEffect[`inEffect`]
+
+
+
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`] | xref::class/EnvironmentalPhenomenon.adoc#timeInterval[`timeInterval`]
+
+
+
+| xref::class/ErpInvoiceLineItem.adoc[`ErpInvoiceLineItem`] | xref::class/ErpInvoiceLineItem.adoc#billPeriod[`billPeriod`]
+
+
+
+| xref::class/Forecast.adoc[`Forecast`] | xref::class/Forecast.adoc#validFor[`validFor`]
+
+
+
+| xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`] | xref::class/MarketInvoiceLineItem.adoc#billPeriod[`billPeriod`]
+
+
+
+| xref::class/MarketSkill.adoc[`MarketSkill`] | xref::class/MarketSkill.adoc#certificationPeriod[`certificationPeriod`]
+
+
+
+| xref::class/MeterReading.adoc[`MeterReading`] | xref::class/MeterReading.adoc#valuesInterval[`valuesInterval`]
+
+
+
+| xref::class/OperationalRestriction.adoc[`OperationalRestriction`] | xref::class/OperationalRestriction.adoc#activePeriod[`activePeriod`]
+
+
+
+| xref::class/Outage.adoc[`Outage`] | xref::class/Outage.adoc#estimatedPeriod[`estimatedPeriod`]
+
+
+
+| xref::class/OutagePlan.adoc[`OutagePlan`] | xref::class/OutagePlan.adoc#plannedPeriod[`plannedPeriod`]
+
+
+
+| xref::class/Period.adoc[`Period`] | xref::class/Period.adoc#timeInterval[`timeInterval`]
+
+
+
+| xref::class/ScheduledEventData.adoc[`ScheduledEventData`] | xref::class/ScheduledEventData.adoc#requestedWindow[`requestedWindow`]
+
+
+
+| xref::class/ServiceGuarantee.adoc[`ServiceGuarantee`] | xref::class/ServiceGuarantee.adoc#applicationPeriod[`applicationPeriod`]
+
+
+
+| xref::class/Shift.adoc[`Shift`] | xref::class/Shift.adoc#activityInterval[`activityInterval`]
+
+
+
+| xref::class/ShiftPattern.adoc[`ShiftPattern`] | xref::class/ShiftPattern.adoc#validityInterval[`validityInterval`]
+
+
+
+| xref::class/Skill.adoc[`Skill`] | xref::class/Skill.adoc#certificationPeriod[`certificationPeriod`]
+
+
+
+| xref::class/SwitchingOrder.adoc[`SwitchingOrder`] | xref::class/SwitchingOrder.adoc#plannedExecutionInterval[`plannedExecutionInterval`]
+
+
+
+| xref::class/SwitchingPlan.adoc[`SwitchingPlan`] | xref::class/SwitchingPlan.adoc#plannedPeriod[`plannedPeriod`]
+
+
+
+| xref::class/SwitchingPlanRequest.adoc[`SwitchingPlanRequest`] | xref::class/SwitchingPlanRequest.adoc#reverseSwitchingDateTimeInterval[`reverseSwitchingDateTimeInterval`]
+
+
+
+| xref::class/TimePoint.adoc[`TimePoint`] | xref::class/TimePoint.adoc#window[`window`]
+
+
+
+| xref::class/TimeSchedule.adoc[`TimeSchedule`] | xref::class/TimeSchedule.adoc#scheduleInterval[`scheduleInterval`]
+
+
+
+| xref::class/TroubleOrder.adoc[`TroubleOrder`] | xref::class/TroubleOrder.adoc#plannedExecutionInterval[`plannedExecutionInterval`]
+
+
+|===
+

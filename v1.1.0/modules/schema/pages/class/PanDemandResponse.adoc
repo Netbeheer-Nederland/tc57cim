@@ -1,0 +1,625 @@
+= `PanDemandResponse`
+:toclevels: 4
+
+
++++PAN control used to issue action/command to PAN devices during a demand response/load control event.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PanDemandResponse`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+** *`PanDemandResponse`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<appliance,`appliance`>>
+//| [[slots_table.appliance]]<<appliance,`appliance`>>
+| 0..1 +
+xref::class/ControlledAppliance.adoc[`ControlledAppliance`]
+| +++Appliance being controlled.+++
+| _n/a_
+
+| <<avgLoadAdjustment,`avgLoadAdjustment`>>
+//| [[slots_table.avgLoadAdjustment]]<<avgLoadAdjustment,`avgLoadAdjustment`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Used to define a maximum energy usage limit as a percentage of the client implementations specific average energy usage. The...+++
+| _n/a_
+
+| <<cancelControlMode,`cancelControlMode`>>
+//| [[slots_table.cancelControlMode]]<<cancelControlMode,`cancelControlMode`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Encoding of cancel control.+++
+| _n/a_
+
+| <<cancelDateTime,`cancelDateTime`>>
+//| [[slots_table.cancelDateTime]]<<cancelDateTime,`cancelDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Timestamp when a canceling of the event is scheduled to start.+++
+| _n/a_
+
+| <<cancelNow,`cancelNow`>>
+//| [[slots_table.cancelNow]]<<cancelNow,`cancelNow`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true, a canceling of the event should start immediately.+++
+| _n/a_
+
+| <<coolingOffset,`coolingOffset`>>
+//| [[slots_table.coolingOffset]]<<coolingOffset,`coolingOffset`>>
+| 0..1 +
+xref::class/Temperature.adoc[`Temperature`]
+| +++Requested offset to apply to the normal cooling setpoint at the time of the start of the event. It represents a temperature...+++
+| _n/a_
+
+| <<coolingSetpoint,`coolingSetpoint`>>
+//| [[slots_table.coolingSetpoint]]<<coolingSetpoint,`coolingSetpoint`>>
+| 0..1 +
+xref::class/Temperature.adoc[`Temperature`]
+| +++Requested cooling set point. Temperature set point is typically defined and calculated based on local temperature.+++
+| _n/a_
+
+| <<criticalityLevel,`criticalityLevel`>>
+//| [[slots_table.criticalityLevel]]<<criticalityLevel,`criticalityLevel`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Level of criticality for the action of this control. The action taken by load control devices for an event can be solely...+++
+| _n/a_
+
+| <<dutyCycle,`dutyCycle`>>
+//| [[slots_table.dutyCycle]]<<dutyCycle,`dutyCycle`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Maximum "on" state duty cycle as a percentage of time. For example, if the value is 80, the device would be in an "on" state...+++
+| _n/a_
+
+| <<enrollmentGroup,`enrollmentGroup`>>
+//| [[slots_table.enrollmentGroup]]<<enrollmentGroup,`enrollmentGroup`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Provides a mechanism to direct load control actions to groups of PAN devices. It can be used in conjunction with the PAN...+++
+| _n/a_
+
+| <<heatingOffset,`heatingOffset`>>
+//| [[slots_table.heatingOffset]]<<heatingOffset,`heatingOffset`>>
+| 0..1 +
+xref::class/Temperature.adoc[`Temperature`]
+| +++Requested offset to apply to the normal heating setpoint at the time of the start of the event. It represents a temperature...+++
+| _n/a_
+
+| <<heatingSetpoint,`heatingSetpoint`>>
+//| [[slots_table.heatingSetpoint]]<<heatingSetpoint,`heatingSetpoint`>>
+| 0..1 +
+xref::class/Temperature.adoc[`Temperature`]
+| +++Requested heating set point. Temperature set point is typically defined and calculated based on local temperature.+++
+| _n/a_
+
+| <<EndDeviceControl,`EndDeviceControl`>>
+//| [[slots_table.EndDeviceControl]]<<EndDeviceControl,`EndDeviceControl`>>
+| 0..1 +
+xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+| +++End device control issuing this end device action.+++
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+| <<command,`command`>>
+//| [[slots_table.command]]<<command,`command`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Command text.+++
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+| <<duration,`duration`>>
+//| [[slots_table.duration]]<<duration,`duration`>>
+| 0..1 +
+xref::class/Minutes.adoc[`Minutes`]
+| +++Amount of time the action of this control is to remain active.+++
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+| <<durationIndefinite,`durationIndefinite`>>
+//| [[slots_table.durationIndefinite]]<<durationIndefinite,`durationIndefinite`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the action of this control is indefinite.+++
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+| <<startDateTime,`startDateTime`>>
+//| [[slots_table.startDateTime]]<<startDateTime,`startDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Start date and time for action of this control.+++
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+|===
+
+'''
+
+
+//[discrete]
+[#appliance]
+=== `appliance`
++++Appliance being controlled.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanDemandResponse.appliance`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ControlledAppliance.adoc[`ControlledAppliance`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.appliance,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#avgLoadAdjustment]
+=== `avgLoadAdjustment`
++++Used to define a maximum energy usage limit as a percentage of the client implementations specific average energy usage. The load adjustment percentage is added to 100% creating a percentage limit applied to the client implementations specific average energy usage. A -10% load adjustment percentage will establish an energy usage limit equal to 90% of the client implementations specific average energy usage. Each load adjustment percentage is referenced to the client implementations specific average energy usage. There are no cumulative effects.
+The range of this field is -100% to +100% with a resolution of 1. A -100% value equals a total load shed. A +100% value will limit the energy usage to the client implementations specific average energy usage.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanDemandResponse.avgLoadAdjustment`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.avgLoadAdjustment,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cancelControlMode]
+=== `cancelControlMode`
++++Encoding of cancel control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanDemandResponse.cancelControlMode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cancelControlMode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cancelDateTime]
+=== `cancelDateTime`
++++Timestamp when a canceling of the event is scheduled to start.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanDemandResponse.cancelDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cancelDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cancelNow]
+=== `cancelNow`
++++If true, a canceling of the event should start immediately.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanDemandResponse.cancelNow`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cancelNow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#command]
+=== `command`
++++Command text.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.command`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.command,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#coolingOffset]
+=== `coolingOffset`
++++Requested offset to apply to the normal cooling setpoint at the time of the start of the event. It represents a temperature change that will be applied to the associated cooling set point. The temperature offsets will be calculated per the local temperature in the thermostat. The calculated temperature will be interpreted as the number of degrees to be added to the cooling set point. Sequential demand response events are not cumulative. The offset shall be applied to the normal setpoint.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanDemandResponse.coolingOffset`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Temperature.adoc[`Temperature`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.coolingOffset,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#coolingSetpoint]
+=== `coolingSetpoint`
++++Requested cooling set point. Temperature set point is typically defined and calculated based on local temperature.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanDemandResponse.coolingSetpoint`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Temperature.adoc[`Temperature`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.coolingSetpoint,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#criticalityLevel]
+=== `criticalityLevel`
++++Level of criticality for the action of this control. The action taken by load control devices for an event can be solely based on this value, or in combination with other load control event fields supported by the device.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanDemandResponse.criticalityLevel`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.criticalityLevel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#duration]
+=== `duration`
++++Amount of time the action of this control is to remain active.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.duration`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Minutes.adoc[`Minutes`]
+
+| Inherited from
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.duration,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#durationIndefinite]
+=== `durationIndefinite`
++++True if the action of this control is indefinite.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.durationIndefinite`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.durationIndefinite,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dutyCycle]
+=== `dutyCycle`
++++Maximum "on" state duty cycle as a percentage of time. For example, if the value is 80, the device would be in an "on" state for 80% of the time for the duration of the action.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanDemandResponse.dutyCycle`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dutyCycle,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EndDeviceControl]
+=== `EndDeviceControl`
++++End device control issuing this end device action.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.EndDeviceControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+
+| Inherited from
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EndDeviceControl,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#enrollmentGroup]
+=== `enrollmentGroup`
++++Provides a mechanism to direct load control actions to groups of PAN devices. It can be used in conjunction with the PAN device types.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanDemandResponse.enrollmentGroup`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.enrollmentGroup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#heatingOffset]
+=== `heatingOffset`
++++Requested offset to apply to the normal heating setpoint at the time of the start of the event. It represents a temperature change that will be applied to the associated heating set point. The temperature offsets will be calculated per the local temperature in the thermostat. The calculated temperature will be interpreted as the number of degrees to be subtracted from the heating set point. Sequential demand response events are not cumulative. The offset shall be applied to the normal setpoint.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanDemandResponse.heatingOffset`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Temperature.adoc[`Temperature`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.heatingOffset,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#heatingSetpoint]
+=== `heatingSetpoint`
++++Requested heating set point. Temperature set point is typically defined and calculated based on local temperature.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PanDemandResponse.heatingSetpoint`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Temperature.adoc[`Temperature`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.heatingSetpoint,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startDateTime]
+=== `startDateTime`
++++Start date and time for action of this control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.startDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/EndDeviceAction.adoc[`EndDeviceAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startDateTime,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

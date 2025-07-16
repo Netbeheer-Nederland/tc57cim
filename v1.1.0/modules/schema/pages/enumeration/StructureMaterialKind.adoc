@@ -1,0 +1,60 @@
+= `StructureMaterialKind`
+:toclevels: 4
+
+
++++Kind of material used for structures.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:StructureMaterialKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `concrete`
+| `cim:StructureMaterialKind.concrete`
+| n/a
+
+| `other`
+| `cim:StructureMaterialKind.other`
+| n/a
+
+| `steel`
+| `cim:StructureMaterialKind.steel`
+| n/a
+
+| `wood`
+| `cim:StructureMaterialKind.wood`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Structure.adoc[`Structure`] | xref::class/Structure.adoc#materialKind[`materialKind`]
+
+
+|===
+

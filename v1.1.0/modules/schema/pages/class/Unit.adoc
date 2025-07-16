@@ -1,0 +1,160 @@
+= `Unit`
+:toclevels: 4
+
+
++++The identification of the unit name for the time series quantities.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Unit`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`Unit`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AceTariffType,`AceTariffType`>>
+//| [[slots_table.AceTariffType]]<<AceTariffType,`AceTariffType`>>
+| 0..* +
+xref::class/AceTariffType.adoc[`AceTariffType`]
+| _n/a_
+| _n/a_
+
+| <<TimeSeries,`TimeSeries`>>
+//| [[slots_table.TimeSeries]]<<TimeSeries,`TimeSeries`>>
+| 0..* +
+xref::class/TimeSeries.adoc[`TimeSeries`]
+| _n/a_
+| _n/a_
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The coded representation of the unit.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#AceTariffType]
+=== `AceTariffType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Unit.AceTariffType`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AceTariffType.adoc[`AceTariffType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AceTariffType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The coded representation of the unit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Unit.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Unit.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TimeSeries,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AceTariffType.adoc[`AceTariffType`] | xref::class/AceTariffType.adoc#Unit[`Unit`]
+
+
+
+| xref::class/TimeSeries.adoc[`TimeSeries`] | xref::class/TimeSeries.adoc#Unit[`Unit`]
+
+
+|===
+

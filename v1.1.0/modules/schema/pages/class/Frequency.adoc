@@ -1,0 +1,182 @@
+= `Frequency`
+:toclevels: 4
+
+
++++Cycles per second.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Frequency`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Frequency.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Frequency.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Frequency.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AsynchronousMachine.adoc[`AsynchronousMachine`] | xref::class/AsynchronousMachine.adoc#nominalFrequency[`nominalFrequency`]
+
+
+
+| xref::class/BaseFrequency.adoc[`BaseFrequency`] | xref::class/BaseFrequency.adoc#frequency[`frequency`]
+
+
+
+| xref::class/FrequencyConverter.adoc[`FrequencyConverter`] | xref::class/FrequencyConverter.adoc#frequency[`frequency`]
+
+
+
+| xref::class/GovCT2.adoc[`GovCT2`] | xref::class/GovCT2.adoc#flim9[`flim9`]
+
+
+
+| xref::class/GovGAST1.adoc[`GovGAST1`] | xref::class/GovGAST1.adoc#eps[`eps`]
+
+
+
+| xref::class/GovHydro2.adoc[`GovHydro2`] | xref::class/GovHydro2.adoc#eps[`eps`]
+
+
+
+| xref::class/GovHydro3.adoc[`GovHydro3`] | xref::class/GovHydro3.adoc#eps[`eps`]
+
+
+
+| xref::class/GovHydro4.adoc[`GovHydro4`] | xref::class/GovHydro4.adoc#eps[`eps`]
+
+
+
+| xref::class/GovHydroDD.adoc[`GovHydroDD`] | xref::class/GovHydroDD.adoc#eps[`eps`]
+
+
+
+| xref::class/GovHydroFrancis.adoc[`GovHydroFrancis`] | xref::class/GovHydroFrancis.adoc#db1[`db1`]
+
+
+
+| xref::class/GovHydroPelton.adoc[`GovHydroPelton`] | xref::class/GovHydroPelton.adoc#db2[`db2`]
+
+
+
+| xref::class/GovHydroPID.adoc[`GovHydroPID`] | xref::class/GovHydroPID.adoc#eps[`eps`]
+
+
+
+| xref::class/GovHydroR.adoc[`GovHydroR`] | xref::class/GovHydroR.adoc#eps[`eps`]
+
+
+
+| xref::class/GovSteam1.adoc[`GovSteam1`] | xref::class/GovSteam1.adoc#eps[`eps`]
+
+
+
+| xref::class/HostControlArea.adoc[`HostControlArea`] | xref::class/HostControlArea.adoc#freqSetPoint[`freqSetPoint`]
+
+
+
+| xref::class/SwitchInfo.adoc[`SwitchInfo`] | xref::class/SwitchInfo.adoc#ratedFrequency[`ratedFrequency`]
+
+
+
+| xref::class/SynchrocheckRelay.adoc[`SynchrocheckRelay`] | xref::class/SynchrocheckRelay.adoc#maxFreqDiff[`maxFreqDiff`]
+
+
+
+| xref::class/TapChangerInfo.adoc[`TapChangerInfo`] | xref::class/TapChangerInfo.adoc#frequency[`frequency`]
+
+
+|===
+

@@ -1,0 +1,225 @@
+= `EndDeviceAction`
+:toclevels: 4
+
+
++++Action/command performed by an end device on a device other than the end device.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EndDeviceAction`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`EndDeviceAction`*
+ ** xref::class/PanDemandResponse.adoc[`PanDemandResponse`]
+ ** xref::class/PanDisplay.adoc[`PanDisplay`]
+ ** xref::class/PanPricing.adoc[`PanPricing`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<EndDeviceControl,`EndDeviceControl`>>
+//| [[slots_table.EndDeviceControl]]<<EndDeviceControl,`EndDeviceControl`>>
+| 0..1 +
+xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+| +++End device control issuing this end device action.+++
+| _n/a_
+
+| <<command,`command`>>
+//| [[slots_table.command]]<<command,`command`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Command text.+++
+| _n/a_
+
+| <<duration,`duration`>>
+//| [[slots_table.duration]]<<duration,`duration`>>
+| 0..1 +
+xref::class/Minutes.adoc[`Minutes`]
+| +++Amount of time the action of this control is to remain active.+++
+| _n/a_
+
+| <<durationIndefinite,`durationIndefinite`>>
+//| [[slots_table.durationIndefinite]]<<durationIndefinite,`durationIndefinite`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if the action of this control is indefinite.+++
+| _n/a_
+
+| <<startDateTime,`startDateTime`>>
+//| [[slots_table.startDateTime]]<<startDateTime,`startDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Start date and time for action of this control.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#command]
+=== `command`
++++Command text.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.command`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.command,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#duration]
+=== `duration`
++++Amount of time the action of this control is to remain active.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.duration`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Minutes.adoc[`Minutes`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.duration,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#durationIndefinite]
+=== `durationIndefinite`
++++True if the action of this control is indefinite.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.durationIndefinite`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.durationIndefinite,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EndDeviceControl]
+=== `EndDeviceControl`
++++End device control issuing this end device action.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.EndDeviceControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EndDeviceControl,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startDateTime]
+=== `startDateTime`
++++Start date and time for action of this control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceAction.startDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startDateTime,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EndDeviceControl.adoc[`EndDeviceControl`] | xref::class/EndDeviceControl.adoc#EndDeviceAction[`EndDeviceAction`]
+
+
+|===
+

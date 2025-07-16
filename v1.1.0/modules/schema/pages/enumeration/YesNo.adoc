@@ -1,0 +1,160 @@
+= `YesNo`
+:toclevels: 4
+
+
++++Used as a flag set to Yes or No.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:YesNo`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `NO`
+| `cim:YesNo.NO`
+| n/a
+
+| `YES`
+| `cim:YesNo.YES`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AuxiliaryValues.adoc[`AuxiliaryValues`] | xref::class/AuxiliaryValues.adoc#startUpCostEligibilityFlag[`startUpCostEligibilityFlag`]
+
+
+
+| xref::class/BidSelfSched.adoc[`BidSelfSched`] | xref::class/BidSelfSched.adoc#priorityFlag[`priorityFlag`]
+
+
+
+| xref::class/ConstraintResults.adoc[`ConstraintResults`] | xref::class/ConstraintResults.adoc#optimizationFlag[`optimizationFlag`]
+
+
+
+| xref::class/ContractDistributionFactor.adoc[`ContractDistributionFactor`] | xref::class/ContractDistributionFactor.adoc#sourceFlag[`sourceFlag`]
+
+
+
+| xref::class/ContractRight.adoc[`ContractRight`] | xref::class/ContractRight.adoc#physicalRightsRTM[`physicalRightsRTM`]
+
+
+
+| xref::class/ControlAreaDesignation.adoc[`ControlAreaDesignation`] | xref::class/ControlAreaDesignation.adoc#native[`native`]
+
+
+
+| xref::class/DefaultBidCurve.adoc[`DefaultBidCurve`] | xref::class/DefaultBidCurve.adoc#debAdderFlag[`debAdderFlag`]
+
+
+
+| xref::class/DopInstruction.adoc[`DopInstruction`] | xref::class/DopInstruction.adoc#runIndicatorDOP[`runIndicatorDOP`]
+
+
+
+| xref::class/DotInstruction.adoc[`DotInstruction`] | xref::class/DotInstruction.adoc#regulationStatus[`regulationStatus`]
+
+
+
+| xref::class/InstructionClearingDOT.adoc[`InstructionClearingDOT`] | xref::class/InstructionClearingDOT.adoc#contingencyActive[`contingencyActive`]
+
+
+
+| xref::class/Instructions.adoc[`Instructions`] | xref::class/Instructions.adoc#manuallyBlocked[`manuallyBlocked`]
+
+
+
+| xref::class/MarketRegionResults.adoc[`MarketRegionResults`] | xref::class/MarketRegionResults.adoc#lumpyIndicator[`lumpyIndicator`]
+
+
+
+| xref::class/MarketResults.adoc[`MarketResults`] | xref::class/MarketResults.adoc#contingentOperatingResAvail[`contingentOperatingResAvail`]
+
+
+
+| xref::class/MPMClearing.adoc[`MPMClearing`] | xref::class/MPMClearing.adoc#SMPMFinalFlag[`SMPMFinalFlag`]
+
+
+
+| xref::class/MSSAggregation.adoc[`MSSAggregation`] | xref::class/MSSAggregation.adoc#rucProcurement[`rucProcurement`]
+
+
+
+| xref::class/MSSZone.adoc[`MSSZone`] | xref::class/MSSZone.adoc#rucGrossSettlement[`rucGrossSettlement`]
+
+
+
+| xref::class/OrgResOwnership.adoc[`OrgResOwnership`] | xref::class/OrgResOwnership.adoc#masterSchedulingCoordinatorFlag[`masterSchedulingCoordinatorFlag`]
+
+
+
+| xref::class/PnodeDistributionFactor.adoc[`PnodeDistributionFactor`] | xref::class/PnodeDistributionFactor.adoc#onPeak[`onPeak`]
+
+
+
+| xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`] | xref::class/RegisteredGenerator.adoc#variableEnergyResource[`variableEnergyResource`]
+
+
+
+| xref::class/RegisteredInterTie.adoc[`RegisteredInterTie`] | xref::class/RegisteredInterTie.adoc#isDynamicInterchange[`isDynamicInterchange`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#SMPMFlag[`SMPMFlag`]
+
+
+
+| xref::class/ResourceAwardClearing.adoc[`ResourceAwardClearing`] | xref::class/ResourceAwardClearing.adoc#contingencyActive[`contingencyActive`]
+
+
+
+| xref::class/ResourceAwardInstruction.adoc[`ResourceAwardInstruction`] | xref::class/ResourceAwardInstruction.adoc#marginalResourceIndicator[`marginalResourceIndicator`]
+
+
+
+| xref::class/ResourceBid.adoc[`ResourceBid`] | xref::class/ResourceBid.adoc#createdISO[`createdISO`]
+
+
+
+| xref::class/ResourceCertification.adoc[`ResourceCertification`] | xref::class/ResourceCertification.adoc#qualificationFlag[`qualificationFlag`]
+
+
+
+| xref::class/ResourceDispatchResults.adoc[`ResourceDispatchResults`] | xref::class/ResourceDispatchResults.adoc#penaltyDispatchIndicator[`penaltyDispatchIndicator`]
+
+
+
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`] | xref::class/SchedulingCoordinator.adoc#creditFlag[`creditFlag`]
+
+
+
+| xref::class/SubControlArea.adoc[`SubControlArea`] | xref::class/SubControlArea.adoc#localCA[`localCA`]
+
+
+|===
+

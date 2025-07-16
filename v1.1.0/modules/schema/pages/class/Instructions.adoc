@@ -1,0 +1,572 @@
+= `Instructions`
+:toclevels: 4
+
+
++++Provides the necessary information (on a resource basis) to capture the Startup/Shutdown instruction results. This information is relevant to the DA Market (RUC only) as well as the RT Market (HASP, Pre-dispatch, and Interval).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Instructions`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`Instructions`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AggregateNode,`AggregateNode`>>
+//| [[slots_table.AggregateNode]]<<AggregateNode,`AggregateNode`>>
+| 0..1 +
+xref::class/AggregateNode.adoc[`AggregateNode`]
+| _n/a_
+| _n/a_
+
+| <<InstructionClearing,`InstructionClearing`>>
+//| [[slots_table.InstructionClearing]]<<InstructionClearing,`InstructionClearing`>>
+| 1..* +
+xref::class/InstructionClearing.adoc[`InstructionClearing`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<bindingDOD,`bindingDOD`>>
+//| [[slots_table.bindingDOD]]<<bindingDOD,`bindingDOD`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Binding dispatch operating delta provides a relative delta to be applied. Typically used in demand response instructions....+++
+| _n/a_
+
+| <<bindingDOT,`bindingDOT`>>
+//| [[slots_table.bindingDOT]]<<bindingDOT,`bindingDOT`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<bindingInstruction,`bindingInstruction`>>
+//| [[slots_table.bindingInstruction]]<<bindingInstruction,`bindingInstruction`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| _n/a_
+| _n/a_
+
+| <<instructionCost,`instructionCost`>>
+//| [[slots_table.instructionCost]]<<instructionCost,`instructionCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Total cost associated with changing the status of the resource.+++
+| _n/a_
+
+| <<instructionSource,`instructionSource`>>
+//| [[slots_table.instructionSource]]<<instructionSource,`instructionSource`>>
+| 0..1 +
+xref::enumeration/MQSInstructionSource.adoc[`MQSInstructionSource`]
+| +++instruction source for market quality results (INS, ACT)+++
+| _n/a_
+
+| <<instructionStartTime,`instructionStartTime`>>
+//| [[slots_table.instructionStartTime]]<<instructionStartTime,`instructionStartTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Time the resource should be at Pmin (for start ups).
+
+Time the resource is off line.+++
+| _n/a_
+
+| <<instructionType,`instructionType`>>
+//| [[slots_table.instructionType]]<<instructionType,`instructionType`>>
+| 0..1 +
+xref::enumeration/AutomaticDispInstTypeCommitment.adoc[`AutomaticDispInstTypeCommitment`]
+| +++Indicator of either a Start-Up or a Shut-Down.+++
+| _n/a_
+
+| <<manuallyBlocked,`manuallyBlocked`>>
+//| [[slots_table.manuallyBlocked]]<<manuallyBlocked,`manuallyBlocked`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Manually Blocked Indicator (Yes/No). The instruction has been blocked by an Operator.+++
+| _n/a_
+
+| <<minStatusChangeTime,`minStatusChangeTime`>>
+//| [[slots_table.minStatusChangeTime]]<<minStatusChangeTime,`minStatusChangeTime`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Minimum start up time required to bring the unit online (minutes).
+
+SCUC commitment period start-up time. Calculated start...+++
+| _n/a_
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+//| [[slots_table.updateTimeStamp]]<<updateTimeStamp,`updateTimeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<updateType,`updateType`>>
+//| [[slots_table.updateType]]<<updateType,`updateType`>>
+| 0..1 +
+xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+| _n/a_
+| _n/a_
+
+| <<updateUser,`updateUser`>>
+//| [[slots_table.updateUser]]<<updateUser,`updateUser`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#AggregateNode]
+=== `AggregateNode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.AggregateNode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AggregateNode.adoc[`AggregateNode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AggregateNode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bindingDOD]
+=== `bindingDOD`
++++Binding dispatch operating delta provides a relative delta to be applied. Typically used in demand response instructions. The binding<font color="#0f0f0f">DOD instructions are cumulative; in other words a second DOD instruction does not replace the previous DOD, instead the second DOD adds to the previous DODs.</font>+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.bindingDOD`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bindingDOD,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bindingDOT]
+=== `bindingDOT`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.bindingDOT`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bindingDOT,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bindingInstruction]
+=== `bindingInstruction`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.bindingInstruction`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bindingInstruction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstructionClearing]
+=== `InstructionClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.InstructionClearing`
+| Cardinality
+| 1..*
+| Type
+| xref::class/InstructionClearing.adoc[`InstructionClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstructionClearing,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#instructionCost]
+=== `instructionCost`
++++Total cost associated with changing the status of the resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.instructionCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.instructionCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#instructionSource]
+=== `instructionSource`
++++instruction source for market quality results (INS, ACT)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.instructionSource`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MQSInstructionSource.adoc[`MQSInstructionSource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.instructionSource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#instructionStartTime]
+=== `instructionStartTime`
++++Time the resource should be at Pmin (for start ups).
+
+Time the resource is off line.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.instructionStartTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.instructionStartTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#instructionType]
+=== `instructionType`
++++Indicator of either a Start-Up or a Shut-Down.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.instructionType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/AutomaticDispInstTypeCommitment.adoc[`AutomaticDispInstTypeCommitment`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.instructionType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#manuallyBlocked]
+=== `manuallyBlocked`
++++Manually Blocked Indicator (Yes/No). The instruction has been blocked by an Operator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.manuallyBlocked`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.manuallyBlocked,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minStatusChangeTime]
+=== `minStatusChangeTime`
++++Minimum start up time required to bring the unit online (minutes).
+
+SCUC commitment period start-up time. Calculated start up time based on the StartUpTimeCurve provided with the Bid.
+
+This is a combination of StartUp time bid and Unit down time. 
+
+Units is minutes+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.minStatusChangeTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minStatusChangeTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.RegisteredResource`
+| Cardinality
+| 1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateTimeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateType]
+=== `updateType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.updateType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Instructions.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateUser,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AggregateNode.adoc[`AggregateNode`] | xref::class/AggregateNode.adoc#Instruction[`Instruction`]
+
+
+
+| xref::class/InstructionClearing.adoc[`InstructionClearing`] | xref::class/InstructionClearing.adoc#Instructions[`Instructions`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#Instructions[`Instructions`]
+
+
+|===
+

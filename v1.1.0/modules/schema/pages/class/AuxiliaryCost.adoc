@@ -1,0 +1,222 @@
+= `AuxiliaryCost`
+:toclevels: 4
+
+
++++Models Market clearing results for Auxiliary costs.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AuxiliaryCost`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`AuxiliaryCost`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AuxillaryValues,`AuxillaryValues`>>
+//| [[slots_table.AuxillaryValues]]<<AuxillaryValues,`AuxillaryValues`>>
+| 1..* +
+xref::class/AuxiliaryValues.adoc[`AuxiliaryValues`]
+| _n/a_
+| _n/a_
+
+| <<intervalStartTime,`intervalStartTime`>>
+//| [[slots_table.intervalStartTime]]<<intervalStartTime,`intervalStartTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<marketType,`marketType`>>
+//| [[slots_table.marketType]]<<marketType,`marketType`>>
+| 0..1 +
+xref::enumeration/MarketType.adoc[`MarketType`]
+| _n/a_
+| _n/a_
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+//| [[slots_table.updateTimeStamp]]<<updateTimeStamp,`updateTimeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<updateUser,`updateUser`>>
+//| [[slots_table.updateUser]]<<updateUser,`updateUser`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#AuxillaryValues]
+=== `AuxillaryValues`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryCost.AuxillaryValues`
+| Cardinality
+| 1..*
+| Type
+| xref::class/AuxiliaryValues.adoc[`AuxiliaryValues`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AuxillaryValues,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#intervalStartTime]
+=== `intervalStartTime`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryCost.intervalStartTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalStartTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marketType]
+=== `marketType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryCost.marketType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MarketType.adoc[`MarketType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marketType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryCost.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateTimeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryCost.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateUser,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AuxiliaryValues.adoc[`AuxiliaryValues`] | xref::class/AuxiliaryValues.adoc#AuxillaryCost[`AuxillaryCost`]
+
+
+|===
+

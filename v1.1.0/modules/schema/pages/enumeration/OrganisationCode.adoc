@@ -1,0 +1,50 @@
+= `OrganisationCode`
+:toclevels: 4
+
+
++++organization code+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OrganisationCode`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `BILL_TO`
+| `cim:OrganisationCode.BILL_TO`
+| n/a
+
+| `PAY_TO`
+| `cim:OrganisationCode.PAY_TO`
+| n/a
+
+| `PROVIDED_BY`
+| `cim:OrganisationCode.PROVIDED_BY`
+| n/a
+
+| `SOLD_TO`
+| `cim:OrganisationCode.SOLD_TO`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

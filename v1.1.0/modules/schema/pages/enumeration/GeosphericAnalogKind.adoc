@@ -1,0 +1,68 @@
+= `GeosphericAnalogKind`
+:toclevels: 4
+
+
++++Kinds of analogs (floats) measuring a geospheric condition.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:GeosphericAnalogKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `lightningDensity`
+| `cim:GeosphericAnalogKind.lightningDensity`
+| n/a
+
+| `seismicEastWest`
+| `cim:GeosphericAnalogKind.seismicEastWest`
+| n/a
+
+| `seismicNorthSouth`
+| `cim:GeosphericAnalogKind.seismicNorthSouth`
+| n/a
+
+| `seismicVertical`
+| `cim:GeosphericAnalogKind.seismicVertical`
+| n/a
+
+| `snowPackDepth`
+| `cim:GeosphericAnalogKind.snowPackDepth`
+| n/a
+
+| `temperature`
+| `cim:GeosphericAnalogKind.temperature`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/GeosphericAnalog.adoc[`GeosphericAnalog`] | xref::class/GeosphericAnalog.adoc#kind[`kind`]
+
+
+|===
+

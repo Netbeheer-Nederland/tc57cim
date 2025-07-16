@@ -1,0 +1,222 @@
+= `MitigatedBidSegment`
+:toclevels: 4
+
+
++++Model of mitigated bid. Indicates segment of piece-wise linear bid, that has been mitigated.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MitigatedBidSegment`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MitigatedBidSegment`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Bid,`Bid`>>
+//| [[slots_table.Bid]]<<Bid,`Bid`>>
+| 1 +
+xref::class/Bid.adoc[`Bid`]
+| _n/a_
+| _n/a_
+
+| <<intervalStartTime,`intervalStartTime`>>
+//| [[slots_table.intervalStartTime]]<<intervalStartTime,`intervalStartTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<segmentMW,`segmentMW`>>
+//| [[slots_table.segmentMW]]<<segmentMW,`segmentMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Mitigated bid segment MW value+++
+| _n/a_
+
+| <<segmentNumber,`segmentNumber`>>
+//| [[slots_table.segmentNumber]]<<segmentNumber,`segmentNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Mitigated Bid Segment Number+++
+| _n/a_
+
+| <<thresholdType,`thresholdType`>>
+//| [[slots_table.thresholdType]]<<thresholdType,`thresholdType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#Bid]
+=== `Bid`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MitigatedBidSegment.Bid`
+| Cardinality
+| 1
+| Type
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Bid,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#intervalStartTime]
+=== `intervalStartTime`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MitigatedBidSegment.intervalStartTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalStartTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#segmentMW]
+=== `segmentMW`
++++Mitigated bid segment MW value+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MitigatedBidSegment.segmentMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.segmentMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#segmentNumber]
+=== `segmentNumber`
++++Mitigated Bid Segment Number+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MitigatedBidSegment.segmentNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.segmentNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#thresholdType]
+=== `thresholdType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MitigatedBidSegment.thresholdType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.thresholdType,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Bid.adoc[`Bid`] | xref::class/Bid.adoc#MitigatedBidSegment[`MitigatedBidSegment`]
+
+
+|===
+

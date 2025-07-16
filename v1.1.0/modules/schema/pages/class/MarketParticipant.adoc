@@ -1,0 +1,930 @@
+= `MarketParticipant`
+:toclevels: 4
+
+
++++An identification of a party acting in a electricity market business process. This class is used to identify organizations that can participate in market management and/or market operations.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MarketParticipant`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Organisation.adoc[`Organisation`]
+*** *`MarketParticipant`*
+ **** xref::class/RTO.adoc[`RTO`]
+ **** xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Bid,`Bid`>>
+//| [[slots_table.Bid]]<<Bid,`Bid`>>
+| 0..* +
+xref::class/Bid.adoc[`Bid`]
+| _n/a_
+| _n/a_
+
+| <<MarketDocument,`MarketDocument`>>
+//| [[slots_table.MarketDocument]]<<MarketDocument,`MarketDocument`>>
+| 0..* +
+xref::class/MarketDocument.adoc[`MarketDocument`]
+| _n/a_
+| _n/a_
+
+| <<MarketPerson,`MarketPerson`>>
+//| [[slots_table.MarketPerson]]<<MarketPerson,`MarketPerson`>>
+| 0..* +
+xref::class/MarketPerson.adoc[`MarketPerson`]
+| _n/a_
+| _n/a_
+
+| <<MarketRole,`MarketRole`>>
+//| [[slots_table.MarketRole]]<<MarketRole,`MarketRole`>>
+| 0..* +
+xref::class/MarketRole.adoc[`MarketRole`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..* +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<SchedulingCoordinator,`SchedulingCoordinator`>>
+//| [[slots_table.SchedulingCoordinator]]<<SchedulingCoordinator,`SchedulingCoordinator`>>
+| 0..* +
+xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+| _n/a_
+| _n/a_
+
+| <<TimeSeries,`TimeSeries`>>
+//| [[slots_table.TimeSeries]]<<TimeSeries,`TimeSeries`>>
+| 0..* +
+xref::class/TimeSeries.adoc[`TimeSeries`]
+| _n/a_
+| _n/a_
+
+| <<ParentOrganisation,`ParentOrganisation`>>
+//| [[slots_table.ParentOrganisation]]<<ParentOrganisation,`ParentOrganisation`>>
+| 0..1 +
+xref::class/ParentOrganization.adoc[`ParentOrganization`]
+| +++Parent organisation of this organisation.+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<Roles,`Roles`>>
+//| [[slots_table.Roles]]<<Roles,`Roles`>>
+| 0..* +
+xref::class/OrganisationRole.adoc[`OrganisationRole`]
+| +++All roles of this organisation.+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<SwitchingPlanRequest,`SwitchingPlanRequest`>>
+//| [[slots_table.SwitchingPlanRequest]]<<SwitchingPlanRequest,`SwitchingPlanRequest`>>
+| 0..* +
+xref::class/SwitchingPlanRequest.adoc[`SwitchingPlanRequest`]
+| +++The switching plan requested by the requesting organization+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<electronicAddress,`electronicAddress`>>
+//| [[slots_table.electronicAddress]]<<electronicAddress,`electronicAddress`>>
+| 0..1 +
+xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+| +++Electronic address.+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<phone1,`phone1`>>
+//| [[slots_table.phone1]]<<phone1,`phone1`>>
+| 0..1 +
+xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+| +++Phone number.+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<phone2,`phone2`>>
+//| [[slots_table.phone2]]<<phone2,`phone2`>>
+| 0..1 +
+xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+| +++Additional phone number.+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<postalAddress,`postalAddress`>>
+//| [[slots_table.postalAddress]]<<postalAddress,`postalAddress`>>
+| 0..1 +
+xref::class/StreetAddress.adoc[`StreetAddress`]
+| +++Postal address, potentially different than 'streetAddress' (e.g., another city).+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<streetAddress,`streetAddress`>>
+//| [[slots_table.streetAddress]]<<streetAddress,`streetAddress`>>
+| 0..1 +
+xref::class/StreetAddress.adoc[`StreetAddress`]
+| +++Street address.+++
+| xref::class/Organisation.adoc[`Organisation`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Bid]
+=== `Bid`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.Bid`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Bid.adoc[`Bid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Bid,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#electronicAddress]
+=== `electronicAddress`
++++Electronic address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.electronicAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.electronicAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketDocument]
+=== `MarketDocument`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.MarketDocument`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketDocument,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketPerson]
+=== `MarketPerson`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.MarketPerson`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketPerson.adoc[`MarketPerson`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketPerson,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketRole]
+=== `MarketRole`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.MarketRole`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketRole.adoc[`MarketRole`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketRole,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ParentOrganisation]
+=== `ParentOrganisation`
++++Parent organisation of this organisation.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.ParentOrganisation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ParentOrganization.adoc[`ParentOrganization`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ParentOrganisation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phone1]
+=== `phone1`
++++Phone number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.phone1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phone1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phone2]
+=== `phone2`
++++Additional phone number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.phone2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phone2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#postalAddress]
+=== `postalAddress`
++++Postal address, potentially different than 'streetAddress' (e.g., another city).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.postalAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StreetAddress.adoc[`StreetAddress`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.postalAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.RegisteredResource`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Roles]
+=== `Roles`
++++All roles of this organisation.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.Roles`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OrganisationRole.adoc[`OrganisationRole`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Roles,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SchedulingCoordinator]
+=== `SchedulingCoordinator`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.SchedulingCoordinator`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SchedulingCoordinator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#streetAddress]
+=== `streetAddress`
++++Street address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.streetAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StreetAddress.adoc[`StreetAddress`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.streetAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SwitchingPlanRequest]
+=== `SwitchingPlanRequest`
++++The switching plan requested by the requesting organization+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Organisation.SwitchingPlanRequest`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SwitchingPlanRequest.adoc[`SwitchingPlanRequest`]
+
+| Inherited from
+| xref::class/Organisation.adoc[`Organisation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SwitchingPlanRequest,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketParticipant.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TimeSeries,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Bid.adoc[`Bid`] | xref::class/Bid.adoc#MarketParticipant[`MarketParticipant`]
+
+
+
+| xref::class/MarketDocument.adoc[`MarketDocument`] | xref::class/MarketDocument.adoc#MarketParticipant[`MarketParticipant`]
+
+
+
+| xref::class/MarketPerson.adoc[`MarketPerson`] | xref::class/MarketPerson.adoc#MarketParticipant[`MarketParticipant`]
+
+
+
+| xref::class/MarketRole.adoc[`MarketRole`] | xref::class/MarketRole.adoc#MarketParticipant[`MarketParticipant`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#MarketParticipant[`MarketParticipant`]
+
+
+
+| xref::class/SchedulingCoordinator.adoc[`SchedulingCoordinator`] | xref::class/SchedulingCoordinator.adoc#MarketParticipant[`MarketParticipant`]
+
+
+
+| xref::class/TimeSeries.adoc[`TimeSeries`] | xref::class/TimeSeries.adoc#MarketParticipant[`MarketParticipant`]
+
+
+|===
+

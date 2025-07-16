@@ -1,0 +1,56 @@
+= `SynchronousMachineOperatingMode`
+:toclevels: 4
+
+
++++Synchronous machine operating mode.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SynchronousMachineOperatingMode`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `condenser`
+| `cim:SynchronousMachineOperatingMode.condenser`
+| n/a
+
+| `generator`
+| `cim:SynchronousMachineOperatingMode.generator`
+| n/a
+
+| `motor`
+| `cim:SynchronousMachineOperatingMode.motor`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/SynchronousMachine.adoc[`SynchronousMachine`] | xref::class/SynchronousMachine.adoc#operatingMode[`operatingMode`]
+
+
+|===
+

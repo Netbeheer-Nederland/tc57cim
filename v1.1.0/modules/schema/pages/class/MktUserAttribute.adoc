@@ -1,0 +1,600 @@
+= `MktUserAttribute`
+:toclevels: 4
+
+
++++Subclass of IEC61968:Domain2:UserAttribute.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MktUserAttribute`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/UserAttribute.adoc[`UserAttribute`]
+** *`MktUserAttribute`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AttributeProperty,`AttributeProperty`>>
+//| [[slots_table.AttributeProperty]]<<AttributeProperty,`AttributeProperty`>>
+| 0..* +
+xref::class/AttributeProperty.adoc[`AttributeProperty`]
+| _n/a_
+| _n/a_
+
+| <<BillDeterminant,`BillDeterminant`>>
+//| [[slots_table.BillDeterminant]]<<BillDeterminant,`BillDeterminant`>>
+| 0..* +
+xref::class/BillDeterminant.adoc[`BillDeterminant`]
+| _n/a_
+| _n/a_
+
+| <<ChargeGroup,`ChargeGroup`>>
+//| [[slots_table.ChargeGroup]]<<ChargeGroup,`ChargeGroup`>>
+| 0..* +
+xref::class/ChargeGroup.adoc[`ChargeGroup`]
+| _n/a_
+| _n/a_
+
+| <<ChargeType,`ChargeType`>>
+//| [[slots_table.ChargeType]]<<ChargeType,`ChargeType`>>
+| 0..* +
+xref::class/ChargeType.adoc[`ChargeType`]
+| _n/a_
+| _n/a_
+
+| <<MarketStatementLineItem,`MarketStatementLineItem`>>
+//| [[slots_table.MarketStatementLineItem]]<<MarketStatementLineItem,`MarketStatementLineItem`>>
+| 0..* +
+xref::class/MarketStatementLineItem.adoc[`MarketStatementLineItem`]
+| _n/a_
+| _n/a_
+
+| <<PassThroughBill,`PassThroughBill`>>
+//| [[slots_table.PassThroughBill]]<<PassThroughBill,`PassThroughBill`>>
+| 0..* +
+xref::class/PassThroughBill.adoc[`PassThroughBill`]
+| _n/a_
+| _n/a_
+
+| <<ErpInvoiceLineItems,`ErpInvoiceLineItems`>>
+//| [[slots_table.ErpInvoiceLineItems]]<<ErpInvoiceLineItems,`ErpInvoiceLineItems`>>
+| 0..* +
+xref::class/ErpInvoiceLineItem.adoc[`ErpInvoiceLineItem`]
+| _n/a_
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+| <<ErpLedgerEntries,`ErpLedgerEntries`>>
+//| [[slots_table.ErpLedgerEntries]]<<ErpLedgerEntries,`ErpLedgerEntries`>>
+| 0..* +
+xref::class/ErpLedgerEntry.adoc[`ErpLedgerEntry`]
+| _n/a_
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+| <<ProcedureDataSets,`ProcedureDataSets`>>
+//| [[slots_table.ProcedureDataSets]]<<ProcedureDataSets,`ProcedureDataSets`>>
+| 0..* +
+xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+| _n/a_
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+| <<PropertySpecification,`PropertySpecification`>>
+//| [[slots_table.PropertySpecification]]<<PropertySpecification,`PropertySpecification`>>
+| 0..1 +
+xref::class/Specification.adoc[`Specification`]
+| _n/a_
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+| <<RatingSpecification,`RatingSpecification`>>
+//| [[slots_table.RatingSpecification]]<<RatingSpecification,`RatingSpecification`>>
+| 0..1 +
+xref::class/Specification.adoc[`Specification`]
+| _n/a_
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+| <<Transaction,`Transaction`>>
+//| [[slots_table.Transaction]]<<Transaction,`Transaction`>>
+| 0..1 +
+xref::class/Transaction.adoc[`Transaction`]
+| +++Transaction for which this snapshot has been recorded.+++
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of an attribute.+++
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+| <<sequenceNumber,`sequenceNumber`>>
+//| [[slots_table.sequenceNumber]]<<sequenceNumber,`sequenceNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Sequence number for this attribute in a list of attributes.+++
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+| <<value,`value`>>
+//| [[slots_table.value]]<<value,`value`>>
+| 0..1 +
+xref::class/StringQuantity.adoc[`StringQuantity`]
+| +++Value of an attribute, including unit information.+++
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+|===
+
+'''
+
+
+//[discrete]
+[#AttributeProperty]
+=== `AttributeProperty`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MktUserAttribute.AttributeProperty`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AttributeProperty.adoc[`AttributeProperty`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AttributeProperty,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#BillDeterminant]
+=== `BillDeterminant`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MktUserAttribute.BillDeterminant`
+| Cardinality
+| 0..*
+| Type
+| xref::class/BillDeterminant.adoc[`BillDeterminant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.BillDeterminant,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ChargeGroup]
+=== `ChargeGroup`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MktUserAttribute.ChargeGroup`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChargeGroup.adoc[`ChargeGroup`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ChargeGroup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ChargeType]
+=== `ChargeType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MktUserAttribute.ChargeType`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChargeType.adoc[`ChargeType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ChargeType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ErpInvoiceLineItems]
+=== `ErpInvoiceLineItems`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.ErpInvoiceLineItems`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ErpInvoiceLineItem.adoc[`ErpInvoiceLineItem`]
+
+| Inherited from
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ErpInvoiceLineItems,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ErpLedgerEntries]
+=== `ErpLedgerEntries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.ErpLedgerEntries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ErpLedgerEntry.adoc[`ErpLedgerEntry`]
+
+| Inherited from
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ErpLedgerEntries,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketStatementLineItem]
+=== `MarketStatementLineItem`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MktUserAttribute.MarketStatementLineItem`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketStatementLineItem.adoc[`MarketStatementLineItem`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketStatementLineItem,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++Name of an attribute.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PassThroughBill]
+=== `PassThroughBill`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MktUserAttribute.PassThroughBill`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PassThroughBill.adoc[`PassThroughBill`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PassThroughBill,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ProcedureDataSets]
+=== `ProcedureDataSets`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.ProcedureDataSets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+| Inherited from
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ProcedureDataSets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertySpecification]
+=== `PropertySpecification`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.PropertySpecification`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Specification.adoc[`Specification`]
+
+| Inherited from
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertySpecification,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RatingSpecification]
+=== `RatingSpecification`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.RatingSpecification`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Specification.adoc[`Specification`]
+
+| Inherited from
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RatingSpecification,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sequenceNumber]
+=== `sequenceNumber`
++++Sequence number for this attribute in a list of attributes.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.sequenceNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+| Inherited from
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sequenceNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Transaction]
+=== `Transaction`
++++Transaction for which this snapshot has been recorded.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.Transaction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Transaction.adoc[`Transaction`]
+
+| Inherited from
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Transaction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value]
+=== `value`
++++Value of an attribute, including unit information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.value`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StringQuantity.adoc[`StringQuantity`]
+
+| Inherited from
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AttributeProperty.adoc[`AttributeProperty`] | xref::class/AttributeProperty.adoc#MktUserAttribute[`MktUserAttribute`]
+
+
+
+| xref::class/BillDeterminant.adoc[`BillDeterminant`] | xref::class/BillDeterminant.adoc#MktUserAttribute[`MktUserAttribute`]
+
+
+
+| xref::class/ChargeGroup.adoc[`ChargeGroup`] | xref::class/ChargeGroup.adoc#MktUserAttribute[`MktUserAttribute`]
+
+
+
+| xref::class/ChargeType.adoc[`ChargeType`] | xref::class/ChargeType.adoc#MktUserAttribute[`MktUserAttribute`]
+
+
+
+| xref::class/MarketStatementLineItem.adoc[`MarketStatementLineItem`] | xref::class/MarketStatementLineItem.adoc#MktUserAttribute[`MktUserAttribute`]
+
+
+
+| xref::class/PassThroughBill.adoc[`PassThroughBill`] | xref::class/PassThroughBill.adoc#MktUserAttribute[`MktUserAttribute`]
+
+
+|===
+

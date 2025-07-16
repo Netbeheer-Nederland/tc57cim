@@ -1,0 +1,160 @@
+= `Priority`
+:toclevels: 4
+
+
++++Priority definition.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Priority`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`Priority`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<justification,`justification`>>
+//| [[slots_table.justification]]<<justification,`justification`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Justification for 'rank'.+++
+| _n/a_
+
+| <<rank,`rank`>>
+//| [[slots_table.rank]]<<rank,`rank`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Priority level; lower number means high priority inside the same 'type'.+++
+| _n/a_
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Type describing 'rank'; e.g., high, emergency, etc.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#justification]
+=== `justification`
++++Justification for 'rank'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Priority.justification`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.justification,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rank]
+=== `rank`
++++Priority level; lower number means high priority inside the same 'type'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Priority.rank`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rank,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++Type describing 'rank'; e.g., high, emergency, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Priority.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/BaseWork.adoc[`BaseWork`] | xref::class/BaseWork.adoc#priority[`priority`]
+
+
+
+| xref::class/Customer.adoc[`Customer`] | xref::class/Customer.adoc#priority[`priority`]
+
+
+|===
+

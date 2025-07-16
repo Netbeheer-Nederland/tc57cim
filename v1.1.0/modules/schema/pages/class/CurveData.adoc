@@ -1,0 +1,223 @@
+= `CurveData`
+:toclevels: 4
+
+
++++Multi-purpose data points for defining a curve.  The use of this generic class is discouraged if a more specific class can be used to specify the X and Y axis values along with their specific data types.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CurveData`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`CurveData`*
+ ** xref::class/DefaultBidCurveData.adoc[`DefaultBidCurveData`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Curve,`Curve`>>
+//| [[slots_table.Curve]]<<Curve,`Curve`>>
+| 1 +
+xref::class/Curve.adoc[`Curve`]
+| +++The curve of  this curve data point.+++
+| _n/a_
+
+| <<xvalue,`xvalue`>>
+//| [[slots_table.xvalue]]<<xvalue,`xvalue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The data value of the X-axis variable,  depending on the X-axis units.+++
+| _n/a_
+
+| <<y1value,`y1value`>>
+//| [[slots_table.y1value]]<<y1value,`y1value`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The data value of the  first Y-axis variable, depending on the Y-axis units.+++
+| _n/a_
+
+| <<y2value,`y2value`>>
+//| [[slots_table.y2value]]<<y2value,`y2value`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The data value of the second Y-axis variable (if present), depending on the Y-axis units.+++
+| _n/a_
+
+| <<y3value,`y3value`>>
+//| [[slots_table.y3value]]<<y3value,`y3value`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The data value of the third Y-axis variable (if present), depending on the Y-axis units.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#Curve]
+=== `Curve`
++++The curve of  this curve data point.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.Curve`
+| Cardinality
+| 1
+| Type
+| xref::class/Curve.adoc[`Curve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Curve,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#xvalue]
+=== `xvalue`
++++The data value of the X-axis variable,  depending on the X-axis units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.xvalue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.xvalue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#y1value]
+=== `y1value`
++++The data value of the  first Y-axis variable, depending on the Y-axis units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.y1value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.y1value,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#y2value]
+=== `y2value`
++++The data value of the second Y-axis variable (if present), depending on the Y-axis units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.y2value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.y2value,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#y3value]
+=== `y3value`
++++The data value of the third Y-axis variable (if present), depending on the Y-axis units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurveData.y3value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.y3value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Curve.adoc[`Curve`] | xref::class/Curve.adoc#CurveDatas[`CurveDatas`]
+
+
+|===
+

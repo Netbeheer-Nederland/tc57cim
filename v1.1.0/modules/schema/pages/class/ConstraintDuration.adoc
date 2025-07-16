@@ -1,0 +1,156 @@
+= `ConstraintDuration`
+:toclevels: 4
+
+
++++Duration constraint to activate, to put in operation, to deactivate, ... a given event.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ConstraintDuration`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ConstraintDuration`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<TimeSeries,`TimeSeries`>>
+//| [[slots_table.TimeSeries]]<<TimeSeries,`TimeSeries`>>
+| 0..* +
+xref::class/TimeSeries.adoc[`TimeSeries`]
+| _n/a_
+| _n/a_
+
+| <<duration,`duration`>>
+//| [[slots_table.duration]]<<duration,`duration`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++The duration of the constraint.+++
+| _n/a_
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The type of the constraint.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#duration]
+=== `duration`
++++The duration of the constraint.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintDuration.duration`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.duration,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintDuration.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TimeSeries,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++The type of the constraint.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ConstraintDuration.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TimeSeries.adoc[`TimeSeries`] | xref::class/TimeSeries.adoc#ConstraintDuration[`ConstraintDuration`]
+
+
+|===
+

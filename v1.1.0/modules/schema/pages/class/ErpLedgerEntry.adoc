@@ -1,0 +1,727 @@
+= `ErpLedgerEntry`
+:toclevels: 4
+
+
++++Details of an individual entry in a ledger, which was posted from a journal on the posted date.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ErpLedgerEntry`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/ErpIdentifiedObject.adoc[`ErpIdentifiedObject`]
+*** *`ErpLedgerEntry`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ErpJounalEntry,`ErpJounalEntry`>>
+//| [[slots_table.ErpJounalEntry]]<<ErpJounalEntry,`ErpJounalEntry`>>
+| 0..1 +
+xref::class/ErpJournalEntry.adoc[`ErpJournalEntry`]
+| _n/a_
+| _n/a_
+
+| <<ErpLedger,`ErpLedger`>>
+//| [[slots_table.ErpLedger]]<<ErpLedger,`ErpLedger`>>
+| 1 +
+xref::class/ErpLedger.adoc[`ErpLedger`]
+| _n/a_
+| _n/a_
+
+| <<ErpLedgerEntry,`ErpLedgerEntry`>>
+//| [[slots_table.ErpLedgerEntry]]<<ErpLedgerEntry,`ErpLedgerEntry`>>
+| 0..1 +
+xref::class/ErpLedBudLineItem.adoc[`ErpLedBudLineItem`]
+| _n/a_
+| _n/a_
+
+| <<UserAttributes,`UserAttributes`>>
+//| [[slots_table.UserAttributes]]<<UserAttributes,`UserAttributes`>>
+| 0..* +
+xref::class/UserAttribute.adoc[`UserAttribute`]
+| _n/a_
+| _n/a_
+
+| <<accountID,`accountID`>>
+//| [[slots_table.accountID]]<<accountID,`accountID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Account identifier for this entry.+++
+| _n/a_
+
+| <<accountKind,`accountKind`>>
+//| [[slots_table.accountKind]]<<accountKind,`accountKind`>>
+| 0..1 +
+xref::enumeration/ErpAccountKind.adoc[`ErpAccountKind`]
+| +++Kind of account for this entry.+++
+| _n/a_
+
+| <<amount,`amount`>>
+//| [[slots_table.amount]]<<amount,`amount`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++The amount of the debit or credit for this account.+++
+| _n/a_
+
+| <<postedDateTime,`postedDateTime`>>
+//| [[slots_table.postedDateTime]]<<postedDateTime,`postedDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time this entry was posted to the ledger.+++
+| _n/a_
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| _n/a_
+| _n/a_
+
+| <<transactionDateTime,`transactionDateTime`>>
+//| [[slots_table.transactionDateTime]]<<transactionDateTime,`transactionDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time journal entry was recorded.+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#accountID]
+=== `accountID`
++++Account identifier for this entry.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ErpLedgerEntry.accountID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.accountID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#accountKind]
+=== `accountKind`
++++Kind of account for this entry.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ErpLedgerEntry.accountKind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ErpAccountKind.adoc[`ErpAccountKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.accountKind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#amount]
+=== `amount`
++++The amount of the debit or credit for this account.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ErpLedgerEntry.amount`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.amount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ErpJounalEntry]
+=== `ErpJounalEntry`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ErpLedgerEntry.ErpJounalEntry`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ErpJournalEntry.adoc[`ErpJournalEntry`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ErpJounalEntry,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ErpLedger]
+=== `ErpLedger`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ErpLedgerEntry.ErpLedger`
+| Cardinality
+| 1
+| Type
+| xref::class/ErpLedger.adoc[`ErpLedger`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ErpLedger,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ErpLedgerEntry]
+=== `ErpLedgerEntry`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ErpLedgerEntry.ErpLedgerEntry`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ErpLedBudLineItem.adoc[`ErpLedBudLineItem`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ErpLedgerEntry,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#postedDateTime]
+=== `postedDateTime`
++++Date and time this entry was posted to the ledger.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ErpLedgerEntry.postedDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.postedDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ErpLedgerEntry.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#transactionDateTime]
+=== `transactionDateTime`
++++Date and time journal entry was recorded.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ErpLedgerEntry.transactionDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.transactionDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#UserAttributes]
+=== `UserAttributes`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ErpLedgerEntry.UserAttributes`
+| Cardinality
+| 0..*
+| Type
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.UserAttributes,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ErpJournalEntry.adoc[`ErpJournalEntry`] | xref::class/ErpJournalEntry.adoc#ErpLedgerEntry[`ErpLedgerEntry`]
+
+
+
+| xref::class/ErpLedBudLineItem.adoc[`ErpLedBudLineItem`] | xref::class/ErpLedBudLineItem.adoc#ErpLedBudLineItem[`ErpLedBudLineItem`]
+
+
+
+| xref::class/ErpLedger.adoc[`ErpLedger`] | xref::class/ErpLedger.adoc#ErpLedgerEntries[`ErpLedgerEntries`]
+
+
+
+| xref::class/UserAttribute.adoc[`UserAttribute`] | xref::class/UserAttribute.adoc#ErpLedgerEntries[`ErpLedgerEntries`]
+
+
+|===
+

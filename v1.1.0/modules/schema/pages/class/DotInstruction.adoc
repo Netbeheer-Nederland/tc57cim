@@ -1,0 +1,792 @@
+= `DotInstruction`
+:toclevels: 4
+
+
++++Provides the necessary information (on a resource basis) to capture the Dispatch Operating Target (DOT) results on a Dispatch interval. This information is only relevant to the RT interval market.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DotInstruction`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`DotInstruction`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<DOT,`DOT`>>
+//| [[slots_table.DOT]]<<DOT,`DOT`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Dispatch operating target value.+++
+| _n/a_
+
+| <<InstructionClearingDOT,`InstructionClearingDOT`>>
+//| [[slots_table.InstructionClearingDOT]]<<InstructionClearingDOT,`InstructionClearingDOT`>>
+| 1..* +
+xref::class/InstructionClearingDOT.adoc[`InstructionClearingDOT`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<actualRampRate,`actualRampRate`>>
+//| [[slots_table.actualRampRate]]<<actualRampRate,`actualRampRate`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Actual ramp rate.+++
+| _n/a_
+
+| <<compliantIndicator,`compliantIndicator`>>
+//| [[slots_table.compliantIndicator]]<<compliantIndicator,`compliantIndicator`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Flag indicating whether or not the resource was in compliance with the instruction (plus/minus 10%).
+
+Directs if a unit is...+++
+| _n/a_
+
+| <<economicMaxOverride,`economicMaxOverride`>>
+//| [[slots_table.economicMaxOverride]]<<economicMaxOverride,`economicMaxOverride`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Economic Max Limit override for unit, this value is null, if it is not, this value overrides the Energy column value. ...+++
+| _n/a_
+
+| <<expectedEnergy,`expectedEnergy`>>
+//| [[slots_table.expectedEnergy]]<<expectedEnergy,`expectedEnergy`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Expected energy.+++
+| _n/a_
+
+| <<generatorPerformanceDegree,`generatorPerformanceDegree`>>
+//| [[slots_table.generatorPerformanceDegree]]<<generatorPerformanceDegree,`generatorPerformanceDegree`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The Degree of Generator Performance (DGP) used for the unit. Measure of how a generator responds to raise /lower signals. ...+++
+| _n/a_
+
+| <<hourAheadSchedEnergy,`hourAheadSchedEnergy`>>
+//| [[slots_table.hourAheadSchedEnergy]]<<hourAheadSchedEnergy,`hourAheadSchedEnergy`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++HASP results.+++
+| _n/a_
+
+| <<hourlySchedule,`hourlySchedule`>>
+//| [[slots_table.hourlySchedule]]<<hourlySchedule,`hourlySchedule`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Hourly Schedule (DA Energy Schedule).+++
+| _n/a_
+
+| <<instructionTime,`instructionTime`>>
+//| [[slots_table.instructionTime]]<<instructionTime,`instructionTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The date/time for the instruction.+++
+| _n/a_
+
+| <<maximumEmergencyInd,`maximumEmergencyInd`>>
+//| [[slots_table.maximumEmergencyInd]]<<maximumEmergencyInd,`maximumEmergencyInd`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if maximum emergency limit activated; false otherwise. If unit is requested  to move up to its max emergency limit.,...+++
+| _n/a_
+
+| <<meterLoadFollowing,`meterLoadFollowing`>>
+//| [[slots_table.meterLoadFollowing]]<<meterLoadFollowing,`meterLoadFollowing`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Meter Sub System Load Following.+++
+| _n/a_
+
+| <<nonRampRestrictedMW,`nonRampRestrictedMW`>>
+//| [[slots_table.nonRampRestrictedMW]]<<nonRampRestrictedMW,`nonRampRestrictedMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Desired MW that is not ramp restricted. If no ramp rate limit existed for the unit, this is the MW value tha t the unit was...+++
+| _n/a_
+
+| <<nonSpinReserve,`nonSpinReserve`>>
+//| [[slots_table.nonSpinReserve]]<<nonSpinReserve,`nonSpinReserve`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Non Spin Reserve used to procure energy.+++
+| _n/a_
+
+| <<previousDOTTimeStamp,`previousDOTTimeStamp`>>
+//| [[slots_table.previousDOTTimeStamp]]<<previousDOTTimeStamp,`previousDOTTimeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Timestamp when the previous DOT value was issued.+++
+| _n/a_
+
+| <<rampRateLimit,`rampRateLimit`>>
+//| [[slots_table.rampRateLimit]]<<rampRateLimit,`rampRateLimit`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The ramp rate limit for the unit in MWs per minute. Participant bidding data.+++
+| _n/a_
+
+| <<regulationStatus,`regulationStatus`>>
+//| [[slots_table.regulationStatus]]<<regulationStatus,`regulationStatus`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Regulation Status (Yes/No).+++
+| _n/a_
+
+| <<spinReserve,`spinReserve`>>
+//| [[slots_table.spinReserve]]<<spinReserve,`spinReserve`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Spin Reserve used to procure energy.+++
+| _n/a_
+
+| <<standardRampEnergy,`standardRampEnergy`>>
+//| [[slots_table.standardRampEnergy]]<<standardRampEnergy,`standardRampEnergy`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Standard ramping energy (MWH).+++
+| _n/a_
+
+| <<supplementalEnergy,`supplementalEnergy`>>
+//| [[slots_table.supplementalEnergy]]<<supplementalEnergy,`supplementalEnergy`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Supplemental Energy procure by Real Time Dispatch.+++
+| _n/a_
+
+| <<unitStatus,`unitStatus`>>
+//| [[slots_table.unitStatus]]<<unitStatus,`unitStatus`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Output results from the case identifying the reason the unit was committed by the software.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#actualRampRate]
+=== `actualRampRate`
++++Actual ramp rate.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.actualRampRate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.actualRampRate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#compliantIndicator]
+=== `compliantIndicator`
++++Flag indicating whether or not the resource was in compliance with the instruction (plus/minus 10%).
+
+Directs if a unit is allowed to set the price (ex-post pricing).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.compliantIndicator`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.compliantIndicator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DOT]
+=== `DOT`
++++Dispatch operating target value.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.DOT`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DOT,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#economicMaxOverride]
+=== `economicMaxOverride`
++++Economic Max Limit override for unit, this value is null, if it is not, this value overrides the Energy column value.  
+Allows dispatcher to override the unit's energy value.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.economicMaxOverride`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.economicMaxOverride,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#expectedEnergy]
+=== `expectedEnergy`
++++Expected energy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.expectedEnergy`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.expectedEnergy,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#generatorPerformanceDegree]
+=== `generatorPerformanceDegree`
++++The Degree of Generator Performance (DGP) used for the unit. Measure of how a generator responds to raise /lower signals.  Calculated every five minutes.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.generatorPerformanceDegree`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.generatorPerformanceDegree,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#hourAheadSchedEnergy]
+=== `hourAheadSchedEnergy`
++++HASP results.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.hourAheadSchedEnergy`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.hourAheadSchedEnergy,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#hourlySchedule]
+=== `hourlySchedule`
++++Hourly Schedule (DA Energy Schedule).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.hourlySchedule`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.hourlySchedule,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstructionClearingDOT]
+=== `InstructionClearingDOT`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.InstructionClearingDOT`
+| Cardinality
+| 1..*
+| Type
+| xref::class/InstructionClearingDOT.adoc[`InstructionClearingDOT`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstructionClearingDOT,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#instructionTime]
+=== `instructionTime`
++++The date/time for the instruction.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.instructionTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.instructionTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maximumEmergencyInd]
+=== `maximumEmergencyInd`
++++True if maximum emergency limit activated; false otherwise. If unit is requested  to move up to its max emergency limit., this flag is set to true.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.maximumEmergencyInd`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maximumEmergencyInd,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#meterLoadFollowing]
+=== `meterLoadFollowing`
++++Meter Sub System Load Following.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.meterLoadFollowing`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.meterLoadFollowing,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#nonRampRestrictedMW]
+=== `nonRampRestrictedMW`
++++Desired MW that is not ramp restricted. If no ramp rate limit existed for the unit, this is the MW value tha t the unit was requested to move to.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.nonRampRestrictedMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.nonRampRestrictedMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#nonSpinReserve]
+=== `nonSpinReserve`
++++Non Spin Reserve used to procure energy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.nonSpinReserve`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.nonSpinReserve,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#previousDOTTimeStamp]
+=== `previousDOTTimeStamp`
++++Timestamp when the previous DOT value was issued.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.previousDOTTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.previousDOTTimeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rampRateLimit]
+=== `rampRateLimit`
++++The ramp rate limit for the unit in MWs per minute. Participant bidding data.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.rampRateLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rampRateLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#regulationStatus]
+=== `regulationStatus`
++++Regulation Status (Yes/No).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.regulationStatus`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.regulationStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#spinReserve]
+=== `spinReserve`
++++Spin Reserve used to procure energy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.spinReserve`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.spinReserve,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#standardRampEnergy]
+=== `standardRampEnergy`
++++Standard ramping energy (MWH).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.standardRampEnergy`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardRampEnergy,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#supplementalEnergy]
+=== `supplementalEnergy`
++++Supplemental Energy procure by Real Time Dispatch.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.supplementalEnergy`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.supplementalEnergy,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#unitStatus]
+=== `unitStatus`
++++Output results from the case identifying the reason the unit was committed by the software.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DotInstruction.unitStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.unitStatus,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/InstructionClearingDOT.adoc[`InstructionClearingDOT`] | xref::class/InstructionClearingDOT.adoc#DotInstruction[`DotInstruction`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#DotInstruction[`DotInstruction`]
+
+
+|===
+

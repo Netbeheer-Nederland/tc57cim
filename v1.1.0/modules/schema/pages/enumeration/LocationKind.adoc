@@ -1,0 +1,60 @@
+= `LocationKind`
+:toclevels: 4
+
+
++++The nature of the location being defined for an environmental entity. Possible values are center, perimeter, primary, secondary.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:LocationKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `center`
+| `cim:LocationKind.center`
+| n/a
+
+| `extent`
+| `cim:LocationKind.extent`
+| n/a
+
+| `primary`
+| `cim:LocationKind.primary`
+| n/a
+
+| `secondary`
+| `cim:LocationKind.secondary`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`] | xref::class/EnvironmentalLocationType.adoc#kind[`kind`]
+
+
+|===
+

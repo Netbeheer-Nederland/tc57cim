@@ -1,0 +1,44 @@
+= `SpinningEventType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SpinningEventType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `AA`
+| `cim:SpinningEventType.AA`
+| n/a
+
+| `CA`
+| `cim:SpinningEventType.CA`
+| n/a
+
+| `RZ`
+| `cim:SpinningEventType.RZ`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

@@ -1,0 +1,52 @@
+= `TransformerCoreKind`
+:toclevels: 4
+
+
++++Kind of transformer construction.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TransformerCoreKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `core`
+| `cim:TransformerCoreKind.core`
+| n/a
+
+| `shell`
+| `cim:TransformerCoreKind.shell`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/OldTransformerTankInfo.adoc[`OldTransformerTankInfo`] | xref::class/OldTransformerTankInfo.adoc#coreKind[`coreKind`]
+
+
+|===
+

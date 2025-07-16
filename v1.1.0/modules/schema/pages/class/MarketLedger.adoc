@@ -1,0 +1,90 @@
+= `MarketLedger`
+:toclevels: 4
+
+
++++In accounting transactions, a ledger is a book containing accounts to which debits and credits are posted from journals, where transactions are initially recorded. Journal entries are periodically posted to the ledger. Ledger actual represents actual amounts by account within ledger within company or within business area. Actual amounts may be generated in a source application and then loaded to a specific ledger within the enterprise general ledger or budget application.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MarketLedger`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MarketLedger`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MarketLedgerEntries,`MarketLedgerEntries`>>
+//| [[slots_table.MarketLedgerEntries]]<<MarketLedgerEntries,`MarketLedgerEntries`>>
+| 0..* +
+xref::class/MarketLedgerEntry.adoc[`MarketLedgerEntry`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#MarketLedgerEntries]
+=== `MarketLedgerEntries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketLedger.MarketLedgerEntries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketLedgerEntry.adoc[`MarketLedgerEntry`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketLedgerEntries,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketLedgerEntry.adoc[`MarketLedgerEntry`] | xref::class/MarketLedgerEntry.adoc#MarketLedger[`MarketLedger`]
+
+
+|===
+

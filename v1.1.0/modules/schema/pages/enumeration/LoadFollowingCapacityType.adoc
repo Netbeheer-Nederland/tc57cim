@@ -1,0 +1,40 @@
+= `LoadFollowingCapacityType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:LoadFollowingCapacityType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `DOWN`
+| `cim:LoadFollowingCapacityType.DOWN`
+| n/a
+
+| `UP`
+| `cim:LoadFollowingCapacityType.UP`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

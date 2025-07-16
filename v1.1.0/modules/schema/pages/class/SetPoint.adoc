@@ -1,0 +1,911 @@
+= `SetPoint`
+:toclevels: 4
+
+
++++An analog control that issues a set point value.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SetPoint`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/IOPoint.adoc[`IOPoint`]
+*** xref::class/Control.adoc[`Control`]
+**** xref::class/AnalogControl.adoc[`AnalogControl`]
+***** *`SetPoint`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<normalValue,`normalValue`>>
+//| [[slots_table.normalValue]]<<normalValue,`normalValue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Normal value for Control.value e.g. used for percentage scaling.+++
+| _n/a_
+
+| <<value,`value`>>
+//| [[slots_table.value]]<<value,`value`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The value representing the actuator output.+++
+| _n/a_
+
+| <<AnalogValue,`AnalogValue`>>
+//| [[slots_table.AnalogValue]]<<AnalogValue,`AnalogValue`>>
+| 1 +
+xref::class/AnalogValue.adoc[`AnalogValue`]
+| +++The MeasurementValue that is controlled.+++
+| xref::class/AnalogControl.adoc[`AnalogControl`]
+
+| <<maxValue,`maxValue`>>
+//| [[slots_table.maxValue]]<<maxValue,`maxValue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Normal value range maximum for any of the Control.value. Used for scaling, e.g. in bar graphs.+++
+| xref::class/AnalogControl.adoc[`AnalogControl`]
+
+| <<minValue,`minValue`>>
+//| [[slots_table.minValue]]<<minValue,`minValue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Normal value range minimum for any of the Control.value. Used for scaling, e.g. in bar graphs.+++
+| xref::class/AnalogControl.adoc[`AnalogControl`]
+
+| <<ControlAction,`ControlAction`>>
+//| [[slots_table.ControlAction]]<<ControlAction,`ControlAction`>>
+| 0..1 +
+xref::class/ControlAction.adoc[`ControlAction`]
+| +++The control action that is performed on the control+++
+| xref::class/Control.adoc[`Control`]
+
+| <<PowerSystemResource,`PowerSystemResource`>>
+//| [[slots_table.PowerSystemResource]]<<PowerSystemResource,`PowerSystemResource`>>
+| 0..1 +
+xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+| +++Regulating device governed by this control output.+++
+| xref::class/Control.adoc[`Control`]
+
+| <<RemoteControl,`RemoteControl`>>
+//| [[slots_table.RemoteControl]]<<RemoteControl,`RemoteControl`>>
+| 0..1 +
+xref::class/RemoteControl.adoc[`RemoteControl`]
+| +++The remote point controlling the physical actuator.+++
+| xref::class/Control.adoc[`Control`]
+
+| <<controlType,`controlType`>>
+//| [[slots_table.controlType]]<<controlType,`controlType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Specifies the type of Control. For example, this specifies if the Control represents BreakerOpen, BreakerClose,...+++
+| xref::class/Control.adoc[`Control`]
+
+| <<operationInProgress,`operationInProgress`>>
+//| [[slots_table.operationInProgress]]<<operationInProgress,`operationInProgress`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Indicates that a client is currently sending control commands that has not completed.+++
+| xref::class/Control.adoc[`Control`]
+
+| <<timeStamp,`timeStamp`>>
+//| [[slots_table.timeStamp]]<<timeStamp,`timeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The last time a control output was sent.+++
+| xref::class/Control.adoc[`Control`]
+
+| <<unitMultiplier,`unitMultiplier`>>
+//| [[slots_table.unitMultiplier]]<<unitMultiplier,`unitMultiplier`>>
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++The unit multiplier of the controlled quantity.+++
+| xref::class/Control.adoc[`Control`]
+
+| <<unitSymbol,`unitSymbol`>>
+//| [[slots_table.unitSymbol]]<<unitSymbol,`unitSymbol`>>
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+| +++The unit of measure of the controlled quantity.+++
+| xref::class/Control.adoc[`Control`]
+
+| <<BilateralToIOPoint,`BilateralToIOPoint`>>
+//| [[slots_table.BilateralToIOPoint]]<<BilateralToIOPoint,`BilateralToIOPoint`>>
+| 0..* +
+xref::class/ProvidedBilateralPoint.adoc[`ProvidedBilateralPoint`]
+| +++Bilateral ICCP point for the measurement or control.+++
+| xref::class/IOPoint.adoc[`IOPoint`]
+
+| <<IOPointSource,`IOPointSource`>>
+//| [[slots_table.IOPointSource]]<<IOPointSource,`IOPointSource`>>
+| 0..1 +
+xref::class/IOPointSource.adoc[`IOPointSource`]
+| +++Local merasurement value source for an ICCP point.+++
+| xref::class/IOPoint.adoc[`IOPoint`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AnalogValue]
+=== `AnalogValue`
++++The MeasurementValue that is controlled.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AnalogControl.AnalogValue`
+| Cardinality
+| 1
+| Type
+| xref::class/AnalogValue.adoc[`AnalogValue`]
+
+| Inherited from
+| xref::class/AnalogControl.adoc[`AnalogControl`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AnalogValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#BilateralToIOPoint]
+=== `BilateralToIOPoint`
++++Bilateral ICCP point for the measurement or control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IOPoint.BilateralToIOPoint`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProvidedBilateralPoint.adoc[`ProvidedBilateralPoint`]
+
+| Inherited from
+| xref::class/IOPoint.adoc[`IOPoint`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.BilateralToIOPoint,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ControlAction]
+=== `ControlAction`
++++The control action that is performed on the control+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Control.ControlAction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ControlAction.adoc[`ControlAction`]
+
+| Inherited from
+| xref::class/Control.adoc[`Control`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ControlAction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#controlType]
+=== `controlType`
++++Specifies the type of Control. For example, this specifies if the Control represents BreakerOpen, BreakerClose, GeneratorVoltageSetPoint, GeneratorRaise, GeneratorLower, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Control.controlType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Control.adoc[`Control`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.controlType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#IOPointSource]
+=== `IOPointSource`
++++Local merasurement value source for an ICCP point.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IOPoint.IOPointSource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IOPointSource.adoc[`IOPointSource`]
+
+| Inherited from
+| xref::class/IOPoint.adoc[`IOPoint`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.IOPointSource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxValue]
+=== `maxValue`
++++Normal value range maximum for any of the Control.value. Used for scaling, e.g. in bar graphs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AnalogControl.maxValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/AnalogControl.adoc[`AnalogControl`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minValue]
+=== `minValue`
++++Normal value range minimum for any of the Control.value. Used for scaling, e.g. in bar graphs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AnalogControl.minValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/AnalogControl.adoc[`AnalogControl`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#normalValue]
+=== `normalValue`
++++Normal value for Control.value e.g. used for percentage scaling.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SetPoint.normalValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.normalValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#operationInProgress]
+=== `operationInProgress`
++++Indicates that a client is currently sending control commands that has not completed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Control.operationInProgress`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Control.adoc[`Control`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.operationInProgress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PowerSystemResource]
+=== `PowerSystemResource`
++++Regulating device governed by this control output.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Control.PowerSystemResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| Inherited from
+| xref::class/Control.adoc[`Control`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PowerSystemResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RemoteControl]
+=== `RemoteControl`
++++The remote point controlling the physical actuator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Control.RemoteControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RemoteControl.adoc[`RemoteControl`]
+
+| Inherited from
+| xref::class/Control.adoc[`Control`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RemoteControl,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeStamp]
+=== `timeStamp`
++++The last time a control output was sent.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Control.timeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Control.adoc[`Control`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#unitMultiplier]
+=== `unitMultiplier`
++++The unit multiplier of the controlled quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Control.unitMultiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+| Inherited from
+| xref::class/Control.adoc[`Control`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.unitMultiplier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#unitSymbol]
+=== `unitSymbol`
++++The unit of measure of the controlled quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Control.unitSymbol`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+
+| Inherited from
+| xref::class/Control.adoc[`Control`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.unitSymbol,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value]
+=== `value`
++++The value representing the actuator output.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SetPoint.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

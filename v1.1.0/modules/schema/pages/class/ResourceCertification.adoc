@@ -1,0 +1,189 @@
+= `ResourceCertification`
+:toclevels: 4
+
+
++++Specifies certification for a resource to participate in a specific markets.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ResourceCertification`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ResourceCertification`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| +++RegisteredResources are qualified for resource ancillary service types (which include market product types as well as other...+++
+| _n/a_
+
+| <<market,`market`>>
+//| [[slots_table.market]]<<market,`market`>>
+| 0..1 +
+xref::enumeration/MarketType.adoc[`MarketType`]
+| +++market type+++
+| _n/a_
+
+| <<qualificationFlag,`qualificationFlag`>>
+//| [[slots_table.qualificationFlag]]<<qualificationFlag,`qualificationFlag`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Status of the qualification ('Y' = Active, 'N' = Inactive)+++
+| _n/a_
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+xref::enumeration/ResourceCertificationKind.adoc[`ResourceCertificationKind`]
+| +++Type of service based on ResourceAncillaryServiceType enumeration+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#market]
+=== `market`
++++market type+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCertification.market`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MarketType.adoc[`MarketType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.market,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#qualificationFlag]
+=== `qualificationFlag`
++++Status of the qualification ('Y' = Active, 'N' = Inactive)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCertification.qualificationFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.qualificationFlag,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
++++RegisteredResources are qualified for resource ancillary service types (which include market product types as well as other types such as BlackStart) by the association to the class ResourceAncillaryServiceQualification.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCertification.RegisteredResource`
+| Cardinality
+| 1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++Type of service based on ResourceAncillaryServiceType enumeration+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCertification.type`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ResourceCertificationKind.adoc[`ResourceCertificationKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#ResourceAncillaryServiceQualification[`ResourceAncillaryServiceQualification`]
+
+
+|===
+

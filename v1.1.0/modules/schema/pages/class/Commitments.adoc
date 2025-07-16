@@ -1,0 +1,463 @@
+= `Commitments`
+:toclevels: 4
+
+
++++Provides the necessary information (on a resource basis) to capture the Startup/Shutdown commitment results. This information is relevant to all markets.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Commitments`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`Commitments`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<CommitmentClearing,`CommitmentClearing`>>
+//| [[slots_table.CommitmentClearing]]<<CommitmentClearing,`CommitmentClearing`>>
+| 1..* +
+xref::class/CommitmentClearing.adoc[`CommitmentClearing`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<commitmentType,`commitmentType`>>
+//| [[slots_table.commitmentType]]<<commitmentType,`commitmentType`>>
+| 0..1 +
+xref::enumeration/CommitmentType.adoc[`CommitmentType`]
+| +++the type of UC status (self commitment, ISO commitment, or SCUC commitment)+++
+| _n/a_
+
+| <<instructionCost,`instructionCost`>>
+//| [[slots_table.instructionCost]]<<instructionCost,`instructionCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Total cost associated with changing the status of the resource.+++
+| _n/a_
+
+| <<instructionType,`instructionType`>>
+//| [[slots_table.instructionType]]<<instructionType,`instructionType`>>
+| 0..1 +
+xref::enumeration/AutomaticDispInstTypeCommitment.adoc[`AutomaticDispInstTypeCommitment`]
+| +++Indicator of either a Start-Up or a Shut-Down.+++
+| _n/a_
+
+| <<intervalEndTime,`intervalEndTime`>>
+//| [[slots_table.intervalEndTime]]<<intervalEndTime,`intervalEndTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++End time for the commitment period. This will be on an interval boundary.+++
+| _n/a_
+
+| <<intervalStartTime,`intervalStartTime`>>
+//| [[slots_table.intervalStartTime]]<<intervalStartTime,`intervalStartTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Start time for the commitment period. This will be on an interval boundary.+++
+| _n/a_
+
+| <<minStatusChangeTime,`minStatusChangeTime`>>
+//| [[slots_table.minStatusChangeTime]]<<minStatusChangeTime,`minStatusChangeTime`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++SCUC commitment period start-up time. Calculated start up time based on the StartUpTimeCurve provided with the Bid.
+
+This...+++
+| _n/a_
+
+| <<noLoadCost,`noLoadCost`>>
+//| [[slots_table.noLoadCost]]<<noLoadCost,`noLoadCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Unit no load cost in case of energy commodity+++
+| _n/a_
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+//| [[slots_table.updateTimeStamp]]<<updateTimeStamp,`updateTimeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<updateType,`updateType`>>
+//| [[slots_table.updateType]]<<updateType,`updateType`>>
+| 0..1 +
+xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+| _n/a_
+| _n/a_
+
+| <<updateUser,`updateUser`>>
+//| [[slots_table.updateUser]]<<updateUser,`updateUser`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#CommitmentClearing]
+=== `CommitmentClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Commitments.CommitmentClearing`
+| Cardinality
+| 1..*
+| Type
+| xref::class/CommitmentClearing.adoc[`CommitmentClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CommitmentClearing,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#commitmentType]
+=== `commitmentType`
++++the type of UC status (self commitment, ISO commitment, or SCUC commitment)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Commitments.commitmentType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/CommitmentType.adoc[`CommitmentType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.commitmentType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#instructionCost]
+=== `instructionCost`
++++Total cost associated with changing the status of the resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Commitments.instructionCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.instructionCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#instructionType]
+=== `instructionType`
++++Indicator of either a Start-Up or a Shut-Down.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Commitments.instructionType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/AutomaticDispInstTypeCommitment.adoc[`AutomaticDispInstTypeCommitment`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.instructionType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#intervalEndTime]
+=== `intervalEndTime`
++++End time for the commitment period. This will be on an interval boundary.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Commitments.intervalEndTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalEndTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#intervalStartTime]
+=== `intervalStartTime`
++++Start time for the commitment period. This will be on an interval boundary.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Commitments.intervalStartTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalStartTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minStatusChangeTime]
+=== `minStatusChangeTime`
++++SCUC commitment period start-up time. Calculated start up time based on the StartUpTimeCurve provided with the Bid.
+
+This is a combination of StartUp time bid and Unit down time. 
+
+Units is minutes+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Commitments.minStatusChangeTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minStatusChangeTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#noLoadCost]
+=== `noLoadCost`
++++Unit no load cost in case of energy commodity+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Commitments.noLoadCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.noLoadCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Commitments.RegisteredResource`
+| Cardinality
+| 1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Commitments.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateTimeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateType]
+=== `updateType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Commitments.updateType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Commitments.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateUser,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CommitmentClearing.adoc[`CommitmentClearing`] | xref::class/CommitmentClearing.adoc#Commitments[`Commitments`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#Commitments[`Commitments`]
+
+
+|===
+

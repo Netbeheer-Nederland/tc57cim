@@ -1,0 +1,60 @@
+= `ErpAccountKind`
+:toclevels: 4
+
+
++++Kind of ERP account.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ErpAccountKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `estimate`
+| `cim:ErpAccountKind.estimate`
+| n/a
+
+| `normal`
+| `cim:ErpAccountKind.normal`
+| n/a
+
+| `reversal`
+| `cim:ErpAccountKind.reversal`
+| n/a
+
+| `statistical`
+| `cim:ErpAccountKind.statistical`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ErpLedgerEntry.adoc[`ErpLedgerEntry`] | xref::class/ErpLedgerEntry.adoc#accountKind[`accountKind`]
+
+
+|===
+

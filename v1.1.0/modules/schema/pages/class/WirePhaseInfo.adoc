@@ -1,0 +1,197 @@
+= `WirePhaseInfo`
+:toclevels: 4
+
+
++++Information on a wire carrying a single phase.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:WirePhaseInfo`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`WirePhaseInfo`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<WireAssemblyInfo,`WireAssemblyInfo`>>
+//| [[slots_table.WireAssemblyInfo]]<<WireAssemblyInfo,`WireAssemblyInfo`>>
+| 1 +
+xref::class/WireAssemblyInfo.adoc[`WireAssemblyInfo`]
+| +++Wire assembly information using this wire phase information.+++
+| _n/a_
+
+| <<WireInfo,`WireInfo`>>
+//| [[slots_table.WireInfo]]<<WireInfo,`WireInfo`>>
+| 0..1 +
+xref::class/WireInfo.adoc[`WireInfo`]
+| +++Wire information contributing to this wire phase information.+++
+| _n/a_
+
+| <<WirePosition,`WirePosition`>>
+//| [[slots_table.WirePosition]]<<WirePosition,`WirePosition`>>
+| 0..1 +
+xref::class/WirePosition.adoc[`WirePosition`]
+| +++Wire position with this wire phase information.+++
+| _n/a_
+
+| <<phaseInfo,`phaseInfo`>>
+//| [[slots_table.phaseInfo]]<<phaseInfo,`phaseInfo`>>
+| 0..1 +
+xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++Phase information.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#phaseInfo]
+=== `phaseInfo`
++++Phase information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WirePhaseInfo.phaseInfo`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phaseInfo,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WireAssemblyInfo]
+=== `WireAssemblyInfo`
++++Wire assembly information using this wire phase information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WirePhaseInfo.WireAssemblyInfo`
+| Cardinality
+| 1
+| Type
+| xref::class/WireAssemblyInfo.adoc[`WireAssemblyInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WireAssemblyInfo,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WireInfo]
+=== `WireInfo`
++++Wire information contributing to this wire phase information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WirePhaseInfo.WireInfo`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WireInfo.adoc[`WireInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WireInfo,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WirePosition]
+=== `WirePosition`
++++Wire position with this wire phase information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WirePhaseInfo.WirePosition`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WirePosition.adoc[`WirePosition`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WirePosition,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/WireAssemblyInfo.adoc[`WireAssemblyInfo`] | xref::class/WireAssemblyInfo.adoc#WirePhaseInfo[`WirePhaseInfo`]
+
+
+
+| xref::class/WireInfo.adoc[`WireInfo`] | xref::class/WireInfo.adoc#WirePhaseInfo[`WirePhaseInfo`]
+
+
+
+| xref::class/WirePosition.adoc[`WirePosition`] | xref::class/WirePosition.adoc#WirePhaseInfo[`WirePhaseInfo`]
+
+
+|===
+

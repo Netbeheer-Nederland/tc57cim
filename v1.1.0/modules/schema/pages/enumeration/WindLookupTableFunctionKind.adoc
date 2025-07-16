@@ -1,0 +1,108 @@
+= `WindLookupTableFunctionKind`
+:toclevels: 4
+
+
++++Function of the lookup table.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:WindLookupTableFunctionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ipmax`
+| `cim:WindLookupTableFunctionKind.ipmax`
+| n/a
+
+| `iqmax`
+| `cim:WindLookupTableFunctionKind.iqmax`
+| n/a
+
+| `omegap`
+| `cim:WindLookupTableFunctionKind.omegap`
+| n/a
+
+| `prr`
+| `cim:WindLookupTableFunctionKind.prr`
+| n/a
+
+| `pwp`
+| `cim:WindLookupTableFunctionKind.pwp`
+| n/a
+
+| `qmaxp`
+| `cim:WindLookupTableFunctionKind.qmaxp`
+| n/a
+
+| `qmaxu`
+| `cim:WindLookupTableFunctionKind.qmaxu`
+| n/a
+
+| `qminp`
+| `cim:WindLookupTableFunctionKind.qminp`
+| n/a
+
+| `qminu`
+| `cim:WindLookupTableFunctionKind.qminu`
+| n/a
+
+| `qwp`
+| `cim:WindLookupTableFunctionKind.qwp`
+| n/a
+
+| `tcwdu`
+| `cim:WindLookupTableFunctionKind.tcwdu`
+| n/a
+
+| `tduwt`
+| `cim:WindLookupTableFunctionKind.tduwt`
+| n/a
+
+| `tfover`
+| `cim:WindLookupTableFunctionKind.tfover`
+| n/a
+
+| `tfunder`
+| `cim:WindLookupTableFunctionKind.tfunder`
+| n/a
+
+| `tuover`
+| `cim:WindLookupTableFunctionKind.tuover`
+| n/a
+
+| `tuunder`
+| `cim:WindLookupTableFunctionKind.tuunder`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/WindDynamicsLookupTable.adoc[`WindDynamicsLookupTable`] | xref::class/WindDynamicsLookupTable.adoc#lookupTableFunctionType[`lookupTableFunctionType`]
+
+
+|===
+

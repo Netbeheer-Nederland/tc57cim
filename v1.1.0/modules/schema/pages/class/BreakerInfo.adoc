@@ -1,0 +1,1238 @@
+= `BreakerInfo`
+:toclevels: 4
+
+
++++Properties of breaker assets.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:BreakerInfo`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/AssetInfo.adoc[`AssetInfo`]
+*** xref::class/SwitchInfo.adoc[`SwitchInfo`]
+**** xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+***** *`BreakerInfo`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<phaseTrip,`phaseTrip`>>
+//| [[slots_table.phaseTrip]]<<phaseTrip,`phaseTrip`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++Phase trip rating.+++
+| _n/a_
+
+| <<dielectricStrength,`dielectricStrength`>>
+//| [[slots_table.dielectricStrength]]<<dielectricStrength,`dielectricStrength`>>
+| 0..1 +
+xref::class/Voltage.adoc[`Voltage`]
+| +++The maximum rms voltage that may be applied across an open contact without breaking down the dielectric properties of the...+++
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+| <<loadBreak,`loadBreak`>>
+//| [[slots_table.loadBreak]]<<loadBreak,`loadBreak`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if switch has load breaking capabiity. Unless specified false, this is always assumed to be true for breakers and reclosers.+++
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+| <<makingCapacity,`makingCapacity`>>
+//| [[slots_table.makingCapacity]]<<makingCapacity,`makingCapacity`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++The highest value of current the switch can make at the rated voltage under specified operating conditions without suffering...+++
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+| <<minimumCurrent,`minimumCurrent`>>
+//| [[slots_table.minimumCurrent]]<<minimumCurrent,`minimumCurrent`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++The lowest value of current that the switch can make, carry and break in uninterrupted duty at the rated voltage under...+++
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+| <<poleCount,`poleCount`>>
+//| [[slots_table.poleCount]]<<poleCount,`poleCount`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Number of poles (i.e. of current carrying conductors that are switched).+++
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+| <<remote,`remote`>>
+//| [[slots_table.remote]]<<remote,`remote`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if device is capable of being operated by remote control.+++
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+| <<withstandCurrent,`withstandCurrent`>>
+//| [[slots_table.withstandCurrent]]<<withstandCurrent,`withstandCurrent`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++The highest value of current the switch can carry in the closed position at the rated voltage under specified operating...+++
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+| <<breakingCapacity,`breakingCapacity`>>
+//| [[slots_table.breakingCapacity]]<<breakingCapacity,`breakingCapacity`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++The maximum fault current a breaking device can break safely under prescribed conditions of use.+++
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+| <<gasWeightPerTank,`gasWeightPerTank`>>
+//| [[slots_table.gasWeightPerTank]]<<gasWeightPerTank,`gasWeightPerTank`>>
+| 0..1 +
+xref::class/Mass.adoc[`Mass`]
+| +++Weight of gas in each tank of SF6 dead tank breaker.+++
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+| <<isSinglePhase,`isSinglePhase`>>
+//| [[slots_table.isSinglePhase]]<<isSinglePhase,`isSinglePhase`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true, it is a single phase switch.+++
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+| <<isUnganged,`isUnganged`>>
+//| [[slots_table.isUnganged]]<<isUnganged,`isUnganged`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If true, the switch is not ganged (i.e., a switch phase may be operated separately from other phases).+++
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+| <<lowPressureAlarm,`lowPressureAlarm`>>
+//| [[slots_table.lowPressureAlarm]]<<lowPressureAlarm,`lowPressureAlarm`>>
+| 0..1 +
+xref::class/Pressure.adoc[`Pressure`]
+| +++Gas or air pressure at or below which a low pressure alarm is generated.+++
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+| <<lowPressureLockOut,`lowPressureLockOut`>>
+//| [[slots_table.lowPressureLockOut]]<<lowPressureLockOut,`lowPressureLockOut`>>
+| 0..1 +
+xref::class/Pressure.adoc[`Pressure`]
+| +++Gas or air pressure below which the breaker will not open.+++
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+| <<oilVolumePerTank,`oilVolumePerTank`>>
+//| [[slots_table.oilVolumePerTank]]<<oilVolumePerTank,`oilVolumePerTank`>>
+| 0..1 +
+xref::class/Volume.adoc[`Volume`]
+| +++Volume of oil in each tank of bulk oil breaker.+++
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+| <<ratedCurrent,`ratedCurrent`>>
+//| [[slots_table.ratedCurrent]]<<ratedCurrent,`ratedCurrent`>>
+| 0..1 +
+xref::class/CurrentFlow.adoc[`CurrentFlow`]
+| +++Rated current.+++
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+| <<ratedFrequency,`ratedFrequency`>>
+//| [[slots_table.ratedFrequency]]<<ratedFrequency,`ratedFrequency`>>
+| 0..1 +
+xref::class/Frequency.adoc[`Frequency`]
+| +++Frequency for which switch is rated.+++
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+| <<ratedImpulseWithstandVoltage,`ratedImpulseWithstandVoltage`>>
+//| [[slots_table.ratedImpulseWithstandVoltage]]<<ratedImpulseWithstandVoltage,`ratedImpulseWithstandVoltage`>>
+| 0..1 +
+xref::class/Voltage.adoc[`Voltage`]
+| +++Rated impulse withstand voltage, also known as BIL (Basic Impulse Level).+++
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+| <<ratedInterruptingTime,`ratedInterruptingTime`>>
+//| [[slots_table.ratedInterruptingTime]]<<ratedInterruptingTime,`ratedInterruptingTime`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Switch rated interrupting time in seconds.+++
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+| <<ratedVoltage,`ratedVoltage`>>
+//| [[slots_table.ratedVoltage]]<<ratedVoltage,`ratedVoltage`>>
+| 0..1 +
+xref::class/Voltage.adoc[`Voltage`]
+| +++Rated voltage.+++
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+| <<Assets,`Assets`>>
+//| [[slots_table.Assets]]<<Assets,`Assets`>>
+| 0..* +
+xref::class/Asset.adoc[`Asset`]
+| +++All assets described by this data.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<CatalogAssetType,`CatalogAssetType`>>
+//| [[slots_table.CatalogAssetType]]<<CatalogAssetType,`CatalogAssetType`>>
+| 0..1 +
+xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+| +++Asset information (nameplate) for this catalog asset type.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<PowerSystemResources,`PowerSystemResources`>>
+//| [[slots_table.PowerSystemResources]]<<PowerSystemResources,`PowerSystemResources`>>
+| 0..* +
+xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+| +++All power system resources with this datasheet information.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<ProductAssetModel,`ProductAssetModel`>>
+//| [[slots_table.ProductAssetModel]]<<ProductAssetModel,`ProductAssetModel`>>
+| 0..1 +
+xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+| +++Product asset model which conforms to this catalog asset type.+++
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets described by this data.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Assets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#breakingCapacity]
+=== `breakingCapacity`
++++The maximum fault current a breaking device can break safely under prescribed conditions of use.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchInfo.breakingCapacity`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+| Inherited from
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.breakingCapacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CatalogAssetType]
+=== `CatalogAssetType`
++++Asset information (nameplate) for this catalog asset type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.CatalogAssetType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CatalogAssetType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dielectricStrength]
+=== `dielectricStrength`
++++The maximum rms voltage that may be applied across an open contact without breaking down the dielectric properties of the switch in the open position.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldSwitchInfo.dielectricStrength`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+| Inherited from
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dielectricStrength,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#gasWeightPerTank]
+=== `gasWeightPerTank`
++++Weight of gas in each tank of SF6 dead tank breaker.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchInfo.gasWeightPerTank`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Mass.adoc[`Mass`]
+
+| Inherited from
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.gasWeightPerTank,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#isSinglePhase]
+=== `isSinglePhase`
++++If true, it is a single phase switch.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchInfo.isSinglePhase`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.isSinglePhase,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#isUnganged]
+=== `isUnganged`
++++If true, the switch is not ganged (i.e., a switch phase may be operated separately from other phases).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchInfo.isUnganged`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.isUnganged,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#loadBreak]
+=== `loadBreak`
++++True if switch has load breaking capabiity. Unless specified false, this is always assumed to be true for breakers and reclosers.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldSwitchInfo.loadBreak`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.loadBreak,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lowPressureAlarm]
+=== `lowPressureAlarm`
++++Gas or air pressure at or below which a low pressure alarm is generated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchInfo.lowPressureAlarm`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Pressure.adoc[`Pressure`]
+
+| Inherited from
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lowPressureAlarm,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lowPressureLockOut]
+=== `lowPressureLockOut`
++++Gas or air pressure below which the breaker will not open.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchInfo.lowPressureLockOut`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Pressure.adoc[`Pressure`]
+
+| Inherited from
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lowPressureLockOut,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#makingCapacity]
+=== `makingCapacity`
++++The highest value of current the switch can make at the rated voltage under specified operating conditions without suffering significant deterioration of its performance.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldSwitchInfo.makingCapacity`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+| Inherited from
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.makingCapacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minimumCurrent]
+=== `minimumCurrent`
++++The lowest value of current that the switch can make, carry and break in uninterrupted duty at the rated voltage under specified operating conditions without suffering significant deterioration of its performance.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldSwitchInfo.minimumCurrent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+| Inherited from
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minimumCurrent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#oilVolumePerTank]
+=== `oilVolumePerTank`
++++Volume of oil in each tank of bulk oil breaker.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchInfo.oilVolumePerTank`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Volume.adoc[`Volume`]
+
+| Inherited from
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.oilVolumePerTank,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phaseTrip]
+=== `phaseTrip`
++++Phase trip rating.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BreakerInfo.phaseTrip`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phaseTrip,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#poleCount]
+=== `poleCount`
++++Number of poles (i.e. of current carrying conductors that are switched).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldSwitchInfo.poleCount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+| Inherited from
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.poleCount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PowerSystemResources]
+=== `PowerSystemResources`
++++All power system resources with this datasheet information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.PowerSystemResources`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PowerSystemResources,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ProductAssetModel]
+=== `ProductAssetModel`
++++Product asset model which conforms to this catalog asset type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AssetInfo.ProductAssetModel`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+
+| Inherited from
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ProductAssetModel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ratedCurrent]
+=== `ratedCurrent`
++++Rated current.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchInfo.ratedCurrent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+| Inherited from
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ratedCurrent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ratedFrequency]
+=== `ratedFrequency`
++++Frequency for which switch is rated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchInfo.ratedFrequency`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Frequency.adoc[`Frequency`]
+
+| Inherited from
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ratedFrequency,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ratedImpulseWithstandVoltage]
+=== `ratedImpulseWithstandVoltage`
++++Rated impulse withstand voltage, also known as BIL (Basic Impulse Level).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchInfo.ratedImpulseWithstandVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+| Inherited from
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ratedImpulseWithstandVoltage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ratedInterruptingTime]
+=== `ratedInterruptingTime`
++++Switch rated interrupting time in seconds.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchInfo.ratedInterruptingTime`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+| Inherited from
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ratedInterruptingTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ratedVoltage]
+=== `ratedVoltage`
++++Rated voltage.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchInfo.ratedVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+| Inherited from
+| xref::class/SwitchInfo.adoc[`SwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ratedVoltage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#remote]
+=== `remote`
++++True if device is capable of being operated by remote control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldSwitchInfo.remote`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.remote,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#withstandCurrent]
+=== `withstandCurrent`
++++The highest value of current the switch can carry in the closed position at the rated voltage under specified operating conditions without suffering significant deterioration of its performance.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldSwitchInfo.withstandCurrent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CurrentFlow.adoc[`CurrentFlow`]
+
+| Inherited from
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.withstandCurrent,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

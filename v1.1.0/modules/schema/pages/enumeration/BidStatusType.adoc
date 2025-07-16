@@ -1,0 +1,85 @@
+= `BidStatusType`
+:toclevels: 4
+
+
++++Status indication for bids
+
+CV - Conditionally Valid Bid
+CM - Conditionally Modified Bid
+V - Valid Bid
+M - Modified Bid
+RJ - Rejected Bid
+I - Invalid Bid
+CX - Cancelled Bid
+O - Obsolete Bid
+CL - Clean Bid
+RP - Replicated Bid+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:BidStatusType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `CL`
+| `cim:BidStatusType.CL`
+| n/a
+
+| `CM`
+| `cim:BidStatusType.CM`
+| n/a
+
+| `CV`
+| `cim:BidStatusType.CV`
+| n/a
+
+| `CX`
+| `cim:BidStatusType.CX`
+| n/a
+
+| `I`
+| `cim:BidStatusType.I`
+| n/a
+
+| `M`
+| `cim:BidStatusType.M`
+| n/a
+
+| `O`
+| `cim:BidStatusType.O`
+| n/a
+
+| `RJ`
+| `cim:BidStatusType.RJ`
+| n/a
+
+| `RP`
+| `cim:BidStatusType.RP`
+| n/a
+
+| `V`
+| `cim:BidStatusType.V`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

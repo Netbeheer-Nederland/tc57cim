@@ -1,0 +1,156 @@
+= `OperatonalLimitTypeScaling`
+:toclevels: 4
+
+
++++One operational limit type scales values of another operational limit type when under the same operational limit set.    This applies to any operational limit assigned to the target operational limit type and without other limit dependency models.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:OperatonalLimitTypeScaling`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`OperatonalLimitTypeScaling`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<SourceOperationalLimitType,`SourceOperationalLimitType`>>
+//| [[slots_table.SourceOperationalLimitType]]<<SourceOperationalLimitType,`SourceOperationalLimitType`>>
+| 0..1 +
+xref::class/OperationalLimitType.adoc[`OperationalLimitType`]
+| _n/a_
+| _n/a_
+
+| <<TargetOperationalLimit,`TargetOperationalLimit`>>
+//| [[slots_table.TargetOperationalLimit]]<<TargetOperationalLimit,`TargetOperationalLimit`>>
+| 1 +
+xref::class/OperationalLimitType.adoc[`OperationalLimitType`]
+| _n/a_
+| _n/a_
+
+| <<scalingPercent,`scalingPercent`>>
+//| [[slots_table.scalingPercent]]<<scalingPercent,`scalingPercent`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++The percentage scaling of the source limit to compute the target limit.  Applys to operational limits within an operaitonal...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#scalingPercent]
+=== `scalingPercent`
++++The percentage scaling of the source limit to compute the target limit.  Applys to operational limits within an operaitonal limit set when both source and target operational limit types exist.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatonalLimitTypeScaling.scalingPercent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.scalingPercent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SourceOperationalLimitType]
+=== `SourceOperationalLimitType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatonalLimitTypeScaling.SourceOperationalLimitType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/OperationalLimitType.adoc[`OperationalLimitType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SourceOperationalLimitType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetOperationalLimit]
+=== `TargetOperationalLimit`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OperatonalLimitTypeScaling.TargetOperationalLimit`
+| Cardinality
+| 1
+| Type
+| xref::class/OperationalLimitType.adoc[`OperationalLimitType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetOperationalLimit,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/OperationalLimitType.adoc[`OperationalLimitType`] | xref::class/OperationalLimitType.adoc#TargetOperationalLimitmTypeScaling[`TargetOperationalLimitmTypeScaling`]
+
+
+|===
+

@@ -1,0 +1,52 @@
+= `MarketScheduleServices`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MarketScheduleServices`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `retrieveDefaultBidCurves`
+| `cim:MarketScheduleServices.retrieveDefaultBidCurves`
+| n/a
+
+| `retrieveMarketAwards`
+| `cim:MarketScheduleServices.retrieveMarketAwards`
+| n/a
+
+| `retrieveMPMResults`
+| `cim:MarketScheduleServices.retrieveMPMResults`
+| n/a
+
+| `retrieveSchedulePrices`
+| `cim:MarketScheduleServices.retrieveSchedulePrices`
+| n/a
+
+| `retrieveStartUpShutDownInstructions`
+| `cim:MarketScheduleServices.retrieveStartUpShutDownInstructions`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

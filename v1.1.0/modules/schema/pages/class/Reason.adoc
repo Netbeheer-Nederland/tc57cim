@@ -1,0 +1,304 @@
+= `Reason`
+:toclevels: 4
+
+
++++The motivation of an act.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Reason`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`Reason`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MarketDocument,`MarketDocument`>>
+//| [[slots_table.MarketDocument]]<<MarketDocument,`MarketDocument`>>
+| 0..* +
+xref::class/MarketDocument.adoc[`MarketDocument`]
+| _n/a_
+| _n/a_
+
+| <<Period,`Period`>>
+//| [[slots_table.Period]]<<Period,`Period`>>
+| 0..* +
+xref::class/Period.adoc[`Period`]
+| _n/a_
+| _n/a_
+
+| <<Point,`Point`>>
+//| [[slots_table.Point]]<<Point,`Point`>>
+| 0..* +
+xref::class/Point.adoc[`Point`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..* +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<TimeSeries,`TimeSeries`>>
+//| [[slots_table.TimeSeries]]<<TimeSeries,`TimeSeries`>>
+| 0..* +
+xref::class/TimeSeries.adoc[`TimeSeries`]
+| _n/a_
+| _n/a_
+
+| <<code,`code`>>
+//| [[slots_table.code]]<<code,`code`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The motivation of an act in coded form.+++
+| _n/a_
+
+| <<text,`text`>>
+//| [[slots_table.text]]<<text,`text`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The textual explanation corresponding to the reason code.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#code]
+=== `code`
++++The motivation of an act in coded form.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reason.code`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.code,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketDocument]
+=== `MarketDocument`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reason.MarketDocument`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketDocument,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Period]
+=== `Period`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reason.Period`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Period.adoc[`Period`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Period,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Point]
+=== `Point`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reason.Point`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Point.adoc[`Point`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Point,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reason.RegisteredResource`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#text]
+=== `text`
++++The textual explanation corresponding to the reason code.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reason.text`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.text,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reason.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TimeSeries,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketDocument.adoc[`MarketDocument`] | xref::class/MarketDocument.adoc#Reason[`Reason`]
+
+
+
+| xref::class/Period.adoc[`Period`] | xref::class/Period.adoc#Reason[`Reason`]
+
+
+
+| xref::class/Point.adoc[`Point`] | xref::class/Point.adoc#Reason[`Reason`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#Reason[`Reason`]
+
+
+
+| xref::class/TimeSeries.adoc[`TimeSeries`] | xref::class/TimeSeries.adoc#Reason[`Reason`]
+
+
+|===
+

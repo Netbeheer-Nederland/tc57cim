@@ -1,0 +1,157 @@
+= `SvStatus`
+:toclevels: 4
+
+
++++State variable for status.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SvStatus`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/StateVariable.adoc[`StateVariable`]
+** *`SvStatus`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ConductingEquipment,`ConductingEquipment`>>
+//| [[slots_table.ConductingEquipment]]<<ConductingEquipment,`ConductingEquipment`>>
+| 1 +
+xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+| +++The conducting equipment associated with the status state variable.+++
+| _n/a_
+
+| <<inService,`inService`>>
+//| [[slots_table.inService]]<<inService,`inService`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++The in service status as a result of topology processing.  It indicates if the equipment is considered as energized by the...+++
+| _n/a_
+
+| <<phase,`phase`>>
+//| [[slots_table.phase]]<<phase,`phase`>>
+| 0..1 +
+xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++The individual phase status.    If the attribute is unspecified, then three phase model is assumed.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#ConductingEquipment]
+=== `ConductingEquipment`
++++The conducting equipment associated with the status state variable.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvStatus.ConductingEquipment`
+| Cardinality
+| 1
+| Type
+| xref::class/ConductingEquipment.adoc[`ConductingEquipment`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConductingEquipment,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#inService]
+=== `inService`
++++The in service status as a result of topology processing.  It indicates if the equipment is considered as energized by the power flow. It reflects if the equipment is connected within a solvable island.  It does not necessarily reflect whether or not the island was solved by the power flow.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvStatus.inService`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.inService,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phase]
+=== `phase`
++++The individual phase status.    If the attribute is unspecified, then three phase model is assumed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvStatus.phase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phase,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ConductingEquipment.adoc[`ConductingEquipment`] | xref::class/ConductingEquipment.adoc#SvStatus[`SvStatus`]
+
+
+|===
+

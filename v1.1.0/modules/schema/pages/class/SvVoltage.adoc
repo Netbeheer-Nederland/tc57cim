@@ -1,0 +1,190 @@
+= `SvVoltage`
+:toclevels: 4
+
+
++++State variable for voltage.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SvVoltage`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/StateVariable.adoc[`StateVariable`]
+** *`SvVoltage`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<TopologicalNode,`TopologicalNode`>>
+//| [[slots_table.TopologicalNode]]<<TopologicalNode,`TopologicalNode`>>
+| 1 +
+xref::class/TopologicalNode.adoc[`TopologicalNode`]
+| +++The topological node associated with the voltage state.+++
+| _n/a_
+
+| <<angle,`angle`>>
+//| [[slots_table.angle]]<<angle,`angle`>>
+| 0..1 +
+xref::class/AngleDegrees.adoc[`AngleDegrees`]
+| +++The voltage angle of the topological node complex voltage with respect to system reference.+++
+| _n/a_
+
+| <<phase,`phase`>>
+//| [[slots_table.phase]]<<phase,`phase`>>
+| 0..1 +
+xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++If specified the voltage is the line to ground voltage of the individual phase.   If unspecified, then the voltage is...+++
+| _n/a_
+
+| <<v,`v`>>
+//| [[slots_table.v]]<<v,`v`>>
+| 0..1 +
+xref::class/Voltage.adoc[`Voltage`]
+| +++The voltage magnitude at the topological node. The attribute shall be a positive value.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#angle]
+=== `angle`
++++The voltage angle of the topological node complex voltage with respect to system reference.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvVoltage.angle`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AngleDegrees.adoc[`AngleDegrees`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.angle,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phase]
+=== `phase`
++++If specified the voltage is the line to ground voltage of the individual phase.   If unspecified, then the voltage is assumed balanced.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvVoltage.phase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phase,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TopologicalNode]
+=== `TopologicalNode`
++++The topological node associated with the voltage state.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvVoltage.TopologicalNode`
+| Cardinality
+| 1
+| Type
+| xref::class/TopologicalNode.adoc[`TopologicalNode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TopologicalNode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#v]
+=== `v`
++++The voltage magnitude at the topological node. The attribute shall be a positive value.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvVoltage.v`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Voltage.adoc[`Voltage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.v,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TopologicalNode.adoc[`TopologicalNode`] | xref::class/TopologicalNode.adoc#SvVoltage[`SvVoltage`]
+
+
+|===
+

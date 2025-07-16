@@ -1,0 +1,126 @@
+= `Mass`
+:toclevels: 4
+
+
++++Mass.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Mass`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Mass.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Mass.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Mass.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/OldTransformerEndInfo.adoc[`OldTransformerEndInfo`] | xref::class/OldTransformerEndInfo.adoc#solidInsulationWeight[`solidInsulationWeight`]
+
+
+
+| xref::class/OldTransformerTankInfo.adoc[`OldTransformerTankInfo`] | xref::class/OldTransformerTankInfo.adoc#coreCoilsWeight[`coreCoilsWeight`]
+
+
+
+| xref::class/ProductAssetModel.adoc[`ProductAssetModel`] | xref::class/ProductAssetModel.adoc#weightTotal[`weightTotal`]
+
+
+
+| xref::class/SwitchInfo.adoc[`SwitchInfo`] | xref::class/SwitchInfo.adoc#gasWeightPerTank[`gasWeightPerTank`]
+
+
+|===
+

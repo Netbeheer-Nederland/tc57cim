@@ -1,0 +1,193 @@
+= `ControlAreaDesignation`
+:toclevels: 4
+
+
++++Indicates Control Area associated with self-schedule.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ControlAreaDesignation`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ControlAreaDesignation`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..* +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<SubControlArea,`SubControlArea`>>
+//| [[slots_table.SubControlArea]]<<SubControlArea,`SubControlArea`>>
+| 0..* +
+xref::class/SubControlArea.adoc[`SubControlArea`]
+| _n/a_
+| _n/a_
+
+| <<attained,`attained`>>
+//| [[slots_table.attained]]<<attained,`attained`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Attained.+++
+| _n/a_
+
+| <<native,`native`>>
+//| [[slots_table.native]]<<native,`native`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Native.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#attained]
+=== `attained`
++++Attained.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlAreaDesignation.attained`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.attained,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#native]
+=== `native`
++++Native.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlAreaDesignation.native`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.native,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlAreaDesignation.RegisteredResource`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SubControlArea]
+=== `SubControlArea`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlAreaDesignation.SubControlArea`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SubControlArea,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#ControlAreaDesignation[`ControlAreaDesignation`]
+
+
+
+| xref::class/SubControlArea.adoc[`SubControlArea`] | xref::class/SubControlArea.adoc#ControlAreaDesignation[`ControlAreaDesignation`]
+
+
+|===
+

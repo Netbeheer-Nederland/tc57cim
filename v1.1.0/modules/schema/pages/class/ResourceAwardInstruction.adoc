@@ -1,0 +1,1152 @@
+= `ResourceAwardInstruction`
+:toclevels: 4
+
+
++++Model of market results, instruction for resource.  Contains details of award as attributes.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ResourceAwardInstruction`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ResourceAwardInstruction`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ClearingResourceAward,`ClearingResourceAward`>>
+//| [[slots_table.ClearingResourceAward]]<<ClearingResourceAward,`ClearingResourceAward`>>
+| 1..* +
+xref::class/ResourceAwardClearing.adoc[`ResourceAwardClearing`]
+| _n/a_
+| _n/a_
+
+| <<MarketProduct,`MarketProduct`>>
+//| [[slots_table.MarketProduct]]<<MarketProduct,`MarketProduct`>>
+| 1 +
+xref::class/MarketProduct.adoc[`MarketProduct`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<SelfScheduleBreakdown,`SelfScheduleBreakdown`>>
+//| [[slots_table.SelfScheduleBreakdown]]<<SelfScheduleBreakdown,`SelfScheduleBreakdown`>>
+| 0..* +
+xref::class/SelfScheduleBreakdown.adoc[`SelfScheduleBreakdown`]
+| _n/a_
+| _n/a_
+
+| <<awardMW,`awardMW`>>
+//| [[slots_table.awardMW]]<<awardMW,`awardMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++For DA Energy: Not Applicable;   
+
+For DA AS: DA AS market award;   
+
+For RT Energy: Not Applicable;   
+
+For RT AS: RT...+++
+| _n/a_
+
+| <<clearedMW,`clearedMW`>>
+//| [[slots_table.clearedMW]]<<clearedMW,`clearedMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++For DA Energy: Total Schedule = DA market schedule + DA self-schedule award;   
+
+For DA AS: DA Ancillary Service Awards =...+++
+| _n/a_
+
+| <<clearedPrice,`clearedPrice`>>
+//| [[slots_table.clearedPrice]]<<clearedPrice,`clearedPrice`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Marginal Price ($/MW) for the commodity (Regulation Up, Regulation Down, Spinning Reserve, or Non-spinning reserve) for pricing run.+++
+| _n/a_
+
+| <<congestLMP,`congestLMP`>>
+//| [[slots_table.congestLMP]]<<congestLMP,`congestLMP`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Congestion component of Location Marginal Price (LMP) in monetary units per MW.+++
+| _n/a_
+
+| <<costLMP,`costLMP`>>
+//| [[slots_table.costLMP]]<<costLMP,`costLMP`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Cost component of Locational Marginal Pricing (LMP) in monetary units per MW.+++
+| _n/a_
+
+| <<dispatcherAddedMW,`dispatcherAddedMW`>>
+//| [[slots_table.dispatcherAddedMW]]<<dispatcherAddedMW,`dispatcherAddedMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The tier2 mw added by dispatcher action 
+Market results of the synchronized reserve market+++
+| _n/a_
+
+| <<economicMax,`economicMax`>>
+//| [[slots_table.economicMax]]<<economicMax,`economicMax`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Unit max output for dispatch; bid in economic maximum+++
+| _n/a_
+
+| <<economicMin,`economicMin`>>
+//| [[slots_table.economicMin]]<<economicMin,`economicMin`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Unit min output for dispatch; bid in economic minimum+++
+| _n/a_
+
+| <<effRegulationDownLimit,`effRegulationDownLimit`>>
+//| [[slots_table.effRegulationDownLimit]]<<effRegulationDownLimit,`effRegulationDownLimit`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Effective Regulation Down Limit (MW)+++
+| _n/a_
+
+| <<effRegulationUpLimit,`effRegulationUpLimit`>>
+//| [[slots_table.effRegulationUpLimit]]<<effRegulationUpLimit,`effRegulationUpLimit`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Effective Regulation Up Limit+++
+| _n/a_
+
+| <<lmp,`lmp`>>
+//| [[slots_table.lmp]]<<lmp,`lmp`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Locational marginal price value+++
+| _n/a_
+
+| <<lossLMP,`lossLMP`>>
+//| [[slots_table.lossLMP]]<<lossLMP,`lossLMP`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Loss component of Location Marginal Price (LMP) in monetary units per MW.+++
+| _n/a_
+
+| <<manuallyBlocked,`manuallyBlocked`>>
+//| [[slots_table.manuallyBlocked]]<<manuallyBlocked,`manuallyBlocked`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Indicates if an award was manually blocked (Y/N). Valid for Spinning and Non-spinning.+++
+| _n/a_
+
+| <<marginalResourceIndicator,`marginalResourceIndicator`>>
+//| [[slots_table.marginalResourceIndicator]]<<marginalResourceIndicator,`marginalResourceIndicator`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Indicator (Yes / No) that this resource set the price for this dispatch / schedule.+++
+| _n/a_
+
+| <<mustRunInd,`mustRunInd`>>
+//| [[slots_table.mustRunInd]]<<mustRunInd,`mustRunInd`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Identifes if the unit was set to must run by the market participant responsible for bidding in the unit+++
+| _n/a_
+
+| <<noLoadCost,`noLoadCost`>>
+//| [[slots_table.noLoadCost]]<<noLoadCost,`noLoadCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Unit no-load cost in case of energy commodity+++
+| _n/a_
+
+| <<optimalBidCost,`optimalBidCost`>>
+//| [[slots_table.optimalBidCost]]<<optimalBidCost,`optimalBidCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Optimal Bid cost+++
+| _n/a_
+
+| <<optimalBidPay,`optimalBidPay`>>
+//| [[slots_table.optimalBidPay]]<<optimalBidPay,`optimalBidPay`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Optimal Bid production payment based on LMP+++
+| _n/a_
+
+| <<optimalMargin,`optimalMargin`>>
+//| [[slots_table.optimalMargin]]<<optimalMargin,`optimalMargin`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Optimal Bid production margin+++
+| _n/a_
+
+| <<overrideTimeStamp,`overrideTimeStamp`>>
+//| [[slots_table.overrideTimeStamp]]<<overrideTimeStamp,`overrideTimeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Time the manual data entry occured.+++
+| _n/a_
+
+| <<overrideValue,`overrideValue`>>
+//| [[slots_table.overrideValue]]<<overrideValue,`overrideValue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Provides the ability for the grid operator to override items, such as spin capacity requirements, prior to running the...+++
+| _n/a_
+
+| <<selfSchedMW,`selfSchedMW`>>
+//| [[slots_table.selfSchedMW]]<<selfSchedMW,`selfSchedMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++For DA Energy: DA total self-schedule award;   
+For DA AS: DA AS self-provision award;   
+For RT Energy: RT total...+++
+| _n/a_
+
+| <<startUpCost,`startUpCost`>>
+//| [[slots_table.startUpCost]]<<startUpCost,`startUpCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Unit start up cost in case of energy commodity+++
+| _n/a_
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++In or out status of resource+++
+| _n/a_
+
+| <<totalRevenue,`totalRevenue`>>
+//| [[slots_table.totalRevenue]]<<totalRevenue,`totalRevenue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Total bid revenue (startup_cost + no_load_cost + bid_pay)+++
+| _n/a_
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+//| [[slots_table.updateTimeStamp]]<<updateTimeStamp,`updateTimeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<updateType,`updateType`>>
+//| [[slots_table.updateType]]<<updateType,`updateType`>>
+| 0..1 +
+xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+| _n/a_
+| _n/a_
+
+| <<updateUser,`updateUser`>>
+//| [[slots_table.updateUser]]<<updateUser,`updateUser`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#awardMW]
+=== `awardMW`
++++For DA Energy: Not Applicable;   
+
+For DA AS: DA AS market award;   
+
+For RT Energy: Not Applicable;   
+
+For RT AS: RT AS market award (excluding DA AS market or self-proviison awards)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.awardMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.awardMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#clearedMW]
+=== `clearedMW`
++++For DA Energy: Total Schedule = DA market schedule + DA self-schedule award;   
+
+For DA AS: DA Ancillary Service Awards = DA AS market award + DA AS self-provision award;   
+
+For RT Energy: Total Schedule = RT market schedule + RT self-schedule award;   
+
+For RT AS: RT Ancillary Service Awards = RT AS self-provision award + RT AS market award + DA AS market award + DA AS self-provision award;+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.clearedMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.clearedMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#clearedPrice]
+=== `clearedPrice`
++++Marginal Price ($/MW) for the commodity (Regulation Up, Regulation Down, Spinning Reserve, or Non-spinning reserve) for pricing run.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.clearedPrice`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.clearedPrice,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ClearingResourceAward]
+=== `ClearingResourceAward`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.ClearingResourceAward`
+| Cardinality
+| 1..*
+| Type
+| xref::class/ResourceAwardClearing.adoc[`ResourceAwardClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ClearingResourceAward,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#congestLMP]
+=== `congestLMP`
++++Congestion component of Location Marginal Price (LMP) in monetary units per MW.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.congestLMP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.congestLMP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#costLMP]
+=== `costLMP`
++++Cost component of Locational Marginal Pricing (LMP) in monetary units per MW.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.costLMP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.costLMP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dispatcherAddedMW]
+=== `dispatcherAddedMW`
++++The tier2 mw added by dispatcher action 
+Market results of the synchronized reserve market+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.dispatcherAddedMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dispatcherAddedMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#economicMax]
+=== `economicMax`
++++Unit max output for dispatch; bid in economic maximum+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.economicMax`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.economicMax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#economicMin]
+=== `economicMin`
++++Unit min output for dispatch; bid in economic minimum+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.economicMin`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.economicMin,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#effRegulationDownLimit]
+=== `effRegulationDownLimit`
++++Effective Regulation Down Limit (MW)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.effRegulationDownLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.effRegulationDownLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#effRegulationUpLimit]
+=== `effRegulationUpLimit`
++++Effective Regulation Up Limit+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.effRegulationUpLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.effRegulationUpLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lmp]
+=== `lmp`
++++Locational marginal price value+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.lmp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lmp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lossLMP]
+=== `lossLMP`
++++Loss component of Location Marginal Price (LMP) in monetary units per MW.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.lossLMP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lossLMP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#manuallyBlocked]
+=== `manuallyBlocked`
++++Indicates if an award was manually blocked (Y/N). Valid for Spinning and Non-spinning.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.manuallyBlocked`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.manuallyBlocked,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marginalResourceIndicator]
+=== `marginalResourceIndicator`
++++Indicator (Yes / No) that this resource set the price for this dispatch / schedule.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.marginalResourceIndicator`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marginalResourceIndicator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketProduct]
+=== `MarketProduct`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.MarketProduct`
+| Cardinality
+| 1
+| Type
+| xref::class/MarketProduct.adoc[`MarketProduct`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketProduct,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mustRunInd]
+=== `mustRunInd`
++++Identifes if the unit was set to must run by the market participant responsible for bidding in the unit+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.mustRunInd`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mustRunInd,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#noLoadCost]
+=== `noLoadCost`
++++Unit no-load cost in case of energy commodity+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.noLoadCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.noLoadCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#optimalBidCost]
+=== `optimalBidCost`
++++Optimal Bid cost+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.optimalBidCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.optimalBidCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#optimalBidPay]
+=== `optimalBidPay`
++++Optimal Bid production payment based on LMP+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.optimalBidPay`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.optimalBidPay,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#optimalMargin]
+=== `optimalMargin`
++++Optimal Bid production margin+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.optimalMargin`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.optimalMargin,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#overrideTimeStamp]
+=== `overrideTimeStamp`
++++Time the manual data entry occured.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.overrideTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.overrideTimeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#overrideValue]
+=== `overrideValue`
++++Provides the ability for the grid operator to override items, such as spin capacity requirements, prior to running the algorithm. This value is market product based (spin, non-spin, reg up, reg down, or RUC).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.overrideValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.overrideValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#selfSchedMW]
+=== `selfSchedMW`
++++For DA Energy: DA total self-schedule award;   
+For DA AS: DA AS self-provision award;   
+For RT Energy: RT total self-schedule award;   
+For RT AS: RT AS self-provision award (excluding DA AS market or self-provision awards)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.selfSchedMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.selfSchedMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SelfScheduleBreakdown]
+=== `SelfScheduleBreakdown`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.SelfScheduleBreakdown`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SelfScheduleBreakdown.adoc[`SelfScheduleBreakdown`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SelfScheduleBreakdown,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startUpCost]
+=== `startUpCost`
++++Unit start up cost in case of energy commodity+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.startUpCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startUpCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++In or out status of resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.status`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#totalRevenue]
+=== `totalRevenue`
++++Total bid revenue (startup_cost + no_load_cost + bid_pay)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.totalRevenue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.totalRevenue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateTimeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateType]
+=== `updateType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.updateType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceAwardInstruction.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateUser,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketProduct.adoc[`MarketProduct`] | xref::class/MarketProduct.adoc#ResourceAwardInstruction[`ResourceAwardInstruction`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#ResourceAwardInstruction[`ResourceAwardInstruction`]
+
+
+
+| xref::class/ResourceAwardClearing.adoc[`ResourceAwardClearing`] | xref::class/ResourceAwardClearing.adoc#ResourceAwardInstruction[`ResourceAwardInstruction`]
+
+
+
+| xref::class/SelfScheduleBreakdown.adoc[`SelfScheduleBreakdown`] | xref::class/SelfScheduleBreakdown.adoc#ResourceAwardInstruction[`ResourceAwardInstruction`]
+
+
+|===
+

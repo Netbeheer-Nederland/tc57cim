@@ -1,0 +1,189 @@
+= `IrregularTimePoint`
+:toclevels: 4
+
+
++++TimePoints for a schedule where the time between the points varies.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:IrregularTimePoint`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`IrregularTimePoint`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<IntervalSchedule,`IntervalSchedule`>>
+//| [[slots_table.IntervalSchedule]]<<IntervalSchedule,`IntervalSchedule`>>
+| 1 +
+xref::class/IrregularIntervalSchedule.adoc[`IrregularIntervalSchedule`]
+| +++An IrregularTimePoint belongs to an IrregularIntervalSchedule.+++
+| _n/a_
+
+| <<time,`time`>>
+//| [[slots_table.time]]<<time,`time`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++The time is relative to the schedule starting time.+++
+| _n/a_
+
+| <<value1,`value1`>>
+//| [[slots_table.value1]]<<value1,`value1`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The first value at the time. The meaning of the value is defined by the derived type of the associated schedule.+++
+| _n/a_
+
+| <<value2,`value2`>>
+//| [[slots_table.value2]]<<value2,`value2`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The second value at the time. The meaning of the value is defined by the derived type of the associated schedule.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#IntervalSchedule]
+=== `IntervalSchedule`
++++An IrregularTimePoint belongs to an IrregularIntervalSchedule.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IrregularTimePoint.IntervalSchedule`
+| Cardinality
+| 1
+| Type
+| xref::class/IrregularIntervalSchedule.adoc[`IrregularIntervalSchedule`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.IntervalSchedule,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#time]
+=== `time`
++++The time is relative to the schedule starting time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IrregularTimePoint.time`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.time,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value1]
+=== `value1`
++++The first value at the time. The meaning of the value is defined by the derived type of the associated schedule.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IrregularTimePoint.value1`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value2]
+=== `value2`
++++The second value at the time. The meaning of the value is defined by the derived type of the associated schedule.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IrregularTimePoint.value2`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value2,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/IrregularIntervalSchedule.adoc[`IrregularIntervalSchedule`] | xref::class/IrregularIntervalSchedule.adoc#TimePoints[`TimePoints`]
+
+
+|===
+

@@ -1,0 +1,158 @@
+= `CombinedCycleTransitionState`
+:toclevels: 4
+
+
++++Defines the available from and to Transition States for the Combine Cycle Configurations.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CombinedCycleTransitionState`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`CombinedCycleTransitionState`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<FromConfiguration,`FromConfiguration`>>
+//| [[slots_table.FromConfiguration]]<<FromConfiguration,`FromConfiguration`>>
+| 1 +
+xref::class/CombinedCycleConfiguration.adoc[`CombinedCycleConfiguration`]
+| _n/a_
+| _n/a_
+
+| <<ToConfiguration,`ToConfiguration`>>
+//| [[slots_table.ToConfiguration]]<<ToConfiguration,`ToConfiguration`>>
+| 1 +
+xref::class/CombinedCycleConfiguration.adoc[`CombinedCycleConfiguration`]
+| _n/a_
+| _n/a_
+
+| <<upTransition,`upTransition`>>
+//| [[slots_table.upTransition]]<<upTransition,`upTransition`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Flag indicating whether this is an UP transition.
+If not, it is a DOWN transition.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#FromConfiguration]
+=== `FromConfiguration`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombinedCycleTransitionState.FromConfiguration`
+| Cardinality
+| 1
+| Type
+| xref::class/CombinedCycleConfiguration.adoc[`CombinedCycleConfiguration`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.FromConfiguration,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ToConfiguration]
+=== `ToConfiguration`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombinedCycleTransitionState.ToConfiguration`
+| Cardinality
+| 1
+| Type
+| xref::class/CombinedCycleConfiguration.adoc[`CombinedCycleConfiguration`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ToConfiguration,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#upTransition]
+=== `upTransition`
++++Flag indicating whether this is an UP transition.
+If not, it is a DOWN transition.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CombinedCycleTransitionState.upTransition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.upTransition,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CombinedCycleConfiguration.adoc[`CombinedCycleConfiguration`] | xref::class/CombinedCycleConfiguration.adoc#ToTransitionState[`ToTransitionState`]
+
+
+|===
+

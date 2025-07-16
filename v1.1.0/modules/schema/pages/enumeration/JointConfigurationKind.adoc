@@ -1,0 +1,60 @@
+= `JointConfigurationKind`
+:toclevels: 4
+
+
++++Kind of configuration for joints.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:JointConfigurationKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `other`
+| `cim:JointConfigurationKind.other`
+| n/a
+
+| `wires1to1`
+| `cim:JointConfigurationKind.wires1to1`
+| n/a
+
+| `wires2to1`
+| `cim:JointConfigurationKind.wires2to1`
+| n/a
+
+| `wires3to1`
+| `cim:JointConfigurationKind.wires3to1`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Joint.adoc[`Joint`] | xref::class/Joint.adoc#configurationKind[`configurationKind`]
+
+
+|===
+

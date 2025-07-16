@@ -1,0 +1,123 @@
+= `LaborelecStandard`
+:toclevels: 4
+
+
++++Standard published by Laborelec.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:LaborelecStandard`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`LaborelecStandard`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<standardEdition,`standardEdition`>>
+//| [[slots_table.standardEdition]]<<standardEdition,`standardEdition`>>
+| 0..1 +
+xref::enumeration/LaborelecStandardEditionKind.adoc[`LaborelecStandardEditionKind`]
+| +++Edition of Laborelec standard.+++
+| _n/a_
+
+| <<standardNumber,`standardNumber`>>
+//| [[slots_table.standardNumber]]<<standardNumber,`standardNumber`>>
+| 0..1 +
+xref::enumeration/LaborelecStandardKind.adoc[`LaborelecStandardKind`]
+| +++Laborelec standard number.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#standardEdition]
+=== `standardEdition`
++++Edition of Laborelec standard.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LaborelecStandard.standardEdition`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/LaborelecStandardEditionKind.adoc[`LaborelecStandardEditionKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardEdition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#standardNumber]
+=== `standardNumber`
++++Laborelec standard number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LaborelecStandard.standardNumber`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/LaborelecStandardKind.adoc[`LaborelecStandardKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardNumber,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TestStandard.adoc[`TestStandard`] | xref::class/TestStandard.adoc#testStandardLaborelec[`testStandardLaborelec`]
+
+
+|===
+

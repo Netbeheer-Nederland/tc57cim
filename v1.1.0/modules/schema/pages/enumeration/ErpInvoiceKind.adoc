@@ -1,0 +1,52 @@
+= `ErpInvoiceKind`
+:toclevels: 4
+
+
++++Kind of ERP invoice.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ErpInvoiceKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `purchase`
+| `cim:ErpInvoiceKind.purchase`
+| n/a
+
+| `sale`
+| `cim:ErpInvoiceKind.sale`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ErpInvoice.adoc[`ErpInvoice`] | xref::class/ErpInvoice.adoc#kind[`kind`]
+
+
+|===
+

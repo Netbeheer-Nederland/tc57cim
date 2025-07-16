@@ -1,0 +1,176 @@
+= `TradeProduct`
+:toclevels: 4
+
+
++++<b>TradeType</b>                                        <b>TradeProduct</b>
+IST  (InterSC Trade)                          PHY (Physical Energy Trade)
+IST                                                  APN (Energy Trades at Aggregated Pricing Nodes)
+IST                                                  CPT (Converted Physical Energy Trade)
+AST (Ancilliary Services Trade)             RUT (Regulation Up Trade)
+AST                                                 RDT (Regulation Down Trade)
+AST                                                 SRT (Spinning Reserve Trade)
+AST                                                 NRT (Non-Spinning Reserve Trade)
+UCT (Unit Commitment Trade)            null+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TradeProduct`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`TradeProduct`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Trade,`Trade`>>
+//| [[slots_table.Trade]]<<Trade,`Trade`>>
+| 0..* +
+xref::class/Trade.adoc[`Trade`]
+| _n/a_
+| _n/a_
+
+| <<tradeProductType,`tradeProductType`>>
+//| [[slots_table.tradeProductType]]<<tradeProductType,`tradeProductType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++PHY (Physical Energy Trade);  
+APN (Energy Trades at Aggregated Pricing Nodes);  
+CPT (Converted Physical Energy Trade); ...+++
+| _n/a_
+
+| <<tradeType,`tradeType`>>
+//| [[slots_table.tradeType]]<<tradeType,`tradeType`>>
+| 0..1 +
+xref::enumeration/TradeType.adoc[`TradeType`]
+| +++IST  - InterSC Trade;  
+AST - Ancilliary Services Trade;  
+UCT - Unit Commitment Trade+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#Trade]
+=== `Trade`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TradeProduct.Trade`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Trade.adoc[`Trade`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Trade,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tradeProductType]
+=== `tradeProductType`
++++PHY (Physical Energy Trade);  
+APN (Energy Trades at Aggregated Pricing Nodes);  
+CPT (Converted Physical Energy Trade);  
+RUT (Regulation Up Trade);  
+RDT (Regulation Down Trade);  
+SRT (Spinning Reserve Trade);  
+NRT (Non-Spinning Reserve Trade)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TradeProduct.tradeProductType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tradeProductType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tradeType]
+=== `tradeType`
++++IST  - InterSC Trade;  
+AST - Ancilliary Services Trade;  
+UCT - Unit Commitment Trade+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TradeProduct.tradeType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/TradeType.adoc[`TradeType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tradeType,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Trade.adoc[`Trade`] | xref::class/Trade.adoc#TradeProduct[`TradeProduct`]
+
+
+|===
+

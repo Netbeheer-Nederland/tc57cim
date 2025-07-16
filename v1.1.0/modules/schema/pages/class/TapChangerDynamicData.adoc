@@ -1,0 +1,354 @@
+= `TapChangerDynamicData`
+:toclevels: 4
+
+
++++Optimal Power Flow or State Estimator Phase Shifter Data. This is used for RealTime, Study and Maintenance Users. SE Solution Phase Shifter Measurements from the last run of SE.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TapChangerDynamicData`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`TapChangerDynamicData`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MktTapChanger,`MktTapChanger`>>
+//| [[slots_table.MktTapChanger]]<<MktTapChanger,`MktTapChanger`>>
+| 1 +
+xref::class/MktTapChanger.adoc[`MktTapChanger`]
+| _n/a_
+| _n/a_
+
+| <<angleRegulationStatus,`angleRegulationStatus`>>
+//| [[slots_table.angleRegulationStatus]]<<angleRegulationStatus,`angleRegulationStatus`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True means the phase shifter is regulating.+++
+| _n/a_
+
+| <<desiredMW,`desiredMW`>>
+//| [[slots_table.desiredMW]]<<desiredMW,`desiredMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Phase Shifter Desired MW. The active power regulation setpoint of the phase shifter+++
+| _n/a_
+
+| <<desiredVoltage,`desiredVoltage`>>
+//| [[slots_table.desiredVoltage]]<<desiredVoltage,`desiredVoltage`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The desired voltage for the LTC+++
+| _n/a_
+
+| <<maximumAngle,`maximumAngle`>>
+//| [[slots_table.maximumAngle]]<<maximumAngle,`maximumAngle`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The maximum phase angle shift of the phase shifter+++
+| _n/a_
+
+| <<minimumAngle,`minimumAngle`>>
+//| [[slots_table.minimumAngle]]<<minimumAngle,`minimumAngle`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The minimum phase angle shift of the phase shifter+++
+| _n/a_
+
+| <<solvedAngle,`solvedAngle`>>
+//| [[slots_table.solvedAngle]]<<solvedAngle,`solvedAngle`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Phase Shifter Angle. The solved phase angle shift of the phase shifter+++
+| _n/a_
+
+| <<tapPosition,`tapPosition`>>
+//| [[slots_table.tapPosition]]<<tapPosition,`tapPosition`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Tap position of the phase shifter, high-side tap position of the transformer, or  low-side tap position of the transformer+++
+| _n/a_
+
+| <<voltageRegulationStatus,`voltageRegulationStatus`>>
+//| [[slots_table.voltageRegulationStatus]]<<voltageRegulationStatus,`voltageRegulationStatus`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Indicator if the LTC transformer is regulating True = Yes, False = No+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#angleRegulationStatus]
+=== `angleRegulationStatus`
++++True means the phase shifter is regulating.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerDynamicData.angleRegulationStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.angleRegulationStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#desiredMW]
+=== `desiredMW`
++++Phase Shifter Desired MW. The active power regulation setpoint of the phase shifter+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerDynamicData.desiredMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.desiredMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#desiredVoltage]
+=== `desiredVoltage`
++++The desired voltage for the LTC+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerDynamicData.desiredVoltage`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.desiredVoltage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maximumAngle]
+=== `maximumAngle`
++++The maximum phase angle shift of the phase shifter+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerDynamicData.maximumAngle`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maximumAngle,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minimumAngle]
+=== `minimumAngle`
++++The minimum phase angle shift of the phase shifter+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerDynamicData.minimumAngle`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minimumAngle,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktTapChanger]
+=== `MktTapChanger`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerDynamicData.MktTapChanger`
+| Cardinality
+| 1
+| Type
+| xref::class/MktTapChanger.adoc[`MktTapChanger`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktTapChanger,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#solvedAngle]
+=== `solvedAngle`
++++Phase Shifter Angle. The solved phase angle shift of the phase shifter+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerDynamicData.solvedAngle`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.solvedAngle,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tapPosition]
+=== `tapPosition`
++++Tap position of the phase shifter, high-side tap position of the transformer, or  low-side tap position of the transformer+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerDynamicData.tapPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tapPosition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#voltageRegulationStatus]
+=== `voltageRegulationStatus`
++++Indicator if the LTC transformer is regulating True = Yes, False = No+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TapChangerDynamicData.voltageRegulationStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.voltageRegulationStatus,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MktTapChanger.adoc[`MktTapChanger`] | xref::class/MktTapChanger.adoc#TapChangerDynamicData[`TapChangerDynamicData`]
+
+
+|===
+

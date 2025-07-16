@@ -1,0 +1,202 @@
+= `Reactance`
+:toclevels: 4
+
+
++++Reactance (imaginary part of impedance), at rated frequency.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Reactance`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Reactance.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Reactance.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Reactance.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ACLineSegment.adoc[`ACLineSegment`] | xref::class/ACLineSegment.adoc#x0[`x0`]
+
+
+
+| xref::class/AsynchronousMachine.adoc[`AsynchronousMachine`] | xref::class/AsynchronousMachine.adoc#xs[`xs`]
+
+
+
+| xref::class/EnergySource.adoc[`EnergySource`] | xref::class/EnergySource.adoc#xn[`xn`]
+
+
+
+| xref::class/EquivalentBranch.adoc[`EquivalentBranch`] | xref::class/EquivalentBranch.adoc#zeroX21[`zeroX21`]
+
+
+
+| xref::class/EquivalentInjection.adoc[`EquivalentInjection`] | xref::class/EquivalentInjection.adoc#x2[`x2`]
+
+
+
+| xref::class/FaultImpedance.adoc[`FaultImpedance`] | xref::class/FaultImpedance.adoc#xLineToLine[`xLineToLine`]
+
+
+
+| xref::class/GeneratorTypeAsset.adoc[`GeneratorTypeAsset`] | xref::class/GeneratorTypeAsset.adoc#xQuadTrans[`xQuadTrans`]
+
+
+
+| xref::class/GroundingImpedance.adoc[`GroundingImpedance`] | xref::class/GroundingImpedance.adoc#x[`x`]
+
+
+
+| xref::class/MutualCoupling.adoc[`MutualCoupling`] | xref::class/MutualCoupling.adoc#x0[`x0`]
+
+
+
+| xref::class/PetersenCoil.adoc[`PetersenCoil`] | xref::class/PetersenCoil.adoc#xGroundNominal[`xGroundNominal`]
+
+
+
+| xref::class/PhaseTapChangerLinear.adoc[`PhaseTapChangerLinear`] | xref::class/PhaseTapChangerLinear.adoc#xMin[`xMin`]
+
+
+
+| xref::class/PhaseTapChangerNonLinear.adoc[`PhaseTapChangerNonLinear`] | xref::class/PhaseTapChangerNonLinear.adoc#xMin[`xMin`]
+
+
+
+| xref::class/PowerElectronicsConnection.adoc[`PowerElectronicsConnection`] | xref::class/PowerElectronicsConnection.adoc#xn[`xn`]
+
+
+
+| xref::class/PowerTransformerEnd.adoc[`PowerTransformerEnd`] | xref::class/PowerTransformerEnd.adoc#x0[`x0`]
+
+
+
+| xref::class/SeriesCompensator.adoc[`SeriesCompensator`] | xref::class/SeriesCompensator.adoc#x0[`x0`]
+
+
+
+| xref::class/StaticVarCompensator.adoc[`StaticVarCompensator`] | xref::class/StaticVarCompensator.adoc#inductiveRating[`inductiveRating`]
+
+
+
+| xref::class/SVC.adoc[`SVC`] | xref::class/SVC.adoc#inductiveRating[`inductiveRating`]
+
+
+
+| xref::class/SynchronousMachine.adoc[`SynchronousMachine`] | xref::class/SynchronousMachine.adoc#x2[`x2`]
+
+
+
+| xref::class/TapChangerControl.adoc[`TapChangerControl`] | xref::class/TapChangerControl.adoc#reverseLineDropX[`reverseLineDropX`]
+
+
+
+| xref::class/TransformerEnd.adoc[`TransformerEnd`] | xref::class/TransformerEnd.adoc#xground[`xground`]
+
+
+
+| xref::class/TransformerMeshImpedance.adoc[`TransformerMeshImpedance`] | xref::class/TransformerMeshImpedance.adoc#x0[`x0`]
+
+
+
+| xref::class/TransformerStarImpedance.adoc[`TransformerStarImpedance`] | xref::class/TransformerStarImpedance.adoc#x0[`x0`]
+
+
+
+| xref::class/WindingInsulation.adoc[`WindingInsulation`] | xref::class/WindingInsulation.adoc#leakageReactance[`leakageReactance`]
+
+
+|===
+

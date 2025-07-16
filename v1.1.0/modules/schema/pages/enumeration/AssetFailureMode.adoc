@@ -1,0 +1,66 @@
+= `AssetFailureMode`
+:toclevels: 4
+
+
++++What asset has failed to be able to do.
+Reason for breaker failure.
+Note: This enumeration provides essential information to asset health analytics. The existing list is a starting point and is anticipated to be fleshed out further as requirements are better understood (PAB 2016/01/09).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AssetFailureMode`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `failToCarryLoad`
+| `cim:AssetFailureMode.failToCarryLoad`
+| n/a
+
+| `failToClose`
+| `cim:AssetFailureMode.failToClose`
+| n/a
+
+| `failToInterrupt`
+| `cim:AssetFailureMode.failToInterrupt`
+| n/a
+
+| `failToOpen`
+| `cim:AssetFailureMode.failToOpen`
+| n/a
+
+| `failToProvideInsulationLevel`
+| `cim:AssetFailureMode.failToProvideInsulationLevel`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/FailureEvent.adoc[`FailureEvent`] | xref::class/FailureEvent.adoc#failureMode[`failureMode`]
+
+
+|===
+

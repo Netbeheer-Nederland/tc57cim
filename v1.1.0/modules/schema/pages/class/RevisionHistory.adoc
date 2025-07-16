@@ -1,0 +1,222 @@
+= `RevisionHistory`
+:toclevels: 4
+
+
++++History of changes made to a switching plan step after the switching plan has been approved.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RevisionHistory`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`RevisionHistory`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<SwitchingStep,`SwitchingStep`>>
+//| [[slots_table.SwitchingStep]]<<SwitchingStep,`SwitchingStep`>>
+| 0..1 +
+xref::class/SwitchingStep.adoc[`SwitchingStep`]
+| _n/a_
+| _n/a_
+
+| <<kind,`kind`>>
+//| [[slots_table.kind]]<<kind,`kind`>>
+| 1 +
+xref::enumeration/RevisionKind.adoc[`RevisionKind`]
+| +++Kind of change, either void or added.+++
+| _n/a_
+
+| <<revisionAuthor,`revisionAuthor`>>
+//| [[slots_table.revisionAuthor]]<<revisionAuthor,`revisionAuthor`>>
+| 1 +
+https://w3id.org/linkml/String[`string`]
+| +++Person who made the change+++
+| _n/a_
+
+| <<revisionDateTime,`revisionDateTime`>>
+//| [[slots_table.revisionDateTime]]<<revisionDateTime,`revisionDateTime`>>
+| 1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time of the change+++
+| _n/a_
+
+| <<revisionReason,`revisionReason`>>
+//| [[slots_table.revisionReason]]<<revisionReason,`revisionReason`>>
+| 1 +
+https://w3id.org/linkml/String[`string`]
+| +++Reason for making the change+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#kind]
+=== `kind`
++++Kind of change, either void or added.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RevisionHistory.kind`
+| Cardinality
+| 1
+| Type
+| xref::enumeration/RevisionKind.adoc[`RevisionKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#revisionAuthor]
+=== `revisionAuthor`
++++Person who made the change+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RevisionHistory.revisionAuthor`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.revisionAuthor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#revisionDateTime]
+=== `revisionDateTime`
++++Date and time of the change+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RevisionHistory.revisionDateTime`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.revisionDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#revisionReason]
+=== `revisionReason`
++++Reason for making the change+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RevisionHistory.revisionReason`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.revisionReason,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SwitchingStep]
+=== `SwitchingStep`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RevisionHistory.SwitchingStep`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SwitchingStep.adoc[`SwitchingStep`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SwitchingStep,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/SwitchingStep.adoc[`SwitchingStep`] | xref::class/SwitchingStep.adoc#RevisionHistory[`RevisionHistory`]
+
+
+|===
+

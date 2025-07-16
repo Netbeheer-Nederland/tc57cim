@@ -1,0 +1,259 @@
+= `StreetAddress`
+:toclevels: 4
+
+
++++General purpose street and postal address information.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:StreetAddress`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`StreetAddress`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<language,`language`>>
+//| [[slots_table.language]]<<language,`language`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The language in which the address is specified, using ISO 639-1 two digit language code.+++
+| _n/a_
+
+| <<poBox,`poBox`>>
+//| [[slots_table.poBox]]<<poBox,`poBox`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Post office box.+++
+| _n/a_
+
+| <<postalCode,`postalCode`>>
+//| [[slots_table.postalCode]]<<postalCode,`postalCode`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Postal code for the address.+++
+| _n/a_
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| +++Status of this address.+++
+| _n/a_
+
+| <<streetDetail,`streetDetail`>>
+//| [[slots_table.streetDetail]]<<streetDetail,`streetDetail`>>
+| 0..1 +
+xref::class/StreetDetail.adoc[`StreetDetail`]
+| +++Street detail.+++
+| _n/a_
+
+| <<townDetail,`townDetail`>>
+//| [[slots_table.townDetail]]<<townDetail,`townDetail`>>
+| 0..1 +
+xref::class/TownDetail.adoc[`TownDetail`]
+| +++Town detail.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#language]
+=== `language`
++++The language in which the address is specified, using ISO 639-1 two digit language code.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.language`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.language,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#poBox]
+=== `poBox`
++++Post office box.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.poBox`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.poBox,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#postalCode]
+=== `postalCode`
++++Postal code for the address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.postalCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.postalCode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++Status of this address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#streetDetail]
+=== `streetDetail`
++++Street detail.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.streetDetail`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StreetDetail.adoc[`StreetDetail`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.streetDetail,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#townDetail]
+=== `townDetail`
++++Town detail.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.townDetail`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TownDetail.adoc[`TownDetail`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.townDetail,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Location.adoc[`Location`] | xref::class/Location.adoc#secondaryAddress[`secondaryAddress`]
+
+
+
+| xref::class/Organisation.adoc[`Organisation`] | xref::class/Organisation.adoc#streetAddress[`streetAddress`]
+
+
+|===
+

@@ -1,0 +1,1340 @@
+= `RegulatingControl`
+:toclevels: 4
+
+
++++Specifies a set of equipment that works together to control a power system quantity such as voltage or flow. 
+Remote bus voltage control is possible by specifying the controlled terminal located at some place remote from the controlling equipment.
+The specified terminal shall be associated with the connectivity node of the controlled point.  The most specific subtype of RegulatingControl shall be used in case such equipment participate in the control, e.g. TapChangerControl for tap changers.
+For flow control, load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment.
+The attribute minAllowedTargetValue and maxAllowedTargetValue are required in the following cases:
+- For a power generating module operated in power factor control mode to specify maximum and minimum power factor values;
+- Whenever it is necessary to have an off center target voltage for the tap changer regulator. For instance, due to long cables to off shore wind farms and the need to have a simpler setup at the off shore transformer platform, the voltage is controlled from the land at the connection point for the off shore wind farm. Since there usually is a voltage rise along the cable, there is typical and overvoltage of up 3-4 kV compared to the on shore station. Thus in normal operation the tap changer on the on shore station is operated with a target set point, which is in the lower parts of the dead band.
+The attributes minAllowedTargetValue and maxAllowedTargetValue are not related to the attribute targetDeadband and thus they are not treated as an alternative of the targetDeadband. They are needed due to limitations in the local substation controller. The attribute targetDeadband is used to prevent the power flow from move the tap position in circles (hunting) that is to be used regardless of the attributes minAllowedTargetValue and maxAllowedTargetValue.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RegulatingControl`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+*** *`RegulatingControl`*
+ **** xref::class/ShuntCompensatorControl.adoc[`ShuntCompensatorControl`]
+ **** xref::class/TapChangerControl.adoc[`TapChangerControl`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ProtectiveActionRegulation,`ProtectiveActionRegulation`>>
+//| [[slots_table.ProtectiveActionRegulation]]<<ProtectiveActionRegulation,`ProtectiveActionRegulation`>>
+| 0..* +
+xref::class/ProtectiveActionRegulation.adoc[`ProtectiveActionRegulation`]
+| +++Enable/disable a regulating control or set new target value.+++
+| _n/a_
+
+| <<RegulatingCondEq,`RegulatingCondEq`>>
+//| [[slots_table.RegulatingCondEq]]<<RegulatingCondEq,`RegulatingCondEq`>>
+| 0..* +
+xref::class/RegulatingCondEq.adoc[`RegulatingCondEq`]
+| +++The equipment that participates in this regulating control scheme.+++
+| _n/a_
+
+| <<RegulationSchedule,`RegulationSchedule`>>
+//| [[slots_table.RegulationSchedule]]<<RegulationSchedule,`RegulationSchedule`>>
+| 0..* +
+xref::class/RegulationSchedule.adoc[`RegulationSchedule`]
+| +++Schedule for this regulating control.+++
+| _n/a_
+
+| <<Terminal,`Terminal`>>
+//| [[slots_table.Terminal]]<<Terminal,`Terminal`>>
+| 0..1 +
+xref::class/Terminal.adoc[`Terminal`]
+| +++The terminal associated with this regulating control.  The terminal is associated instead of a node, since the terminal...+++
+| _n/a_
+
+| <<discrete,`discrete`>>
+//| [[slots_table.discrete]]<<discrete,`discrete`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++The regulation is performed in a discrete mode. This applies to equipment with discrete controls, e.g. tap changers and...+++
+| _n/a_
+
+| <<enabled,`enabled`>>
+//| [[slots_table.enabled]]<<enabled,`enabled`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++The flag tells if regulation is enabled.+++
+| _n/a_
+
+| <<maxAllowedTargetValue,`maxAllowedTargetValue`>>
+//| [[slots_table.maxAllowedTargetValue]]<<maxAllowedTargetValue,`maxAllowedTargetValue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Maximum allowed target value (RegulatingControl.targetValue).+++
+| _n/a_
+
+| <<minAllowedTargetValue,`minAllowedTargetValue`>>
+//| [[slots_table.minAllowedTargetValue]]<<minAllowedTargetValue,`minAllowedTargetValue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Minimum allowed target value (RegulatingControl.targetValue).+++
+| _n/a_
+
+| <<mode,`mode`>>
+//| [[slots_table.mode]]<<mode,`mode`>>
+| 0..1 +
+xref::enumeration/RegulatingControlModeKind.adoc[`RegulatingControlModeKind`]
+| +++The regulating control mode presently available.  This specification allows for determining the kind of regulation without...+++
+| _n/a_
+
+| <<monitoredPhase,`monitoredPhase`>>
+//| [[slots_table.monitoredPhase]]<<monitoredPhase,`monitoredPhase`>>
+| 0..1 +
+xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+| +++Phase voltage controlling this regulator, measured at regulator location.+++
+| _n/a_
+
+| <<targetDeadband,`targetDeadband`>>
+//| [[slots_table.targetDeadband]]<<targetDeadband,`targetDeadband`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++This is a deadband used with discrete control to avoid excessive update of controls like tap changers and shunt compensator...+++
+| _n/a_
+
+| <<targetValue,`targetValue`>>
+//| [[slots_table.targetValue]]<<targetValue,`targetValue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The target value specified for case input.   This value can be used for the target value without the use of schedules. The...+++
+| _n/a_
+
+| <<targetValueUnitMultiplier,`targetValueUnitMultiplier`>>
+//| [[slots_table.targetValueUnitMultiplier]]<<targetValueUnitMultiplier,`targetValueUnitMultiplier`>>
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++Specify the multiplier for used for the targetValue.+++
+| _n/a_
+
+| <<AssetDatasheet,`AssetDatasheet`>>
+//| [[slots_table.AssetDatasheet]]<<AssetDatasheet,`AssetDatasheet`>>
+| 0..1 +
+xref::class/AssetInfo.adoc[`AssetInfo`]
+| +++Datasheet information for this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Assets,`Assets`>>
+//| [[slots_table.Assets]]<<Assets,`Assets`>>
+| 0..* +
+xref::class/Asset.adoc[`Asset`]
+| +++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a...+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Clearances,`Clearances`>>
+//| [[slots_table.Clearances]]<<Clearances,`Clearances`>>
+| 0..* +
+xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+| +++All clearances applicable to this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<ConfigurationEvent,`ConfigurationEvent`>>
+//| [[slots_table.ConfigurationEvent]]<<ConfigurationEvent,`ConfigurationEvent`>>
+| 0..* +
+xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this Power System resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Controls,`Controls`>>
+//| [[slots_table.Controls]]<<Controls,`Controls`>>
+| 0..* +
+xref::class/Control.adoc[`Control`]
+| +++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or...+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<GenericAction,`GenericAction`>>
+//| [[slots_table.GenericAction]]<<GenericAction,`GenericAction`>>
+| 0..* +
+xref::class/GenericAction.adoc[`GenericAction`]
+| +++The generic action that is performed on the power system resource+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Location,`Location`>>
+//| [[slots_table.Location]]<<Location,`Location`>>
+| 0..1 +
+xref::class/Location.adoc[`Location`]
+| +++Location of this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Measurements,`Measurements`>>
+//| [[slots_table.Measurements]]<<Measurements,`Measurements`>>
+| 0..* +
+xref::class/Measurement.adoc[`Measurement`]
+| +++The measurements associated with this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<OperatingShare,`OperatingShare`>>
+//| [[slots_table.OperatingShare]]<<OperatingShare,`OperatingShare`>>
+| 0..* +
+xref::class/OperatingShare.adoc[`OperatingShare`]
+| +++The operating shares of this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<OperationalTags,`OperationalTags`>>
+//| [[slots_table.OperationalTags]]<<OperationalTags,`OperationalTags`>>
+| 0..* +
+xref::class/OperationalTag.adoc[`OperationalTag`]
+| +++All operational tags placed on this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<PSREvents,`PSREvents`>>
+//| [[slots_table.PSREvents]]<<PSREvents,`PSREvents`>>
+| 0..* +
+xref::class/PSREvent.adoc[`PSREvent`]
+| +++All events associated with this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<PSRType,`PSRType`>>
+//| [[slots_table.PSRType]]<<PSRType,`PSRType`>>
+| 0..1 +
+xref::class/PSRType.adoc[`PSRType`]
+| +++Custom classification for this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<ReportingGroup,`ReportingGroup`>>
+//| [[slots_table.ReportingGroup]]<<ReportingGroup,`ReportingGroup`>>
+| 0..* +
+xref::class/ReportingGroup.adoc[`ReportingGroup`]
+| +++Reporting groups to which this power system resource belongs.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<VerificationAction,`VerificationAction`>>
+//| [[slots_table.VerificationAction]]<<VerificationAction,`VerificationAction`>>
+| 0..* +
+xref::class/VerificationAction.adoc[`VerificationAction`]
+| +++The verification action that is performed on the power system resource+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AssetDatasheet]
+=== `AssetDatasheet`
++++Datasheet information for this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.AssetDatasheet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AssetDatasheet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a single AC line segment.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Assets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Clearances]
+=== `Clearances`
++++All clearances applicable to this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Clearances`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Clearances,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConfigurationEvent]
+=== `ConfigurationEvent`
++++All configuration events created for this Power System resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ConfigurationEvent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConfigurationEvent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Controls]
+=== `Controls`
++++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or capacitor bank breaker actuator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Controls`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Control.adoc[`Control`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Controls,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#discrete]
+=== `discrete`
++++The regulation is performed in a discrete mode. This applies to equipment with discrete controls, e.g. tap changers and shunt compensators.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.discrete`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.discrete,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++The flag tells if regulation is enabled.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.enabled,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#GenericAction]
+=== `GenericAction`
++++The generic action that is performed on the power system resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.GenericAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/GenericAction.adoc[`GenericAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.GenericAction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location of this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Location,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxAllowedTargetValue]
+=== `maxAllowedTargetValue`
++++Maximum allowed target value (RegulatingControl.targetValue).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.maxAllowedTargetValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxAllowedTargetValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Measurements]
+=== `Measurements`
++++The measurements associated with this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Measurements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Measurement.adoc[`Measurement`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Measurements,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minAllowedTargetValue]
+=== `minAllowedTargetValue`
++++Minimum allowed target value (RegulatingControl.targetValue).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.minAllowedTargetValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minAllowedTargetValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mode]
+=== `mode`
++++The regulating control mode presently available.  This specification allows for determining the kind of regulation without need for obtaining the units from a schedule.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.mode`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/RegulatingControlModeKind.adoc[`RegulatingControlModeKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#monitoredPhase]
+=== `monitoredPhase`
++++Phase voltage controlling this regulator, measured at regulator location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.monitoredPhase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.monitoredPhase,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperatingShare]
+=== `OperatingShare`
++++The operating shares of this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperatingShare`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperatingShare.adoc[`OperatingShare`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperatingShare,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperationalTags]
+=== `OperationalTags`
++++All operational tags placed on this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperationalTags`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperationalTag.adoc[`OperationalTag`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperationalTags,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ProtectiveActionRegulation]
+=== `ProtectiveActionRegulation`
++++Enable/disable a regulating control or set new target value.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.ProtectiveActionRegulation`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProtectiveActionRegulation.adoc[`ProtectiveActionRegulation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ProtectiveActionRegulation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PSREvents]
+=== `PSREvents`
++++All events associated with this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSREvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PSREvent.adoc[`PSREvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PSREvents,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PSRType]
+=== `PSRType`
++++Custom classification for this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSRType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PSRType.adoc[`PSRType`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PSRType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegulatingCondEq]
+=== `RegulatingCondEq`
++++The equipment that participates in this regulating control scheme.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.RegulatingCondEq`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegulatingCondEq.adoc[`RegulatingCondEq`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegulatingCondEq,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegulationSchedule]
+=== `RegulationSchedule`
++++Schedule for this regulating control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.RegulationSchedule`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegulationSchedule.adoc[`RegulationSchedule`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegulationSchedule,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ReportingGroup]
+=== `ReportingGroup`
++++Reporting groups to which this power system resource belongs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ReportingGroup`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ReportingGroup.adoc[`ReportingGroup`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ReportingGroup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#targetDeadband]
+=== `targetDeadband`
++++This is a deadband used with discrete control to avoid excessive update of controls like tap changers and shunt compensator banks while regulating.  The units of those appropriate for the mode. The attribute shall be a positive value or zero. If RegulatingControl.discrete is set to "false", the RegulatingControl.targetDeadband is to be ignored.
+Note that for instance, if the targetValue is 100 kV and the targetDeadband is 2 kV the range is from 99 to 101 kV.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.targetDeadband`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.targetDeadband,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#targetValue]
+=== `targetValue`
++++The target value specified for case input.   This value can be used for the target value without the use of schedules. The value has the units appropriate to the mode attribute.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.targetValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.targetValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#targetValueUnitMultiplier]
+=== `targetValueUnitMultiplier`
++++Specify the multiplier for used for the targetValue.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.targetValueUnitMultiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.targetValueUnitMultiplier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Terminal]
+=== `Terminal`
++++The terminal associated with this regulating control.  The terminal is associated instead of a node, since the terminal could connect into either a topological node or a connectivity node.  Sometimes it is useful to model regulation at a terminal of a bus bar object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegulatingControl.Terminal`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Terminal.adoc[`Terminal`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Terminal,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VerificationAction]
+=== `VerificationAction`
++++The verification action that is performed on the power system resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.VerificationAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/VerificationAction.adoc[`VerificationAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VerificationAction,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ProtectiveActionRegulation.adoc[`ProtectiveActionRegulation`] | xref::class/ProtectiveActionRegulation.adoc#RegulatingControl[`RegulatingControl`]
+
+
+
+| xref::class/RegulatingCondEq.adoc[`RegulatingCondEq`] | xref::class/RegulatingCondEq.adoc#RegulatingControl[`RegulatingControl`]
+
+
+
+| xref::class/RegulationSchedule.adoc[`RegulationSchedule`] | xref::class/RegulationSchedule.adoc#RegulatingControl[`RegulatingControl`]
+
+
+
+| xref::class/Terminal.adoc[`Terminal`] | xref::class/Terminal.adoc#RegulatingControl[`RegulatingControl`]
+
+
+|===
+

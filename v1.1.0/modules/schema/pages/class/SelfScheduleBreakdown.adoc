@@ -1,0 +1,156 @@
+= `SelfScheduleBreakdown`
+:toclevels: 4
+
+
++++Model of Self Schedules Results.  Includes self schedule MW,and type of self schedule for each self schedule type included in total self schedule MW value found in ResourceAwardInstruction.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SelfScheduleBreakdown`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`SelfScheduleBreakdown`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ResourceAwardInstruction,`ResourceAwardInstruction`>>
+//| [[slots_table.ResourceAwardInstruction]]<<ResourceAwardInstruction,`ResourceAwardInstruction`>>
+| 1 +
+xref::class/ResourceAwardInstruction.adoc[`ResourceAwardInstruction`]
+| _n/a_
+| _n/a_
+
+| <<selfSchedMW,`selfSchedMW`>>
+//| [[slots_table.selfSchedMW]]<<selfSchedMW,`selfSchedMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Cleared value for the specific self schedule type listed.+++
+| _n/a_
+
+| <<selfSchedType,`selfSchedType`>>
+//| [[slots_table.selfSchedType]]<<selfSchedType,`selfSchedType`>>
+| 0..1 +
+xref::enumeration/SelfScheduleBreakdownType.adoc[`SelfScheduleBreakdownType`]
+| +++Self schedule breakdown type.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#ResourceAwardInstruction]
+=== `ResourceAwardInstruction`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SelfScheduleBreakdown.ResourceAwardInstruction`
+| Cardinality
+| 1
+| Type
+| xref::class/ResourceAwardInstruction.adoc[`ResourceAwardInstruction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ResourceAwardInstruction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#selfSchedMW]
+=== `selfSchedMW`
++++Cleared value for the specific self schedule type listed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SelfScheduleBreakdown.selfSchedMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.selfSchedMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#selfSchedType]
+=== `selfSchedType`
++++Self schedule breakdown type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SelfScheduleBreakdown.selfSchedType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SelfScheduleBreakdownType.adoc[`SelfScheduleBreakdownType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.selfSchedType,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ResourceAwardInstruction.adoc[`ResourceAwardInstruction`] | xref::class/ResourceAwardInstruction.adoc#SelfScheduleBreakdown[`SelfScheduleBreakdown`]
+
+
+|===
+

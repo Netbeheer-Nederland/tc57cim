@@ -1,0 +1,123 @@
+= `UKMinistryOfDefenceStandard`
+:toclevels: 4
+
+
++++Standard published by United Kingdom Ministry of Defence.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:UKMinistryOfDefenceStandard`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`UKMinistryOfDefenceStandard`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<standardEdition,`standardEdition`>>
+//| [[slots_table.standardEdition]]<<standardEdition,`standardEdition`>>
+| 0..1 +
+xref::enumeration/UKMinistryOfDefenceStandardEditionKind.adoc[`UKMinistryOfDefenceStandardEditionKind`]
+| +++Edition of UK Ministry of Defence standard.+++
+| _n/a_
+
+| <<standardNumber,`standardNumber`>>
+//| [[slots_table.standardNumber]]<<standardNumber,`standardNumber`>>
+| 0..1 +
+xref::enumeration/UKMinistryofDefenceStandardKind.adoc[`UKMinistryofDefenceStandardKind`]
+| +++UK Ministry of Defence standard number.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#standardEdition]
+=== `standardEdition`
++++Edition of UK Ministry of Defence standard.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UKMinistryOfDefenceStandard.standardEdition`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UKMinistryOfDefenceStandardEditionKind.adoc[`UKMinistryOfDefenceStandardEditionKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardEdition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#standardNumber]
+=== `standardNumber`
++++UK Ministry of Defence standard number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UKMinistryOfDefenceStandard.standardNumber`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UKMinistryofDefenceStandardKind.adoc[`UKMinistryofDefenceStandardKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardNumber,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TestStandard.adoc[`TestStandard`] | xref::class/TestStandard.adoc#testStandardUKMinistryOfDefence[`testStandardUKMinistryOfDefence`]
+
+
+|===
+

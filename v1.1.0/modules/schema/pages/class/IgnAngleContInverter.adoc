@@ -1,0 +1,88 @@
+= `IgnAngleContInverter`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:IgnAngleContInverter`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`IgnAngleContInverter`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<CSCtype1,`CSCtype1`>>
+//| [[slots_table.CSCtype1]]<<CSCtype1,`CSCtype1`>>
+| 0..1 +
+xref::class/CSCtype1.adoc[`CSCtype1`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#CSCtype1]
+=== `CSCtype1`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IgnAngleContInverter.CSCtype1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CSCtype1.adoc[`CSCtype1`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CSCtype1,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CSCtype1.adoc[`CSCtype1`] | xref::class/CSCtype1.adoc#IgnAngleContInverter[`IgnAngleContInverter`]
+
+
+|===
+

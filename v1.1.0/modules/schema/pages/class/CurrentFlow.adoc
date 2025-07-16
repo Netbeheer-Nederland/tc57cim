@@ -1,0 +1,242 @@
+= `CurrentFlow`
+:toclevels: 4
+
+
++++Electrical current with sign convention: positive flow is out of the conducting equipment into the connectivity node. Can be both AC and DC.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:CurrentFlow`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:CurrentFlow.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:CurrentFlow.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:CurrentFlow.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ACDCConverter.adoc[`ACDCConverter`] | xref::class/ACDCConverter.adoc#idc[`idc`]
+
+
+
+| xref::class/BreakerInfo.adoc[`BreakerInfo`] | xref::class/BreakerInfo.adoc#phaseTrip[`phaseTrip`]
+
+
+
+| xref::class/BusbarSection.adoc[`BusbarSection`] | xref::class/BusbarSection.adoc#ipMax[`ipMax`]
+
+
+
+| xref::class/BusbarSectionInfo.adoc[`BusbarSectionInfo`] | xref::class/BusbarSectionInfo.adoc#ratedCurrent[`ratedCurrent`]
+
+
+
+| xref::class/BushingInfo.adoc[`BushingInfo`] | xref::class/BushingInfo.adoc#ratedCurrent[`ratedCurrent`]
+
+
+
+| xref::class/CompositeSwitchInfo.adoc[`CompositeSwitchInfo`] | xref::class/CompositeSwitchInfo.adoc#interruptingRating[`interruptingRating`]
+
+
+
+| xref::class/CsConverter.adoc[`CsConverter`] | xref::class/CsConverter.adoc#targetIdc[`targetIdc`]
+
+
+
+| xref::class/CurrentLimit.adoc[`CurrentLimit`] | xref::class/CurrentLimit.adoc#value[`value`]
+
+
+
+| xref::class/CurrentRelay.adoc[`CurrentRelay`] | xref::class/CurrentRelay.adoc#currentLimit3[`currentLimit3`]
+
+
+
+| xref::class/CurrentTransformerInfo.adoc[`CurrentTransformerInfo`] | xref::class/CurrentTransformerInfo.adoc#tertiaryFlsRating[`tertiaryFlsRating`]
+
+
+
+| xref::class/EndDeviceInfo.adoc[`EndDeviceInfo`] | xref::class/EndDeviceInfo.adoc#ratedCurrent[`ratedCurrent`]
+
+
+
+| xref::class/ExternalNetworkInjection.adoc[`ExternalNetworkInjection`] | xref::class/ExternalNetworkInjection.adoc#minInitialSymShCCurrent[`minInitialSymShCCurrent`]
+
+
+
+| xref::class/LightningStrike.adoc[`LightningStrike`] | xref::class/LightningStrike.adoc#peakAmplitude[`peakAmplitude`]
+
+
+
+| xref::class/OldSwitchInfo.adoc[`OldSwitchInfo`] | xref::class/OldSwitchInfo.adoc#withstandCurrent[`withstandCurrent`]
+
+
+
+| xref::class/OperatingMechanismInfo.adoc[`OperatingMechanismInfo`] | xref::class/OperatingMechanismInfo.adoc#tripAmps[`tripAmps`]
+
+
+
+| xref::class/PetersenCoil.adoc[`PetersenCoil`] | xref::class/PetersenCoil.adoc#positionCurrent[`positionCurrent`]
+
+
+
+| xref::class/PowerTransformer.adoc[`PowerTransformer`] | xref::class/PowerTransformer.adoc#beforeShCircuitHighestOperatingCurrent[`beforeShCircuitHighestOperatingCurrent`]
+
+
+
+| xref::class/ProtectedSwitch.adoc[`ProtectedSwitch`] | xref::class/ProtectedSwitch.adoc#breakingCapacity[`breakingCapacity`]
+
+
+
+| xref::class/ProtectionEquipmentInfo.adoc[`ProtectionEquipmentInfo`] | xref::class/ProtectionEquipmentInfo.adoc#phaseTrip[`phaseTrip`]
+
+
+
+| xref::class/RecloserInfo.adoc[`RecloserInfo`] | xref::class/RecloserInfo.adoc#phaseTripRating[`phaseTripRating`]
+
+
+
+| xref::class/ScheduledCurrentLimitValue.adoc[`ScheduledCurrentLimitValue`] | xref::class/ScheduledCurrentLimitValue.adoc#value[`value`]
+
+
+
+| xref::class/SeriesCompensator.adoc[`SeriesCompensator`] | xref::class/SeriesCompensator.adoc#varistorRatedCurrent[`varistorRatedCurrent`]
+
+
+
+| xref::class/ShortCircuitTest.adoc[`ShortCircuitTest`] | xref::class/ShortCircuitTest.adoc#current[`current`]
+
+
+
+| xref::class/ShuntCompensatorInfo.adoc[`ShuntCompensatorInfo`] | xref::class/ShuntCompensatorInfo.adoc#ratedCurrent[`ratedCurrent`]
+
+
+
+| xref::class/SurgeArresterInfo.adoc[`SurgeArresterInfo`] | xref::class/SurgeArresterInfo.adoc#pressureReliefClass[`pressureReliefClass`]
+
+
+
+| xref::class/Switch.adoc[`Switch`] | xref::class/Switch.adoc#ratedCurrent[`ratedCurrent`]
+
+
+
+| xref::class/SwitchInfo.adoc[`SwitchInfo`] | xref::class/SwitchInfo.adoc#ratedCurrent[`ratedCurrent`]
+
+
+
+| xref::class/SwitchPhase.adoc[`SwitchPhase`] | xref::class/SwitchPhase.adoc#ratedCurrent[`ratedCurrent`]
+
+
+
+| xref::class/SynchronousMachine.adoc[`SynchronousMachine`] | xref::class/SynchronousMachine.adoc#ikk[`ikk`]
+
+
+
+| xref::class/TapChangerInfo.adoc[`TapChangerInfo`] | xref::class/TapChangerInfo.adoc#ratedCurrent[`ratedCurrent`]
+
+
+
+| xref::class/UsagePoint.adoc[`UsagePoint`] | xref::class/UsagePoint.adoc#ratedCurrent[`ratedCurrent`]
+
+
+
+| xref::class/VsConverter.adoc[`VsConverter`] | xref::class/VsConverter.adoc#maxValveCurrent[`maxValveCurrent`]
+
+
+
+| xref::class/WireInfo.adoc[`WireInfo`] | xref::class/WireInfo.adoc#ratedCurrent[`ratedCurrent`]
+
+
+|===
+

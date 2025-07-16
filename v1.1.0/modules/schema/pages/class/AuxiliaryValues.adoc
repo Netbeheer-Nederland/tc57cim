@@ -1,0 +1,501 @@
+= `AuxiliaryValues`
+:toclevels: 4
+
+
++++Models Auxiliary Values.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AuxiliaryValues`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/AuxiliaryObject.adoc[`AuxiliaryObject`]
+** *`AuxiliaryValues`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AuxillaryCost,`AuxillaryCost`>>
+//| [[slots_table.AuxillaryCost]]<<AuxillaryCost,`AuxillaryCost`>>
+| 1 +
+xref::class/AuxiliaryCost.adoc[`AuxiliaryCost`]
+| _n/a_
+| _n/a_
+
+| <<FiveMinAuxillaryData,`FiveMinAuxillaryData`>>
+//| [[slots_table.FiveMinAuxillaryData]]<<FiveMinAuxillaryData,`FiveMinAuxillaryData`>>
+| 1 +
+xref::class/FiveMinAuxiliaryData.adoc[`FiveMinAuxiliaryData`]
+| _n/a_
+| _n/a_
+
+| <<TenMinAuxillaryData,`TenMinAuxillaryData`>>
+//| [[slots_table.TenMinAuxillaryData]]<<TenMinAuxillaryData,`TenMinAuxillaryData`>>
+| 1 +
+xref::class/TenMinAuxiliaryData.adoc[`TenMinAuxiliaryData`]
+| _n/a_
+| _n/a_
+
+| <<availUndispatchedQ,`availUndispatchedQ`>>
+//| [[slots_table.availUndispatchedQ]]<<availUndispatchedQ,`availUndispatchedQ`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<incrementalORAvail,`incrementalORAvail`>>
+//| [[slots_table.incrementalORAvail]]<<incrementalORAvail,`incrementalORAvail`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<maxExpostCapacity,`maxExpostCapacity`>>
+//| [[slots_table.maxExpostCapacity]]<<maxExpostCapacity,`maxExpostCapacity`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<minExpostCapacity,`minExpostCapacity`>>
+//| [[slots_table.minExpostCapacity]]<<minExpostCapacity,`minExpostCapacity`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<noLoadCost,`noLoadCost`>>
+//| [[slots_table.noLoadCost]]<<noLoadCost,`noLoadCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<noLoadCostEligibilityFlag,`noLoadCostEligibilityFlag`>>
+//| [[slots_table.noLoadCostEligibilityFlag]]<<noLoadCostEligibilityFlag,`noLoadCostEligibilityFlag`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| _n/a_
+| _n/a_
+
+| <<startUpCost,`startUpCost`>>
+//| [[slots_table.startUpCost]]<<startUpCost,`startUpCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<startUpCostEligibilityFlag,`startUpCostEligibilityFlag`>>
+//| [[slots_table.startUpCostEligibilityFlag]]<<startUpCostEligibilityFlag,`startUpCostEligibilityFlag`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredGenerator,`RegisteredGenerator`>>
+//| [[slots_table.RegisteredGenerator]]<<RegisteredGenerator,`RegisteredGenerator`>>
+| 0..1 +
+xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`]
+| _n/a_
+| xref::class/AuxiliaryObject.adoc[`AuxiliaryObject`]
+
+| <<RegisteredLoad,`RegisteredLoad`>>
+//| [[slots_table.RegisteredLoad]]<<RegisteredLoad,`RegisteredLoad`>>
+| 0..1 +
+xref::class/RegisteredLoad.adoc[`RegisteredLoad`]
+| _n/a_
+| xref::class/AuxiliaryObject.adoc[`AuxiliaryObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#AuxillaryCost]
+=== `AuxillaryCost`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryValues.AuxillaryCost`
+| Cardinality
+| 1
+| Type
+| xref::class/AuxiliaryCost.adoc[`AuxiliaryCost`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AuxillaryCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#availUndispatchedQ]
+=== `availUndispatchedQ`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryValues.availUndispatchedQ`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.availUndispatchedQ,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#FiveMinAuxillaryData]
+=== `FiveMinAuxillaryData`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryValues.FiveMinAuxillaryData`
+| Cardinality
+| 1
+| Type
+| xref::class/FiveMinAuxiliaryData.adoc[`FiveMinAuxiliaryData`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.FiveMinAuxillaryData,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#incrementalORAvail]
+=== `incrementalORAvail`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryValues.incrementalORAvail`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.incrementalORAvail,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxExpostCapacity]
+=== `maxExpostCapacity`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryValues.maxExpostCapacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxExpostCapacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minExpostCapacity]
+=== `minExpostCapacity`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryValues.minExpostCapacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minExpostCapacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#noLoadCost]
+=== `noLoadCost`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryValues.noLoadCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.noLoadCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#noLoadCostEligibilityFlag]
+=== `noLoadCostEligibilityFlag`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryValues.noLoadCostEligibilityFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.noLoadCostEligibilityFlag,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredGenerator]
+=== `RegisteredGenerator`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryObject.RegisteredGenerator`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`]
+
+| Inherited from
+| xref::class/AuxiliaryObject.adoc[`AuxiliaryObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredGenerator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredLoad]
+=== `RegisteredLoad`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryObject.RegisteredLoad`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredLoad.adoc[`RegisteredLoad`]
+
+| Inherited from
+| xref::class/AuxiliaryObject.adoc[`AuxiliaryObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredLoad,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startUpCost]
+=== `startUpCost`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryValues.startUpCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startUpCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startUpCostEligibilityFlag]
+=== `startUpCostEligibilityFlag`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryValues.startUpCostEligibilityFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startUpCostEligibilityFlag,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TenMinAuxillaryData]
+=== `TenMinAuxillaryData`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AuxiliaryValues.TenMinAuxillaryData`
+| Cardinality
+| 1
+| Type
+| xref::class/TenMinAuxiliaryData.adoc[`TenMinAuxiliaryData`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TenMinAuxillaryData,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AuxiliaryCost.adoc[`AuxiliaryCost`] | xref::class/AuxiliaryCost.adoc#AuxillaryValues[`AuxillaryValues`]
+
+
+
+| xref::class/FiveMinAuxiliaryData.adoc[`FiveMinAuxiliaryData`] | xref::class/FiveMinAuxiliaryData.adoc#AuxillaryValues[`AuxillaryValues`]
+
+
+
+| xref::class/TenMinAuxiliaryData.adoc[`TenMinAuxiliaryData`] | xref::class/TenMinAuxiliaryData.adoc#AuxillaryData[`AuxillaryData`]
+
+
+|===
+

@@ -1,0 +1,544 @@
+= `MeasurementKind`
+:toclevels: 4
+
+
++++Kind of read / measured value.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MeasurementKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `alarm`
+| `cim:MeasurementKind.alarm`
+| n/a
+
+| `apparentPowerFactor`
+| `cim:MeasurementKind.apparentPowerFactor`
+| n/a
+
+| `applicationContext`
+| `cim:MeasurementKind.applicationContext`
+| n/a
+
+| `apTitle`
+| `cim:MeasurementKind.apTitle`
+| n/a
+
+| `assetNumber`
+| `cim:MeasurementKind.assetNumber`
+| n/a
+
+| `audibleVolume`
+| `cim:MeasurementKind.audibleVolume`
+| n/a
+
+| `bandwidth`
+| `cim:MeasurementKind.bandwidth`
+| n/a
+
+| `batteryCarryover`
+| `cim:MeasurementKind.batteryCarryover`
+| n/a
+
+| `batteryVoltage`
+| `cim:MeasurementKind.batteryVoltage`
+| n/a
+
+| `billCarryover`
+| `cim:MeasurementKind.billCarryover`
+| n/a
+
+| `billLastPeriod`
+| `cim:MeasurementKind.billLastPeriod`
+| n/a
+
+| `billToDate`
+| `cim:MeasurementKind.billToDate`
+| n/a
+
+| `broadcastAddress`
+| `cim:MeasurementKind.broadcastAddress`
+| n/a
+
+| `connectionFee`
+| `cim:MeasurementKind.connectionFee`
+| n/a
+
+| `currency`
+| `cim:MeasurementKind.currency`
+| n/a
+
+| `current`
+| `cim:MeasurementKind.current`
+| n/a
+
+| `currentAngle`
+| `cim:MeasurementKind.currentAngle`
+| n/a
+
+| `currentImbalance`
+| `cim:MeasurementKind.currentImbalance`
+| n/a
+
+| `dataOverflowAlarm`
+| `cim:MeasurementKind.dataOverflowAlarm`
+| n/a
+
+| `date`
+| `cim:MeasurementKind.date`
+| n/a
+
+| `demand`
+| `cim:MeasurementKind.demand`
+| n/a
+
+| `demandLimit`
+| `cim:MeasurementKind.demandLimit`
+| n/a
+
+| `demandReset`
+| `cim:MeasurementKind.demandReset`
+| n/a
+
+| `deviceAddressType1`
+| `cim:MeasurementKind.deviceAddressType1`
+| n/a
+
+| `deviceAddressType2`
+| `cim:MeasurementKind.deviceAddressType2`
+| n/a
+
+| `deviceAddressType3`
+| `cim:MeasurementKind.deviceAddressType3`
+| n/a
+
+| `deviceAddressType4`
+| `cim:MeasurementKind.deviceAddressType4`
+| n/a
+
+| `deviceClass`
+| `cim:MeasurementKind.deviceClass`
+| n/a
+
+| `diagnostic`
+| `cim:MeasurementKind.diagnostic`
+| n/a
+
+| `distance`
+| `cim:MeasurementKind.distance`
+| n/a
+
+| `distortionPowerFactor`
+| `cim:MeasurementKind.distortionPowerFactor`
+| n/a
+
+| `distortionVoltAmp`
+| `cim:MeasurementKind.distortionVoltAmp`
+| n/a
+
+| `electronicSerialNumber`
+| `cim:MeasurementKind.electronicSerialNumber`
+| n/a
+
+| `emergencyLimit`
+| `cim:MeasurementKind.emergencyLimit`
+| n/a
+
+| `encoderTamper`
+| `cim:MeasurementKind.encoderTamper`
+| n/a
+
+| `endDeviceID`
+| `cim:MeasurementKind.endDeviceID`
+| n/a
+
+| `energization`
+| `cim:MeasurementKind.energization`
+| n/a
+
+| `energizationLoadSide`
+| `cim:MeasurementKind.energizationLoadSide`
+| n/a
+
+| `energy`
+| `cim:MeasurementKind.energy`
+| n/a
+
+| `fan`
+| `cim:MeasurementKind.fan`
+| n/a
+
+| `frequency`
+| `cim:MeasurementKind.frequency`
+| n/a
+
+| `frequencyExcursion`
+| `cim:MeasurementKind.frequencyExcursion`
+| n/a
+
+| `fund`
+| `cim:MeasurementKind.fund`
+| n/a
+
+| `groupAddressType1`
+| `cim:MeasurementKind.groupAddressType1`
+| n/a
+
+| `groupAddressType2`
+| `cim:MeasurementKind.groupAddressType2`
+| n/a
+
+| `groupAddressType3`
+| `cim:MeasurementKind.groupAddressType3`
+| n/a
+
+| `groupAddressType4`
+| `cim:MeasurementKind.groupAddressType4`
+| n/a
+
+| `ieee1366ASAI`
+| `cim:MeasurementKind.ieee1366ASAI`
+| n/a
+
+| `ieee1366ASIDI`
+| `cim:MeasurementKind.ieee1366ASIDI`
+| n/a
+
+| `ieee1366ASIFI`
+| `cim:MeasurementKind.ieee1366ASIFI`
+| n/a
+
+| `ieee1366CAIDI`
+| `cim:MeasurementKind.ieee1366CAIDI`
+| n/a
+
+| `ieee1366CAIFI`
+| `cim:MeasurementKind.ieee1366CAIFI`
+| n/a
+
+| `ieee1366CEMIn`
+| `cim:MeasurementKind.ieee1366CEMIn`
+| n/a
+
+| `ieee1366CEMSMIn`
+| `cim:MeasurementKind.ieee1366CEMSMIn`
+| n/a
+
+| `ieee1366CTAIDI`
+| `cim:MeasurementKind.ieee1366CTAIDI`
+| n/a
+
+| `ieee1366MAIFI`
+| `cim:MeasurementKind.ieee1366MAIFI`
+| n/a
+
+| `ieee1366MAIFIe`
+| `cim:MeasurementKind.ieee1366MAIFIe`
+| n/a
+
+| `ieee1366MomentaryInterruption`
+| `cim:MeasurementKind.ieee1366MomentaryInterruption`
+| n/a
+
+| `ieee1366MomentaryInterruptionEvent`
+| `cim:MeasurementKind.ieee1366MomentaryInterruptionEvent`
+| n/a
+
+| `ieee1366SAIDI`
+| `cim:MeasurementKind.ieee1366SAIDI`
+| n/a
+
+| `ieee1366SAIFI`
+| `cim:MeasurementKind.ieee1366SAIFI`
+| n/a
+
+| `ieee1366SustainedInterruption`
+| `cim:MeasurementKind.ieee1366SustainedInterruption`
+| n/a
+
+| `interruptionBehaviour`
+| `cim:MeasurementKind.interruptionBehaviour`
+| n/a
+
+| `inversionTamper`
+| `cim:MeasurementKind.inversionTamper`
+| n/a
+
+| `ipAddress`
+| `cim:MeasurementKind.ipAddress`
+| n/a
+
+| `lineLoss`
+| `cim:MeasurementKind.lineLoss`
+| n/a
+
+| `loadInterrupt`
+| `cim:MeasurementKind.loadInterrupt`
+| n/a
+
+| `loadShed`
+| `cim:MeasurementKind.loadShed`
+| n/a
+
+| `loss`
+| `cim:MeasurementKind.loss`
+| n/a
+
+| `macAddress`
+| `cim:MeasurementKind.macAddress`
+| n/a
+
+| `maintenance`
+| `cim:MeasurementKind.maintenance`
+| n/a
+
+| `mfgAssignedConfigurationID`
+| `cim:MeasurementKind.mfgAssignedConfigurationID`
+| n/a
+
+| `mfgAssignedPhysicalSerialNumber`
+| `cim:MeasurementKind.mfgAssignedPhysicalSerialNumber`
+| n/a
+
+| `mfgAssignedProductNumber`
+| `cim:MeasurementKind.mfgAssignedProductNumber`
+| n/a
+
+| `mfgAssignedUniqueCommunicationAddress`
+| `cim:MeasurementKind.mfgAssignedUniqueCommunicationAddress`
+| n/a
+
+| `multiCastAddress`
+| `cim:MeasurementKind.multiCastAddress`
+| n/a
+
+| `negativeSequence`
+| `cim:MeasurementKind.negativeSequence`
+| n/a
+
+| `none`
+| `cim:MeasurementKind.none`
+| n/a
+
+| `oneWayAddress`
+| `cim:MeasurementKind.oneWayAddress`
+| n/a
+
+| `phasorPowerFactor`
+| `cim:MeasurementKind.phasorPowerFactor`
+| n/a
+
+| `phasorReactivePower`
+| `cim:MeasurementKind.phasorReactivePower`
+| n/a
+
+| `physicalTamper`
+| `cim:MeasurementKind.physicalTamper`
+| n/a
+
+| `positiveSequence`
+| `cim:MeasurementKind.positiveSequence`
+| n/a
+
+| `power`
+| `cim:MeasurementKind.power`
+| n/a
+
+| `powerFactor`
+| `cim:MeasurementKind.powerFactor`
+| n/a
+
+| `powerLossTamper`
+| `cim:MeasurementKind.powerLossTamper`
+| n/a
+
+| `powerOutage`
+| `cim:MeasurementKind.powerOutage`
+| n/a
+
+| `powerQuality`
+| `cim:MeasurementKind.powerQuality`
+| n/a
+
+| `powerRestoration`
+| `cim:MeasurementKind.powerRestoration`
+| n/a
+
+| `programmed`
+| `cim:MeasurementKind.programmed`
+| n/a
+
+| `pushbutton`
+| `cim:MeasurementKind.pushbutton`
+| n/a
+
+| `quantityPower`
+| `cim:MeasurementKind.quantityPower`
+| n/a
+
+| `relayActivation`
+| `cim:MeasurementKind.relayActivation`
+| n/a
+
+| `relayCycle`
+| `cim:MeasurementKind.relayCycle`
+| n/a
+
+| `removalTamper`
+| `cim:MeasurementKind.removalTamper`
+| n/a
+
+| `reprogrammingTamper`
+| `cim:MeasurementKind.reprogrammingTamper`
+| n/a
+
+| `reverseRotationTamper`
+| `cim:MeasurementKind.reverseRotationTamper`
+| n/a
+
+| `sag`
+| `cim:MeasurementKind.sag`
+| n/a
+
+| `signalStrength`
+| `cim:MeasurementKind.signalStrength`
+| n/a
+
+| `signaltoNoiseRatio`
+| `cim:MeasurementKind.signaltoNoiseRatio`
+| n/a
+
+| `swell`
+| `cim:MeasurementKind.swell`
+| n/a
+
+| `switchArmed`
+| `cim:MeasurementKind.switchArmed`
+| n/a
+
+| `switchDisabled`
+| `cim:MeasurementKind.switchDisabled`
+| n/a
+
+| `switchPosition`
+| `cim:MeasurementKind.switchPosition`
+| n/a
+
+| `tamper`
+| `cim:MeasurementKind.tamper`
+| n/a
+
+| `tapPosition`
+| `cim:MeasurementKind.tapPosition`
+| n/a
+
+| `tariffRate`
+| `cim:MeasurementKind.tariffRate`
+| n/a
+
+| `temperature`
+| `cim:MeasurementKind.temperature`
+| n/a
+
+| `totalHarmonicDistortion`
+| `cim:MeasurementKind.totalHarmonicDistortion`
+| n/a
+
+| `transformerLoss`
+| `cim:MeasurementKind.transformerLoss`
+| n/a
+
+| `twoWayAddress`
+| `cim:MeasurementKind.twoWayAddress`
+| n/a
+
+| `unipedeVoltageDip10to15`
+| `cim:MeasurementKind.unipedeVoltageDip10to15`
+| n/a
+
+| `unipedeVoltageDip15to30`
+| `cim:MeasurementKind.unipedeVoltageDip15to30`
+| n/a
+
+| `unipedeVoltageDip30to60`
+| `cim:MeasurementKind.unipedeVoltageDip30to60`
+| n/a
+
+| `unipedeVoltageDip60to90`
+| `cim:MeasurementKind.unipedeVoltageDip60to90`
+| n/a
+
+| `unipedeVoltageDip90to100`
+| `cim:MeasurementKind.unipedeVoltageDip90to100`
+| n/a
+
+| `voltage`
+| `cim:MeasurementKind.voltage`
+| n/a
+
+| `voltageAngle`
+| `cim:MeasurementKind.voltageAngle`
+| n/a
+
+| `voltageExcursion`
+| `cim:MeasurementKind.voltageExcursion`
+| n/a
+
+| `voltageImbalance`
+| `cim:MeasurementKind.voltageImbalance`
+| n/a
+
+| `volume`
+| `cim:MeasurementKind.volume`
+| n/a
+
+| `volumetricFlow`
+| `cim:MeasurementKind.volumetricFlow`
+| n/a
+
+| `watchdogTimeout`
+| `cim:MeasurementKind.watchdogTimeout`
+| n/a
+
+| `zeroFlowDuration`
+| `cim:MeasurementKind.zeroFlowDuration`
+| n/a
+
+| `zeroSequence`
+| `cim:MeasurementKind.zeroSequence`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ReadingType.adoc[`ReadingType`] | xref::class/ReadingType.adoc#measurementKind[`measurementKind`]
+
+
+|===
+

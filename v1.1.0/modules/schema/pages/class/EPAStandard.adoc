@@ -1,0 +1,123 @@
+= `EPAStandard`
+:toclevels: 4
+
+
++++Standard published by EPA (United States Environmental Protection Agency).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EPAStandard`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`EPAStandard`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<standardEdition,`standardEdition`>>
+//| [[slots_table.standardEdition]]<<standardEdition,`standardEdition`>>
+| 0..1 +
+xref::enumeration/EPAStandardEditionKind.adoc[`EPAStandardEditionKind`]
+| +++Edition of EPA standard.+++
+| _n/a_
+
+| <<standardNumber,`standardNumber`>>
+//| [[slots_table.standardNumber]]<<standardNumber,`standardNumber`>>
+| 0..1 +
+xref::enumeration/EPAStandardKind.adoc[`EPAStandardKind`]
+| +++EPA standard number.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#standardEdition]
+=== `standardEdition`
++++Edition of EPA standard.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EPAStandard.standardEdition`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/EPAStandardEditionKind.adoc[`EPAStandardEditionKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardEdition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#standardNumber]
+=== `standardNumber`
++++EPA standard number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EPAStandard.standardNumber`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/EPAStandardKind.adoc[`EPAStandardKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardNumber,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TestStandard.adoc[`TestStandard`] | xref::class/TestStandard.adoc#testStandardEPA[`testStandardEPA`]
+
+
+|===
+

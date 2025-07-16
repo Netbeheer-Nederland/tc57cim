@@ -1,0 +1,156 @@
+= `TemperatureDependentLimitPoint`
+:toclevels: 4
+
+
++++A point on a table of limit verses temperature.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TemperatureDependentLimitPoint`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`TemperatureDependentLimitPoint`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<TemperatureDependentLimitTable,`TemperatureDependentLimitTable`>>
+//| [[slots_table.TemperatureDependentLimitTable]]<<TemperatureDependentLimitTable,`TemperatureDependentLimitTable`>>
+| 1 +
+xref::class/TemperatureDependentLimitTable.adoc[`TemperatureDependentLimitTable`]
+| _n/a_
+| _n/a_
+
+| <<limitPercent,`limitPercent`>>
+//| [[slots_table.limitPercent]]<<limitPercent,`limitPercent`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++The scaling of the operational limit in percent.+++
+| _n/a_
+
+| <<temperature,`temperature`>>
+//| [[slots_table.temperature]]<<temperature,`temperature`>>
+| 0..1 +
+xref::class/Temperature.adoc[`Temperature`]
+| +++The temperature of the table point.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#limitPercent]
+=== `limitPercent`
++++The scaling of the operational limit in percent.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TemperatureDependentLimitPoint.limitPercent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.limitPercent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#temperature]
+=== `temperature`
++++The temperature of the table point.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TemperatureDependentLimitPoint.temperature`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Temperature.adoc[`Temperature`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.temperature,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TemperatureDependentLimitTable]
+=== `TemperatureDependentLimitTable`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TemperatureDependentLimitPoint.TemperatureDependentLimitTable`
+| Cardinality
+| 1
+| Type
+| xref::class/TemperatureDependentLimitTable.adoc[`TemperatureDependentLimitTable`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TemperatureDependentLimitTable,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TemperatureDependentLimitTable.adoc[`TemperatureDependentLimitTable`] | xref::class/TemperatureDependentLimitTable.adoc#TemperatureLimitTablePoint[`TemperatureLimitTablePoint`]
+
+
+|===
+

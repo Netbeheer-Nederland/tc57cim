@@ -1,0 +1,259 @@
+= `TransmissionInterfaceRightEntitlement`
+:toclevels: 4
+
+
++++This is formally called the branch group ETC/TOR entitlement with the inclusion of CVR as ETC. This could be also used to represent the TR entitlement on a POR/POD.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TransmissionInterfaceRightEntitlement`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`TransmissionInterfaceRightEntitlement`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ContractRight,`ContractRight`>>
+//| [[slots_table.ContractRight]]<<ContractRight,`ContractRight`>>
+| 1 +
+xref::class/ContractRight.adoc[`ContractRight`]
+| _n/a_
+| _n/a_
+
+| <<Flowgate,`Flowgate`>>
+//| [[slots_table.Flowgate]]<<Flowgate,`Flowgate`>>
+| 0..1 +
+xref::class/Flowgate.adoc[`Flowgate`]
+| _n/a_
+| _n/a_
+
+| <<POD,`POD`>>
+//| [[slots_table.POD]]<<POD,`POD`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++point of delivery+++
+| _n/a_
+
+| <<POR,`POR`>>
+//| [[slots_table.POR]]<<POR,`POR`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++point of receipt+++
+| _n/a_
+
+| <<entitlement,`entitlement`>>
+//| [[slots_table.entitlement]]<<entitlement,`entitlement`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++the entitlement+++
+| _n/a_
+
+| <<startOperatingDate,`startOperatingDate`>>
+//| [[slots_table.startOperatingDate]]<<startOperatingDate,`startOperatingDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Operating date and hour when the entitlement applies+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#ContractRight]
+=== `ContractRight`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionInterfaceRightEntitlement.ContractRight`
+| Cardinality
+| 1
+| Type
+| xref::class/ContractRight.adoc[`ContractRight`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ContractRight,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#entitlement]
+=== `entitlement`
++++the entitlement+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionInterfaceRightEntitlement.entitlement`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.entitlement,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Flowgate]
+=== `Flowgate`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionInterfaceRightEntitlement.Flowgate`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Flowgate.adoc[`Flowgate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Flowgate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#POD]
+=== `POD`
++++point of delivery+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionInterfaceRightEntitlement.POD`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.POD,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#POR]
+=== `POR`
++++point of receipt+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionInterfaceRightEntitlement.POR`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.POR,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startOperatingDate]
+=== `startOperatingDate`
++++Operating date and hour when the entitlement applies+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionInterfaceRightEntitlement.startOperatingDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startOperatingDate,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ContractRight.adoc[`ContractRight`] | xref::class/ContractRight.adoc#TransmissionInterfaceEntitlement[`TransmissionInterfaceEntitlement`]
+
+
+
+| xref::class/Flowgate.adoc[`Flowgate`] | xref::class/Flowgate.adoc#TranmissionRightEntitlement[`TranmissionRightEntitlement`]
+
+
+|===
+

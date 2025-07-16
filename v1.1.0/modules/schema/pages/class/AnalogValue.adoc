@@ -1,0 +1,923 @@
+= `AnalogValue`
+:toclevels: 4
+
+
++++AnalogValue represents an analog MeasurementValue.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AnalogValue`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/IOPoint.adoc[`IOPoint`]
+*** xref::class/MeasurementValue.adoc[`MeasurementValue`]
+**** *`AnalogValue`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AltGeneratingUnit,`AltGeneratingUnit`>>
+//| [[slots_table.AltGeneratingUnit]]<<AltGeneratingUnit,`AltGeneratingUnit`>>
+| 0..* +
+xref::class/AltGeneratingUnitMeas.adoc[`AltGeneratingUnitMeas`]
+| +++The alternate generating unit for which this measurement value applies.+++
+| _n/a_
+
+| <<AltTieMeas,`AltTieMeas`>>
+//| [[slots_table.AltTieMeas]]<<AltTieMeas,`AltTieMeas`>>
+| 0..* +
+xref::class/AltTieMeas.adoc[`AltTieMeas`]
+| +++The usage of the measurement within the control area specification.+++
+| _n/a_
+
+| <<Analog,`Analog`>>
+//| [[slots_table.Analog]]<<Analog,`Analog`>>
+| 1 +
+xref::class/Analog.adoc[`Analog`]
+| +++Measurement to which this value is connected.+++
+| _n/a_
+
+| <<AnalogControl,`AnalogControl`>>
+//| [[slots_table.AnalogControl]]<<AnalogControl,`AnalogControl`>>
+| 0..1 +
+xref::class/AnalogControl.adoc[`AnalogControl`]
+| +++The Control variable associated with the MeasurementValue.+++
+| _n/a_
+
+| <<value,`value`>>
+//| [[slots_table.value]]<<value,`value`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The value to supervise.+++
+| _n/a_
+
+| <<CalculationMethodHierarchy,`CalculationMethodHierarchy`>>
+//| [[slots_table.CalculationMethodHierarchy]]<<CalculationMethodHierarchy,`CalculationMethodHierarchy`>>
+| 0..1 +
+xref::class/CalculationMethodHierarchy.adoc[`CalculationMethodHierarchy`]
+| _n/a_
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+| <<ErpPerson,`ErpPerson`>>
+//| [[slots_table.ErpPerson]]<<ErpPerson,`ErpPerson`>>
+| 0..1 +
+xref::class/OldPerson.adoc[`OldPerson`]
+| _n/a_
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+| <<MeasurementValueQuality,`MeasurementValueQuality`>>
+//| [[slots_table.MeasurementValueQuality]]<<MeasurementValueQuality,`MeasurementValueQuality`>>
+| 0..1 +
+xref::class/MeasurementValueQuality.adoc[`MeasurementValueQuality`]
+| +++A MeasurementValue has a MeasurementValueQuality associated with it.+++
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+| <<MeasurementValueSource,`MeasurementValueSource`>>
+//| [[slots_table.MeasurementValueSource]]<<MeasurementValueSource,`MeasurementValueSource`>>
+| 1 +
+xref::class/MeasurementValueSource.adoc[`MeasurementValueSource`]
+| +++A reference to the type of source that updates the MeasurementValue, e.g. SCADA, CCLink, manual, etc. User conventions for...+++
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+| <<ProcedureDataSet,`ProcedureDataSet`>>
+//| [[slots_table.ProcedureDataSet]]<<ProcedureDataSet,`ProcedureDataSet`>>
+| 0..* +
+xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+| +++Procedure data set that applies to this mesurement value.+++
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+| <<RemoteSource,`RemoteSource`>>
+//| [[slots_table.RemoteSource]]<<RemoteSource,`RemoteSource`>>
+| 0..1 +
+xref::class/RemoteSource.adoc[`RemoteSource`]
+| +++Link to the physical telemetered point associated with this measurement.+++
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+| <<sensorAccuracy,`sensorAccuracy`>>
+//| [[slots_table.sensorAccuracy]]<<sensorAccuracy,`sensorAccuracy`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++The limit, expressed as a percentage of the sensor maximum, that errors will not exceed when the sensor is used under ...+++
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+| <<timeStamp,`timeStamp`>>
+//| [[slots_table.timeStamp]]<<timeStamp,`timeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The time when the value was last updated.+++
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+| <<BilateralToIOPoint,`BilateralToIOPoint`>>
+//| [[slots_table.BilateralToIOPoint]]<<BilateralToIOPoint,`BilateralToIOPoint`>>
+| 0..* +
+xref::class/ProvidedBilateralPoint.adoc[`ProvidedBilateralPoint`]
+| +++Bilateral ICCP point for the measurement or control.+++
+| xref::class/IOPoint.adoc[`IOPoint`]
+
+| <<IOPointSource,`IOPointSource`>>
+//| [[slots_table.IOPointSource]]<<IOPointSource,`IOPointSource`>>
+| 0..1 +
+xref::class/IOPointSource.adoc[`IOPointSource`]
+| +++Local merasurement value source for an ICCP point.+++
+| xref::class/IOPoint.adoc[`IOPoint`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AltGeneratingUnit]
+=== `AltGeneratingUnit`
++++The alternate generating unit for which this measurement value applies.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AnalogValue.AltGeneratingUnit`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AltGeneratingUnitMeas.adoc[`AltGeneratingUnitMeas`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AltGeneratingUnit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AltTieMeas]
+=== `AltTieMeas`
++++The usage of the measurement within the control area specification.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AnalogValue.AltTieMeas`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AltTieMeas.adoc[`AltTieMeas`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AltTieMeas,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Analog]
+=== `Analog`
++++Measurement to which this value is connected.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AnalogValue.Analog`
+| Cardinality
+| 1
+| Type
+| xref::class/Analog.adoc[`Analog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Analog,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AnalogControl]
+=== `AnalogControl`
++++The Control variable associated with the MeasurementValue.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AnalogValue.AnalogControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AnalogControl.adoc[`AnalogControl`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AnalogControl,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#BilateralToIOPoint]
+=== `BilateralToIOPoint`
++++Bilateral ICCP point for the measurement or control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IOPoint.BilateralToIOPoint`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProvidedBilateralPoint.adoc[`ProvidedBilateralPoint`]
+
+| Inherited from
+| xref::class/IOPoint.adoc[`IOPoint`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.BilateralToIOPoint,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CalculationMethodHierarchy]
+=== `CalculationMethodHierarchy`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.CalculationMethodHierarchy`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CalculationMethodHierarchy.adoc[`CalculationMethodHierarchy`]
+
+| Inherited from
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CalculationMethodHierarchy,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ErpPerson]
+=== `ErpPerson`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.ErpPerson`
+| Cardinality
+| 0..1
+| Type
+| xref::class/OldPerson.adoc[`OldPerson`]
+
+| Inherited from
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ErpPerson,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#IOPointSource]
+=== `IOPointSource`
++++Local merasurement value source for an ICCP point.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IOPoint.IOPointSource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IOPointSource.adoc[`IOPointSource`]
+
+| Inherited from
+| xref::class/IOPoint.adoc[`IOPoint`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.IOPointSource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MeasurementValueQuality]
+=== `MeasurementValueQuality`
++++A MeasurementValue has a MeasurementValueQuality associated with it.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.MeasurementValueQuality`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MeasurementValueQuality.adoc[`MeasurementValueQuality`]
+
+| Inherited from
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MeasurementValueQuality,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MeasurementValueSource]
+=== `MeasurementValueSource`
++++A reference to the type of source that updates the MeasurementValue, e.g. SCADA, CCLink, manual, etc. User conventions for the names of sources are contained in the introduction to IEC 61970-301.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.MeasurementValueSource`
+| Cardinality
+| 1
+| Type
+| xref::class/MeasurementValueSource.adoc[`MeasurementValueSource`]
+
+| Inherited from
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MeasurementValueSource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ProcedureDataSet]
+=== `ProcedureDataSet`
++++Procedure data set that applies to this mesurement value.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.ProcedureDataSet`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+| Inherited from
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ProcedureDataSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RemoteSource]
+=== `RemoteSource`
++++Link to the physical telemetered point associated with this measurement.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.RemoteSource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RemoteSource.adoc[`RemoteSource`]
+
+| Inherited from
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RemoteSource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sensorAccuracy]
+=== `sensorAccuracy`
++++The limit, expressed as a percentage of the sensor maximum, that errors will not exceed when the sensor is used under  reference conditions.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.sensorAccuracy`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+| Inherited from
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sensorAccuracy,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeStamp]
+=== `timeStamp`
++++The time when the value was last updated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MeasurementValue.timeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value]
+=== `value`
++++The value to supervise.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AnalogValue.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AltGeneratingUnitMeas.adoc[`AltGeneratingUnitMeas`] | xref::class/AltGeneratingUnitMeas.adoc#AnalogValue[`AnalogValue`]
+
+
+
+| xref::class/AltTieMeas.adoc[`AltTieMeas`] | xref::class/AltTieMeas.adoc#AnalogValue[`AnalogValue`]
+
+
+
+| xref::class/Analog.adoc[`Analog`] | xref::class/Analog.adoc#AnalogValues[`AnalogValues`]
+
+
+
+| xref::class/AnalogControl.adoc[`AnalogControl`] | xref::class/AnalogControl.adoc#AnalogValue[`AnalogValue`]
+
+
+|===
+

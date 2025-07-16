@@ -1,0 +1,201 @@
+= `EnvironmentalPhenomenon`
+:toclevels: 4
+
+
++++The actual or forecast characteristics of an environmental phenomenon at a specific point in time (or during a specific time interval) that may have both a center and area/line location.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EnvironmentalPhenomenon`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`EnvironmentalPhenomenon`*
+ ** xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+ ** xref::class/GeosphericPhenomenon.adoc[`GeosphericPhenomenon`]
+ ** xref::class/HydrosphericPhenomenon.adoc[`HydrosphericPhenomenon`]
+ ** xref::class/SpacePhenomenon.adoc[`SpacePhenomenon`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<EnvironmentalInformation,`EnvironmentalInformation`>>
+//| [[slots_table.EnvironmentalInformation]]<<EnvironmentalInformation,`EnvironmentalInformation`>>
+| 0..1 +
+xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+| +++The forecast or observation of which this phenomenon description is a part.+++
+| _n/a_
+
+| <<EnvironmentalLocationKind,`EnvironmentalLocationKind`>>
+//| [[slots_table.EnvironmentalLocationKind]]<<EnvironmentalLocationKind,`EnvironmentalLocationKind`>>
+| 0..* +
+xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+| +++Location of relevance to this environmental phenomenon.+++
+| _n/a_
+
+| <<PhenomenonClassification,`PhenomenonClassification`>>
+//| [[slots_table.PhenomenonClassification]]<<PhenomenonClassification,`PhenomenonClassification`>>
+| 0..1 +
+xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+| +++The classification of this phenomenon.+++
+| _n/a_
+
+| <<timeInterval,`timeInterval`>>
+//| [[slots_table.timeInterval]]<<timeInterval,`timeInterval`>>
+| 0..1 +
+xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++The timestamp of the phenomenon as a single point or time interval.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#EnvironmentalInformation]
+=== `EnvironmentalInformation`
++++The forecast or observation of which this phenomenon description is a part.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.EnvironmentalInformation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalInformation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnvironmentalLocationKind]
+=== `EnvironmentalLocationKind`
++++Location of relevance to this environmental phenomenon.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.EnvironmentalLocationKind`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalLocationKind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PhenomenonClassification]
+=== `PhenomenonClassification`
++++The classification of this phenomenon.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.PhenomenonClassification`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PhenomenonClassification,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeInterval]
+=== `timeInterval`
++++The timestamp of the phenomenon as a single point or time interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.timeInterval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeInterval,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`] | xref::class/EnvironmentalInformation.adoc#EnvironmentalPhenomenon[`EnvironmentalPhenomenon`]
+
+
+
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`] | xref::class/EnvironmentalLocationType.adoc#EnvironmentalPhenomenon[`EnvironmentalPhenomenon`]
+
+
+
+| xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`] | xref::class/PhenomenonClassification.adoc#EnvironmentalPhenomenon[`EnvironmentalPhenomenon`]
+
+
+|===
+

@@ -1,0 +1,60 @@
+= `SwitchActionKind`
+:toclevels: 4
+
+
++++Kind of action on switch.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SwitchActionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `close`
+| `cim:SwitchActionKind.close`
+| n/a
+
+| `disableReclosing`
+| `cim:SwitchActionKind.disableReclosing`
+| n/a
+
+| `enableReclosing`
+| `cim:SwitchActionKind.enableReclosing`
+| n/a
+
+| `open`
+| `cim:SwitchActionKind.open`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/SwitchAction.adoc[`SwitchAction`] | xref::class/SwitchAction.adoc#kind[`kind`]
+
+
+|===
+

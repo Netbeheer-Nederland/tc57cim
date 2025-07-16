@@ -1,0 +1,157 @@
+= `SvSwitch`
+:toclevels: 4
+
+
++++State variable for switch.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SvSwitch`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/StateVariable.adoc[`StateVariable`]
+** *`SvSwitch`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Switch,`Switch`>>
+//| [[slots_table.Switch]]<<Switch,`Switch`>>
+| 1 +
+xref::class/Switch.adoc[`Switch`]
+| +++The switch associated with the switch state.+++
+| _n/a_
+
+| <<open,`open`>>
+//| [[slots_table.open]]<<open,`open`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++The attribute tells if the computed state of the switch is considered open.+++
+| _n/a_
+
+| <<phase,`phase`>>
+//| [[slots_table.phase]]<<phase,`phase`>>
+| 0..1 +
+xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++The terminal phase at which the connection is applied.   If missing, the injection is assumed to be balanced among...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#open]
+=== `open`
++++The attribute tells if the computed state of the switch is considered open.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvSwitch.open`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.open,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phase]
+=== `phase`
++++The terminal phase at which the connection is applied.   If missing, the injection is assumed to be balanced among non-neutral phases.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvSwitch.phase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phase,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Switch]
+=== `Switch`
++++The switch associated with the switch state.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvSwitch.Switch`
+| Cardinality
+| 1
+| Type
+| xref::class/Switch.adoc[`Switch`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Switch,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Switch.adoc[`Switch`] | xref::class/Switch.adoc#SvSwitch[`SvSwitch`]
+
+
+|===
+

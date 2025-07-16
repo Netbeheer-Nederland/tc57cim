@@ -1,0 +1,263 @@
+= `Price`
+:toclevels: 4
+
+
++++The cost corresponding to a specific measure and expressed in a currency.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Price`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`Price`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Domain,`Domain`>>
+//| [[slots_table.Domain]]<<Domain,`Domain`>>
+| 0..* +
+xref::class/Domain.adoc[`Domain`]
+| _n/a_
+| _n/a_
+
+| <<Point,`Point`>>
+//| [[slots_table.Point]]<<Point,`Point`>>
+| 0..1 +
+xref::class/Point.adoc[`Point`]
+| _n/a_
+| _n/a_
+
+| <<TimeSeries,`TimeSeries`>>
+//| [[slots_table.TimeSeries]]<<TimeSeries,`TimeSeries`>>
+| 0..* +
+xref::class/TimeSeries.adoc[`TimeSeries`]
+| _n/a_
+| _n/a_
+
+| <<amount,`amount`>>
+//| [[slots_table.amount]]<<amount,`amount`>>
+| 0..1 +
+https://w3id.org/linkml/Double[`double`]
+| +++A number of monetary units specified in a unit of currency.+++
+| _n/a_
+
+| <<category,`category`>>
+//| [[slots_table.category]]<<category,`category`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The category of a price to be used in a price calculation. The price category is mutually agreed between System Operators.+++
+| _n/a_
+
+| <<direction,`direction`>>
+//| [[slots_table.direction]]<<direction,`direction`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The direction indicates whether a System Operator pays the Market Parties or inverse.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#amount]
+=== `amount`
++++A number of monetary units specified in a unit of currency.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Price.amount`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Double[`double`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.amount,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#category]
+=== `category`
++++The category of a price to be used in a price calculation. The price category is mutually agreed between System Operators.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Price.category`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.category,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#direction]
+=== `direction`
++++The direction indicates whether a System Operator pays the Market Parties or inverse.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Price.direction`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.direction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Domain]
+=== `Domain`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Price.Domain`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Domain.adoc[`Domain`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Domain,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Point]
+=== `Point`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Price.Point`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Point.adoc[`Point`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Point,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Price.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TimeSeries,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Domain.adoc[`Domain`] | xref::class/Domain.adoc#Price[`Price`]
+
+
+
+| xref::class/Point.adoc[`Point`] | xref::class/Point.adoc#Price[`Price`]
+
+
+
+| xref::class/TimeSeries.adoc[`TimeSeries`] | xref::class/TimeSeries.adoc#Price[`Price`]
+
+
+|===
+

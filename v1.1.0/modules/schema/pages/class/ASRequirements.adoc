@@ -1,0 +1,123 @@
+= `ASRequirements`
+:toclevels: 4
+
+
++++Models Ancillary Service Requirements.  Describes interval for which the requirement is applicable.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ASRequirements`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ASRequirements`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ReserveDemandCurve,`ReserveDemandCurve`>>
+//| [[slots_table.ReserveDemandCurve]]<<ReserveDemandCurve,`ReserveDemandCurve`>>
+| 1..* +
+xref::class/ReserveDemandCurve.adoc[`ReserveDemandCurve`]
+| _n/a_
+| _n/a_
+
+| <<intervalStartTime,`intervalStartTime`>>
+//| [[slots_table.intervalStartTime]]<<intervalStartTime,`intervalStartTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The start of the time interval for which requirement is defined.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#intervalStartTime]
+=== `intervalStartTime`
++++The start of the time interval for which requirement is defined.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ASRequirements.intervalStartTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.intervalStartTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ReserveDemandCurve]
+=== `ReserveDemandCurve`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ASRequirements.ReserveDemandCurve`
+| Cardinality
+| 1..*
+| Type
+| xref::class/ReserveDemandCurve.adoc[`ReserveDemandCurve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ReserveDemandCurve,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ReserveDemandCurve.adoc[`ReserveDemandCurve`] | xref::class/ReserveDemandCurve.adoc#ASRequirements[`ASRequirements`]
+
+
+|===
+

@@ -1,0 +1,230 @@
+= `CommodityPrice`
+:toclevels: 4
+
+
++++The CommodityPrice class is used to define the price of a commodity during a given time interval.  The interval may be long, e.g. a year, or very short, e.g. 5 minutes.  There will be many instances of the CommodityPrice class for each instance of the CommodityDefinition to which it is associated.  Note that there may be more than once price associated with a given interval and these variances are described by the association (or associations) with the PriceDescriptor class.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CommodityPrice`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`CommodityPrice`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<CommodityDefinition,`CommodityDefinition`>>
+//| [[slots_table.CommodityDefinition]]<<CommodityDefinition,`CommodityDefinition`>>
+| 1 +
+xref::class/CommodityDefinition.adoc[`CommodityDefinition`]
+| _n/a_
+| _n/a_
+
+| <<PnodeClearing,`PnodeClearing`>>
+//| [[slots_table.PnodeClearing]]<<PnodeClearing,`PnodeClearing`>>
+| 0..1 +
+xref::class/PnodeClearing.adoc[`PnodeClearing`]
+| _n/a_
+| _n/a_
+
+| <<PriceDescriptor,`PriceDescriptor`>>
+//| [[slots_table.PriceDescriptor]]<<PriceDescriptor,`PriceDescriptor`>>
+| 1 +
+xref::class/PriceDescriptor.adoc[`PriceDescriptor`]
+| _n/a_
+| _n/a_
+
+| <<timeIntervalPeriod,`timeIntervalPeriod`>>
+//| [[slots_table.timeIntervalPeriod]]<<timeIntervalPeriod,`timeIntervalPeriod`>>
+| 0..1 +
+xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++The time interval over which the CommodityPrice is valid, using the standard conventions associated with the DateTimeInterval class.+++
+| _n/a_
+
+| <<value,`value`>>
+//| [[slots_table.value]]<<value,`value`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The price of the Commodity, expressed as a floating point value with the currency and unit of measure defined in the...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#CommodityDefinition]
+=== `CommodityDefinition`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CommodityPrice.CommodityDefinition`
+| Cardinality
+| 1
+| Type
+| xref::class/CommodityDefinition.adoc[`CommodityDefinition`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CommodityDefinition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PnodeClearing]
+=== `PnodeClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CommodityPrice.PnodeClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PnodeClearing.adoc[`PnodeClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PnodeClearing,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PriceDescriptor]
+=== `PriceDescriptor`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CommodityPrice.PriceDescriptor`
+| Cardinality
+| 1
+| Type
+| xref::class/PriceDescriptor.adoc[`PriceDescriptor`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PriceDescriptor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeIntervalPeriod]
+=== `timeIntervalPeriod`
++++The time interval over which the CommodityPrice is valid, using the standard conventions associated with the DateTimeInterval class.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CommodityPrice.timeIntervalPeriod`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeIntervalPeriod,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value]
+=== `value`
++++The price of the Commodity, expressed as a floating point value with the currency and unit of measure defined in the associated CommodityDefinition class.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CommodityPrice.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CommodityDefinition.adoc[`CommodityDefinition`] | xref::class/CommodityDefinition.adoc#CommodityPrice[`CommodityPrice`]
+
+
+
+| xref::class/PnodeClearing.adoc[`PnodeClearing`] | xref::class/PnodeClearing.adoc#CommodityPrice[`CommodityPrice`]
+
+
+
+| xref::class/PriceDescriptor.adoc[`PriceDescriptor`] | xref::class/PriceDescriptor.adoc#CommodityPrice[`CommodityPrice`]
+
+
+|===
+

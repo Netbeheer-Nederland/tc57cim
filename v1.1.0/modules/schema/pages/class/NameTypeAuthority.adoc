@@ -1,0 +1,156 @@
+= `NameTypeAuthority`
+:toclevels: 4
+
+
++++Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:NameTypeAuthority`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`NameTypeAuthority`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<NameTypes,`NameTypes`>>
+//| [[slots_table.NameTypes]]<<NameTypes,`NameTypes`>>
+| 0..* +
+xref::class/NameType.adoc[`NameType`]
+| +++All name types managed by this authority.+++
+| _n/a_
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Description of the name type authority.+++
+| _n/a_
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of the name type authority.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#description]
+=== `description`
++++Description of the name type authority.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NameTypeAuthority.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++Name of the name type authority.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NameTypeAuthority.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#NameTypes]
+=== `NameTypes`
++++All name types managed by this authority.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:NameTypeAuthority.NameTypes`
+| Cardinality
+| 0..*
+| Type
+| xref::class/NameType.adoc[`NameType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.NameTypes,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/NameType.adoc[`NameType`] | xref::class/NameType.adoc#NameTypeAuthority[`NameTypeAuthority`]
+
+
+|===
+

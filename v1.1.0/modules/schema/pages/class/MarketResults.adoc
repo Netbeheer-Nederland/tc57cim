@@ -1,0 +1,321 @@
+= `MarketResults`
+:toclevels: 4
+
+
++++This class holds elements that are single values for the entire market time horizon. That is, for the Day Ahead market, there is 1 value for each element, not hourly based.  Is a summary of the market run.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MarketResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MarketResults`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<EnergyMarket,`EnergyMarket`>>
+//| [[slots_table.EnergyMarket]]<<EnergyMarket,`EnergyMarket`>>
+| 1 +
+xref::class/EnergyMarket.adoc[`EnergyMarket`]
+| _n/a_
+| _n/a_
+
+| <<ancillarySvcCost,`ancillarySvcCost`>>
+//| [[slots_table.ancillarySvcCost]]<<ancillarySvcCost,`ancillarySvcCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Total  AS Cost (i.e., payment) ($) over the time horizon+++
+| _n/a_
+
+| <<contingentOperatingResAvail,`contingentOperatingResAvail`>>
+//| [[slots_table.contingentOperatingResAvail]]<<contingentOperatingResAvail,`contingentOperatingResAvail`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Global Contingent Operating Reserve Availability Indicator (Yes/No)+++
+| _n/a_
+
+| <<energyCost,`energyCost`>>
+//| [[slots_table.energyCost]]<<energyCost,`energyCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Total Energy Cost ($) over the time horizon+++
+| _n/a_
+
+| <<minimumLoadCost,`minimumLoadCost`>>
+//| [[slots_table.minimumLoadCost]]<<minimumLoadCost,`minimumLoadCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Total Minimum Load Cost ($) over the time horizon+++
+| _n/a_
+
+| <<startUpCost,`startUpCost`>>
+//| [[slots_table.startUpCost]]<<startUpCost,`startUpCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Total Start-up Cost ($) over the time horizon+++
+| _n/a_
+
+| <<totalCost,`totalCost`>>
+//| [[slots_table.totalCost]]<<totalCost,`totalCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Total Cost (Energy + AS) cost ($) by over the time horizon+++
+| _n/a_
+
+| <<totalRucCost,`totalRucCost`>>
+//| [[slots_table.totalRucCost]]<<totalRucCost,`totalRucCost`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The total RUC capacity cost for this interval+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#ancillarySvcCost]
+=== `ancillarySvcCost`
++++Total  AS Cost (i.e., payment) ($) over the time horizon+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketResults.ancillarySvcCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ancillarySvcCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#contingentOperatingResAvail]
+=== `contingentOperatingResAvail`
++++Global Contingent Operating Reserve Availability Indicator (Yes/No)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketResults.contingentOperatingResAvail`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.contingentOperatingResAvail,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#energyCost]
+=== `energyCost`
++++Total Energy Cost ($) over the time horizon+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketResults.energyCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.energyCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnergyMarket]
+=== `EnergyMarket`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketResults.EnergyMarket`
+| Cardinality
+| 1
+| Type
+| xref::class/EnergyMarket.adoc[`EnergyMarket`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnergyMarket,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minimumLoadCost]
+=== `minimumLoadCost`
++++Total Minimum Load Cost ($) over the time horizon+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketResults.minimumLoadCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minimumLoadCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startUpCost]
+=== `startUpCost`
++++Total Start-up Cost ($) over the time horizon+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketResults.startUpCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startUpCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#totalCost]
+=== `totalCost`
++++Total Cost (Energy + AS) cost ($) by over the time horizon+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketResults.totalCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.totalCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#totalRucCost]
+=== `totalRucCost`
++++The total RUC capacity cost for this interval+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketResults.totalRucCost`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.totalRucCost,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EnergyMarket.adoc[`EnergyMarket`] | xref::class/EnergyMarket.adoc#MarketResults[`MarketResults`]
+
+
+|===
+

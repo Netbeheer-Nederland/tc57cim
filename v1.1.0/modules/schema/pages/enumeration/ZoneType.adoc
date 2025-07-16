@@ -1,0 +1,54 @@
+= `ZoneType`
+:toclevels: 4
+
+
++++zone type+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ZoneType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ASREGION`
+| `cim:ZoneType.ASREGION`
+| n/a
+
+| `DCA`
+| `cim:ZoneType.DCA`
+| n/a
+
+| `LOADZONE`
+| `cim:ZoneType.LOADZONE`
+| n/a
+
+| `RUCZONE`
+| `cim:ZoneType.RUCZONE`
+| n/a
+
+| `TRADINGHUB`
+| `cim:ZoneType.TRADINGHUB`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

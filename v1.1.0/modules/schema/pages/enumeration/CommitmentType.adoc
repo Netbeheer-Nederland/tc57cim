@@ -1,0 +1,59 @@
+= `CommitmentType`
+:toclevels: 4
+
+
++++For example:
+SELF - Self commitment
+ISO - New commitment for this market period
+UC - Existing commitment that was a hold over from a previous market+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CommitmentType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ISO`
+| `cim:CommitmentType.ISO`
+| n/a
+
+| `SELF`
+| `cim:CommitmentType.SELF`
+| n/a
+
+| `UC`
+| `cim:CommitmentType.UC`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Commitments.adoc[`Commitments`] | xref::class/Commitments.adoc#commitmentType[`commitmentType`]
+
+
+|===
+

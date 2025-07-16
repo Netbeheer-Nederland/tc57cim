@@ -1,0 +1,61 @@
+= `TransformerApplicationKind`
+:toclevels: 4
+
+
++++Classifications of network roles in which transformers can be deployed. The classifications are intended to reflect both criticality of transformer in network operations and typical usage experienced by transformer.
+Note: This enumeration provides essential information to asset health analytics. The existing list is a starting point and is anticipated to be fleshed out further as requirements are better understood (PAB 2016/01/09).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TransformerApplicationKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `distribution`
+| `cim:TransformerApplicationKind.distribution`
+| n/a
+
+| `generatorStepUp`
+| `cim:TransformerApplicationKind.generatorStepUp`
+| n/a
+
+| `transmissionBusToBus`
+| `cim:TransformerApplicationKind.transmissionBusToBus`
+| n/a
+
+| `transmissionBusToDistribution`
+| `cim:TransformerApplicationKind.transmissionBusToDistribution`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AssetDeployment.adoc[`AssetDeployment`] | xref::class/AssetDeployment.adoc#transformerApplication[`transformerApplication`]
+
+
+|===
+

@@ -1,0 +1,123 @@
+= `ISOStandard`
+:toclevels: 4
+
+
++++Standard published by ISO (International Organization for Standardization).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ISOStandard`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`ISOStandard`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<standardEdition,`standardEdition`>>
+//| [[slots_table.standardEdition]]<<standardEdition,`standardEdition`>>
+| 0..1 +
+xref::enumeration/ISOStandardEditionKind.adoc[`ISOStandardEditionKind`]
+| +++Edition of ISO standard.+++
+| _n/a_
+
+| <<standardNumber,`standardNumber`>>
+//| [[slots_table.standardNumber]]<<standardNumber,`standardNumber`>>
+| 0..1 +
+xref::enumeration/ISOStandardKind.adoc[`ISOStandardKind`]
+| +++ISO standard number.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#standardEdition]
+=== `standardEdition`
++++Edition of ISO standard.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ISOStandard.standardEdition`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ISOStandardEditionKind.adoc[`ISOStandardEditionKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardEdition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#standardNumber]
+=== `standardNumber`
++++ISO standard number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ISOStandard.standardNumber`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ISOStandardKind.adoc[`ISOStandardKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardNumber,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TestStandard.adoc[`TestStandard`] | xref::class/TestStandard.adoc#testStandardISO[`testStandardISO`]
+
+
+|===
+

@@ -1,0 +1,92 @@
+= `CloudKind`
+:toclevels: 4
+
+
++++Kind of cloud.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CloudKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `altoCumulus`
+| `cim:CloudKind.altoCumulus`
+| n/a
+
+| `altoStratus`
+| `cim:CloudKind.altoStratus`
+| n/a
+
+| `cirroCumulus`
+| `cim:CloudKind.cirroCumulus`
+| n/a
+
+| `cirroStratus`
+| `cim:CloudKind.cirroStratus`
+| n/a
+
+| `cirrus`
+| `cim:CloudKind.cirrus`
+| n/a
+
+| `cumuloNimbus`
+| `cim:CloudKind.cumuloNimbus`
+| n/a
+
+| `cumulus`
+| `cim:CloudKind.cumulus`
+| n/a
+
+| `nimboStratus`
+| `cim:CloudKind.nimboStratus`
+| n/a
+
+| `other`
+| `cim:CloudKind.other`
+| n/a
+
+| `stratoCumulus`
+| `cim:CloudKind.stratoCumulus`
+| n/a
+
+| `stratus`
+| `cim:CloudKind.stratus`
+| n/a
+
+| `toweringCumulus`
+| `cim:CloudKind.toweringCumulus`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CloudCondition.adoc[`CloudCondition`] | xref::class/CloudCondition.adoc#kind[`kind`]
+
+
+|===
+

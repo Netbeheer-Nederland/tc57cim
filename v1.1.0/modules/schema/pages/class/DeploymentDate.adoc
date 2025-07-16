@@ -1,0 +1,222 @@
+= `DeploymentDate`
+:toclevels: 4
+
+
++++Dates for deployment events of an asset.  May have multiple deployment type dates for this device and a compound type allows a query to return multiple dates.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DeploymentDate`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`DeploymentDate`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<inServiceDate,`inServiceDate`>>
+//| [[slots_table.inServiceDate]]<<inServiceDate,`inServiceDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time asset most recently put in service.+++
+| _n/a_
+
+| <<installedDate,`installedDate`>>
+//| [[slots_table.installedDate]]<<installedDate,`installedDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time asset most recently installed.+++
+| _n/a_
+
+| <<notYetInstalledDate,`notYetInstalledDate`>>
+//| [[slots_table.notYetInstalledDate]]<<notYetInstalledDate,`notYetInstalledDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time of asset deployment transition to not yet installed.+++
+| _n/a_
+
+| <<outOfServiceDate,`outOfServiceDate`>>
+//| [[slots_table.outOfServiceDate]]<<outOfServiceDate,`outOfServiceDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time asset most recently taken out of service.+++
+| _n/a_
+
+| <<removedDate,`removedDate`>>
+//| [[slots_table.removedDate]]<<removedDate,`removedDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time asset most recently removed.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#inServiceDate]
+=== `inServiceDate`
++++Date and time asset most recently put in service.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DeploymentDate.inServiceDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.inServiceDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#installedDate]
+=== `installedDate`
++++Date and time asset most recently installed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DeploymentDate.installedDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.installedDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#notYetInstalledDate]
+=== `notYetInstalledDate`
++++Date and time of asset deployment transition to not yet installed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DeploymentDate.notYetInstalledDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.notYetInstalledDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#outOfServiceDate]
+=== `outOfServiceDate`
++++Date and time asset most recently taken out of service.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DeploymentDate.outOfServiceDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.outOfServiceDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#removedDate]
+=== `removedDate`
++++Date and time asset most recently removed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DeploymentDate.removedDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.removedDate,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AssetDeployment.adoc[`AssetDeployment`] | xref::class/AssetDeployment.adoc#deploymentDate[`deploymentDate`]
+
+
+|===
+

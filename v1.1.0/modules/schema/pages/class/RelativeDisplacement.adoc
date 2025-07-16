@@ -1,0 +1,127 @@
+= `RelativeDisplacement`
+:toclevels: 4
+
+
++++Vertical displacement relative to either sealevel, ground or the center of the earth.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RelativeDisplacement`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`RelativeDisplacement`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<displacement,`displacement`>>
+//| [[slots_table.displacement]]<<displacement,`displacement`>>
+| 0..1 +
+xref::class/Displacement.adoc[`Displacement`]
+| _n/a_
+| _n/a_
+
+| <<kind,`kind`>>
+//| [[slots_table.kind]]<<kind,`kind`>>
+| 0..1 +
+xref::enumeration/RelativeDisplacementKind.adoc[`RelativeDisplacementKind`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#displacement]
+=== `displacement`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RelativeDisplacement.displacement`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Displacement.adoc[`Displacement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.displacement,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kind]
+=== `kind`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RelativeDisplacement.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/RelativeDisplacementKind.adoc[`RelativeDisplacementKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kind,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`] | xref::class/AtmosphericPhenomenon.adoc#base[`base`]
+
+
+
+| xref::class/Earthquake.adoc[`Earthquake`] | xref::class/Earthquake.adoc#focalDepth[`focalDepth`]
+
+
+|===
+

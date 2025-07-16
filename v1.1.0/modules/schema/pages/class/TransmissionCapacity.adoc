@@ -1,0 +1,391 @@
+= `TransmissionCapacity`
+:toclevels: 4
+
+
++++This class models the transmission (either a transmission interface or a POR/POD pair) capacity including Total Transfer Capacity (TTC), Operating Transfer Capacity (OTC), and Capacity Benefit Margin (CBM).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TransmissionCapacity`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`TransmissionCapacity`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Flowgate,`Flowgate`>>
+//| [[slots_table.Flowgate]]<<Flowgate,`Flowgate`>>
+| 0..1 +
+xref::class/Flowgate.adoc[`Flowgate`]
+| _n/a_
+| _n/a_
+
+| <<GenericConstraints,`GenericConstraints`>>
+//| [[slots_table.GenericConstraints]]<<GenericConstraints,`GenericConstraints`>>
+| 0..1 +
+xref::class/GenericConstraints.adoc[`GenericConstraints`]
+| _n/a_
+| _n/a_
+
+| <<OTC15min_emergency,`OTC15min_emergency`>>
+//| [[slots_table.OTC15min_emergency]]<<OTC15min_emergency,`OTC15min_emergency`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The Operational Transmission Capacity (OTC) 15 minute Emergency Limit+++
+| _n/a_
+
+| <<OTCemergency,`OTCemergency`>>
+//| [[slots_table.OTCemergency]]<<OTCemergency,`OTCemergency`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The Operational Transmission Capacity (OTC) Emergency Limit.+++
+| _n/a_
+
+| <<POD,`POD`>>
+//| [[slots_table.POD]]<<POD,`POD`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++point of delivery+++
+| _n/a_
+
+| <<POR,`POR`>>
+//| [[slots_table.POR]]<<POR,`POR`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++point of receipt+++
+| _n/a_
+
+| <<capacityBenefitMargin,`capacityBenefitMargin`>>
+//| [[slots_table.capacityBenefitMargin]]<<capacityBenefitMargin,`capacityBenefitMargin`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Capacity Benefit Margin (CBM) is used by Markets to calculate the transmission interface limits. This number could be...+++
+| _n/a_
+
+| <<operationalTransmissionCapacity,`operationalTransmissionCapacity`>>
+//| [[slots_table.operationalTransmissionCapacity]]<<operationalTransmissionCapacity,`operationalTransmissionCapacity`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The Operational Transmission Capacity (OTC) is the transmission capacity under the operating condition during a specific...+++
+| _n/a_
+
+| <<startOperatingDate,`startOperatingDate`>>
+//| [[slots_table.startOperatingDate]]<<startOperatingDate,`startOperatingDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Operating date &amp; hour when the entitlement applies+++
+| _n/a_
+
+| <<totalTransmissionCapacity,`totalTransmissionCapacity`>>
+//| [[slots_table.totalTransmissionCapacity]]<<totalTransmissionCapacity,`totalTransmissionCapacity`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Total Transmission Capacity+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#capacityBenefitMargin]
+=== `capacityBenefitMargin`
++++Capacity Benefit Margin (CBM) is used by Markets to calculate the transmission interface limits. This number could be manually or procedurally determined. The CBM is defined per transmission interface (branch group).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionCapacity.capacityBenefitMargin`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.capacityBenefitMargin,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Flowgate]
+=== `Flowgate`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionCapacity.Flowgate`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Flowgate.adoc[`Flowgate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Flowgate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#GenericConstraints]
+=== `GenericConstraints`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionCapacity.GenericConstraints`
+| Cardinality
+| 0..1
+| Type
+| xref::class/GenericConstraints.adoc[`GenericConstraints`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.GenericConstraints,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#operationalTransmissionCapacity]
+=== `operationalTransmissionCapacity`
++++The Operational Transmission Capacity (OTC) is the transmission capacity under the operating condition during a specific time period, incorporating the effects of derates and current settings of operation controls. The OTCs for all transmission interface (branch group) are always provided regardless of outage or switching conditions.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionCapacity.operationalTransmissionCapacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.operationalTransmissionCapacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OTC15min_emergency]
+=== `OTC15min_emergency`
++++The Operational Transmission Capacity (OTC) 15 minute Emergency Limit+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionCapacity.OTC15min_emergency`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OTC15min_emergency,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OTCemergency]
+=== `OTCemergency`
++++The Operational Transmission Capacity (OTC) Emergency Limit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionCapacity.OTCemergency`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OTCemergency,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#POD]
+=== `POD`
++++point of delivery+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionCapacity.POD`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.POD,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#POR]
+=== `POR`
++++point of receipt+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionCapacity.POR`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.POR,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#startOperatingDate]
+=== `startOperatingDate`
++++Operating date &amp; hour when the entitlement applies+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionCapacity.startOperatingDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.startOperatingDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#totalTransmissionCapacity]
+=== `totalTransmissionCapacity`
++++Total Transmission Capacity+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionCapacity.totalTransmissionCapacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.totalTransmissionCapacity,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Flowgate.adoc[`Flowgate`] | xref::class/Flowgate.adoc#TransmissionCapacity[`TransmissionCapacity`]
+
+
+
+| xref::class/GenericConstraints.adoc[`GenericConstraints`] | xref::class/GenericConstraints.adoc#TransmissionCapacity[`TransmissionCapacity`]
+
+
+|===
+

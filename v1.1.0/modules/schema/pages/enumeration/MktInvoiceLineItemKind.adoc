@@ -1,0 +1,56 @@
+= `MktInvoiceLineItemKind`
+:toclevels: 4
+
+
++++Kind of invoice line item.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MktInvoiceLineItemKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `initial`
+| `cim:MktInvoiceLineItemKind.initial`
+| n/a
+
+| `other`
+| `cim:MktInvoiceLineItemKind.other`
+| n/a
+
+| `recalculation`
+| `cim:MktInvoiceLineItemKind.recalculation`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketInvoiceLineItem.adoc[`MarketInvoiceLineItem`] | xref::class/MarketInvoiceLineItem.adoc#kind[`kind`]
+
+
+|===
+

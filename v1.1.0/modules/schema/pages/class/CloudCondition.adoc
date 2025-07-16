@@ -1,0 +1,442 @@
+= `CloudCondition`
+:toclevels: 4
+
+
++++A classified cloud phenomenon with a type.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CloudCondition`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+** xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+*** *`CloudCondition`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<kind,`kind`>>
+//| [[slots_table.kind]]<<kind,`kind`>>
+| 0..1 +
+xref::enumeration/CloudKind.adoc[`CloudKind`]
+| +++The type of the cloud as defined by the CloudKind enumeration.+++
+| _n/a_
+
+| <<altitude,`altitude`>>
+//| [[slots_table.altitude]]<<altitude,`altitude`>>
+| 0..1 +
+xref::class/RelativeDisplacement.adoc[`RelativeDisplacement`]
+| +++The maximum altitude of the phenomenon.+++
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+| <<base,`base`>>
+//| [[slots_table.base]]<<base,`base`>>
+| 0..1 +
+xref::class/RelativeDisplacement.adoc[`RelativeDisplacement`]
+| +++The base altitude of the phenomenon.+++
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+| <<direction,`direction`>>
+//| [[slots_table.direction]]<<direction,`direction`>>
+| 0..1 +
+xref::class/Bearing.adoc[`Bearing`]
+| +++The direction the phenomenon is moving.+++
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+| <<maxCoverage,`maxCoverage`>>
+//| [[slots_table.maxCoverage]]<<maxCoverage,`maxCoverage`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++The maximum percentage coverage+++
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+| <<minCoverage,`minCoverage`>>
+//| [[slots_table.minCoverage]]<<minCoverage,`minCoverage`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++The minimum percentage coverage+++
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+| <<speed,`speed`>>
+//| [[slots_table.speed]]<<speed,`speed`>>
+| 0..1 +
+xref::class/Speed.adoc[`Speed`]
+| +++The speed of the phenomenon+++
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+| <<EnvironmentalInformation,`EnvironmentalInformation`>>
+//| [[slots_table.EnvironmentalInformation]]<<EnvironmentalInformation,`EnvironmentalInformation`>>
+| 0..1 +
+xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+| +++The forecast or observation of which this phenomenon description is a part.+++
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+| <<EnvironmentalLocationKind,`EnvironmentalLocationKind`>>
+//| [[slots_table.EnvironmentalLocationKind]]<<EnvironmentalLocationKind,`EnvironmentalLocationKind`>>
+| 0..* +
+xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+| +++Location of relevance to this environmental phenomenon.+++
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+| <<PhenomenonClassification,`PhenomenonClassification`>>
+//| [[slots_table.PhenomenonClassification]]<<PhenomenonClassification,`PhenomenonClassification`>>
+| 0..1 +
+xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+| +++The classification of this phenomenon.+++
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+| <<timeInterval,`timeInterval`>>
+//| [[slots_table.timeInterval]]<<timeInterval,`timeInterval`>>
+| 0..1 +
+xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++The timestamp of the phenomenon as a single point or time interval.+++
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+|===
+
+'''
+
+
+//[discrete]
+[#altitude]
+=== `altitude`
++++The maximum altitude of the phenomenon.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericPhenomenon.altitude`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RelativeDisplacement.adoc[`RelativeDisplacement`]
+
+| Inherited from
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.altitude,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#base]
+=== `base`
++++The base altitude of the phenomenon.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericPhenomenon.base`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RelativeDisplacement.adoc[`RelativeDisplacement`]
+
+| Inherited from
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.base,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#direction]
+=== `direction`
++++The direction the phenomenon is moving.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericPhenomenon.direction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Bearing.adoc[`Bearing`]
+
+| Inherited from
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.direction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnvironmentalInformation]
+=== `EnvironmentalInformation`
++++The forecast or observation of which this phenomenon description is a part.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.EnvironmentalInformation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalInformation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnvironmentalLocationKind]
+=== `EnvironmentalLocationKind`
++++Location of relevance to this environmental phenomenon.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.EnvironmentalLocationKind`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalLocationKind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kind]
+=== `kind`
++++The type of the cloud as defined by the CloudKind enumeration.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CloudCondition.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/CloudKind.adoc[`CloudKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxCoverage]
+=== `maxCoverage`
++++The maximum percentage coverage+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericPhenomenon.maxCoverage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+| Inherited from
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxCoverage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minCoverage]
+=== `minCoverage`
++++The minimum percentage coverage+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericPhenomenon.minCoverage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+| Inherited from
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minCoverage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PhenomenonClassification]
+=== `PhenomenonClassification`
++++The classification of this phenomenon.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.PhenomenonClassification`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PhenomenonClassification,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#speed]
+=== `speed`
++++The speed of the phenomenon+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AtmosphericPhenomenon.speed`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Speed.adoc[`Speed`]
+
+| Inherited from
+| xref::class/AtmosphericPhenomenon.adoc[`AtmosphericPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.speed,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeInterval]
+=== `timeInterval`
++++The timestamp of the phenomenon as a single point or time interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalPhenomenon.timeInterval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+| Inherited from
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeInterval,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

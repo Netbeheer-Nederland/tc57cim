@@ -1,0 +1,197 @@
+= `EnvironmentalLocationType`
+:toclevels: 4
+
+
++++Type of environmental location. Used when an environmental alert or phenomenon has multiple locations associated with it.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EnvironmentalLocationType`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`EnvironmentalLocationType`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<EnvironmentalAlert,`EnvironmentalAlert`>>
+//| [[slots_table.EnvironmentalAlert]]<<EnvironmentalAlert,`EnvironmentalAlert`>>
+| 0..* +
+xref::class/EnvironmentalAlert.adoc[`EnvironmentalAlert`]
+| +++Environmental alert applying to location of this type.+++
+| _n/a_
+
+| <<EnvironmentalPhenomenon,`EnvironmentalPhenomenon`>>
+//| [[slots_table.EnvironmentalPhenomenon]]<<EnvironmentalPhenomenon,`EnvironmentalPhenomenon`>>
+| 0..* +
+xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+| +++Environmental phenomenon for which this location is of relevance.+++
+| _n/a_
+
+| <<Location,`Location`>>
+//| [[slots_table.Location]]<<Location,`Location`>>
+| 0..1 +
+xref::class/Location.adoc[`Location`]
+| +++Location of this instance of ths kind of environmental location.+++
+| _n/a_
+
+| <<kind,`kind`>>
+//| [[slots_table.kind]]<<kind,`kind`>>
+| 0..1 +
+xref::enumeration/LocationKind.adoc[`LocationKind`]
+| +++The kind of location. Typical values might be center, extent, primary, secondary, etc.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#EnvironmentalAlert]
+=== `EnvironmentalAlert`
++++Environmental alert applying to location of this type.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalLocationType.EnvironmentalAlert`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalAlert.adoc[`EnvironmentalAlert`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalAlert,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnvironmentalPhenomenon]
+=== `EnvironmentalPhenomenon`
++++Environmental phenomenon for which this location is of relevance.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalLocationType.EnvironmentalPhenomenon`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalPhenomenon,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kind]
+=== `kind`
++++The kind of location. Typical values might be center, extent, primary, secondary, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalLocationType.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/LocationKind.adoc[`LocationKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location of this instance of ths kind of environmental location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EnvironmentalLocationType.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Location,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EnvironmentalAlert.adoc[`EnvironmentalAlert`] | xref::class/EnvironmentalAlert.adoc#EnvironmentalLocationKind[`EnvironmentalLocationKind`]
+
+
+
+| xref::class/EnvironmentalPhenomenon.adoc[`EnvironmentalPhenomenon`] | xref::class/EnvironmentalPhenomenon.adoc#EnvironmentalLocationKind[`EnvironmentalLocationKind`]
+
+
+
+| xref::class/Location.adoc[`Location`] | xref::class/Location.adoc#EnvironmentalLocationKind[`EnvironmentalLocationKind`]
+
+
+|===
+

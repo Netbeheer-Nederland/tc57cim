@@ -1,0 +1,932 @@
+= `CRRMarket`
+:toclevels: 4
+
+
++++Model that describes the Congestion Revenue Rights Auction Market.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CRRMarket`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Market.adoc[`Market`]
+*** *`CRRMarket`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<CongestionRevenueRight,`CongestionRevenueRight`>>
+//| [[slots_table.CongestionRevenueRight]]<<CongestionRevenueRight,`CongestionRevenueRight`>>
+| 1..* +
+xref::class/CongestionRevenueRight.adoc[`CongestionRevenueRight`]
+| _n/a_
+| _n/a_
+
+| <<labelID,`labelID`>>
+//| [[slots_table.labelID]]<<labelID,`labelID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++labelID - an ID for a set of apnodes/pnodes used in a CRR market+++
+| _n/a_
+
+| <<MarketFactors,`MarketFactors`>>
+//| [[slots_table.MarketFactors]]<<MarketFactors,`MarketFactors`>>
+| 0..* +
+xref::class/MarketFactors.adoc[`MarketFactors`]
+| _n/a_
+| xref::class/Market.adoc[`Market`]
+
+| <<MarketProducts,`MarketProducts`>>
+//| [[slots_table.MarketProducts]]<<MarketProducts,`MarketProducts`>>
+| 1..* +
+xref::class/MarketProduct.adoc[`MarketProduct`]
+| _n/a_
+| xref::class/Market.adoc[`Market`]
+
+| <<MarketRun,`MarketRun`>>
+//| [[slots_table.MarketRun]]<<MarketRun,`MarketRun`>>
+| 0..* +
+xref::class/MarketRun.adoc[`MarketRun`]
+| _n/a_
+| xref::class/Market.adoc[`Market`]
+
+| <<actualEnd,`actualEnd`>>
+//| [[slots_table.actualEnd]]<<actualEnd,`actualEnd`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Market ending time - actual market end+++
+| xref::class/Market.adoc[`Market`]
+
+| <<actualStart,`actualStart`>>
+//| [[slots_table.actualStart]]<<actualStart,`actualStart`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Market starting time - actual market start+++
+| xref::class/Market.adoc[`Market`]
+
+| <<dst,`dst`>>
+//| [[slots_table.dst]]<<dst,`dst`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if daylight savings time (DST) is in effect.+++
+| xref::class/Market.adoc[`Market`]
+
+| <<end,`end`>>
+//| [[slots_table.end]]<<end,`end`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Market end time.+++
+| xref::class/Market.adoc[`Market`]
+
+| <<localTimeZone,`localTimeZone`>>
+//| [[slots_table.localTimeZone]]<<localTimeZone,`localTimeZone`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Local time zone.+++
+| xref::class/Market.adoc[`Market`]
+
+| <<start,`start`>>
+//| [[slots_table.start]]<<start,`start`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Market start time.+++
+| xref::class/Market.adoc[`Market`]
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Market Status 
+'OPEN', 'CLOSED', 'CLEARED', 'BLOCKED'+++
+| xref::class/Market.adoc[`Market`]
+
+| <<timeIntervalLength,`timeIntervalLength`>>
+//| [[slots_table.timeIntervalLength]]<<timeIntervalLength,`timeIntervalLength`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Trading time interval length.+++
+| xref::class/Market.adoc[`Market`]
+
+| <<tradingDay,`tradingDay`>>
+//| [[slots_table.tradingDay]]<<tradingDay,`tradingDay`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Market trading date+++
+| xref::class/Market.adoc[`Market`]
+
+| <<tradingPeriod,`tradingPeriod`>>
+//| [[slots_table.tradingPeriod]]<<tradingPeriod,`tradingPeriod`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Trading period that describes the market, possibilities could be for an Energy Market:
+Day
+Hour
+
+For a CRR...+++
+| xref::class/Market.adoc[`Market`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#actualEnd]
+=== `actualEnd`
++++Market ending time - actual market end+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.actualEnd`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.actualEnd,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#actualStart]
+=== `actualStart`
++++Market starting time - actual market start+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.actualStart`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.actualStart,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CongestionRevenueRight]
+=== `CongestionRevenueRight`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CRRMarket.CongestionRevenueRight`
+| Cardinality
+| 1..*
+| Type
+| xref::class/CongestionRevenueRight.adoc[`CongestionRevenueRight`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CongestionRevenueRight,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dst]
+=== `dst`
++++True if daylight savings time (DST) is in effect.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.dst`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dst,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#end]
+=== `end`
++++Market end time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.end`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.end,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#labelID]
+=== `labelID`
++++labelID - an ID for a set of apnodes/pnodes used in a CRR market+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CRRMarket.labelID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.labelID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#localTimeZone]
+=== `localTimeZone`
++++Local time zone.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.localTimeZone`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.localTimeZone,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketFactors]
+=== `MarketFactors`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.MarketFactors`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketFactors.adoc[`MarketFactors`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketFactors,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketProducts]
+=== `MarketProducts`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.MarketProducts`
+| Cardinality
+| 1..*
+| Type
+| xref::class/MarketProduct.adoc[`MarketProduct`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketProducts,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketRun]
+=== `MarketRun`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.MarketRun`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketRun.adoc[`MarketRun`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketRun,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#start]
+=== `start`
++++Market start time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.start`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.start,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++Market Status 
+'OPEN', 'CLOSED', 'CLEARED', 'BLOCKED'+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.status`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeIntervalLength]
+=== `timeIntervalLength`
++++Trading time interval length.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.timeIntervalLength`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeIntervalLength,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tradingDay]
+=== `tradingDay`
++++Market trading date+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.tradingDay`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tradingDay,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tradingPeriod]
+=== `tradingPeriod`
++++Trading period that describes the market, possibilities could be for an Energy Market:
+Day
+Hour
+
+For a CRR Market:
+Year
+Month
+Season+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Market.tradingPeriod`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Market.adoc[`Market`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tradingPeriod,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CongestionRevenueRight.adoc[`CongestionRevenueRight`] | xref::class/CongestionRevenueRight.adoc#CRRMarket[`CRRMarket`]
+
+
+|===
+

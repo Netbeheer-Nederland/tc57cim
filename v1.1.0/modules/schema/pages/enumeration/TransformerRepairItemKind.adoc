@@ -1,0 +1,46 @@
+= `TransformerRepairItemKind`
+:toclevels: 4
+
+
++++Transformer components and problem areas which can be the focus of a repair work task.
+WorkTimeScheduleKind enumeration
+Kind of work schedule.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TransformerRepairItemKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RepairItem.adoc[`RepairItem`] | xref::class/RepairItem.adoc#transformerRepairItem[`transformerRepairItem`]
+
+
+|===
+

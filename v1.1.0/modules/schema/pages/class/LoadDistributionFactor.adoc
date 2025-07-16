@@ -1,0 +1,236 @@
+= `LoadDistributionFactor`
+:toclevels: 4
+
+
++++This class models the load distribution factors. This class should be used in one of two ways:
+
+Use it along with the AggregatedPnode and the IndividualPnode to show the distriubtion of each individual party
+
+OR
+
+Use it with Mkt_EnergyConsumer to represent the current MW/Mvar distribution within it's parnet load group.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:LoadDistributionFactor`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`LoadDistributionFactor`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AggregatedPnode,`AggregatedPnode`>>
+//| [[slots_table.AggregatedPnode]]<<AggregatedPnode,`AggregatedPnode`>>
+| 0..1 +
+xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+| _n/a_
+| _n/a_
+
+| <<DistributionFactorSet,`DistributionFactorSet`>>
+//| [[slots_table.DistributionFactorSet]]<<DistributionFactorSet,`DistributionFactorSet`>>
+| 0..* +
+xref::class/DistributionFactorSet.adoc[`DistributionFactorSet`]
+| _n/a_
+| _n/a_
+
+| <<IndividualPnode,`IndividualPnode`>>
+//| [[slots_table.IndividualPnode]]<<IndividualPnode,`IndividualPnode`>>
+| 0..1 +
+xref::class/IndividualPnode.adoc[`IndividualPnode`]
+| _n/a_
+| _n/a_
+
+| <<pDistFactor,`pDistFactor`>>
+//| [[slots_table.pDistFactor]]<<pDistFactor,`pDistFactor`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Real power (MW) load distribution factor+++
+| _n/a_
+
+| <<qDistFactor,`qDistFactor`>>
+//| [[slots_table.qDistFactor]]<<qDistFactor,`qDistFactor`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Reactive power (MVAr) load distribution factor+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#AggregatedPnode]
+=== `AggregatedPnode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadDistributionFactor.AggregatedPnode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AggregatedPnode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DistributionFactorSet]
+=== `DistributionFactorSet`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadDistributionFactor.DistributionFactorSet`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DistributionFactorSet.adoc[`DistributionFactorSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DistributionFactorSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#IndividualPnode]
+=== `IndividualPnode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadDistributionFactor.IndividualPnode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IndividualPnode.adoc[`IndividualPnode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.IndividualPnode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pDistFactor]
+=== `pDistFactor`
++++Real power (MW) load distribution factor+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadDistributionFactor.pDistFactor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pDistFactor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#qDistFactor]
+=== `qDistFactor`
++++Reactive power (MVAr) load distribution factor+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LoadDistributionFactor.qDistFactor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.qDistFactor,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`] | xref::class/AggregatedPnode.adoc#LoadDistributionFactor[`LoadDistributionFactor`]
+
+
+
+| xref::class/DistributionFactorSet.adoc[`DistributionFactorSet`] | xref::class/DistributionFactorSet.adoc#LoadDistributionFactor[`LoadDistributionFactor`]
+
+
+
+| xref::class/IndividualPnode.adoc[`IndividualPnode`] | xref::class/IndividualPnode.adoc#LoadDistributionFactor[`LoadDistributionFactor`]
+
+
+|===
+

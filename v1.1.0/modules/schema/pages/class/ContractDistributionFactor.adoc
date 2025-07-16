@@ -1,0 +1,263 @@
+= `ContractDistributionFactor`
+:toclevels: 4
+
+
++++Distribution among resources at the sink point or source point.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ContractDistributionFactor`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ContractDistributionFactor`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Flowgate,`Flowgate`>>
+//| [[slots_table.Flowgate]]<<Flowgate,`Flowgate`>>
+| 0..1 +
+xref::class/Flowgate.adoc[`Flowgate`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<TransmissionContractRight,`TransmissionContractRight`>>
+//| [[slots_table.TransmissionContractRight]]<<TransmissionContractRight,`TransmissionContractRight`>>
+| 0..1 +
+xref::class/ContractRight.adoc[`ContractRight`]
+| _n/a_
+| _n/a_
+
+| <<factor,`factor`>>
+//| [[slots_table.factor]]<<factor,`factor`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++MW value that this resource provides to the overall contract.+++
+| _n/a_
+
+| <<sinkFlag,`sinkFlag`>>
+//| [[slots_table.sinkFlag]]<<sinkFlag,`sinkFlag`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++This value will be set to YES if the referenced Cnode is defined as the sink point in the contract.+++
+| _n/a_
+
+| <<sourceFlag,`sourceFlag`>>
+//| [[slots_table.sourceFlag]]<<sourceFlag,`sourceFlag`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++This value will be set to YES if the referenced Cnode is defined as the source point in the contract.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#factor]
+=== `factor`
++++MW value that this resource provides to the overall contract.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ContractDistributionFactor.factor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.factor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Flowgate]
+=== `Flowgate`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ContractDistributionFactor.Flowgate`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Flowgate.adoc[`Flowgate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Flowgate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ContractDistributionFactor.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sinkFlag]
+=== `sinkFlag`
++++This value will be set to YES if the referenced Cnode is defined as the sink point in the contract.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ContractDistributionFactor.sinkFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sinkFlag,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sourceFlag]
+=== `sourceFlag`
++++This value will be set to YES if the referenced Cnode is defined as the source point in the contract.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ContractDistributionFactor.sourceFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sourceFlag,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TransmissionContractRight]
+=== `TransmissionContractRight`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ContractDistributionFactor.TransmissionContractRight`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ContractRight.adoc[`ContractRight`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TransmissionContractRight,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ContractRight.adoc[`ContractRight`] | xref::class/ContractRight.adoc#ContractDistributionFactor[`ContractDistributionFactor`]
+
+
+
+| xref::class/Flowgate.adoc[`Flowgate`] | xref::class/Flowgate.adoc#ContractDistributionFactor[`ContractDistributionFactor`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#ContractDistributionFactor[`ContractDistributionFactor`]
+
+
+|===
+

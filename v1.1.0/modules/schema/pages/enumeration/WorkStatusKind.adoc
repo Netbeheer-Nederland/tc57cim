@@ -1,0 +1,92 @@
+= `WorkStatusKind`
+:toclevels: 4
+
+
++++Kind of status, specific to work.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:WorkStatusKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `approved`
+| `cim:WorkStatusKind.approved`
+| n/a
+
+| `cancelled`
+| `cim:WorkStatusKind.cancelled`
+| n/a
+
+| `closed`
+| `cim:WorkStatusKind.closed`
+| n/a
+
+| `completed`
+| `cim:WorkStatusKind.completed`
+| n/a
+
+| `dispatched`
+| `cim:WorkStatusKind.dispatched`
+| n/a
+
+| `enroute`
+| `cim:WorkStatusKind.enroute`
+| n/a
+
+| `inProgress`
+| `cim:WorkStatusKind.inProgress`
+| n/a
+
+| `onSite`
+| `cim:WorkStatusKind.onSite`
+| n/a
+
+| `scheduled`
+| `cim:WorkStatusKind.scheduled`
+| n/a
+
+| `waitingOnApproval`
+| `cim:WorkStatusKind.waitingOnApproval`
+| n/a
+
+| `waitingOnMaterial`
+| `cim:WorkStatusKind.waitingOnMaterial`
+| n/a
+
+| `waitingToBeScheduled`
+| `cim:WorkStatusKind.waitingToBeScheduled`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/BaseWork.adoc[`BaseWork`] | xref::class/BaseWork.adoc#statusKind[`statusKind`]
+
+
+|===
+

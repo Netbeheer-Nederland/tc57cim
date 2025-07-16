@@ -1,0 +1,64 @@
+= `DroopSignalFeedbackKind`
+:toclevels: 4
+
+
++++Governor droop signal feedback source.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:DroopSignalFeedbackKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `electricalPower`
+| `cim:DroopSignalFeedbackKind.electricalPower`
+| n/a
+
+| `fuelValveStroke`
+| `cim:DroopSignalFeedbackKind.fuelValveStroke`
+| n/a
+
+| `governorOutput`
+| `cim:DroopSignalFeedbackKind.governorOutput`
+| n/a
+
+| `none`
+| `cim:DroopSignalFeedbackKind.none`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/GovCT1.adoc[`GovCT1`] | xref::class/GovCT1.adoc#rselect[`rselect`]
+
+
+
+| xref::class/GovCT2.adoc[`GovCT2`] | xref::class/GovCT2.adoc#rselect[`rselect`]
+
+
+|===
+

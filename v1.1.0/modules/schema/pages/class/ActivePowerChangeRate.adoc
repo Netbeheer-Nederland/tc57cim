@@ -1,0 +1,130 @@
+= `ActivePowerChangeRate`
+:toclevels: 4
+
+
++++Rate of change of active power per time.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:ActivePowerChangeRate`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:ActivePowerChangeRate.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:ActivePowerChangeRate.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:ActivePowerChangeRate.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/GeneratingBid.adoc[`GeneratingBid`] | xref::class/GeneratingBid.adoc#startUpRampRate[`startUpRampRate`]
+
+
+
+| xref::class/GeneratingUnit.adoc[`GeneratingUnit`] | xref::class/GeneratingUnit.adoc#raiseRampRate[`raiseRampRate`]
+
+
+
+| xref::class/LoadBid.adoc[`LoadBid`] | xref::class/LoadBid.adoc#pickUpRampRate[`pickUpRampRate`]
+
+
+
+| xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`] | xref::class/RegisteredGenerator.adoc#spinRampRate[`spinRampRate`]
+
+
+
+| xref::class/StartRampCurve.adoc[`StartRampCurve`] | xref::class/StartRampCurve.adoc#hotStandbyRamp[`hotStandbyRamp`]
+
+
+|===
+

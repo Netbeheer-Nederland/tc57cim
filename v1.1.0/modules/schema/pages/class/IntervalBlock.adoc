@@ -1,0 +1,237 @@
+= `IntervalBlock`
+:toclevels: 4
+
+
++++Time sequence of readings of the same reading type. Contained interval readings may need conversion through the application of an offset and a scalar defined in associated pending.
+Table 548 shows all association ends of IntervalBlock with other classes.
+Table 548 – Association ends of Metering::IntervalBlock with other classes
+Associations
+name
+mult to
+type
+description
+
+0..*
+PendingCalculation
+0..1
+PendingCalculation
+Pending calculation to apply to interval reading values contained by this block (after which the resulting reading type is different than the original because it reflects the conversion result).
+
+0..*
+IntervalReadings
+0..*
+IntervalReading
+Interval reading contained in this block.
+
+0..*
+ReadingType
+0..1
+ReadingType
+Type information for interval reading values contained in this block.
+
+0..*
+MeterReading
+0..1
+MeterReading
+Meter reading containing this interval block.
+
+
+IntervalReading
+Data captured at regular intervals of time. Interval data could be captured as incremental data, absolute data, or relative data. The source for the data is usually a tariff quantity or an engineering quantity. Data is typically captured in time-tagged, uniform, fixed-length intervals of 5 min, 10 min, 15 min, 30 min, or 60 min.
+Note: Interval Data is sometimes also called "Interval Data Readings" (IDR).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:IntervalBlock`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`IntervalBlock`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<IntervalReadings,`IntervalReadings`>>
+//| [[slots_table.IntervalReadings]]<<IntervalReadings,`IntervalReadings`>>
+| 0..* +
+xref::class/IntervalReading.adoc[`IntervalReading`]
+| +++Interval reading contained in this block.+++
+| _n/a_
+
+| <<MeterReading,`MeterReading`>>
+//| [[slots_table.MeterReading]]<<MeterReading,`MeterReading`>>
+| 0..1 +
+xref::class/MeterReading.adoc[`MeterReading`]
+| +++Meter reading containing this interval block.+++
+| _n/a_
+
+| <<PendingCalculation,`PendingCalculation`>>
+//| [[slots_table.PendingCalculation]]<<PendingCalculation,`PendingCalculation`>>
+| 0..1 +
+xref::class/PendingCalculation.adoc[`PendingCalculation`]
+| +++Pending calculation to apply to interval reading values contained by this block (after which the resulting reading type is...+++
+| _n/a_
+
+| <<ReadingType,`ReadingType`>>
+//| [[slots_table.ReadingType]]<<ReadingType,`ReadingType`>>
+| 0..1 +
+xref::class/ReadingType.adoc[`ReadingType`]
+| +++Type information for interval reading values contained in this block.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#IntervalReadings]
+=== `IntervalReadings`
++++Interval reading contained in this block.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IntervalBlock.IntervalReadings`
+| Cardinality
+| 0..*
+| Type
+| xref::class/IntervalReading.adoc[`IntervalReading`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.IntervalReadings,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MeterReading]
+=== `MeterReading`
++++Meter reading containing this interval block.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IntervalBlock.MeterReading`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MeterReading.adoc[`MeterReading`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MeterReading,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PendingCalculation]
+=== `PendingCalculation`
++++Pending calculation to apply to interval reading values contained by this block (after which the resulting reading type is different than the original because it reflects the conversion result).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IntervalBlock.PendingCalculation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PendingCalculation.adoc[`PendingCalculation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PendingCalculation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ReadingType]
+=== `ReadingType`
++++Type information for interval reading values contained in this block.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IntervalBlock.ReadingType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ReadingType.adoc[`ReadingType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ReadingType,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/IntervalReading.adoc[`IntervalReading`] | xref::class/IntervalReading.adoc#IntervalBlocks[`IntervalBlocks`]
+
+
+
+| xref::class/MeterReading.adoc[`MeterReading`] | xref::class/MeterReading.adoc#IntervalBlocks[`IntervalBlocks`]
+
+
+
+| xref::class/PendingCalculation.adoc[`PendingCalculation`] | xref::class/PendingCalculation.adoc#IntervalBlocks[`IntervalBlocks`]
+
+
+
+| xref::class/ReadingType.adoc[`ReadingType`] | xref::class/ReadingType.adoc#IntervalBlocks[`IntervalBlocks`]
+
+
+|===
+

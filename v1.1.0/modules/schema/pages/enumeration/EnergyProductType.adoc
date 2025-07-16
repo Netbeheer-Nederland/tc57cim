@@ -1,0 +1,64 @@
+= `EnergyProductType`
+:toclevels: 4
+
+
++++Energy product type.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:EnergyProductType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `DYN`
+| `cim:EnergyProductType.DYN`
+| n/a
+
+| `FIRM`
+| `cim:EnergyProductType.FIRM`
+| n/a
+
+| `NFRM`
+| `cim:EnergyProductType.NFRM`
+| n/a
+
+| `WHL`
+| `cim:EnergyProductType.WHL`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/InterchangeSchedule.adoc[`InterchangeSchedule`] | xref::class/InterchangeSchedule.adoc#scheduleType[`scheduleType`]
+
+
+
+| xref::class/RegisteredInterTie.adoc[`RegisteredInterTie`] | xref::class/RegisteredInterTie.adoc#energyProductType[`energyProductType`]
+
+
+|===
+

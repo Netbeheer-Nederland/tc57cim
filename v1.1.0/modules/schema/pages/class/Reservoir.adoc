@@ -1,0 +1,1499 @@
+= `Reservoir`
+:toclevels: 4
+
+
++++A water storage facility within a hydro system, including: ponds, lakes, lagoons, and rivers. The storage is usually behind some type of dam.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Reservoir`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+*** *`Reservoir`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<HydroPowerPlants,`HydroPowerPlants`>>
+//| [[slots_table.HydroPowerPlants]]<<HydroPowerPlants,`HydroPowerPlants`>>
+| 0..* +
+xref::class/HydroPowerPlant.adoc[`HydroPowerPlant`]
+| +++Generators discharge water to or pumps are supplied water from a downstream reservoir.+++
+| _n/a_
+
+| <<InflowForecasts,`InflowForecasts`>>
+//| [[slots_table.InflowForecasts]]<<InflowForecasts,`InflowForecasts`>>
+| 0..* +
+xref::class/InflowForecast.adoc[`InflowForecast`]
+| +++A reservoir may have a "natural" inflow forecast.+++
+| _n/a_
+
+| <<LevelVsVolumeCurves,`LevelVsVolumeCurves`>>
+//| [[slots_table.LevelVsVolumeCurves]]<<LevelVsVolumeCurves,`LevelVsVolumeCurves`>>
+| 0..* +
+xref::class/LevelVsVolumeCurve.adoc[`LevelVsVolumeCurve`]
+| +++A reservoir may have a level versus volume relationship.+++
+| _n/a_
+
+| <<SpillsFromReservoir,`SpillsFromReservoir`>>
+//| [[slots_table.SpillsFromReservoir]]<<SpillsFromReservoir,`SpillsFromReservoir`>>
+| 0..1 +
+xref::class/Reservoir.adoc[`Reservoir`]
+| +++A reservoir may spill into a downstream reservoir.+++
+| _n/a_
+
+| <<SpillsIntoReservoirs,`SpillsIntoReservoirs`>>
+//| [[slots_table.SpillsIntoReservoirs]]<<SpillsIntoReservoirs,`SpillsIntoReservoirs`>>
+| 0..* +
+xref::class/Reservoir.adoc[`Reservoir`]
+| +++A reservoir may spill into a downstream reservoir.+++
+| _n/a_
+
+| <<TargetLevelSchedule,`TargetLevelSchedule`>>
+//| [[slots_table.TargetLevelSchedule]]<<TargetLevelSchedule,`TargetLevelSchedule`>>
+| 0..1 +
+xref::class/TargetLevelSchedule.adoc[`TargetLevelSchedule`]
+| +++A reservoir may have a water level target schedule.+++
+| _n/a_
+
+| <<UpstreamFromHydroPowerPlants,`UpstreamFromHydroPowerPlants`>>
+//| [[slots_table.UpstreamFromHydroPowerPlants]]<<UpstreamFromHydroPowerPlants,`UpstreamFromHydroPowerPlants`>>
+| 0..* +
+xref::class/HydroPowerPlant.adoc[`HydroPowerPlant`]
+| +++Generators are supplied water from or pumps discharge water to an upstream reservoir.+++
+| _n/a_
+
+| <<activeStorageCapacity,`activeStorageCapacity`>>
+//| [[slots_table.activeStorageCapacity]]<<activeStorageCapacity,`activeStorageCapacity`>>
+| 0..1 +
+xref::class/Volume.adoc[`Volume`]
+| +++Storage volume between the full supply level and the normal minimum operating level.+++
+| _n/a_
+
+| <<energyStorageRating,`energyStorageRating`>>
+//| [[slots_table.energyStorageRating]]<<energyStorageRating,`energyStorageRating`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The reservoir's energy storage rating in energy for given head conditions.+++
+| _n/a_
+
+| <<fullSupplyLevel,`fullSupplyLevel`>>
+//| [[slots_table.fullSupplyLevel]]<<fullSupplyLevel,`fullSupplyLevel`>>
+| 0..1 +
+xref::class/WaterLevel.adoc[`WaterLevel`]
+| +++Full supply level, above which water will spill. This can be the spillway crest level or the top of closed gates.+++
+| _n/a_
+
+| <<grossCapacity,`grossCapacity`>>
+//| [[slots_table.grossCapacity]]<<grossCapacity,`grossCapacity`>>
+| 0..1 +
+xref::class/Volume.adoc[`Volume`]
+| +++Total capacity of reservoir.+++
+| _n/a_
+
+| <<normalMinOperateLevel,`normalMinOperateLevel`>>
+//| [[slots_table.normalMinOperateLevel]]<<normalMinOperateLevel,`normalMinOperateLevel`>>
+| 0..1 +
+xref::class/WaterLevel.adoc[`WaterLevel`]
+| +++Normal minimum operating level below which the penstocks will draw air.+++
+| _n/a_
+
+| <<riverOutletWorks,`riverOutletWorks`>>
+//| [[slots_table.riverOutletWorks]]<<riverOutletWorks,`riverOutletWorks`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++River outlet works for riparian right releases or other purposes.+++
+| _n/a_
+
+| <<spillTravelDelay,`spillTravelDelay`>>
+//| [[slots_table.spillTravelDelay]]<<spillTravelDelay,`spillTravelDelay`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++The spillway water travel delay to the next downstream reservoir.+++
+| _n/a_
+
+| <<spillWayGateType,`spillWayGateType`>>
+//| [[slots_table.spillWayGateType]]<<spillWayGateType,`spillWayGateType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Type of spillway gate, including parameters.+++
+| _n/a_
+
+| <<spillwayCapacity,`spillwayCapacity`>>
+//| [[slots_table.spillwayCapacity]]<<spillwayCapacity,`spillwayCapacity`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The flow capacity of the spillway in cubic meters per second.+++
+| _n/a_
+
+| <<spillwayCrestLength,`spillwayCrestLength`>>
+//| [[slots_table.spillwayCrestLength]]<<spillwayCrestLength,`spillwayCrestLength`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++The length of the spillway crest.+++
+| _n/a_
+
+| <<spillwayCrestLevel,`spillwayCrestLevel`>>
+//| [[slots_table.spillwayCrestLevel]]<<spillwayCrestLevel,`spillwayCrestLevel`>>
+| 0..1 +
+xref::class/WaterLevel.adoc[`WaterLevel`]
+| +++Spillway crest level above which water will spill.+++
+| _n/a_
+
+| <<AssetDatasheet,`AssetDatasheet`>>
+//| [[slots_table.AssetDatasheet]]<<AssetDatasheet,`AssetDatasheet`>>
+| 0..1 +
+xref::class/AssetInfo.adoc[`AssetInfo`]
+| +++Datasheet information for this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Assets,`Assets`>>
+//| [[slots_table.Assets]]<<Assets,`Assets`>>
+| 0..* +
+xref::class/Asset.adoc[`Asset`]
+| +++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a...+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Clearances,`Clearances`>>
+//| [[slots_table.Clearances]]<<Clearances,`Clearances`>>
+| 0..* +
+xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+| +++All clearances applicable to this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<ConfigurationEvent,`ConfigurationEvent`>>
+//| [[slots_table.ConfigurationEvent]]<<ConfigurationEvent,`ConfigurationEvent`>>
+| 0..* +
+xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this Power System resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Controls,`Controls`>>
+//| [[slots_table.Controls]]<<Controls,`Controls`>>
+| 0..* +
+xref::class/Control.adoc[`Control`]
+| +++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or...+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<GenericAction,`GenericAction`>>
+//| [[slots_table.GenericAction]]<<GenericAction,`GenericAction`>>
+| 0..* +
+xref::class/GenericAction.adoc[`GenericAction`]
+| +++The generic action that is performed on the power system resource+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Location,`Location`>>
+//| [[slots_table.Location]]<<Location,`Location`>>
+| 0..1 +
+xref::class/Location.adoc[`Location`]
+| +++Location of this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Measurements,`Measurements`>>
+//| [[slots_table.Measurements]]<<Measurements,`Measurements`>>
+| 0..* +
+xref::class/Measurement.adoc[`Measurement`]
+| +++The measurements associated with this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<OperatingShare,`OperatingShare`>>
+//| [[slots_table.OperatingShare]]<<OperatingShare,`OperatingShare`>>
+| 0..* +
+xref::class/OperatingShare.adoc[`OperatingShare`]
+| +++The operating shares of this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<OperationalTags,`OperationalTags`>>
+//| [[slots_table.OperationalTags]]<<OperationalTags,`OperationalTags`>>
+| 0..* +
+xref::class/OperationalTag.adoc[`OperationalTag`]
+| +++All operational tags placed on this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<PSREvents,`PSREvents`>>
+//| [[slots_table.PSREvents]]<<PSREvents,`PSREvents`>>
+| 0..* +
+xref::class/PSREvent.adoc[`PSREvent`]
+| +++All events associated with this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<PSRType,`PSRType`>>
+//| [[slots_table.PSRType]]<<PSRType,`PSRType`>>
+| 0..1 +
+xref::class/PSRType.adoc[`PSRType`]
+| +++Custom classification for this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<ReportingGroup,`ReportingGroup`>>
+//| [[slots_table.ReportingGroup]]<<ReportingGroup,`ReportingGroup`>>
+| 0..* +
+xref::class/ReportingGroup.adoc[`ReportingGroup`]
+| +++Reporting groups to which this power system resource belongs.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<VerificationAction,`VerificationAction`>>
+//| [[slots_table.VerificationAction]]<<VerificationAction,`VerificationAction`>>
+| 0..* +
+xref::class/VerificationAction.adoc[`VerificationAction`]
+| +++The verification action that is performed on the power system resource+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#activeStorageCapacity]
+=== `activeStorageCapacity`
++++Storage volume between the full supply level and the normal minimum operating level.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.activeStorageCapacity`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Volume.adoc[`Volume`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.activeStorageCapacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AssetDatasheet]
+=== `AssetDatasheet`
++++Datasheet information for this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.AssetDatasheet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AssetDatasheet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a single AC line segment.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Assets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Clearances]
+=== `Clearances`
++++All clearances applicable to this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Clearances`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Clearances,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConfigurationEvent]
+=== `ConfigurationEvent`
++++All configuration events created for this Power System resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ConfigurationEvent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConfigurationEvent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Controls]
+=== `Controls`
++++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or capacitor bank breaker actuator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Controls`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Control.adoc[`Control`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Controls,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#energyStorageRating]
+=== `energyStorageRating`
++++The reservoir's energy storage rating in energy for given head conditions.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.energyStorageRating`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.energyStorageRating,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#fullSupplyLevel]
+=== `fullSupplyLevel`
++++Full supply level, above which water will spill. This can be the spillway crest level or the top of closed gates.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.fullSupplyLevel`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WaterLevel.adoc[`WaterLevel`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.fullSupplyLevel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#GenericAction]
+=== `GenericAction`
++++The generic action that is performed on the power system resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.GenericAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/GenericAction.adoc[`GenericAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.GenericAction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#grossCapacity]
+=== `grossCapacity`
++++Total capacity of reservoir.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.grossCapacity`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Volume.adoc[`Volume`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.grossCapacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#HydroPowerPlants]
+=== `HydroPowerPlants`
++++Generators discharge water to or pumps are supplied water from a downstream reservoir.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.HydroPowerPlants`
+| Cardinality
+| 0..*
+| Type
+| xref::class/HydroPowerPlant.adoc[`HydroPowerPlant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.HydroPowerPlants,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InflowForecasts]
+=== `InflowForecasts`
++++A reservoir may have a "natural" inflow forecast.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.InflowForecasts`
+| Cardinality
+| 0..*
+| Type
+| xref::class/InflowForecast.adoc[`InflowForecast`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InflowForecasts,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#LevelVsVolumeCurves]
+=== `LevelVsVolumeCurves`
++++A reservoir may have a level versus volume relationship.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.LevelVsVolumeCurves`
+| Cardinality
+| 0..*
+| Type
+| xref::class/LevelVsVolumeCurve.adoc[`LevelVsVolumeCurve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.LevelVsVolumeCurves,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location of this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Location,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Measurements]
+=== `Measurements`
++++The measurements associated with this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Measurements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Measurement.adoc[`Measurement`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Measurements,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#normalMinOperateLevel]
+=== `normalMinOperateLevel`
++++Normal minimum operating level below which the penstocks will draw air.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.normalMinOperateLevel`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WaterLevel.adoc[`WaterLevel`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.normalMinOperateLevel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperatingShare]
+=== `OperatingShare`
++++The operating shares of this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperatingShare`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperatingShare.adoc[`OperatingShare`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperatingShare,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperationalTags]
+=== `OperationalTags`
++++All operational tags placed on this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperationalTags`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperationalTag.adoc[`OperationalTag`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperationalTags,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PSREvents]
+=== `PSREvents`
++++All events associated with this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSREvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PSREvent.adoc[`PSREvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PSREvents,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PSRType]
+=== `PSRType`
++++Custom classification for this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSRType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PSRType.adoc[`PSRType`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PSRType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ReportingGroup]
+=== `ReportingGroup`
++++Reporting groups to which this power system resource belongs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ReportingGroup`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ReportingGroup.adoc[`ReportingGroup`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ReportingGroup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#riverOutletWorks]
+=== `riverOutletWorks`
++++River outlet works for riparian right releases or other purposes.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.riverOutletWorks`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.riverOutletWorks,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SpillsFromReservoir]
+=== `SpillsFromReservoir`
++++A reservoir may spill into a downstream reservoir.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.SpillsFromReservoir`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Reservoir.adoc[`Reservoir`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SpillsFromReservoir,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SpillsIntoReservoirs]
+=== `SpillsIntoReservoirs`
++++A reservoir may spill into a downstream reservoir.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.SpillsIntoReservoirs`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Reservoir.adoc[`Reservoir`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SpillsIntoReservoirs,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#spillTravelDelay]
+=== `spillTravelDelay`
++++The spillway water travel delay to the next downstream reservoir.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.spillTravelDelay`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.spillTravelDelay,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#spillwayCapacity]
+=== `spillwayCapacity`
++++The flow capacity of the spillway in cubic meters per second.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.spillwayCapacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.spillwayCapacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#spillwayCrestLength]
+=== `spillwayCrestLength`
++++The length of the spillway crest.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.spillwayCrestLength`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.spillwayCrestLength,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#spillwayCrestLevel]
+=== `spillwayCrestLevel`
++++Spillway crest level above which water will spill.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.spillwayCrestLevel`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WaterLevel.adoc[`WaterLevel`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.spillwayCrestLevel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#spillWayGateType]
+=== `spillWayGateType`
++++Type of spillway gate, including parameters.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.spillWayGateType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.spillWayGateType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetLevelSchedule]
+=== `TargetLevelSchedule`
++++A reservoir may have a water level target schedule.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.TargetLevelSchedule`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TargetLevelSchedule.adoc[`TargetLevelSchedule`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetLevelSchedule,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#UpstreamFromHydroPowerPlants]
+=== `UpstreamFromHydroPowerPlants`
++++Generators are supplied water from or pumps discharge water to an upstream reservoir.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Reservoir.UpstreamFromHydroPowerPlants`
+| Cardinality
+| 0..*
+| Type
+| xref::class/HydroPowerPlant.adoc[`HydroPowerPlant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.UpstreamFromHydroPowerPlants,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VerificationAction]
+=== `VerificationAction`
++++The verification action that is performed on the power system resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.VerificationAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/VerificationAction.adoc[`VerificationAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VerificationAction,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/HydroPowerPlant.adoc[`HydroPowerPlant`] | xref::class/HydroPowerPlant.adoc#GenSourcePumpDischargeReservoir[`GenSourcePumpDischargeReservoir`]
+
+
+
+| xref::class/InflowForecast.adoc[`InflowForecast`] | xref::class/InflowForecast.adoc#Reservoir[`Reservoir`]
+
+
+
+| xref::class/LevelVsVolumeCurve.adoc[`LevelVsVolumeCurve`] | xref::class/LevelVsVolumeCurve.adoc#Reservoir[`Reservoir`]
+
+
+
+| xref::class/Reservoir.adoc[`Reservoir`] | xref::class/Reservoir.adoc#SpillsFromReservoir[`SpillsFromReservoir`]
+
+
+
+| xref::class/TargetLevelSchedule.adoc[`TargetLevelSchedule`] | xref::class/TargetLevelSchedule.adoc#Reservoir[`Reservoir`]
+
+
+|===
+

@@ -1,0 +1,1283 @@
+= `TimeSeries`
+:toclevels: 4
+
+
++++A set of regular time-ordered measurements or values of quantitative nature of an individual or collective phenomenon taken at successive, in most cases equidistant, periods / points of time.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TimeSeries`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`TimeSeries`*
+ *** xref::class/BidTimeSeries.adoc[`BidTimeSeries`]
+ *** xref::class/Series.adoc[`Series`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AttributeInstanceComponent,`AttributeInstanceComponent`>>
+//| [[slots_table.AttributeInstanceComponent]]<<AttributeInstanceComponent,`AttributeInstanceComponent`>>
+| 0..* +
+xref::class/AttributeInstanceComponent.adoc[`AttributeInstanceComponent`]
+| _n/a_
+| _n/a_
+
+| <<Auction,`Auction`>>
+//| [[slots_table.Auction]]<<Auction,`Auction`>>
+| 0..* +
+xref::class/Auction.adoc[`Auction`]
+| _n/a_
+| _n/a_
+
+| <<ConstraintDuration,`ConstraintDuration`>>
+//| [[slots_table.ConstraintDuration]]<<ConstraintDuration,`ConstraintDuration`>>
+| 0..* +
+xref::class/ConstraintDuration.adoc[`ConstraintDuration`]
+| _n/a_
+| _n/a_
+
+| <<DateAndOrTime,`DateAndOrTime`>>
+//| [[slots_table.DateAndOrTime]]<<DateAndOrTime,`DateAndOrTime`>>
+| 0..* +
+xref::class/DateAndOrTime.adoc[`DateAndOrTime`]
+| _n/a_
+| _n/a_
+
+| <<Domain,`Domain`>>
+//| [[slots_table.Domain]]<<Domain,`Domain`>>
+| 0..* +
+xref::class/Domain.adoc[`Domain`]
+| _n/a_
+| _n/a_
+
+| <<EnvironmentalMonitoringStation,`EnvironmentalMonitoringStation`>>
+//| [[slots_table.EnvironmentalMonitoringStation]]<<EnvironmentalMonitoringStation,`EnvironmentalMonitoringStation`>>
+| 0..* +
+xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+| _n/a_
+| _n/a_
+
+| <<FlowDirection,`FlowDirection`>>
+//| [[slots_table.FlowDirection]]<<FlowDirection,`FlowDirection`>>
+| 0..* +
+xref::class/FlowDirection.adoc[`FlowDirection`]
+| _n/a_
+| _n/a_
+
+| <<MarketDocument,`MarketDocument`>>
+//| [[slots_table.MarketDocument]]<<MarketDocument,`MarketDocument`>>
+| 0..* +
+xref::class/MarketDocument.adoc[`MarketDocument`]
+| _n/a_
+| _n/a_
+
+| <<MarketEvaluationPoint,`MarketEvaluationPoint`>>
+//| [[slots_table.MarketEvaluationPoint]]<<MarketEvaluationPoint,`MarketEvaluationPoint`>>
+| 0..* +
+xref::class/MarketEvaluationPoint.adoc[`MarketEvaluationPoint`]
+| _n/a_
+| _n/a_
+
+| <<MarketObjectStatus,`MarketObjectStatus`>>
+//| [[slots_table.MarketObjectStatus]]<<MarketObjectStatus,`MarketObjectStatus`>>
+| 0..* +
+xref::class/MarketObjectStatus.adoc[`MarketObjectStatus`]
+| _n/a_
+| _n/a_
+
+| <<MarketParticipant,`MarketParticipant`>>
+//| [[slots_table.MarketParticipant]]<<MarketParticipant,`MarketParticipant`>>
+| 0..* +
+xref::class/MarketParticipant.adoc[`MarketParticipant`]
+| _n/a_
+| _n/a_
+
+| <<MktPSRType,`MktPSRType`>>
+//| [[slots_table.MktPSRType]]<<MktPSRType,`MktPSRType`>>
+| 0..* +
+xref::class/MktPSRType.adoc[`MktPSRType`]
+| _n/a_
+| _n/a_
+
+| <<Period,`Period`>>
+//| [[slots_table.Period]]<<Period,`Period`>>
+| 0..* +
+xref::class/Period.adoc[`Period`]
+| _n/a_
+| _n/a_
+
+| <<Point,`Point`>>
+//| [[slots_table.Point]]<<Point,`Point`>>
+| 0..* +
+xref::class/Point.adoc[`Point`]
+| _n/a_
+| _n/a_
+
+| <<Price,`Price`>>
+//| [[slots_table.Price]]<<Price,`Price`>>
+| 0..* +
+xref::class/Price.adoc[`Price`]
+| _n/a_
+| _n/a_
+
+| <<Quantity,`Quantity`>>
+//| [[slots_table.Quantity]]<<Quantity,`Quantity`>>
+| 0..* +
+xref::class/Quantity.adoc[`Quantity`]
+| _n/a_
+| _n/a_
+
+| <<Reason,`Reason`>>
+//| [[slots_table.Reason]]<<Reason,`Reason`>>
+| 0..* +
+xref::class/Reason.adoc[`Reason`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..* +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<Unit,`Unit`>>
+//| [[slots_table.Unit]]<<Unit,`Unit`>>
+| 0..* +
+xref::class/Unit.adoc[`Unit`]
+| _n/a_
+| _n/a_
+
+| <<businessType,`businessType`>>
+//| [[slots_table.businessType]]<<businessType,`businessType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The identification of the nature of the time series.+++
+| _n/a_
+
+| <<cancelledTS,`cancelledTS`>>
+//| [[slots_table.cancelledTS]]<<cancelledTS,`cancelledTS`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++An indicator stating that the TimeSeries, identified by the mRID, is cancelled as well as all the values sent in a previous...+++
+| _n/a_
+
+| <<curveType,`curveType`>>
+//| [[slots_table.curveType]]<<curveType,`curveType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The coded representation of the type of curve being described.+++
+| _n/a_
+
+| <<objectAggregation,`objectAggregation`>>
+//| [[slots_table.objectAggregation]]<<objectAggregation,`objectAggregation`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Identification of the object that is the common denominator used to aggregate a time series.+++
+| _n/a_
+
+| <<product,`product`>>
+//| [[slots_table.product]]<<product,`product`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The type of the product such as Power, energy, reactive power, transport capacity that is the subject of the time series.+++
+| _n/a_
+
+| <<version,`version`>>
+//| [[slots_table.version]]<<version,`version`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Version of the time series.+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AttributeInstanceComponent]
+=== `AttributeInstanceComponent`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.AttributeInstanceComponent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AttributeInstanceComponent.adoc[`AttributeInstanceComponent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AttributeInstanceComponent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Auction]
+=== `Auction`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Auction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Auction.adoc[`Auction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Auction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#businessType]
+=== `businessType`
++++The identification of the nature of the time series.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.businessType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.businessType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cancelledTS]
+=== `cancelledTS`
++++An indicator stating that the TimeSeries, identified by the mRID, is cancelled as well as all the values sent in a previous version of the TimeSeries in a previous document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.cancelledTS`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cancelledTS,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConstraintDuration]
+=== `ConstraintDuration`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.ConstraintDuration`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConstraintDuration.adoc[`ConstraintDuration`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConstraintDuration,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#curveType]
+=== `curveType`
++++The coded representation of the type of curve being described.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.curveType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.curveType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DateAndOrTime]
+=== `DateAndOrTime`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.DateAndOrTime`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DateAndOrTime.adoc[`DateAndOrTime`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DateAndOrTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Domain]
+=== `Domain`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Domain`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Domain.adoc[`Domain`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Domain,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnvironmentalMonitoringStation]
+=== `EnvironmentalMonitoringStation`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.EnvironmentalMonitoringStation`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalMonitoringStation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#FlowDirection]
+=== `FlowDirection`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.FlowDirection`
+| Cardinality
+| 0..*
+| Type
+| xref::class/FlowDirection.adoc[`FlowDirection`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.FlowDirection,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketDocument]
+=== `MarketDocument`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.MarketDocument`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketDocument,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketEvaluationPoint]
+=== `MarketEvaluationPoint`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.MarketEvaluationPoint`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketEvaluationPoint.adoc[`MarketEvaluationPoint`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketEvaluationPoint,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketObjectStatus]
+=== `MarketObjectStatus`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.MarketObjectStatus`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketObjectStatus.adoc[`MarketObjectStatus`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketObjectStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketParticipant]
+=== `MarketParticipant`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.MarketParticipant`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketParticipant.adoc[`MarketParticipant`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketParticipant,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktPSRType]
+=== `MktPSRType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.MktPSRType`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MktPSRType.adoc[`MktPSRType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktPSRType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#objectAggregation]
+=== `objectAggregation`
++++Identification of the object that is the common denominator used to aggregate a time series.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.objectAggregation`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.objectAggregation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Period]
+=== `Period`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Period`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Period.adoc[`Period`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Period,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Point]
+=== `Point`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Point`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Point.adoc[`Point`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Point,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Price]
+=== `Price`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Price`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Price.adoc[`Price`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Price,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#product]
+=== `product`
++++The type of the product such as Power, energy, reactive power, transport capacity that is the subject of the time series.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.product`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.product,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Quantity]
+=== `Quantity`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Quantity`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Quantity.adoc[`Quantity`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Quantity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Reason]
+=== `Reason`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Reason`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Reason.adoc[`Reason`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Reason,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.RegisteredResource`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Unit]
+=== `Unit`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.Unit`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Unit.adoc[`Unit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Unit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#version]
+=== `version`
++++Version of the time series.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeSeries.version`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.version,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AttributeInstanceComponent.adoc[`AttributeInstanceComponent`] | xref::class/AttributeInstanceComponent.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/Auction.adoc[`Auction`] | xref::class/Auction.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/ConstraintDuration.adoc[`ConstraintDuration`] | xref::class/ConstraintDuration.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/DateAndOrTime.adoc[`DateAndOrTime`] | xref::class/DateAndOrTime.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/Domain.adoc[`Domain`] | xref::class/Domain.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`] | xref::class/EnvironmentalMonitoringStation.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/FlowDirection.adoc[`FlowDirection`] | xref::class/FlowDirection.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/MarketDocument.adoc[`MarketDocument`] | xref::class/MarketDocument.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/MarketEvaluationPoint.adoc[`MarketEvaluationPoint`] | xref::class/MarketEvaluationPoint.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/MarketObjectStatus.adoc[`MarketObjectStatus`] | xref::class/MarketObjectStatus.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/MarketParticipant.adoc[`MarketParticipant`] | xref::class/MarketParticipant.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/MktPSRType.adoc[`MktPSRType`] | xref::class/MktPSRType.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/Period.adoc[`Period`] | xref::class/Period.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/Point.adoc[`Point`] | xref::class/Point.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/Price.adoc[`Price`] | xref::class/Price.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/Quantity.adoc[`Quantity`] | xref::class/Quantity.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/Reason.adoc[`Reason`] | xref::class/Reason.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#TimeSeries[`TimeSeries`]
+
+
+
+| xref::class/Unit.adoc[`Unit`] | xref::class/Unit.adoc#TimeSeries[`TimeSeries`]
+
+
+|===
+

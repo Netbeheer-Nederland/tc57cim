@@ -1,0 +1,52 @@
+= `SpaceAnalogKind`
+:toclevels: 4
+
+
++++Kinds of analogs (floats) measuring a space condition.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SpaceAnalogKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `magneticFieldDirection`
+| `cim:SpaceAnalogKind.magneticFieldDirection`
+| n/a
+
+| `magneticFieldStrength`
+| `cim:SpaceAnalogKind.magneticFieldStrength`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/SpaceAnalog.adoc[`SpaceAnalog`] | xref::class/SpaceAnalog.adoc#kind[`kind`]
+
+
+|===
+

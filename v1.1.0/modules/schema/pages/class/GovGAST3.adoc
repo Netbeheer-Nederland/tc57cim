@@ -1,0 +1,1217 @@
+= `GovGAST3`
+:toclevels: 4
+
+
++++Generic turbogas with acceleration and temperature controller.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:GovGAST3`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+**** *`GovGAST3`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<bca,`bca`>>
+//| [[slots_table.bca]]<<bca,`bca`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Acceleration limit set-point (<i>Bca</i>).  Unit = 1/s.  Typical value = 0,01.+++
+| _n/a_
+
+| <<bp,`bp`>>
+//| [[slots_table.bp]]<<bp,`bp`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Droop (<i>bp</i>).  Typical value = 0,05.+++
+| _n/a_
+
+| <<dtc,`dtc`>>
+//| [[slots_table.dtc]]<<dtc,`dtc`>>
+| 0..1 +
+xref::class/Temperature.adoc[`Temperature`]
+| +++Exhaust temperature variation due to fuel flow increasing from 0 to 1 PU (<i>deltaTc</i>).  Typical value = 390.+++
+| _n/a_
+
+| <<ka,`ka`>>
+//| [[slots_table.ka]]<<ka,`ka`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Minimum fuel flow (<i>Ka</i>).  Typical value = 0,23.+++
+| _n/a_
+
+| <<kac,`kac`>>
+//| [[slots_table.kac]]<<kac,`kac`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Fuel system feedback (<i>K</i><i><sub>AC</sub></i>).  Typical value = 0.+++
+| _n/a_
+
+| <<kca,`kca`>>
+//| [[slots_table.kca]]<<kca,`kca`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Acceleration control integral gain (<i>Kca</i>). Unit = 1/s.  Typical value = 100.+++
+| _n/a_
+
+| <<ksi,`ksi`>>
+//| [[slots_table.ksi]]<<ksi,`ksi`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Gain of radiation shield (<i>Ksi</i>).  Typical value = 0,8.+++
+| _n/a_
+
+| <<ky,`ky`>>
+//| [[slots_table.ky]]<<ky,`ky`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Coefficient of transfer function of fuel valve positioner (<i>Ky</i>).  Typical value = 1.+++
+| _n/a_
+
+| <<mnef,`mnef`>>
+//| [[slots_table.mnef]]<<mnef,`mnef`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Fuel flow maximum negative error value (<i>MNef</i>).  Typical value = -0,05.+++
+| _n/a_
+
+| <<mxef,`mxef`>>
+//| [[slots_table.mxef]]<<mxef,`mxef`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Fuel flow maximum positive error value (<i>MXef</i>).  Typical value = 0,05.+++
+| _n/a_
+
+| <<rcmn,`rcmn`>>
+//| [[slots_table.rcmn]]<<rcmn,`rcmn`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Minimum fuel flow (<i>RCMN</i>).  Typical value = -0,1.+++
+| _n/a_
+
+| <<rcmx,`rcmx`>>
+//| [[slots_table.rcmx]]<<rcmx,`rcmx`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum fuel flow (<i>RCMX</i>).  Typical value = 1.+++
+| _n/a_
+
+| <<tac,`tac`>>
+//| [[slots_table.tac]]<<tac,`tac`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Fuel control time constant (<i>Tac</i>) (&gt;= 0).  Typical value = 0,1.+++
+| _n/a_
+
+| <<tc,`tc`>>
+//| [[slots_table.tc]]<<tc,`tc`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Compressor discharge volume time constant (<i>Tc</i>) (&gt;= 0).  Typical value = 0,2.+++
+| _n/a_
+
+| <<td,`td`>>
+//| [[slots_table.td]]<<td,`td`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Temperature controller derivative gain (<i>Td</i>) (&gt;= 0).  Typical value = 3,3.+++
+| _n/a_
+
+| <<tfen,`tfen`>>
+//| [[slots_table.tfen]]<<tfen,`tfen`>>
+| 0..1 +
+xref::class/Temperature.adoc[`Temperature`]
+| +++Turbine rated exhaust temperature correspondent to Pm=1 PU (<i>Tfen</i>).  Typical value = 540.+++
+| _n/a_
+
+| <<tg,`tg`>>
+//| [[slots_table.tg]]<<tg,`tg`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Time constant of speed governor (<i>Tg</i>) (&gt;= 0).  Typical value = 0,05.+++
+| _n/a_
+
+| <<tsi,`tsi`>>
+//| [[slots_table.tsi]]<<tsi,`tsi`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Time constant of radiation shield (<i>Tsi</i>) (&gt;= 0).  Typical value = 15.+++
+| _n/a_
+
+| <<tt,`tt`>>
+//| [[slots_table.tt]]<<tt,`tt`>>
+| 0..1 +
+xref::class/Temperature.adoc[`Temperature`]
+| +++Temperature controller integration rate (<i>Tt</i>).  Typical value = 250.+++
+| _n/a_
+
+| <<ttc,`ttc`>>
+//| [[slots_table.ttc]]<<ttc,`ttc`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Time constant of thermocouple (<i>Ttc</i>) (&gt;= 0).  Typical value = 2,5.+++
+| _n/a_
+
+| <<ty,`ty`>>
+//| [[slots_table.ty]]<<ty,`ty`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Time constant of fuel valve positioner (<i>Ty</i>) (&gt;= 0).  Typical value = 0,2.+++
+| _n/a_
+
+| <<AsynchronousMachineDynamics,`AsynchronousMachineDynamics`>>
+//| [[slots_table.AsynchronousMachineDynamics]]<<AsynchronousMachineDynamics,`AsynchronousMachineDynamics`>>
+| 0..1 +
+xref::class/AsynchronousMachineDynamics.adoc[`AsynchronousMachineDynamics`]
+| +++Asynchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either...+++
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+| <<SynchronousMachineDynamics,`SynchronousMachineDynamics`>>
+//| [[slots_table.SynchronousMachineDynamics]]<<SynchronousMachineDynamics,`SynchronousMachineDynamics`>>
+| 0..1 +
+xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+| +++Synchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an...+++
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+| <<TurbineLoadControllerDynamics,`TurbineLoadControllerDynamics`>>
+//| [[slots_table.TurbineLoadControllerDynamics]]<<TurbineLoadControllerDynamics,`TurbineLoadControllerDynamics`>>
+| 0..1 +
+xref::class/TurbineLoadControllerDynamics.adoc[`TurbineLoadControllerDynamics`]
+| +++Turbine load controller providing input to this turbine-governor.+++
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+| <<enabled,`enabled`>>
+//| [[slots_table.enabled]]<<enabled,`enabled`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AsynchronousMachineDynamics]
+=== `AsynchronousMachineDynamics`
++++Asynchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineGovernorDynamics.AsynchronousMachineDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AsynchronousMachineDynamics.adoc[`AsynchronousMachineDynamics`]
+
+| Inherited from
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AsynchronousMachineDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bca]
+=== `bca`
++++Acceleration limit set-point (<i>Bca</i>).  Unit = 1/s.  Typical value = 0,01.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.bca`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bca,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bp]
+=== `bp`
++++Droop (<i>bp</i>).  Typical value = 0,05.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.bp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dtc]
+=== `dtc`
++++Exhaust temperature variation due to fuel flow increasing from 0 to 1 PU (<i>deltaTc</i>).  Typical value = 390.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.dtc`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Temperature.adoc[`Temperature`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dtc,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.enabled,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ka]
+=== `ka`
++++Minimum fuel flow (<i>Ka</i>).  Typical value = 0,23.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.ka`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ka,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kac]
+=== `kac`
++++Fuel system feedback (<i>K</i><i><sub>AC</sub></i>).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.kac`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kac,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kca]
+=== `kca`
++++Acceleration control integral gain (<i>Kca</i>). Unit = 1/s.  Typical value = 100.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.kca`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kca,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ksi]
+=== `ksi`
++++Gain of radiation shield (<i>Ksi</i>).  Typical value = 0,8.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.ksi`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ksi,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ky]
+=== `ky`
++++Coefficient of transfer function of fuel valve positioner (<i>Ky</i>).  Typical value = 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.ky`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ky,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mnef]
+=== `mnef`
++++Fuel flow maximum negative error value (<i>MNef</i>).  Typical value = -0,05.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.mnef`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mnef,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mxef]
+=== `mxef`
++++Fuel flow maximum positive error value (<i>MXef</i>).  Typical value = 0,05.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.mxef`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mxef,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rcmn]
+=== `rcmn`
++++Minimum fuel flow (<i>RCMN</i>).  Typical value = -0,1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.rcmn`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rcmn,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rcmx]
+=== `rcmx`
++++Maximum fuel flow (<i>RCMX</i>).  Typical value = 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.rcmx`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rcmx,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SynchronousMachineDynamics]
+=== `SynchronousMachineDynamics`
++++Synchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineGovernorDynamics.SynchronousMachineDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+
+| Inherited from
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SynchronousMachineDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tac]
+=== `tac`
++++Fuel control time constant (<i>Tac</i>) (&gt;= 0).  Typical value = 0,1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.tac`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tac,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tc]
+=== `tc`
++++Compressor discharge volume time constant (<i>Tc</i>) (&gt;= 0).  Typical value = 0,2.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.tc`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tc,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#td]
+=== `td`
++++Temperature controller derivative gain (<i>Td</i>) (&gt;= 0).  Typical value = 3,3.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.td`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.td,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tfen]
+=== `tfen`
++++Turbine rated exhaust temperature correspondent to Pm=1 PU (<i>Tfen</i>).  Typical value = 540.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.tfen`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Temperature.adoc[`Temperature`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tfen,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tg]
+=== `tg`
++++Time constant of speed governor (<i>Tg</i>) (&gt;= 0).  Typical value = 0,05.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.tg`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tg,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tsi]
+=== `tsi`
++++Time constant of radiation shield (<i>Tsi</i>) (&gt;= 0).  Typical value = 15.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.tsi`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tsi,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tt]
+=== `tt`
++++Temperature controller integration rate (<i>Tt</i>).  Typical value = 250.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.tt`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Temperature.adoc[`Temperature`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tt,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ttc]
+=== `ttc`
++++Time constant of thermocouple (<i>Ttc</i>) (&gt;= 0).  Typical value = 2,5.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.ttc`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ttc,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TurbineLoadControllerDynamics]
+=== `TurbineLoadControllerDynamics`
++++Turbine load controller providing input to this turbine-governor.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineGovernorDynamics.TurbineLoadControllerDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TurbineLoadControllerDynamics.adoc[`TurbineLoadControllerDynamics`]
+
+| Inherited from
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TurbineLoadControllerDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ty]
+=== `ty`
++++Time constant of fuel valve positioner (<i>Ty</i>) (&gt;= 0).  Typical value = 0,2.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovGAST3.ty`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ty,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

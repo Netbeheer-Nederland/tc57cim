@@ -1,0 +1,193 @@
+= `ExpectedEnergyValues`
+:toclevels: 4
+
+
++++Model Expected Energy from Market Clearing.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ExpectedEnergyValues`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ExpectedEnergyValues`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ExpectedEnergy,`ExpectedEnergy`>>
+//| [[slots_table.ExpectedEnergy]]<<ExpectedEnergy,`ExpectedEnergy`>>
+| 1 +
+xref::class/ExpectedEnergy.adoc[`ExpectedEnergy`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<energyTypeCode,`energyTypeCode`>>
+//| [[slots_table.energyTypeCode]]<<energyTypeCode,`energyTypeCode`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+
+| <<expectedMwh,`expectedMwh`>>
+//| [[slots_table.expectedMwh]]<<expectedMwh,`expectedMwh`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#energyTypeCode]
+=== `energyTypeCode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExpectedEnergyValues.energyTypeCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.energyTypeCode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ExpectedEnergy]
+=== `ExpectedEnergy`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExpectedEnergyValues.ExpectedEnergy`
+| Cardinality
+| 1
+| Type
+| xref::class/ExpectedEnergy.adoc[`ExpectedEnergy`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ExpectedEnergy,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#expectedMwh]
+=== `expectedMwh`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExpectedEnergyValues.expectedMwh`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.expectedMwh,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExpectedEnergyValues.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ExpectedEnergy.adoc[`ExpectedEnergy`] | xref::class/ExpectedEnergy.adoc#ExpectedEnergyValues[`ExpectedEnergyValues`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#ExpectedEnergyValues[`ExpectedEnergyValues`]
+
+
+|===
+

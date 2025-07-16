@@ -1,0 +1,327 @@
+= `FlowgateValue`
+:toclevels: 4
+
+
++++Day Ahead,  Network Native Load, Economic Dispatch, values used for calculation of Network Native Load (NNL) Determinator process.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:FlowgateValue`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`FlowgateValue`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Flowgate,`Flowgate`>>
+//| [[slots_table.Flowgate]]<<Flowgate,`Flowgate`>>
+| 1 +
+xref::class/Flowgate.adoc[`Flowgate`]
+| _n/a_
+| _n/a_
+
+| <<FlowgatePartner,`FlowgatePartner`>>
+//| [[slots_table.FlowgatePartner]]<<FlowgatePartner,`FlowgatePartner`>>
+| 0..1 +
+xref::class/FlowgatePartner.adoc[`FlowgatePartner`]
+| _n/a_
+| _n/a_
+
+| <<economicDispatchLimit,`economicDispatchLimit`>>
+//| [[slots_table.economicDispatchLimit]]<<economicDispatchLimit,`economicDispatchLimit`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Limit for Economic Dispatch priority 6 energy flow on the specified flowgate for the specified time period.+++
+| _n/a_
+
+| <<effectiveDate,`effectiveDate`>>
+//| [[slots_table.effectiveDate]]<<effectiveDate,`effectiveDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date/Time when record becomes effective 
+Used to determine when a record becomes effective+++
+| _n/a_
+
+| <<firmNetworkLimit,`firmNetworkLimit`>>
+//| [[slots_table.firmNetworkLimit]]<<firmNetworkLimit,`firmNetworkLimit`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Limit for firm flow on the specified flowgate for the specified time period. The amount of energy flow over a specifed...+++
+| _n/a_
+
+| <<flowDirectionFlag,`flowDirectionFlag`>>
+//| [[slots_table.flowDirectionFlag]]<<flowDirectionFlag,`flowDirectionFlag`>>
+| 0..1 +
+xref::enumeration/FlowDirectionType.adoc[`FlowDirectionType`]
+| +++Specifies the direction of energy flow in the flowgate+++
+| _n/a_
+
+| <<mktFlow,`mktFlow`>>
+//| [[slots_table.mktFlow]]<<mktFlow,`mktFlow`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++The amount of energy flow over a specifed flowgate due to generation in the market.+++
+| _n/a_
+
+| <<netFirmNetworkLimit,`netFirmNetworkLimit`>>
+//| [[slots_table.netFirmNetworkLimit]]<<netFirmNetworkLimit,`netFirmNetworkLimit`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Net Energy flow in flowgate for the associated FlowgatePartner+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#economicDispatchLimit]
+=== `economicDispatchLimit`
++++Limit for Economic Dispatch priority 6 energy flow on the specified flowgate for the specified time period.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowgateValue.economicDispatchLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.economicDispatchLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#effectiveDate]
+=== `effectiveDate`
++++Date/Time when record becomes effective 
+Used to determine when a record becomes effective+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowgateValue.effectiveDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.effectiveDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#firmNetworkLimit]
+=== `firmNetworkLimit`
++++Limit for firm flow on the specified flowgate for the specified time period. The amount of energy flow over a specifed flowgate due to generation in the market which can be classified as Firm Network priority.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowgateValue.firmNetworkLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.firmNetworkLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#flowDirectionFlag]
+=== `flowDirectionFlag`
++++Specifies the direction of energy flow in the flowgate+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowgateValue.flowDirectionFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/FlowDirectionType.adoc[`FlowDirectionType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.flowDirectionFlag,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Flowgate]
+=== `Flowgate`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowgateValue.Flowgate`
+| Cardinality
+| 1
+| Type
+| xref::class/Flowgate.adoc[`Flowgate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Flowgate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#FlowgatePartner]
+=== `FlowgatePartner`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowgateValue.FlowgatePartner`
+| Cardinality
+| 0..1
+| Type
+| xref::class/FlowgatePartner.adoc[`FlowgatePartner`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.FlowgatePartner,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mktFlow]
+=== `mktFlow`
++++The amount of energy flow over a specifed flowgate due to generation in the market.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowgateValue.mktFlow`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mktFlow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#netFirmNetworkLimit]
+=== `netFirmNetworkLimit`
++++Net Energy flow in flowgate for the associated FlowgatePartner+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FlowgateValue.netFirmNetworkLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.netFirmNetworkLimit,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Flowgate.adoc[`Flowgate`] | xref::class/Flowgate.adoc#FlowgateValue[`FlowgateValue`]
+
+
+
+| xref::class/FlowgatePartner.adoc[`FlowgatePartner`] | xref::class/FlowgatePartner.adoc#FlowgateValue[`FlowgateValue`]
+
+
+|===
+

@@ -1,0 +1,657 @@
+= `IdentifiedObject`
+:toclevels: 4
+
+
++++This is a root class to provide common identification for all classes needing identification and naming attributes.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:IdentifiedObject`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`IdentifiedObject`*
+ ** xref::class/ACDCTerminal.adoc[`ACDCTerminal`]
+ ** xref::class/ActivityRecord.adoc[`ActivityRecord`]
+ ** xref::class/AdjacentCASet.adoc[`AdjacentCASet`]
+ ** xref::class/AggregateNode.adoc[`AggregateNode`]
+ ** xref::class/AlertTypeList.adoc[`AlertTypeList`]
+ ** xref::class/AltGeneratingUnitMeas.adoc[`AltGeneratingUnitMeas`]
+ ** xref::class/AltTieMeas.adoc[`AltTieMeas`]
+ ** xref::class/AlternateModel.adoc[`AlternateModel`]
+ ** xref::class/AlternateModelGroup.adoc[`AlternateModelGroup`]
+ ** xref::class/AnalyticScore.adoc[`AnalyticScore`]
+ ** xref::class/AnnotatedProjectDependency.adoc[`AnnotatedProjectDependency`]
+ ** xref::class/Appointment.adoc[`Appointment`]
+ ** xref::class/AssemblyDescription.adoc[`AssemblyDescription`]
+ ** xref::class/AssemblyManifest.adoc[`AssemblyManifest`]
+ ** xref::class/Asset.adoc[`Asset`]
+ ** xref::class/AssetDeployment.adoc[`AssetDeployment`]
+ ** xref::class/AssetFunction.adoc[`AssetFunction`]
+ ** xref::class/AssetInfo.adoc[`AssetInfo`]
+ ** xref::class/AssetModelCatalogue.adoc[`AssetModelCatalogue`]
+ ** xref::class/Auction.adoc[`Auction`]
+ ** xref::class/AvailablityPlan.adoc[`AvailablityPlan`]
+ ** xref::class/BaseFrequency.adoc[`BaseFrequency`]
+ ** xref::class/BasePower.adoc[`BasePower`]
+ ** xref::class/BaseVoltage.adoc[`BaseVoltage`]
+ ** xref::class/BasicIntervalSchedule.adoc[`BasicIntervalSchedule`]
+ ** xref::class/BidError.adoc[`BidError`]
+ ** xref::class/BidSet.adoc[`BidSet`]
+ ** xref::class/BilateralExchangeActor.adoc[`BilateralExchangeActor`]
+ ** xref::class/BilateralExchangeAgreement.adoc[`BilateralExchangeAgreement`]
+ ** xref::class/BlockDispatchInstruction.adoc[`BlockDispatchInstruction`]
+ ** xref::class/BlockDispatchOrder.adoc[`BlockDispatchOrder`]
+ ** xref::class/BranchGroup.adoc[`BranchGroup`]
+ ** xref::class/BusNameMarker.adoc[`BusNameMarker`]
+ ** xref::class/BushingInsulationPF.adoc[`BushingInsulationPF`]
+ ** xref::class/CRRSegment.adoc[`CRRSegment`]
+ ** xref::class/CalculationMethodHierarchy.adoc[`CalculationMethodHierarchy`]
+ ** xref::class/Cashier.adoc[`Cashier`]
+ ** xref::class/CatalogAssetType.adoc[`CatalogAssetType`]
+ ** xref::class/Channel.adoc[`Channel`]
+ ** xref::class/Charge.adoc[`Charge`]
+ ** xref::class/ChargeComponent.adoc[`ChargeComponent`]
+ ** xref::class/ChargeGroup.adoc[`ChargeGroup`]
+ ** xref::class/ClassificationCondition.adoc[`ClassificationCondition`]
+ ** xref::class/CnodeDistributionFactor.adoc[`CnodeDistributionFactor`]
+ ** xref::class/CombinedCycleConfigurationMember.adoc[`CombinedCycleConfigurationMember`]
+ ** xref::class/CombinedCycleLogicalConfiguration.adoc[`CombinedCycleLogicalConfiguration`]
+ ** xref::class/CommodityDefinition.adoc[`CommodityDefinition`]
+ ** xref::class/ConnectivityNode.adoc[`ConnectivityNode`]
+ ** xref::class/ConstraintResults.adoc[`ConstraintResults`]
+ ** xref::class/ConstraintTerm.adoc[`ConstraintTerm`]
+ ** xref::class/Contingency.adoc[`Contingency`]
+ ** xref::class/ContingencyElement.adoc[`ContingencyElement`]
+ ** xref::class/ContractRight.adoc[`ContractRight`]
+ ** xref::class/ControlAreaGeneratingUnit.adoc[`ControlAreaGeneratingUnit`]
+ ** xref::class/CoolingPowerRating.adoc[`CoolingPowerRating`]
+ ** xref::class/CoordinateSystem.adoc[`CoordinateSystem`]
+ ** xref::class/Craft.adoc[`Craft`]
+ ** xref::class/Crew.adoc[`Crew`]
+ ** xref::class/CrewType.adoc[`CrewType`]
+ ** xref::class/CurrentEmergencyScheduledInterchange.adoc[`CurrentEmergencyScheduledInterchange`]
+ ** xref::class/CurrentState.adoc[`CurrentState`]
+ ** xref::class/Curve.adoc[`Curve`]
+ ** xref::class/DCNode.adoc[`DCNode`]
+ ** xref::class/DCTopologicalIsland.adoc[`DCTopologicalIsland`]
+ ** xref::class/DCTopologicalNode.adoc[`DCTopologicalNode`]
+ ** xref::class/DERGroupDispatch.adoc[`DERGroupDispatch`]
+ ** xref::class/DERGroupForecast.adoc[`DERGroupForecast`]
+ ** xref::class/DayType.adoc[`DayType`]
+ ** xref::class/DemandResponseProgram.adoc[`DemandResponseProgram`]
+ ** xref::class/Diagram.adoc[`Diagram`]
+ ** xref::class/DiagramObject.adoc[`DiagramObject`]
+ ** xref::class/DiagramObjectStyle.adoc[`DiagramObjectStyle`]
+ ** xref::class/DiagramStyle.adoc[`DiagramStyle`]
+ ** xref::class/DimensionsInfo.adoc[`DimensionsInfo`]
+ ** xref::class/DispatchInstReply.adoc[`DispatchInstReply`]
+ ** xref::class/Document.adoc[`Document`]
+ ** xref::class/Domain.adoc[`Domain`]
+ ** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+ ** xref::class/EndDeviceControl.adoc[`EndDeviceControl`]
+ ** xref::class/EndDeviceControlType.adoc[`EndDeviceControlType`]
+ ** xref::class/EndDeviceEventType.adoc[`EndDeviceEventType`]
+ ** xref::class/EndDeviceGroup.adoc[`EndDeviceGroup`]
+ ** xref::class/EnergyArea.adoc[`EnergyArea`]
+ ** xref::class/EnergyComponent.adoc[`EnergyComponent`]
+ ** xref::class/EnergyPriceIndex.adoc[`EnergyPriceIndex`]
+ ** xref::class/EnergySchedulingType.adoc[`EnergySchedulingType`]
+ ** xref::class/EnergyTypeReference.adoc[`EnergyTypeReference`]
+ ** xref::class/EnvironmentalInformation.adoc[`EnvironmentalInformation`]
+ ** xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+ ** xref::class/EquipmentLimitSeriesComponent.adoc[`EquipmentLimitSeriesComponent`]
+ ** xref::class/EquipmentUnavailabilitySchedule.adoc[`EquipmentUnavailabilitySchedule`]
+ ** xref::class/ErpIdentifiedObject.adoc[`ErpIdentifiedObject`]
+ ** xref::class/Fault.adoc[`Fault`]
+ ** xref::class/FaultCauseType.adoc[`FaultCauseType`]
+ ** xref::class/FieldDispatchHistory.adoc[`FieldDispatchHistory`]
+ ** xref::class/FinancialInfo.adoc[`FinancialInfo`]
+ ** xref::class/FlowgatePartner.adoc[`FlowgatePartner`]
+ ** xref::class/ForbiddenRegion.adoc[`ForbiddenRegion`]
+ ** xref::class/FormerReference.adoc[`FormerReference`]
+ ** xref::class/FossilFuel.adoc[`FossilFuel`]
+ ** xref::class/FuelRegion.adoc[`FuelRegion`]
+ ** xref::class/Gate.adoc[`Gate`]
+ ** xref::class/GateInputPin.adoc[`GateInputPin`]
+ ** xref::class/GenICompensationForGenJ.adoc[`GenICompensationForGenJ`]
+ ** xref::class/GenericConstraints.adoc[`GenericConstraints`]
+ ** xref::class/GeographicalRegion.adoc[`GeographicalRegion`]
+ ** xref::class/Hazard.adoc[`Hazard`]
+ ** xref::class/ICCPInformationMessage.adoc[`ICCPInformationMessage`]
+ ** xref::class/IOPoint.adoc[`IOPoint`]
+ ** xref::class/InternalControlArea.adoc[`InternalControlArea`]
+ ** xref::class/LandProperty.adoc[`LandProperty`]
+ ** xref::class/Limit.adoc[`Limit`]
+ ** xref::class/LimitDependency.adoc[`LimitDependency`]
+ ** xref::class/LimitSet.adoc[`LimitSet`]
+ ** xref::class/LoadDynamics.adoc[`LoadDynamics`]
+ ** xref::class/LoadGroup.adoc[`LoadGroup`]
+ ** xref::class/LoadMotor.adoc[`LoadMotor`]
+ ** xref::class/LoadResponseCharacteristic.adoc[`LoadResponseCharacteristic`]
+ ** xref::class/LoadStatic.adoc[`LoadStatic`]
+ ** xref::class/LocalReliabilityArea.adoc[`LocalReliabilityArea`]
+ ** xref::class/Location.adoc[`Location`]
+ ** xref::class/MPMTestCategory.adoc[`MPMTestCategory`]
+ ** xref::class/MSSAggregation.adoc[`MSSAggregation`]
+ ** xref::class/MajorChargeGroup.adoc[`MajorChargeGroup`]
+ ** xref::class/Market.adoc[`Market`]
+ ** xref::class/MarketActualEvent.adoc[`MarketActualEvent`]
+ ** xref::class/MarketPerson.adoc[`MarketPerson`]
+ ** xref::class/MarketPlan.adoc[`MarketPlan`]
+ ** xref::class/MarketProduct.adoc[`MarketProduct`]
+ ** xref::class/MarketQualificationRequirement.adoc[`MarketQualificationRequirement`]
+ ** xref::class/MarketRun.adoc[`MarketRun`]
+ ** xref::class/MarketScheduledEvent.adoc[`MarketScheduledEvent`]
+ ** xref::class/MarketStatementLineItem.adoc[`MarketStatementLineItem`]
+ ** xref::class/MaterialItem.adoc[`MaterialItem`]
+ ** xref::class/Measurement.adoc[`Measurement`]
+ ** xref::class/MeasurementCalculator.adoc[`MeasurementCalculator`]
+ ** xref::class/MeasurementCalculatorInput.adoc[`MeasurementCalculatorInput`]
+ ** xref::class/MeasurementValueSource.adoc[`MeasurementValueSource`]
+ ** xref::class/Medium.adoc[`Medium`]
+ ** xref::class/MeterMultiplier.adoc[`MeterMultiplier`]
+ ** xref::class/MeterReading.adoc[`MeterReading`]
+ ** xref::class/MeteredSubSystem.adoc[`MeteredSubSystem`]
+ ** xref::class/MetrologyRequirement.adoc[`MetrologyRequirement`]
+ ** xref::class/MitigatedBid.adoc[`MitigatedBid`]
+ ** xref::class/ModelAuthority.adoc[`ModelAuthority`]
+ ** xref::class/ModelAuthoritySet.adoc[`ModelAuthoritySet`]
+ ** xref::class/ModelFrameType.adoc[`ModelFrameType`]
+ ** xref::class/ModelOperation.adoc[`ModelOperation`]
+ ** xref::class/ModelOperationArg.adoc[`ModelOperationArg`]
+ ** xref::class/ModelOperationArgDescription.adoc[`ModelOperationArgDescription`]
+ ** xref::class/ModelOperationDescription.adoc[`ModelOperationDescription`]
+ ** xref::class/ModelOperationSequence.adoc[`ModelOperationSequence`]
+ ** xref::class/ModelPartSpecification.adoc[`ModelPartSpecification`]
+ ** xref::class/ModelToBeDeleted.adoc[`ModelToBeDeleted`]
+ ** xref::class/MutualCoupling.adoc[`MutualCoupling`]
+ ** xref::class/NetworkModelProjectChangeVersion.adoc[`NetworkModelProjectChangeVersion`]
+ ** xref::class/NetworkModelProjectComponent.adoc[`NetworkModelProjectComponent`]
+ ** xref::class/NetworkModelProjectComponent2.adoc[`NetworkModelProjectComponent2`]
+ ** xref::class/NetworkModelProjectRelationship.adoc[`NetworkModelProjectRelationship`]
+ ** xref::class/NetworkModelProjectState.adoc[`NetworkModelProjectState`]
+ ** xref::class/OperatingParticipant.adoc[`OperatingParticipant`]
+ ** xref::class/OperationalLimit.adoc[`OperationalLimit`]
+ ** xref::class/OperationalLimitSet.adoc[`OperationalLimitSet`]
+ ** xref::class/OperationalLimitType.adoc[`OperationalLimitType`]
+ ** xref::class/OrgPnodeAllocation.adoc[`OrgPnodeAllocation`]
+ ** xref::class/OrgResOwnership.adoc[`OrgResOwnership`]
+ ** xref::class/Organisation.adoc[`Organisation`]
+ ** xref::class/OrganisationRole.adoc[`OrganisationRole`]
+ ** xref::class/Ownership.adoc[`Ownership`]
+ ** xref::class/PSRType.adoc[`PSRType`]
+ ** xref::class/Participation.adoc[`Participation`]
+ ** xref::class/PerLengthLineParameter.adoc[`PerLengthLineParameter`]
+ ** xref::class/Person.adoc[`Person`]
+ ** xref::class/PersonRole.adoc[`PersonRole`]
+ ** xref::class/PhaseTapChangerTable.adoc[`PhaseTapChangerTable`]
+ ** xref::class/PhenomenonClassification.adoc[`PhenomenonClassification`]
+ ** xref::class/PlannedMarketEvent.adoc[`PlannedMarketEvent`]
+ ** xref::class/Pnode.adoc[`Pnode`]
+ ** xref::class/PointOfSale.adoc[`PointOfSale`]
+ ** xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+ ** xref::class/Process.adoc[`Process`]
+ ** xref::class/ProductAssetModel.adoc[`ProductAssetModel`]
+ ** xref::class/ProductBid.adoc[`ProductBid`]
+ ** xref::class/Profile.adoc[`Profile`]
+ ** xref::class/ProtectiveAction.adoc[`ProtectiveAction`]
+ ** xref::class/ProtectiveActionCollection.adoc[`ProtectiveActionCollection`]
+ ** xref::class/ProvidedBilateralPoint.adoc[`ProvidedBilateralPoint`]
+ ** xref::class/RatioTapChangerTable.adoc[`RatioTapChangerTable`]
+ ** xref::class/ReadingQualityType.adoc[`ReadingQualityType`]
+ ** xref::class/ReadingType.adoc[`ReadingType`]
+ ** xref::class/Receipt.adoc[`Receipt`]
+ ** xref::class/RecloseSequence.adoc[`RecloseSequence`]
+ ** xref::class/Reconditioning.adoc[`Reconditioning`]
+ ** xref::class/RedLine.adoc[`RedLine`]
+ ** xref::class/Register.adoc[`Register`]
+ ** xref::class/RegulatingLimit.adoc[`RegulatingLimit`]
+ ** xref::class/ReliabilityInfo.adoc[`ReliabilityInfo`]
+ ** xref::class/RemoteInputSignal.adoc[`RemoteInputSignal`]
+ ** xref::class/RemotePoint.adoc[`RemotePoint`]
+ ** xref::class/ReportingGroup.adoc[`ReportingGroup`]
+ ** xref::class/ReportingSuperGroup.adoc[`ReportingSuperGroup`]
+ ** xref::class/ResourceGroup.adoc[`ResourceGroup`]
+ ** xref::class/ResourceGroupReq.adoc[`ResourceGroupReq`]
+ ** xref::class/ResourcePerformanceEvaluation.adoc[`ResourcePerformanceEvaluation`]
+ ** xref::class/ResourcePerformanceGlobalFactor.adoc[`ResourcePerformanceGlobalFactor`]
+ ** xref::class/ResourcePerformanceRating.adoc[`ResourcePerformanceRating`]
+ ** xref::class/ResponseMethod.adoc[`ResponseMethod`]
+ ** xref::class/Role.adoc[`Role`]
+ ** xref::class/Route.adoc[`Route`]
+ ** xref::class/ScheduledEvent.adoc[`ScheduledEvent`]
+ ** xref::class/ScheduledLimitValue.adoc[`ScheduledLimitValue`]
+ ** xref::class/SchedulingPoint.adoc[`SchedulingPoint`]
+ ** xref::class/Seal.adoc[`Seal`]
+ ** xref::class/Season.adoc[`Season`]
+ ** xref::class/SecurityConstraints.adoc[`SecurityConstraints`]
+ ** xref::class/ServiceCategory.adoc[`ServiceCategory`]
+ ** xref::class/ServiceMultiplier.adoc[`ServiceMultiplier`]
+ ** xref::class/ServicePoint.adoc[`ServicePoint`]
+ ** xref::class/Shift.adoc[`Shift`]
+ ** xref::class/Specimen.adoc[`Specimen`]
+ ** xref::class/Stage.adoc[`Stage`]
+ ** xref::class/StageTrigger.adoc[`StageTrigger`]
+ ** xref::class/StartupModel.adoc[`StartupModel`]
+ ** xref::class/StatisticalCalculation.adoc[`StatisticalCalculation`]
+ ** xref::class/SubGeographicalRegion.adoc[`SubGeographicalRegion`]
+ ** xref::class/SwitchOperationSummary.adoc[`SwitchOperationSummary`]
+ ** xref::class/SwitchingAction.adoc[`SwitchingAction`]
+ ** xref::class/TACArea.adoc[`TACArea`]
+ ** xref::class/Tender.adoc[`Tender`]
+ ** xref::class/TestStandard.adoc[`TestStandard`]
+ ** xref::class/TieFlow.adoc[`TieFlow`]
+ ** xref::class/TieLine.adoc[`TieLine`]
+ ** xref::class/TiePoint.adoc[`TiePoint`]
+ ** xref::class/TimePoint.adoc[`TimePoint`]
+ ** xref::class/TimeSeries.adoc[`TimeSeries`]
+ ** xref::class/TopologicalIsland.adoc[`TopologicalIsland`]
+ ** xref::class/TopologicalNode.adoc[`TopologicalNode`]
+ ** xref::class/Trade.adoc[`Trade`]
+ ** xref::class/TradeError.adoc[`TradeError`]
+ ** xref::class/Transaction.adoc[`Transaction`]
+ ** xref::class/TransactionBidResults.adoc[`TransactionBidResults`]
+ ** xref::class/Transactor.adoc[`Transactor`]
+ ** xref::class/TransferInterface.adoc[`TransferInterface`]
+ ** xref::class/TransformerCoreAdmittance.adoc[`TransformerCoreAdmittance`]
+ ** xref::class/TransformerEnd.adoc[`TransformerEnd`]
+ ** xref::class/TransformerMeshImpedance.adoc[`TransformerMeshImpedance`]
+ ** xref::class/TransformerObservation.adoc[`TransformerObservation`]
+ ** xref::class/TransformerStarImpedance.adoc[`TransformerStarImpedance`]
+ ** xref::class/TransformerTest.adoc[`TransformerTest`]
+ ** xref::class/TransmissionPath.adoc[`TransmissionPath`]
+ ** xref::class/TransmissionProduct.adoc[`TransmissionProduct`]
+ ** xref::class/TransmissionRightChain.adoc[`TransmissionRightChain`]
+ ** xref::class/TriggerCondition.adoc[`TriggerCondition`]
+ ** xref::class/TypeAssetCatalogue.adoc[`TypeAssetCatalogue`]
+ ** xref::class/UnavailabilityScheduleDependency.adoc[`UnavailabilityScheduleDependency`]
+ ** xref::class/UnavailabilitySwitchAction.adoc[`UnavailabilitySwitchAction`]
+ ** xref::class/UnavailablitySchedule.adoc[`UnavailablitySchedule`]
+ ** xref::class/UnitInitialConditions.adoc[`UnitInitialConditions`]
+ ** xref::class/UsagePoint.adoc[`UsagePoint`]
+ ** xref::class/UsagePointGroup.adoc[`UsagePointGroup`]
+ ** xref::class/ValueAliasSet.adoc[`ValueAliasSet`]
+ ** xref::class/ValueToAlias.adoc[`ValueToAlias`]
+ ** xref::class/Vendor.adoc[`Vendor`]
+ ** xref::class/VisibilityLayer.adoc[`VisibilityLayer`]
+ ** xref::class/WheelingCounterParty.adoc[`WheelingCounterParty`]
+ ** xref::class/WindAeroConstIEC.adoc[`WindAeroConstIEC`]
+ ** xref::class/WindAeroOneDimIEC.adoc[`WindAeroOneDimIEC`]
+ ** xref::class/WindAeroTwoDimIEC.adoc[`WindAeroTwoDimIEC`]
+ ** xref::class/WindContCurrLimIEC.adoc[`WindContCurrLimIEC`]
+ ** xref::class/WindContPType3IEC.adoc[`WindContPType3IEC`]
+ ** xref::class/WindContPType4aIEC.adoc[`WindContPType4aIEC`]
+ ** xref::class/WindContPType4bIEC.adoc[`WindContPType4bIEC`]
+ ** xref::class/WindContPitchAngleIEC.adoc[`WindContPitchAngleIEC`]
+ ** xref::class/WindContQIEC.adoc[`WindContQIEC`]
+ ** xref::class/WindContQLimIEC.adoc[`WindContQLimIEC`]
+ ** xref::class/WindContQPQULimIEC.adoc[`WindContQPQULimIEC`]
+ ** xref::class/WindContRotorRIEC.adoc[`WindContRotorRIEC`]
+ ** xref::class/WindDynamicsLookupTable.adoc[`WindDynamicsLookupTable`]
+ ** xref::class/WindGenType3IEC.adoc[`WindGenType3IEC`]
+ ** xref::class/WindGenType4IEC.adoc[`WindGenType4IEC`]
+ ** xref::class/WindMechIEC.adoc[`WindMechIEC`]
+ ** xref::class/WindPitchContPowerIEC.adoc[`WindPitchContPowerIEC`]
+ ** xref::class/WindPlantFreqPcontrolIEC.adoc[`WindPlantFreqPcontrolIEC`]
+ ** xref::class/WindPlantReactiveControlIEC.adoc[`WindPlantReactiveControlIEC`]
+ ** xref::class/WindProtectionIEC.adoc[`WindProtectionIEC`]
+ ** xref::class/WindRefFrameRotIEC.adoc[`WindRefFrameRotIEC`]
+ ** xref::class/WindingInsulation.adoc[`WindingInsulation`]
+ ** xref::class/WirePosition.adoc[`WirePosition`]
+ ** xref::class/WorkIdentifiedObject.adoc[`WorkIdentifiedObject`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| _n/a_
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| _n/a_
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| _n/a_
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| _n/a_
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| _n/a_
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| _n/a_
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| _n/a_
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| _n/a_
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`] | xref::class/ChangeSetMember.adoc#TargetObject[`TargetObject`]
+
+
+
+| xref::class/DiagramObject.adoc[`DiagramObject`] | xref::class/DiagramObject.adoc#IdentifiedObject[`IdentifiedObject`]
+
+
+
+| xref::class/InstanceSet.adoc[`InstanceSet`] | xref::class/InstanceSet.adoc#InstanceSetMember[`InstanceSetMember`]
+
+
+
+| xref::class/Name.adoc[`Name`] | xref::class/Name.adoc#IdentifiedObject[`IdentifiedObject`]
+
+
+|===
+

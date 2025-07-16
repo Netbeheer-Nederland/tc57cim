@@ -1,0 +1,72 @@
+= `CompositeSwitchKind`
+:toclevels: 4
+
+
++++Kind of composite switch.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CompositeSwitchKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `escoThrowOver`
+| `cim:CompositeSwitchKind.escoThrowOver`
+| n/a
+
+| `gral`
+| `cim:CompositeSwitchKind.gral`
+| n/a
+
+| `other`
+| `cim:CompositeSwitchKind.other`
+| n/a
+
+| `ral`
+| `cim:CompositeSwitchKind.ral`
+| n/a
+
+| `regulatorBypass`
+| `cim:CompositeSwitchKind.regulatorBypass`
+| n/a
+
+| `throwOver`
+| `cim:CompositeSwitchKind.throwOver`
+| n/a
+
+| `ugMultiSwitch`
+| `cim:CompositeSwitchKind.ugMultiSwitch`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CompositeSwitchInfo.adoc[`CompositeSwitchInfo`] | xref::class/CompositeSwitchInfo.adoc#kind[`kind`]
+
+
+|===
+

@@ -1,0 +1,160 @@
+= `CalculationMethodOrder`
+:toclevels: 4
+
+
++++The order of this calculation method in a hierarchy of calculation methods.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CalculationMethodOrder`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`CalculationMethodOrder`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<CalculationMethodHierarchy,`CalculationMethodHierarchy`>>
+//| [[slots_table.CalculationMethodHierarchy]]<<CalculationMethodHierarchy,`CalculationMethodHierarchy`>>
+| 1 +
+xref::class/CalculationMethodHierarchy.adoc[`CalculationMethodHierarchy`]
+| +++The calculation method hierarchy of which this order of statistical calculation is a member.+++
+| _n/a_
+
+| <<StatisicalCalculation,`StatisicalCalculation`>>
+//| [[slots_table.StatisicalCalculation]]<<StatisicalCalculation,`StatisicalCalculation`>>
+| 1 +
+xref::class/StatisticalCalculation.adoc[`StatisticalCalculation`]
+| +++The statistical calculation done at this order.+++
+| _n/a_
+
+| <<order,`order`>>
+//| [[slots_table.order]]<<order,`order`>>
+| 1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Order of the statistical calculation method within the calculation method hierarchy.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#CalculationMethodHierarchy]
+=== `CalculationMethodHierarchy`
++++The calculation method hierarchy of which this order of statistical calculation is a member.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CalculationMethodOrder.CalculationMethodHierarchy`
+| Cardinality
+| 1
+| Type
+| xref::class/CalculationMethodHierarchy.adoc[`CalculationMethodHierarchy`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CalculationMethodHierarchy,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#order]
+=== `order`
++++Order of the statistical calculation method within the calculation method hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CalculationMethodOrder.order`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.order,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#StatisicalCalculation]
+=== `StatisicalCalculation`
++++The statistical calculation done at this order.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CalculationMethodOrder.StatisicalCalculation`
+| Cardinality
+| 1
+| Type
+| xref::class/StatisticalCalculation.adoc[`StatisticalCalculation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.StatisicalCalculation,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CalculationMethodHierarchy.adoc[`CalculationMethodHierarchy`] | xref::class/CalculationMethodHierarchy.adoc#CalculationMethodOrder[`CalculationMethodOrder`]
+
+
+
+| xref::class/StatisticalCalculation.adoc[`StatisticalCalculation`] | xref::class/StatisticalCalculation.adoc#CalculationMethodOrder[`CalculationMethodOrder`]
+
+
+|===
+

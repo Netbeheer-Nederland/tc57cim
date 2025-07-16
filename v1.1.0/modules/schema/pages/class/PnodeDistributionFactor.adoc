@@ -1,0 +1,296 @@
+= `PnodeDistributionFactor`
+:toclevels: 4
+
+
++++This class allows SC to input different distribution factors for pricing node.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PnodeDistributionFactor`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`PnodeDistributionFactor`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AggregatedPnode,`AggregatedPnode`>>
+//| [[slots_table.AggregatedPnode]]<<AggregatedPnode,`AggregatedPnode`>>
+| 1 +
+xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+| _n/a_
+| _n/a_
+
+| <<BidDistributionFactor,`BidDistributionFactor`>>
+//| [[slots_table.BidDistributionFactor]]<<BidDistributionFactor,`BidDistributionFactor`>>
+| 0..1 +
+xref::class/BidDistributionFactor.adoc[`BidDistributionFactor`]
+| _n/a_
+| _n/a_
+
+| <<IndividualPnode,`IndividualPnode`>>
+//| [[slots_table.IndividualPnode]]<<IndividualPnode,`IndividualPnode`>>
+| 1 +
+xref::class/IndividualPnode.adoc[`IndividualPnode`]
+| _n/a_
+| _n/a_
+
+| <<factor,`factor`>>
+//| [[slots_table.factor]]<<factor,`factor`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Used to calculate "participation" of Pnode in an AggregatePnode. For example, for regulation region this factor is 1 and...+++
+| _n/a_
+
+| <<offPeak,`offPeak`>>
+//| [[slots_table.offPeak]]<<offPeak,`offPeak`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Indication that this distribution factor is to apply during off peak.+++
+| _n/a_
+
+| <<onPeak,`onPeak`>>
+//| [[slots_table.onPeak]]<<onPeak,`onPeak`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++Indication that this factor is to apply during Peak periods.+++
+| _n/a_
+
+| <<podLossFactor,`podLossFactor`>>
+//| [[slots_table.podLossFactor]]<<podLossFactor,`podLossFactor`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Point of delivery loss factor+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#AggregatedPnode]
+=== `AggregatedPnode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeDistributionFactor.AggregatedPnode`
+| Cardinality
+| 1
+| Type
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AggregatedPnode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#BidDistributionFactor]
+=== `BidDistributionFactor`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeDistributionFactor.BidDistributionFactor`
+| Cardinality
+| 0..1
+| Type
+| xref::class/BidDistributionFactor.adoc[`BidDistributionFactor`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.BidDistributionFactor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#factor]
+=== `factor`
++++Used to calculate "participation" of Pnode in an AggregatePnode. For example, for regulation region this factor is 1 and total sum of all factors for a specific regulation region does not have to be 1. For pricing zone the total sum of all factors has to be 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeDistributionFactor.factor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.factor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#IndividualPnode]
+=== `IndividualPnode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeDistributionFactor.IndividualPnode`
+| Cardinality
+| 1
+| Type
+| xref::class/IndividualPnode.adoc[`IndividualPnode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.IndividualPnode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#offPeak]
+=== `offPeak`
++++Indication that this distribution factor is to apply during off peak.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeDistributionFactor.offPeak`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.offPeak,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#onPeak]
+=== `onPeak`
++++Indication that this factor is to apply during Peak periods.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeDistributionFactor.onPeak`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.onPeak,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#podLossFactor]
+=== `podLossFactor`
++++Point of delivery loss factor+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeDistributionFactor.podLossFactor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.podLossFactor,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`] | xref::class/AggregatedPnode.adoc#PnodeDistributionFactor[`PnodeDistributionFactor`]
+
+
+
+| xref::class/BidDistributionFactor.adoc[`BidDistributionFactor`] | xref::class/BidDistributionFactor.adoc#PnodeDistributionFactor[`PnodeDistributionFactor`]
+
+
+
+| xref::class/IndividualPnode.adoc[`IndividualPnode`] | xref::class/IndividualPnode.adoc#PnodeDistributionFactor[`PnodeDistributionFactor`]
+
+
+|===
+

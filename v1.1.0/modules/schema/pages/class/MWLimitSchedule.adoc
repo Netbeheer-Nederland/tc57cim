@@ -1,0 +1,90 @@
+= `MWLimitSchedule`
+:toclevels: 4
+
+
++++Maximum MW and optionally Minimum MW (Y1 and Y2, respectively).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MWLimitSchedule`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MWLimitSchedule`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<SecurityConstraintLimit,`SecurityConstraintLimit`>>
+//| [[slots_table.SecurityConstraintLimit]]<<SecurityConstraintLimit,`SecurityConstraintLimit`>>
+| 1 +
+xref::class/ContingencyConstraintLimit.adoc[`ContingencyConstraintLimit`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#SecurityConstraintLimit]
+=== `SecurityConstraintLimit`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MWLimitSchedule.SecurityConstraintLimit`
+| Cardinality
+| 1
+| Type
+| xref::class/ContingencyConstraintLimit.adoc[`ContingencyConstraintLimit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SecurityConstraintLimit,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ContingencyConstraintLimit.adoc[`ContingencyConstraintLimit`] | xref::class/ContingencyConstraintLimit.adoc#MWLimitSchedules[`MWLimitSchedules`]
+
+
+|===
+

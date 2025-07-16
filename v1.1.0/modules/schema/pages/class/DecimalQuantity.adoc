@@ -1,0 +1,189 @@
+= `DecimalQuantity`
+:toclevels: 4
+
+
++++Quantity with decimal value and associated unit or currency information.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DecimalQuantity`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`DecimalQuantity`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<currency,`currency`>>
+//| [[slots_table.currency]]<<currency,`currency`>>
+| 0..1 +
+xref::enumeration/Currency.adoc[`Currency`]
+| +++Currency of this quantity.+++
+| _n/a_
+
+| <<multiplier,`multiplier`>>
+//| [[slots_table.multiplier]]<<multiplier,`multiplier`>>
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+| +++Unit multiplier of this quantity.+++
+| _n/a_
+
+| <<unit,`unit`>>
+//| [[slots_table.unit]]<<unit,`unit`>>
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+| +++Unit of this quantity.+++
+| _n/a_
+
+| <<value,`value`>>
+//| [[slots_table.value]]<<value,`value`>>
+| 0..1 +
+https://w3id.org/linkml/Double[`double`]
+| +++Value of this quantity.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#currency]
+=== `currency`
++++Currency of this quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DecimalQuantity.currency`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/Currency.adoc[`Currency`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.currency,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
++++Unit multiplier of this quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DecimalQuantity.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.multiplier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#unit]
+=== `unit`
++++Unit of this quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DecimalQuantity.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.unit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value]
+=== `value`
++++Value of this quantity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DecimalQuantity.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Double[`double`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/UsagePoint.adoc[`UsagePoint`] | xref::class/UsagePoint.adoc#physicalConnectionCapacity[`physicalConnectionCapacity`]
+
+
+|===
+

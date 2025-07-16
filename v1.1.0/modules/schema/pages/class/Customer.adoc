@@ -1,0 +1,1128 @@
+= `Customer`
+:toclevels: 4
+
+
++++Organisation receiving services from service supplier.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Customer`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/OrganisationRole.adoc[`OrganisationRole`]
+*** *`Customer`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Customer,`Customer`>>
+//| [[slots_table.Customer]]<<Customer,`Customer`>>
+| 0..1 +
+xref::class/Customer.adoc[`Customer`]
+| +++The primary customer that manages the account(s).+++
+| _n/a_
+
+| <<CustomerAccounts,`CustomerAccounts`>>
+//| [[slots_table.CustomerAccounts]]<<CustomerAccounts,`CustomerAccounts`>>
+| 0..* +
+xref::class/CustomerAccount.adoc[`CustomerAccount`]
+| +++All accounts of this customer.+++
+| _n/a_
+
+| <<CustomerAgreements,`CustomerAgreements`>>
+//| [[slots_table.CustomerAgreements]]<<CustomerAgreements,`CustomerAgreements`>>
+| 0..* +
+xref::class/CustomerAgreement.adoc[`CustomerAgreement`]
+| +++All agreements of this customer.+++
+| _n/a_
+
+| <<CustomerNotifications,`CustomerNotifications`>>
+//| [[slots_table.CustomerNotifications]]<<CustomerNotifications,`CustomerNotifications`>>
+| 0..* +
+xref::class/CustomerNotification.adoc[`CustomerNotification`]
+| +++All notifications required by this customer.+++
+| _n/a_
+
+| <<EndDevices,`EndDevices`>>
+//| [[slots_table.EndDevices]]<<EndDevices,`EndDevices`>>
+| 0..* +
+xref::class/EndDevice.adoc[`EndDevice`]
+| +++All end devices of this customer.+++
+| _n/a_
+
+| <<ErpPersons,`ErpPersons`>>
+//| [[slots_table.ErpPersons]]<<ErpPersons,`ErpPersons`>>
+| 0..* +
+xref::class/OldPerson.adoc[`OldPerson`]
+| _n/a_
+| _n/a_
+
+| <<OutagePlan,`OutagePlan`>>
+//| [[slots_table.OutagePlan]]<<OutagePlan,`OutagePlan`>>
+| 0..1 +
+xref::class/OutagePlan.adoc[`OutagePlan`]
+| +++The outage plan that identifies the customers that are affected.+++
+| _n/a_
+
+| <<Person,`Person`>>
+//| [[slots_table.Person]]<<Person,`Person`>>
+| 0..* +
+xref::class/Person.adoc[`Person`]
+| +++The person representing the customer+++
+| _n/a_
+
+| <<PlannedOutageNotification,`PlannedOutageNotification`>>
+//| [[slots_table.PlannedOutageNotification]]<<PlannedOutageNotification,`PlannedOutageNotification`>>
+| 0..* +
+xref::class/PlannedOutageNotification.adoc[`PlannedOutageNotification`]
+| +++The notification of the planned outage+++
+| _n/a_
+
+| <<ServiceRequest,`ServiceRequest`>>
+//| [[slots_table.ServiceRequest]]<<ServiceRequest,`ServiceRequest`>>
+| 0..* +
+xref::class/ServiceRequest.adoc[`ServiceRequest`]
+| +++All service requests for the customer+++
+| _n/a_
+
+| <<TroubleTickets,`TroubleTickets`>>
+//| [[slots_table.TroubleTickets]]<<TroubleTickets,`TroubleTickets`>>
+| 0..* +
+xref::class/TroubleTicket.adoc[`TroubleTicket`]
+| +++All trouble tickets for this customer.+++
+| _n/a_
+
+| <<Works,`Works`>>
+//| [[slots_table.Works]]<<Works,`Works`>>
+| 0..* +
+xref::class/Work.adoc[`Work`]
+| +++All the works performed for this customer.+++
+| _n/a_
+
+| <<kind,`kind`>>
+//| [[slots_table.kind]]<<kind,`kind`>>
+| 0..1 +
+xref::enumeration/CustomerKind.adoc[`CustomerKind`]
+| +++Kind of customer.+++
+| _n/a_
+
+| <<locale,`locale`>>
+//| [[slots_table.locale]]<<locale,`locale`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Locale designating language to use in communications with this customer.+++
+| _n/a_
+
+| <<priority,`priority`>>
+//| [[slots_table.priority]]<<priority,`priority`>>
+| 0..1 +
+xref::class/Priority.adoc[`Priority`]
+| +++Priority of the customer.+++
+| _n/a_
+
+| <<pucNumber,`pucNumber`>>
+//| [[slots_table.pucNumber]]<<pucNumber,`pucNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Public utilities commission (PUC) identification number.+++
+| _n/a_
+
+| <<specialNeed,`specialNeed`>>
+//| [[slots_table.specialNeed]]<<specialNeed,`specialNeed`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++True if customer organisation has special service needs such as life support, hospitals, etc.+++
+| _n/a_
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| +++Status of this customer.+++
+| _n/a_
+
+| <<vip,`vip`>>
+//| [[slots_table.vip]]<<vip,`vip`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++(deprecated) (use 'priority' instead) True if this is an important customer. Importance is for matters different than those...+++
+| _n/a_
+
+| <<ConfigurationEvents,`ConfigurationEvents`>>
+//| [[slots_table.ConfigurationEvents]]<<ConfigurationEvents,`ConfigurationEvents`>>
+| 0..* +
+xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this organisation role.+++
+| xref::class/OrganisationRole.adoc[`OrganisationRole`]
+
+| <<Organisation,`Organisation`>>
+//| [[slots_table.Organisation]]<<Organisation,`Organisation`>>
+| 0..1 +
+xref::class/Organisation.adoc[`Organisation`]
+| +++Organisation having this role.+++
+| xref::class/OrganisationRole.adoc[`OrganisationRole`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConfigurationEvents]
+=== `ConfigurationEvents`
++++All configuration events created for this organisation role.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OrganisationRole.ConfigurationEvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/OrganisationRole.adoc[`OrganisationRole`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConfigurationEvents,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Customer]
+=== `Customer`
++++The primary customer that manages the account(s).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.Customer`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Customer.adoc[`Customer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Customer,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CustomerAccounts]
+=== `CustomerAccounts`
++++All accounts of this customer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.CustomerAccounts`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CustomerAccount.adoc[`CustomerAccount`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CustomerAccounts,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CustomerAgreements]
+=== `CustomerAgreements`
++++All agreements of this customer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.CustomerAgreements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CustomerAgreement.adoc[`CustomerAgreement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CustomerAgreements,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CustomerNotifications]
+=== `CustomerNotifications`
++++All notifications required by this customer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.CustomerNotifications`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CustomerNotification.adoc[`CustomerNotification`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CustomerNotifications,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EndDevices]
+=== `EndDevices`
++++All end devices of this customer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.EndDevices`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EndDevice.adoc[`EndDevice`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EndDevices,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ErpPersons]
+=== `ErpPersons`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.ErpPersons`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OldPerson.adoc[`OldPerson`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ErpPersons,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kind]
+=== `kind`
++++Kind of customer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/CustomerKind.adoc[`CustomerKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#locale]
+=== `locale`
++++Locale designating language to use in communications with this customer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.locale`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.locale,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Organisation]
+=== `Organisation`
++++Organisation having this role.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OrganisationRole.Organisation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Organisation.adoc[`Organisation`]
+
+| Inherited from
+| xref::class/OrganisationRole.adoc[`OrganisationRole`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Organisation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OutagePlan]
+=== `OutagePlan`
++++The outage plan that identifies the customers that are affected.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.OutagePlan`
+| Cardinality
+| 0..1
+| Type
+| xref::class/OutagePlan.adoc[`OutagePlan`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OutagePlan,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Person]
+=== `Person`
++++The person representing the customer+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.Person`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Person.adoc[`Person`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Person,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PlannedOutageNotification]
+=== `PlannedOutageNotification`
++++The notification of the planned outage+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.PlannedOutageNotification`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PlannedOutageNotification.adoc[`PlannedOutageNotification`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PlannedOutageNotification,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#priority]
+=== `priority`
++++Priority of the customer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.priority`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Priority.adoc[`Priority`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.priority,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pucNumber]
+=== `pucNumber`
++++(if applicable) Public utilities commission (PUC) identification number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.pucNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pucNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ServiceRequest]
+=== `ServiceRequest`
++++All service requests for the customer+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.ServiceRequest`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ServiceRequest.adoc[`ServiceRequest`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ServiceRequest,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#specialNeed]
+=== `specialNeed`
++++True if customer organisation has special service needs such as life support, hospitals, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.specialNeed`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.specialNeed,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++Status of this customer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TroubleTickets]
+=== `TroubleTickets`
++++All trouble tickets for this customer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.TroubleTickets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TroubleTicket.adoc[`TroubleTicket`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TroubleTickets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vip]
+=== `vip`
++++(deprecated) (use 'priority' instead) True if this is an important customer. Importance is for matters different than those in 'specialNeed' attribute.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.vip`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vip,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Works]
+=== `Works`
++++All the works performed for this customer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Customer.Works`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Work.adoc[`Work`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Works,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Customer.adoc[`Customer`] | xref::class/Customer.adoc#Customer[`Customer`]
+
+
+
+| xref::class/CustomerAccount.adoc[`CustomerAccount`] | xref::class/CustomerAccount.adoc#Customer[`Customer`]
+
+
+
+| xref::class/CustomerAgreement.adoc[`CustomerAgreement`] | xref::class/CustomerAgreement.adoc#Customer[`Customer`]
+
+
+
+| xref::class/CustomerNotification.adoc[`CustomerNotification`] | xref::class/CustomerNotification.adoc#Customer[`Customer`]
+
+
+
+| xref::class/EndDevice.adoc[`EndDevice`] | xref::class/EndDevice.adoc#Customer[`Customer`]
+
+
+
+| xref::class/OldPerson.adoc[`OldPerson`] | xref::class/OldPerson.adoc#CustomerData[`CustomerData`]
+
+
+
+| xref::class/OutagePlan.adoc[`OutagePlan`] | xref::class/OutagePlan.adoc#Customer[`Customer`]
+
+
+
+| xref::class/Person.adoc[`Person`] | xref::class/Person.adoc#Customer[`Customer`]
+
+
+
+| xref::class/PlannedOutageNotification.adoc[`PlannedOutageNotification`] | xref::class/PlannedOutageNotification.adoc#Customer[`Customer`]
+
+
+
+| xref::class/ServiceRequest.adoc[`ServiceRequest`] | xref::class/ServiceRequest.adoc#Customer[`Customer`]
+
+
+
+| xref::class/TroubleTicket.adoc[`TroubleTicket`] | xref::class/TroubleTicket.adoc#Customer[`Customer`]
+
+
+
+| xref::class/Work.adoc[`Work`] | xref::class/Work.adoc#Customers[`Customers`]
+
+
+|===
+

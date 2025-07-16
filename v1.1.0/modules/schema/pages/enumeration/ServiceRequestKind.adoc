@@ -1,0 +1,96 @@
+= `ServiceRequestKind`
+:toclevels: 4
+
+
++++Kinds of service requests+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ServiceRequestKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `connect`
+| `cim:ServiceRequestKind.connect`
+| n/a
+
+| `construction`
+| `cim:ServiceRequestKind.construction`
+| n/a
+
+| `disconnect`
+| `cim:ServiceRequestKind.disconnect`
+| n/a
+
+| `inspection`
+| `cim:ServiceRequestKind.inspection`
+| n/a
+
+| `newservice`
+| `cim:ServiceRequestKind.newservice`
+| n/a
+
+| `other`
+| `cim:ServiceRequestKind.other`
+| n/a
+
+| `reconnect`
+| `cim:ServiceRequestKind.reconnect`
+| n/a
+
+| `repair`
+| `cim:ServiceRequestKind.repair`
+| n/a
+
+| `replace`
+| `cim:ServiceRequestKind.replace`
+| n/a
+
+| `test`
+| `cim:ServiceRequestKind.test`
+| n/a
+
+| `turn-off`
+| `cim:ServiceRequestKind.turn-off`
+| n/a
+
+| `turn-on`
+| `cim:ServiceRequestKind.turn-on`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/BaseWork.adoc[`BaseWork`] | xref::class/BaseWork.adoc#kind[`kind`]
+
+
+
+| xref::class/ServiceRequest.adoc[`ServiceRequest`] | xref::class/ServiceRequest.adoc#kind[`kind`]
+
+
+|===
+

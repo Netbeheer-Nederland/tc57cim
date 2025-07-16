@@ -1,0 +1,123 @@
+= `RationalNumber`
+:toclevels: 4
+
+
++++Rational number = 'numerator' / 'denominator'.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RationalNumber`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`RationalNumber`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<denominator,`denominator`>>
+//| [[slots_table.denominator]]<<denominator,`denominator`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Denominator. Value 1 indicates the number is a simple integer.+++
+| _n/a_
+
+| <<numerator,`numerator`>>
+//| [[slots_table.numerator]]<<numerator,`numerator`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Numerator.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#denominator]
+=== `denominator`
++++Denominator. Value 1 indicates the number is a simple integer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RationalNumber.denominator`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.denominator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#numerator]
+=== `numerator`
++++Numerator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RationalNumber.numerator`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.numerator,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ReadingType.adoc[`ReadingType`] | xref::class/ReadingType.adoc#argument[`argument`]
+
+
+|===
+

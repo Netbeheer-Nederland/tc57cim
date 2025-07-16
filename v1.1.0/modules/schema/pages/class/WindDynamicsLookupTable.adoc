@@ -1,0 +1,845 @@
+= `WindDynamicsLookupTable`
+:toclevels: 4
+
+
++++Look up table for the purpose of wind standard models.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:WindDynamicsLookupTable`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`WindDynamicsLookupTable`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<WindContCurrLimIEC,`WindContCurrLimIEC`>>
+//| [[slots_table.WindContCurrLimIEC]]<<WindContCurrLimIEC,`WindContCurrLimIEC`>>
+| 0..1 +
+xref::class/WindContCurrLimIEC.adoc[`WindContCurrLimIEC`]
+| +++The current control limitation model with which this wind dynamics lookup table is associated.+++
+| _n/a_
+
+| <<WindContPType3IEC,`WindContPType3IEC`>>
+//| [[slots_table.WindContPType3IEC]]<<WindContPType3IEC,`WindContPType3IEC`>>
+| 0..1 +
+xref::class/WindContPType3IEC.adoc[`WindContPType3IEC`]
+| +++The P control type 3 model with which this wind dynamics lookup table is associated.+++
+| _n/a_
+
+| <<WindContQPQULimIEC,`WindContQPQULimIEC`>>
+//| [[slots_table.WindContQPQULimIEC]]<<WindContQPQULimIEC,`WindContQPQULimIEC`>>
+| 0..1 +
+xref::class/WindContQPQULimIEC.adoc[`WindContQPQULimIEC`]
+| +++The QP and QU limitation model with which this wind dynamics lookup table is associated.+++
+| _n/a_
+
+| <<WindContRotorRIEC,`WindContRotorRIEC`>>
+//| [[slots_table.WindContRotorRIEC]]<<WindContRotorRIEC,`WindContRotorRIEC`>>
+| 0..1 +
+xref::class/WindContRotorRIEC.adoc[`WindContRotorRIEC`]
+| +++The rotor resistance control model with which this wind dynamics lookup table is associated.+++
+| _n/a_
+
+| <<WindGenType3bIEC,`WindGenType3bIEC`>>
+//| [[slots_table.WindGenType3bIEC]]<<WindGenType3bIEC,`WindGenType3bIEC`>>
+| 0..1 +
+xref::class/WindGenType3bIEC.adoc[`WindGenType3bIEC`]
+| +++The generator type 3B model with which this wind dynamics lookup table is associated.+++
+| _n/a_
+
+| <<WindPitchContPowerIEC,`WindPitchContPowerIEC`>>
+//| [[slots_table.WindPitchContPowerIEC]]<<WindPitchContPowerIEC,`WindPitchContPowerIEC`>>
+| 0..1 +
+xref::class/WindPitchContPowerIEC.adoc[`WindPitchContPowerIEC`]
+| +++The pitch control power model with which this wind dynamics lookup table is associated.+++
+| _n/a_
+
+| <<WindPlantFreqPcontrolIEC,`WindPlantFreqPcontrolIEC`>>
+//| [[slots_table.WindPlantFreqPcontrolIEC]]<<WindPlantFreqPcontrolIEC,`WindPlantFreqPcontrolIEC`>>
+| 0..1 +
+xref::class/WindPlantFreqPcontrolIEC.adoc[`WindPlantFreqPcontrolIEC`]
+| +++The frequency and active power wind plant control model with which this wind dynamics lookup table is associated.+++
+| _n/a_
+
+| <<WindPlantReactiveControlIEC,`WindPlantReactiveControlIEC`>>
+//| [[slots_table.WindPlantReactiveControlIEC]]<<WindPlantReactiveControlIEC,`WindPlantReactiveControlIEC`>>
+| 0..1 +
+xref::class/WindPlantReactiveControlIEC.adoc[`WindPlantReactiveControlIEC`]
+| +++The voltage and reactive power wind plant control model with which this wind dynamics lookup table is associated.+++
+| _n/a_
+
+| <<WindProtectionIEC,`WindProtectionIEC`>>
+//| [[slots_table.WindProtectionIEC]]<<WindProtectionIEC,`WindProtectionIEC`>>
+| 0..1 +
+xref::class/WindProtectionIEC.adoc[`WindProtectionIEC`]
+| +++The grid protection model with which this wind dynamics lookup table is associated.+++
+| _n/a_
+
+| <<input,`input`>>
+//| [[slots_table.input]]<<input,`input`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Input value (<i>x</i>) for the lookup table function.+++
+| _n/a_
+
+| <<lookupTableFunctionType,`lookupTableFunctionType`>>
+//| [[slots_table.lookupTableFunctionType]]<<lookupTableFunctionType,`lookupTableFunctionType`>>
+| 0..1 +
+xref::enumeration/WindLookupTableFunctionKind.adoc[`WindLookupTableFunctionKind`]
+| +++Type of the lookup table function.+++
+| _n/a_
+
+| <<output,`output`>>
+//| [[slots_table.output]]<<output,`output`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Output value (<i>y</i>) for the lookup table function.+++
+| _n/a_
+
+| <<sequence,`sequence`>>
+//| [[slots_table.sequence]]<<sequence,`sequence`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Sequence numbers of the pairs of the input (<i>x</i>) and the output (<i>y</i>) of the lookup table function.+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#input]
+=== `input`
++++Input value (<i>x</i>) for the lookup table function.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.input`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.input,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lookupTableFunctionType]
+=== `lookupTableFunctionType`
++++Type of the lookup table function.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.lookupTableFunctionType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/WindLookupTableFunctionKind.adoc[`WindLookupTableFunctionKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lookupTableFunctionType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#output]
+=== `output`
++++Output value (<i>y</i>) for the lookup table function.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.output`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.output,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sequence]
+=== `sequence`
++++Sequence numbers of the pairs of the input (<i>x</i>) and the output (<i>y</i>) of the lookup table function.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.sequence`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sequence,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindContCurrLimIEC]
+=== `WindContCurrLimIEC`
++++The current control limitation model with which this wind dynamics lookup table is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.WindContCurrLimIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindContCurrLimIEC.adoc[`WindContCurrLimIEC`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindContCurrLimIEC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindContPType3IEC]
+=== `WindContPType3IEC`
++++The P control type 3 model with which this wind dynamics lookup table is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.WindContPType3IEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindContPType3IEC.adoc[`WindContPType3IEC`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindContPType3IEC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindContQPQULimIEC]
+=== `WindContQPQULimIEC`
++++The QP and QU limitation model with which this wind dynamics lookup table is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.WindContQPQULimIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindContQPQULimIEC.adoc[`WindContQPQULimIEC`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindContQPQULimIEC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindContRotorRIEC]
+=== `WindContRotorRIEC`
++++The rotor resistance control model with which this wind dynamics lookup table is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.WindContRotorRIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindContRotorRIEC.adoc[`WindContRotorRIEC`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindContRotorRIEC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindGenType3bIEC]
+=== `WindGenType3bIEC`
++++The generator type 3B model with which this wind dynamics lookup table is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.WindGenType3bIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindGenType3bIEC.adoc[`WindGenType3bIEC`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindGenType3bIEC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindPitchContPowerIEC]
+=== `WindPitchContPowerIEC`
++++The pitch control power model with which this wind dynamics lookup table is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.WindPitchContPowerIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindPitchContPowerIEC.adoc[`WindPitchContPowerIEC`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindPitchContPowerIEC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindPlantFreqPcontrolIEC]
+=== `WindPlantFreqPcontrolIEC`
++++The frequency and active power wind plant control model with which this wind dynamics lookup table is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.WindPlantFreqPcontrolIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindPlantFreqPcontrolIEC.adoc[`WindPlantFreqPcontrolIEC`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindPlantFreqPcontrolIEC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindPlantReactiveControlIEC]
+=== `WindPlantReactiveControlIEC`
++++The voltage and reactive power wind plant control model with which this wind dynamics lookup table is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.WindPlantReactiveControlIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindPlantReactiveControlIEC.adoc[`WindPlantReactiveControlIEC`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindPlantReactiveControlIEC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindProtectionIEC]
+=== `WindProtectionIEC`
++++The grid protection model with which this wind dynamics lookup table is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindDynamicsLookupTable.WindProtectionIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindProtectionIEC.adoc[`WindProtectionIEC`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindProtectionIEC,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/WindContCurrLimIEC.adoc[`WindContCurrLimIEC`] | xref::class/WindContCurrLimIEC.adoc#WindDynamicsLookupTable[`WindDynamicsLookupTable`]
+
+
+
+| xref::class/WindContPType3IEC.adoc[`WindContPType3IEC`] | xref::class/WindContPType3IEC.adoc#WindDynamicsLookupTable[`WindDynamicsLookupTable`]
+
+
+
+| xref::class/WindContQPQULimIEC.adoc[`WindContQPQULimIEC`] | xref::class/WindContQPQULimIEC.adoc#WindDynamicsLookupTable[`WindDynamicsLookupTable`]
+
+
+
+| xref::class/WindContRotorRIEC.adoc[`WindContRotorRIEC`] | xref::class/WindContRotorRIEC.adoc#WindDynamicsLookupTable[`WindDynamicsLookupTable`]
+
+
+
+| xref::class/WindGenType3bIEC.adoc[`WindGenType3bIEC`] | xref::class/WindGenType3bIEC.adoc#WindDynamicsLookupTable[`WindDynamicsLookupTable`]
+
+
+
+| xref::class/WindPitchContPowerIEC.adoc[`WindPitchContPowerIEC`] | xref::class/WindPitchContPowerIEC.adoc#WindDynamicsLookupTable[`WindDynamicsLookupTable`]
+
+
+
+| xref::class/WindPlantFreqPcontrolIEC.adoc[`WindPlantFreqPcontrolIEC`] | xref::class/WindPlantFreqPcontrolIEC.adoc#WindDynamicsLookupTable[`WindDynamicsLookupTable`]
+
+
+
+| xref::class/WindPlantReactiveControlIEC.adoc[`WindPlantReactiveControlIEC`] | xref::class/WindPlantReactiveControlIEC.adoc#WindDynamicsLookupTable[`WindDynamicsLookupTable`]
+
+
+
+| xref::class/WindProtectionIEC.adoc[`WindProtectionIEC`] | xref::class/WindProtectionIEC.adoc#WindDynamicsLookupTable[`WindDynamicsLookupTable`]
+
+
+|===
+

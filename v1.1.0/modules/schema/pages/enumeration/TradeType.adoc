@@ -1,0 +1,56 @@
+= `TradeType`
+:toclevels: 4
+
+
++++Trade type.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TradeType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `AST`
+| `cim:TradeType.AST`
+| n/a
+
+| `IST`
+| `cim:TradeType.IST`
+| n/a
+
+| `UCT`
+| `cim:TradeType.UCT`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TradeProduct.adoc[`TradeProduct`] | xref::class/TradeProduct.adoc#tradeType[`tradeType`]
+
+
+|===
+

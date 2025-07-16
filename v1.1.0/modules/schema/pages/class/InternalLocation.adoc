@@ -1,0 +1,1624 @@
+= `InternalLocation`
+:toclevels: 4
+
+
++++Description of location internal to a building.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:InternalLocation`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Location.adoc[`Location`]
+*** xref::class/WorkLocation.adoc[`WorkLocation`]
+**** *`InternalLocation`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<buildingName,`buildingName`>>
+//| [[slots_table.buildingName]]<<buildingName,`buildingName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of building where location is.+++
+| _n/a_
+
+| <<buildingNumber,`buildingNumber`>>
+//| [[slots_table.buildingNumber]]<<buildingNumber,`buildingNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Number of building where location is.+++
+| _n/a_
+
+| <<floor,`floor`>>
+//| [[slots_table.floor]]<<floor,`floor`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Floor of location.+++
+| _n/a_
+
+| <<roomNumber,`roomNumber`>>
+//| [[slots_table.roomNumber]]<<roomNumber,`roomNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Room number of location.+++
+| _n/a_
+
+| <<BaseWorks,`BaseWorks`>>
+//| [[slots_table.BaseWorks]]<<BaseWorks,`BaseWorks`>>
+| 0..* +
+xref::class/BaseWork.adoc[`BaseWork`]
+| +++All works/tasks at this location.+++
+| xref::class/WorkLocation.adoc[`WorkLocation`]
+
+| <<DesignLocations,`DesignLocations`>>
+//| [[slots_table.DesignLocations]]<<DesignLocations,`DesignLocations`>>
+| 0..* +
+xref::class/DesignLocation.adoc[`DesignLocation`]
+| _n/a_
+| xref::class/WorkLocation.adoc[`WorkLocation`]
+
+| <<OneCallRequest,`OneCallRequest`>>
+//| [[slots_table.OneCallRequest]]<<OneCallRequest,`OneCallRequest`>>
+| 0..1 +
+xref::class/OneCallRequest.adoc[`OneCallRequest`]
+| _n/a_
+| xref::class/WorkLocation.adoc[`WorkLocation`]
+
+| <<Assets,`Assets`>>
+//| [[slots_table.Assets]]<<Assets,`Assets`>>
+| 0..* +
+xref::class/Asset.adoc[`Asset`]
+| +++All assets at this location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<ConfigurationEvents,`ConfigurationEvents`>>
+//| [[slots_table.ConfigurationEvents]]<<ConfigurationEvents,`ConfigurationEvents`>>
+| 0..* +
+xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<CoordinateSystem,`CoordinateSystem`>>
+//| [[slots_table.CoordinateSystem]]<<CoordinateSystem,`CoordinateSystem`>>
+| 0..1 +
+xref::class/CoordinateSystem.adoc[`CoordinateSystem`]
+| +++Coordinate system used to describe position points of this location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<Crew,`Crew`>>
+//| [[slots_table.Crew]]<<Crew,`Crew`>>
+| 0..* +
+xref::class/Crew.adoc[`Crew`]
+| +++The crew that is assigned to this locaton.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<Crews,`Crews`>>
+//| [[slots_table.Crews]]<<Crews,`Crews`>>
+| 0..* +
+xref::class/OldCrew.adoc[`OldCrew`]
+| _n/a_
+| xref::class/Location.adoc[`Location`]
+
+| <<EnvironmentalLocationKind,`EnvironmentalLocationKind`>>
+//| [[slots_table.EnvironmentalLocationKind]]<<EnvironmentalLocationKind,`EnvironmentalLocationKind`>>
+| 0..* +
+xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+| +++Kind of environmental location which this location is.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<EnvironmentalMonitoringStation,`EnvironmentalMonitoringStation`>>
+//| [[slots_table.EnvironmentalMonitoringStation]]<<EnvironmentalMonitoringStation,`EnvironmentalMonitoringStation`>>
+| 0..* +
+xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+| +++Monitoring station located at this location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<Fault,`Fault`>>
+//| [[slots_table.Fault]]<<Fault,`Fault`>>
+| 0..* +
+xref::class/Fault.adoc[`Fault`]
+| +++All faults at this location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<Hazards,`Hazards`>>
+//| [[slots_table.Hazards]]<<Hazards,`Hazards`>>
+| 0..* +
+xref::class/AssetLocationHazard.adoc[`AssetLocationHazard`]
+| +++All asset hazards at this location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<Incident,`Incident`>>
+//| [[slots_table.Incident]]<<Incident,`Incident`>>
+| 0..1 +
+xref::class/Incident.adoc[`Incident`]
+| +++Incident at this location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<LandProperties,`LandProperties`>>
+//| [[slots_table.LandProperties]]<<LandProperties,`LandProperties`>>
+| 0..* +
+xref::class/LandProperty.adoc[`LandProperty`]
+| _n/a_
+| xref::class/Location.adoc[`Location`]
+
+| <<Measurements,`Measurements`>>
+//| [[slots_table.Measurements]]<<Measurements,`Measurements`>>
+| 0..* +
+xref::class/Measurement.adoc[`Measurement`]
+| +++All measurements at this location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<OutageOrder,`OutageOrder`>>
+//| [[slots_table.OutageOrder]]<<OutageOrder,`OutageOrder`>>
+| 0..1 +
+xref::class/OutageOrder.adoc[`OutageOrder`]
+| +++The outage order at this location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<PositionPoints,`PositionPoints`>>
+//| [[slots_table.PositionPoints]]<<PositionPoints,`PositionPoints`>>
+| 0..* +
+xref::class/PositionPoint.adoc[`PositionPoint`]
+| +++Sequence of position points describing this location, expressed in coordinate system 'Location.CoordinateSystem'.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<PowerSystemResources,`PowerSystemResources`>>
+//| [[slots_table.PowerSystemResources]]<<PowerSystemResources,`PowerSystemResources`>>
+| 0..* +
+xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+| +++All power system resources at this location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<Routes,`Routes`>>
+//| [[slots_table.Routes]]<<Routes,`Routes`>>
+| 0..* +
+xref::class/Route.adoc[`Route`]
+| _n/a_
+| xref::class/Location.adoc[`Location`]
+
+| <<SwitchingOrder,`SwitchingOrder`>>
+//| [[slots_table.SwitchingOrder]]<<SwitchingOrder,`SwitchingOrder`>>
+| 0..1 +
+xref::class/SwitchingOrder.adoc[`SwitchingOrder`]
+| +++The switching order at this location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<TroubleOrder,`TroubleOrder`>>
+//| [[slots_table.TroubleOrder]]<<TroubleOrder,`TroubleOrder`>>
+| 0..1 +
+xref::class/TroubleOrder.adoc[`TroubleOrder`]
+| +++The trouble order at this location+++
+| xref::class/Location.adoc[`Location`]
+
+| <<TroubleTicket,`TroubleTicket`>>
+//| [[slots_table.TroubleTicket]]<<TroubleTicket,`TroubleTicket`>>
+| 0..1 +
+xref::class/TroubleTicket.adoc[`TroubleTicket`]
+| _n/a_
+| xref::class/Location.adoc[`Location`]
+
+| <<direction,`direction`>>
+//| [[slots_table.direction]]<<direction,`direction`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Direction that allows field crews to quickly find a given asset. For a given location, such as a street...+++
+| xref::class/Location.adoc[`Location`]
+
+| <<electronicAddress,`electronicAddress`>>
+//| [[slots_table.electronicAddress]]<<electronicAddress,`electronicAddress`>>
+| 0..1 +
+xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+| +++Electronic address.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<geoInfoReference,`geoInfoReference`>>
+//| [[slots_table.geoInfoReference]]<<geoInfoReference,`geoInfoReference`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Reference to geographical information source, often external to the utility.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<mainAddress,`mainAddress`>>
+//| [[slots_table.mainAddress]]<<mainAddress,`mainAddress`>>
+| 0..1 +
+xref::class/StreetAddress.adoc[`StreetAddress`]
+| +++Main address of the location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<phone1,`phone1`>>
+//| [[slots_table.phone1]]<<phone1,`phone1`>>
+| 0..1 +
+xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+| +++Phone number.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<phone2,`phone2`>>
+//| [[slots_table.phone2]]<<phone2,`phone2`>>
+| 0..1 +
+xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+| +++Additional phone number.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<secondaryAddress,`secondaryAddress`>>
+//| [[slots_table.secondaryAddress]]<<secondaryAddress,`secondaryAddress`>>
+| 0..1 +
+xref::class/StreetAddress.adoc[`StreetAddress`]
+| +++Secondary address of the location. For example, PO Box address may have different ZIP code than that in the 'mainAddress'.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| +++Status of this location.+++
+| xref::class/Location.adoc[`Location`]
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Classification by utility's corporate standards and practices, relative to the location itself (e.g., geographical,...+++
+| xref::class/Location.adoc[`Location`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets at this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Assets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#BaseWorks]
+=== `BaseWorks`
++++All works/tasks at this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WorkLocation.BaseWorks`
+| Cardinality
+| 0..*
+| Type
+| xref::class/BaseWork.adoc[`BaseWork`]
+
+| Inherited from
+| xref::class/WorkLocation.adoc[`WorkLocation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.BaseWorks,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#buildingName]
+=== `buildingName`
++++Name of building where location is.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InternalLocation.buildingName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.buildingName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#buildingNumber]
+=== `buildingNumber`
++++Number of building where location is.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InternalLocation.buildingNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.buildingNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConfigurationEvents]
+=== `ConfigurationEvents`
++++All configuration events created for this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.ConfigurationEvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConfigurationEvents,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CoordinateSystem]
+=== `CoordinateSystem`
++++Coordinate system used to describe position points of this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.CoordinateSystem`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CoordinateSystem.adoc[`CoordinateSystem`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CoordinateSystem,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Crew]
+=== `Crew`
++++The crew that is assigned to this locaton.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.Crew`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Crew.adoc[`Crew`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Crew,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Crews]
+=== `Crews`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.Crews`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OldCrew.adoc[`OldCrew`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Crews,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DesignLocations]
+=== `DesignLocations`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WorkLocation.DesignLocations`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DesignLocation.adoc[`DesignLocation`]
+
+| Inherited from
+| xref::class/WorkLocation.adoc[`WorkLocation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DesignLocations,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#direction]
+=== `direction`
++++(if applicable) Direction that allows field crews to quickly find a given asset. For a given location, such as a street address, this is the relative direction in which to find the asset. For example, a streetlight may be located at the 'NW' (northwest) corner of the customer's site, or a usage point may be located on the second floor of an apartment building.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.direction`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.direction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#electronicAddress]
+=== `electronicAddress`
++++Electronic address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.electronicAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.electronicAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnvironmentalLocationKind]
+=== `EnvironmentalLocationKind`
++++Kind of environmental location which this location is.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.EnvironmentalLocationKind`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalLocationType.adoc[`EnvironmentalLocationType`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalLocationKind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EnvironmentalMonitoringStation]
+=== `EnvironmentalMonitoringStation`
++++Monitoring station located at this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.EnvironmentalMonitoringStation`
+| Cardinality
+| 0..*
+| Type
+| xref::class/EnvironmentalMonitoringStation.adoc[`EnvironmentalMonitoringStation`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnvironmentalMonitoringStation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Fault]
+=== `Fault`
++++All faults at this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.Fault`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Fault.adoc[`Fault`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Fault,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#floor]
+=== `floor`
++++Floor of location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InternalLocation.floor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.floor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#geoInfoReference]
+=== `geoInfoReference`
++++(if applicable) Reference to geographical information source, often external to the utility.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.geoInfoReference`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.geoInfoReference,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Hazards]
+=== `Hazards`
++++All asset hazards at this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.Hazards`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AssetLocationHazard.adoc[`AssetLocationHazard`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Hazards,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Incident]
+=== `Incident`
++++Incident at this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.Incident`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Incident.adoc[`Incident`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Incident,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#LandProperties]
+=== `LandProperties`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.LandProperties`
+| Cardinality
+| 0..*
+| Type
+| xref::class/LandProperty.adoc[`LandProperty`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.LandProperties,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mainAddress]
+=== `mainAddress`
++++Main address of the location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.mainAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StreetAddress.adoc[`StreetAddress`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mainAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Measurements]
+=== `Measurements`
++++All measurements at this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.Measurements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Measurement.adoc[`Measurement`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Measurements,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OneCallRequest]
+=== `OneCallRequest`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WorkLocation.OneCallRequest`
+| Cardinality
+| 0..1
+| Type
+| xref::class/OneCallRequest.adoc[`OneCallRequest`]
+
+| Inherited from
+| xref::class/WorkLocation.adoc[`WorkLocation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OneCallRequest,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OutageOrder]
+=== `OutageOrder`
++++The outage order at this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.OutageOrder`
+| Cardinality
+| 0..1
+| Type
+| xref::class/OutageOrder.adoc[`OutageOrder`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OutageOrder,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phone1]
+=== `phone1`
++++Phone number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.phone1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phone1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phone2]
+=== `phone2`
++++Additional phone number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.phone2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phone2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PositionPoints]
+=== `PositionPoints`
++++Sequence of position points describing this location, expressed in coordinate system 'Location.CoordinateSystem'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.PositionPoints`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PositionPoint.adoc[`PositionPoint`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PositionPoints,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PowerSystemResources]
+=== `PowerSystemResources`
++++All power system resources at this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.PowerSystemResources`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PowerSystemResources,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#roomNumber]
+=== `roomNumber`
++++Room number of location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InternalLocation.roomNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.roomNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Routes]
+=== `Routes`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.Routes`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Route.adoc[`Route`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Routes,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#secondaryAddress]
+=== `secondaryAddress`
++++Secondary address of the location. For example, PO Box address may have different ZIP code than that in the 'mainAddress'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.secondaryAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StreetAddress.adoc[`StreetAddress`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.secondaryAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++Status of this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SwitchingOrder]
+=== `SwitchingOrder`
++++The switching order at this location.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.SwitchingOrder`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SwitchingOrder.adoc[`SwitchingOrder`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SwitchingOrder,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TroubleOrder]
+=== `TroubleOrder`
++++The trouble order at this location+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.TroubleOrder`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TroubleOrder.adoc[`TroubleOrder`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TroubleOrder,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TroubleTicket]
+=== `TroubleTicket`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.TroubleTicket`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TroubleTicket.adoc[`TroubleTicket`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TroubleTicket,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++Classification by utility's corporate standards and practices, relative to the location itself (e.g., geographical, functional accounting, etc., not a given property that happens to exist at that location).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

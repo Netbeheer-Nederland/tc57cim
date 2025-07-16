@@ -1,0 +1,806 @@
+= `Seconds`
+:toclevels: 4
+
+
++++Time, in seconds.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Seconds`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++Time, in seconds+++
+| +++Time, in seconds+++
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Seconds.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Seconds.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
++++Time, in seconds+++
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Seconds.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AsynchronousMachine.adoc[`AsynchronousMachine`] | xref::class/AsynchronousMachine.adoc#tppo[`tppo`]
+
+
+
+| xref::class/AsynchronousMachineTimeConstantReactance.adoc[`AsynchronousMachineTimeConstantReactance`] | xref::class/AsynchronousMachineTimeConstantReactance.adoc#tppo[`tppo`]
+
+
+
+| xref::class/Breaker.adoc[`Breaker`] | xref::class/Breaker.adoc#inTransitTime[`inTransitTime`]
+
+
+
+| xref::class/BWRSteamSupply.adoc[`BWRSteamSupply`] | xref::class/BWRSteamSupply.adoc#pressureSetpointTC2[`pressureSetpointTC2`]
+
+
+
+| xref::class/ClassificationCondition.adoc[`ClassificationCondition`] | xref::class/ClassificationCondition.adoc#duration[`duration`]
+
+
+
+| xref::class/CombustionTurbine.adoc[`CombustionTurbine`] | xref::class/CombustionTurbine.adoc#timeConstant[`timeConstant`]
+
+
+
+| xref::class/CurrentRelay.adoc[`CurrentRelay`] | xref::class/CurrentRelay.adoc#timeDelay3[`timeDelay3`]
+
+
+
+| xref::class/Delay.adoc[`Delay`] | xref::class/Delay.adoc#tm[`tm`]
+
+
+
+| xref::class/DiscExcContIEEEDEC1A.adoc[`DiscExcContIEEEDEC1A`] | xref::class/DiscExcContIEEEDEC1A.adoc#tw5[`tw5`]
+
+
+
+| xref::class/DiscExcContIEEEDEC2A.adoc[`DiscExcContIEEEDEC2A`] | xref::class/DiscExcContIEEEDEC2A.adoc#td2[`td2`]
+
+
+
+| xref::class/DiscExcContIEEEDEC3A.adoc[`DiscExcContIEEEDEC3A`] | xref::class/DiscExcContIEEEDEC3A.adoc#tdr[`tdr`]
+
+
+
+| xref::class/ExcAC1A.adoc[`ExcAC1A`] | xref::class/ExcAC1A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcAC2A.adoc[`ExcAC2A`] | xref::class/ExcAC2A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcAC3A.adoc[`ExcAC3A`] | xref::class/ExcAC3A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcAC4A.adoc[`ExcAC4A`] | xref::class/ExcAC4A.adoc#tc[`tc`]
+
+
+
+| xref::class/ExcAC5A.adoc[`ExcAC5A`] | xref::class/ExcAC5A.adoc#tf3[`tf3`]
+
+
+
+| xref::class/ExcAC6A.adoc[`ExcAC6A`] | xref::class/ExcAC6A.adoc#tk[`tk`]
+
+
+
+| xref::class/ExcAC8B.adoc[`ExcAC8B`] | xref::class/ExcAC8B.adoc#te[`te`]
+
+
+
+| xref::class/ExcANS.adoc[`ExcANS`] | xref::class/ExcANS.adoc#tb[`tb`]
+
+
+
+| xref::class/ExcAVR1.adoc[`ExcAVR1`] | xref::class/ExcAVR1.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcAVR2.adoc[`ExcAVR2`] | xref::class/ExcAVR2.adoc#tf2[`tf2`]
+
+
+
+| xref::class/ExcAVR3.adoc[`ExcAVR3`] | xref::class/ExcAVR3.adoc#te[`te`]
+
+
+
+| xref::class/ExcAVR4.adoc[`ExcAVR4`] | xref::class/ExcAVR4.adoc#tif[`tif`]
+
+
+
+| xref::class/ExcAVR5.adoc[`ExcAVR5`] | xref::class/ExcAVR5.adoc#ta[`ta`]
+
+
+
+| xref::class/ExcAVR7.adoc[`ExcAVR7`] | xref::class/ExcAVR7.adoc#t6[`t6`]
+
+
+
+| xref::class/ExcBBC.adoc[`ExcBBC`] | xref::class/ExcBBC.adoc#t4[`t4`]
+
+
+
+| xref::class/ExcCZ.adoc[`ExcCZ`] | xref::class/ExcCZ.adoc#te[`te`]
+
+
+
+| xref::class/ExcDC1A.adoc[`ExcDC1A`] | xref::class/ExcDC1A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcDC2A.adoc[`ExcDC2A`] | xref::class/ExcDC2A.adoc#tf1[`tf1`]
+
+
+
+| xref::class/ExcDC3A.adoc[`ExcDC3A`] | xref::class/ExcDC3A.adoc#trh[`trh`]
+
+
+
+| xref::class/ExcDC3A1.adoc[`ExcDC3A1`] | xref::class/ExcDC3A1.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcELIN1.adoc[`ExcELIN1`] | xref::class/ExcELIN1.adoc#tsw[`tsw`]
+
+
+
+| xref::class/ExcELIN2.adoc[`ExcELIN2`] | xref::class/ExcELIN2.adoc#tr4[`tr4`]
+
+
+
+| xref::class/ExcHU.adoc[`ExcHU`] | xref::class/ExcHU.adoc#tr[`tr`]
+
+
+
+| xref::class/ExcIEEEAC1A.adoc[`ExcIEEEAC1A`] | xref::class/ExcIEEEAC1A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcIEEEAC2A.adoc[`ExcIEEEAC2A`] | xref::class/ExcIEEEAC2A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcIEEEAC3A.adoc[`ExcIEEEAC3A`] | xref::class/ExcIEEEAC3A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcIEEEAC4A.adoc[`ExcIEEEAC4A`] | xref::class/ExcIEEEAC4A.adoc#tc[`tc`]
+
+
+
+| xref::class/ExcIEEEAC5A.adoc[`ExcIEEEAC5A`] | xref::class/ExcIEEEAC5A.adoc#tf3[`tf3`]
+
+
+
+| xref::class/ExcIEEEAC6A.adoc[`ExcIEEEAC6A`] | xref::class/ExcIEEEAC6A.adoc#tk[`tk`]
+
+
+
+| xref::class/ExcIEEEAC7B.adoc[`ExcIEEEAC7B`] | xref::class/ExcIEEEAC7B.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcIEEEAC8B.adoc[`ExcIEEEAC8B`] | xref::class/ExcIEEEAC8B.adoc#te[`te`]
+
+
+
+| xref::class/ExcIEEEDC1A.adoc[`ExcIEEEDC1A`] | xref::class/ExcIEEEDC1A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcIEEEDC2A.adoc[`ExcIEEEDC2A`] | xref::class/ExcIEEEDC2A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcIEEEDC3A.adoc[`ExcIEEEDC3A`] | xref::class/ExcIEEEDC3A.adoc#trh[`trh`]
+
+
+
+| xref::class/ExcIEEEDC4B.adoc[`ExcIEEEDC4B`] | xref::class/ExcIEEEDC4B.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcIEEEST1A.adoc[`ExcIEEEST1A`] | xref::class/ExcIEEEST1A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcIEEEST2A.adoc[`ExcIEEEST2A`] | xref::class/ExcIEEEST2A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcIEEEST3A.adoc[`ExcIEEEST3A`] | xref::class/ExcIEEEST3A.adoc#tm[`tm`]
+
+
+
+| xref::class/ExcIEEEST4B.adoc[`ExcIEEEST4B`] | xref::class/ExcIEEEST4B.adoc#ta[`ta`]
+
+
+
+| xref::class/ExcIEEEST5B.adoc[`ExcIEEEST5B`] | xref::class/ExcIEEEST5B.adoc#tuc2[`tuc2`]
+
+
+
+| xref::class/ExcIEEEST6B.adoc[`ExcIEEEST6B`] | xref::class/ExcIEEEST6B.adoc#tg[`tg`]
+
+
+
+| xref::class/ExcIEEEST7B.adoc[`ExcIEEEST7B`] | xref::class/ExcIEEEST7B.adoc#tia[`tia`]
+
+
+
+| xref::class/ExcNI.adoc[`ExcNI`] | xref::class/ExcNI.adoc#tr[`tr`]
+
+
+
+| xref::class/ExcOEX3T.adoc[`ExcOEX3T`] | xref::class/ExcOEX3T.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcPIC.adoc[`ExcPIC`] | xref::class/ExcPIC.adoc#tf2[`tf2`]
+
+
+
+| xref::class/ExcREXS.adoc[`ExcREXS`] | xref::class/ExcREXS.adoc#tp[`tp`]
+
+
+
+| xref::class/ExcRQB.adoc[`ExcRQB`] | xref::class/ExcRQB.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcSCRX.adoc[`ExcSCRX`] | xref::class/ExcSCRX.adoc#te[`te`]
+
+
+
+| xref::class/ExcSEXS.adoc[`ExcSEXS`] | xref::class/ExcSEXS.adoc#te[`te`]
+
+
+
+| xref::class/ExcSK.adoc[`ExcSK`] | xref::class/ExcSK.adoc#tr[`tr`]
+
+
+
+| xref::class/ExcST1A.adoc[`ExcST1A`] | xref::class/ExcST1A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcST2A.adoc[`ExcST2A`] | xref::class/ExcST2A.adoc#tf[`tf`]
+
+
+
+| xref::class/ExcST3A.adoc[`ExcST3A`] | xref::class/ExcST3A.adoc#tm[`tm`]
+
+
+
+| xref::class/ExcST4B.adoc[`ExcST4B`] | xref::class/ExcST4B.adoc#ta[`ta`]
+
+
+
+| xref::class/ExcST6B.adoc[`ExcST6B`] | xref::class/ExcST6B.adoc#tvd[`tvd`]
+
+
+
+| xref::class/ExcST7B.adoc[`ExcST7B`] | xref::class/ExcST7B.adoc#ts[`ts`]
+
+
+
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`] | xref::class/FossilSteamSupply.adoc#mechPowerSensorLag[`mechPowerSensorLag`]
+
+
+
+| xref::class/GateInputPin.adoc[`GateInputPin`] | xref::class/GateInputPin.adoc#duration[`duration`]
+
+
+
+| xref::class/GeneratingUnit.adoc[`GeneratingUnit`] | xref::class/GeneratingUnit.adoc#startupTime[`startupTime`]
+
+
+
+| xref::class/GovCT1.adoc[`GovCT1`] | xref::class/GovCT1.adoc#tsb[`tsb`]
+
+
+
+| xref::class/GovCT2.adoc[`GovCT2`] | xref::class/GovCT2.adoc#tsb[`tsb`]
+
+
+
+| xref::class/GovGAST.adoc[`GovGAST`] | xref::class/GovGAST.adoc#t3[`t3`]
+
+
+
+| xref::class/GovGAST1.adoc[`GovGAST1`] | xref::class/GovGAST1.adoc#tltr[`tltr`]
+
+
+
+| xref::class/GovGAST2.adoc[`GovGAST2`] | xref::class/GovGAST2.adoc#y[`y`]
+
+
+
+| xref::class/GovGAST3.adoc[`GovGAST3`] | xref::class/GovGAST3.adoc#ty[`ty`]
+
+
+
+| xref::class/GovGAST4.adoc[`GovGAST4`] | xref::class/GovGAST4.adoc#ty[`ty`]
+
+
+
+| xref::class/GovGASTWD.adoc[`GovGASTWD`] | xref::class/GovGASTWD.adoc#tt[`tt`]
+
+
+
+| xref::class/GovHydro1.adoc[`GovHydro1`] | xref::class/GovHydro1.adoc#tw[`tw`]
+
+
+
+| xref::class/GovHydro2.adoc[`GovHydro2`] | xref::class/GovHydro2.adoc#tw[`tw`]
+
+
+
+| xref::class/GovHydro3.adoc[`GovHydro3`] | xref::class/GovHydro3.adoc#tw[`tw`]
+
+
+
+| xref::class/GovHydro4.adoc[`GovHydro4`] | xref::class/GovHydro4.adoc#tw[`tw`]
+
+
+
+| xref::class/GovHydroDD.adoc[`GovHydroDD`] | xref::class/GovHydroDD.adoc#tturb[`tturb`]
+
+
+
+| xref::class/GovHydroFrancis.adoc[`GovHydroFrancis`] | xref::class/GovHydroFrancis.adoc#tx[`tx`]
+
+
+
+| xref::class/GovHydroIEEE0.adoc[`GovHydroIEEE0`] | xref::class/GovHydroIEEE0.adoc#t4[`t4`]
+
+
+
+| xref::class/GovHydroIEEE2.adoc[`GovHydroIEEE2`] | xref::class/GovHydroIEEE2.adoc#tw[`tw`]
+
+
+
+| xref::class/GovHydroPelton.adoc[`GovHydroPelton`] | xref::class/GovHydroPelton.adoc#tx[`tx`]
+
+
+
+| xref::class/GovHydroPID.adoc[`GovHydroPID`] | xref::class/GovHydroPID.adoc#tturb[`tturb`]
+
+
+
+| xref::class/GovHydroPID2.adoc[`GovHydroPID2`] | xref::class/GovHydroPID2.adoc#tw[`tw`]
+
+
+
+| xref::class/GovHydroR.adoc[`GovHydroR`] | xref::class/GovHydroR.adoc#tw[`tw`]
+
+
+
+| xref::class/GovHydroWEH.adoc[`GovHydroWEH`] | xref::class/GovHydroWEH.adoc#tw[`tw`]
+
+
+
+| xref::class/GovHydroWPID.adoc[`GovHydroWPID`] | xref::class/GovHydroWPID.adoc#tw[`tw`]
+
+
+
+| xref::class/GovSteam0.adoc[`GovSteam0`] | xref::class/GovSteam0.adoc#t3[`t3`]
+
+
+
+| xref::class/GovSteam1.adoc[`GovSteam1`] | xref::class/GovSteam1.adoc#t7[`t7`]
+
+
+
+| xref::class/GovSteam2.adoc[`GovSteam2`] | xref::class/GovSteam2.adoc#t2[`t2`]
+
+
+
+| xref::class/GovSteamBB.adoc[`GovSteamBB`] | xref::class/GovSteamBB.adoc#tn[`tn`]
+
+
+
+| xref::class/GovSteamCC.adoc[`GovSteamCC`] | xref::class/GovSteamCC.adoc#t5lp[`t5lp`]
+
+
+
+| xref::class/GovSteamEU.adoc[`GovSteamEU`] | xref::class/GovSteamEU.adoc#tw[`tw`]
+
+
+
+| xref::class/GovSteamFV2.adoc[`GovSteamFV2`] | xref::class/GovSteamFV2.adoc#tt[`tt`]
+
+
+
+| xref::class/GovSteamFV3.adoc[`GovSteamFV3`] | xref::class/GovSteamFV3.adoc#tc[`tc`]
+
+
+
+| xref::class/GovSteamFV4.adoc[`GovSteamFV4`] | xref::class/GovSteamFV4.adoc#ty[`ty`]
+
+
+
+| xref::class/GovSteamIEEE1.adoc[`GovSteamIEEE1`] | xref::class/GovSteamIEEE1.adoc#t7[`t7`]
+
+
+
+| xref::class/GovSteamSGO.adoc[`GovSteamSGO`] | xref::class/GovSteamSGO.adoc#t6[`t6`]
+
+
+
+| xref::class/HydroPowerPlant.adoc[`HydroPowerPlant`] | xref::class/HydroPowerPlant.adoc#dischargeTravelDelay[`dischargeTravelDelay`]
+
+
+
+| xref::class/HydroTurbine.adoc[`HydroTurbine`] | xref::class/HydroTurbine.adoc#waterStartingTime[`waterStartingTime`]
+
+
+
+| xref::class/IrregularTimePoint.adoc[`IrregularTimePoint`] | xref::class/IrregularTimePoint.adoc#time[`time`]
+
+
+
+| xref::class/LoadComposite.adoc[`LoadComposite`] | xref::class/LoadComposite.adoc#h[`h`]
+
+
+
+| xref::class/LoadGenericNonLinear.adoc[`LoadGenericNonLinear`] | xref::class/LoadGenericNonLinear.adoc#tq[`tq`]
+
+
+
+| xref::class/LoadMotor.adoc[`LoadMotor`] | xref::class/LoadMotor.adoc#tv[`tv`]
+
+
+
+| xref::class/MarketScheduledEvent.adoc[`MarketScheduledEvent`] | xref::class/MarketScheduledEvent.adoc#duration[`duration`]
+
+
+
+| xref::class/OperationalLimitType.adoc[`OperationalLimitType`] | xref::class/OperationalLimitType.adoc#acceptableDuration[`acceptableDuration`]
+
+
+
+| xref::class/OverexcLimX1.adoc[`OverexcLimX1`] | xref::class/OverexcLimX1.adoc#t3[`t3`]
+
+
+
+| xref::class/OverexcLimX2.adoc[`OverexcLimX2`] | xref::class/OverexcLimX2.adoc#t3[`t3`]
+
+
+
+| xref::class/PFVArType1IEEEPFController.adoc[`PFVArType1IEEEPFController`] | xref::class/PFVArType1IEEEPFController.adoc#tpfc[`tpfc`]
+
+
+
+| xref::class/PFVArType1IEEEVArController.adoc[`PFVArType1IEEEVArController`] | xref::class/PFVArType1IEEEVArController.adoc#tvarc[`tvarc`]
+
+
+
+| xref::class/ProtectionEquipment.adoc[`ProtectionEquipment`] | xref::class/ProtectionEquipment.adoc#relayDelayTime[`relayDelayTime`]
+
+
+
+| xref::class/Pss1.adoc[`Pss1`] | xref::class/Pss1.adoc#tpe[`tpe`]
+
+
+
+| xref::class/Pss1A.adoc[`Pss1A`] | xref::class/Pss1A.adoc#tdelay[`tdelay`]
+
+
+
+| xref::class/Pss2B.adoc[`Pss2B`] | xref::class/Pss2B.adoc#tw4[`tw4`]
+
+
+
+| xref::class/Pss2ST.adoc[`Pss2ST`] | xref::class/Pss2ST.adoc#t9[`t9`]
+
+
+
+| xref::class/Pss5.adoc[`Pss5`] | xref::class/Pss5.adoc#tw2[`tw2`]
+
+
+
+| xref::class/PssELIN2.adoc[`PssELIN2`] | xref::class/PssELIN2.adoc#ts6[`ts6`]
+
+
+
+| xref::class/PssIEEE1A.adoc[`PssIEEE1A`] | xref::class/PssIEEE1A.adoc#t6[`t6`]
+
+
+
+| xref::class/PssIEEE2B.adoc[`PssIEEE2B`] | xref::class/PssIEEE2B.adoc#tw4[`tw4`]
+
+
+
+| xref::class/PssIEEE3B.adoc[`PssIEEE3B`] | xref::class/PssIEEE3B.adoc#tw3[`tw3`]
+
+
+
+| xref::class/PssIEEE4B.adoc[`PssIEEE4B`] | xref::class/PssIEEE4B.adoc#tl9[`tl9`]
+
+
+
+| xref::class/PssPTIST1.adoc[`PssPTIST1`] | xref::class/PssPTIST1.adoc#tp[`tp`]
+
+
+
+| xref::class/PssPTIST3.adoc[`PssPTIST3`] | xref::class/PssPTIST3.adoc#tp[`tp`]
+
+
+
+| xref::class/PssRQB.adoc[`PssRQB`] | xref::class/PssRQB.adoc#tomsl[`tomsl`]
+
+
+
+| xref::class/PssSB4.adoc[`PssSB4`] | xref::class/PssSB4.adoc#tx2[`tx2`]
+
+
+
+| xref::class/PssSH.adoc[`PssSH`] | xref::class/PssSH.adoc#td[`td`]
+
+
+
+| xref::class/PssSK.adoc[`PssSK`] | xref::class/PssSK.adoc#t6[`t6`]
+
+
+
+| xref::class/PssSTAB2A.adoc[`PssSTAB2A`] | xref::class/PssSTAB2A.adoc#t5[`t5`]
+
+
+
+| xref::class/PssWECC.adoc[`PssWECC`] | xref::class/PssWECC.adoc#t9[`t9`]
+
+
+
+| xref::class/RecloseSequence.adoc[`RecloseSequence`] | xref::class/RecloseSequence.adoc#recloseDelay[`recloseDelay`]
+
+
+
+| xref::class/RegularIntervalSchedule.adoc[`RegularIntervalSchedule`] | xref::class/RegularIntervalSchedule.adoc#timeStep[`timeStep`]
+
+
+
+| xref::class/RemoteConnectDisconnectInfo.adoc[`RemoteConnectDisconnectInfo`] | xref::class/RemoteConnectDisconnectInfo.adoc#armedTimeout[`armedTimeout`]
+
+
+
+| xref::class/RemoteSource.adoc[`RemoteSource`] | xref::class/RemoteSource.adoc#scanInterval[`scanInterval`]
+
+
+
+| xref::class/Reservoir.adoc[`Reservoir`] | xref::class/Reservoir.adoc#spillTravelDelay[`spillTravelDelay`]
+
+
+
+| xref::class/RotatingMachineDynamics.adoc[`RotatingMachineDynamics`] | xref::class/RotatingMachineDynamics.adoc#inertia[`inertia`]
+
+
+
+| xref::class/ScheduledEvent.adoc[`ScheduledEvent`] | xref::class/ScheduledEvent.adoc#duration[`duration`]
+
+
+
+| xref::class/ShuntCompensator.adoc[`ShuntCompensator`] | xref::class/ShuntCompensator.adoc#aVRDelay[`aVRDelay`]
+
+
+
+| xref::class/SteamTurbine.adoc[`SteamTurbine`] | xref::class/SteamTurbine.adoc#steamChestTC[`steamChestTC`]
+
+
+
+| xref::class/SwitchInfo.adoc[`SwitchInfo`] | xref::class/SwitchInfo.adoc#ratedInterruptingTime[`ratedInterruptingTime`]
+
+
+
+| xref::class/SynchronousMachine.adoc[`SynchronousMachine`] | xref::class/SynchronousMachine.adoc#manualToAVR[`manualToAVR`]
+
+
+
+| xref::class/SynchronousMachineTimeConstantReactance.adoc[`SynchronousMachineTimeConstantReactance`] | xref::class/SynchronousMachineTimeConstantReactance.adoc#tpqo[`tpqo`]
+
+
+
+| xref::class/TapChanger.adoc[`TapChanger`] | xref::class/TapChanger.adoc#subsequentDelay[`subsequentDelay`]
+
+
+
+| xref::class/TimePoint.adoc[`TimePoint`] | xref::class/TimePoint.adoc#relativeTimeInterval[`relativeTimeInterval`]
+
+
+
+| xref::class/TimeSchedule.adoc[`TimeSchedule`] | xref::class/TimeSchedule.adoc#recurrencePeriod[`recurrencePeriod`]
+
+
+
+| xref::class/TurbLCFB1.adoc[`TurbLCFB1`] | xref::class/TurbLCFB1.adoc#tpelec[`tpelec`]
+
+
+
+| xref::class/UnderexcLimIEEE1.adoc[`UnderexcLimIEEE1`] | xref::class/UnderexcLimIEEE1.adoc#tu4[`tu4`]
+
+
+
+| xref::class/UnderexcLimIEEE2.adoc[`UnderexcLimIEEE2`] | xref::class/UnderexcLimIEEE2.adoc#tuv[`tuv`]
+
+
+
+| xref::class/UnderexcLimX1.adoc[`UnderexcLimX1`] | xref::class/UnderexcLimX1.adoc#tm[`tm`]
+
+
+
+| xref::class/UnderexcLimX2.adoc[`UnderexcLimX2`] | xref::class/UnderexcLimX2.adoc#tm[`tm`]
+
+
+
+| xref::class/VAdjIEEE.adoc[`VAdjIEEE`] | xref::class/VAdjIEEE.adoc#taon[`taon`]
+
+
+
+| xref::class/VCompIEEEType1.adoc[`VCompIEEEType1`] | xref::class/VCompIEEEType1.adoc#tr[`tr`]
+
+
+
+| xref::class/VCompIEEEType2.adoc[`VCompIEEEType2`] | xref::class/VCompIEEEType2.adoc#tr[`tr`]
+
+
+
+| xref::class/WindContCurrLimIEC.adoc[`WindContCurrLimIEC`] | xref::class/WindContCurrLimIEC.adoc#tufiltcl[`tufiltcl`]
+
+
+
+| xref::class/WindContPitchAngleIEC.adoc[`WindContPitchAngleIEC`] | xref::class/WindContPitchAngleIEC.adoc#ttheta[`ttheta`]
+
+
+
+| xref::class/WindContPType3IEC.adoc[`WindContPType3IEC`] | xref::class/WindContPType3IEC.adoc#tufiltp3[`tufiltp3`]
+
+
+
+| xref::class/WindContPType4aIEC.adoc[`WindContPType4aIEC`] | xref::class/WindContPType4aIEC.adoc#tufiltp4a[`tufiltp4a`]
+
+
+
+| xref::class/WindContPType4bIEC.adoc[`WindContPType4bIEC`] | xref::class/WindContPType4bIEC.adoc#tufiltp4b[`tufiltp4b`]
+
+
+
+| xref::class/WindContQIEC.adoc[`WindContQIEC`] | xref::class/WindContQIEC.adoc#tufiltq[`tufiltq`]
+
+
+
+| xref::class/WindContQPQULimIEC.adoc[`WindContQPQULimIEC`] | xref::class/WindContQPQULimIEC.adoc#tufiltql[`tufiltql`]
+
+
+
+| xref::class/WindContRotorRIEC.adoc[`WindContRotorRIEC`] | xref::class/WindContRotorRIEC.adoc#tpfiltrr[`tpfiltrr`]
+
+
+
+| xref::class/WindGenType3aIEC.adoc[`WindGenType3aIEC`] | xref::class/WindGenType3aIEC.adoc#tic[`tic`]
+
+
+
+| xref::class/WindGenType3bIEC.adoc[`WindGenType3bIEC`] | xref::class/WindGenType3bIEC.adoc#two[`two`]
+
+
+
+| xref::class/WindGenType4IEC.adoc[`WindGenType4IEC`] | xref::class/WindGenType4IEC.adoc#tg[`tg`]
+
+
+
+| xref::class/WindMechIEC.adoc[`WindMechIEC`] | xref::class/WindMechIEC.adoc#hwtr[`hwtr`]
+
+
+
+| xref::class/WindPitchContPowerIEC.adoc[`WindPitchContPowerIEC`] | xref::class/WindPitchContPowerIEC.adoc#tr[`tr`]
+
+
+
+| xref::class/WindPlantFreqPcontrolIEC.adoc[`WindPlantFreqPcontrolIEC`] | xref::class/WindPlantFreqPcontrolIEC.adoc#twppfiltp[`twppfiltp`]
+
+
+
+| xref::class/WindPlantReactiveControlIEC.adoc[`WindPlantReactiveControlIEC`] | xref::class/WindPlantReactiveControlIEC.adoc#txfv[`txfv`]
+
+
+
+| xref::class/WindProtectionIEC.adoc[`WindProtectionIEC`] | xref::class/WindProtectionIEC.adoc#tfma[`tfma`]
+
+
+
+| xref::class/WindRefFrameRotIEC.adoc[`WindRefFrameRotIEC`] | xref::class/WindRefFrameRotIEC.adoc#tpll[`tpll`]
+
+
+|===
+

@@ -1,0 +1,530 @@
+= `Delay`
+:toclevels: 4
+
+
++++All the measurements are filtered by a first lag element with a time constant TM.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Delay`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`Delay`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<BlockingFunction,`BlockingFunction`>>
+//| [[slots_table.BlockingFunction]]<<BlockingFunction,`BlockingFunction`>>
+| 0..1 +
+xref::class/BlockingFunction.adoc[`BlockingFunction`]
+| _n/a_
+| _n/a_
+
+| <<CCAinverter,`CCAinverter`>>
+//| [[slots_table.CCAinverter]]<<CCAinverter,`CCAinverter`>>
+| 0..1 +
+xref::class/CCAinverter.adoc[`CCAinverter`]
+| _n/a_
+| _n/a_
+
+| <<CCArectifierControl,`CCArectifierControl`>>
+//| [[slots_table.CCArectifierControl]]<<CCArectifierControl,`CCArectifierControl`>>
+| 0..1 +
+xref::class/CCArectifierControl.adoc[`CCArectifierControl`]
+| _n/a_
+| _n/a_
+
+| <<DCvoltageControl,`DCvoltageControl`>>
+//| [[slots_table.DCvoltageControl]]<<DCvoltageControl,`DCvoltageControl`>>
+| 0..1 +
+xref::class/DCvoltageControl.adoc[`DCvoltageControl`]
+| _n/a_
+| _n/a_
+
+| <<IdcInverterControl,`IdcInverterControl`>>
+//| [[slots_table.IdcInverterControl]]<<IdcInverterControl,`IdcInverterControl`>>
+| 0..1 +
+xref::class/IdcInverterControl.adoc[`IdcInverterControl`]
+| _n/a_
+| _n/a_
+
+| <<PFmode,`PFmode`>>
+//| [[slots_table.PFmode]]<<PFmode,`PFmode`>>
+| 0..1 +
+xref::class/PFmode.adoc[`PFmode`]
+| _n/a_
+| _n/a_
+
+| <<Pcontrol,`Pcontrol`>>
+//| [[slots_table.Pcontrol]]<<Pcontrol,`Pcontrol`>>
+| 0..1 +
+xref::class/Pcontrol.adoc[`Pcontrol`]
+| _n/a_
+| _n/a_
+
+| <<Qlimiter,`Qlimiter`>>
+//| [[slots_table.Qlimiter]]<<Qlimiter,`Qlimiter`>>
+| 0..1 +
+xref::class/Qlimiter.adoc[`Qlimiter`]
+| _n/a_
+| _n/a_
+
+| <<Qmode,`Qmode`>>
+//| [[slots_table.Qmode]]<<Qmode,`Qmode`>>
+| 0..1 +
+xref::class/Qmode.adoc[`Qmode`]
+| _n/a_
+| _n/a_
+
+| <<Qregulator,`Qregulator`>>
+//| [[slots_table.Qregulator]]<<Qregulator,`Qregulator`>>
+| 0..1 +
+xref::class/Qregulator.adoc[`Qregulator`]
+| _n/a_
+| _n/a_
+
+| <<Umode,`Umode`>>
+//| [[slots_table.Umode]]<<Umode,`Umode`>>
+| 0..1 +
+xref::class/Umode.adoc[`Umode`]
+| _n/a_
+| _n/a_
+
+| <<VDCOL,`VDCOL`>>
+//| [[slots_table.VDCOL]]<<VDCOL,`VDCOL`>>
+| 0..1 +
+xref::class/VDCOL.adoc[`VDCOL`]
+| _n/a_
+| _n/a_
+
+| <<tm,`tm`>>
+//| [[slots_table.tm]]<<tm,`tm`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Time constant.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#BlockingFunction]
+=== `BlockingFunction`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.BlockingFunction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/BlockingFunction.adoc[`BlockingFunction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.BlockingFunction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CCAinverter]
+=== `CCAinverter`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.CCAinverter`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CCAinverter.adoc[`CCAinverter`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CCAinverter,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CCArectifierControl]
+=== `CCArectifierControl`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.CCArectifierControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CCArectifierControl.adoc[`CCArectifierControl`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CCArectifierControl,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DCvoltageControl]
+=== `DCvoltageControl`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.DCvoltageControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DCvoltageControl.adoc[`DCvoltageControl`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DCvoltageControl,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#IdcInverterControl]
+=== `IdcInverterControl`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.IdcInverterControl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IdcInverterControl.adoc[`IdcInverterControl`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.IdcInverterControl,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Pcontrol]
+=== `Pcontrol`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.Pcontrol`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Pcontrol.adoc[`Pcontrol`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Pcontrol,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PFmode]
+=== `PFmode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.PFmode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PFmode.adoc[`PFmode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PFmode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Qlimiter]
+=== `Qlimiter`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.Qlimiter`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Qlimiter.adoc[`Qlimiter`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Qlimiter,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Qmode]
+=== `Qmode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.Qmode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Qmode.adoc[`Qmode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Qmode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Qregulator]
+=== `Qregulator`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.Qregulator`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Qregulator.adoc[`Qregulator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Qregulator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tm]
+=== `tm`
++++Time constant.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.tm`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tm,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Umode]
+=== `Umode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.Umode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Umode.adoc[`Umode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Umode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VDCOL]
+=== `VDCOL`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Delay.VDCOL`
+| Cardinality
+| 0..1
+| Type
+| xref::class/VDCOL.adoc[`VDCOL`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VDCOL,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/BlockingFunction.adoc[`BlockingFunction`] | xref::class/BlockingFunction.adoc#Delay[`Delay`]
+
+
+
+| xref::class/CCAinverter.adoc[`CCAinverter`] | xref::class/CCAinverter.adoc#Delay[`Delay`]
+
+
+
+| xref::class/CCArectifierControl.adoc[`CCArectifierControl`] | xref::class/CCArectifierControl.adoc#Delay[`Delay`]
+
+
+
+| xref::class/DCvoltageControl.adoc[`DCvoltageControl`] | xref::class/DCvoltageControl.adoc#Delay[`Delay`]
+
+
+
+| xref::class/IdcInverterControl.adoc[`IdcInverterControl`] | xref::class/IdcInverterControl.adoc#Delay[`Delay`]
+
+
+
+| xref::class/Pcontrol.adoc[`Pcontrol`] | xref::class/Pcontrol.adoc#Delay[`Delay`]
+
+
+
+| xref::class/PFmode.adoc[`PFmode`] | xref::class/PFmode.adoc#Delay[`Delay`]
+
+
+
+| xref::class/Qlimiter.adoc[`Qlimiter`] | xref::class/Qlimiter.adoc#Delay[`Delay`]
+
+
+
+| xref::class/Qmode.adoc[`Qmode`] | xref::class/Qmode.adoc#Delay[`Delay`]
+
+
+
+| xref::class/Qregulator.adoc[`Qregulator`] | xref::class/Qregulator.adoc#Delay[`Delay`]
+
+
+
+| xref::class/Umode.adoc[`Umode`] | xref::class/Umode.adoc#Delay[`Delay`]
+
+
+
+| xref::class/VDCOL.adoc[`VDCOL`] | xref::class/VDCOL.adoc#Delay[`Delay`]
+
+
+|===
+

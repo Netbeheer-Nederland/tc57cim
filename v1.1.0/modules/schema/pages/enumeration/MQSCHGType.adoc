@@ -1,0 +1,94 @@
+= `MQSCHGType`
+:toclevels: 4
+
+
++++For example:
+ADD - add
+CHG - change+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MQSCHGType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ADD`
+| `cim:MQSCHGType.ADD`
+| n/a
+
+| `CHG`
+| `cim:MQSCHGType.CHG`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/BidSelfSched.adoc[`BidSelfSched`] | xref::class/BidSelfSched.adoc#updateType[`updateType`]
+
+
+
+| xref::class/Commitments.adoc[`Commitments`] | xref::class/Commitments.adoc#updateType[`updateType`]
+
+
+
+| xref::class/ConstraintResults.adoc[`ConstraintResults`] | xref::class/ConstraintResults.adoc#updateType[`updateType`]
+
+
+
+| xref::class/DopInstruction.adoc[`DopInstruction`] | xref::class/DopInstruction.adoc#updateType[`updateType`]
+
+
+
+| xref::class/Instructions.adoc[`Instructions`] | xref::class/Instructions.adoc#updateType[`updateType`]
+
+
+
+| xref::class/LoadFollowingOperatorInput.adoc[`LoadFollowingOperatorInput`] | xref::class/LoadFollowingOperatorInput.adoc#updateType[`updateType`]
+
+
+
+| xref::class/PnodeResults.adoc[`PnodeResults`] | xref::class/PnodeResults.adoc#updateType[`updateType`]
+
+
+
+| xref::class/ResourceAwardInstruction.adoc[`ResourceAwardInstruction`] | xref::class/ResourceAwardInstruction.adoc#updateType[`updateType`]
+
+
+
+| xref::class/ResourceDispatchResults.adoc[`ResourceDispatchResults`] | xref::class/ResourceDispatchResults.adoc#updateType[`updateType`]
+
+
+
+| xref::class/RMROperatorInput.adoc[`RMROperatorInput`] | xref::class/RMROperatorInput.adoc#updateType[`updateType`]
+
+
+
+| xref::class/RUCAwardInstruction.adoc[`RUCAwardInstruction`] | xref::class/RUCAwardInstruction.adoc#updateType[`updateType`]
+
+
+|===
+

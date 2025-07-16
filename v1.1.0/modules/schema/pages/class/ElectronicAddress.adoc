@@ -1,0 +1,345 @@
+= `ElectronicAddress`
+:toclevels: 4
+
+
++++Electronic address information.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ElectronicAddress`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`ElectronicAddress`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<email1,`email1`>>
+//| [[slots_table.email1]]<<email1,`email1`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Primary email address.+++
+| _n/a_
+
+| <<email2,`email2`>>
+//| [[slots_table.email2]]<<email2,`email2`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Alternate email address.+++
+| _n/a_
+
+| <<lan,`lan`>>
+//| [[slots_table.lan]]<<lan,`lan`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Address on local area network.+++
+| _n/a_
+
+| <<mac,`mac`>>
+//| [[slots_table.mac]]<<mac,`mac`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++MAC (Media Access Control) address.+++
+| _n/a_
+
+| <<password,`password`>>
+//| [[slots_table.password]]<<password,`password`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Password needed to log in.+++
+| _n/a_
+
+| <<radio,`radio`>>
+//| [[slots_table.radio]]<<radio,`radio`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Radio address.+++
+| _n/a_
+
+| <<userID,`userID`>>
+//| [[slots_table.userID]]<<userID,`userID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++User ID needed to log in, which can be for an individual person, an organisation, a location, etc.+++
+| _n/a_
+
+| <<web,`web`>>
+//| [[slots_table.web]]<<web,`web`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++World wide web address.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#email1]
+=== `email1`
++++Primary email address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ElectronicAddress.email1`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.email1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#email2]
+=== `email2`
++++Alternate email address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ElectronicAddress.email2`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.email2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lan]
+=== `lan`
++++Address on local area network.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ElectronicAddress.lan`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lan,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mac]
+=== `mac`
++++MAC (Media Access Control) address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ElectronicAddress.mac`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mac,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#password]
+=== `password`
++++Password needed to log in.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ElectronicAddress.password`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.password,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#radio]
+=== `radio`
++++Radio address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ElectronicAddress.radio`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.radio,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#userID]
+=== `userID`
++++User ID needed to log in, which can be for an individual person, an organisation, a location, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ElectronicAddress.userID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.userID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#web]
+=== `web`
++++World wide web address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ElectronicAddress.web`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.web,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Asset.adoc[`Asset`] | xref::class/Asset.adoc#electronicAddress[`electronicAddress`]
+
+
+
+| xref::class/Cashier.adoc[`Cashier`] | xref::class/Cashier.adoc#electronicAddress[`electronicAddress`]
+
+
+
+| xref::class/Document.adoc[`Document`] | xref::class/Document.adoc#electronicAddress[`electronicAddress`]
+
+
+
+| xref::class/Location.adoc[`Location`] | xref::class/Location.adoc#electronicAddress[`electronicAddress`]
+
+
+
+| xref::class/MarketPerson.adoc[`MarketPerson`] | xref::class/MarketPerson.adoc#electronicAddressPrimary[`electronicAddressPrimary`]
+
+
+
+| xref::class/Organisation.adoc[`Organisation`] | xref::class/Organisation.adoc#electronicAddress[`electronicAddress`]
+
+
+
+| xref::class/Person.adoc[`Person`] | xref::class/Person.adoc#electronicAddress[`electronicAddress`]
+
+
+|===
+

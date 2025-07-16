@@ -1,0 +1,1453 @@
+= `LabTestDataSet`
+:toclevels: 4
+
+
++++Results of testing done by a lab.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:LabTestDataSet`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Document.adoc[`Document`]
+*** xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+**** *`LabTestDataSet`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AssetTestLab,`AssetTestLab`>>
+//| [[slots_table.AssetTestLab]]<<AssetTestLab,`AssetTestLab`>>
+| 0..1 +
+xref::class/AssetTestLab.adoc[`AssetTestLab`]
+| +++Test lab which produced this set of lab test results.+++
+| _n/a_
+
+| <<Specimen,`Specimen`>>
+//| [[slots_table.Specimen]]<<Specimen,`Specimen`>>
+| 0..1 +
+xref::class/Specimen.adoc[`Specimen`]
+| +++Specimen on which lab testing done in determining results.+++
+| _n/a_
+
+| <<conclusion,`conclusion`>>
+//| [[slots_table.conclusion]]<<conclusion,`conclusion`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Conclusion drawn from test results.+++
+| _n/a_
+
+| <<conclusionConfidence,`conclusionConfidence`>>
+//| [[slots_table.conclusionConfidence]]<<conclusionConfidence,`conclusionConfidence`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Description of confidence in conclusion.+++
+| _n/a_
+
+| <<reasonForTest,`reasonForTest`>>
+//| [[slots_table.reasonForTest]]<<reasonForTest,`reasonForTest`>>
+| 0..1 +
+xref::enumeration/TestReason.adoc[`TestReason`]
+| +++Reason for performing test.+++
+| _n/a_
+
+| <<testEquipmentID,`testEquipmentID`>>
+//| [[slots_table.testEquipmentID]]<<testEquipmentID,`testEquipmentID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Identity of lab equipment used to perform test.+++
+| _n/a_
+
+| <<Asset,`Asset`>>
+//| [[slots_table.Asset]]<<Asset,`Asset`>>
+| 0..1 +
+xref::class/Asset.adoc[`Asset`]
+| +++Asset to which this procedure data set applies.+++
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+| <<MeasurementValue,`MeasurementValue`>>
+//| [[slots_table.MeasurementValue]]<<MeasurementValue,`MeasurementValue`>>
+| 0..* +
+xref::class/MeasurementValue.adoc[`MeasurementValue`]
+| +++Measurement value related to this procedure data set.+++
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+| <<Procedure,`Procedure`>>
+//| [[slots_table.Procedure]]<<Procedure,`Procedure`>>
+| 0..1 +
+xref::class/Procedure.adoc[`Procedure`]
+| +++Procedure capturing this data set.+++
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+| <<Properties,`Properties`>>
+//| [[slots_table.Properties]]<<Properties,`Properties`>>
+| 0..* +
+xref::class/UserAttribute.adoc[`UserAttribute`]
+| +++UserAttributes used to specify further properties of this procedure data set. Use 'name' to specify what kind of property it...+++
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+| <<TransformerObservations,`TransformerObservations`>>
+//| [[slots_table.TransformerObservations]]<<TransformerObservations,`TransformerObservations`>>
+| 0..* +
+xref::class/TransformerObservation.adoc[`TransformerObservation`]
+| _n/a_
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+| <<WorkTask,`WorkTask`>>
+//| [[slots_table.WorkTask]]<<WorkTask,`WorkTask`>>
+| 0..1 +
+xref::class/WorkTask.adoc[`WorkTask`]
+| +++Work task that created this procedure data set.+++
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+| <<completedDateTime,`completedDateTime`>>
+//| [[slots_table.completedDateTime]]<<completedDateTime,`completedDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time procedure was completed.+++
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+| <<ActivityRecord,`ActivityRecord`>>
+//| [[slots_table.ActivityRecord]]<<ActivityRecord,`ActivityRecord`>>
+| 0..* +
+xref::class/ActivityRecord.adoc[`ActivityRecord`]
+| +++The activity record for a document+++
+| xref::class/Document.adoc[`Document`]
+
+| <<Approver,`Approver`>>
+//| [[slots_table.Approver]]<<Approver,`Approver`>>
+| 0..1 +
+xref::class/Approver.adoc[`Approver`]
+| +++Approver of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<Author,`Author`>>
+//| [[slots_table.Author]]<<Author,`Author`>>
+| 0..1 +
+xref::class/Author.adoc[`Author`]
+| +++Author of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<ConfigurationEvents,`ConfigurationEvents`>>
+//| [[slots_table.ConfigurationEvents]]<<ConfigurationEvents,`ConfigurationEvents`>>
+| 0..* +
+xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<Editor,`Editor`>>
+//| [[slots_table.Editor]]<<Editor,`Editor`>>
+| 0..1 +
+xref::class/Editor.adoc[`Editor`]
+| +++Editor of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<Issuer,`Issuer`>>
+//| [[slots_table.Issuer]]<<Issuer,`Issuer`>>
+| 0..1 +
+xref::class/Issuer.adoc[`Issuer`]
+| +++Issuer of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<authorName,`authorName`>>
+//| [[slots_table.authorName]]<<authorName,`authorName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of the author of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<comment,`comment`>>
+//| [[slots_table.comment]]<<comment,`comment`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Free text comment.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<createdDateTime,`createdDateTime`>>
+//| [[slots_table.createdDateTime]]<<createdDateTime,`createdDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time that this document was created.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<docStatus,`docStatus`>>
+//| [[slots_table.docStatus]]<<docStatus,`docStatus`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| +++Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status'...+++
+| xref::class/Document.adoc[`Document`]
+
+| <<electronicAddress,`electronicAddress`>>
+//| [[slots_table.electronicAddress]]<<electronicAddress,`electronicAddress`>>
+| 0..1 +
+xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+| +++Electronic address.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<lastModifiedDateTime,`lastModifiedDateTime`>>
+//| [[slots_table.lastModifiedDateTime]]<<lastModifiedDateTime,`lastModifiedDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<revisionNumber,`revisionNumber`>>
+//| [[slots_table.revisionNumber]]<<revisionNumber,`revisionNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Revision number for this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| +++Status of subject matter (e.g., Agreement, Work) this document represents. For status of the document itself, use...+++
+| xref::class/Document.adoc[`Document`]
+
+| <<subject,`subject`>>
+//| [[slots_table.subject]]<<subject,`subject`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Document subject.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<title,`title`>>
+//| [[slots_table.title]]<<title,`title`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Document title.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems...+++
+| xref::class/Document.adoc[`Document`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#ActivityRecord]
+=== `ActivityRecord`
++++The activity record for a document+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.ActivityRecord`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ActivityRecord,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Approver]
+=== `Approver`
++++Approver of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Approver`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Approver.adoc[`Approver`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Approver,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Asset]
+=== `Asset`
++++Asset to which this procedure data set applies.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProcedureDataSet.Asset`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Asset,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AssetTestLab]
+=== `AssetTestLab`
++++Test lab which produced this set of lab test results.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LabTestDataSet.AssetTestLab`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AssetTestLab.adoc[`AssetTestLab`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AssetTestLab,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Author]
+=== `Author`
++++Author of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Author`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Author.adoc[`Author`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Author,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#authorName]
+=== `authorName`
++++Name of the author of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.authorName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.authorName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#comment]
+=== `comment`
++++Free text comment.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.comment`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.comment,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#completedDateTime]
+=== `completedDateTime`
++++Date and time procedure was completed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProcedureDataSet.completedDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.completedDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#conclusion]
+=== `conclusion`
++++Conclusion drawn from test results.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LabTestDataSet.conclusion`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.conclusion,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#conclusionConfidence]
+=== `conclusionConfidence`
++++Description of confidence in conclusion.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LabTestDataSet.conclusionConfidence`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.conclusionConfidence,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConfigurationEvents]
+=== `ConfigurationEvents`
++++All configuration events created for this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.ConfigurationEvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConfigurationEvents,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#createdDateTime]
+=== `createdDateTime`
++++Date and time that this document was created.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.createdDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.createdDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#docStatus]
+=== `docStatus`
++++Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status' attribute.
+Example values for 'docStatus.status' are draft, approved, cancelled, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.docStatus`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.docStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Editor]
+=== `Editor`
++++Editor of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Editor`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Editor.adoc[`Editor`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Editor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#electronicAddress]
+=== `electronicAddress`
++++Electronic address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.electronicAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.electronicAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Issuer]
+=== `Issuer`
++++Issuer of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Issuer`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Issuer.adoc[`Issuer`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Issuer,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lastModifiedDateTime]
+=== `lastModifiedDateTime`
++++Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.lastModifiedDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lastModifiedDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MeasurementValue]
+=== `MeasurementValue`
++++Measurement value related to this procedure data set.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProcedureDataSet.MeasurementValue`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+| Inherited from
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MeasurementValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Procedure]
+=== `Procedure`
++++Procedure capturing this data set.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProcedureDataSet.Procedure`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Procedure.adoc[`Procedure`]
+
+| Inherited from
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Procedure,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Properties]
+=== `Properties`
++++UserAttributes used to specify further properties of this procedure data set. Use 'name' to specify what kind of property it is, and 'value.value' attribute for the actual value.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProcedureDataSet.Properties`
+| Cardinality
+| 0..*
+| Type
+| xref::class/UserAttribute.adoc[`UserAttribute`]
+
+| Inherited from
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Properties,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reasonForTest]
+=== `reasonForTest`
++++Reason for performing test.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LabTestDataSet.reasonForTest`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/TestReason.adoc[`TestReason`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reasonForTest,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#revisionNumber]
+=== `revisionNumber`
++++Revision number for this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.revisionNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.revisionNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Specimen]
+=== `Specimen`
++++Specimen on which lab testing done in determining results.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LabTestDataSet.Specimen`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Specimen.adoc[`Specimen`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Specimen,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++Status of subject matter (e.g., Agreement, Work) this document represents. For status of the document itself, use 'docStatus' attribute.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#subject]
+=== `subject`
++++Document subject.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.subject`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.subject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testEquipmentID]
+=== `testEquipmentID`
++++Identity of lab equipment used to perform test.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LabTestDataSet.testEquipmentID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testEquipmentID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#title]
+=== `title`
++++Document title.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.title`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.title,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TransformerObservations]
+=== `TransformerObservations`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProcedureDataSet.TransformerObservations`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TransformerObservation.adoc[`TransformerObservation`]
+
+| Inherited from
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TransformerObservations,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WorkTask]
+=== `WorkTask`
++++Work task that created this procedure data set.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProcedureDataSet.WorkTask`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WorkTask.adoc[`WorkTask`]
+
+| Inherited from
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WorkTask,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AssetTestLab.adoc[`AssetTestLab`] | xref::class/AssetTestLab.adoc#LabTestDataSet[`LabTestDataSet`]
+
+
+
+| xref::class/Specimen.adoc[`Specimen`] | xref::class/Specimen.adoc#LabTestDataSet[`LabTestDataSet`]
+
+
+|===
+

@@ -1,0 +1,76 @@
+= `FACTSDeviceKind`
+:toclevels: 4
+
+
++++Kind of FACTS device.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:FACTSDeviceKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `statcom`
+| `cim:FACTSDeviceKind.statcom`
+| n/a
+
+| `svc`
+| `cim:FACTSDeviceKind.svc`
+| n/a
+
+| `tcpar`
+| `cim:FACTSDeviceKind.tcpar`
+| n/a
+
+| `tcsc`
+| `cim:FACTSDeviceKind.tcsc`
+| n/a
+
+| `tcvl`
+| `cim:FACTSDeviceKind.tcvl`
+| n/a
+
+| `tsbr`
+| `cim:FACTSDeviceKind.tsbr`
+| n/a
+
+| `tssc`
+| `cim:FACTSDeviceKind.tssc`
+| n/a
+
+| `upfc`
+| `cim:FACTSDeviceKind.upfc`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/FACTSDevice.adoc[`FACTSDevice`] | xref::class/FACTSDevice.adoc#kind[`kind`]
+
+
+|===
+

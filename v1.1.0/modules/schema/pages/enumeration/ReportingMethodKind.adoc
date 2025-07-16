@@ -1,0 +1,56 @@
+= `ReportingMethodKind`
+:toclevels: 4
+
+
++++Method by which information is gathered from station.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ReportingMethodKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `automated`
+| `cim:ReportingMethodKind.automated`
+| n/a
+
+| `manual`
+| `cim:ReportingMethodKind.manual`
+| n/a
+
+| `queried`
+| `cim:ReportingMethodKind.queried`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ReportingCapability.adoc[`ReportingCapability`] | xref::class/ReportingCapability.adoc#reportingMethod[`reportingMethod`]
+
+
+|===
+

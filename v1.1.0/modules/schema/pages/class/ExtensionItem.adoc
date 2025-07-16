@@ -1,0 +1,156 @@
+= `ExtensionItem`
+:toclevels: 4
+
+
++++Specifies the extensions list items+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ExtensionItem`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`ExtensionItem`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<extName,`extName`>>
+//| [[slots_table.extName]]<<extName,`extName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++the name of the extension+++
+| _n/a_
+
+| <<extType,`extType`>>
+//| [[slots_table.extType]]<<extType,`extType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The type of the extension+++
+| _n/a_
+
+| <<extValue,`extValue`>>
+//| [[slots_table.extValue]]<<extValue,`extValue`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++the value of the extension+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#extName]
+=== `extName`
++++the name of the extension+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExtensionItem.extName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.extName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#extType]
+=== `extType`
++++The type of the extension+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExtensionItem.extType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.extType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#extValue]
+=== `extValue`
++++the value of the extension+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExtensionItem.extValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.extValue,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ExtensionsList.adoc[`ExtensionsList`] | xref::class/ExtensionsList.adoc#extensionsItem[`extensionsItem`]
+
+
+|===
+

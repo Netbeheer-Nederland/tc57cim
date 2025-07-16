@@ -1,0 +1,56 @@
+= `ApplicationSecurityKind`
+:toclevels: 4
+
+
++++Specifies the expected security mechanism, per IEC 62351-4, to be utilized.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ApplicationSecurityKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `endToEndSecure`
+| `cim:ApplicationSecurityKind.endToEndSecure`
+| n/a
+
+| `nonSecure`
+| `cim:ApplicationSecurityKind.nonSecure`
+| n/a
+
+| `secure`
+| `cim:ApplicationSecurityKind.secure`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ICCPVirtualControlCentre.adoc[`ICCPVirtualControlCentre`] | xref::class/ICCPVirtualControlCentre.adoc#applicationSecurityRequirement[`applicationSecurityRequirement`]
+
+
+|===
+

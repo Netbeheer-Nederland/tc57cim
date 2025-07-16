@@ -1,0 +1,52 @@
+= `ContingencyEquipmentStatusKind`
+:toclevels: 4
+
+
++++Indicates the state which the contingency equipment is to be in when the contingency is applied.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ContingencyEquipmentStatusKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `inService`
+| `cim:ContingencyEquipmentStatusKind.inService`
+| n/a
+
+| `outOfService`
+| `cim:ContingencyEquipmentStatusKind.outOfService`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ContingencyEquipment.adoc[`ContingencyEquipment`] | xref::class/ContingencyEquipment.adoc#contingentStatus[`contingentStatus`]
+
+
+|===
+

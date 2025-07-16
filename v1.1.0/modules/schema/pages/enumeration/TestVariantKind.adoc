@@ -1,0 +1,88 @@
+= `TestVariantKind`
+:toclevels: 4
+
+
++++Test variants.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TestVariantKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `0C`
+| `cim:TestVariantKind.0C`
+| n/a
+
+| `100C`
+| `cim:TestVariantKind.100C`
+| n/a
+
+| `164hours`
+| `cim:TestVariantKind.164hours`
+| n/a
+
+| `1mm`
+| `cim:TestVariantKind.1mm`
+| n/a
+
+| `25C`
+| `cim:TestVariantKind.25C`
+| n/a
+
+| `2mm`
+| `cim:TestVariantKind.2mm`
+| n/a
+
+| `30C`
+| `cim:TestVariantKind.30C`
+| n/a
+
+| `40C`
+| `cim:TestVariantKind.40C`
+| n/a
+
+| `72hours`
+| `cim:TestVariantKind.72hours`
+| n/a
+
+| `minus30C`
+| `cim:TestVariantKind.minus30C`
+| n/a
+
+| `minus40C`
+| `cim:TestVariantKind.minus40C`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TestStandard.adoc[`TestStandard`] | xref::class/TestStandard.adoc#testVariant[`testVariant`]
+
+
+|===
+

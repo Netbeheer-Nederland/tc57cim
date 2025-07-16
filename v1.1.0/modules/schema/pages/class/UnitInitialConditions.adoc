@@ -1,0 +1,722 @@
+= `UnitInitialConditions`
+:toclevels: 4
+
+
++++Resource status at the end of a given clearing period.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:UnitInitialConditions`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`UnitInitialConditions`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<GeneratingUnit,`GeneratingUnit`>>
+//| [[slots_table.GeneratingUnit]]<<GeneratingUnit,`GeneratingUnit`>>
+| 0..1 +
+xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`]
+| _n/a_
+| _n/a_
+
+| <<cumEnergy,`cumEnergy`>>
+//| [[slots_table.cumEnergy]]<<cumEnergy,`cumEnergy`>>
+| 0..1 +
+xref::class/RealEnergy.adoc[`RealEnergy`]
+| +++Cumulative energy production over trading period.+++
+| _n/a_
+
+| <<cumStatusChanges,`cumStatusChanges`>>
+//| [[slots_table.cumStatusChanges]]<<cumStatusChanges,`cumStatusChanges`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Cumulative number of status changes of the resource.+++
+| _n/a_
+
+| <<numberOfStartups,`numberOfStartups`>>
+//| [[slots_table.numberOfStartups]]<<numberOfStartups,`numberOfStartups`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Number of start ups in the Operating Day until the end of previous hour.+++
+| _n/a_
+
+| <<onlineStatus,`onlineStatus`>>
+//| [[slots_table.onlineStatus]]<<onlineStatus,`onlineStatus`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++'true' if the GeneratingUnit is currently On-Line+++
+| _n/a_
+
+| <<resourceMW,`resourceMW`>>
+//| [[slots_table.resourceMW]]<<resourceMW,`resourceMW`>>
+| 0..1 +
+xref::class/ActivePower.adoc[`ActivePower`]
+| +++Resource MW output at the end of previous clearing period.+++
+| _n/a_
+
+| <<resourceStatus,`resourceStatus`>>
+//| [[slots_table.resourceStatus]]<<resourceStatus,`resourceStatus`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Resource status at the end of previous clearing period:
+0 - off-line
+1 - on-line production
+2 - in shutdown process
+3 -...+++
+| _n/a_
+
+| <<statusDate,`statusDate`>>
+//| [[slots_table.statusDate]]<<statusDate,`statusDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Time and date for resourceStatus+++
+| _n/a_
+
+| <<timeInStatus,`timeInStatus`>>
+//| [[slots_table.timeInStatus]]<<timeInStatus,`timeInStatus`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Time in market trading intervals the resource is in the state as of the end of the previous clearing period.+++
+| _n/a_
+
+| <<timeInterval,`timeInterval`>>
+//| [[slots_table.timeInterval]]<<timeInterval,`timeInterval`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Time interval+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cumEnergy]
+=== `cumEnergy`
++++Cumulative energy production over trading period.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnitInitialConditions.cumEnergy`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RealEnergy.adoc[`RealEnergy`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cumEnergy,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cumStatusChanges]
+=== `cumStatusChanges`
++++Cumulative number of status changes of the resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnitInitialConditions.cumStatusChanges`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cumStatusChanges,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#GeneratingUnit]
+=== `GeneratingUnit`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnitInitialConditions.GeneratingUnit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.GeneratingUnit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#numberOfStartups]
+=== `numberOfStartups`
++++Number of start ups in the Operating Day until the end of previous hour.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnitInitialConditions.numberOfStartups`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.numberOfStartups,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#onlineStatus]
+=== `onlineStatus`
++++'true' if the GeneratingUnit is currently On-Line+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnitInitialConditions.onlineStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.onlineStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#resourceMW]
+=== `resourceMW`
++++Resource MW output at the end of previous clearing period.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnitInitialConditions.resourceMW`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.resourceMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#resourceStatus]
+=== `resourceStatus`
++++Resource status at the end of previous clearing period:
+0 - off-line
+1 - on-line production
+2 - in shutdown process
+3 - in startup process+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnitInitialConditions.resourceStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.resourceStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#statusDate]
+=== `statusDate`
++++Time and date for resourceStatus+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnitInitialConditions.statusDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.statusDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeInStatus]
+=== `timeInStatus`
++++Time in market trading intervals the resource is in the state as of the end of the previous clearing period.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnitInitialConditions.timeInStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeInStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeInterval]
+=== `timeInterval`
++++Time interval+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnitInitialConditions.timeInterval`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeInterval,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`] | xref::class/RegisteredGenerator.adoc#UnitInitialConditions[`UnitInitialConditions`]
+
+
+|===
+

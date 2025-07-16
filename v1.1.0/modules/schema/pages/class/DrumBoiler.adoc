@@ -1,0 +1,1922 @@
+= `DrumBoiler`
+:toclevels: 4
+
+
++++Drum boiler.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DrumBoiler`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+*** xref::class/SteamSupply.adoc[`SteamSupply`]
+**** xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+***** *`DrumBoiler`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<drumBoilerRating,`drumBoilerRating`>>
+//| [[slots_table.drumBoilerRating]]<<drumBoilerRating,`drumBoilerRating`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Rating of drum boiler in steam units.+++
+| _n/a_
+
+| <<auxPowerVersusFrequency,`auxPowerVersusFrequency`>>
+//| [[slots_table.auxPowerVersusFrequency]]<<auxPowerVersusFrequency,`auxPowerVersusFrequency`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Off nominal frequency effect on auxiliary real power. Per unit active power variation versus per unit frequency variation.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<auxPowerVersusVoltage,`auxPowerVersusVoltage`>>
+//| [[slots_table.auxPowerVersusVoltage]]<<auxPowerVersusVoltage,`auxPowerVersusVoltage`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Off nominal voltage effect on auxiliary real power. Per unit active power variation versus per unit voltage variation.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<boilerControlMode,`boilerControlMode`>>
+//| [[slots_table.boilerControlMode]]<<boilerControlMode,`boilerControlMode`>>
+| 0..1 +
+xref::enumeration/BoilerControlMode.adoc[`BoilerControlMode`]
+| +++The control mode of the boiler.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<controlErrorBiasP,`controlErrorBiasP`>>
+//| [[slots_table.controlErrorBiasP]]<<controlErrorBiasP,`controlErrorBiasP`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Active power error bias ratio.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<controlIC,`controlIC`>>
+//| [[slots_table.controlIC]]<<controlIC,`controlIC`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Integral constant.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<controlPC,`controlPC`>>
+//| [[slots_table.controlPC]]<<controlPC,`controlPC`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Proportional constant.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<controlPEB,`controlPEB`>>
+//| [[slots_table.controlPEB]]<<controlPEB,`controlPEB`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Pressure error bias ratio.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<controlPED,`controlPED`>>
+//| [[slots_table.controlPED]]<<controlPED,`controlPED`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Pressure error deadband.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<controlTC,`controlTC`>>
+//| [[slots_table.controlTC]]<<controlTC,`controlTC`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Time constant.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<feedWaterIG,`feedWaterIG`>>
+//| [[slots_table.feedWaterIG]]<<feedWaterIG,`feedWaterIG`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Feedwater integral gain ratio.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<feedWaterPG,`feedWaterPG`>>
+//| [[slots_table.feedWaterPG]]<<feedWaterPG,`feedWaterPG`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Feedwater proportional gain ratio.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<feedWaterTC,`feedWaterTC`>>
+//| [[slots_table.feedWaterTC]]<<feedWaterTC,`feedWaterTC`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Feedwater time constant ratio.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<fuelDemandLimit,`fuelDemandLimit`>>
+//| [[slots_table.fuelDemandLimit]]<<fuelDemandLimit,`fuelDemandLimit`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Fuel demand limit.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<fuelSupplyDelay,`fuelSupplyDelay`>>
+//| [[slots_table.fuelSupplyDelay]]<<fuelSupplyDelay,`fuelSupplyDelay`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Fuel delay.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<fuelSupplyTC,`fuelSupplyTC`>>
+//| [[slots_table.fuelSupplyTC]]<<fuelSupplyTC,`fuelSupplyTC`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Fuel supply time constant.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<maxErrorRateP,`maxErrorRateP`>>
+//| [[slots_table.maxErrorRateP]]<<maxErrorRateP,`maxErrorRateP`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Active power maximum error rate limit.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<mechPowerSensorLag,`mechPowerSensorLag`>>
+//| [[slots_table.mechPowerSensorLag]]<<mechPowerSensorLag,`mechPowerSensorLag`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Mechanical power sensor lag.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<minErrorRateP,`minErrorRateP`>>
+//| [[slots_table.minErrorRateP]]<<minErrorRateP,`minErrorRateP`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Active power minimum error rate limit.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<pressureCtrlDG,`pressureCtrlDG`>>
+//| [[slots_table.pressureCtrlDG]]<<pressureCtrlDG,`pressureCtrlDG`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Pressure control derivative gain ratio.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<pressureCtrlIG,`pressureCtrlIG`>>
+//| [[slots_table.pressureCtrlIG]]<<pressureCtrlIG,`pressureCtrlIG`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Pressure control integral gain ratio.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<pressureCtrlPG,`pressureCtrlPG`>>
+//| [[slots_table.pressureCtrlPG]]<<pressureCtrlPG,`pressureCtrlPG`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Pressure control proportional gain ratio.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<pressureFeedback,`pressureFeedback`>>
+//| [[slots_table.pressureFeedback]]<<pressureFeedback,`pressureFeedback`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Pressure feedback indicator.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<superHeater1Capacity,`superHeater1Capacity`>>
+//| [[slots_table.superHeater1Capacity]]<<superHeater1Capacity,`superHeater1Capacity`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Drum/primary superheater capacity.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<superHeater2Capacity,`superHeater2Capacity`>>
+//| [[slots_table.superHeater2Capacity]]<<superHeater2Capacity,`superHeater2Capacity`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Secondary superheater capacity.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<superHeaterPipePD,`superHeaterPipePD`>>
+//| [[slots_table.superHeaterPipePD]]<<superHeaterPipePD,`superHeaterPipePD`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Superheater pipe pressure drop constant.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<throttlePressureSP,`throttlePressureSP`>>
+//| [[slots_table.throttlePressureSP]]<<throttlePressureSP,`throttlePressureSP`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Throttle pressure setpoint.+++
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+| <<SteamTurbines,`SteamTurbines`>>
+//| [[slots_table.SteamTurbines]]<<SteamTurbines,`SteamTurbines`>>
+| 0..* +
+xref::class/SteamTurbine.adoc[`SteamTurbine`]
+| +++Steam turbines may have steam supplied by a steam supply.+++
+| xref::class/SteamSupply.adoc[`SteamSupply`]
+
+| <<steamSupplyRating,`steamSupplyRating`>>
+//| [[slots_table.steamSupplyRating]]<<steamSupplyRating,`steamSupplyRating`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Rating of steam supply.+++
+| xref::class/SteamSupply.adoc[`SteamSupply`]
+
+| <<AssetDatasheet,`AssetDatasheet`>>
+//| [[slots_table.AssetDatasheet]]<<AssetDatasheet,`AssetDatasheet`>>
+| 0..1 +
+xref::class/AssetInfo.adoc[`AssetInfo`]
+| +++Datasheet information for this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Assets,`Assets`>>
+//| [[slots_table.Assets]]<<Assets,`Assets`>>
+| 0..* +
+xref::class/Asset.adoc[`Asset`]
+| +++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a...+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Clearances,`Clearances`>>
+//| [[slots_table.Clearances]]<<Clearances,`Clearances`>>
+| 0..* +
+xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+| +++All clearances applicable to this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<ConfigurationEvent,`ConfigurationEvent`>>
+//| [[slots_table.ConfigurationEvent]]<<ConfigurationEvent,`ConfigurationEvent`>>
+| 0..* +
+xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this Power System resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Controls,`Controls`>>
+//| [[slots_table.Controls]]<<Controls,`Controls`>>
+| 0..* +
+xref::class/Control.adoc[`Control`]
+| +++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or...+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<GenericAction,`GenericAction`>>
+//| [[slots_table.GenericAction]]<<GenericAction,`GenericAction`>>
+| 0..* +
+xref::class/GenericAction.adoc[`GenericAction`]
+| +++The generic action that is performed on the power system resource+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Location,`Location`>>
+//| [[slots_table.Location]]<<Location,`Location`>>
+| 0..1 +
+xref::class/Location.adoc[`Location`]
+| +++Location of this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Measurements,`Measurements`>>
+//| [[slots_table.Measurements]]<<Measurements,`Measurements`>>
+| 0..* +
+xref::class/Measurement.adoc[`Measurement`]
+| +++The measurements associated with this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<OperatingShare,`OperatingShare`>>
+//| [[slots_table.OperatingShare]]<<OperatingShare,`OperatingShare`>>
+| 0..* +
+xref::class/OperatingShare.adoc[`OperatingShare`]
+| +++The operating shares of this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<OperationalTags,`OperationalTags`>>
+//| [[slots_table.OperationalTags]]<<OperationalTags,`OperationalTags`>>
+| 0..* +
+xref::class/OperationalTag.adoc[`OperationalTag`]
+| +++All operational tags placed on this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<PSREvents,`PSREvents`>>
+//| [[slots_table.PSREvents]]<<PSREvents,`PSREvents`>>
+| 0..* +
+xref::class/PSREvent.adoc[`PSREvent`]
+| +++All events associated with this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<PSRType,`PSRType`>>
+//| [[slots_table.PSRType]]<<PSRType,`PSRType`>>
+| 0..1 +
+xref::class/PSRType.adoc[`PSRType`]
+| +++Custom classification for this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<ReportingGroup,`ReportingGroup`>>
+//| [[slots_table.ReportingGroup]]<<ReportingGroup,`ReportingGroup`>>
+| 0..* +
+xref::class/ReportingGroup.adoc[`ReportingGroup`]
+| +++Reporting groups to which this power system resource belongs.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<VerificationAction,`VerificationAction`>>
+//| [[slots_table.VerificationAction]]<<VerificationAction,`VerificationAction`>>
+| 0..* +
+xref::class/VerificationAction.adoc[`VerificationAction`]
+| +++The verification action that is performed on the power system resource+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AssetDatasheet]
+=== `AssetDatasheet`
++++Datasheet information for this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.AssetDatasheet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AssetDatasheet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a single AC line segment.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Assets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#auxPowerVersusFrequency]
+=== `auxPowerVersusFrequency`
++++Off nominal frequency effect on auxiliary real power. Per unit active power variation versus per unit frequency variation.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.auxPowerVersusFrequency`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.auxPowerVersusFrequency,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#auxPowerVersusVoltage]
+=== `auxPowerVersusVoltage`
++++Off nominal voltage effect on auxiliary real power. Per unit active power variation versus per unit voltage variation.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.auxPowerVersusVoltage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.auxPowerVersusVoltage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#boilerControlMode]
+=== `boilerControlMode`
++++The control mode of the boiler.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.boilerControlMode`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/BoilerControlMode.adoc[`BoilerControlMode`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.boilerControlMode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Clearances]
+=== `Clearances`
++++All clearances applicable to this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Clearances`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Clearances,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConfigurationEvent]
+=== `ConfigurationEvent`
++++All configuration events created for this Power System resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ConfigurationEvent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConfigurationEvent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#controlErrorBiasP]
+=== `controlErrorBiasP`
++++Active power error bias ratio.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.controlErrorBiasP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.controlErrorBiasP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#controlIC]
+=== `controlIC`
++++Integral constant.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.controlIC`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.controlIC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#controlPC]
+=== `controlPC`
++++Proportional constant.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.controlPC`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.controlPC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#controlPEB]
+=== `controlPEB`
++++Pressure error bias ratio.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.controlPEB`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.controlPEB,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#controlPED]
+=== `controlPED`
++++Pressure error deadband.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.controlPED`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.controlPED,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Controls]
+=== `Controls`
++++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or capacitor bank breaker actuator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Controls`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Control.adoc[`Control`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Controls,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#controlTC]
+=== `controlTC`
++++Time constant.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.controlTC`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.controlTC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#drumBoilerRating]
+=== `drumBoilerRating`
++++Rating of drum boiler in steam units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DrumBoiler.drumBoilerRating`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.drumBoilerRating,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#feedWaterIG]
+=== `feedWaterIG`
++++Feedwater integral gain ratio.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.feedWaterIG`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.feedWaterIG,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#feedWaterPG]
+=== `feedWaterPG`
++++Feedwater proportional gain ratio.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.feedWaterPG`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.feedWaterPG,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#feedWaterTC]
+=== `feedWaterTC`
++++Feedwater time constant ratio.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.feedWaterTC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.feedWaterTC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#fuelDemandLimit]
+=== `fuelDemandLimit`
++++Fuel demand limit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.fuelDemandLimit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.fuelDemandLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#fuelSupplyDelay]
+=== `fuelSupplyDelay`
++++Fuel delay.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.fuelSupplyDelay`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.fuelSupplyDelay,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#fuelSupplyTC]
+=== `fuelSupplyTC`
++++Fuel supply time constant.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.fuelSupplyTC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.fuelSupplyTC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#GenericAction]
+=== `GenericAction`
++++The generic action that is performed on the power system resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.GenericAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/GenericAction.adoc[`GenericAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.GenericAction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location of this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Location,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxErrorRateP]
+=== `maxErrorRateP`
++++Active power maximum error rate limit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.maxErrorRateP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxErrorRateP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Measurements]
+=== `Measurements`
++++The measurements associated with this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Measurements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Measurement.adoc[`Measurement`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Measurements,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mechPowerSensorLag]
+=== `mechPowerSensorLag`
++++Mechanical power sensor lag.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.mechPowerSensorLag`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mechPowerSensorLag,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minErrorRateP]
+=== `minErrorRateP`
++++Active power minimum error rate limit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.minErrorRateP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minErrorRateP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperatingShare]
+=== `OperatingShare`
++++The operating shares of this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperatingShare`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperatingShare.adoc[`OperatingShare`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperatingShare,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperationalTags]
+=== `OperationalTags`
++++All operational tags placed on this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperationalTags`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperationalTag.adoc[`OperationalTag`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperationalTags,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pressureCtrlDG]
+=== `pressureCtrlDG`
++++Pressure control derivative gain ratio.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.pressureCtrlDG`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pressureCtrlDG,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pressureCtrlIG]
+=== `pressureCtrlIG`
++++Pressure control integral gain ratio.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.pressureCtrlIG`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pressureCtrlIG,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pressureCtrlPG]
+=== `pressureCtrlPG`
++++Pressure control proportional gain ratio.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.pressureCtrlPG`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pressureCtrlPG,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pressureFeedback]
+=== `pressureFeedback`
++++Pressure feedback indicator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.pressureFeedback`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pressureFeedback,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PSREvents]
+=== `PSREvents`
++++All events associated with this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSREvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PSREvent.adoc[`PSREvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PSREvents,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PSRType]
+=== `PSRType`
++++Custom classification for this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSRType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PSRType.adoc[`PSRType`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PSRType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ReportingGroup]
+=== `ReportingGroup`
++++Reporting groups to which this power system resource belongs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ReportingGroup`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ReportingGroup.adoc[`ReportingGroup`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ReportingGroup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#steamSupplyRating]
+=== `steamSupplyRating`
++++Rating of steam supply.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SteamSupply.steamSupplyRating`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/SteamSupply.adoc[`SteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.steamSupplyRating,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SteamTurbines]
+=== `SteamTurbines`
++++Steam turbines may have steam supplied by a steam supply.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SteamSupply.SteamTurbines`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SteamTurbine.adoc[`SteamTurbine`]
+
+| Inherited from
+| xref::class/SteamSupply.adoc[`SteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SteamTurbines,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#superHeater1Capacity]
+=== `superHeater1Capacity`
++++Drum/primary superheater capacity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.superHeater1Capacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.superHeater1Capacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#superHeater2Capacity]
+=== `superHeater2Capacity`
++++Secondary superheater capacity.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.superHeater2Capacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.superHeater2Capacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#superHeaterPipePD]
+=== `superHeaterPipePD`
++++Superheater pipe pressure drop constant.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.superHeaterPipePD`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.superHeaterPipePD,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#throttlePressureSP]
+=== `throttlePressureSP`
++++Throttle pressure setpoint.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:FossilSteamSupply.throttlePressureSP`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+| Inherited from
+| xref::class/FossilSteamSupply.adoc[`FossilSteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.throttlePressureSP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VerificationAction]
+=== `VerificationAction`
++++The verification action that is performed on the power system resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.VerificationAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/VerificationAction.adoc[`VerificationAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VerificationAction,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

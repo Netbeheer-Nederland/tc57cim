@@ -1,0 +1,93 @@
+= `UnitType`
+:toclevels: 4
+
+
++++Combined Cycle
+Gas Turbine
+Hydro Turbine
+Other
+Photovoltaic
+Hydro Pump-Turbine
+Reciprocating Engine
+Steam Turbine
+Synchronous Condenser
+Wind Turbine+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:UnitType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `CCYC`
+| `cim:UnitType.CCYC`
+| n/a
+
+| `GTUR`
+| `cim:UnitType.GTUR`
+| n/a
+
+| `HYDR`
+| `cim:UnitType.HYDR`
+| n/a
+
+| `OTHR`
+| `cim:UnitType.OTHR`
+| n/a
+
+| `PHOT`
+| `cim:UnitType.PHOT`
+| n/a
+
+| `PTUR`
+| `cim:UnitType.PTUR`
+| n/a
+
+| `RECP`
+| `cim:UnitType.RECP`
+| n/a
+
+| `STUR`
+| `cim:UnitType.STUR`
+| n/a
+
+| `SYNC`
+| `cim:UnitType.SYNC`
+| n/a
+
+| `WIND`
+| `cim:UnitType.WIND`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RegisteredGenerator.adoc[`RegisteredGenerator`] | xref::class/RegisteredGenerator.adoc#unitType[`unitType`]
+
+
+|===
+

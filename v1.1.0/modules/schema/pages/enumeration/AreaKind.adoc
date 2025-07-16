@@ -1,0 +1,76 @@
+= `AreaKind`
+:toclevels: 4
+
+
++++Enumeration for the type of area defined; e.g., county, state, parish, zipcode, etc.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AreaKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `borough`
+| `cim:AreaKind.borough`
+| n/a
+
+| `county`
+| `cim:AreaKind.county`
+| n/a
+
+| `parish`
+| `cim:AreaKind.parish`
+| n/a
+
+| `serviceArea`
+| `cim:AreaKind.serviceArea`
+| n/a
+
+| `state`
+| `cim:AreaKind.state`
+| n/a
+
+| `township`
+| `cim:AreaKind.township`
+| n/a
+
+| `ward`
+| `cim:AreaKind.ward`
+| n/a
+
+| `zipcode`
+| `cim:AreaKind.zipcode`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/OutageArea.adoc[`OutageArea`] | xref::class/OutageArea.adoc#outageAreaKind[`outageAreaKind`]
+
+
+|===
+

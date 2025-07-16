@@ -1,0 +1,123 @@
+= `GasPrice`
+:toclevels: 4
+
+
++++Price of gas in monetary units.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:GasPrice`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`GasPrice`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<FuelRegion,`FuelRegion`>>
+//| [[slots_table.FuelRegion]]<<FuelRegion,`FuelRegion`>>
+| 1 +
+xref::class/FuelRegion.adoc[`FuelRegion`]
+| _n/a_
+| _n/a_
+
+| <<gasPriceIndex,`gasPriceIndex`>>
+//| [[slots_table.gasPriceIndex]]<<gasPriceIndex,`gasPriceIndex`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The average natural gas price at a defined fuel region.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#FuelRegion]
+=== `FuelRegion`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GasPrice.FuelRegion`
+| Cardinality
+| 1
+| Type
+| xref::class/FuelRegion.adoc[`FuelRegion`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.FuelRegion,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#gasPriceIndex]
+=== `gasPriceIndex`
++++The average natural gas price at a defined fuel region.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GasPrice.gasPriceIndex`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.gasPriceIndex,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/FuelRegion.adoc[`FuelRegion`] | xref::class/FuelRegion.adoc#GasPrice[`GasPrice`]
+
+
+|===
+

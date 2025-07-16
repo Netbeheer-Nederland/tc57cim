@@ -1,0 +1,72 @@
+= `PinEquipmentKind`
+:toclevels: 4
+
+
++++Categorisation of type of compare done on Equipment.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:PinEquipmentKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `activePowerLimit`
+| `cim:PinEquipmentKind.activePowerLimit`
+| n/a
+
+| `apparentPowerLimit`
+| `cim:PinEquipmentKind.apparentPowerLimit`
+| n/a
+
+| `connected`
+| `cim:PinEquipmentKind.connected`
+| n/a
+
+| `currentLimit`
+| `cim:PinEquipmentKind.currentLimit`
+| n/a
+
+| `inService`
+| `cim:PinEquipmentKind.inService`
+| n/a
+
+| `ratedCurrent`
+| `cim:PinEquipmentKind.ratedCurrent`
+| n/a
+
+| `voltageLimit`
+| `cim:PinEquipmentKind.voltageLimit`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/PinEquipment.adoc[`PinEquipment`] | xref::class/PinEquipment.adoc#kind[`kind`]
+
+
+|===
+

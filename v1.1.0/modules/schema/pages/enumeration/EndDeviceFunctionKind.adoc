@@ -1,0 +1,84 @@
+= `EndDeviceFunctionKind`
+:toclevels: 4
+
+
++++Kind of end device function.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:EndDeviceFunctionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `autonomousDst`
+| `cim:EndDeviceFunctionKind.autonomousDst`
+| n/a
+
+| `demandResponse`
+| `cim:EndDeviceFunctionKind.demandResponse`
+| n/a
+
+| `electricMetering`
+| `cim:EndDeviceFunctionKind.electricMetering`
+| n/a
+
+| `gasMetering`
+| `cim:EndDeviceFunctionKind.gasMetering`
+| n/a
+
+| `metrology`
+| `cim:EndDeviceFunctionKind.metrology`
+| n/a
+
+| `onRequestRead`
+| `cim:EndDeviceFunctionKind.onRequestRead`
+| n/a
+
+| `outageHistory`
+| `cim:EndDeviceFunctionKind.outageHistory`
+| n/a
+
+| `relaysProgramming`
+| `cim:EndDeviceFunctionKind.relaysProgramming`
+| n/a
+
+| `reverseFlow`
+| `cim:EndDeviceFunctionKind.reverseFlow`
+| n/a
+
+| `waterMetering`
+| `cim:EndDeviceFunctionKind.waterMetering`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/SimpleEndDeviceFunction.adoc[`SimpleEndDeviceFunction`] | xref::class/SimpleEndDeviceFunction.adoc#kind[`kind`]
+
+
+|===
+

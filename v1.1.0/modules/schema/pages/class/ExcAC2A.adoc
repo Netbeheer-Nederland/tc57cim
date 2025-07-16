@@ -1,0 +1,1640 @@
+= `ExcAC2A`
+:toclevels: 4
+
+
++++Modified IEEE AC2A alternator-supplied rectifier excitation system with different field current limit.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ExcAC2A`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+**** *`ExcAC2A`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<hvgate,`hvgate`>>
+//| [[slots_table.hvgate]]<<hvgate,`hvgate`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Indicates if HV gate is active (<i>HVgate</i>).
+true = gate is used
+false = gate is not used.
+Typical value = true.+++
+| _n/a_
+
+| <<ka,`ka`>>
+//| [[slots_table.ka]]<<ka,`ka`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Voltage regulator gain (<i>Ka</i>) (&gt; 0).  Typical value = 400.+++
+| _n/a_
+
+| <<kb,`kb`>>
+//| [[slots_table.kb]]<<kb,`kb`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Second stage regulator gain (<i>Kb</i>) (&gt; 0).  Exciter field current controller gain.  Typical value = 25.+++
+| _n/a_
+
+| <<kb1,`kb1`>>
+//| [[slots_table.kb1]]<<kb1,`kb1`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Second stage regulator gain (<i>Kb1</i>). It is exciter field current controller gain used as alternative to <i>Kb</i> to...+++
+| _n/a_
+
+| <<kc,`kc`>>
+//| [[slots_table.kc]]<<kc,`kc`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Rectifier loading factor proportional to commutating reactance (<i>Kc</i>) (&gt;= 0).  Typical value = 0,28.+++
+| _n/a_
+
+| <<kd,`kd`>>
+//| [[slots_table.kd]]<<kd,`kd`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Demagnetizing factor, a function of exciter alternator reactances (<i>Kd</i>) (&gt;= 0).  Typical value = 0,35.+++
+| _n/a_
+
+| <<ke,`ke`>>
+//| [[slots_table.ke]]<<ke,`ke`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Exciter constant related to self-excited field (<i>Ke</i>).  Typical value = 1.+++
+| _n/a_
+
+| <<kf,`kf`>>
+//| [[slots_table.kf]]<<kf,`kf`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Excitation control system stabilizer gains (<i>Kf</i>) (&gt;= 0).  Typical value = 0,03.+++
+| _n/a_
+
+| <<kh,`kh`>>
+//| [[slots_table.kh]]<<kh,`kh`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Exciter field current feedback gain (<i>Kh</i>) (&gt;= 0).  Typical value = 1.+++
+| _n/a_
+
+| <<kl,`kl`>>
+//| [[slots_table.kl]]<<kl,`kl`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Exciter field current limiter gain (<i>Kl</i>).  Typical value = 10.+++
+| _n/a_
+
+| <<kl1,`kl1`>>
+//| [[slots_table.kl1]]<<kl1,`kl1`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Coefficient to allow different usage of the model (<i>Kl1</i>).  Typical value = 1.+++
+| _n/a_
+
+| <<ks,`ks`>>
+//| [[slots_table.ks]]<<ks,`ks`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Coefficient to allow different usage of the model-speed coefficient (<i>Ks</i>) (&gt;= 0).  Typical value = 0.+++
+| _n/a_
+
+| <<lvgate,`lvgate`>>
+//| [[slots_table.lvgate]]<<lvgate,`lvgate`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Indicates if LV gate is active (<i>LVgate</i>).
+true = gate is used
+false = gate is not used.
+Typical value = true.+++
+| _n/a_
+
+| <<seve1,`seve1`>>
+//| [[slots_table.seve1]]<<seve1,`seve1`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Exciter saturation function value at the corresponding exciter voltage, <i>Ve</i><i><sub>1</sub></i>, back of commutating...+++
+| _n/a_
+
+| <<seve2,`seve2`>>
+//| [[slots_table.seve2]]<<seve2,`seve2`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Exciter saturation function value at the corresponding exciter voltage, <i>Ve</i><i><sub>2</sub></i>, back of commutating...+++
+| _n/a_
+
+| <<ta,`ta`>>
+//| [[slots_table.ta]]<<ta,`ta`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Voltage regulator time constant (<i>Ta</i>) (&gt; 0).  Typical value = 0,02.+++
+| _n/a_
+
+| <<tb,`tb`>>
+//| [[slots_table.tb]]<<tb,`tb`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Voltage regulator time constant (<i>Tb</i>) (&gt;= 0).  Typical value = 0.+++
+| _n/a_
+
+| <<tc,`tc`>>
+//| [[slots_table.tc]]<<tc,`tc`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Voltage regulator time constant (<i>Tc</i>) (&gt;= 0).  Typical value = 0.+++
+| _n/a_
+
+| <<te,`te`>>
+//| [[slots_table.te]]<<te,`te`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Exciter time constant, integration rate associated with exciter control (<i>Te</i>) (&gt; 0).  Typical value = 0,6.+++
+| _n/a_
+
+| <<tf,`tf`>>
+//| [[slots_table.tf]]<<tf,`tf`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Excitation control system stabilizer time constant (<i>Tf</i>) (&gt; 0).  Typical value = 1.+++
+| _n/a_
+
+| <<vamax,`vamax`>>
+//| [[slots_table.vamax]]<<vamax,`vamax`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum voltage regulator output (<i>Vamax</i>) (&gt; 0).  Typical value = 8.+++
+| _n/a_
+
+| <<vamin,`vamin`>>
+//| [[slots_table.vamin]]<<vamin,`vamin`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Minimum voltage regulator output (<i>Vamin</i>) (&lt; 0).  Typical value = -8.+++
+| _n/a_
+
+| <<ve1,`ve1`>>
+//| [[slots_table.ve1]]<<ve1,`ve1`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Exciter alternator output voltages back of commutating reactance at which saturation is defined...+++
+| _n/a_
+
+| <<ve2,`ve2`>>
+//| [[slots_table.ve2]]<<ve2,`ve2`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Exciter alternator output voltages back of commutating reactance at which saturation is defined...+++
+| _n/a_
+
+| <<vfemax,`vfemax`>>
+//| [[slots_table.vfemax]]<<vfemax,`vfemax`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Exciter field current limit reference (<i>Vfemax</i>) (&gt;= 0).  Typical value = 4,4.+++
+| _n/a_
+
+| <<vlr,`vlr`>>
+//| [[slots_table.vlr]]<<vlr,`vlr`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum exciter field current (<i>Vlr</i>) (&gt; 0).  Typical value = 4,4.+++
+| _n/a_
+
+| <<vrmax,`vrmax`>>
+//| [[slots_table.vrmax]]<<vrmax,`vrmax`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum voltage regulator outputs (<i>Vrmax</i>) (&gt; 0).  Typical value = 105.+++
+| _n/a_
+
+| <<vrmin,`vrmin`>>
+//| [[slots_table.vrmin]]<<vrmin,`vrmin`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Minimum voltage regulator outputs (<i>Vrmin</i>) (&lt; 0).  Typical value = -95.+++
+| _n/a_
+
+| <<DiscontinuousExcitationControlDynamics,`DiscontinuousExcitationControlDynamics`>>
+//| [[slots_table.DiscontinuousExcitationControlDynamics]]<<DiscontinuousExcitationControlDynamics,`DiscontinuousExcitationControlDynamics`>>
+| 0..1 +
+xref::class/DiscontinuousExcitationControlDynamics.adoc[`DiscontinuousExcitationControlDynamics`]
+| +++Discontinuous excitation control model associated with this excitation system model.+++
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+| <<OverexcitationLimiterDynamics,`OverexcitationLimiterDynamics`>>
+//| [[slots_table.OverexcitationLimiterDynamics]]<<OverexcitationLimiterDynamics,`OverexcitationLimiterDynamics`>>
+| 0..1 +
+xref::class/OverexcitationLimiterDynamics.adoc[`OverexcitationLimiterDynamics`]
+| +++Overexcitation limiter model associated with this excitation system model.+++
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+| <<PFVArControllerType1Dynamics,`PFVArControllerType1Dynamics`>>
+//| [[slots_table.PFVArControllerType1Dynamics]]<<PFVArControllerType1Dynamics,`PFVArControllerType1Dynamics`>>
+| 0..1 +
+xref::class/PFVArControllerType1Dynamics.adoc[`PFVArControllerType1Dynamics`]
+| +++Power factor or VAr controller type 1 model associated with this excitation system model.+++
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+| <<PFVArControllerType2Dynamics,`PFVArControllerType2Dynamics`>>
+//| [[slots_table.PFVArControllerType2Dynamics]]<<PFVArControllerType2Dynamics,`PFVArControllerType2Dynamics`>>
+| 0..1 +
+xref::class/PFVArControllerType2Dynamics.adoc[`PFVArControllerType2Dynamics`]
+| +++Power factor or VAr controller type 2 model associated with this excitation system model.+++
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+| <<PowerSystemStabilizerDynamics,`PowerSystemStabilizerDynamics`>>
+//| [[slots_table.PowerSystemStabilizerDynamics]]<<PowerSystemStabilizerDynamics,`PowerSystemStabilizerDynamics`>>
+| 0..1 +
+xref::class/PowerSystemStabilizerDynamics.adoc[`PowerSystemStabilizerDynamics`]
+| +++Power system stabilizer model associated with this excitation system model.+++
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+| <<SynchronousMachineDynamics,`SynchronousMachineDynamics`>>
+//| [[slots_table.SynchronousMachineDynamics]]<<SynchronousMachineDynamics,`SynchronousMachineDynamics`>>
+| 1 +
+xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+| +++Synchronous machine model with which this excitation system model is associated.+++
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+| <<UnderexcitationLimiterDynamics,`UnderexcitationLimiterDynamics`>>
+//| [[slots_table.UnderexcitationLimiterDynamics]]<<UnderexcitationLimiterDynamics,`UnderexcitationLimiterDynamics`>>
+| 0..1 +
+xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+| +++Undrexcitation limiter model associated with this excitation system model.+++
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+| <<VoltageCompensatorDynamics,`VoltageCompensatorDynamics`>>
+//| [[slots_table.VoltageCompensatorDynamics]]<<VoltageCompensatorDynamics,`VoltageCompensatorDynamics`>>
+| 1 +
+xref::class/VoltageCompensatorDynamics.adoc[`VoltageCompensatorDynamics`]
+| +++Voltage compensator model associated with this excitation system model.+++
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+| <<enabled,`enabled`>>
+//| [[slots_table.enabled]]<<enabled,`enabled`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiscontinuousExcitationControlDynamics]
+=== `DiscontinuousExcitationControlDynamics`
++++Discontinuous excitation control model associated with this excitation system model.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.DiscontinuousExcitationControlDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DiscontinuousExcitationControlDynamics.adoc[`DiscontinuousExcitationControlDynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiscontinuousExcitationControlDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.enabled,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#hvgate]
+=== `hvgate`
++++Indicates if HV gate is active (<i>HVgate</i>).
+true = gate is used
+false = gate is not used.
+Typical value = true.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.hvgate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.hvgate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ka]
+=== `ka`
++++Voltage regulator gain (<i>Ka</i>) (&gt; 0).  Typical value = 400.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.ka`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ka,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kb]
+=== `kb`
++++Second stage regulator gain (<i>Kb</i>) (&gt; 0).  Exciter field current controller gain.  Typical value = 25.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.kb`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kb,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kb1]
+=== `kb1`
++++Second stage regulator gain (<i>Kb1</i>). It is exciter field current controller gain used as alternative to <i>Kb</i> to represent a variant of the ExcAC2A model.  Typical value = 25.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.kb1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kb1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kc]
+=== `kc`
++++Rectifier loading factor proportional to commutating reactance (<i>Kc</i>) (&gt;= 0).  Typical value = 0,28.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.kc`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kc,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kd]
+=== `kd`
++++Demagnetizing factor, a function of exciter alternator reactances (<i>Kd</i>) (&gt;= 0).  Typical value = 0,35.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.kd`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kd,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ke]
+=== `ke`
++++Exciter constant related to self-excited field (<i>Ke</i>).  Typical value = 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.ke`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ke,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kf]
+=== `kf`
++++Excitation control system stabilizer gains (<i>Kf</i>) (&gt;= 0).  Typical value = 0,03.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.kf`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kf,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kh]
+=== `kh`
++++Exciter field current feedback gain (<i>Kh</i>) (&gt;= 0).  Typical value = 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.kh`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kh,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kl]
+=== `kl`
++++Exciter field current limiter gain (<i>Kl</i>).  Typical value = 10.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.kl`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kl,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kl1]
+=== `kl1`
++++Coefficient to allow different usage of the model (<i>Kl1</i>).  Typical value = 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.kl1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kl1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ks]
+=== `ks`
++++Coefficient to allow different usage of the model-speed coefficient (<i>Ks</i>) (&gt;= 0).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.ks`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ks,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lvgate]
+=== `lvgate`
++++Indicates if LV gate is active (<i>LVgate</i>).
+true = gate is used
+false = gate is not used.
+Typical value = true.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.lvgate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lvgate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OverexcitationLimiterDynamics]
+=== `OverexcitationLimiterDynamics`
++++Overexcitation limiter model associated with this excitation system model.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.OverexcitationLimiterDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/OverexcitationLimiterDynamics.adoc[`OverexcitationLimiterDynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OverexcitationLimiterDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PFVArControllerType1Dynamics]
+=== `PFVArControllerType1Dynamics`
++++Power factor or VAr controller type 1 model associated with this excitation system model.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.PFVArControllerType1Dynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PFVArControllerType1Dynamics.adoc[`PFVArControllerType1Dynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PFVArControllerType1Dynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PFVArControllerType2Dynamics]
+=== `PFVArControllerType2Dynamics`
++++Power factor or VAr controller type 2 model associated with this excitation system model.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.PFVArControllerType2Dynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PFVArControllerType2Dynamics.adoc[`PFVArControllerType2Dynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PFVArControllerType2Dynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PowerSystemStabilizerDynamics]
+=== `PowerSystemStabilizerDynamics`
++++Power system stabilizer model associated with this excitation system model.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.PowerSystemStabilizerDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PowerSystemStabilizerDynamics.adoc[`PowerSystemStabilizerDynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PowerSystemStabilizerDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#seve1]
+=== `seve1`
++++Exciter saturation function value at the corresponding exciter voltage, <i>Ve</i><i><sub>1</sub></i>, back of commutating reactance (<i>Se[Ve</i><i><sub>1</sub></i><i>]</i>) (&gt;= 0).  Typical value = 0,037.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.seve1`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.seve1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#seve2]
+=== `seve2`
++++Exciter saturation function value at the corresponding exciter voltage, <i>Ve</i><i><sub>2</sub></i>, back of commutating reactance (<i>Se[Ve</i><i><sub>2</sub></i><i>]</i>) (&gt;= 0).  Typical value = 0,012.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.seve2`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.seve2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SynchronousMachineDynamics]
+=== `SynchronousMachineDynamics`
++++Synchronous machine model with which this excitation system model is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.SynchronousMachineDynamics`
+| Cardinality
+| 1
+| Type
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SynchronousMachineDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ta]
+=== `ta`
++++Voltage regulator time constant (<i>Ta</i>) (&gt; 0).  Typical value = 0,02.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.ta`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ta,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tb]
+=== `tb`
++++Voltage regulator time constant (<i>Tb</i>) (&gt;= 0).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.tb`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tb,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tc]
+=== `tc`
++++Voltage regulator time constant (<i>Tc</i>) (&gt;= 0).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.tc`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tc,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#te]
+=== `te`
++++Exciter time constant, integration rate associated with exciter control (<i>Te</i>) (&gt; 0).  Typical value = 0,6.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.te`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.te,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tf]
+=== `tf`
++++Excitation control system stabilizer time constant (<i>Tf</i>) (&gt; 0).  Typical value = 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.tf`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tf,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#UnderexcitationLimiterDynamics]
+=== `UnderexcitationLimiterDynamics`
++++Undrexcitation limiter model associated with this excitation system model.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.UnderexcitationLimiterDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.UnderexcitationLimiterDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vamax]
+=== `vamax`
++++Maximum voltage regulator output (<i>Vamax</i>) (&gt; 0).  Typical value = 8.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.vamax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vamax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vamin]
+=== `vamin`
++++Minimum voltage regulator output (<i>Vamin</i>) (&lt; 0).  Typical value = -8.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.vamin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vamin,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ve1]
+=== `ve1`
++++Exciter alternator output voltages back of commutating reactance at which saturation is defined (<i>Ve</i><i><sub>1</sub></i>) (&gt; 0).  Typical value = 4,4.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.ve1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ve1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ve2]
+=== `ve2`
++++Exciter alternator output voltages back of commutating reactance at which saturation is defined (<i>Ve</i><i><sub>2</sub></i>) (&gt; 0).  Typical value = 3,3.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.ve2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ve2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vfemax]
+=== `vfemax`
++++Exciter field current limit reference (<i>Vfemax</i>) (&gt;= 0).  Typical value = 4,4.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.vfemax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vfemax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vlr]
+=== `vlr`
++++Maximum exciter field current (<i>Vlr</i>) (&gt; 0).  Typical value = 4,4.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.vlr`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vlr,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VoltageCompensatorDynamics]
+=== `VoltageCompensatorDynamics`
++++Voltage compensator model associated with this excitation system model.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcitationSystemDynamics.VoltageCompensatorDynamics`
+| Cardinality
+| 1
+| Type
+| xref::class/VoltageCompensatorDynamics.adoc[`VoltageCompensatorDynamics`]
+
+| Inherited from
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VoltageCompensatorDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vrmax]
+=== `vrmax`
++++Maximum voltage regulator outputs (<i>Vrmax</i>) (&gt; 0).  Typical value = 105.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.vrmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vrmax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vrmin]
+=== `vrmin`
++++Minimum voltage regulator outputs (<i>Vrmin</i>) (&lt; 0).  Typical value = -95.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExcAC2A.vrmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vrmin,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

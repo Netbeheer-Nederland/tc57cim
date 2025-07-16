@@ -1,0 +1,156 @@
+= `AcceptanceTest`
+:toclevels: 4
+
+
++++Acceptance test for assets.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AcceptanceTest`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`AcceptanceTest`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<dateTime,`dateTime`>>
+//| [[slots_table.dateTime]]<<dateTime,`dateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time the asset was last tested using the 'type' of test and yielding the current status in 'success' attribute.+++
+| _n/a_
+
+| <<success,`success`>>
+//| [[slots_table.success]]<<success,`success`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if asset has passed acceptance test and may be placed in or is in service. It is set to false if asset is removed from...+++
+| _n/a_
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Type of test or group of tests that was conducted on 'dateTime'.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#dateTime]
+=== `dateTime`
++++Date and time the asset was last tested using the 'type' of test and yielding the current status in 'success' attribute.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AcceptanceTest.dateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#success]
+=== `success`
++++True if asset has passed acceptance test and may be placed in or is in service. It is set to false if asset is removed from service and is required to be tested again before being placed back in service, possibly in a new location. Since asset may go through multiple tests during its lifecycle, the date of each acceptance test may be recorded in 'Asset.ActivityRecord.status.dateTime'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AcceptanceTest.success`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.success,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++Type of test or group of tests that was conducted on 'dateTime'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AcceptanceTest.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Asset.adoc[`Asset`] | xref::class/Asset.adoc#acceptanceTest[`acceptanceTest`]
+
+
+|===
+

@@ -1,0 +1,56 @@
+= `RelativeDisplacementKind`
+:toclevels: 4
+
+
++++The types of relative displacement+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:RelativeDisplacementKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `centreEarth`
+| `cim:RelativeDisplacementKind.centreEarth`
+| n/a
+
+| `ground`
+| `cim:RelativeDisplacementKind.ground`
+| n/a
+
+| `seaLevel`
+| `cim:RelativeDisplacementKind.seaLevel`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RelativeDisplacement.adoc[`RelativeDisplacement`] | xref::class/RelativeDisplacement.adoc#kind[`kind`]
+
+
+|===
+

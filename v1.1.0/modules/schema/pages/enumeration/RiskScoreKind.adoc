@@ -1,0 +1,56 @@
+= `RiskScoreKind`
+:toclevels: 4
+
+
++++Types of risk scores.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:RiskScoreKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `customerRisk`
+| `cim:RiskScoreKind.customerRisk`
+| n/a
+
+| `financialRisk`
+| `cim:RiskScoreKind.financialRisk`
+| n/a
+
+| `safetyRisk`
+| `cim:RiskScoreKind.safetyRisk`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RiskScore.adoc[`RiskScore`] | xref::class/RiskScore.adoc#kind[`kind`]
+
+
+|===
+

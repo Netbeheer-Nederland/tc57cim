@@ -1,0 +1,80 @@
+= `SCADAInformation`
+:toclevels: 4
+
+
++++Contains information about the update from SCADA.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SCADAInformation`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`SCADAInformation`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<timeStamp,`timeStamp`>>
+//| [[slots_table.timeStamp]]<<timeStamp,`timeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++time of the update from SCADA+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#timeStamp]
+=== `timeStamp`
++++time of the update from SCADA+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SCADAInformation.timeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeStamp,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

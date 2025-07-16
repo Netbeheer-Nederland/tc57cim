@@ -1,0 +1,234 @@
+= `LossClearingResults`
+:toclevels: 4
+
+
++++Provides the MW loss for RUC Zones, subcontrol areas, and the total loss.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:LossClearingResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`LossClearingResults`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<HostControlArea,`HostControlArea`>>
+//| [[slots_table.HostControlArea]]<<HostControlArea,`HostControlArea`>>
+| 0..1 +
+xref::class/HostControlArea.adoc[`HostControlArea`]
+| _n/a_
+| _n/a_
+
+| <<LossClearing,`LossClearing`>>
+//| [[slots_table.LossClearing]]<<LossClearing,`LossClearing`>>
+| 0..1 +
+xref::class/LossClearing.adoc[`LossClearing`]
+| _n/a_
+| _n/a_
+
+| <<RUCZone,`RUCZone`>>
+//| [[slots_table.RUCZone]]<<RUCZone,`RUCZone`>>
+| 0..1 +
+xref::class/RUCZone.adoc[`RUCZone`]
+| _n/a_
+| _n/a_
+
+| <<SubControlArea,`SubControlArea`>>
+//| [[slots_table.SubControlArea]]<<SubControlArea,`SubControlArea`>>
+| 0..1 +
+xref::class/SubControlArea.adoc[`SubControlArea`]
+| _n/a_
+| _n/a_
+
+| <<lossMW,`lossMW`>>
+//| [[slots_table.lossMW]]<<lossMW,`lossMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#HostControlArea]
+=== `HostControlArea`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LossClearingResults.HostControlArea`
+| Cardinality
+| 0..1
+| Type
+| xref::class/HostControlArea.adoc[`HostControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.HostControlArea,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#LossClearing]
+=== `LossClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LossClearingResults.LossClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/LossClearing.adoc[`LossClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.LossClearing,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lossMW]
+=== `lossMW`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LossClearingResults.lossMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lossMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RUCZone]
+=== `RUCZone`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LossClearingResults.RUCZone`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RUCZone.adoc[`RUCZone`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RUCZone,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SubControlArea]
+=== `SubControlArea`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:LossClearingResults.SubControlArea`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SubControlArea,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/HostControlArea.adoc[`HostControlArea`] | xref::class/HostControlArea.adoc#LossClearingResults[`LossClearingResults`]
+
+
+
+| xref::class/LossClearing.adoc[`LossClearing`] | xref::class/LossClearing.adoc#LossClearingResults[`LossClearingResults`]
+
+
+
+| xref::class/RUCZone.adoc[`RUCZone`] | xref::class/RUCZone.adoc#LossClearingResults[`LossClearingResults`]
+
+
+
+| xref::class/SubControlArea.adoc[`SubControlArea`] | xref::class/SubControlArea.adoc#LossClearingResults[`LossClearingResults`]
+
+
+|===
+

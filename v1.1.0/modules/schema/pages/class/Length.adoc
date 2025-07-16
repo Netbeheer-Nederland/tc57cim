@@ -1,0 +1,218 @@
+= `Length`
+:toclevels: 4
+
+
++++Unit of length. It shall be a positive value or zero.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Length`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Length.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Length.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Length.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CableInfo.adoc[`CableInfo`] | xref::class/CableInfo.adoc#diameterOverScreen[`diameterOverScreen`]
+
+
+
+| xref::class/Clamp.adoc[`Clamp`] | xref::class/Clamp.adoc#lengthFromTerminal1[`lengthFromTerminal1`]
+
+
+
+| xref::class/ConcentricNeutralCableInfo.adoc[`ConcentricNeutralCableInfo`] | xref::class/ConcentricNeutralCableInfo.adoc#neutralStrandRadius[`neutralStrandRadius`]
+
+
+
+| xref::class/Conductor.adoc[`Conductor`] | xref::class/Conductor.adoc#length[`length`]
+
+
+
+| xref::class/Cut.adoc[`Cut`] | xref::class/Cut.adoc#lengthFromTerminal1[`lengthFromTerminal1`]
+
+
+
+| xref::class/DCLineSegment.adoc[`DCLineSegment`] | xref::class/DCLineSegment.adoc#length[`length`]
+
+
+
+| xref::class/DesignLocation.adoc[`DesignLocation`] | xref::class/DesignLocation.adoc#spanLength[`spanLength`]
+
+
+
+| xref::class/DimensionsInfo.adoc[`DimensionsInfo`] | xref::class/DimensionsInfo.adoc#sizeWidth[`sizeWidth`]
+
+
+
+| xref::class/GovHydroFrancis.adoc[`GovHydroFrancis`] | xref::class/GovHydroFrancis.adoc#zsfc[`zsfc`]
+
+
+
+| xref::class/GovHydroPelton.adoc[`GovHydroPelton`] | xref::class/GovHydroPelton.adoc#zsfc[`zsfc`]
+
+
+
+| xref::class/HydroGeneratingUnit.adoc[`HydroGeneratingUnit`] | xref::class/HydroGeneratingUnit.adoc#dropHeight[`dropHeight`]
+
+
+
+| xref::class/HydroPowerPlant.adoc[`HydroPowerPlant`] | xref::class/HydroPowerPlant.adoc#plantRatedHead[`plantRatedHead`]
+
+
+
+| xref::class/LightningStrike.adoc[`LightningStrike`] | xref::class/LightningStrike.adoc#errorEllipseMinorSemiAxis[`errorEllipseMinorSemiAxis`]
+
+
+
+| xref::class/LineFault.adoc[`LineFault`] | xref::class/LineFault.adoc#lengthFromTerminal1[`lengthFromTerminal1`]
+
+
+
+| xref::class/MutualCoupling.adoc[`MutualCoupling`] | xref::class/MutualCoupling.adoc#distance22[`distance22`]
+
+
+
+| xref::class/Pole.adoc[`Pole`] | xref::class/Pole.adoc#length[`length`]
+
+
+
+| xref::class/ProductAssetModel.adoc[`ProductAssetModel`] | xref::class/ProductAssetModel.adoc#overallLength[`overallLength`]
+
+
+
+| xref::class/Reservoir.adoc[`Reservoir`] | xref::class/Reservoir.adoc#spillwayCrestLength[`spillwayCrestLength`]
+
+
+
+| xref::class/Streetlight.adoc[`Streetlight`] | xref::class/Streetlight.adoc#armLength[`armLength`]
+
+
+
+| xref::class/Structure.adoc[`Structure`] | xref::class/Structure.adoc#height[`height`]
+
+
+
+| xref::class/StructureSupport.adoc[`StructureSupport`] | xref::class/StructureSupport.adoc#length[`length`]
+
+
+
+| xref::class/TapeShieldCableInfo.adoc[`TapeShieldCableInfo`] | xref::class/TapeShieldCableInfo.adoc#tapeThickness[`tapeThickness`]
+
+
+
+| xref::class/Tornado.adoc[`Tornado`] | xref::class/Tornado.adoc#width[`width`]
+
+
+
+| xref::class/Vehicle.adoc[`Vehicle`] | xref::class/Vehicle.adoc#odometerReading[`odometerReading`]
+
+
+
+| xref::class/VolcanicAshCloud.adoc[`VolcanicAshCloud`] | xref::class/VolcanicAshCloud.adoc#particleSize[`particleSize`]
+
+
+
+| xref::class/WireInfo.adoc[`WireInfo`] | xref::class/WireInfo.adoc#radius[`radius`]
+
+
+
+| xref::class/WireSpacingInfo.adoc[`WireSpacingInfo`] | xref::class/WireSpacingInfo.adoc#phaseWireSpacing[`phaseWireSpacing`]
+
+
+|===
+

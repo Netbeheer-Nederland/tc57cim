@@ -1,0 +1,80 @@
+= `RemoteSignalKind`
+:toclevels: 4
+
+
++++Type of input signal coming from remote bus.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:RemoteSignalKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `remoteBranchCurrentAmplitude`
+| `cim:RemoteSignalKind.remoteBranchCurrentAmplitude`
+| n/a
+
+| `remoteBusFrequency`
+| `cim:RemoteSignalKind.remoteBusFrequency`
+| n/a
+
+| `remoteBusFrequencyDeviation`
+| `cim:RemoteSignalKind.remoteBusFrequencyDeviation`
+| n/a
+
+| `remoteBusVoltage`
+| `cim:RemoteSignalKind.remoteBusVoltage`
+| n/a
+
+| `remoteBusVoltageAmplitude`
+| `cim:RemoteSignalKind.remoteBusVoltageAmplitude`
+| n/a
+
+| `remoteBusVoltageAmplitudeDerivative`
+| `cim:RemoteSignalKind.remoteBusVoltageAmplitudeDerivative`
+| n/a
+
+| `remoteBusVoltageFrequency`
+| `cim:RemoteSignalKind.remoteBusVoltageFrequency`
+| n/a
+
+| `remoteBusVoltageFrequencyDeviation`
+| `cim:RemoteSignalKind.remoteBusVoltageFrequencyDeviation`
+| n/a
+
+| `remotePuBusVoltageDerivative`
+| `cim:RemoteSignalKind.remotePuBusVoltageDerivative`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RemoteInputSignal.adoc[`RemoteInputSignal`] | xref::class/RemoteInputSignal.adoc#remoteSignalType[`remoteSignalType`]
+
+
+|===
+

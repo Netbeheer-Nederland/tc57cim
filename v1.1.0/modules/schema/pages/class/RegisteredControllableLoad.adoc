@@ -1,0 +1,457 @@
+= `RegisteredControllableLoad`
+:toclevels: 4
+
+
++++Temporary holding for load reduction attributes removed from RegisteredLoad. Use for future use case when developing the RegisteredDistributedResource specialized classes.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:RegisteredControllableLoad`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`RegisteredControllableLoad`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<maxBaseLoad,`maxBaseLoad`>>
+//| [[slots_table.maxBaseLoad]]<<maxBaseLoad,`maxBaseLoad`>>
+| 0..1 +
+xref::class/ActivePower.adoc[`ActivePower`]
+| +++Maximum Base Load (MW), per Participating Load Resource+++
+| _n/a_
+
+| <<maxDeploymentTime,`maxDeploymentTime`>>
+//| [[slots_table.maxDeploymentTime]]<<maxDeploymentTime,`maxDeploymentTime`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Maximum Deployment time (seconds)+++
+| _n/a_
+
+| <<maxLoadRedTimesPerDay,`maxLoadRedTimesPerDay`>>
+//| [[slots_table.maxLoadRedTimesPerDay]]<<maxLoadRedTimesPerDay,`maxLoadRedTimesPerDay`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Maximum Number of Daily Load Curtailments+++
+| _n/a_
+
+| <<maxLoadReduction,`maxLoadReduction`>>
+//| [[slots_table.maxLoadReduction]]<<maxLoadReduction,`maxLoadReduction`>>
+| 0..1 +
+xref::class/ActivePower.adoc[`ActivePower`]
+| +++maximum load reduction+++
+| _n/a_
+
+| <<maxReductionTime,`maxReductionTime`>>
+//| [[slots_table.maxReductionTime]]<<maxReductionTime,`maxReductionTime`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Maxiimum Load Reduction Time (min), per Participating Load Resource+++
+| _n/a_
+
+| <<maxWeeklyDeployment,`maxWeeklyDeployment`>>
+//| [[slots_table.maxWeeklyDeployment]]<<maxWeeklyDeployment,`maxWeeklyDeployment`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Maximum weekly deployments+++
+| _n/a_
+
+| <<minLoadReduction,`minLoadReduction`>>
+//| [[slots_table.minLoadReduction]]<<minLoadReduction,`minLoadReduction`>>
+| 0..1 +
+xref::class/ActivePower.adoc[`ActivePower`]
+| +++Minimum MW for a load reduction (e.g., MW rating of a discrete pump.
+
+This attribute may be used also in the LoadBid...+++
+| _n/a_
+
+| <<minLoadReductionCost,`minLoadReductionCost`>>
+//| [[slots_table.minLoadReductionCost]]<<minLoadReductionCost,`minLoadReductionCost`>>
+| 0..1 +
+xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++minimum load reduction cost. Single number for the load+++
+| _n/a_
+
+| <<minLoadReductionInterval,`minLoadReductionInterval`>>
+//| [[slots_table.minLoadReductionInterval]]<<minLoadReductionInterval,`minLoadReductionInterval`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Shortest period load reduction shall be maintained before load can be restored to normal levels.
+
+This attribute may be...+++
+| _n/a_
+
+| <<minReductionTime,`minReductionTime`>>
+//| [[slots_table.minReductionTime]]<<minReductionTime,`minReductionTime`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Minimum Load Reduction Time (min), per Participating Load Resource+++
+| _n/a_
+
+| <<minTimeBetLoadRed,`minTimeBetLoadRed`>>
+//| [[slots_table.minTimeBetLoadRed]]<<minTimeBetLoadRed,`minTimeBetLoadRed`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Shortest time that load shall be left at normal levels before a new load reduction.
+
+This attribute may be used also in...+++
+| _n/a_
+
+| <<reqNoticeTime,`reqNoticeTime`>>
+//| [[slots_table.reqNoticeTime]]<<reqNoticeTime,`reqNoticeTime`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Time period that is required from an order to reduce a load to the time that it takes to get to the minimum load...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#maxBaseLoad]
+=== `maxBaseLoad`
++++Maximum Base Load (MW), per Participating Load Resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredControllableLoad.maxBaseLoad`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxBaseLoad,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxDeploymentTime]
+=== `maxDeploymentTime`
++++Maximum Deployment time (seconds)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredControllableLoad.maxDeploymentTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxDeploymentTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxLoadRedTimesPerDay]
+=== `maxLoadRedTimesPerDay`
++++Maximum Number of Daily Load Curtailments+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredControllableLoad.maxLoadRedTimesPerDay`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxLoadRedTimesPerDay,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxLoadReduction]
+=== `maxLoadReduction`
++++maximum load reduction+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredControllableLoad.maxLoadReduction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxLoadReduction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxReductionTime]
+=== `maxReductionTime`
++++Maxiimum Load Reduction Time (min), per Participating Load Resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredControllableLoad.maxReductionTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxReductionTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxWeeklyDeployment]
+=== `maxWeeklyDeployment`
++++Maximum weekly deployments+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredControllableLoad.maxWeeklyDeployment`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxWeeklyDeployment,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minLoadReduction]
+=== `minLoadReduction`
++++Minimum MW for a load reduction (e.g., MW rating of a discrete pump.
+
+This attribute may be used also in the LoadBid class. The reason that the attribute is also modeled in this class is that it is resource attribute and needs to be persistently stored.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredControllableLoad.minLoadReduction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ActivePower.adoc[`ActivePower`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minLoadReduction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minLoadReductionCost]
+=== `minLoadReductionCost`
++++minimum load reduction cost. Single number for the load+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredControllableLoad.minLoadReductionCost`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minLoadReductionCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minLoadReductionInterval]
+=== `minLoadReductionInterval`
++++Shortest period load reduction shall be maintained before load can be restored to normal levels.
+
+This attribute may be used also in the LoadBid class. The reason that the attribute is also modeled in this class is that it is resource attribute and needs to be persistently stored.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredControllableLoad.minLoadReductionInterval`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minLoadReductionInterval,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minReductionTime]
+=== `minReductionTime`
++++Minimum Load Reduction Time (min), per Participating Load Resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredControllableLoad.minReductionTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minReductionTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minTimeBetLoadRed]
+=== `minTimeBetLoadRed`
++++Shortest time that load shall be left at normal levels before a new load reduction.
+
+This attribute may be used also in the LoadBid class. The reason that the attribute is also modeled in this class is that it is resource attribute and needs to be persistently stored.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredControllableLoad.minTimeBetLoadRed`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minTimeBetLoadRed,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reqNoticeTime]
+=== `reqNoticeTime`
++++Time period that is required from an order to reduce a load to the time that it takes to get to the minimum load reduction.
+
+This attribute may be used also in the LoadBid class. The reason that the attribute is also modeled in this class is that it is resource attribute and needs to be persistently stored.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:RegisteredControllableLoad.reqNoticeTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reqNoticeTime,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

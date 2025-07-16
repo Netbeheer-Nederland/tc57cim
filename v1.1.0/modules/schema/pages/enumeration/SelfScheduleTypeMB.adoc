@@ -1,0 +1,38 @@
+= `SelfScheduleTypeMB`
+:toclevels: 4
+
+
++++Self Schedule Types applicable to Mitigated Bid+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SelfScheduleTypeMB`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `RMR`
+| `cim:SelfScheduleTypeMB.RMR`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

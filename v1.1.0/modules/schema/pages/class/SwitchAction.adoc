@@ -1,0 +1,812 @@
+= `SwitchAction`
+:toclevels: 4
+
+
++++Action on switch as a switching step.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SwitchAction`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/SwitchingAction.adoc[`SwitchingAction`]
+*** *`SwitchAction`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<OperatedSwitch,`OperatedSwitch`>>
+//| [[slots_table.OperatedSwitch]]<<OperatedSwitch,`OperatedSwitch`>>
+| 0..1 +
+xref::class/Switch.adoc[`Switch`]
+| +++Switch that is the object of this switch action.+++
+| _n/a_
+
+| <<PlannedOutage,`PlannedOutage`>>
+//| [[slots_table.PlannedOutage]]<<PlannedOutage,`PlannedOutage`>>
+| 0..1 +
+xref::class/Outage.adoc[`Outage`]
+| +++Planned outage for whose scope this switch action applies.+++
+| _n/a_
+
+| <<kind,`kind`>>
+//| [[slots_table.kind]]<<kind,`kind`>>
+| 0..1 +
+xref::enumeration/SwitchActionKind.adoc[`SwitchActionKind`]
+| +++Switching action to perform.+++
+| _n/a_
+
+| <<Crew,`Crew`>>
+//| [[slots_table.Crew]]<<Crew,`Crew`>>
+| 0..* +
+xref::class/Crew.adoc[`Crew`]
+| +++The crew that is assigned to the switching action.+++
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+| <<Operator,`Operator`>>
+//| [[slots_table.Operator]]<<Operator,`Operator`>>
+| 0..1 +
+xref::class/Operator.adoc[`Operator`]
+| +++Operator responsible for this switching step.+++
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+| <<SwitchingEvent,`SwitchingEvent`>>
+//| [[slots_table.SwitchingEvent]]<<SwitchingEvent,`SwitchingEvent`>>
+| 0..1 +
+xref::class/SwitchingEvent.adoc[`SwitchingEvent`]
+| +++The switching event that the switching action is performed on+++
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+| <<SwitchingPlan,`SwitchingPlan`>>
+//| [[slots_table.SwitchingPlan]]<<SwitchingPlan,`SwitchingPlan`>>
+| 0..1 +
+xref::class/SwitchingPlan.adoc[`SwitchingPlan`]
+| +++The switching plan that is associated with the switching actions.+++
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+| <<SwitchingStep,`SwitchingStep`>>
+//| [[slots_table.SwitchingStep]]<<SwitchingStep,`SwitchingStep`>>
+| 0..1 +
+xref::class/SwitchingStep.adoc[`SwitchingStep`]
+| +++The switching step that is associated to the switching action.+++
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+| <<executedDateTime,`executedDateTime`>>
+//| [[slots_table.executedDateTime]]<<executedDateTime,`executedDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Actual date and time of this switching step.+++
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+| <<issuedDateTime,`issuedDateTime`>>
+//| [[slots_table.issuedDateTime]]<<issuedDateTime,`issuedDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time when the crew was given the instruction to execute the action; not applicable if the action is performed by...+++
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+| <<phases,`phases`>>
+//| [[slots_table.phases]]<<phases,`phases`>>
+| 0..1 +
+xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+| +++Phases of the Switching Action+++
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+| <<plannedDateTime,`plannedDateTime`>>
+//| [[slots_table.plannedDateTime]]<<plannedDateTime,`plannedDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Planned date and time of this switching step.+++
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Crew]
+=== `Crew`
++++The crew that is assigned to the switching action.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingAction.Crew`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Crew.adoc[`Crew`]
+
+| Inherited from
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Crew,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#executedDateTime]
+=== `executedDateTime`
++++Actual date and time of this switching step.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingAction.executedDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.executedDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#issuedDateTime]
+=== `issuedDateTime`
++++Date and time when the crew was given the instruction to execute the action; not applicable if the action is performed by operator remote control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingAction.issuedDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.issuedDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kind]
+=== `kind`
++++Switching action to perform.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchAction.kind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SwitchActionKind.adoc[`SwitchActionKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperatedSwitch]
+=== `OperatedSwitch`
++++Switch that is the object of this switch action.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchAction.OperatedSwitch`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Switch.adoc[`Switch`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperatedSwitch,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Operator]
+=== `Operator`
++++Operator responsible for this switching step.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingAction.Operator`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Operator.adoc[`Operator`]
+
+| Inherited from
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Operator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#phases]
+=== `phases`
++++Phases of the Switching Action+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingAction.phases`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/PhaseCode.adoc[`PhaseCode`]
+
+| Inherited from
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phases,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#plannedDateTime]
+=== `plannedDateTime`
++++Planned date and time of this switching step.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingAction.plannedDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.plannedDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PlannedOutage]
+=== `PlannedOutage`
++++Planned outage for whose scope this switch action applies.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchAction.PlannedOutage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Outage.adoc[`Outage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PlannedOutage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SwitchingEvent]
+=== `SwitchingEvent`
++++The switching event that the switching action is performed on+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingAction.SwitchingEvent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SwitchingEvent.adoc[`SwitchingEvent`]
+
+| Inherited from
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SwitchingEvent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SwitchingPlan]
+=== `SwitchingPlan`
++++The switching plan that is associated with the switching actions.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingAction.SwitchingPlan`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SwitchingPlan.adoc[`SwitchingPlan`]
+
+| Inherited from
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SwitchingPlan,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SwitchingStep]
+=== `SwitchingStep`
++++The switching step that is associated to the switching action.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SwitchingAction.SwitchingStep`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SwitchingStep.adoc[`SwitchingStep`]
+
+| Inherited from
+| xref::class/SwitchingAction.adoc[`SwitchingAction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SwitchingStep,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Outage.adoc[`Outage`] | xref::class/Outage.adoc#PlannedSwitchActions[`PlannedSwitchActions`]
+
+
+
+| xref::class/Switch.adoc[`Switch`] | xref::class/Switch.adoc#SwitchAction[`SwitchAction`]
+
+
+|===
+

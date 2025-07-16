@@ -1,0 +1,56 @@
+= `DesignKind`
+:toclevels: 4
+
+
++++Kind of design.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:DesignKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `asBuilt`
+| `cim:DesignKind.asBuilt`
+| n/a
+
+| `estimated`
+| `cim:DesignKind.estimated`
+| n/a
+
+| `other`
+| `cim:DesignKind.other`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Design.adoc[`Design`] | xref::class/Design.adoc#kind[`kind`]
+
+
+|===
+

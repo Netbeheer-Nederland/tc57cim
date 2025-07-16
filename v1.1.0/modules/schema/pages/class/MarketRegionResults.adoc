@@ -1,0 +1,628 @@
+= `MarketRegionResults`
+:toclevels: 4
+
+
++++Provides all Region Ancillary Service results for the DA and RT markets. The specific data is commodity type (Regulation Up, Regulation Down, Spinning Reserve, Non-spinning Reserve, or Total Up reserves) based for the cleared MW, cleared price, and total capacity required for the region.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MarketRegionResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MarketRegionResults`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AncillaryServiceClearing,`AncillaryServiceClearing`>>
+//| [[slots_table.AncillaryServiceClearing]]<<AncillaryServiceClearing,`AncillaryServiceClearing`>>
+| 0..1 +
+xref::class/AncillaryServiceClearing.adoc[`AncillaryServiceClearing`]
+| _n/a_
+| _n/a_
+
+| <<MarketProduct,`MarketProduct`>>
+//| [[slots_table.MarketProduct]]<<MarketProduct,`MarketProduct`>>
+| 0..1 +
+xref::class/MarketProduct.adoc[`MarketProduct`]
+| _n/a_
+| _n/a_
+
+| <<MarketRegion,`MarketRegion`>>
+//| [[slots_table.MarketRegion]]<<MarketRegion,`MarketRegion`>>
+| 1 +
+xref::class/MarketRegion.adoc[`MarketRegion`]
+| _n/a_
+| _n/a_
+
+| <<clearedMW,`clearedMW`>>
+//| [[slots_table.clearedMW]]<<clearedMW,`clearedMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Cleared generation Value in MW.  For AS, this value is clearedMW = AS Total.  For AS, clearedMW - selfScheduleMW = AS Procured+++
+| _n/a_
+
+| <<clearedPrice,`clearedPrice`>>
+//| [[slots_table.clearedPrice]]<<clearedPrice,`clearedPrice`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Marginal Price ($/MW) for the commodity (Energy, Regulation Up, Regulation Down, Spinning Reserve, or Non-spinning reserve)...+++
+| _n/a_
+
+| <<dispatchCtMW,`dispatchCtMW`>>
+//| [[slots_table.dispatchCtMW]]<<dispatchCtMW,`dispatchCtMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Dispatchable MW for Combustion units.+++
+| _n/a_
+
+| <<dispatchHydroMW,`dispatchHydroMW`>>
+//| [[slots_table.dispatchHydroMW]]<<dispatchHydroMW,`dispatchHydroMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Dispatchable MW for Hydro units.+++
+| _n/a_
+
+| <<dispatchRate,`dispatchRate`>>
+//| [[slots_table.dispatchRate]]<<dispatchRate,`dispatchRate`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Dispatch rate in MW/minutes.+++
+| _n/a_
+
+| <<dispatchSteamMW,`dispatchSteamMW`>>
+//| [[slots_table.dispatchSteamMW]]<<dispatchSteamMW,`dispatchSteamMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Dispatchable MW for Steam units.+++
+| _n/a_
+
+| <<imbalanceEnergyBias,`imbalanceEnergyBias`>>
+//| [[slots_table.imbalanceEnergyBias]]<<imbalanceEnergyBias,`imbalanceEnergyBias`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Imbalance Energy Bias (MW) by Time Period (5' only)+++
+| _n/a_
+
+| <<limitFlag,`limitFlag`>>
+//| [[slots_table.limitFlag]]<<limitFlag,`limitFlag`>>
+| 0..1 +
+xref::enumeration/ResourceLimitIndicator.adoc[`ResourceLimitIndicator`]
+| +++Locational AS Flags indicating whether the Upper or Lower Bound limit of the AS regional procurment is binding+++
+| _n/a_
+
+| <<lumpyIndicator,`lumpyIndicator`>>
+//| [[slots_table.lumpyIndicator]]<<lumpyIndicator,`lumpyIndicator`>>
+| 0..1 +
+xref::enumeration/YesNo.adoc[`YesNo`]
+| +++The "Lumpy Flag"(Y/N)  indicates whether the resource that sets the price is a lumpy generator by hour over the time...+++
+| _n/a_
+
+| <<maxSufficiencyIndex,`maxSufficiencyIndex`>>
+//| [[slots_table.maxSufficiencyIndex]]<<maxSufficiencyIndex,`maxSufficiencyIndex`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Region requirement maximum limit+++
+| _n/a_
+
+| <<minSufficiencyIndex,`minSufficiencyIndex`>>
+//| [[slots_table.minSufficiencyIndex]]<<minSufficiencyIndex,`minSufficiencyIndex`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Region requirement minimum limit+++
+| _n/a_
+
+| <<reqMaxMW,`reqMaxMW`>>
+//| [[slots_table.reqMaxMW]]<<reqMaxMW,`reqMaxMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Region requirement maximum limit+++
+| _n/a_
+
+| <<reqMinMW,`reqMinMW`>>
+//| [[slots_table.reqMinMW]]<<reqMinMW,`reqMinMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Region requirement minimum limit+++
+| _n/a_
+
+| <<selfScheduleMW,`selfScheduleMW`>>
+//| [[slots_table.selfScheduleMW]]<<selfScheduleMW,`selfScheduleMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Aof AS, selfScheduleMW = AS Self-Provided+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#AncillaryServiceClearing]
+=== `AncillaryServiceClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.AncillaryServiceClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AncillaryServiceClearing.adoc[`AncillaryServiceClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AncillaryServiceClearing,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#clearedMW]
+=== `clearedMW`
++++Cleared generation Value in MW.  For AS, this value is clearedMW = AS Total.  For AS, clearedMW - selfScheduleMW = AS Procured+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.clearedMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.clearedMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#clearedPrice]
+=== `clearedPrice`
++++Marginal Price ($/MW) for the commodity (Energy, Regulation Up, Regulation Down, Spinning Reserve, or Non-spinning reserve) based on the pricing run.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.clearedPrice`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.clearedPrice,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dispatchCtMW]
+=== `dispatchCtMW`
++++Dispatchable MW for Combustion units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.dispatchCtMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dispatchCtMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dispatchHydroMW]
+=== `dispatchHydroMW`
++++Dispatchable MW for Hydro units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.dispatchHydroMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dispatchHydroMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dispatchRate]
+=== `dispatchRate`
++++Dispatch rate in MW/minutes.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.dispatchRate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dispatchRate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dispatchSteamMW]
+=== `dispatchSteamMW`
++++Dispatchable MW for Steam units.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.dispatchSteamMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dispatchSteamMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#imbalanceEnergyBias]
+=== `imbalanceEnergyBias`
++++Imbalance Energy Bias (MW) by Time Period (5' only)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.imbalanceEnergyBias`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.imbalanceEnergyBias,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#limitFlag]
+=== `limitFlag`
++++Locational AS Flags indicating whether the Upper or Lower Bound limit of the AS regional procurment is binding+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.limitFlag`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ResourceLimitIndicator.adoc[`ResourceLimitIndicator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.limitFlag,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lumpyIndicator]
+=== `lumpyIndicator`
++++The "Lumpy Flag"(Y/N)  indicates whether the resource that sets the price is a lumpy generator by hour over the time horizon.
+
+Only applicable for the Day Ahead Market+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.lumpyIndicator`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/YesNo.adoc[`YesNo`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lumpyIndicator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketProduct]
+=== `MarketProduct`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.MarketProduct`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MarketProduct.adoc[`MarketProduct`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketProduct,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketRegion]
+=== `MarketRegion`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.MarketRegion`
+| Cardinality
+| 1
+| Type
+| xref::class/MarketRegion.adoc[`MarketRegion`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketRegion,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxSufficiencyIndex]
+=== `maxSufficiencyIndex`
++++Region requirement maximum limit+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.maxSufficiencyIndex`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxSufficiencyIndex,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minSufficiencyIndex]
+=== `minSufficiencyIndex`
++++Region requirement minimum limit+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.minSufficiencyIndex`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minSufficiencyIndex,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reqMaxMW]
+=== `reqMaxMW`
++++Region requirement maximum limit+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.reqMaxMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reqMaxMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reqMinMW]
+=== `reqMinMW`
++++Region requirement minimum limit+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.reqMinMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reqMinMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#selfScheduleMW]
+=== `selfScheduleMW`
++++Aof AS, selfScheduleMW = AS Self-Provided+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MarketRegionResults.selfScheduleMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.selfScheduleMW,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AncillaryServiceClearing.adoc[`AncillaryServiceClearing`] | xref::class/AncillaryServiceClearing.adoc#MarketRegionResults[`MarketRegionResults`]
+
+
+
+| xref::class/MarketProduct.adoc[`MarketProduct`] | xref::class/MarketProduct.adoc#MarketRegionResults[`MarketRegionResults`]
+
+
+
+| xref::class/MarketRegion.adoc[`MarketRegion`] | xref::class/MarketRegion.adoc#MarketRegionResults[`MarketRegionResults`]
+
+
+|===
+

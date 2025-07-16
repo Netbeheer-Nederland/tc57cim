@@ -1,0 +1,304 @@
+= `AllocationResultValues`
+:toclevels: 4
+
+
++++Models Market clearing results in terms of price and MW values.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:AllocationResultValues`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`AllocationResultValues`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AllocationResult,`AllocationResult`>>
+//| [[slots_table.AllocationResult]]<<AllocationResult,`AllocationResult`>>
+| 1 +
+xref::class/AllocationResult.adoc[`AllocationResult`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<aggregateType,`aggregateType`>>
+//| [[slots_table.aggregateType]]<<aggregateType,`aggregateType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++"1" --  "Detail",
+"2" --  "Aggregate by Market service type", in which case, the "AllocationEnergyType" field will not be...+++
+| _n/a_
+
+| <<allocationMwHour,`allocationMwHour`>>
+//| [[slots_table.allocationMwHour]]<<allocationMwHour,`allocationMwHour`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<allocationPrice,`allocationPrice`>>
+//| [[slots_table.allocationPrice]]<<allocationPrice,`allocationPrice`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| _n/a_
+| _n/a_
+
+| <<energyTypeCode,`energyTypeCode`>>
+//| [[slots_table.energyTypeCode]]<<energyTypeCode,`energyTypeCode`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+
+| <<marketServiceType,`marketServiceType`>>
+//| [[slots_table.marketServiceType]]<<marketServiceType,`marketServiceType`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Choices are: 
+ME - Market Energy Capacity; 
+SR - Spinning Reserve Capacity; 
+NR - Non-Spinning Reserve Capacity; 
+DAC -...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#aggregateType]
+=== `aggregateType`
++++"1" --  "Detail",
+"2" --  "Aggregate by Market service type", in which case, the "AllocationEnergyType" field will not be filled;
+"3" --  "Aggregate by "AllocationEnergyType", in which case "MarketServiceType" will not be filled.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AllocationResultValues.aggregateType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aggregateType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#allocationMwHour]
+=== `allocationMwHour`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AllocationResultValues.allocationMwHour`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.allocationMwHour,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#allocationPrice]
+=== `allocationPrice`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AllocationResultValues.allocationPrice`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.allocationPrice,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AllocationResult]
+=== `AllocationResult`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AllocationResultValues.AllocationResult`
+| Cardinality
+| 1
+| Type
+| xref::class/AllocationResult.adoc[`AllocationResult`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AllocationResult,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#energyTypeCode]
+=== `energyTypeCode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AllocationResultValues.energyTypeCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.energyTypeCode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marketServiceType]
+=== `marketServiceType`
++++Choices are: 
+ME - Market Energy Capacity; 
+SR - Spinning Reserve Capacity; 
+NR - Non-Spinning Reserve Capacity; 
+DAC - Day Ahead Capacity; 
+DEC - Derate Capacity+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AllocationResultValues.marketServiceType`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marketServiceType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:AllocationResultValues.RegisteredResource`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AllocationResult.adoc[`AllocationResult`] | xref::class/AllocationResult.adoc#AllocationResultValues[`AllocationResultValues`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#AllocationResultValues[`AllocationResultValues`]
+
+
+|===
+

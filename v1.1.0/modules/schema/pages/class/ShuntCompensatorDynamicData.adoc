@@ -1,0 +1,255 @@
+= `ShuntCompensatorDynamicData`
+:toclevels: 4
+
+
++++Optimal Power Flow or State Estimator Filter Bank Data for OTS. This is used for RealTime, Study and Maintenance Users.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ShuntCompensatorDynamicData`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ShuntCompensatorDynamicData`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MktShuntCompensator,`MktShuntCompensator`>>
+//| [[slots_table.MktShuntCompensator]]<<MktShuntCompensator,`MktShuntCompensator`>>
+| 1 +
+xref::class/MktShuntCompensator.adoc[`MktShuntCompensator`]
+| _n/a_
+| _n/a_
+
+| <<connectionStatus,`connectionStatus`>>
+//| [[slots_table.connectionStatus]]<<connectionStatus,`connectionStatus`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++The current status for the Voltage Control Capacitor 1= Connected 0 = Disconnected+++
+| _n/a_
+
+| <<desiredVoltage,`desiredVoltage`>>
+//| [[slots_table.desiredVoltage]]<<desiredVoltage,`desiredVoltage`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The desired voltage for the Voltage Control Capacitor+++
+| _n/a_
+
+| <<mVARInjection,`mVARInjection`>>
+//| [[slots_table.mVARInjection]]<<mVARInjection,`mVARInjection`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The injection of reactive power of the filter bank in the NA solution or VCS reactive power production+++
+| _n/a_
+
+| <<stepPosition,`stepPosition`>>
+//| [[slots_table.stepPosition]]<<stepPosition,`stepPosition`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Voltage control capacitor step position+++
+| _n/a_
+
+| <<voltageRegulationStatus,`voltageRegulationStatus`>>
+//| [[slots_table.voltageRegulationStatus]]<<voltageRegulationStatus,`voltageRegulationStatus`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Indicator if the voltage control this is regulating True = Yes, False = No+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#connectionStatus]
+=== `connectionStatus`
++++The current status for the Voltage Control Capacitor 1= Connected 0 = Disconnected+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ShuntCompensatorDynamicData.connectionStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.connectionStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#desiredVoltage]
+=== `desiredVoltage`
++++The desired voltage for the Voltage Control Capacitor+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ShuntCompensatorDynamicData.desiredVoltage`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.desiredVoltage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktShuntCompensator]
+=== `MktShuntCompensator`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ShuntCompensatorDynamicData.MktShuntCompensator`
+| Cardinality
+| 1
+| Type
+| xref::class/MktShuntCompensator.adoc[`MktShuntCompensator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktShuntCompensator,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mVARInjection]
+=== `mVARInjection`
++++The injection of reactive power of the filter bank in the NA solution or VCS reactive power production+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ShuntCompensatorDynamicData.mVARInjection`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mVARInjection,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#stepPosition]
+=== `stepPosition`
++++Voltage control capacitor step position+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ShuntCompensatorDynamicData.stepPosition`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.stepPosition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#voltageRegulationStatus]
+=== `voltageRegulationStatus`
++++Indicator if the voltage control this is regulating True = Yes, False = No+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ShuntCompensatorDynamicData.voltageRegulationStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.voltageRegulationStatus,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MktShuntCompensator.adoc[`MktShuntCompensator`] | xref::class/MktShuntCompensator.adoc#ShuntCompensatorDynamicData[`ShuntCompensatorDynamicData`]
+
+
+|===
+

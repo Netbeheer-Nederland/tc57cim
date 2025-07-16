@@ -1,0 +1,1645 @@
+= `BWRSteamSupply`
+:toclevels: 4
+
+
++++Boiling water reactor used as a steam supply to a steam turbine.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:BWRSteamSupply`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+*** xref::class/SteamSupply.adoc[`SteamSupply`]
+**** *`BWRSteamSupply`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<highPowerLimit,`highPowerLimit`>>
+//| [[slots_table.highPowerLimit]]<<highPowerLimit,`highPowerLimit`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++High power limit.+++
+| _n/a_
+
+| <<inCoreThermalTC,`inCoreThermalTC`>>
+//| [[slots_table.inCoreThermalTC]]<<inCoreThermalTC,`inCoreThermalTC`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++In-core thermal time constant.+++
+| _n/a_
+
+| <<integralGain,`integralGain`>>
+//| [[slots_table.integralGain]]<<integralGain,`integralGain`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Integral gain.+++
+| _n/a_
+
+| <<lowPowerLimit,`lowPowerLimit`>>
+//| [[slots_table.lowPowerLimit]]<<lowPowerLimit,`lowPowerLimit`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Low power limit.+++
+| _n/a_
+
+| <<lowerLimit,`lowerLimit`>>
+//| [[slots_table.lowerLimit]]<<lowerLimit,`lowerLimit`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Initial lower limit.+++
+| _n/a_
+
+| <<pressureLimit,`pressureLimit`>>
+//| [[slots_table.pressureLimit]]<<pressureLimit,`pressureLimit`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Pressure limit.+++
+| _n/a_
+
+| <<pressureSetpointGA,`pressureSetpointGA`>>
+//| [[slots_table.pressureSetpointGA]]<<pressureSetpointGA,`pressureSetpointGA`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Pressure setpoint gain adjuster.+++
+| _n/a_
+
+| <<pressureSetpointTC1,`pressureSetpointTC1`>>
+//| [[slots_table.pressureSetpointTC1]]<<pressureSetpointTC1,`pressureSetpointTC1`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Pressure setpoint time constant.+++
+| _n/a_
+
+| <<pressureSetpointTC2,`pressureSetpointTC2`>>
+//| [[slots_table.pressureSetpointTC2]]<<pressureSetpointTC2,`pressureSetpointTC2`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Pressure setpoint time constant.+++
+| _n/a_
+
+| <<proportionalGain,`proportionalGain`>>
+//| [[slots_table.proportionalGain]]<<proportionalGain,`proportionalGain`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Proportional gain.+++
+| _n/a_
+
+| <<rfAux1,`rfAux1`>>
+//| [[slots_table.rfAux1]]<<rfAux1,`rfAux1`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the...+++
+| _n/a_
+
+| <<rfAux2,`rfAux2`>>
+//| [[slots_table.rfAux2]]<<rfAux2,`rfAux2`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the...+++
+| _n/a_
+
+| <<rfAux3,`rfAux3`>>
+//| [[slots_table.rfAux3]]<<rfAux3,`rfAux3`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the...+++
+| _n/a_
+
+| <<rfAux4,`rfAux4`>>
+//| [[slots_table.rfAux4]]<<rfAux4,`rfAux4`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the...+++
+| _n/a_
+
+| <<rfAux5,`rfAux5`>>
+//| [[slots_table.rfAux5]]<<rfAux5,`rfAux5`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the...+++
+| _n/a_
+
+| <<rfAux6,`rfAux6`>>
+//| [[slots_table.rfAux6]]<<rfAux6,`rfAux6`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the...+++
+| _n/a_
+
+| <<rfAux7,`rfAux7`>>
+//| [[slots_table.rfAux7]]<<rfAux7,`rfAux7`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the...+++
+| _n/a_
+
+| <<rfAux8,`rfAux8`>>
+//| [[slots_table.rfAux8]]<<rfAux8,`rfAux8`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the...+++
+| _n/a_
+
+| <<rodPattern,`rodPattern`>>
+//| [[slots_table.rodPattern]]<<rodPattern,`rodPattern`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Rod pattern.+++
+| _n/a_
+
+| <<rodPatternConstant,`rodPatternConstant`>>
+//| [[slots_table.rodPatternConstant]]<<rodPatternConstant,`rodPatternConstant`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Constant associated with rod pattern.+++
+| _n/a_
+
+| <<upperLimit,`upperLimit`>>
+//| [[slots_table.upperLimit]]<<upperLimit,`upperLimit`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Initial upper limit.+++
+| _n/a_
+
+| <<SteamTurbines,`SteamTurbines`>>
+//| [[slots_table.SteamTurbines]]<<SteamTurbines,`SteamTurbines`>>
+| 0..* +
+xref::class/SteamTurbine.adoc[`SteamTurbine`]
+| +++Steam turbines may have steam supplied by a steam supply.+++
+| xref::class/SteamSupply.adoc[`SteamSupply`]
+
+| <<steamSupplyRating,`steamSupplyRating`>>
+//| [[slots_table.steamSupplyRating]]<<steamSupplyRating,`steamSupplyRating`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Rating of steam supply.+++
+| xref::class/SteamSupply.adoc[`SteamSupply`]
+
+| <<AssetDatasheet,`AssetDatasheet`>>
+//| [[slots_table.AssetDatasheet]]<<AssetDatasheet,`AssetDatasheet`>>
+| 0..1 +
+xref::class/AssetInfo.adoc[`AssetInfo`]
+| +++Datasheet information for this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Assets,`Assets`>>
+//| [[slots_table.Assets]]<<Assets,`Assets`>>
+| 0..* +
+xref::class/Asset.adoc[`Asset`]
+| +++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a...+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Clearances,`Clearances`>>
+//| [[slots_table.Clearances]]<<Clearances,`Clearances`>>
+| 0..* +
+xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+| +++All clearances applicable to this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<ConfigurationEvent,`ConfigurationEvent`>>
+//| [[slots_table.ConfigurationEvent]]<<ConfigurationEvent,`ConfigurationEvent`>>
+| 0..* +
+xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this Power System resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Controls,`Controls`>>
+//| [[slots_table.Controls]]<<Controls,`Controls`>>
+| 0..* +
+xref::class/Control.adoc[`Control`]
+| +++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or...+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<GenericAction,`GenericAction`>>
+//| [[slots_table.GenericAction]]<<GenericAction,`GenericAction`>>
+| 0..* +
+xref::class/GenericAction.adoc[`GenericAction`]
+| +++The generic action that is performed on the power system resource+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Location,`Location`>>
+//| [[slots_table.Location]]<<Location,`Location`>>
+| 0..1 +
+xref::class/Location.adoc[`Location`]
+| +++Location of this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<Measurements,`Measurements`>>
+//| [[slots_table.Measurements]]<<Measurements,`Measurements`>>
+| 0..* +
+xref::class/Measurement.adoc[`Measurement`]
+| +++The measurements associated with this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<OperatingShare,`OperatingShare`>>
+//| [[slots_table.OperatingShare]]<<OperatingShare,`OperatingShare`>>
+| 0..* +
+xref::class/OperatingShare.adoc[`OperatingShare`]
+| +++The operating shares of this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<OperationalTags,`OperationalTags`>>
+//| [[slots_table.OperationalTags]]<<OperationalTags,`OperationalTags`>>
+| 0..* +
+xref::class/OperationalTag.adoc[`OperationalTag`]
+| +++All operational tags placed on this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<PSREvents,`PSREvents`>>
+//| [[slots_table.PSREvents]]<<PSREvents,`PSREvents`>>
+| 0..* +
+xref::class/PSREvent.adoc[`PSREvent`]
+| +++All events associated with this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<PSRType,`PSRType`>>
+//| [[slots_table.PSRType]]<<PSRType,`PSRType`>>
+| 0..1 +
+xref::class/PSRType.adoc[`PSRType`]
+| +++Custom classification for this power system resource.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<ReportingGroup,`ReportingGroup`>>
+//| [[slots_table.ReportingGroup]]<<ReportingGroup,`ReportingGroup`>>
+| 0..* +
+xref::class/ReportingGroup.adoc[`ReportingGroup`]
+| +++Reporting groups to which this power system resource belongs.+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<VerificationAction,`VerificationAction`>>
+//| [[slots_table.VerificationAction]]<<VerificationAction,`VerificationAction`>>
+| 0..* +
+xref::class/VerificationAction.adoc[`VerificationAction`]
+| +++The verification action that is performed on the power system resource+++
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AssetDatasheet]
+=== `AssetDatasheet`
++++Datasheet information for this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.AssetDatasheet`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AssetInfo.adoc[`AssetInfo`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AssetDatasheet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Assets]
+=== `Assets`
++++All assets represented by this power system resource. For example, multiple conductor assets are electrically modelled as a single AC line segment.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Assets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Asset.adoc[`Asset`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Assets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Clearances]
+=== `Clearances`
++++All clearances applicable to this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Clearances`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ClearanceDocument.adoc[`ClearanceDocument`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Clearances,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConfigurationEvent]
+=== `ConfigurationEvent`
++++All configuration events created for this Power System resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ConfigurationEvent`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConfigurationEvent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Controls]
+=== `Controls`
++++The controller outputs used to actually govern a regulating device, e.g. the magnetization of a synchronous machine or capacitor bank breaker actuator.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Controls`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Control.adoc[`Control`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Controls,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#GenericAction]
+=== `GenericAction`
++++The generic action that is performed on the power system resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.GenericAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/GenericAction.adoc[`GenericAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.GenericAction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#highPowerLimit]
+=== `highPowerLimit`
++++High power limit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.highPowerLimit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.highPowerLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#inCoreThermalTC]
+=== `inCoreThermalTC`
++++In-core thermal time constant.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.inCoreThermalTC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.inCoreThermalTC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#integralGain]
+=== `integralGain`
++++Integral gain.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.integralGain`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.integralGain,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Location]
+=== `Location`
++++Location of this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Location,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lowerLimit]
+=== `lowerLimit`
++++Initial lower limit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.lowerLimit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lowerLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lowPowerLimit]
+=== `lowPowerLimit`
++++Low power limit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.lowPowerLimit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lowPowerLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Measurements]
+=== `Measurements`
++++The measurements associated with this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.Measurements`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Measurement.adoc[`Measurement`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Measurements,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperatingShare]
+=== `OperatingShare`
++++The operating shares of this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperatingShare`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperatingShare.adoc[`OperatingShare`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperatingShare,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OperationalTags]
+=== `OperationalTags`
++++All operational tags placed on this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.OperationalTags`
+| Cardinality
+| 0..*
+| Type
+| xref::class/OperationalTag.adoc[`OperationalTag`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OperationalTags,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pressureLimit]
+=== `pressureLimit`
++++Pressure limit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.pressureLimit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pressureLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pressureSetpointGA]
+=== `pressureSetpointGA`
++++Pressure setpoint gain adjuster.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.pressureSetpointGA`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pressureSetpointGA,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pressureSetpointTC1]
+=== `pressureSetpointTC1`
++++Pressure setpoint time constant.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.pressureSetpointTC1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pressureSetpointTC1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#pressureSetpointTC2]
+=== `pressureSetpointTC2`
++++Pressure setpoint time constant.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.pressureSetpointTC2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.pressureSetpointTC2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#proportionalGain]
+=== `proportionalGain`
++++Proportional gain.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.proportionalGain`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.proportionalGain,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PSREvents]
+=== `PSREvents`
++++All events associated with this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSREvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PSREvent.adoc[`PSREvent`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PSREvents,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PSRType]
+=== `PSRType`
++++Custom classification for this power system resource.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.PSRType`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PSRType.adoc[`PSRType`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PSRType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ReportingGroup]
+=== `ReportingGroup`
++++Reporting groups to which this power system resource belongs.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.ReportingGroup`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ReportingGroup.adoc[`ReportingGroup`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ReportingGroup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rfAux1]
+=== `rfAux1`
++++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the BWR power output.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.rfAux1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rfAux1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rfAux2]
+=== `rfAux2`
++++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the BWR power output.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.rfAux2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rfAux2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rfAux3]
+=== `rfAux3`
++++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the BWR power output.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.rfAux3`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rfAux3,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rfAux4]
+=== `rfAux4`
++++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the BWR power output.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.rfAux4`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rfAux4,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rfAux5]
+=== `rfAux5`
++++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the BWR power output.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.rfAux5`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rfAux5,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rfAux6]
+=== `rfAux6`
++++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the BWR power output.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.rfAux6`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rfAux6,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rfAux7]
+=== `rfAux7`
++++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the BWR power output.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.rfAux7`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rfAux7,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rfAux8]
+=== `rfAux8`
++++Coefficient for modelling the effect of off-nominal frequency and voltage on recirculation and core flow, which affects the BWR power output.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.rfAux8`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rfAux8,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rodPattern]
+=== `rodPattern`
++++Rod pattern.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.rodPattern`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rodPattern,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rodPatternConstant]
+=== `rodPatternConstant`
++++Constant associated with rod pattern.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.rodPatternConstant`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rodPatternConstant,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#steamSupplyRating]
+=== `steamSupplyRating`
++++Rating of steam supply.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SteamSupply.steamSupplyRating`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+| Inherited from
+| xref::class/SteamSupply.adoc[`SteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.steamSupplyRating,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SteamTurbines]
+=== `SteamTurbines`
++++Steam turbines may have steam supplied by a steam supply.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SteamSupply.SteamTurbines`
+| Cardinality
+| 0..*
+| Type
+| xref::class/SteamTurbine.adoc[`SteamTurbine`]
+
+| Inherited from
+| xref::class/SteamSupply.adoc[`SteamSupply`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SteamTurbines,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#upperLimit]
+=== `upperLimit`
++++Initial upper limit.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BWRSteamSupply.upperLimit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.upperLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VerificationAction]
+=== `VerificationAction`
++++The verification action that is performed on the power system resource+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PowerSystemResource.VerificationAction`
+| Cardinality
+| 0..*
+| Type
+| xref::class/VerificationAction.adoc[`VerificationAction`]
+
+| Inherited from
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VerificationAction,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

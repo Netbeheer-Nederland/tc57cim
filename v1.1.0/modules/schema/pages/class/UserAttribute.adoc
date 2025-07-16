@@ -1,0 +1,371 @@
+= `UserAttribute`
+:toclevels: 4
+
+
++++Generic name-value pair class, with optional sequence number and units for value; can be used to model parts of information exchange when concrete types are not known in advance.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:UserAttribute`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`UserAttribute`*
+ ** xref::class/MktUserAttribute.adoc[`MktUserAttribute`]
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ErpInvoiceLineItems,`ErpInvoiceLineItems`>>
+//| [[slots_table.ErpInvoiceLineItems]]<<ErpInvoiceLineItems,`ErpInvoiceLineItems`>>
+| 0..* +
+xref::class/ErpInvoiceLineItem.adoc[`ErpInvoiceLineItem`]
+| _n/a_
+| _n/a_
+
+| <<ErpLedgerEntries,`ErpLedgerEntries`>>
+//| [[slots_table.ErpLedgerEntries]]<<ErpLedgerEntries,`ErpLedgerEntries`>>
+| 0..* +
+xref::class/ErpLedgerEntry.adoc[`ErpLedgerEntry`]
+| _n/a_
+| _n/a_
+
+| <<ProcedureDataSets,`ProcedureDataSets`>>
+//| [[slots_table.ProcedureDataSets]]<<ProcedureDataSets,`ProcedureDataSets`>>
+| 0..* +
+xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+| _n/a_
+| _n/a_
+
+| <<PropertySpecification,`PropertySpecification`>>
+//| [[slots_table.PropertySpecification]]<<PropertySpecification,`PropertySpecification`>>
+| 0..1 +
+xref::class/Specification.adoc[`Specification`]
+| _n/a_
+| _n/a_
+
+| <<RatingSpecification,`RatingSpecification`>>
+//| [[slots_table.RatingSpecification]]<<RatingSpecification,`RatingSpecification`>>
+| 0..1 +
+xref::class/Specification.adoc[`Specification`]
+| _n/a_
+| _n/a_
+
+| <<Transaction,`Transaction`>>
+//| [[slots_table.Transaction]]<<Transaction,`Transaction`>>
+| 0..1 +
+xref::class/Transaction.adoc[`Transaction`]
+| +++Transaction for which this snapshot has been recorded.+++
+| _n/a_
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of an attribute.+++
+| _n/a_
+
+| <<sequenceNumber,`sequenceNumber`>>
+//| [[slots_table.sequenceNumber]]<<sequenceNumber,`sequenceNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Sequence number for this attribute in a list of attributes.+++
+| _n/a_
+
+| <<value,`value`>>
+//| [[slots_table.value]]<<value,`value`>>
+| 0..1 +
+xref::class/StringQuantity.adoc[`StringQuantity`]
+| +++Value of an attribute, including unit information.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#ErpInvoiceLineItems]
+=== `ErpInvoiceLineItems`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.ErpInvoiceLineItems`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ErpInvoiceLineItem.adoc[`ErpInvoiceLineItem`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ErpInvoiceLineItems,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ErpLedgerEntries]
+=== `ErpLedgerEntries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.ErpLedgerEntries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ErpLedgerEntry.adoc[`ErpLedgerEntry`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ErpLedgerEntries,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++Name of an attribute.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ProcedureDataSets]
+=== `ProcedureDataSets`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.ProcedureDataSets`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ProcedureDataSets,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertySpecification]
+=== `PropertySpecification`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.PropertySpecification`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Specification.adoc[`Specification`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertySpecification,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RatingSpecification]
+=== `RatingSpecification`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.RatingSpecification`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Specification.adoc[`Specification`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RatingSpecification,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sequenceNumber]
+=== `sequenceNumber`
++++Sequence number for this attribute in a list of attributes.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.sequenceNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sequenceNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Transaction]
+=== `Transaction`
++++Transaction for which this snapshot has been recorded.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.Transaction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Transaction.adoc[`Transaction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Transaction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value]
+=== `value`
++++Value of an attribute, including unit information.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UserAttribute.value`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StringQuantity.adoc[`StringQuantity`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ErpInvoiceLineItem.adoc[`ErpInvoiceLineItem`] | xref::class/ErpInvoiceLineItem.adoc#UserAttributes[`UserAttributes`]
+
+
+
+| xref::class/ErpLedgerEntry.adoc[`ErpLedgerEntry`] | xref::class/ErpLedgerEntry.adoc#UserAttributes[`UserAttributes`]
+
+
+
+| xref::class/ProcedureDataSet.adoc[`ProcedureDataSet`] | xref::class/ProcedureDataSet.adoc#Properties[`Properties`]
+
+
+
+| xref::class/Specification.adoc[`Specification`] | xref::class/Specification.adoc#Ratings[`Ratings`]
+
+
+
+| xref::class/Transaction.adoc[`Transaction`] | xref::class/Transaction.adoc#UserAttributes[`UserAttributes`]
+
+
+|===
+

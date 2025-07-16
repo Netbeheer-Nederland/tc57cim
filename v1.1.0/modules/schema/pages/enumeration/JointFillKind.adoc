@@ -1,0 +1,84 @@
+= `JointFillKind`
+:toclevels: 4
+
+
++++Kind of fill for Joint.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:JointFillKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `airNoFilling`
+| `cim:JointFillKind.airNoFilling`
+| n/a
+
+| `asphaltic`
+| `cim:JointFillKind.asphaltic`
+| n/a
+
+| `bluefill254`
+| `cim:JointFillKind.bluefill254`
+| n/a
+
+| `epoxy`
+| `cim:JointFillKind.epoxy`
+| n/a
+
+| `insoluseal`
+| `cim:JointFillKind.insoluseal`
+| n/a
+
+| `noFillPrefab`
+| `cim:JointFillKind.noFillPrefab`
+| n/a
+
+| `noVoid`
+| `cim:JointFillKind.noVoid`
+| n/a
+
+| `oil`
+| `cim:JointFillKind.oil`
+| n/a
+
+| `other`
+| `cim:JointFillKind.other`
+| n/a
+
+| `petrolatum`
+| `cim:JointFillKind.petrolatum`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Joint.adoc[`Joint`] | xref::class/Joint.adoc#fillKind[`fillKind`]
+
+
+|===
+

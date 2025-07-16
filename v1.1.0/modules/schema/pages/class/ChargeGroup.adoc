@@ -1,0 +1,623 @@
+= `ChargeGroup`
+:toclevels: 4
+
+
++++Charge Group is the grouping of Charge Types for settlement invoicing purpose.  Examples such as Ancillary Services, Interests, etc.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ChargeGroup`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`ChargeGroup`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ChargeGroupChild,`ChargeGroupChild`>>
+//| [[slots_table.ChargeGroupChild]]<<ChargeGroupChild,`ChargeGroupChild`>>
+| 0..* +
+xref::class/ChargeGroup.adoc[`ChargeGroup`]
+| +++A ChargeGroup instance can have relationships with other ChargeGroup instances.+++
+| _n/a_
+
+| <<ChargeGroupParent,`ChargeGroupParent`>>
+//| [[slots_table.ChargeGroupParent]]<<ChargeGroupParent,`ChargeGroupParent`>>
+| 0..1 +
+xref::class/ChargeGroup.adoc[`ChargeGroup`]
+| +++A ChargeGroup instance can have relationships with other ChargeGroup instances.+++
+| _n/a_
+
+| <<ChargeType,`ChargeType`>>
+//| [[slots_table.ChargeType]]<<ChargeType,`ChargeType`>>
+| 0..* +
+xref::class/ChargeType.adoc[`ChargeType`]
+| +++A ChargeGroup can have 0-n ChargeType. A ChargeType can associate to 0-n ChargeGroup.+++
+| _n/a_
+
+| <<MktUserAttribute,`MktUserAttribute`>>
+//| [[slots_table.MktUserAttribute]]<<MktUserAttribute,`MktUserAttribute`>>
+| 0..* +
+xref::class/MktUserAttribute.adoc[`MktUserAttribute`]
+| _n/a_
+| _n/a_
+
+| <<effectiveDate,`effectiveDate`>>
+//| [[slots_table.effectiveDate]]<<effectiveDate,`effectiveDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<marketCode,`marketCode`>>
+//| [[slots_table.marketCode]]<<marketCode,`marketCode`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+
+| <<terminationDate,`terminationDate`>>
+//| [[slots_table.terminationDate]]<<terminationDate,`terminationDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ChargeGroupChild]
+=== `ChargeGroupChild`
++++A ChargeGroup instance can have relationships with other ChargeGroup instances.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChargeGroup.ChargeGroupChild`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChargeGroup.adoc[`ChargeGroup`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ChargeGroupChild,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ChargeGroupParent]
+=== `ChargeGroupParent`
++++A ChargeGroup instance can have relationships with other ChargeGroup instances.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChargeGroup.ChargeGroupParent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChargeGroup.adoc[`ChargeGroup`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ChargeGroupParent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ChargeType]
+=== `ChargeType`
++++A ChargeGroup can have 0-n ChargeType. A ChargeType can associate to 0-n ChargeGroup.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChargeGroup.ChargeType`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChargeType.adoc[`ChargeType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ChargeType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#effectiveDate]
+=== `effectiveDate`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChargeGroup.effectiveDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.effectiveDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marketCode]
+=== `marketCode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChargeGroup.marketCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marketCode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktUserAttribute]
+=== `MktUserAttribute`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChargeGroup.MktUserAttribute`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MktUserAttribute.adoc[`MktUserAttribute`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktUserAttribute,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#terminationDate]
+=== `terminationDate`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ChargeGroup.terminationDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.terminationDate,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ChargeGroup.adoc[`ChargeGroup`] | xref::class/ChargeGroup.adoc#ChargeGroupChild[`ChargeGroupChild`]
+
+
+
+| xref::class/ChargeType.adoc[`ChargeType`] | xref::class/ChargeType.adoc#ChargeGroup[`ChargeGroup`]
+
+
+
+| xref::class/MktUserAttribute.adoc[`MktUserAttribute`] | xref::class/MktUserAttribute.adoc#ChargeGroup[`ChargeGroup`]
+
+
+|===
+

@@ -1,0 +1,156 @@
+= `InterchangeETCData`
+:toclevels: 4
+
+
++++Existing Transmission Contract data for an interchange schedule.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:InterchangeETCData`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`InterchangeETCData`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<InterchangeSchedule,`InterchangeSchedule`>>
+//| [[slots_table.InterchangeSchedule]]<<InterchangeSchedule,`InterchangeSchedule`>>
+| 0..1 +
+xref::class/InterchangeSchedule.adoc[`InterchangeSchedule`]
+| _n/a_
+| _n/a_
+
+| <<contractNumber,`contractNumber`>>
+//| [[slots_table.contractNumber]]<<contractNumber,`contractNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Existing transmission contract number+++
+| _n/a_
+
+| <<usageMW,`usageMW`>>
+//| [[slots_table.usageMW]]<<usageMW,`usageMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Existing transmission contract usage MW value+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#contractNumber]
+=== `contractNumber`
++++Existing transmission contract number+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterchangeETCData.contractNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.contractNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InterchangeSchedule]
+=== `InterchangeSchedule`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterchangeETCData.InterchangeSchedule`
+| Cardinality
+| 0..1
+| Type
+| xref::class/InterchangeSchedule.adoc[`InterchangeSchedule`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InterchangeSchedule,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#usageMW]
+=== `usageMW`
++++Existing transmission contract usage MW value+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InterchangeETCData.usageMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.usageMW,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/InterchangeSchedule.adoc[`InterchangeSchedule`] | xref::class/InterchangeSchedule.adoc#InterchangeETCData[`InterchangeETCData`]
+
+
+|===
+

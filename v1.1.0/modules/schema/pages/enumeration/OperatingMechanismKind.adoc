@@ -1,0 +1,80 @@
+= `OperatingMechanismKind`
+:toclevels: 4
+
+
++++Kinds of operating mechanisms.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OperatingMechanismKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `capacitorTrip`
+| `cim:OperatingMechanismKind.capacitorTrip`
+| n/a
+
+| `hydraulic`
+| `cim:OperatingMechanismKind.hydraulic`
+| n/a
+
+| `pneudraulic`
+| `cim:OperatingMechanismKind.pneudraulic`
+| n/a
+
+| `pneumatic`
+| `cim:OperatingMechanismKind.pneumatic`
+| n/a
+
+| `solenoid`
+| `cim:OperatingMechanismKind.solenoid`
+| n/a
+
+| `spring`
+| `cim:OperatingMechanismKind.spring`
+| n/a
+
+| `springHandCrank`
+| `cim:OperatingMechanismKind.springHandCrank`
+| n/a
+
+| `springHydraulic`
+| `cim:OperatingMechanismKind.springHydraulic`
+| n/a
+
+| `springMotor`
+| `cim:OperatingMechanismKind.springMotor`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/OperatingMechanismInfo.adoc[`OperatingMechanismInfo`] | xref::class/OperatingMechanismInfo.adoc#mechanismKind[`mechanismKind`]
+
+
+|===
+

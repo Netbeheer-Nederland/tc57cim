@@ -1,0 +1,156 @@
+= `InUseDate`
+:toclevels: 4
+
+
++++Dates associated with asset 'in use' status. May have multiple in use dates for this device and a compound type allows a query to return multiple dates.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:InUseDate`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`InUseDate`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<inUseDate,`inUseDate`>>
+//| [[slots_table.inUseDate]]<<inUseDate,`inUseDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date asset was most recently put in use.+++
+| _n/a_
+
+| <<notReadyForUseDate,`notReadyForUseDate`>>
+//| [[slots_table.notReadyForUseDate]]<<notReadyForUseDate,`notReadyForUseDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date of most recent asset transition to not ready for use state.+++
+| _n/a_
+
+| <<readyForUseDate,`readyForUseDate`>>
+//| [[slots_table.readyForUseDate]]<<readyForUseDate,`readyForUseDate`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date of most recent asset transition to ready for use state.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#inUseDate]
+=== `inUseDate`
++++Date asset was most recently put in use.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InUseDate.inUseDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.inUseDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#notReadyForUseDate]
+=== `notReadyForUseDate`
++++Date of most recent asset transition to not ready for use state.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InUseDate.notReadyForUseDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.notReadyForUseDate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#readyForUseDate]
+=== `readyForUseDate`
++++Date of most recent asset transition to ready for use state.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InUseDate.readyForUseDate`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.readyForUseDate,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Asset.adoc[`Asset`] | xref::class/Asset.adoc#inUseDate[`inUseDate`]
+
+
+|===
+

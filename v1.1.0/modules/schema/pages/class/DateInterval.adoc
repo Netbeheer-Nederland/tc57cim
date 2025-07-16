@@ -1,0 +1,113 @@
+= `DateInterval`
+:toclevels: 4
+
+
++++Interval between two dates.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DateInterval`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`DateInterval`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<end,`end`>>
+//| [[slots_table.end]]<<end,`end`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++End date of this interval.+++
+| _n/a_
+
+| <<start,`start`>>
+//| [[slots_table.start]]<<start,`start`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Start date of this interval.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#end]
+=== `end`
++++End date of this interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateInterval.end`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.end,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#start]
+=== `start`
++++Start date of this interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateInterval.start`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.start,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

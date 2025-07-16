@@ -1,0 +1,193 @@
+= `DateAndOrTime`
+:toclevels: 4
+
+
++++The date and/or the time.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DateAndOrTime`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`DateAndOrTime`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MarketDocument,`MarketDocument`>>
+//| [[slots_table.MarketDocument]]<<MarketDocument,`MarketDocument`>>
+| 0..* +
+xref::class/MarketDocument.adoc[`MarketDocument`]
+| _n/a_
+| _n/a_
+
+| <<TimeSeries,`TimeSeries`>>
+//| [[slots_table.TimeSeries]]<<TimeSeries,`TimeSeries`>>
+| 0..* +
+xref::class/TimeSeries.adoc[`TimeSeries`]
+| _n/a_
+| _n/a_
+
+| <<date,`date`>>
+//| [[slots_table.date]]<<date,`date`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date as "yyyy-mm-dd", which conforms with ISO 8601+++
+| _n/a_
+
+| <<time,`time`>>
+//| [[slots_table.time]]<<time,`time`>>
+| 0..1 +
+https://w3id.org/linkml/Time[`time`]
+| +++Time as "hh:mm:ss.sssZ", which conforms with ISO 8601.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#date]
+=== `date`
++++Date as "yyyy-mm-dd", which conforms with ISO 8601+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateAndOrTime.date`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.date,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MarketDocument]
+=== `MarketDocument`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateAndOrTime.MarketDocument`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MarketDocument.adoc[`MarketDocument`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MarketDocument,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#time]
+=== `time`
++++Time as "hh:mm:ss.sssZ", which conforms with ISO 8601.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateAndOrTime.time`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Time[`time`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.time,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TimeSeries]
+=== `TimeSeries`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DateAndOrTime.TimeSeries`
+| Cardinality
+| 0..*
+| Type
+| xref::class/TimeSeries.adoc[`TimeSeries`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TimeSeries,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MarketDocument.adoc[`MarketDocument`] | xref::class/MarketDocument.adoc#DateAndOrTime[`DateAndOrTime`]
+
+
+
+| xref::class/TimeSeries.adoc[`TimeSeries`] | xref::class/TimeSeries.adoc#DateAndOrTime[`DateAndOrTime`]
+
+
+|===
+

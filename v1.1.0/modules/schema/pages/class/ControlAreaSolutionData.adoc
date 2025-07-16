@@ -1,0 +1,160 @@
+= `ControlAreaSolutionData`
+:toclevels: 4
+
+
++++State Estimator Solution Pool Interchange and Losses.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ControlAreaSolutionData`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ControlAreaSolutionData`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MktControlArea,`MktControlArea`>>
+//| [[slots_table.MktControlArea]]<<MktControlArea,`MktControlArea`>>
+| 0..1 +
+xref::class/MktControlArea.adoc[`MktControlArea`]
+| _n/a_
+| _n/a_
+
+| <<solvedInterchange,`solvedInterchange`>>
+//| [[slots_table.solvedInterchange]]<<solvedInterchange,`solvedInterchange`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Pool MW Interchange 
+Attribute Usage: The active power interchange of the pool+++
+| _n/a_
+
+| <<solvedLosses,`solvedLosses`>>
+//| [[slots_table.solvedLosses]]<<solvedLosses,`solvedLosses`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Pool Losses MW 
+Attribute Usage: The active power losses of the pool in MW+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#MktControlArea]
+=== `MktControlArea`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlAreaSolutionData.MktControlArea`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MktControlArea.adoc[`MktControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktControlArea,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#solvedInterchange]
+=== `solvedInterchange`
++++Pool MW Interchange 
+Attribute Usage: The active power interchange of the pool+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlAreaSolutionData.solvedInterchange`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.solvedInterchange,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#solvedLosses]
+=== `solvedLosses`
++++Pool Losses MW 
+Attribute Usage: The active power losses of the pool in MW+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ControlAreaSolutionData.solvedLosses`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.solvedLosses,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MktControlArea.adoc[`MktControlArea`] | xref::class/MktControlArea.adoc#ControlAreaSolutionData[`ControlAreaSolutionData`]
+
+
+|===
+

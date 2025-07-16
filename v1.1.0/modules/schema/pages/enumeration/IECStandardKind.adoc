@@ -1,0 +1,120 @@
+= `IECStandardKind`
+:toclevels: 4
+
+
++++List of IEC standards.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:IECStandardKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `60156`
+| `cim:IECStandardKind.60156`
+| n/a
+
+| `60243-1`
+| `cim:IECStandardKind.60243-1`
+| n/a
+
+| `60243-2`
+| `cim:IECStandardKind.60243-2`
+| n/a
+
+| `60243-3`
+| `cim:IECStandardKind.60243-3`
+| n/a
+
+| `60247`
+| `cim:IECStandardKind.60247`
+| n/a
+
+| `60422`
+| `cim:IECStandardKind.60422`
+| n/a
+
+| `60450`
+| `cim:IECStandardKind.60450`
+| n/a
+
+| `60567`
+| `cim:IECStandardKind.60567`
+| n/a
+
+| `60666`
+| `cim:IECStandardKind.60666`
+| n/a
+
+| `60814`
+| `cim:IECStandardKind.60814`
+| n/a
+
+| `60970`
+| `cim:IECStandardKind.60970`
+| n/a
+
+| `60997`
+| `cim:IECStandardKind.60997`
+| n/a
+
+| `61125`
+| `cim:IECStandardKind.61125`
+| n/a
+
+| `61198`
+| `cim:IECStandardKind.61198`
+| n/a
+
+| `61619`
+| `cim:IECStandardKind.61619`
+| n/a
+
+| `61868`
+| `cim:IECStandardKind.61868`
+| n/a
+
+| `62535`
+| `cim:IECStandardKind.62535`
+| n/a
+
+| `62697-1`
+| `cim:IECStandardKind.62697-1`
+| n/a
+
+| `62770`
+| `cim:IECStandardKind.62770`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/IECStandard.adoc[`IECStandard`] | xref::class/IECStandard.adoc#standardNumber[`standardNumber`]
+
+
+|===
+

@@ -1,0 +1,222 @@
+= `BankAccountDetail`
+:toclevels: 4
+
+
++++Details of a bank account.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:BankAccountDetail`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`BankAccountDetail`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<accountNumber,`accountNumber`>>
+//| [[slots_table.accountNumber]]<<accountNumber,`accountNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Operational account reference number.+++
+| _n/a_
+
+| <<bankName,`bankName`>>
+//| [[slots_table.bankName]]<<bankName,`bankName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of bank where account is held.+++
+| _n/a_
+
+| <<branchCode,`branchCode`>>
+//| [[slots_table.branchCode]]<<branchCode,`branchCode`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Branch of bank where account is held.+++
+| _n/a_
+
+| <<holderID,`holderID`>>
+//| [[slots_table.holderID]]<<holderID,`holderID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++National identity number (or equivalent) of account holder.+++
+| _n/a_
+
+| <<holderName,`holderName`>>
+//| [[slots_table.holderName]]<<holderName,`holderName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of account holder.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#accountNumber]
+=== `accountNumber`
++++Operational account reference number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BankAccountDetail.accountNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.accountNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bankName]
+=== `bankName`
++++Name of bank where account is held.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BankAccountDetail.bankName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bankName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#branchCode]
+=== `branchCode`
++++Branch of bank where account is held.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BankAccountDetail.branchCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.branchCode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#holderID]
+=== `holderID`
++++National identity number (or equivalent) of account holder.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BankAccountDetail.holderID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.holderID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#holderName]
+=== `holderName`
++++Name of account holder.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BankAccountDetail.holderName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.holderName,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Cheque.adoc[`Cheque`] | xref::class/Cheque.adoc#bankAccountDetail[`bankAccountDetail`]
+
+
+|===
+

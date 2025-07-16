@@ -1,0 +1,56 @@
+= `IfdBaseKind`
+:toclevels: 4
+
+
++++Excitation base system mode.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:IfdBaseKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `ifag`
+| `cim:IfdBaseKind.ifag`
+| n/a
+
+| `iffl`
+| `cim:IfdBaseKind.iffl`
+| n/a
+
+| `ifnl`
+| `cim:IfdBaseKind.ifnl`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/SynchronousMachineDetailed.adoc[`SynchronousMachineDetailed`] | xref::class/SynchronousMachineDetailed.adoc#ifdBaseType[`ifdBaseType`]
+
+
+|===
+

@@ -1,0 +1,234 @@
+= `TransmissionReservation`
+:toclevels: 4
+
+
++++A transmission reservation is obtained from the OASIS system to reserve transmission for a specified time period, transmission path and transmission product.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TransmissionReservation`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`TransmissionReservation`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<EnergyTransaction,`EnergyTransaction`>>
+//| [[slots_table.EnergyTransaction]]<<EnergyTransaction,`EnergyTransaction`>>
+| 0..1 +
+xref::class/EnergyTransaction.adoc[`EnergyTransaction`]
+| _n/a_
+| _n/a_
+
+| <<Sink,`Sink`>>
+//| [[slots_table.Sink]]<<Sink,`Sink`>>
+| 0..1 +
+xref::class/ServicePoint.adoc[`ServicePoint`]
+| _n/a_
+| _n/a_
+
+| <<Source,`Source`>>
+//| [[slots_table.Source]]<<Source,`Source`>>
+| 0..1 +
+xref::class/ServicePoint.adoc[`ServicePoint`]
+| _n/a_
+| _n/a_
+
+| <<TransactionBid,`TransactionBid`>>
+//| [[slots_table.TransactionBid]]<<TransactionBid,`TransactionBid`>>
+| 0..1 +
+xref::class/TransactionBid.adoc[`TransactionBid`]
+| _n/a_
+| _n/a_
+
+| <<TransmissionPath,`TransmissionPath`>>
+//| [[slots_table.TransmissionPath]]<<TransmissionPath,`TransmissionPath`>>
+| 1 +
+xref::class/TransmissionPath.adoc[`TransmissionPath`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#EnergyTransaction]
+=== `EnergyTransaction`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionReservation.EnergyTransaction`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EnergyTransaction.adoc[`EnergyTransaction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EnergyTransaction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Sink]
+=== `Sink`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionReservation.Sink`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ServicePoint.adoc[`ServicePoint`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Sink,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Source]
+=== `Source`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionReservation.Source`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ServicePoint.adoc[`ServicePoint`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Source,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TransactionBid]
+=== `TransactionBid`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionReservation.TransactionBid`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TransactionBid.adoc[`TransactionBid`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TransactionBid,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TransmissionPath]
+=== `TransmissionPath`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TransmissionReservation.TransmissionPath`
+| Cardinality
+| 1
+| Type
+| xref::class/TransmissionPath.adoc[`TransmissionPath`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TransmissionPath,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EnergyTransaction.adoc[`EnergyTransaction`] | xref::class/EnergyTransaction.adoc#TransmissionReservation[`TransmissionReservation`]
+
+
+
+| xref::class/ServicePoint.adoc[`ServicePoint`] | xref::class/ServicePoint.adoc#SourceReservation[`SourceReservation`]
+
+
+
+| xref::class/TransactionBid.adoc[`TransactionBid`] | xref::class/TransactionBid.adoc#TransmissionReservation[`TransmissionReservation`]
+
+
+
+| xref::class/TransmissionPath.adoc[`TransmissionPath`] | xref::class/TransmissionPath.adoc#TransmissionReservation[`TransmissionReservation`]
+
+
+|===
+

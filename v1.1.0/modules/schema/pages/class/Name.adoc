@@ -1,0 +1,160 @@
+= `Name`
+:toclevels: 4
+
+
++++The Name class provides the means to define any number of human readable  names for an object. A name is <b>not</b> to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Name`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`Name`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<IdentifiedObject,`IdentifiedObject`>>
+//| [[slots_table.IdentifiedObject]]<<IdentifiedObject,`IdentifiedObject`>>
+| 1 +
+xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+| +++Identified object that this name designates.+++
+| _n/a_
+
+| <<NameType,`NameType`>>
+//| [[slots_table.NameType]]<<NameType,`NameType`>>
+| 1 +
+xref::class/NameType.adoc[`NameType`]
+| +++Type of this name.+++
+| _n/a_
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Any free text that name the object.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#IdentifiedObject]
+=== `IdentifiedObject`
++++Identified object that this name designates.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Name.IdentifiedObject`
+| Cardinality
+| 1
+| Type
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.IdentifiedObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++Any free text that name the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Name.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#NameType]
+=== `NameType`
++++Type of this name.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Name.NameType`
+| Cardinality
+| 1
+| Type
+| xref::class/NameType.adoc[`NameType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.NameType,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`] | xref::class/IdentifiedObject.adoc#Names[`Names`]
+
+
+
+| xref::class/NameType.adoc[`NameType`] | xref::class/NameType.adoc#Names[`Names`]
+
+
+|===
+

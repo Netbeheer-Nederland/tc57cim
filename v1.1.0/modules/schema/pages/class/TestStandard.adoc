@@ -1,0 +1,953 @@
+= `TestStandard`
+:toclevels: 4
+
+
++++The precise standard used in executing a lab test, including the standard, and standard version, test method and variant, if needed.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TestStandard`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`TestStandard`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AssetAnalog,`AssetAnalog`>>
+//| [[slots_table.AssetAnalog]]<<AssetAnalog,`AssetAnalog`>>
+| 0..* +
+xref::class/AssetAnalog.adoc[`AssetAnalog`]
+| +++An asset health analog related to this lab test standard.+++
+| _n/a_
+
+| <<AssetDiscrete,`AssetDiscrete`>>
+//| [[slots_table.AssetDiscrete]]<<AssetDiscrete,`AssetDiscrete`>>
+| 0..* +
+xref::class/AssetDiscrete.adoc[`AssetDiscrete`]
+| +++An asset health discrete related to this lab test standard.+++
+| _n/a_
+
+| <<AssetString,`AssetString`>>
+//| [[slots_table.AssetString]]<<AssetString,`AssetString`>>
+| 0..* +
+xref::class/AssetStringMeasurement.adoc[`AssetStringMeasurement`]
+| +++An asset health string related to this lab test standard.+++
+| _n/a_
+
+| <<testMethod,`testMethod`>>
+//| [[slots_table.testMethod]]<<testMethod,`testMethod`>>
+| 0..1 +
+xref::enumeration/TestMethod.adoc[`TestMethod`]
+| +++Identification of test method used if multiple methods specified by test standard.+++
+| _n/a_
+
+| <<testStandardASTM,`testStandardASTM`>>
+//| [[slots_table.testStandardASTM]]<<testStandardASTM,`testStandardASTM`>>
+| 0..1 +
+xref::class/ASTMStandard.adoc[`ASTMStandard`]
+| +++Which ASTM standard used to determine analog value result. Applies only if ASTM standard used.+++
+| _n/a_
+
+| <<testStandardCIGRE,`testStandardCIGRE`>>
+//| [[slots_table.testStandardCIGRE]]<<testStandardCIGRE,`testStandardCIGRE`>>
+| 0..1 +
+xref::class/CIGREStandard.adoc[`CIGREStandard`]
+| +++Which CIGRE standard used to determine analog value result. Applies only if CIGRE standard used.+++
+| _n/a_
+
+| <<testStandardDIN,`testStandardDIN`>>
+//| [[slots_table.testStandardDIN]]<<testStandardDIN,`testStandardDIN`>>
+| 0..1 +
+xref::class/DINStandard.adoc[`DINStandard`]
+| +++Which DIN standard used to determine analog value result. Applies only if DIN standard used.+++
+| _n/a_
+
+| <<testStandardDoble,`testStandardDoble`>>
+//| [[slots_table.testStandardDoble]]<<testStandardDoble,`testStandardDoble`>>
+| 0..1 +
+xref::class/DobleStandard.adoc[`DobleStandard`]
+| +++Which Doble standard used to determine analog value result. Applies only if Doble standard used.+++
+| _n/a_
+
+| <<testStandardEPA,`testStandardEPA`>>
+//| [[slots_table.testStandardEPA]]<<testStandardEPA,`testStandardEPA`>>
+| 0..1 +
+xref::class/EPAStandard.adoc[`EPAStandard`]
+| +++Which EPA standard used to determine analog value result. Applies only if EPA standard used.+++
+| _n/a_
+
+| <<testStandardIEC,`testStandardIEC`>>
+//| [[slots_table.testStandardIEC]]<<testStandardIEC,`testStandardIEC`>>
+| 0..1 +
+xref::class/IECStandard.adoc[`IECStandard`]
+| +++Which IEC standard used to determine analog value result. Applies only if IEC standard used.+++
+| _n/a_
+
+| <<testStandardIEEE,`testStandardIEEE`>>
+//| [[slots_table.testStandardIEEE]]<<testStandardIEEE,`testStandardIEEE`>>
+| 0..1 +
+xref::class/IEEEStandard.adoc[`IEEEStandard`]
+| +++Which IEEE standard used to determine analog value result. Applies only if IEEE standard used.+++
+| _n/a_
+
+| <<testStandardISO,`testStandardISO`>>
+//| [[slots_table.testStandardISO]]<<testStandardISO,`testStandardISO`>>
+| 0..1 +
+xref::class/ISOStandard.adoc[`ISOStandard`]
+| +++Which ISO standard used to determine analog value result. Applies only if ISO standard used.+++
+| _n/a_
+
+| <<testStandardLaborelec,`testStandardLaborelec`>>
+//| [[slots_table.testStandardLaborelec]]<<testStandardLaborelec,`testStandardLaborelec`>>
+| 0..1 +
+xref::class/LaborelecStandard.adoc[`LaborelecStandard`]
+| +++Which Laborelec standard used to determine analog value result. Applies only if Laborelec standard used.+++
+| _n/a_
+
+| <<testStandardTAPPI,`testStandardTAPPI`>>
+//| [[slots_table.testStandardTAPPI]]<<testStandardTAPPI,`testStandardTAPPI`>>
+| 0..1 +
+xref::class/TAPPIStandard.adoc[`TAPPIStandard`]
+| +++Which TAPPI standard used to determine analog value result. Applies only if TAPPI standard used.+++
+| _n/a_
+
+| <<testStandardUKMinistryOfDefence,`testStandardUKMinistryOfDefence`>>
+//| [[slots_table.testStandardUKMinistryOfDefence]]<<testStandardUKMinistryOfDefence,`testStandardUKMinistryOfDefence`>>
+| 0..1 +
+xref::class/UKMinistryOfDefenceStandard.adoc[`UKMinistryOfDefenceStandard`]
+| +++Which UK Ministry of Defence standard used to determine analog value result. Applies only if UK Ministry of Defence standard used.+++
+| _n/a_
+
+| <<testStandardWEP,`testStandardWEP`>>
+//| [[slots_table.testStandardWEP]]<<testStandardWEP,`testStandardWEP`>>
+| 0..1 +
+xref::class/WEPStandard.adoc[`WEPStandard`]
+| +++Which WEP standard used to determine analog value result. Applies only if WEP standard used.+++
+| _n/a_
+
+| <<testVariant,`testVariant`>>
+//| [[slots_table.testVariant]]<<testVariant,`testVariant`>>
+| 0..1 +
+xref::enumeration/TestVariantKind.adoc[`TestVariantKind`]
+| +++Identification of variant of test method or standard if one is specified by the standard.+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AssetAnalog]
+=== `AssetAnalog`
++++An asset health analog related to this lab test standard.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.AssetAnalog`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AssetAnalog.adoc[`AssetAnalog`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AssetAnalog,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AssetDiscrete]
+=== `AssetDiscrete`
++++An asset health discrete related to this lab test standard.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.AssetDiscrete`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AssetDiscrete.adoc[`AssetDiscrete`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AssetDiscrete,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AssetString]
+=== `AssetString`
++++An asset health string related to this lab test standard.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.AssetString`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AssetStringMeasurement.adoc[`AssetStringMeasurement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AssetString,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testMethod]
+=== `testMethod`
++++Identification of test method used if multiple methods specified by test standard.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testMethod`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/TestMethod.adoc[`TestMethod`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testMethod,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testStandardASTM]
+=== `testStandardASTM`
++++Which ASTM standard used to determine analog value result. Applies only if ASTM standard used.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testStandardASTM`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ASTMStandard.adoc[`ASTMStandard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testStandardASTM,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testStandardCIGRE]
+=== `testStandardCIGRE`
++++Which CIGRE standard used to determine analog value result. Applies only if CIGRE standard used.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testStandardCIGRE`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CIGREStandard.adoc[`CIGREStandard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testStandardCIGRE,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testStandardDIN]
+=== `testStandardDIN`
++++Which DIN standard used to determine analog value result. Applies only if DIN standard used.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testStandardDIN`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DINStandard.adoc[`DINStandard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testStandardDIN,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testStandardDoble]
+=== `testStandardDoble`
++++Which Doble standard used to determine analog value result. Applies only if Doble standard used.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testStandardDoble`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DobleStandard.adoc[`DobleStandard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testStandardDoble,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testStandardEPA]
+=== `testStandardEPA`
++++Which EPA standard used to determine analog value result. Applies only if EPA standard used.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testStandardEPA`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EPAStandard.adoc[`EPAStandard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testStandardEPA,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testStandardIEC]
+=== `testStandardIEC`
++++Which IEC standard used to determine analog value result. Applies only if IEC standard used.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testStandardIEC`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IECStandard.adoc[`IECStandard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testStandardIEC,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testStandardIEEE]
+=== `testStandardIEEE`
++++Which IEEE standard used to determine analog value result. Applies only if IEEE standard used.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testStandardIEEE`
+| Cardinality
+| 0..1
+| Type
+| xref::class/IEEEStandard.adoc[`IEEEStandard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testStandardIEEE,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testStandardISO]
+=== `testStandardISO`
++++Which ISO standard used to determine analog value result. Applies only if ISO standard used.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testStandardISO`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ISOStandard.adoc[`ISOStandard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testStandardISO,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testStandardLaborelec]
+=== `testStandardLaborelec`
++++Which Laborelec standard used to determine analog value result. Applies only if Laborelec standard used.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testStandardLaborelec`
+| Cardinality
+| 0..1
+| Type
+| xref::class/LaborelecStandard.adoc[`LaborelecStandard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testStandardLaborelec,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testStandardTAPPI]
+=== `testStandardTAPPI`
++++Which TAPPI standard used to determine analog value result. Applies only if TAPPI standard used.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testStandardTAPPI`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TAPPIStandard.adoc[`TAPPIStandard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testStandardTAPPI,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testStandardUKMinistryOfDefence]
+=== `testStandardUKMinistryOfDefence`
++++Which UK Ministry of Defence standard used to determine analog value result. Applies only if UK Ministry of Defence standard used.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testStandardUKMinistryOfDefence`
+| Cardinality
+| 0..1
+| Type
+| xref::class/UKMinistryOfDefenceStandard.adoc[`UKMinistryOfDefenceStandard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testStandardUKMinistryOfDefence,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testStandardWEP]
+=== `testStandardWEP`
++++Which WEP standard used to determine analog value result. Applies only if WEP standard used.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testStandardWEP`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WEPStandard.adoc[`WEPStandard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testStandardWEP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#testVariant]
+=== `testVariant`
++++Identification of variant of test method or standard if one is specified by the standard.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TestStandard.testVariant`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/TestVariantKind.adoc[`TestVariantKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.testVariant,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AssetAnalog.adoc[`AssetAnalog`] | xref::class/AssetAnalog.adoc#TestStandard[`TestStandard`]
+
+
+
+| xref::class/AssetDiscrete.adoc[`AssetDiscrete`] | xref::class/AssetDiscrete.adoc#TestStandard[`TestStandard`]
+
+
+
+| xref::class/AssetStringMeasurement.adoc[`AssetStringMeasurement`] | xref::class/AssetStringMeasurement.adoc#TestStandard[`TestStandard`]
+
+
+|===
+

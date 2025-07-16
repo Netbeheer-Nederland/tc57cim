@@ -1,0 +1,56 @@
+= `TAPPIStandardEditionKind`
+:toclevels: 4
+
+
++++List of editions for TAPPI standards.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TAPPIStandardEditionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `2009`
+| `cim:TAPPIStandardEditionKind.2009`
+| n/a
+
+| `none`
+| `cim:TAPPIStandardEditionKind.none`
+| n/a
+
+| `unknown`
+| `cim:TAPPIStandardEditionKind.unknown`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TAPPIStandard.adoc[`TAPPIStandard`] | xref::class/TAPPIStandard.adoc#standardEdition[`standardEdition`]
+
+
+|===
+

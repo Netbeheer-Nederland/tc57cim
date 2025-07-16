@@ -1,0 +1,90 @@
+= `InadvertentAccount`
+:toclevels: 4
+
+
++++An account for tracking inadvertent interchange versus time for each control area. A control area may have more than one inadvertent account in order to track inadvertent over one or more specific tie points in addition to the usual overall net inadvertent. Separate accounts would also be used to track designated time periods, such as on-peak and off-peak.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:InadvertentAccount`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`InadvertentAccount`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<SubControlArea,`SubControlArea`>>
+//| [[slots_table.SubControlArea]]<<SubControlArea,`SubControlArea`>>
+| 1 +
+xref::class/SubControlArea.adoc[`SubControlArea`]
+| +++A control area can have one or more net inadvertent interchange accounts+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#SubControlArea]
+=== `SubControlArea`
++++A control area can have one or more net inadvertent interchange accounts+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:InadvertentAccount.SubControlArea`
+| Cardinality
+| 1
+| Type
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SubControlArea,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/SubControlArea.adoc[`SubControlArea`] | xref::class/SubControlArea.adoc#InadvertentAccount[`InadvertentAccount`]
+
+
+|===
+

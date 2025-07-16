@@ -1,0 +1,387 @@
+= `DERFunction`
+:toclevels: 4
+
+
++++Specifies the list of functions that are supported.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:DERFunction`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`DERFunction`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<EndDeviceGroup,`EndDeviceGroup`>>
+//| [[slots_table.EndDeviceGroup]]<<EndDeviceGroup,`EndDeviceGroup`>>
+| 0..1 +
+xref::class/EndDeviceGroup.adoc[`EndDeviceGroup`]
+| +++The DER Group supporting the DER functions.+++
+| _n/a_
+
+| <<connectDisconnect,`connectDisconnect`>>
+//| [[slots_table.connectDisconnect]]<<connectDisconnect,`connectDisconnect`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If set to TRUE, the connect/disconnect function is supported.+++
+| _n/a_
+
+| <<frequencyWattCurveFunction,`frequencyWattCurveFunction`>>
+//| [[slots_table.frequencyWattCurveFunction]]<<frequencyWattCurveFunction,`frequencyWattCurveFunction`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| _n/a_
+| _n/a_
+
+| <<maxRealPowerLimiting,`maxRealPowerLimiting`>>
+//| [[slots_table.maxRealPowerLimiting]]<<maxRealPowerLimiting,`maxRealPowerLimiting`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If set to TRUE, the maxRealPowerLimiting function is supported.+++
+| _n/a_
+
+| <<rampRateControl,`rampRateControl`>>
+//| [[slots_table.rampRateControl]]<<rampRateControl,`rampRateControl`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If set to TRUE, the rampRateControl function is supported.+++
+| _n/a_
+
+| <<reactivePowerDispatch,`reactivePowerDispatch`>>
+//| [[slots_table.reactivePowerDispatch]]<<reactivePowerDispatch,`reactivePowerDispatch`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If set to TRUE, the reactivePowerDispatch function is supported.+++
+| _n/a_
+
+| <<realPowerDispatch,`realPowerDispatch`>>
+//| [[slots_table.realPowerDispatch]]<<realPowerDispatch,`realPowerDispatch`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If set to TRUE, the realPowerDispatch function is supported.+++
+| _n/a_
+
+| <<voltVarCurveFunction,`voltVarCurveFunction`>>
+//| [[slots_table.voltVarCurveFunction]]<<voltVarCurveFunction,`voltVarCurveFunction`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If set to TRUE, the voltVARCurveFunction is supported.+++
+| _n/a_
+
+| <<voltWattCurveFunction,`voltWattCurveFunction`>>
+//| [[slots_table.voltWattCurveFunction]]<<voltWattCurveFunction,`voltWattCurveFunction`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If set to TRUE, the voltWattCurveFunction is supported.+++
+| _n/a_
+
+| <<voltageRegulation,`voltageRegulation`>>
+//| [[slots_table.voltageRegulation]]<<voltageRegulation,`voltageRegulation`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++If set to TRUE, the voltageRegulation function is supported.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#connectDisconnect]
+=== `connectDisconnect`
++++If set to TRUE, the connect/disconnect function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERFunction.connectDisconnect`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.connectDisconnect,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#EndDeviceGroup]
+=== `EndDeviceGroup`
++++The DER Group supporting the DER functions.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERFunction.EndDeviceGroup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/EndDeviceGroup.adoc[`EndDeviceGroup`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.EndDeviceGroup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#frequencyWattCurveFunction]
+=== `frequencyWattCurveFunction`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERFunction.frequencyWattCurveFunction`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.frequencyWattCurveFunction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maxRealPowerLimiting]
+=== `maxRealPowerLimiting`
++++If set to TRUE, the maxRealPowerLimiting function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERFunction.maxRealPowerLimiting`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maxRealPowerLimiting,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rampRateControl]
+=== `rampRateControl`
++++If set to TRUE, the rampRateControl function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERFunction.rampRateControl`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rampRateControl,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reactivePowerDispatch]
+=== `reactivePowerDispatch`
++++If set to TRUE, the reactivePowerDispatch function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERFunction.reactivePowerDispatch`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reactivePowerDispatch,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#realPowerDispatch]
+=== `realPowerDispatch`
++++If set to TRUE, the realPowerDispatch function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERFunction.realPowerDispatch`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.realPowerDispatch,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#voltageRegulation]
+=== `voltageRegulation`
++++If set to TRUE, the voltageRegulation function is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERFunction.voltageRegulation`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.voltageRegulation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#voltVarCurveFunction]
+=== `voltVarCurveFunction`
++++If set to TRUE, the voltVARCurveFunction is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERFunction.voltVarCurveFunction`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.voltVarCurveFunction,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#voltWattCurveFunction]
+=== `voltWattCurveFunction`
++++If set to TRUE, the voltWattCurveFunction is supported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DERFunction.voltWattCurveFunction`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.voltWattCurveFunction,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EndDeviceGroup.adoc[`EndDeviceGroup`] | xref::class/EndDeviceGroup.adoc#DERFunction[`DERFunction`]
+
+
+|===
+

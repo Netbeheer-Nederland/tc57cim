@@ -1,0 +1,76 @@
+= `CRRSegmentType`
+:toclevels: 4
+
+
++++Type of the CRR, from the possible type definitions in the CRR System (e.g. 'LSE', 'ETC').+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:CRRSegmentType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `AUC`
+| `cim:CRRSegmentType.AUC`
+| n/a
+
+| `CAP`
+| `cim:CRRSegmentType.CAP`
+| n/a
+
+| `CF`
+| `cim:CRRSegmentType.CF`
+| n/a
+
+| `CVR`
+| `cim:CRRSegmentType.CVR`
+| n/a
+
+| `ETC`
+| `cim:CRRSegmentType.ETC`
+| n/a
+
+| `LSE`
+| `cim:CRRSegmentType.LSE`
+| n/a
+
+| `MT`
+| `cim:CRRSegmentType.MT`
+| n/a
+
+| `TOR`
+| `cim:CRRSegmentType.TOR`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/CongestionRevenueRight.adoc[`CongestionRevenueRight`] | xref::class/CongestionRevenueRight.adoc#cRRtype[`cRRtype`]
+
+
+|===
+

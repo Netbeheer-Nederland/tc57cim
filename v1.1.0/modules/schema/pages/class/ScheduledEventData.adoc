@@ -1,0 +1,226 @@
+= `ScheduledEventData`
+:toclevels: 4
+
+
++++Schedule parameters for an activity that is to occur, is occurring, or has completed.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ScheduledEventData`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`ScheduledEventData`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<InspectionDataSet,`InspectionDataSet`>>
+//| [[slots_table.InspectionDataSet]]<<InspectionDataSet,`InspectionDataSet`>>
+| 1 +
+xref::class/InspectionDataSet.adoc[`InspectionDataSet`]
+| _n/a_
+| _n/a_
+
+| <<ScheduledEvents,`ScheduledEvents`>>
+//| [[slots_table.ScheduledEvents]]<<ScheduledEvents,`ScheduledEvents`>>
+| 0..* +
+xref::class/ScheduledEvent.adoc[`ScheduledEvent`]
+| +++All scheduled events with this specification.+++
+| _n/a_
+
+| <<estimatedWindow,`estimatedWindow`>>
+//| [[slots_table.estimatedWindow]]<<estimatedWindow,`estimatedWindow`>>
+| 0..1 +
+xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++Estimated date and time for activity execution (with earliest possibility of activity initiation and latest possibility of...+++
+| _n/a_
+
+| <<requestedWindow,`requestedWindow`>>
+//| [[slots_table.requestedWindow]]<<requestedWindow,`requestedWindow`>>
+| 0..1 +
+xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++Requested date and time interval for activity execution.+++
+| _n/a_
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| +++Current status information relevant to the data for a scheduled event+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#estimatedWindow]
+=== `estimatedWindow`
++++Estimated date and time for activity execution (with earliest possibility of activity initiation and latest possibility of activity completion).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ScheduledEventData.estimatedWindow`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.estimatedWindow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InspectionDataSet]
+=== `InspectionDataSet`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ScheduledEventData.InspectionDataSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InspectionDataSet.adoc[`InspectionDataSet`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InspectionDataSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#requestedWindow]
+=== `requestedWindow`
++++Requested date and time interval for activity execution.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ScheduledEventData.requestedWindow`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.requestedWindow,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ScheduledEvents]
+=== `ScheduledEvents`
++++All scheduled events with this specification.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ScheduledEventData.ScheduledEvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ScheduledEvent.adoc[`ScheduledEvent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ScheduledEvents,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++Current status information relevant to the data for a scheduled event+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ScheduledEventData.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/InspectionDataSet.adoc[`InspectionDataSet`] | xref::class/InspectionDataSet.adoc#AccordingToSchedules[`AccordingToSchedules`]
+
+
+
+| xref::class/ScheduledEvent.adoc[`ScheduledEvent`] | xref::class/ScheduledEvent.adoc#ScheduledEventData[`ScheduledEventData`]
+
+
+|===
+

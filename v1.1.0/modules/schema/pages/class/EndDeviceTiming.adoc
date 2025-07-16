@@ -1,0 +1,189 @@
+= `EndDeviceTiming`
+:toclevels: 4
+
+
++++Timing for the control actions of end devices.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:EndDeviceTiming`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`EndDeviceTiming`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<duration,`duration`>>
+//| [[slots_table.duration]]<<duration,`duration`>>
+| 0..1 +
+xref::class/Minutes.adoc[`Minutes`]
+| +++Duration of the end device control action or the business event that is the subject of the end device control.+++
+| _n/a_
+
+| <<durationIndefinite,`durationIndefinite`>>
+//| [[slots_table.durationIndefinite]]<<durationIndefinite,`durationIndefinite`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++True if 'duration' is indefinite.+++
+| _n/a_
+
+| <<interval,`interval`>>
+//| [[slots_table.interval]]<<interval,`interval`>>
+| 0..1 +
+xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++Start and end time of an interval during which end device control actions are to be executed.+++
+| _n/a_
+
+| <<randomisation,`randomisation`>>
+//| [[slots_table.randomisation]]<<randomisation,`randomisation`>>
+| 0..1 +
+xref::enumeration/RandomisationKind.adoc[`RandomisationKind`]
+| +++Kind of randomisation to be applied to the end device control actions to be executed.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#duration]
+=== `duration`
++++Duration of the end device control action or the business event that is the subject of the end device control.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceTiming.duration`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Minutes.adoc[`Minutes`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.duration,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#durationIndefinite]
+=== `durationIndefinite`
++++True if 'duration' is indefinite.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceTiming.durationIndefinite`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.durationIndefinite,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#interval]
+=== `interval`
++++Start and end time of an interval during which end device control actions are to be executed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceTiming.interval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.interval,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#randomisation]
+=== `randomisation`
++++Kind of randomisation to be applied to the end device control actions to be executed.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:EndDeviceTiming.randomisation`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/RandomisationKind.adoc[`RandomisationKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.randomisation,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EndDeviceControl.adoc[`EndDeviceControl`] | xref::class/EndDeviceControl.adoc#secondaryDeviceTiming[`secondaryDeviceTiming`]
+
+
+|===
+

@@ -1,0 +1,56 @@
+= `DINStandardEditionKind`
+:toclevels: 4
+
+
++++List of editions for DIN standards.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:DINStandardEditionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `1985`
+| `cim:DINStandardEditionKind.1985`
+| n/a
+
+| `none`
+| `cim:DINStandardEditionKind.none`
+| n/a
+
+| `unknown`
+| `cim:DINStandardEditionKind.unknown`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/DINStandard.adoc[`DINStandard`] | xref::class/DINStandard.adoc#standardEdition[`standardEdition`]
+
+
+|===
+

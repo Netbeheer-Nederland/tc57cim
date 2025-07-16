@@ -1,0 +1,157 @@
+= `SvShuntCompensatorSections`
+:toclevels: 4
+
+
++++State variable for the number of sections in service for a shunt compensator.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SvShuntCompensatorSections`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/StateVariable.adoc[`StateVariable`]
+** *`SvShuntCompensatorSections`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ShuntCompensator,`ShuntCompensator`>>
+//| [[slots_table.ShuntCompensator]]<<ShuntCompensator,`ShuntCompensator`>>
+| 1 +
+xref::class/ShuntCompensator.adoc[`ShuntCompensator`]
+| +++The shunt compensator for which the state applies.+++
+| _n/a_
+
+| <<phase,`phase`>>
+//| [[slots_table.phase]]<<phase,`phase`>>
+| 0..1 +
+xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+| +++The terminal phase at which the connection is applied.   If missing, the injection is assumed to be balanced among...+++
+| _n/a_
+
+| <<sections,`sections`>>
+//| [[slots_table.sections]]<<sections,`sections`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The number of sections in service as a continuous variable. The attribute shall be a positive value or zero. To get integer...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#phase]
+=== `phase`
++++The terminal phase at which the connection is applied.   If missing, the injection is assumed to be balanced among non-neutral phases.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvShuntCompensatorSections.phase`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/SinglePhaseKind.adoc[`SinglePhaseKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.phase,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sections]
+=== `sections`
++++The number of sections in service as a continuous variable. The attribute shall be a positive value or zero. To get integer value scale with ShuntCompensator.bPerSection.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvShuntCompensatorSections.sections`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sections,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ShuntCompensator]
+=== `ShuntCompensator`
++++The shunt compensator for which the state applies.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvShuntCompensatorSections.ShuntCompensator`
+| Cardinality
+| 1
+| Type
+| xref::class/ShuntCompensator.adoc[`ShuntCompensator`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ShuntCompensator,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ShuntCompensator.adoc[`ShuntCompensator`] | xref::class/ShuntCompensator.adoc#SvShuntCompensatorSections[`SvShuntCompensatorSections`]
+
+
+|===
+

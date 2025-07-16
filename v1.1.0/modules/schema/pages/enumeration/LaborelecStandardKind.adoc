@@ -1,0 +1,48 @@
+= `LaborelecStandardKind`
+:toclevels: 4
+
+
++++List of Laborelec standards.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:LaborelecStandardKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `methanol`
+| `cim:LaborelecStandardKind.methanol`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/LaborelecStandard.adoc[`LaborelecStandard`] | xref::class/LaborelecStandard.adoc#standardNumber[`standardNumber`]
+
+
+|===
+

@@ -1,0 +1,60 @@
+= `StaticLoadModelKind`
+:toclevels: 4
+
+
++++Type of static load model.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:StaticLoadModelKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `constantZ`
+| `cim:StaticLoadModelKind.constantZ`
+| n/a
+
+| `exponential`
+| `cim:StaticLoadModelKind.exponential`
+| n/a
+
+| `zIP1`
+| `cim:StaticLoadModelKind.zIP1`
+| n/a
+
+| `zIP2`
+| `cim:StaticLoadModelKind.zIP2`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/LoadStatic.adoc[`LoadStatic`] | xref::class/LoadStatic.adoc#staticLoadModelType[`staticLoadModelType`]
+
+
+|===
+

@@ -1,0 +1,189 @@
+= `Version`
+:toclevels: 4
+
+
++++This is the version for a group of devices or objects.  This could be used to track the version for any group of objects or devices over time. For example, for a DERGroup, the requesting system may want to get the details of a specific version of a DERGroup.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Version`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`Version`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<date,`date`>>
+//| [[slots_table.date]]<<date,`date`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++date of this version+++
+| _n/a_
+
+| <<major,`major`>>
+//| [[slots_table.major]]<<major,`major`>>
+| 1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++major release level for this version+++
+| _n/a_
+
+| <<minor,`minor`>>
+//| [[slots_table.minor]]<<minor,`minor`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++minor release level for this version+++
+| _n/a_
+
+| <<revision,`revision`>>
+//| [[slots_table.revision]]<<revision,`revision`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++revision level for this version+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#date]
+=== `date`
++++date of this version+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Version.date`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.date,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#major]
+=== `major`
++++major release level for this version+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Version.major`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.major,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minor]
+=== `minor`
++++minor release level for this version+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Version.minor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#revision]
+=== `revision`
++++revision level for this version+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Version.revision`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.revision,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/EndDeviceGroup.adoc[`EndDeviceGroup`] | xref::class/EndDeviceGroup.adoc#version[`version`]
+
+
+|===
+

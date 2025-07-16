@@ -1,0 +1,158 @@
+= `CurrentScheduledInterchange`
+:toclevels: 4
+
+
++++Control area current net tie (scheduled interchange) sent to real time dispatch.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CurrentScheduledInterchange`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`CurrentScheduledInterchange`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<InternalControlArea,`InternalControlArea`>>
+//| [[slots_table.InternalControlArea]]<<InternalControlArea,`InternalControlArea`>>
+| 1 +
+xref::class/InternalControlArea.adoc[`InternalControlArea`]
+| _n/a_
+| _n/a_
+
+| <<currentNetTieMW,`currentNetTieMW`>>
+//| [[slots_table.currentNetTieMW]]<<currentNetTieMW,`currentNetTieMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Current control area net tie MW (the sum of the tie line flows, i.e the sum of flows into and out of the control area), the...+++
+| _n/a_
+
+| <<useEmergencySchedule,`useEmergencySchedule`>>
+//| [[slots_table.useEmergencySchedule]]<<useEmergencySchedule,`useEmergencySchedule`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Use Emergency Schedule 
+Attribute Usage: Emergency use indicator, false = Emergency Schedular OFF, true = Emergency Schedular ON.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#currentNetTieMW]
+=== `currentNetTieMW`
++++Current control area net tie MW (the sum of the tie line flows, i.e the sum of flows into and out of the control area), the current instantaneous scheduled interchange.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurrentScheduledInterchange.currentNetTieMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.currentNetTieMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InternalControlArea]
+=== `InternalControlArea`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurrentScheduledInterchange.InternalControlArea`
+| Cardinality
+| 1
+| Type
+| xref::class/InternalControlArea.adoc[`InternalControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InternalControlArea,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#useEmergencySchedule]
+=== `useEmergencySchedule`
++++Use Emergency Schedule 
+Attribute Usage: Emergency use indicator, false = Emergency Schedular OFF, true = Emergency Schedular ON.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CurrentScheduledInterchange.useEmergencySchedule`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.useEmergencySchedule,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/InternalControlArea.adoc[`InternalControlArea`] | xref::class/InternalControlArea.adoc#CurrentScheduledInterchange[`CurrentScheduledInterchange`]
+
+
+|===
+

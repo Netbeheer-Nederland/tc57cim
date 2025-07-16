@@ -1,0 +1,784 @@
+= `CashierShift`
+:toclevels: 4
+
+
++++The operating shift for a cashier, during which the cashier may transact against the cashier shift, subject to vendor shift being open.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:CashierShift`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Shift.adoc[`Shift`]
+*** *`CashierShift`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Cashier,`Cashier`>>
+//| [[slots_table.Cashier]]<<Cashier,`Cashier`>>
+| 0..1 +
+xref::class/Cashier.adoc[`Cashier`]
+| +++Cashier operating this shift.+++
+| _n/a_
+
+| <<PointOfSale,`PointOfSale`>>
+//| [[slots_table.PointOfSale]]<<PointOfSale,`PointOfSale`>>
+| 0..1 +
+xref::class/PointOfSale.adoc[`PointOfSale`]
+| +++Point of sale that is in operation during this shift.+++
+| _n/a_
+
+| <<Receipts,`Receipts`>>
+//| [[slots_table.Receipts]]<<Receipts,`Receipts`>>
+| 0..* +
+xref::class/Receipt.adoc[`Receipt`]
+| +++All Receipts recorded for this Shift.+++
+| _n/a_
+
+| <<Transactions,`Transactions`>>
+//| [[slots_table.Transactions]]<<Transactions,`Transactions`>>
+| 0..* +
+xref::class/Transaction.adoc[`Transaction`]
+| +++All transactions recorded during this cashier shift.+++
+| _n/a_
+
+| <<cashFloat,`cashFloat`>>
+//| [[slots_table.cashFloat]]<<cashFloat,`cashFloat`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++The amount of cash that the cashier brings to start the shift and that will be taken away at the end of the shift; i.e. the...+++
+| _n/a_
+
+| <<activityInterval,`activityInterval`>>
+//| [[slots_table.activityInterval]]<<activityInterval,`activityInterval`>>
+| 0..1 +
+xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+| +++Interval for activity of this shift.+++
+| xref::class/Shift.adoc[`Shift`]
+
+| <<receiptsGrandTotalBankable,`receiptsGrandTotalBankable`>>
+//| [[slots_table.receiptsGrandTotalBankable]]<<receiptsGrandTotalBankable,`receiptsGrandTotalBankable`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Total of amounts receipted during this shift that can be manually banked (cash and cheques for example). Values are obtained...+++
+| xref::class/Shift.adoc[`Shift`]
+
+| <<receiptsGrandTotalNonBankable,`receiptsGrandTotalNonBankable`>>
+//| [[slots_table.receiptsGrandTotalNonBankable]]<<receiptsGrandTotalNonBankable,`receiptsGrandTotalNonBankable`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Total of amounts receipted during this shift that cannot be manually banked (card payments for example). Values are obtained...+++
+| xref::class/Shift.adoc[`Shift`]
+
+| <<receiptsGrandTotalRounding,`receiptsGrandTotalRounding`>>
+//| [[slots_table.receiptsGrandTotalRounding]]<<receiptsGrandTotalRounding,`receiptsGrandTotalRounding`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Cumulative amount in error due to process rounding not reflected in receiptsGrandTotal. Values are obtained from Receipt...+++
+| xref::class/Shift.adoc[`Shift`]
+
+| <<transactionsGrandTotal,`transactionsGrandTotal`>>
+//| [[slots_table.transactionsGrandTotal]]<<transactionsGrandTotal,`transactionsGrandTotal`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Cumulative total of transacted amounts during this shift. Values are obtained from...+++
+| xref::class/Shift.adoc[`Shift`]
+
+| <<transactionsGrandTotalRounding,`transactionsGrandTotalRounding`>>
+//| [[slots_table.transactionsGrandTotalRounding]]<<transactionsGrandTotalRounding,`transactionsGrandTotalRounding`>>
+| 0..1 +
+xref::class/Money.adoc[`Money`]
+| +++Cumulative amount in error due to process rounding not reflected in transactionsGandTotal. Values are obtained from...+++
+| xref::class/Shift.adoc[`Shift`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#activityInterval]
+=== `activityInterval`
++++Interval for activity of this shift.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Shift.activityInterval`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DateTimeInterval.adoc[`DateTimeInterval`]
+
+| Inherited from
+| xref::class/Shift.adoc[`Shift`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.activityInterval,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cashFloat]
+=== `cashFloat`
++++The amount of cash that the cashier brings to start the shift and that will be taken away at the end of the shift; i.e. the cash float does not get banked.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CashierShift.cashFloat`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cashFloat,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Cashier]
+=== `Cashier`
++++Cashier operating this shift.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CashierShift.Cashier`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Cashier.adoc[`Cashier`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Cashier,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PointOfSale]
+=== `PointOfSale`
++++Point of sale that is in operation during this shift.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CashierShift.PointOfSale`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PointOfSale.adoc[`PointOfSale`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PointOfSale,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Receipts]
+=== `Receipts`
++++All Receipts recorded for this Shift.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CashierShift.Receipts`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Receipt.adoc[`Receipt`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Receipts,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#receiptsGrandTotalBankable]
+=== `receiptsGrandTotalBankable`
++++Total of amounts receipted during this shift that can be manually banked (cash and cheques for example). Values are obtained from Receipt attributes:
+=sum(Receipt.receiptAmount) for all Receipt.bankable = true.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Shift.receiptsGrandTotalBankable`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+| Inherited from
+| xref::class/Shift.adoc[`Shift`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.receiptsGrandTotalBankable,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#receiptsGrandTotalNonBankable]
+=== `receiptsGrandTotalNonBankable`
++++Total of amounts receipted during this shift that cannot be manually banked (card payments for example). Values are obtained from Receipt attributes:
+=sum(Receipt.receiptAmount) for all Receipt.bankable = false.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Shift.receiptsGrandTotalNonBankable`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+| Inherited from
+| xref::class/Shift.adoc[`Shift`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.receiptsGrandTotalNonBankable,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#receiptsGrandTotalRounding]
+=== `receiptsGrandTotalRounding`
++++Cumulative amount in error due to process rounding not reflected in receiptsGrandTotal. Values are obtained from Receipt attributes:
+=sum(Receipt.receiptRounding).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Shift.receiptsGrandTotalRounding`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+| Inherited from
+| xref::class/Shift.adoc[`Shift`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.receiptsGrandTotalRounding,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Transactions]
+=== `Transactions`
++++All transactions recorded during this cashier shift.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:CashierShift.Transactions`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Transaction.adoc[`Transaction`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Transactions,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#transactionsGrandTotal]
+=== `transactionsGrandTotal`
++++Cumulative total of transacted amounts during this shift. Values are obtained from transaction:
+=sum('Transaction.transactionAmount'). It also has to be reconciled against transaction summary:
+=sum('TransactionSummary.transactionsTotal').+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Shift.transactionsGrandTotal`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+| Inherited from
+| xref::class/Shift.adoc[`Shift`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.transactionsGrandTotal,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#transactionsGrandTotalRounding]
+=== `transactionsGrandTotalRounding`
++++Cumulative amount in error due to process rounding not reflected in transactionsGandTotal. Values are obtained from Transaction attributes:
+=sum(Transaction.transactionRounding).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Shift.transactionsGrandTotalRounding`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Money.adoc[`Money`]
+
+| Inherited from
+| xref::class/Shift.adoc[`Shift`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.transactionsGrandTotalRounding,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Cashier.adoc[`Cashier`] | xref::class/Cashier.adoc#CashierShifts[`CashierShifts`]
+
+
+
+| xref::class/PointOfSale.adoc[`PointOfSale`] | xref::class/PointOfSale.adoc#CashierShifts[`CashierShifts`]
+
+
+
+| xref::class/Receipt.adoc[`Receipt`] | xref::class/Receipt.adoc#CashierShift[`CashierShift`]
+
+
+
+| xref::class/Transaction.adoc[`Transaction`] | xref::class/Transaction.adoc#CashierShift[`CashierShift`]
+
+
+|===
+

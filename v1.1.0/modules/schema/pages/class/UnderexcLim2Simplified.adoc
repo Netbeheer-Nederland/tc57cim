@@ -1,0 +1,719 @@
+= `UnderexcLim2Simplified`
+:toclevels: 4
+
+
++++Simplified type UEL2 underexcitation limiter.  This model can be derived from UnderexcLimIEEE2.  The limit characteristic (look –up table) is a single straight-line, the same as UnderexcLimIEEE2 (see Figure 10.4 (p 32), IEEE 421.5-2005 Section 10.2).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:UnderexcLim2Simplified`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+**** *`UnderexcLim2Simplified`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<kui,`kui`>>
+//| [[slots_table.kui]]<<kui,`kui`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Gain Under excitation limiter (<i>K</i><i><sub>UI</sub></i>).  Typical value = 0,1.+++
+| _n/a_
+
+| <<p0,`p0`>>
+//| [[slots_table.p0]]<<p0,`p0`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Segment P initial point (<i>P</i><i><sub>0</sub></i>).  Typical value = 0.+++
+| _n/a_
+
+| <<p1,`p1`>>
+//| [[slots_table.p1]]<<p1,`p1`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Segment P end point (<i>P</i><i><sub>1</sub></i>).  Typical value = 1.+++
+| _n/a_
+
+| <<q0,`q0`>>
+//| [[slots_table.q0]]<<q0,`q0`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Segment Q initial point (<i>Q</i><i><sub>0</sub></i>).  Typical value = -0,31.+++
+| _n/a_
+
+| <<q1,`q1`>>
+//| [[slots_table.q1]]<<q1,`q1`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Segment Q end point (<i>Q</i><i><sub>1</sub></i>).  Typical value = -0,1.+++
+| _n/a_
+
+| <<vuimax,`vuimax`>>
+//| [[slots_table.vuimax]]<<vuimax,`vuimax`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum error signal (<i>V</i><i><sub>UIMAX</sub></i>) (&gt; UnderexcLim2Simplified.vuimin).  Typical value = 1.+++
+| _n/a_
+
+| <<vuimin,`vuimin`>>
+//| [[slots_table.vuimin]]<<vuimin,`vuimin`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Minimum error signal (<i>V</i><i><sub>UIMIN</sub></i>) (&lt; UnderexcLim2Simplified.vuimax).  Typical value = 0.+++
+| _n/a_
+
+| <<ExcitationSystemDynamics,`ExcitationSystemDynamics`>>
+//| [[slots_table.ExcitationSystemDynamics]]<<ExcitationSystemDynamics,`ExcitationSystemDynamics`>>
+| 1 +
+xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+| +++Excitation system model with which this underexcitation limiter model is associated.+++
+| xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+
+| <<RemoteInputSignal,`RemoteInputSignal`>>
+//| [[slots_table.RemoteInputSignal]]<<RemoteInputSignal,`RemoteInputSignal`>>
+| 0..1 +
+xref::class/RemoteInputSignal.adoc[`RemoteInputSignal`]
+| +++Remote input signal used by this underexcitation limiter model.+++
+| xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+
+| <<enabled,`enabled`>>
+//| [[slots_table.enabled]]<<enabled,`enabled`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.enabled,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ExcitationSystemDynamics]
+=== `ExcitationSystemDynamics`
++++Excitation system model with which this underexcitation limiter model is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcitationLimiterDynamics.ExcitationSystemDynamics`
+| Cardinality
+| 1
+| Type
+| xref::class/ExcitationSystemDynamics.adoc[`ExcitationSystemDynamics`]
+
+| Inherited from
+| xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ExcitationSystemDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kui]
+=== `kui`
++++Gain Under excitation limiter (<i>K</i><i><sub>UI</sub></i>).  Typical value = 0,1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLim2Simplified.kui`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kui,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#p0]
+=== `p0`
++++Segment P initial point (<i>P</i><i><sub>0</sub></i>).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLim2Simplified.p0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.p0,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#p1]
+=== `p1`
++++Segment P end point (<i>P</i><i><sub>1</sub></i>).  Typical value = 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLim2Simplified.p1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.p1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#q0]
+=== `q0`
++++Segment Q initial point (<i>Q</i><i><sub>0</sub></i>).  Typical value = -0,31.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLim2Simplified.q0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.q0,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#q1]
+=== `q1`
++++Segment Q end point (<i>Q</i><i><sub>1</sub></i>).  Typical value = -0,1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLim2Simplified.q1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.q1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RemoteInputSignal]
+=== `RemoteInputSignal`
++++Remote input signal used by this underexcitation limiter model.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcitationLimiterDynamics.RemoteInputSignal`
+| Cardinality
+| 0..1
+| Type
+| xref::class/RemoteInputSignal.adoc[`RemoteInputSignal`]
+
+| Inherited from
+| xref::class/UnderexcitationLimiterDynamics.adoc[`UnderexcitationLimiterDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RemoteInputSignal,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vuimax]
+=== `vuimax`
++++Maximum error signal (<i>V</i><i><sub>UIMAX</sub></i>) (&gt; UnderexcLim2Simplified.vuimin).  Typical value = 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLim2Simplified.vuimax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vuimax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vuimin]
+=== `vuimin`
++++Minimum error signal (<i>V</i><i><sub>UIMIN</sub></i>) (&lt; UnderexcLim2Simplified.vuimax).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UnderexcLim2Simplified.vuimin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vuimin,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

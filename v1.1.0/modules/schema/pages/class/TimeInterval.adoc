@@ -1,0 +1,123 @@
+= `TimeInterval`
+:toclevels: 4
+
+
++++Interval between two times.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TimeInterval`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`TimeInterval`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<end,`end`>>
+//| [[slots_table.end]]<<end,`end`>>
+| 0..1 +
+https://w3id.org/linkml/Time[`time`]
+| +++End time of this interval.+++
+| _n/a_
+
+| <<start,`start`>>
+//| [[slots_table.start]]<<start,`start`>>
+| 0..1 +
+https://w3id.org/linkml/Time[`time`]
+| +++Start time of this interval.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#end]
+=== `end`
++++End time of this interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeInterval.end`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Time[`time`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.end,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#start]
+=== `start`
++++Start time of this interval.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TimeInterval.start`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Time[`time`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.start,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Register.adoc[`Register`] | xref::class/Register.adoc#touTier[`touTier`]
+
+
+|===
+

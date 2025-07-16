@@ -1,0 +1,68 @@
+= `SupplierKind`
+:toclevels: 4
+
+
++++Kind of supplier.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:SupplierKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `lse`
+| `cim:SupplierKind.lse`
+| n/a
+
+| `mdma`
+| `cim:SupplierKind.mdma`
+| n/a
+
+| `msp`
+| `cim:SupplierKind.msp`
+| n/a
+
+| `other`
+| `cim:SupplierKind.other`
+| n/a
+
+| `retailer`
+| `cim:SupplierKind.retailer`
+| n/a
+
+| `utility`
+| `cim:SupplierKind.utility`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ServiceSupplier.adoc[`ServiceSupplier`] | xref::class/ServiceSupplier.adoc#kind[`kind`]
+
+
+|===
+

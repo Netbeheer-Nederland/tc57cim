@@ -1,0 +1,186 @@
+= `ReactivePower`
+:toclevels: 4
+
+
++++Product of RMS value of the voltage and the RMS value of the quadrature component of the current.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:ReactivePower`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:ReactivePower.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:ReactivePower.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:ReactivePower.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ACDCConverter.adoc[`ACDCConverter`] | xref::class/ACDCConverter.adoc#q[`q`]
+
+
+
+| xref::class/BranchGroup.adoc[`BranchGroup`] | xref::class/BranchGroup.adoc#minimumReactivePower[`minimumReactivePower`]
+
+
+
+| xref::class/EnergyConsumer.adoc[`EnergyConsumer`] | xref::class/EnergyConsumer.adoc#qfixed[`qfixed`]
+
+
+
+| xref::class/EnergyConsumerPhase.adoc[`EnergyConsumerPhase`] | xref::class/EnergyConsumerPhase.adoc#qfixed[`qfixed`]
+
+
+
+| xref::class/EnergySource.adoc[`EnergySource`] | xref::class/EnergySource.adoc#reactivePower[`reactivePower`]
+
+
+
+| xref::class/EquivalentInjection.adoc[`EquivalentInjection`] | xref::class/EquivalentInjection.adoc#q[`q`]
+
+
+
+| xref::class/ExternalNetworkInjection.adoc[`ExternalNetworkInjection`] | xref::class/ExternalNetworkInjection.adoc#q[`q`]
+
+
+
+| xref::class/GeneratorTypeAsset.adoc[`GeneratorTypeAsset`] | xref::class/GeneratorTypeAsset.adoc#minQ[`minQ`]
+
+
+
+| xref::class/PowerElectronicsConnection.adoc[`PowerElectronicsConnection`] | xref::class/PowerElectronicsConnection.adoc#q[`q`]
+
+
+
+| xref::class/PowerElectronicsConnectionPhase.adoc[`PowerElectronicsConnectionPhase`] | xref::class/PowerElectronicsConnectionPhase.adoc#q[`q`]
+
+
+
+| xref::class/RotatingMachine.adoc[`RotatingMachine`] | xref::class/RotatingMachine.adoc#q[`q`]
+
+
+
+| xref::class/ShuntCompensatorControl.adoc[`ShuntCompensatorControl`] | xref::class/ShuntCompensatorControl.adoc#cellSize[`cellSize`]
+
+
+
+| xref::class/ShuntCompensatorInfo.adoc[`ShuntCompensatorInfo`] | xref::class/ShuntCompensatorInfo.adoc#ratedReactivePower[`ratedReactivePower`]
+
+
+
+| xref::class/StaticVarCompensator.adoc[`StaticVarCompensator`] | xref::class/StaticVarCompensator.adoc#q[`q`]
+
+
+
+| xref::class/SvInjection.adoc[`SvInjection`] | xref::class/SvInjection.adoc#qInjection[`qInjection`]
+
+
+
+| xref::class/SvPowerFlow.adoc[`SvPowerFlow`] | xref::class/SvPowerFlow.adoc#q[`q`]
+
+
+
+| xref::class/SynchronousMachine.adoc[`SynchronousMachine`] | xref::class/SynchronousMachine.adoc#minQ[`minQ`]
+
+
+
+| xref::class/TopologicalNode.adoc[`TopologicalNode`] | xref::class/TopologicalNode.adoc#qInjection[`qInjection`]
+
+
+
+| xref::class/VsConverter.adoc[`VsConverter`] | xref::class/VsConverter.adoc#targetQpcc[`targetQpcc`]
+
+
+|===
+

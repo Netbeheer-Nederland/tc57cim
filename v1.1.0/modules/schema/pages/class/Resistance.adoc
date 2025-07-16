@@ -1,0 +1,206 @@
+= `Resistance`
+:toclevels: 4
+
+
++++Resistance (real part of impedance).+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Resistance`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Resistance.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Resistance.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Resistance.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ACDCConverter.adoc[`ACDCConverter`] | xref::class/ACDCConverter.adoc#resistiveLoss[`resistiveLoss`]
+
+
+
+| xref::class/ACLineSegment.adoc[`ACLineSegment`] | xref::class/ACLineSegment.adoc#r0[`r0`]
+
+
+
+| xref::class/AsynchronousMachine.adoc[`AsynchronousMachine`] | xref::class/AsynchronousMachine.adoc#rr2[`rr2`]
+
+
+
+| xref::class/DCGround.adoc[`DCGround`] | xref::class/DCGround.adoc#r[`r`]
+
+
+
+| xref::class/DCLineSegment.adoc[`DCLineSegment`] | xref::class/DCLineSegment.adoc#resistance[`resistance`]
+
+
+
+| xref::class/DCSeriesDevice.adoc[`DCSeriesDevice`] | xref::class/DCSeriesDevice.adoc#resistance[`resistance`]
+
+
+
+| xref::class/DCShunt.adoc[`DCShunt`] | xref::class/DCShunt.adoc#resistance[`resistance`]
+
+
+
+| xref::class/EarthFaultCompensator.adoc[`EarthFaultCompensator`] | xref::class/EarthFaultCompensator.adoc#r[`r`]
+
+
+
+| xref::class/EnergySource.adoc[`EnergySource`] | xref::class/EnergySource.adoc#rn[`rn`]
+
+
+
+| xref::class/EquivalentBranch.adoc[`EquivalentBranch`] | xref::class/EquivalentBranch.adoc#zeroR21[`zeroR21`]
+
+
+
+| xref::class/EquivalentInjection.adoc[`EquivalentInjection`] | xref::class/EquivalentInjection.adoc#r2[`r2`]
+
+
+
+| xref::class/FaultImpedance.adoc[`FaultImpedance`] | xref::class/FaultImpedance.adoc#rLineToLine[`rLineToLine`]
+
+
+
+| xref::class/GeneratorTypeAsset.adoc[`GeneratorTypeAsset`] | xref::class/GeneratorTypeAsset.adoc#rQuadTrans[`rQuadTrans`]
+
+
+
+| xref::class/MutualCoupling.adoc[`MutualCoupling`] | xref::class/MutualCoupling.adoc#r0[`r0`]
+
+
+
+| xref::class/PowerElectronicsConnection.adoc[`PowerElectronicsConnection`] | xref::class/PowerElectronicsConnection.adoc#rn[`rn`]
+
+
+
+| xref::class/PowerTransformerEnd.adoc[`PowerTransformerEnd`] | xref::class/PowerTransformerEnd.adoc#r0[`r0`]
+
+
+
+| xref::class/SeriesCompensator.adoc[`SeriesCompensator`] | xref::class/SeriesCompensator.adoc#r0[`r0`]
+
+
+
+| xref::class/SynchronousMachine.adoc[`SynchronousMachine`] | xref::class/SynchronousMachine.adoc#r2[`r2`]
+
+
+
+| xref::class/TapChangerControl.adoc[`TapChangerControl`] | xref::class/TapChangerControl.adoc#reverseLineDropR[`reverseLineDropR`]
+
+
+
+| xref::class/TransformerEnd.adoc[`TransformerEnd`] | xref::class/TransformerEnd.adoc#rground[`rground`]
+
+
+
+| xref::class/TransformerEndInfo.adoc[`TransformerEndInfo`] | xref::class/TransformerEndInfo.adoc#r[`r`]
+
+
+
+| xref::class/TransformerMeshImpedance.adoc[`TransformerMeshImpedance`] | xref::class/TransformerMeshImpedance.adoc#r0[`r0`]
+
+
+
+| xref::class/TransformerStarImpedance.adoc[`TransformerStarImpedance`] | xref::class/TransformerStarImpedance.adoc#r0[`r0`]
+
+
+
+| xref::class/VsConverter.adoc[`VsConverter`] | xref::class/VsConverter.adoc#droopCompensation[`droopCompensation`]
+
+
+|===
+

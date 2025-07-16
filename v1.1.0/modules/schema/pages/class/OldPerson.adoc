@@ -1,0 +1,1177 @@
+= `OldPerson`
+:toclevels: 4
+
+
++++General purpose information for name and other information to contact people.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:OldPerson`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Person.adoc[`Person`]
+*** *`OldPerson`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Crafts,`Crafts`>>
+//| [[slots_table.Crafts]]<<Crafts,`Crafts`>>
+| 0..* +
+xref::class/Craft.adoc[`Craft`]
+| _n/a_
+| _n/a_
+
+| <<CustomerData,`CustomerData`>>
+//| [[slots_table.CustomerData]]<<CustomerData,`CustomerData`>>
+| 0..1 +
+xref::class/Customer.adoc[`Customer`]
+| _n/a_
+| _n/a_
+
+| <<ErpCompetency,`ErpCompetency`>>
+//| [[slots_table.ErpCompetency]]<<ErpCompetency,`ErpCompetency`>>
+| 0..1 +
+xref::class/ErpCompetency.adoc[`ErpCompetency`]
+| _n/a_
+| _n/a_
+
+| <<ErpPersonnel,`ErpPersonnel`>>
+//| [[slots_table.ErpPersonnel]]<<ErpPersonnel,`ErpPersonnel`>>
+| 0..1 +
+xref::class/ErpPersonnel.adoc[`ErpPersonnel`]
+| _n/a_
+| _n/a_
+
+| <<LaborItems,`LaborItems`>>
+//| [[slots_table.LaborItems]]<<LaborItems,`LaborItems`>>
+| 0..* +
+xref::class/LaborItem.adoc[`LaborItem`]
+| _n/a_
+| _n/a_
+
+| <<LandPropertyRoles,`LandPropertyRoles`>>
+//| [[slots_table.LandPropertyRoles]]<<LandPropertyRoles,`LandPropertyRoles`>>
+| 0..* +
+xref::class/PersonPropertyRole.adoc[`PersonPropertyRole`]
+| _n/a_
+| _n/a_
+
+| <<MeasurementValues,`MeasurementValues`>>
+//| [[slots_table.MeasurementValues]]<<MeasurementValues,`MeasurementValues`>>
+| 0..* +
+xref::class/MeasurementValue.adoc[`MeasurementValue`]
+| _n/a_
+| _n/a_
+
+| <<OrganisationRoles,`OrganisationRoles`>>
+//| [[slots_table.OrganisationRoles]]<<OrganisationRoles,`OrganisationRoles`>>
+| 0..* +
+xref::class/PersonOrganisationRole.adoc[`PersonOrganisationRole`]
+| _n/a_
+| _n/a_
+
+| <<Skills,`Skills`>>
+//| [[slots_table.Skills]]<<Skills,`Skills`>>
+| 0..* +
+xref::class/Skill.adoc[`Skill`]
+| _n/a_
+| _n/a_
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| _n/a_
+| _n/a_
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Utility-specific classification for this person, according to the utility's corporate standards and practices. Examples...+++
+| _n/a_
+
+| <<Customer,`Customer`>>
+//| [[slots_table.Customer]]<<Customer,`Customer`>>
+| 0..* +
+xref::class/Customer.adoc[`Customer`]
+| +++The customer represented by the person+++
+| xref::class/Person.adoc[`Person`]
+
+| <<Roles,`Roles`>>
+//| [[slots_table.Roles]]<<Roles,`Roles`>>
+| 0..* +
+xref::class/PersonRole.adoc[`PersonRole`]
+| +++All roles of this person.+++
+| xref::class/Person.adoc[`Person`]
+
+| <<electronicAddress,`electronicAddress`>>
+//| [[slots_table.electronicAddress]]<<electronicAddress,`electronicAddress`>>
+| 0..1 +
+xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+| +++Electronic address.+++
+| xref::class/Person.adoc[`Person`]
+
+| <<firstName,`firstName`>>
+//| [[slots_table.firstName]]<<firstName,`firstName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Person's first name.+++
+| xref::class/Person.adoc[`Person`]
+
+| <<landlinePhone,`landlinePhone`>>
+//| [[slots_table.landlinePhone]]<<landlinePhone,`landlinePhone`>>
+| 0..1 +
+xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+| +++Landline phone number.+++
+| xref::class/Person.adoc[`Person`]
+
+| <<lastName,`lastName`>>
+//| [[slots_table.lastName]]<<lastName,`lastName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Person's last (family, sir) name.+++
+| xref::class/Person.adoc[`Person`]
+
+| <<mName,`mName`>>
+//| [[slots_table.mName]]<<mName,`mName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Middle name(s) or initial(s).+++
+| xref::class/Person.adoc[`Person`]
+
+| <<mobilePhone,`mobilePhone`>>
+//| [[slots_table.mobilePhone]]<<mobilePhone,`mobilePhone`>>
+| 0..1 +
+xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+| +++Mobile phone number.+++
+| xref::class/Person.adoc[`Person`]
+
+| <<prefix,`prefix`>>
+//| [[slots_table.prefix]]<<prefix,`prefix`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++A prefix or title for the person's name, such as Miss, Mister, Doctor, etc.+++
+| xref::class/Person.adoc[`Person`]
+
+| <<specialNeed,`specialNeed`>>
+//| [[slots_table.specialNeed]]<<specialNeed,`specialNeed`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Special service needs for the person (contact) are described; examples include life support, etc.+++
+| xref::class/Person.adoc[`Person`]
+
+| <<suffix,`suffix`>>
+//| [[slots_table.suffix]]<<suffix,`suffix`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++A suffix for the person's name, such as II, III, etc.+++
+| xref::class/Person.adoc[`Person`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Crafts]
+=== `Crafts`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldPerson.Crafts`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Craft.adoc[`Craft`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Crafts,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Customer]
+=== `Customer`
++++The customer represented by the person+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Person.Customer`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Customer.adoc[`Customer`]
+
+| Inherited from
+| xref::class/Person.adoc[`Person`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Customer,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CustomerData]
+=== `CustomerData`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldPerson.CustomerData`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Customer.adoc[`Customer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CustomerData,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#electronicAddress]
+=== `electronicAddress`
++++Electronic address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Person.electronicAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+
+| Inherited from
+| xref::class/Person.adoc[`Person`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.electronicAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ErpCompetency]
+=== `ErpCompetency`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldPerson.ErpCompetency`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ErpCompetency.adoc[`ErpCompetency`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ErpCompetency,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ErpPersonnel]
+=== `ErpPersonnel`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldPerson.ErpPersonnel`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ErpPersonnel.adoc[`ErpPersonnel`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ErpPersonnel,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#firstName]
+=== `firstName`
++++Person's first name.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Person.firstName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Person.adoc[`Person`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.firstName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#LaborItems]
+=== `LaborItems`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldPerson.LaborItems`
+| Cardinality
+| 0..*
+| Type
+| xref::class/LaborItem.adoc[`LaborItem`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.LaborItems,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#landlinePhone]
+=== `landlinePhone`
++++Landline phone number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Person.landlinePhone`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+
+| Inherited from
+| xref::class/Person.adoc[`Person`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.landlinePhone,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#LandPropertyRoles]
+=== `LandPropertyRoles`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldPerson.LandPropertyRoles`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PersonPropertyRole.adoc[`PersonPropertyRole`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.LandPropertyRoles,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lastName]
+=== `lastName`
++++Person's last (family, sir) name.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Person.lastName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Person.adoc[`Person`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lastName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MeasurementValues]
+=== `MeasurementValues`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldPerson.MeasurementValues`
+| Cardinality
+| 0..*
+| Type
+| xref::class/MeasurementValue.adoc[`MeasurementValue`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MeasurementValues,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mName]
+=== `mName`
++++Middle name(s) or initial(s).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Person.mName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Person.adoc[`Person`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mobilePhone]
+=== `mobilePhone`
++++Mobile phone number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Person.mobilePhone`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TelephoneNumber.adoc[`TelephoneNumber`]
+
+| Inherited from
+| xref::class/Person.adoc[`Person`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mobilePhone,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OrganisationRoles]
+=== `OrganisationRoles`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldPerson.OrganisationRoles`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PersonOrganisationRole.adoc[`PersonOrganisationRole`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OrganisationRoles,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#prefix]
+=== `prefix`
++++A prefix or title for the person's name, such as Miss, Mister, Doctor, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Person.prefix`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Person.adoc[`Person`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.prefix,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Roles]
+=== `Roles`
++++All roles of this person.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Person.Roles`
+| Cardinality
+| 0..*
+| Type
+| xref::class/PersonRole.adoc[`PersonRole`]
+
+| Inherited from
+| xref::class/Person.adoc[`Person`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Roles,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Skills]
+=== `Skills`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldPerson.Skills`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Skill.adoc[`Skill`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Skills,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#specialNeed]
+=== `specialNeed`
++++Special service needs for the person (contact) are described; examples include life support, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Person.specialNeed`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Person.adoc[`Person`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.specialNeed,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldPerson.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#suffix]
+=== `suffix`
++++A suffix for the person's name, such as II, III, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Person.suffix`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Person.adoc[`Person`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.suffix,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++Utility-specific classification for this person, according to the utility's corporate standards and practices. Examples include employee, contractor, agent, not affiliated, etc.
+Note that this field is not used to indicate whether this person is a customer of the utility. Often an employee or contractor is also a customer. Customer information is gained with relationship to Organisation and CustomerData. In similar fashion, this field does not indicate the various roles this person may fill as part of utility operations.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:OldPerson.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Craft.adoc[`Craft`] | xref::class/Craft.adoc#ErpPersons[`ErpPersons`]
+
+
+
+| xref::class/Customer.adoc[`Customer`] | xref::class/Customer.adoc#ErpPersons[`ErpPersons`]
+
+
+
+| xref::class/ErpCompetency.adoc[`ErpCompetency`] | xref::class/ErpCompetency.adoc#ErpPersons[`ErpPersons`]
+
+
+
+| xref::class/ErpPersonnel.adoc[`ErpPersonnel`] | xref::class/ErpPersonnel.adoc#ErpPersons[`ErpPersons`]
+
+
+
+| xref::class/LaborItem.adoc[`LaborItem`] | xref::class/LaborItem.adoc#ErpPersons[`ErpPersons`]
+
+
+
+| xref::class/MeasurementValue.adoc[`MeasurementValue`] | xref::class/MeasurementValue.adoc#ErpPerson[`ErpPerson`]
+
+
+
+| xref::class/PersonOrganisationRole.adoc[`PersonOrganisationRole`] | xref::class/PersonOrganisationRole.adoc#ErpPerson[`ErpPerson`]
+
+
+
+| xref::class/PersonPropertyRole.adoc[`PersonPropertyRole`] | xref::class/PersonPropertyRole.adoc#Person[`Person`]
+
+
+
+| xref::class/Skill.adoc[`Skill`] | xref::class/Skill.adoc#ErpPerson[`ErpPerson`]
+
+
+|===
+

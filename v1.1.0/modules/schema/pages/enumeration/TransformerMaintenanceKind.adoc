@@ -1,0 +1,46 @@
+= `TransformerMaintenanceKind`
+:toclevels: 4
+
+
++++Kinds of transformer maintenance.
+BreakerMaintenanceKind enumeration
+Possible types of breaker maintenance work.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TransformerMaintenanceKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MaintenanceWorkTask.adoc[`MaintenanceWorkTask`] | xref::class/MaintenanceWorkTask.adoc#transformerMaintenanceKind[`transformerMaintenanceKind`]
+
+
+|===
+

@@ -1,0 +1,64 @@
+= `OutageStatusKind`
+:toclevels: 4
+
+
++++This defines if the outage have been predicted or confirmed+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OutageStatusKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `closed`
+| `cim:OutageStatusKind.closed`
+| n/a
+
+| `confirmed`
+| `cim:OutageStatusKind.confirmed`
+| n/a
+
+| `partiallyRestored`
+| `cim:OutageStatusKind.partiallyRestored`
+| n/a
+
+| `predicted`
+| `cim:OutageStatusKind.predicted`
+| n/a
+
+| `restored`
+| `cim:OutageStatusKind.restored`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Outage.adoc[`Outage`] | xref::class/Outage.adoc#outageKind[`outageKind`]
+
+
+|===
+

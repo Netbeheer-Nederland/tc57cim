@@ -1,0 +1,201 @@
+= `ResourceVerifiableCosts`
+:toclevels: 4
+
+
++++This class is defined to describe the verifiable costs associated with a generation resource.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ResourceVerifiableCosts`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ResourceVerifiableCosts`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<MktHeatRateCurve,`MktHeatRateCurve`>>
+//| [[slots_table.MktHeatRateCurve]]<<MktHeatRateCurve,`MktHeatRateCurve`>>
+| 1 +
+xref::class/MktHeatRateCurve.adoc[`MktHeatRateCurve`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 1 +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<ResourceOperationMaintenanceCost,`ResourceOperationMaintenanceCost`>>
+//| [[slots_table.ResourceOperationMaintenanceCost]]<<ResourceOperationMaintenanceCost,`ResourceOperationMaintenanceCost`>>
+| 1 +
+xref::class/ResourceOperationMaintenanceCost.adoc[`ResourceOperationMaintenanceCost`]
+| _n/a_
+| _n/a_
+
+| <<ResourceStartupCost,`ResourceStartupCost`>>
+//| [[slots_table.ResourceStartupCost]]<<ResourceStartupCost,`ResourceStartupCost`>>
+| 0..* +
+xref::class/ResourceStartupCost.adoc[`ResourceStartupCost`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#MktHeatRateCurve]
+=== `MktHeatRateCurve`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceVerifiableCosts.MktHeatRateCurve`
+| Cardinality
+| 1
+| Type
+| xref::class/MktHeatRateCurve.adoc[`MktHeatRateCurve`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktHeatRateCurve,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceVerifiableCosts.RegisteredResource`
+| Cardinality
+| 1
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ResourceOperationMaintenanceCost]
+=== `ResourceOperationMaintenanceCost`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceVerifiableCosts.ResourceOperationMaintenanceCost`
+| Cardinality
+| 1
+| Type
+| xref::class/ResourceOperationMaintenanceCost.adoc[`ResourceOperationMaintenanceCost`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ResourceOperationMaintenanceCost,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ResourceStartupCost]
+=== `ResourceStartupCost`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceVerifiableCosts.ResourceStartupCost`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ResourceStartupCost.adoc[`ResourceStartupCost`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ResourceStartupCost,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/MktHeatRateCurve.adoc[`MktHeatRateCurve`] | xref::class/MktHeatRateCurve.adoc#ResourceVerifiableCosts[`ResourceVerifiableCosts`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#ResourceVerifiableCosts[`ResourceVerifiableCosts`]
+
+
+
+| xref::class/ResourceOperationMaintenanceCost.adoc[`ResourceOperationMaintenanceCost`] | xref::class/ResourceOperationMaintenanceCost.adoc#ResourceVerifiableCosts[`ResourceVerifiableCosts`]
+
+
+
+| xref::class/ResourceStartupCost.adoc[`ResourceStartupCost`] | xref::class/ResourceStartupCost.adoc#ResourceVerifiableCosts[`ResourceVerifiableCosts`]
+
+
+|===
+

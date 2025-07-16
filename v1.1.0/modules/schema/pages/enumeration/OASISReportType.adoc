@@ -1,0 +1,144 @@
+= `OASISReportType`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:OASISReportType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `AS_DA_RESULT`
+| `cim:OASISReportType.AS_DA_RESULT`
+| n/a
+
+| `AS_OP_RSRV`
+| `cim:OASISReportType.AS_OP_RSRV`
+| n/a
+
+| `AS_REQ`
+| `cim:OASISReportType.AS_REQ`
+| n/a
+
+| `AS_RTM_RESULT`
+| `cim:OASISReportType.AS_RTM_RESULT`
+| n/a
+
+| `BIDS_PUBLIC`
+| `cim:OASISReportType.BIDS_PUBLIC`
+| n/a
+
+| `CMMT_RA_MLC`
+| `cim:OASISReportType.CMMT_RA_MLC`
+| n/a
+
+| `CMMT_RMR`
+| `cim:OASISReportType.CMMT_RMR`
+| n/a
+
+| `CRR_CLEARING`
+| `cim:OASISReportType.CRR_CLEARING`
+| n/a
+
+| `CRR_INVENTORY`
+| `cim:OASISReportType.CRR_INVENTORY`
+| n/a
+
+| `ENE_EA`
+| `cim:OASISReportType.ENE_EA`
+| n/a
+
+| `ENE_HASP`
+| `cim:OASISReportType.ENE_HASP`
+| n/a
+
+| `ENE_IFM`
+| `cim:OASISReportType.ENE_IFM`
+| n/a
+
+| `ENE_MPM`
+| `cim:OASISReportType.ENE_MPM`
+| n/a
+
+| `ENE_RTM`
+| `cim:OASISReportType.ENE_RTM`
+| n/a
+
+| `ENE_RUC`
+| `cim:OASISReportType.ENE_RUC`
+| n/a
+
+| `LOSS_DA_HASP`
+| `cim:OASISReportType.LOSS_DA_HASP`
+| n/a
+
+| `LOSS_RTM`
+| `cim:OASISReportType.LOSS_RTM`
+| n/a
+
+| `PRC_AS`
+| `cim:OASISReportType.PRC_AS`
+| n/a
+
+| `PRC_CNSTR`
+| `cim:OASISReportType.PRC_CNSTR`
+| n/a
+
+| `PRC_FUEL`
+| `cim:OASISReportType.PRC_FUEL`
+| n/a
+
+| `PRC_HRLY_LMP`
+| `cim:OASISReportType.PRC_HRLY_LMP`
+| n/a
+
+| `PRC_INTVL_LMP`
+| `cim:OASISReportType.PRC_INTVL_LMP`
+| n/a
+
+| `SLD_FCST`
+| `cim:OASISReportType.SLD_FCST`
+| n/a
+
+| `SLD_FCST_PEAK`
+| `cim:OASISReportType.SLD_FCST_PEAK`
+| n/a
+
+| `SLD_MKTS`
+| `cim:OASISReportType.SLD_MKTS`
+| n/a
+
+| `TRNS_ATC`
+| `cim:OASISReportType.TRNS_ATC`
+| n/a
+
+| `TRNS_OUTAGE`
+| `cim:OASISReportType.TRNS_OUTAGE`
+| n/a
+
+| `TRNS_USAGE`
+| `cim:OASISReportType.TRNS_USAGE`
+| n/a
+|===
+
+== Used by
+
+
+This enumeration is not used by any classes as the range of a slot.

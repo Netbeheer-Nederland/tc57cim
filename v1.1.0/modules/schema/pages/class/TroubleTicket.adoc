@@ -1,0 +1,1630 @@
+= `TroubleTicket`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TroubleTicket`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Document.adoc[`Document`]
+*** *`TroubleTicket`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Customer,`Customer`>>
+//| [[slots_table.Customer]]<<Customer,`Customer`>>
+| 0..1 +
+xref::class/Customer.adoc[`Customer`]
+| +++Customer for whom this trouble ticket is relevant.+++
+| _n/a_
+
+| <<Hazard,`Hazard`>>
+//| [[slots_table.Hazard]]<<Hazard,`Hazard`>>
+| 0..* +
+xref::class/Hazard.adoc[`Hazard`]
+| _n/a_
+| _n/a_
+
+| <<Incident,`Incident`>>
+//| [[slots_table.Incident]]<<Incident,`Incident`>>
+| 0..1 +
+xref::class/Incident.adoc[`Incident`]
+| +++Incident reported in this trouble ticket+++
+| _n/a_
+
+| <<IncidentHazard,`IncidentHazard`>>
+//| [[slots_table.IncidentHazard]]<<IncidentHazard,`IncidentHazard`>>
+| 0..* +
+xref::class/IncidentHazard.adoc[`IncidentHazard`]
+| +++All hazards reported with this trouble ticket.+++
+| _n/a_
+
+| <<Location,`Location`>>
+//| [[slots_table.Location]]<<Location,`Location`>>
+| 0..1 +
+xref::class/Location.adoc[`Location`]
+| _n/a_
+| _n/a_
+
+| <<Notification,`Notification`>>
+//| [[slots_table.Notification]]<<Notification,`Notification`>>
+| 0..* +
+xref::class/CustomerNotification.adoc[`CustomerNotification`]
+| +++Notification for this trouble ticket.+++
+| _n/a_
+
+| <<ServiceLocation,`ServiceLocation`>>
+//| [[slots_table.ServiceLocation]]<<ServiceLocation,`ServiceLocation`>>
+| 1 +
+xref::class/ServiceLocation.adoc[`ServiceLocation`]
+| +++The service location to which one or more trouble tickets are associated.+++
+| _n/a_
+
+| <<TroubleOrder,`TroubleOrder`>>
+//| [[slots_table.TroubleOrder]]<<TroubleOrder,`TroubleOrder`>>
+| 0..1 +
+xref::class/TroubleOrder.adoc[`TroubleOrder`]
+| +++The order to which one or more trouble tickets are associated.+++
+| _n/a_
+
+| <<TroubleReporter,`TroubleReporter`>>
+//| [[slots_table.TroubleReporter]]<<TroubleReporter,`TroubleReporter`>>
+| 0..1 +
+xref::class/TroubleReporter.adoc[`TroubleReporter`]
+| _n/a_
+| _n/a_
+
+| <<TroubleSymptoms,`TroubleSymptoms`>>
+//| [[slots_table.TroubleSymptoms]]<<TroubleSymptoms,`TroubleSymptoms`>>
+| 0..1 +
+xref::class/TroubleSymptoms.adoc[`TroubleSymptoms`]
+| _n/a_
+| _n/a_
+
+| <<UnplannedOutage,`UnplannedOutage`>>
+//| [[slots_table.UnplannedOutage]]<<UnplannedOutage,`UnplannedOutage`>>
+| 0..1 +
+xref::class/UnplannedOutage.adoc[`UnplannedOutage`]
+| +++The unplanned outage to which one or more trouble tickets are associated.+++
+| _n/a_
+
+| <<comment,`comment`>>
+//| [[slots_table.comment]]<<comment,`comment`>>
+| 1 +
+https://w3id.org/linkml/String[`string`]
+| +++Free-form comment associated with the trouble call for example, "customer reported a large flash", etc.+++
+| _n/a_
+
+| <<dateTimeOfReport,`dateTimeOfReport`>>
+//| [[slots_table.dateTimeOfReport]]<<dateTimeOfReport,`dateTimeOfReport`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time the trouble has been reported.+++
+| _n/a_
+
+| <<firstResponderStatus,`firstResponderStatus`>>
+//| [[slots_table.firstResponderStatus]]<<firstResponderStatus,`firstResponderStatus`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Indicates whether the first responder such as police, fire department etc.has been notified and whether they are on site or en route.+++
+| _n/a_
+
+| <<multiplePremises,`multiplePremises`>>
+//| [[slots_table.multiplePremises]]<<multiplePremises,`multiplePremises`>>
+| 1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Set to true if the outage report indicated that other neighbors are also out of power.+++
+| _n/a_
+
+| <<reportingKind,`reportingKind`>>
+//| [[slots_table.reportingKind]]<<reportingKind,`reportingKind`>>
+| 0..1 +
+xref::enumeration/TroubleReportingKind.adoc[`TroubleReportingKind`]
+| +++Indicates how the customer reported trouble.+++
+| _n/a_
+
+| <<resolvedDateTime,`resolvedDateTime`>>
+//| [[slots_table.resolvedDateTime]]<<resolvedDateTime,`resolvedDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time this trouble ticket has been resolved.+++
+| _n/a_
+
+| <<troubleCode,`troubleCode`>>
+//| [[slots_table.troubleCode]]<<troubleCode,`troubleCode`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Trouble code (e.g., power down, flickering lights, partial power, etc).+++
+| _n/a_
+
+| <<ActivityRecord,`ActivityRecord`>>
+//| [[slots_table.ActivityRecord]]<<ActivityRecord,`ActivityRecord`>>
+| 0..* +
+xref::class/ActivityRecord.adoc[`ActivityRecord`]
+| +++The activity record for a document+++
+| xref::class/Document.adoc[`Document`]
+
+| <<Approver,`Approver`>>
+//| [[slots_table.Approver]]<<Approver,`Approver`>>
+| 0..1 +
+xref::class/Approver.adoc[`Approver`]
+| +++Approver of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<Author,`Author`>>
+//| [[slots_table.Author]]<<Author,`Author`>>
+| 0..1 +
+xref::class/Author.adoc[`Author`]
+| +++Author of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<ConfigurationEvents,`ConfigurationEvents`>>
+//| [[slots_table.ConfigurationEvents]]<<ConfigurationEvents,`ConfigurationEvents`>>
+| 0..* +
+xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+| +++All configuration events created for this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<Editor,`Editor`>>
+//| [[slots_table.Editor]]<<Editor,`Editor`>>
+| 0..1 +
+xref::class/Editor.adoc[`Editor`]
+| +++Editor of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<Issuer,`Issuer`>>
+//| [[slots_table.Issuer]]<<Issuer,`Issuer`>>
+| 0..1 +
+xref::class/Issuer.adoc[`Issuer`]
+| +++Issuer of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<authorName,`authorName`>>
+//| [[slots_table.authorName]]<<authorName,`authorName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Name of the author of this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<comment,`comment`>>
+//| [[slots_table.comment]]<<comment,`comment`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Free text comment.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<createdDateTime,`createdDateTime`>>
+//| [[slots_table.createdDateTime]]<<createdDateTime,`createdDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time that this document was created.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<docStatus,`docStatus`>>
+//| [[slots_table.docStatus]]<<docStatus,`docStatus`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| +++Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status'...+++
+| xref::class/Document.adoc[`Document`]
+
+| <<electronicAddress,`electronicAddress`>>
+//| [[slots_table.electronicAddress]]<<electronicAddress,`electronicAddress`>>
+| 0..1 +
+xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+| +++Electronic address.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<lastModifiedDateTime,`lastModifiedDateTime`>>
+//| [[slots_table.lastModifiedDateTime]]<<lastModifiedDateTime,`lastModifiedDateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<revisionNumber,`revisionNumber`>>
+//| [[slots_table.revisionNumber]]<<revisionNumber,`revisionNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Revision number for this document.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<status,`status`>>
+//| [[slots_table.status]]<<status,`status`>>
+| 0..1 +
+xref::class/Status.adoc[`Status`]
+| +++Status of subject matter (e.g., Agreement, Work) this document represents. For status of the document itself, use...+++
+| xref::class/Document.adoc[`Document`]
+
+| <<subject,`subject`>>
+//| [[slots_table.subject]]<<subject,`subject`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Document subject.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<title,`title`>>
+//| [[slots_table.title]]<<title,`title`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Document title.+++
+| xref::class/Document.adoc[`Document`]
+
+| <<type,`type`>>
+//| [[slots_table.type]]<<type,`type`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems...+++
+| xref::class/Document.adoc[`Document`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#ActivityRecord]
+=== `ActivityRecord`
++++The activity record for a document+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.ActivityRecord`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ActivityRecord.adoc[`ActivityRecord`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ActivityRecord,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Approver]
+=== `Approver`
++++Approver of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Approver`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Approver.adoc[`Approver`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Approver,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Author]
+=== `Author`
++++Author of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Author`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Author.adoc[`Author`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Author,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#authorName]
+=== `authorName`
++++Name of the author of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.authorName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.authorName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#comment]
+=== `comment`
++++Free-form comment associated with the trouble call for example, "customer reported a large flash", etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.comment`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.comment,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#comment]
+=== `comment`
++++Free text comment.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.comment`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.comment,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ConfigurationEvents]
+=== `ConfigurationEvents`
++++All configuration events created for this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.ConfigurationEvents`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConfigurationEvent.adoc[`ConfigurationEvent`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ConfigurationEvents,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#createdDateTime]
+=== `createdDateTime`
++++Date and time that this document was created.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.createdDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.createdDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Customer]
+=== `Customer`
++++Customer for whom this trouble ticket is relevant.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.Customer`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Customer.adoc[`Customer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Customer,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dateTimeOfReport]
+=== `dateTimeOfReport`
++++Date and time the trouble has been reported.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.dateTimeOfReport`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dateTimeOfReport,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#docStatus]
+=== `docStatus`
++++Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status' attribute.
+Example values for 'docStatus.status' are draft, approved, cancelled, etc.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.docStatus`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.docStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Editor]
+=== `Editor`
++++Editor of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Editor`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Editor.adoc[`Editor`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Editor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#electronicAddress]
+=== `electronicAddress`
++++Electronic address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.electronicAddress`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ElectronicAddress.adoc[`ElectronicAddress`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.electronicAddress,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#firstResponderStatus]
+=== `firstResponderStatus`
++++Indicates whether the first responder such as police, fire department etc.has been notified and whether they are on site or en route.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.firstResponderStatus`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.firstResponderStatus,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Hazard]
+=== `Hazard`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.Hazard`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Hazard.adoc[`Hazard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Hazard,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Incident]
+=== `Incident`
++++Incident reported in this trouble ticket+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.Incident`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Incident.adoc[`Incident`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Incident,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#IncidentHazard]
+=== `IncidentHazard`
++++All hazards reported with this trouble ticket.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.IncidentHazard`
+| Cardinality
+| 0..*
+| Type
+| xref::class/IncidentHazard.adoc[`IncidentHazard`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.IncidentHazard,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Issuer]
+=== `Issuer`
++++Issuer of this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.Issuer`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Issuer.adoc[`Issuer`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Issuer,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lastModifiedDateTime]
+=== `lastModifiedDateTime`
++++Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.lastModifiedDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lastModifiedDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Location]
+=== `Location`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.Location`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Location.adoc[`Location`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Location,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#multiplePremises]
+=== `multiplePremises`
++++Set to true if the outage report indicated that other neighbors are also out of power.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.multiplePremises`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.multiplePremises,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Notification]
+=== `Notification`
++++Notification for this trouble ticket.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.Notification`
+| Cardinality
+| 0..*
+| Type
+| xref::class/CustomerNotification.adoc[`CustomerNotification`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Notification,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reportingKind]
+=== `reportingKind`
++++Indicates how the customer reported trouble.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.reportingKind`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/TroubleReportingKind.adoc[`TroubleReportingKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reportingKind,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#resolvedDateTime]
+=== `resolvedDateTime`
++++Date and time this trouble ticket has been resolved.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.resolvedDateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.resolvedDateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#revisionNumber]
+=== `revisionNumber`
++++Revision number for this document.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.revisionNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.revisionNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ServiceLocation]
+=== `ServiceLocation`
++++The service location to which one or more trouble tickets are associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.ServiceLocation`
+| Cardinality
+| 1
+| Type
+| xref::class/ServiceLocation.adoc[`ServiceLocation`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ServiceLocation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#status]
+=== `status`
++++Status of subject matter (e.g., Agreement, Work) this document represents. For status of the document itself, use 'docStatus' attribute.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.status`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Status.adoc[`Status`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.status,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#subject]
+=== `subject`
++++Document subject.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.subject`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.subject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#title]
+=== `title`
++++Document title.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.title`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.title,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#troubleCode]
+=== `troubleCode`
++++Trouble code (e.g., power down, flickering lights, partial power, etc).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.troubleCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.troubleCode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TroubleOrder]
+=== `TroubleOrder`
++++The order to which one or more trouble tickets are associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.TroubleOrder`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TroubleOrder.adoc[`TroubleOrder`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TroubleOrder,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TroubleReporter]
+=== `TroubleReporter`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.TroubleReporter`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TroubleReporter.adoc[`TroubleReporter`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TroubleReporter,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TroubleSymptoms]
+=== `TroubleSymptoms`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.TroubleSymptoms`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TroubleSymptoms.adoc[`TroubleSymptoms`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TroubleSymptoms,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#type]
+=== `type`
++++Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Document.type`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/Document.adoc[`Document`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.type,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#UnplannedOutage]
+=== `UnplannedOutage`
++++The unplanned outage to which one or more trouble tickets are associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TroubleTicket.UnplannedOutage`
+| Cardinality
+| 0..1
+| Type
+| xref::class/UnplannedOutage.adoc[`UnplannedOutage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.UnplannedOutage,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Customer.adoc[`Customer`] | xref::class/Customer.adoc#TroubleTickets[`TroubleTickets`]
+
+
+
+| xref::class/CustomerNotification.adoc[`CustomerNotification`] | xref::class/CustomerNotification.adoc#TroubleTickets[`TroubleTickets`]
+
+
+
+| xref::class/Hazard.adoc[`Hazard`] | xref::class/Hazard.adoc#TroubleTicket[`TroubleTicket`]
+
+
+
+| xref::class/Incident.adoc[`Incident`] | xref::class/Incident.adoc#TroubleTickets[`TroubleTickets`]
+
+
+
+| xref::class/IncidentHazard.adoc[`IncidentHazard`] | xref::class/IncidentHazard.adoc#TroubleTicket[`TroubleTicket`]
+
+
+
+| xref::class/Location.adoc[`Location`] | xref::class/Location.adoc#TroubleTicket[`TroubleTicket`]
+
+
+
+| xref::class/ServiceLocation.adoc[`ServiceLocation`] | xref::class/ServiceLocation.adoc#TroubleTicket[`TroubleTicket`]
+
+
+
+| xref::class/TroubleOrder.adoc[`TroubleOrder`] | xref::class/TroubleOrder.adoc#TroubleTicket[`TroubleTicket`]
+
+
+
+| xref::class/TroubleReporter.adoc[`TroubleReporter`] | xref::class/TroubleReporter.adoc#TroubleTicket[`TroubleTicket`]
+
+
+
+| xref::class/TroubleSymptoms.adoc[`TroubleSymptoms`] | xref::class/TroubleSymptoms.adoc#TroubleTicket[`TroubleTicket`]
+
+
+
+| xref::class/UnplannedOutage.adoc[`UnplannedOutage`] | xref::class/UnplannedOutage.adoc#TroubleTicket[`TroubleTicket`]
+
+
+|===
+

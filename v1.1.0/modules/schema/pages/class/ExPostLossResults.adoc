@@ -1,0 +1,197 @@
+= `ExPostLossResults`
+:toclevels: 4
+
+
++++Model results of ex-post calculation of MW losses. Summarizes loss in two categories losses on the the extra high voltage transmission and total losses. Calculated for each subcontrol area.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ExPostLossResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ExPostLossResults`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ExPostLoss,`ExPostLoss`>>
+//| [[slots_table.ExPostLoss]]<<ExPostLoss,`ExPostLoss`>>
+| 1 +
+xref::class/ExPostLoss.adoc[`ExPostLoss`]
+| _n/a_
+| _n/a_
+
+| <<SubControlArea,`SubControlArea`>>
+//| [[slots_table.SubControlArea]]<<SubControlArea,`SubControlArea`>>
+| 0..1 +
+xref::class/SubControlArea.adoc[`SubControlArea`]
+| _n/a_
+| _n/a_
+
+| <<ehvLossMW,`ehvLossMW`>>
+//| [[slots_table.ehvLossMW]]<<ehvLossMW,`ehvLossMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++EHV MW losses in the company 
+Attribute Usage: Information purposes - Output of LPA engine.+++
+| _n/a_
+
+| <<totalLossMW,`totalLossMW`>>
+//| [[slots_table.totalLossMW]]<<totalLossMW,`totalLossMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Total MW losses in the company 
+Attribute Usage: Information purposes - Output of LPA engine.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#ehvLossMW]
+=== `ehvLossMW`
++++EHV MW losses in the company 
+Attribute Usage: Information purposes - Output of LPA engine.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostLossResults.ehvLossMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ehvLossMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ExPostLoss]
+=== `ExPostLoss`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostLossResults.ExPostLoss`
+| Cardinality
+| 1
+| Type
+| xref::class/ExPostLoss.adoc[`ExPostLoss`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ExPostLoss,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SubControlArea]
+=== `SubControlArea`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostLossResults.SubControlArea`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SubControlArea.adoc[`SubControlArea`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SubControlArea,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#totalLossMW]
+=== `totalLossMW`
++++Total MW losses in the company 
+Attribute Usage: Information purposes - Output of LPA engine.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExPostLossResults.totalLossMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.totalLossMW,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ExPostLoss.adoc[`ExPostLoss`] | xref::class/ExPostLoss.adoc#ExPostLossResults[`ExPostLossResults`]
+
+
+
+| xref::class/SubControlArea.adoc[`SubControlArea`] | xref::class/SubControlArea.adoc#ExPostLossResults[`ExPostLossResults`]
+
+
+|===
+

@@ -1,0 +1,333 @@
+= `TelephoneNumber`
+:toclevels: 4
+
+
++++Telephone number.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TelephoneNumber`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`TelephoneNumber`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<areaCode,`areaCode`>>
+//| [[slots_table.areaCode]]<<areaCode,`areaCode`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Area or region code.+++
+| _n/a_
+
+| <<cityCode,`cityCode`>>
+//| [[slots_table.cityCode]]<<cityCode,`cityCode`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++City code.+++
+| _n/a_
+
+| <<countryCode,`countryCode`>>
+//| [[slots_table.countryCode]]<<countryCode,`countryCode`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Country code.+++
+| _n/a_
+
+| <<dialOut,`dialOut`>>
+//| [[slots_table.dialOut]]<<dialOut,`dialOut`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Dial out code, for instance to call outside an enterprise.+++
+| _n/a_
+
+| <<extension,`extension`>>
+//| [[slots_table.extension]]<<extension,`extension`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Extension for this telephone number.+++
+| _n/a_
+
+| <<internationalPrefix,`internationalPrefix`>>
+//| [[slots_table.internationalPrefix]]<<internationalPrefix,`internationalPrefix`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(if applicable) Prefix used when calling an international number.+++
+| _n/a_
+
+| <<ituPhone,`ituPhone`>>
+//| [[slots_table.ituPhone]]<<ituPhone,`ituPhone`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Phone number according to International Telecommunication Union (ITU) E.164.+++
+| _n/a_
+
+| <<localNumber,`localNumber`>>
+//| [[slots_table.localNumber]]<<localNumber,`localNumber`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Main (local) part of this telephone number.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#areaCode]
+=== `areaCode`
++++(if applicable) Area or region code.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.areaCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.areaCode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#cityCode]
+=== `cityCode`
++++City code.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.cityCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.cityCode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#countryCode]
+=== `countryCode`
++++Country code.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.countryCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.countryCode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#dialOut]
+=== `dialOut`
++++(if applicable) Dial out code, for instance to call outside an enterprise.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.dialOut`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dialOut,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#extension]
+=== `extension`
++++(if applicable) Extension for this telephone number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.extension`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.extension,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#internationalPrefix]
+=== `internationalPrefix`
++++(if applicable) Prefix used when calling an international number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.internationalPrefix`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.internationalPrefix,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ituPhone]
+=== `ituPhone`
++++Phone number according to International Telecommunication Union (ITU) E.164.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.ituPhone`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ituPhone,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#localNumber]
+=== `localNumber`
++++Main (local) part of this telephone number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TelephoneNumber.localNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.localNumber,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Location.adoc[`Location`] | xref::class/Location.adoc#phone2[`phone2`]
+
+
+
+| xref::class/MarketPerson.adoc[`MarketPerson`] | xref::class/MarketPerson.adoc#mobilePhone[`mobilePhone`]
+
+
+
+| xref::class/Organisation.adoc[`Organisation`] | xref::class/Organisation.adoc#phone2[`phone2`]
+
+
+
+| xref::class/Person.adoc[`Person`] | xref::class/Person.adoc#mobilePhone[`mobilePhone`]
+
+
+|===
+

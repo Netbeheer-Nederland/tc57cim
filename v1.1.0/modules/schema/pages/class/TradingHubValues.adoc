@@ -1,0 +1,160 @@
+= `TradingHubValues`
+:toclevels: 4
+
+
++++Models prices at Trading Hubs.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TradingHubValues`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`TradingHubValues`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AggregatedPnode,`AggregatedPnode`>>
+//| [[slots_table.AggregatedPnode]]<<AggregatedPnode,`AggregatedPnode`>>
+| 1 +
+xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+| _n/a_
+| _n/a_
+
+| <<TradingHubPrice,`TradingHubPrice`>>
+//| [[slots_table.TradingHubPrice]]<<TradingHubPrice,`TradingHubPrice`>>
+| 1 +
+xref::class/TradingHubPrice.adoc[`TradingHubPrice`]
+| _n/a_
+| _n/a_
+
+| <<price,`price`>>
+//| [[slots_table.price]]<<price,`price`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Utilizes the Market type. For DA, the price is hourly. For RTM the price is a 5 minute price.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#AggregatedPnode]
+=== `AggregatedPnode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TradingHubValues.AggregatedPnode`
+| Cardinality
+| 1
+| Type
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AggregatedPnode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#price]
+=== `price`
++++Utilizes the Market type. For DA, the price is hourly. For RTM the price is a 5 minute price.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TradingHubValues.price`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.price,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TradingHubPrice]
+=== `TradingHubPrice`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TradingHubValues.TradingHubPrice`
+| Cardinality
+| 1
+| Type
+| xref::class/TradingHubPrice.adoc[`TradingHubPrice`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TradingHubPrice,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`] | xref::class/AggregatedPnode.adoc#TradingHubValues[`TradingHubValues`]
+
+
+
+| xref::class/TradingHubPrice.adoc[`TradingHubPrice`] | xref::class/TradingHubPrice.adoc#TradingHubValues[`TradingHubValues`]
+
+
+|===
+

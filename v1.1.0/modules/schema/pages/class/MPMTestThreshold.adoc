@@ -1,0 +1,263 @@
+= `MPMTestThreshold`
+:toclevels: 4
+
+
++++Market Power Mitigation (MPM) test thresholds for resource as well as designated congestion areas (DCAs).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:MPMTestThreshold`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`MPMTestThreshold`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AggregatedPnode,`AggregatedPnode`>>
+//| [[slots_table.AggregatedPnode]]<<AggregatedPnode,`AggregatedPnode`>>
+| 0..* +
+xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+| _n/a_
+| _n/a_
+
+| <<MPMTestCategory,`MPMTestCategory`>>
+//| [[slots_table.MPMTestCategory]]<<MPMTestCategory,`MPMTestCategory`>>
+| 1 +
+xref::class/MPMTestCategory.adoc[`MPMTestCategory`]
+| _n/a_
+| _n/a_
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..* +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<marketType,`marketType`>>
+//| [[slots_table.marketType]]<<marketType,`marketType`>>
+| 0..1 +
+xref::enumeration/MarketType.adoc[`MarketType`]
+| +++Market Type (DAM, RTM)+++
+| _n/a_
+
+| <<percent,`percent`>>
+//| [[slots_table.percent]]<<percent,`percent`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Price Threshold in %+++
+| _n/a_
+
+| <<price,`price`>>
+//| [[slots_table.price]]<<price,`price`>>
+| 0..1 +
+xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+| +++Price Threshold in $/MW+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#AggregatedPnode]
+=== `AggregatedPnode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMTestThreshold.AggregatedPnode`
+| Cardinality
+| 0..*
+| Type
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AggregatedPnode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marketType]
+=== `marketType`
++++Market Type (DAM, RTM)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMTestThreshold.marketType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MarketType.adoc[`MarketType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marketType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MPMTestCategory]
+=== `MPMTestCategory`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMTestThreshold.MPMTestCategory`
+| Cardinality
+| 1
+| Type
+| xref::class/MPMTestCategory.adoc[`MPMTestCategory`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MPMTestCategory,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#percent]
+=== `percent`
++++Price Threshold in %+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMTestThreshold.percent`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.percent,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#price]
+=== `price`
++++Price Threshold in $/MW+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMTestThreshold.price`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.price,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:MPMTestThreshold.RegisteredResource`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AggregatedPnode.adoc[`AggregatedPnode`] | xref::class/AggregatedPnode.adoc#MPMTestThreshold[`MPMTestThreshold`]
+
+
+
+| xref::class/MPMTestCategory.adoc[`MPMTestCategory`] | xref::class/MPMTestCategory.adoc#MPMTestThreshold[`MPMTestThreshold`]
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#MPMTestThreshold[`MPMTestThreshold`]
+
+
+|===
+

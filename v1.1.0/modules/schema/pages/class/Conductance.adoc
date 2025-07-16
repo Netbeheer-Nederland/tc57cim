@@ -1,0 +1,146 @@
+= `Conductance`
+:toclevels: 4
+
+
++++Factor by which voltage must be multiplied to give corresponding power lost from a circuit. Real part of admittance.+++
+
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+
+| URI
+| `cim:Conductance`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+
+| `value`
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+//| +++None+++
+| n/a
+
+| `multiplier`
+| 0..1 +
+xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+//| +++None+++
+| n/a
+
+| `unit`
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+//| +++None+++
+| n/a
+|===
+
+////
+
+'''
+
+
+//[discrete]
+[#multiplier]
+=== `multiplier`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Conductance.multiplier`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitMultiplier.adoc[`UnitMultiplier`]
+|===
+
+//[discrete]
+[#unit]
+=== `unit`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Conductance.unit`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+|===
+
+//[discrete]
+[#value]
+=== `value`
+
+
+[cols="h,1",width=60%]
+|===
+| URI
+| `cim:Conductance.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+|===
+
+////
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ACLineSegment.adoc[`ACLineSegment`] | xref::class/ACLineSegment.adoc#gch[`gch`]
+
+
+
+| xref::class/EquivalentShunt.adoc[`EquivalentShunt`] | xref::class/EquivalentShunt.adoc#g[`g`]
+
+
+
+| xref::class/LinearShuntCompensator.adoc[`LinearShuntCompensator`] | xref::class/LinearShuntCompensator.adoc#gPerSection[`gPerSection`]
+
+
+
+| xref::class/LinearShuntCompensatorPhase.adoc[`LinearShuntCompensatorPhase`] | xref::class/LinearShuntCompensatorPhase.adoc#gPerSection[`gPerSection`]
+
+
+
+| xref::class/MutualCoupling.adoc[`MutualCoupling`] | xref::class/MutualCoupling.adoc#g0ch[`g0ch`]
+
+
+
+| xref::class/NonlinearShuntCompensatorPhasePoint.adoc[`NonlinearShuntCompensatorPhasePoint`] | xref::class/NonlinearShuntCompensatorPhasePoint.adoc#g[`g`]
+
+
+
+| xref::class/NonlinearShuntCompensatorPoint.adoc[`NonlinearShuntCompensatorPoint`] | xref::class/NonlinearShuntCompensatorPoint.adoc#g0[`g0`]
+
+
+
+| xref::class/PowerTransformerEnd.adoc[`PowerTransformerEnd`] | xref::class/PowerTransformerEnd.adoc#g0[`g0`]
+
+
+
+| xref::class/TransformerCoreAdmittance.adoc[`TransformerCoreAdmittance`] | xref::class/TransformerCoreAdmittance.adoc#g0[`g0`]
+
+
+|===
+

@@ -1,0 +1,54 @@
+= `ConstraintLimitType`
+:toclevels: 4
+
+
++++Binding constraint results limit type, For example:
+MAXIMUM
+MINIMUM+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:ConstraintLimitType`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `MAXIMUM`
+| `cim:ConstraintLimitType.MAXIMUM`
+| n/a
+
+| `MINIMUM`
+| `cim:ConstraintLimitType.MINIMUM`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ConstraintResults.adoc[`ConstraintResults`] | xref::class/ConstraintResults.adoc#limitFlag[`limitFlag`]
+
+
+|===
+

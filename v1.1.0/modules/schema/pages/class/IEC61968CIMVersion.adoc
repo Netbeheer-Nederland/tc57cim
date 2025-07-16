@@ -1,0 +1,114 @@
+= `IEC61968CIMVersion`
+:toclevels: 4
+
+
++++IEC 61968 version number assigned to this UML model.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:IEC61968CIMVersion`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`IEC61968CIMVersion`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<date,`date`>>
+//| [[slots_table.date]]<<date,`date`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++(const=2016-10-31) Form is YYYY-MM-DD for example for January 5, 2009 it is 2009-01-05.+++
+| _n/a_
+
+| <<version,`version`>>
+//| [[slots_table.version]]<<version,`version`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++(const=IEC61968CIM13v09) Form is IEC61968CIMXXvYY[a-z] where XX is the major CIM package version and the YY is the minor...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#date]
+=== `date`
++++(const=2016-10-31) Form is YYYY-MM-DD for example for January 5, 2009 it is 2009-01-05.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IEC61968CIMVersion.date`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.date,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#version]
+=== `version`
++++(const=IEC61968CIM13v09) Form is IEC61968CIMXXvYY[a-z] where XX is the major CIM package version and the YY is the minor version. For example IEC61968CIM10v17a.
+The letter on the version number indicates the changes are due to National Committee comments.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IEC61968CIMVersion.version`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.version,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

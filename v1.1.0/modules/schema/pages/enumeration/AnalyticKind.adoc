@@ -1,0 +1,68 @@
+= `AnalyticKind`
+:toclevels: 4
+
+
++++Possible kinds of analytics.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:AnalyticKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `agingAnalytic`
+| `cim:AnalyticKind.agingAnalytic`
+| n/a
+
+| `faultAnalytic`
+| `cim:AnalyticKind.faultAnalytic`
+| n/a
+
+| `healthAnalytic`
+| `cim:AnalyticKind.healthAnalytic`
+| n/a
+
+| `other`
+| `cim:AnalyticKind.other`
+| n/a
+
+| `replacementAnalytic`
+| `cim:AnalyticKind.replacementAnalytic`
+| n/a
+
+| `riskAnalytic`
+| `cim:AnalyticKind.riskAnalytic`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Analytic.adoc[`Analytic`] | xref::class/Analytic.adoc#kind[`kind`]
+
+
+|===
+

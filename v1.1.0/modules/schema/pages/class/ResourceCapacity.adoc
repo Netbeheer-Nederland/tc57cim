@@ -1,0 +1,271 @@
+= `ResourceCapacity`
+:toclevels: 4
+
+
++++This class model the various capacities of a resource. A resource may have numbers of capacities related to operating, ancillary services, energy trade and so forth. Capacities may be defined for active power or reactive power.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ResourceCapacity`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ResourceCapacity`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<RegisteredResource,`RegisteredResource`>>
+//| [[slots_table.RegisteredResource]]<<RegisteredResource,`RegisteredResource`>>
+| 0..* +
+xref::class/RegisteredResource.adoc[`RegisteredResource`]
+| _n/a_
+| _n/a_
+
+| <<capacityType,`capacityType`>>
+//| [[slots_table.capacityType]]<<capacityType,`capacityType`>>
+| 0..1 +
+xref::enumeration/ResourceCapacityType.adoc[`ResourceCapacityType`]
+| +++capacity type
+
+The types are but not limited to:
+
+Regulation Up
+Regulation Dn
+Spinning Reserve
+Non-Spinning...+++
+| _n/a_
+
+| <<defaultCapacity,`defaultCapacity`>>
+//| [[slots_table.defaultCapacity]]<<defaultCapacity,`defaultCapacity`>>
+| 0..1 +
+https://w3id.org/linkml/Double[`double`]
+| +++default capacity+++
+| _n/a_
+
+| <<maximumCapacity,`maximumCapacity`>>
+//| [[slots_table.maximumCapacity]]<<maximumCapacity,`maximumCapacity`>>
+| 0..1 +
+https://w3id.org/linkml/Double[`double`]
+| +++maximum capacity+++
+| _n/a_
+
+| <<minimumCapacity,`minimumCapacity`>>
+//| [[slots_table.minimumCapacity]]<<minimumCapacity,`minimumCapacity`>>
+| 0..1 +
+https://w3id.org/linkml/Double[`double`]
+| +++minimum capacity+++
+| _n/a_
+
+| <<unitSymbol,`unitSymbol`>>
+//| [[slots_table.unitSymbol]]<<unitSymbol,`unitSymbol`>>
+| 0..1 +
+xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+| +++Unit selection for the capacity values.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#capacityType]
+=== `capacityType`
++++capacity type
+
+The types are but not limited to:
+
+Regulation Up
+Regulation Dn
+Spinning Reserve
+Non-Spinning Reserve
+FOO capacity
+MOO capacity+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCapacity.capacityType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/ResourceCapacityType.adoc[`ResourceCapacityType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.capacityType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#defaultCapacity]
+=== `defaultCapacity`
++++default capacity+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCapacity.defaultCapacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Double[`double`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.defaultCapacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maximumCapacity]
+=== `maximumCapacity`
++++maximum capacity+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCapacity.maximumCapacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Double[`double`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maximumCapacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minimumCapacity]
+=== `minimumCapacity`
++++minimum capacity+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCapacity.minimumCapacity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Double[`double`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minimumCapacity,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#RegisteredResource]
+=== `RegisteredResource`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCapacity.RegisteredResource`
+| Cardinality
+| 0..*
+| Type
+| xref::class/RegisteredResource.adoc[`RegisteredResource`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.RegisteredResource,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#unitSymbol]
+=== `unitSymbol`
++++Unit selection for the capacity values.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceCapacity.unitSymbol`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/UnitSymbol.adoc[`UnitSymbol`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.unitSymbol,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/RegisteredResource.adoc[`RegisteredResource`] | xref::class/RegisteredResource.adoc#ResourceCapacity[`ResourceCapacity`]
+
+
+|===
+

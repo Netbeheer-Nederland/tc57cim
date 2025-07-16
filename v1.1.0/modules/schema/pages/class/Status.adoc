@@ -1,0 +1,441 @@
+= `Status`
+:toclevels: 4
+
+
++++Current status information relevant to an entity.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:Status`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`Status`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<dateTime,`dateTime`>>
+//| [[slots_table.dateTime]]<<dateTime,`dateTime`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time for which status 'value' applies.+++
+| _n/a_
+
+| <<reason,`reason`>>
+//| [[slots_table.reason]]<<reason,`reason`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Reason code or explanation for why an object went to the current status 'value'.+++
+| _n/a_
+
+| <<remark,`remark`>>
+//| [[slots_table.remark]]<<remark,`remark`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Pertinent information regarding the current 'value', as free form text.+++
+| _n/a_
+
+| <<value,`value`>>
+//| [[slots_table.value]]<<value,`value`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Status value at 'dateTime'; prior status changes may have been kept in instances of activity records associated with the...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#dateTime]
+=== `dateTime`
++++Date and time for which status 'value' applies.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Status.dateTime`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.dateTime,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#reason]
+=== `reason`
++++Reason code or explanation for why an object went to the current status 'value'.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Status.reason`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.reason,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#remark]
+=== `remark`
++++Pertinent information regarding the current 'value', as free form text.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Status.remark`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.remark,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#value]
+=== `value`
++++Status value at 'dateTime'; prior status changes may have been kept in instances of activity records associated with the object to which this status applies.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Status.value`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.value,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ActivityRecord.adoc[`ActivityRecord`] | xref::class/ActivityRecord.adoc#status[`status`]
+
+
+
+| xref::class/Asset.adoc[`Asset`] | xref::class/Asset.adoc#status[`status`]
+
+
+
+| xref::class/AssetModelCatalogue.adoc[`AssetModelCatalogue`] | xref::class/AssetModelCatalogue.adoc#status[`status`]
+
+
+
+| xref::class/BushingInsulationPF.adoc[`BushingInsulationPF`] | xref::class/BushingInsulationPF.adoc#status[`status`]
+
+
+
+| xref::class/BusinessRole.adoc[`BusinessRole`] | xref::class/BusinessRole.adoc#status[`status`]
+
+
+
+| xref::class/Capability.adoc[`Capability`] | xref::class/Capability.adoc#status[`status`]
+
+
+
+| xref::class/ConditionFactor.adoc[`ConditionFactor`] | xref::class/ConditionFactor.adoc#status[`status`]
+
+
+
+| xref::class/ContractorItem.adoc[`ContractorItem`] | xref::class/ContractorItem.adoc#status[`status`]
+
+
+
+| xref::class/CostType.adoc[`CostType`] | xref::class/CostType.adoc#status[`status`]
+
+
+
+| xref::class/Craft.adoc[`Craft`] | xref::class/Craft.adoc#status[`status`]
+
+
+
+| xref::class/Crew.adoc[`Crew`] | xref::class/Crew.adoc#status[`status`]
+
+
+
+| xref::class/CRROrgRole.adoc[`CRROrgRole`] | xref::class/CRROrgRole.adoc#status[`status`]
+
+
+
+| xref::class/CUAllowableAction.adoc[`CUAllowableAction`] | xref::class/CUAllowableAction.adoc#status[`status`]
+
+
+
+| xref::class/CUContractorItem.adoc[`CUContractorItem`] | xref::class/CUContractorItem.adoc#status[`status`]
+
+
+
+| xref::class/CUGroup.adoc[`CUGroup`] | xref::class/CUGroup.adoc#status[`status`]
+
+
+
+| xref::class/CULaborCode.adoc[`CULaborCode`] | xref::class/CULaborCode.adoc#status[`status`]
+
+
+
+| xref::class/CULaborItem.adoc[`CULaborItem`] | xref::class/CULaborItem.adoc#status[`status`]
+
+
+
+| xref::class/CUMaterialItem.adoc[`CUMaterialItem`] | xref::class/CUMaterialItem.adoc#status[`status`]
+
+
+
+| xref::class/Customer.adoc[`Customer`] | xref::class/Customer.adoc#status[`status`]
+
+
+
+| xref::class/CUWorkEquipmentItem.adoc[`CUWorkEquipmentItem`] | xref::class/CUWorkEquipmentItem.adoc#status[`status`]
+
+
+
+| xref::class/DesignLocation.adoc[`DesignLocation`] | xref::class/DesignLocation.adoc#status[`status`]
+
+
+
+| xref::class/DesignLocationCU.adoc[`DesignLocationCU`] | xref::class/DesignLocationCU.adoc#status[`status`]
+
+
+
+| xref::class/Document.adoc[`Document`] | xref::class/Document.adoc#status[`status`]
+
+
+
+| xref::class/EndDeviceGroup.adoc[`EndDeviceGroup`] | xref::class/EndDeviceGroup.adoc#status[`status`]
+
+
+
+| xref::class/ErpInventory.adoc[`ErpInventory`] | xref::class/ErpInventory.adoc#status[`status`]
+
+
+
+| xref::class/ErpInventoryCount.adoc[`ErpInventoryCount`] | xref::class/ErpInventoryCount.adoc#status[`status`]
+
+
+
+| xref::class/ErpIssueInventory.adoc[`ErpIssueInventory`] | xref::class/ErpIssueInventory.adoc#status[`status`]
+
+
+
+| xref::class/ErpItemMaster.adoc[`ErpItemMaster`] | xref::class/ErpItemMaster.adoc#status[`status`]
+
+
+
+| xref::class/ErpJournalEntry.adoc[`ErpJournalEntry`] | xref::class/ErpJournalEntry.adoc#status[`status`]
+
+
+
+| xref::class/ErpLedBudLineItem.adoc[`ErpLedBudLineItem`] | xref::class/ErpLedBudLineItem.adoc#status[`status`]
+
+
+
+| xref::class/ErpLedgerEntry.adoc[`ErpLedgerEntry`] | xref::class/ErpLedgerEntry.adoc#status[`status`]
+
+
+
+| xref::class/ErpPayableLineItem.adoc[`ErpPayableLineItem`] | xref::class/ErpPayableLineItem.adoc#status[`status`]
+
+
+
+| xref::class/ErpPersonnel.adoc[`ErpPersonnel`] | xref::class/ErpPersonnel.adoc#status[`status`]
+
+
+
+| xref::class/ErpQuoteLineItem.adoc[`ErpQuoteLineItem`] | xref::class/ErpQuoteLineItem.adoc#status[`status`]
+
+
+
+| xref::class/ErpRecDelvLineItem.adoc[`ErpRecDelvLineItem`] | xref::class/ErpRecDelvLineItem.adoc#status[`status`]
+
+
+
+| xref::class/ErpRecLineItem.adoc[`ErpRecLineItem`] | xref::class/ErpRecLineItem.adoc#status[`status`]
+
+
+
+| xref::class/ErpReqLineItem.adoc[`ErpReqLineItem`] | xref::class/ErpReqLineItem.adoc#status[`status`]
+
+
+
+| xref::class/ErpSiteLevelData.adoc[`ErpSiteLevelData`] | xref::class/ErpSiteLevelData.adoc#status[`status`]
+
+
+
+| xref::class/ErpTimeEntry.adoc[`ErpTimeEntry`] | xref::class/ErpTimeEntry.adoc#status[`status`]
+
+
+
+| xref::class/Hazard.adoc[`Hazard`] | xref::class/Hazard.adoc#status[`status`]
+
+
+
+| xref::class/LaborItem.adoc[`LaborItem`] | xref::class/LaborItem.adoc#status[`status`]
+
+
+
+| xref::class/LandProperty.adoc[`LandProperty`] | xref::class/LandProperty.adoc#status[`status`]
+
+
+
+| xref::class/Location.adoc[`Location`] | xref::class/Location.adoc#status[`status`]
+
+
+
+| xref::class/MarketLedgerEntry.adoc[`MarketLedgerEntry`] | xref::class/MarketLedgerEntry.adoc#status[`status`]
+
+
+
+| xref::class/MarketPerson.adoc[`MarketPerson`] | xref::class/MarketPerson.adoc#status[`status`]
+
+
+
+| xref::class/MarketScheduledEvent.adoc[`MarketScheduledEvent`] | xref::class/MarketScheduledEvent.adoc#status[`status`]
+
+
+
+| xref::class/MiscCostItem.adoc[`MiscCostItem`] | xref::class/MiscCostItem.adoc#status[`status`]
+
+
+
+| xref::class/OldPerson.adoc[`OldPerson`] | xref::class/OldPerson.adoc#status[`status`]
+
+
+
+| xref::class/OverheadCost.adoc[`OverheadCost`] | xref::class/OverheadCost.adoc#status[`status`]
+
+
+
+| xref::class/PropertyUnit.adoc[`PropertyUnit`] | xref::class/PropertyUnit.adoc#status[`status`]
+
+
+
+| xref::class/RedLine.adoc[`RedLine`] | xref::class/RedLine.adoc#status[`status`]
+
+
+
+| xref::class/ResourceGroup.adoc[`ResourceGroup`] | xref::class/ResourceGroup.adoc#status[`status`]
+
+
+
+| xref::class/Role.adoc[`Role`] | xref::class/Role.adoc#status[`status`]
+
+
+
+| xref::class/Route.adoc[`Route`] | xref::class/Route.adoc#status[`status`]
+
+
+
+| xref::class/ScheduledEvent.adoc[`ScheduledEvent`] | xref::class/ScheduledEvent.adoc#status[`status`]
+
+
+
+| xref::class/ScheduledEventData.adoc[`ScheduledEventData`] | xref::class/ScheduledEventData.adoc#status[`status`]
+
+
+
+| xref::class/ShiftPattern.adoc[`ShiftPattern`] | xref::class/ShiftPattern.adoc#status[`status`]
+
+
+
+| xref::class/StreetAddress.adoc[`StreetAddress`] | xref::class/StreetAddress.adoc#status[`status`]
+
+
+
+| xref::class/TimePoint.adoc[`TimePoint`] | xref::class/TimePoint.adoc#status[`status`]
+
+
+
+| xref::class/TransformerObservation.adoc[`TransformerObservation`] | xref::class/TransformerObservation.adoc#status[`status`]
+
+
+
+| xref::class/TypeAssetCatalogue.adoc[`TypeAssetCatalogue`] | xref::class/TypeAssetCatalogue.adoc#status[`status`]
+
+
+
+| xref::class/Usage.adoc[`Usage`] | xref::class/Usage.adoc#status[`status`]
+
+
+
+| xref::class/WindingInsulation.adoc[`WindingInsulation`] | xref::class/WindingInsulation.adoc#status[`status`]
+
+
+
+| xref::class/WorkFlowStep.adoc[`WorkFlowStep`] | xref::class/WorkFlowStep.adoc#status[`status`]
+
+
+|===
+

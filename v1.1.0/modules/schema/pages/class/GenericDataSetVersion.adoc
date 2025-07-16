@@ -1,0 +1,146 @@
+= `GenericDataSetVersion`
+:toclevels: 4
+
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:GenericDataSetVersion`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`GenericDataSetVersion`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<majorVersion,`majorVersion`>>
+//| [[slots_table.majorVersion]]<<majorVersion,`majorVersion`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The universal CIM version name describing a consistent set of packages.+++
+| _n/a_
+
+| <<minorVersion,`minorVersion`>>
+//| [[slots_table.minorVersion]]<<minorVersion,`minorVersion`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Describe minor updates and error corrections.+++
+| _n/a_
+
+| <<published,`published`>>
+//| [[slots_table.published]]<<published,`published`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++The date when the complete CIM canonical model is published and made available for use, 
+After the publication the major...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#majorVersion]
+=== `majorVersion`
++++The universal CIM version name describing a consistent set of packages.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GenericDataSetVersion.majorVersion`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.majorVersion,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minorVersion]
+=== `minorVersion`
++++Describe minor updates and error corrections.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GenericDataSetVersion.minorVersion`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minorVersion,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#published]
+=== `published`
++++The date when the complete CIM canonical model is published and made available for use, 
+After the publication the major version and name space are updated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GenericDataSetVersion.published`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.published,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

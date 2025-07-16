@@ -1,0 +1,325 @@
+= `GeneratingUnitDynamicValues`
+:toclevels: 4
+
+
++++Optimal Power Flow or State Estimator Unit Data for Operator Training Simulator. This is used for RealTime, Study and Maintenance Users.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:GeneratingUnitDynamicValues`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`GeneratingUnitDynamicValues`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Flowgate,`Flowgate`>>
+//| [[slots_table.Flowgate]]<<Flowgate,`Flowgate`>>
+| 0..1 +
+xref::class/Flowgate.adoc[`Flowgate`]
+| _n/a_
+| _n/a_
+
+| <<MktGeneratingUnit,`MktGeneratingUnit`>>
+//| [[slots_table.MktGeneratingUnit]]<<MktGeneratingUnit,`MktGeneratingUnit`>>
+| 1 +
+xref::class/MktGeneratingUnit.adoc[`MktGeneratingUnit`]
+| _n/a_
+| _n/a_
+
+| <<lossFactor,`lossFactor`>>
+//| [[slots_table.lossFactor]]<<lossFactor,`lossFactor`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Loss Factor+++
+| _n/a_
+
+| <<mVAR,`mVAR`>>
+//| [[slots_table.mVAR]]<<mVAR,`mVAR`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Unit reactive power generation in MVAR+++
+| _n/a_
+
+| <<maximumMW,`maximumMW`>>
+//| [[slots_table.maximumMW]]<<maximumMW,`maximumMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The maximum active power generation of the unit in MW+++
+| _n/a_
+
+| <<minimumMW,`minimumMW`>>
+//| [[slots_table.minimumMW]]<<minimumMW,`minimumMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The minimum active power generation of the unit in MW+++
+| _n/a_
+
+| <<mw,`mw`>>
+//| [[slots_table.mw]]<<mw,`mw`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Unit active power generation in MW+++
+| _n/a_
+
+| <<sensitivity,`sensitivity`>>
+//| [[slots_table.sensitivity]]<<sensitivity,`sensitivity`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Unit sencivity factor. The distribution factors (DFAX) for the unit+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#Flowgate]
+=== `Flowgate`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratingUnitDynamicValues.Flowgate`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Flowgate.adoc[`Flowgate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Flowgate,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lossFactor]
+=== `lossFactor`
++++Loss Factor+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratingUnitDynamicValues.lossFactor`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lossFactor,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#maximumMW]
+=== `maximumMW`
++++The maximum active power generation of the unit in MW+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratingUnitDynamicValues.maximumMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.maximumMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#minimumMW]
+=== `minimumMW`
++++The minimum active power generation of the unit in MW+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratingUnitDynamicValues.minimumMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.minimumMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MktGeneratingUnit]
+=== `MktGeneratingUnit`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratingUnitDynamicValues.MktGeneratingUnit`
+| Cardinality
+| 1
+| Type
+| xref::class/MktGeneratingUnit.adoc[`MktGeneratingUnit`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MktGeneratingUnit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mVAR]
+=== `mVAR`
++++Unit reactive power generation in MVAR+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratingUnitDynamicValues.mVAR`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mVAR,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mw]
+=== `mw`
++++Unit active power generation in MW+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratingUnitDynamicValues.mw`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mw,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#sensitivity]
+=== `sensitivity`
++++Unit sencivity factor. The distribution factors (DFAX) for the unit+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GeneratingUnitDynamicValues.sensitivity`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.sensitivity,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Flowgate.adoc[`Flowgate`] | xref::class/Flowgate.adoc#GeneratingUnitDynamicValues[`GeneratingUnitDynamicValues`]
+
+
+
+| xref::class/MktGeneratingUnit.adoc[`MktGeneratingUnit`] | xref::class/MktGeneratingUnit.adoc#GeneratingUnitDynamicValues[`GeneratingUnitDynamicValues`]
+
+
+|===
+

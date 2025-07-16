@@ -1,0 +1,226 @@
+= `ReadingQuality`
+:toclevels: 4
+
+
++++Quality of a specific reading value or interval reading value. Note that more than one quality may be applicable to a given reading. Typically not used unless problems or unusual conditions occur (i.e., quality for each reading is assumed to be good unless stated otherwise in associated reading quality type). It can also be used with the corresponding reading quality type to indicate that the validation has been performed and succeeded.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ReadingQuality`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`ReadingQuality`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Reading,`Reading`>>
+//| [[slots_table.Reading]]<<Reading,`Reading`>>
+| 0..1 +
+xref::class/BaseReading.adoc[`BaseReading`]
+| +++Reading value to which this quality applies.+++
+| _n/a_
+
+| <<ReadingQualityType,`ReadingQualityType`>>
+//| [[slots_table.ReadingQualityType]]<<ReadingQualityType,`ReadingQualityType`>>
+| 1 +
+xref::class/ReadingQualityType.adoc[`ReadingQualityType`]
+| +++Type of this reading quality.+++
+| _n/a_
+
+| <<comment,`comment`>>
+//| [[slots_table.comment]]<<comment,`comment`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Elaboration on the quality code.+++
+| _n/a_
+
+| <<source,`source`>>
+//| [[slots_table.source]]<<source,`source`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++System acting as the source of the quality code.+++
+| _n/a_
+
+| <<timeStamp,`timeStamp`>>
+//| [[slots_table.timeStamp]]<<timeStamp,`timeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| +++Date and time at which the quality code was assigned or ascertained.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#comment]
+=== `comment`
++++Elaboration on the quality code.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingQuality.comment`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.comment,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Reading]
+=== `Reading`
++++Reading value to which this quality applies.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingQuality.Reading`
+| Cardinality
+| 0..1
+| Type
+| xref::class/BaseReading.adoc[`BaseReading`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Reading,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ReadingQualityType]
+=== `ReadingQualityType`
++++Type of this reading quality.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingQuality.ReadingQualityType`
+| Cardinality
+| 1
+| Type
+| xref::class/ReadingQualityType.adoc[`ReadingQualityType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ReadingQualityType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#source]
+=== `source`
++++System acting as the source of the quality code.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingQuality.source`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.source,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#timeStamp]
+=== `timeStamp`
++++Date and time at which the quality code was assigned or ascertained.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ReadingQuality.timeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.timeStamp,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/BaseReading.adoc[`BaseReading`] | xref::class/BaseReading.adoc#ReadingQualities[`ReadingQualities`]
+
+
+
+| xref::class/ReadingQualityType.adoc[`ReadingQualityType`] | xref::class/ReadingQualityType.adoc#ReadingQualities[`ReadingQualities`]
+
+
+|===
+

@@ -1,0 +1,80 @@
+= `ExtensionsList`
+:toclevels: 4
+
+
++++Specifies the enumeration of the extension item+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ExtensionsList`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`ExtensionsList`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<extensionsItem,`extensionsItem`>>
+//| [[slots_table.extensionsItem]]<<extensionsItem,`extensionsItem`>>
+| 0..1 +
+xref::class/ExtensionItem.adoc[`ExtensionItem`]
+| +++a compound type that defines the extension name, type and value+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#extensionsItem]
+=== `extensionsItem`
++++a compound type that defines the extension name, type and value+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ExtensionsList.extensionsItem`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ExtensionItem.adoc[`ExtensionItem`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.extensionsItem,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

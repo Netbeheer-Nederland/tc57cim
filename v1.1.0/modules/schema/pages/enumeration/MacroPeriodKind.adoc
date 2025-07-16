@@ -1,0 +1,72 @@
+= `MacroPeriodKind`
+:toclevels: 4
+
+
++++Kind of macro period for calculations on read / measured values.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:MacroPeriodKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `billingPeriod`
+| `cim:MacroPeriodKind.billingPeriod`
+| n/a
+
+| `daily`
+| `cim:MacroPeriodKind.daily`
+| n/a
+
+| `monthly`
+| `cim:MacroPeriodKind.monthly`
+| n/a
+
+| `none`
+| `cim:MacroPeriodKind.none`
+| n/a
+
+| `seasonal`
+| `cim:MacroPeriodKind.seasonal`
+| n/a
+
+| `specifiedPeriod`
+| `cim:MacroPeriodKind.specifiedPeriod`
+| n/a
+
+| `weekly`
+| `cim:MacroPeriodKind.weekly`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ReadingType.adoc[`ReadingType`] | xref::class/ReadingType.adoc#macroPeriod[`macroPeriod`]
+
+
+|===
+

@@ -1,0 +1,123 @@
+= `WEPStandard`
+:toclevels: 4
+
+
++++Standard published by Westinghouse - a WEP (Westinghouse Engineering Procedure).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:WEPStandard`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`WEPStandard`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<standardEdition,`standardEdition`>>
+//| [[slots_table.standardEdition]]<<standardEdition,`standardEdition`>>
+| 0..1 +
+xref::enumeration/WEPStandardEditionKind.adoc[`WEPStandardEditionKind`]
+| +++Edition of WEP standard.+++
+| _n/a_
+
+| <<standardNumber,`standardNumber`>>
+//| [[slots_table.standardNumber]]<<standardNumber,`standardNumber`>>
+| 0..1 +
+xref::enumeration/WEPStandardKind.adoc[`WEPStandardKind`]
+| +++WEP standard number.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#standardEdition]
+=== `standardEdition`
++++Edition of WEP standard.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WEPStandard.standardEdition`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/WEPStandardEditionKind.adoc[`WEPStandardEditionKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardEdition,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#standardNumber]
+=== `standardNumber`
++++WEP standard number.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WEPStandard.standardNumber`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/WEPStandardKind.adoc[`WEPStandardKind`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.standardNumber,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TestStandard.adoc[`TestStandard`] | xref::class/TestStandard.adoc#testStandardWEP[`testStandardWEP`]
+
+
+|===
+

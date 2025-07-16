@@ -1,0 +1,1463 @@
+= `GovHydroPelton`
+:toclevels: 4
+
+
++++Detailed hydro unit - Pelton model.  This model can be used to represent the dynamic related to water tunnel and surge chamber.
+The DetailedHydroModelHydraulicSystem diagram, located under the GovHydroFrancis class, provides a schematic of the hydraulic system of detailed hydro unit models, such as Francis and Pelton.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:GovHydroPelton`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+*** xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+**** *`GovHydroPelton`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<av0,`av0`>>
+//| [[slots_table.av0]]<<av0,`av0`>>
+| 0..1 +
+xref::class/Area.adoc[`Area`]
+| +++Area of the surge tank (<i>A</i><i><sub>V0</sub></i>). Unit = m<sup>2</sup>. Typical value = 30.+++
+| _n/a_
+
+| <<av1,`av1`>>
+//| [[slots_table.av1]]<<av1,`av1`>>
+| 0..1 +
+xref::class/Area.adoc[`Area`]
+| +++Area of the compensation tank (<i>A</i><i><sub>V1</sub></i>). Unit = m<sup>2</sup>. Typical value = 700.+++
+| _n/a_
+
+| <<bp,`bp`>>
+//| [[slots_table.bp]]<<bp,`bp`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Droop (<i>bp</i>).  Typical value = 0,05.+++
+| _n/a_
+
+| <<db1,`db1`>>
+//| [[slots_table.db1]]<<db1,`db1`>>
+| 0..1 +
+xref::class/Frequency.adoc[`Frequency`]
+| +++Intentional dead-band width (<i>DB1</i>).  Unit = Hz.  Typical value = 0.+++
+| _n/a_
+
+| <<db2,`db2`>>
+//| [[slots_table.db2]]<<db2,`db2`>>
+| 0..1 +
+xref::class/Frequency.adoc[`Frequency`]
+| +++Intentional dead-band width of valve opening error (<i>DB2</i>). Unit = Hz.  Typical value = 0,01.+++
+| _n/a_
+
+| <<h1,`h1`>>
+//| [[slots_table.h1]]<<h1,`h1`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++Head of compensation chamber water level with respect to the level of penstock (<i>H</i><i><sub>1</sub></i>).  Unit = km. ...+++
+| _n/a_
+
+| <<h2,`h2`>>
+//| [[slots_table.h2]]<<h2,`h2`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++Head of surge tank water level with respect to the level of penstock (<i>H</i><i><sub>2</sub></i>).  Unit = km.  Typical...+++
+| _n/a_
+
+| <<hn,`hn`>>
+//| [[slots_table.hn]]<<hn,`hn`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++Rated hydraulic head (<i>H</i><i><sub>n</sub></i>).  Unit = km.  Typical value = 0,250.+++
+| _n/a_
+
+| <<kc,`kc`>>
+//| [[slots_table.kc]]<<kc,`kc`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Penstock loss coefficient (due to friction) (<i>Kc</i>).  Typical value = 0,025.+++
+| _n/a_
+
+| <<kg,`kg`>>
+//| [[slots_table.kg]]<<kg,`kg`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Water tunnel and surge chamber loss coefficient (due to friction) (<i>Kg</i>).  Typical value = 0,025.+++
+| _n/a_
+
+| <<qc0,`qc0`>>
+//| [[slots_table.qc0]]<<qc0,`qc0`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++No-load turbine flow at nominal head (<i>Qc0</i>).  Typical value = 0,05.+++
+| _n/a_
+
+| <<qn,`qn`>>
+//| [[slots_table.qn]]<<qn,`qn`>>
+| 0..1 +
+xref::class/VolumeFlowRate.adoc[`VolumeFlowRate`]
+| +++Rated flow (<i>Q</i><i><sub>n</sub></i>). Unit = m<sup>3</sup>/s. Typical value = 250.+++
+| _n/a_
+
+| <<simplifiedPelton,`simplifiedPelton`>>
+//| [[slots_table.simplifiedPelton]]<<simplifiedPelton,`simplifiedPelton`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Simplified Pelton model simulation (<i>Sflag</i>).
+true = enable of simplified Pelton model simulation
+false = enable of...+++
+| _n/a_
+
+| <<staticCompensating,`staticCompensating`>>
+//| [[slots_table.staticCompensating]]<<staticCompensating,`staticCompensating`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Static compensating characteristic (<i>Cflag</i>). It should be true if simplifiedPelton = false.
+true = enable of static...+++
+| _n/a_
+
+| <<ta,`ta`>>
+//| [[slots_table.ta]]<<ta,`ta`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Derivative gain (accelerometer time constant) (<i>Ta</i>) (&gt;= 0).  Typical value = 3.+++
+| _n/a_
+
+| <<ts,`ts`>>
+//| [[slots_table.ts]]<<ts,`ts`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Gate servo time constant (<i>Ts</i>) (&gt;= 0).  Typical value = 0,15.+++
+| _n/a_
+
+| <<tv,`tv`>>
+//| [[slots_table.tv]]<<tv,`tv`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Servomotor integrator time constant (<i>Tv</i>) (&gt;= 0).  Typical value = 0,3.+++
+| _n/a_
+
+| <<twnc,`twnc`>>
+//| [[slots_table.twnc]]<<twnc,`twnc`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Water inertia time constant (<i>Twnc</i>) (&gt;= 0).  Typical value = 1.+++
+| _n/a_
+
+| <<twng,`twng`>>
+//| [[slots_table.twng]]<<twng,`twng`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Water tunnel and surge chamber inertia time constant (<i>Twng</i>) (&gt;= 0). Typical value = 3.+++
+| _n/a_
+
+| <<tx,`tx`>>
+//| [[slots_table.tx]]<<tx,`tx`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Electronic integrator time constant (<i>Tx</i>) (&gt;= 0).  Typical value = 0,5.+++
+| _n/a_
+
+| <<va,`va`>>
+//| [[slots_table.va]]<<va,`va`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Maximum gate opening velocity (<i>Va</i>).  Unit = PU / s.  Typical value = 0,06.+++
+| _n/a_
+
+| <<valvmax,`valvmax`>>
+//| [[slots_table.valvmax]]<<valvmax,`valvmax`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum gate opening (<i>ValvMax</i>) (&gt; GovHydroPelton.valvmin).  Typical value = 1,1.+++
+| _n/a_
+
+| <<valvmin,`valvmin`>>
+//| [[slots_table.valvmin]]<<valvmin,`valvmin`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Minimum gate opening (<i>ValvMin</i>) (&lt; GovHydroPelton.valvmax).  Typical value = 0.+++
+| _n/a_
+
+| <<vav,`vav`>>
+//| [[slots_table.vav]]<<vav,`vav`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum servomotor valve opening velocity (<i>Vav</i>).  Typical value = 0,1.+++
+| _n/a_
+
+| <<vc,`vc`>>
+//| [[slots_table.vc]]<<vc,`vc`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Maximum gate closing velocity (<i>Vc</i>).  Unit = PU / s.  Typical value = -0,06.+++
+| _n/a_
+
+| <<vcv,`vcv`>>
+//| [[slots_table.vcv]]<<vcv,`vcv`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum servomotor valve closing velocity (<i>Vcv</i>).  Typical value = -0,1.+++
+| _n/a_
+
+| <<waterTunnelSurgeChamberSimulation,`waterTunnelSurgeChamberSimulation`>>
+//| [[slots_table.waterTunnelSurgeChamberSimulation]]<<waterTunnelSurgeChamberSimulation,`waterTunnelSurgeChamberSimulation`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Water tunnel and surge chamber simulation (<i>Tflag</i>).
+true = enable of water tunnel and surge chamber simulation
+false...+++
+| _n/a_
+
+| <<zsfc,`zsfc`>>
+//| [[slots_table.zsfc]]<<zsfc,`zsfc`>>
+| 0..1 +
+xref::class/Length.adoc[`Length`]
+| +++Head of upper water level with respect to the level of penstock (<i>Zsfc</i>).  Unit = km.  Typical value = 0,025.+++
+| _n/a_
+
+| <<AsynchronousMachineDynamics,`AsynchronousMachineDynamics`>>
+//| [[slots_table.AsynchronousMachineDynamics]]<<AsynchronousMachineDynamics,`AsynchronousMachineDynamics`>>
+| 0..1 +
+xref::class/AsynchronousMachineDynamics.adoc[`AsynchronousMachineDynamics`]
+| +++Asynchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either...+++
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+| <<SynchronousMachineDynamics,`SynchronousMachineDynamics`>>
+//| [[slots_table.SynchronousMachineDynamics]]<<SynchronousMachineDynamics,`SynchronousMachineDynamics`>>
+| 0..1 +
+xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+| +++Synchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an...+++
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+| <<TurbineLoadControllerDynamics,`TurbineLoadControllerDynamics`>>
+//| [[slots_table.TurbineLoadControllerDynamics]]<<TurbineLoadControllerDynamics,`TurbineLoadControllerDynamics`>>
+| 0..1 +
+xref::class/TurbineLoadControllerDynamics.adoc[`TurbineLoadControllerDynamics`]
+| +++Turbine load controller providing input to this turbine-governor.+++
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+| <<enabled,`enabled`>>
+//| [[slots_table.enabled]]<<enabled,`enabled`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#AsynchronousMachineDynamics]
+=== `AsynchronousMachineDynamics`
++++Asynchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineGovernorDynamics.AsynchronousMachineDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AsynchronousMachineDynamics.adoc[`AsynchronousMachineDynamics`]
+
+| Inherited from
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AsynchronousMachineDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#av0]
+=== `av0`
++++Area of the surge tank (<i>A</i><i><sub>V0</sub></i>). Unit = m<sup>2</sup>. Typical value = 30.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.av0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Area.adoc[`Area`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.av0,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#av1]
+=== `av1`
++++Area of the compensation tank (<i>A</i><i><sub>V1</sub></i>). Unit = m<sup>2</sup>. Typical value = 700.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.av1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Area.adoc[`Area`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.av1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bp]
+=== `bp`
++++Droop (<i>bp</i>).  Typical value = 0,05.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.bp`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#db1]
+=== `db1`
++++Intentional dead-band width (<i>DB1</i>).  Unit = Hz.  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.db1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Frequency.adoc[`Frequency`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.db1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#db2]
+=== `db2`
++++Intentional dead-band width of valve opening error (<i>DB2</i>). Unit = Hz.  Typical value = 0,01.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.db2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Frequency.adoc[`Frequency`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.db2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#enabled]
+=== `enabled`
++++Function block used indicator.
+true = use of function block is enabled
+false = use of function block is disabled.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:DynamicsFunctionBlock.enabled`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+| Inherited from
+| xref::class/DynamicsFunctionBlock.adoc[`DynamicsFunctionBlock`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.enabled,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#h1]
+=== `h1`
++++Head of compensation chamber water level with respect to the level of penstock (<i>H</i><i><sub>1</sub></i>).  Unit = km.  Typical value = 0,004.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.h1`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.h1,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#h2]
+=== `h2`
++++Head of surge tank water level with respect to the level of penstock (<i>H</i><i><sub>2</sub></i>).  Unit = km.  Typical value = 0,040.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.h2`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.h2,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#hn]
+=== `hn`
++++Rated hydraulic head (<i>H</i><i><sub>n</sub></i>).  Unit = km.  Typical value = 0,250.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.hn`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.hn,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kc]
+=== `kc`
++++Penstock loss coefficient (due to friction) (<i>Kc</i>).  Typical value = 0,025.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.kc`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kc,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kg]
+=== `kg`
++++Water tunnel and surge chamber loss coefficient (due to friction) (<i>Kg</i>).  Typical value = 0,025.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.kg`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kg,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#qc0]
+=== `qc0`
++++No-load turbine flow at nominal head (<i>Qc0</i>).  Typical value = 0,05.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.qc0`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.qc0,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#qn]
+=== `qn`
++++Rated flow (<i>Q</i><i><sub>n</sub></i>). Unit = m<sup>3</sup>/s. Typical value = 250.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.qn`
+| Cardinality
+| 0..1
+| Type
+| xref::class/VolumeFlowRate.adoc[`VolumeFlowRate`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.qn,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#simplifiedPelton]
+=== `simplifiedPelton`
++++Simplified Pelton model simulation (<i>Sflag</i>).
+true = enable of simplified Pelton model simulation
+false = enable of complete Pelton model simulation (non-linear gain).
+Typical value = true.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.simplifiedPelton`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.simplifiedPelton,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#staticCompensating]
+=== `staticCompensating`
++++Static compensating characteristic (<i>Cflag</i>). It should be true if simplifiedPelton = false.
+true = enable of static compensating characteristic 
+false = inhibit of static compensating characteristic.
+Typical value = false.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.staticCompensating`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.staticCompensating,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SynchronousMachineDynamics]
+=== `SynchronousMachineDynamics`
++++Synchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineGovernorDynamics.SynchronousMachineDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SynchronousMachineDynamics.adoc[`SynchronousMachineDynamics`]
+
+| Inherited from
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SynchronousMachineDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ta]
+=== `ta`
++++Derivative gain (accelerometer time constant) (<i>Ta</i>) (&gt;= 0).  Typical value = 3.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.ta`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ta,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ts]
+=== `ts`
++++Gate servo time constant (<i>Ts</i>) (&gt;= 0).  Typical value = 0,15.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.ts`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ts,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TurbineLoadControllerDynamics]
+=== `TurbineLoadControllerDynamics`
++++Turbine load controller providing input to this turbine-governor.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TurbineGovernorDynamics.TurbineLoadControllerDynamics`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TurbineLoadControllerDynamics.adoc[`TurbineLoadControllerDynamics`]
+
+| Inherited from
+| xref::class/TurbineGovernorDynamics.adoc[`TurbineGovernorDynamics`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TurbineLoadControllerDynamics,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tv]
+=== `tv`
++++Servomotor integrator time constant (<i>Tv</i>) (&gt;= 0).  Typical value = 0,3.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.tv`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tv,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#twnc]
+=== `twnc`
++++Water inertia time constant (<i>Twnc</i>) (&gt;= 0).  Typical value = 1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.twnc`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.twnc,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#twng]
+=== `twng`
++++Water tunnel and surge chamber inertia time constant (<i>Twng</i>) (&gt;= 0). Typical value = 3.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.twng`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.twng,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tx]
+=== `tx`
++++Electronic integrator time constant (<i>Tx</i>) (&gt;= 0).  Typical value = 0,5.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.tx`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tx,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#va]
+=== `va`
++++Maximum gate opening velocity (<i>Va</i>).  Unit = PU / s.  Typical value = 0,06.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.va`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.va,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#valvmax]
+=== `valvmax`
++++Maximum gate opening (<i>ValvMax</i>) (&gt; GovHydroPelton.valvmin).  Typical value = 1,1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.valvmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.valvmax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#valvmin]
+=== `valvmin`
++++Minimum gate opening (<i>ValvMin</i>) (&lt; GovHydroPelton.valvmax).  Typical value = 0.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.valvmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.valvmin,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vav]
+=== `vav`
++++Maximum servomotor valve opening velocity (<i>Vav</i>).  Typical value = 0,1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.vav`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vav,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vc]
+=== `vc`
++++Maximum gate closing velocity (<i>Vc</i>).  Unit = PU / s.  Typical value = -0,06.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.vc`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vc,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#vcv]
+=== `vcv`
++++Maximum servomotor valve closing velocity (<i>Vcv</i>).  Typical value = -0,1.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.vcv`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.vcv,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#waterTunnelSurgeChamberSimulation]
+=== `waterTunnelSurgeChamberSimulation`
++++Water tunnel and surge chamber simulation (<i>Tflag</i>).
+true = enable of water tunnel and surge chamber simulation
+false = inhibit of water tunnel and surge chamber simulation.
+Typical value = false.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.waterTunnelSurgeChamberSimulation`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.waterTunnelSurgeChamberSimulation,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#zsfc]
+=== `zsfc`
++++Head of upper water level with respect to the level of penstock (<i>Zsfc</i>).  Unit = km.  Typical value = 0,025.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:GovHydroPelton.zsfc`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Length.adoc[`Length`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.zsfc,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+This class is not used by any other classes as the range of a slot.

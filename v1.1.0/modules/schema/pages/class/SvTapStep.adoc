@@ -1,0 +1,124 @@
+= `SvTapStep`
+:toclevels: 4
+
+
++++State variable for transformer tap step.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:SvTapStep`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/StateVariable.adoc[`StateVariable`]
+** *`SvTapStep`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<TapChanger,`TapChanger`>>
+//| [[slots_table.TapChanger]]<<TapChanger,`TapChanger`>>
+| 1 +
+xref::class/TapChanger.adoc[`TapChanger`]
+| +++The tap changer associated with the tap step state.+++
+| _n/a_
+
+| <<position,`position`>>
+//| [[slots_table.position]]<<position,`position`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++The floating point tap position.   This is not the tap ratio, but rather the tap step position as defined by the related tap...+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#position]
+=== `position`
++++The floating point tap position.   This is not the tap ratio, but rather the tap step position as defined by the related tap changer model and normally is constrained to be within the range of minimum and maximum tap positions.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvTapStep.position`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.position,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TapChanger]
+=== `TapChanger`
++++The tap changer associated with the tap step state.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:SvTapStep.TapChanger`
+| Cardinality
+| 1
+| Type
+| xref::class/TapChanger.adoc[`TapChanger`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TapChanger,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TapChanger.adoc[`TapChanger`] | xref::class/TapChanger.adoc#SvTapStep[`SvTapStep`]
+
+
+|===
+

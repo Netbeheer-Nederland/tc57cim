@@ -1,0 +1,408 @@
+= `UnitMultiplier`
+:toclevels: 4
+
+
++++The unit multipliers defined for the CIM.  When applied to unit symbols, the unit symbol is treated as a derived unit. Regardless of the contents of the unit symbol text, the unit symbol shall be treated as if it were a single-character unit symbol. Unit symbols should not contain multipliers, and it should be left to the multiplier to define the multiple for an entire data type. 
+
+For example, if a unit symbol is "m2Pers" and the multiplier is "k", then the value is k(m**2/s), and the multiplier applies to the entire final value, not to any individual part of the value. This can be conceptualized by substituting a derived unit symbol for the unit type. If one imagines that the symbol "Þ" represents the derived unit "m2Pers", then applying the multiplier "k" can be conceptualized simply as "kÞ".
+
+For example, the SI unit for mass is "kg" and not "g".  If the unit symbol is defined as "kg", then the multiplier is applied to "kg" as a whole and does not replace the "k" in front of the "g". In this case, the multiplier of "m" would be used with the unit symbol of "kg" to represent one gram.  As a text string, this violates the instructions in IEC 80000-1. However, because the unit symbol in CIM is treated as a derived unit instead of as an SI unit, it makes more sense to conceptualize the "kg" as if it were replaced by one of the proposed replacements for the SI mass symbol. If one imagines that the "kg" were replaced by a symbol "Þ", then it is easier to conceptualize the multiplier "m" as creating the proper unit "mÞ", and not the forbidden unit "mkg".+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:UnitMultiplier`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `a`
+| `cim:UnitMultiplier.a`
+| n/a
+
+| `c`
+| `cim:UnitMultiplier.c`
+| n/a
+
+| `d`
+| `cim:UnitMultiplier.d`
+| n/a
+
+| `da`
+| `cim:UnitMultiplier.da`
+| n/a
+
+| `E`
+| `cim:UnitMultiplier.E`
+| n/a
+
+| `f`
+| `cim:UnitMultiplier.f`
+| n/a
+
+| `G`
+| `cim:UnitMultiplier.G`
+| n/a
+
+| `h`
+| `cim:UnitMultiplier.h`
+| n/a
+
+| `k`
+| `cim:UnitMultiplier.k`
+| n/a
+
+| `m`
+| `cim:UnitMultiplier.m`
+| n/a
+
+| `M`
+| `cim:UnitMultiplier.M`
+| n/a
+
+| `micro`
+| `cim:UnitMultiplier.micro`
+| n/a
+
+| `n`
+| `cim:UnitMultiplier.n`
+| n/a
+
+| `none`
+| `cim:UnitMultiplier.none`
+| n/a
+
+| `p`
+| `cim:UnitMultiplier.p`
+| n/a
+
+| `P`
+| `cim:UnitMultiplier.P`
+| n/a
+
+| `T`
+| `cim:UnitMultiplier.T`
+| n/a
+
+| `y`
+| `cim:UnitMultiplier.y`
+| n/a
+
+| `Y`
+| `cim:UnitMultiplier.Y`
+| n/a
+
+| `z`
+| `cim:UnitMultiplier.z`
+| n/a
+
+| `Z`
+| `cim:UnitMultiplier.Z`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AccountingUnit.adoc[`AccountingUnit`] | xref::class/AccountingUnit.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/ActivePower.adoc[`ActivePower`] | xref::class/ActivePower.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/ActivePowerChangeRate.adoc[`ActivePowerChangeRate`] | xref::class/ActivePowerChangeRate.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/ActivePowerPerCurrentFlow.adoc[`ActivePowerPerCurrentFlow`] | xref::class/ActivePowerPerCurrentFlow.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/ActivePowerPerFrequency.adoc[`ActivePowerPerFrequency`] | xref::class/ActivePowerPerFrequency.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Admittance.adoc[`Admittance`] | xref::class/Admittance.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/AngleDegrees.adoc[`AngleDegrees`] | xref::class/AngleDegrees.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/AngleRadians.adoc[`AngleRadians`] | xref::class/AngleRadians.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/ApparentPower.adoc[`ApparentPower`] | xref::class/ApparentPower.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Area.adoc[`Area`] | xref::class/Area.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/BasicIntervalSchedule.adoc[`BasicIntervalSchedule`] | xref::class/BasicIntervalSchedule.adoc#value2Multiplier[`value2Multiplier`]
+
+
+
+| xref::class/Bearing.adoc[`Bearing`] | xref::class/Bearing.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Capacitance.adoc[`Capacitance`] | xref::class/Capacitance.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/CapacitancePerLength.adoc[`CapacitancePerLength`] | xref::class/CapacitancePerLength.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Classification.adoc[`Classification`] | xref::class/Classification.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/CommodityDefinition.adoc[`CommodityDefinition`] | xref::class/CommodityDefinition.adoc#commodityUnitMultiplier[`commodityUnitMultiplier`]
+
+
+
+| xref::class/Conductance.adoc[`Conductance`] | xref::class/Conductance.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/ConductancePerLength.adoc[`ConductancePerLength`] | xref::class/ConductancePerLength.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Control.adoc[`Control`] | xref::class/Control.adoc#unitMultiplier[`unitMultiplier`]
+
+
+
+| xref::class/CostPerEnergyUnit.adoc[`CostPerEnergyUnit`] | xref::class/CostPerEnergyUnit.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/CostPerHeatUnit.adoc[`CostPerHeatUnit`] | xref::class/CostPerHeatUnit.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/CostPerVolume.adoc[`CostPerVolume`] | xref::class/CostPerVolume.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/CostRate.adoc[`CostRate`] | xref::class/CostRate.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/CurrentFlow.adoc[`CurrentFlow`] | xref::class/CurrentFlow.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Curve.adoc[`Curve`] | xref::class/Curve.adoc#y3Multiplier[`y3Multiplier`]
+
+
+
+| xref::class/Damping.adoc[`Damping`] | xref::class/Damping.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/DecimalQuantity.adoc[`DecimalQuantity`] | xref::class/DecimalQuantity.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/DERMonitorableParameter.adoc[`DERMonitorableParameter`] | xref::class/DERMonitorableParameter.adoc#yMultiplier[`yMultiplier`]
+
+
+
+| xref::class/Displacement.adoc[`Displacement`] | xref::class/Displacement.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Emission.adoc[`Emission`] | xref::class/Emission.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/FloatQuantity.adoc[`FloatQuantity`] | xref::class/FloatQuantity.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Frequency.adoc[`Frequency`] | xref::class/Frequency.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/HeatRate.adoc[`HeatRate`] | xref::class/HeatRate.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Hours.adoc[`Hours`] | xref::class/Hours.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Impedance.adoc[`Impedance`] | xref::class/Impedance.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Inductance.adoc[`Inductance`] | xref::class/Inductance.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/InductancePerLength.adoc[`InductancePerLength`] | xref::class/InductancePerLength.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/IntegerQuantity.adoc[`IntegerQuantity`] | xref::class/IntegerQuantity.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/KiloActivePower.adoc[`KiloActivePower`] | xref::class/KiloActivePower.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Length.adoc[`Length`] | xref::class/Length.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/MagneticField.adoc[`MagneticField`] | xref::class/MagneticField.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Mass.adoc[`Mass`] | xref::class/Mass.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Measurement.adoc[`Measurement`] | xref::class/Measurement.adoc#unitMultiplier[`unitMultiplier`]
+
+
+
+| xref::class/Minutes.adoc[`Minutes`] | xref::class/Minutes.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Money.adoc[`Money`] | xref::class/Money.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/ParticulateDensity.adoc[`ParticulateDensity`] | xref::class/ParticulateDensity.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/PerCent.adoc[`PerCent`] | xref::class/PerCent.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Pressure.adoc[`Pressure`] | xref::class/Pressure.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/ProtectionEquipment.adoc[`ProtectionEquipment`] | xref::class/ProtectionEquipment.adoc#unitMultiplier[`unitMultiplier`]
+
+
+
+| xref::class/PU.adoc[`PU`] | xref::class/PU.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Reactance.adoc[`Reactance`] | xref::class/Reactance.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/ReactancePerLength.adoc[`ReactancePerLength`] | xref::class/ReactancePerLength.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/ReactivePower.adoc[`ReactivePower`] | xref::class/ReactivePower.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/ReadingType.adoc[`ReadingType`] | xref::class/ReadingType.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/RealEnergy.adoc[`RealEnergy`] | xref::class/RealEnergy.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/RegulatingControl.adoc[`RegulatingControl`] | xref::class/RegulatingControl.adoc#targetValueUnitMultiplier[`targetValueUnitMultiplier`]
+
+
+
+| xref::class/Resistance.adoc[`Resistance`] | xref::class/Resistance.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/ResistancePerLength.adoc[`ResistancePerLength`] | xref::class/ResistancePerLength.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/RotationSpeed.adoc[`RotationSpeed`] | xref::class/RotationSpeed.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Seconds.adoc[`Seconds`] | xref::class/Seconds.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Speed.adoc[`Speed`] | xref::class/Speed.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/StringQuantity.adoc[`StringQuantity`] | xref::class/StringQuantity.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Susceptance.adoc[`Susceptance`] | xref::class/Susceptance.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/SusceptancePerLength.adoc[`SusceptancePerLength`] | xref::class/SusceptancePerLength.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Temperature.adoc[`Temperature`] | xref::class/Temperature.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Voltage.adoc[`Voltage`] | xref::class/Voltage.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/VoltagePerReactivePower.adoc[`VoltagePerReactivePower`] | xref::class/VoltagePerReactivePower.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/Volume.adoc[`Volume`] | xref::class/Volume.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/VolumeFlowRate.adoc[`VolumeFlowRate`] | xref::class/VolumeFlowRate.adoc#multiplier[`multiplier`]
+
+
+
+| xref::class/WaterLevel.adoc[`WaterLevel`] | xref::class/WaterLevel.adoc#multiplier[`multiplier`]
+
+
+|===
+

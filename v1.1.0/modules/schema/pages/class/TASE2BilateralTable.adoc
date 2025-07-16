@@ -1,0 +1,593 @@
+= `TASE2BilateralTable`
+:toclevels: 4
+
+
++++This class describe the sending (providing) side in a bilateral ICCP data exchange. Hence the ICCP bilateral (table) descriptions are created by exchanging ICCP Provider data between the parties.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:TASE2BilateralTable`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/BilateralExchangeAgreement.adoc[`BilateralExchangeAgreement`]
+*** *`TASE2BilateralTable`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ICCPInformationMessage,`ICCPInformationMessage`>>
+//| [[slots_table.ICCPInformationMessage]]<<ICCPInformationMessage,`ICCPInformationMessage`>>
+| 0..* +
+xref::class/ICCPInformationMessage.adoc[`ICCPInformationMessage`]
+| +++Informational message to be included in a Bilateral Table agreement.+++
+| _n/a_
+
+| <<bilateralTableID,`bilateralTableID`>>
+//| [[slots_table.bilateralTableID]]<<bilateralTableID,`bilateralTableID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Specifies the version of the Bilateral Table configuration that is being exchanged.+++
+| _n/a_
+
+| <<bilateralTableVersion,`bilateralTableVersion`>>
+//| [[slots_table.bilateralTableVersion]]<<bilateralTableVersion,`bilateralTableVersion`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The Version attribute identifies a unique version of the Bilateral Table. If any changes are made to a Bilateral Table, then...+++
+| _n/a_
+
+| <<tase2version,`tase2version`>>
+//| [[slots_table.tase2version]]<<tase2version,`tase2version`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Specifies the version of the TASE.2 that is needed to access the Bilateral Table information via TASE.2.
+
+In order for a...+++
+| _n/a_
+
+| <<Consumer,`Consumer`>>
+//| [[slots_table.Consumer]]<<Consumer,`Consumer`>>
+| 0..1 +
+xref::class/BilateralExchangeActor.adoc[`BilateralExchangeActor`]
+| +++Subscriber of information from a remote peer.+++
+| xref::class/BilateralExchangeAgreement.adoc[`BilateralExchangeAgreement`]
+
+| <<Provider,`Provider`>>
+//| [[slots_table.Provider]]<<Provider,`Provider`>>
+| 1 +
+xref::class/BilateralExchangeActor.adoc[`BilateralExchangeActor`]
+| +++Provider of information to a remote peer.+++
+| xref::class/BilateralExchangeAgreement.adoc[`BilateralExchangeAgreement`]
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bilateralTableID]
+=== `bilateralTableID`
++++Specifies the version of the Bilateral Table configuration that is being exchanged.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TASE2BilateralTable.bilateralTableID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bilateralTableID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#bilateralTableVersion]
+=== `bilateralTableVersion`
++++The Version attribute identifies a unique version of the Bilateral Table. If any changes are made to a Bilateral Table, then a new unique value for this attribute shall be generated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TASE2BilateralTable.bilateralTableVersion`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.bilateralTableVersion,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Consumer]
+=== `Consumer`
++++Subscriber of information from a remote peer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralExchangeAgreement.Consumer`
+| Cardinality
+| 0..1
+| Type
+| xref::class/BilateralExchangeActor.adoc[`BilateralExchangeActor`]
+
+| Inherited from
+| xref::class/BilateralExchangeAgreement.adoc[`BilateralExchangeAgreement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Consumer,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ICCPInformationMessage]
+=== `ICCPInformationMessage`
++++Informational message to be included in a Bilateral Table agreement.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TASE2BilateralTable.ICCPInformationMessage`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ICCPInformationMessage.adoc[`ICCPInformationMessage`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ICCPInformationMessage,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Provider]
+=== `Provider`
++++Provider of information to a remote peer.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:BilateralExchangeAgreement.Provider`
+| Cardinality
+| 1
+| Type
+| xref::class/BilateralExchangeActor.adoc[`BilateralExchangeActor`]
+
+| Inherited from
+| xref::class/BilateralExchangeAgreement.adoc[`BilateralExchangeAgreement`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Provider,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tase2version]
+=== `tase2version`
++++Specifies the version of the TASE.2 that is needed to access the Bilateral Table information via TASE.2.
+
+In order for a link to be established, both sides must have the same value.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TASE2BilateralTable.tase2version`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tase2version,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ICCPInformationMessage.adoc[`ICCPInformationMessage`] | xref::class/ICCPInformationMessage.adoc#TASE2BilateralTable[`TASE2BilateralTable`]
+
+
+|===
+

@@ -1,0 +1,56 @@
+= `TagActionKind`
+:toclevels: 4
+
+
++++Kind of action on tag.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `cim:TagActionKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `place`
+| `cim:TagActionKind.place`
+| n/a
+
+| `remove`
+| `cim:TagActionKind.remove`
+| n/a
+
+| `verify`
+| `cim:TagActionKind.verify`
+| n/a
+|===
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/TagAction.adoc[`TagAction`] | xref::class/TagAction.adoc#kind[`kind`]
+
+
+|===
+

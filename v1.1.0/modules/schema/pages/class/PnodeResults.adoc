@@ -1,0 +1,391 @@
+= `PnodeResults`
+:toclevels: 4
+
+
++++Provides the total price, the cost component, the loss component, and the congestion component for Pnodes for the forward and real time markets. There are several prices produced based on the run type (MPM, RUC, Pricing, or Scheduling/Dispatch).+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:PnodeResults`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`PnodeResults`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<Pnode,`Pnode`>>
+//| [[slots_table.Pnode]]<<Pnode,`Pnode`>>
+| 0..1 +
+xref::class/Pnode.adoc[`Pnode`]
+| _n/a_
+| _n/a_
+
+| <<PnodeClearing,`PnodeClearing`>>
+//| [[slots_table.PnodeClearing]]<<PnodeClearing,`PnodeClearing`>>
+| 0..1 +
+xref::class/PnodeClearing.adoc[`PnodeClearing`]
+| _n/a_
+| _n/a_
+
+| <<congestLMP,`congestLMP`>>
+//| [[slots_table.congestLMP]]<<congestLMP,`congestLMP`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Congestion component of Location Marginal Price (LMP) in monetary units per MW.+++
+| _n/a_
+
+| <<costLMP,`costLMP`>>
+//| [[slots_table.costLMP]]<<costLMP,`costLMP`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Cost component of Locational Marginal Pricing (LMP) in monetary units per MW.+++
+| _n/a_
+
+| <<lossLMP,`lossLMP`>>
+//| [[slots_table.lossLMP]]<<lossLMP,`lossLMP`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Loss component of Location Marginal Price (LMP) in monetary units per MW.+++
+| _n/a_
+
+| <<marginalClearingPrice,`marginalClearingPrice`>>
+//| [[slots_table.marginalClearingPrice]]<<marginalClearingPrice,`marginalClearingPrice`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Locational Marginal Price (LMP) ($/MWh)+++
+| _n/a_
+
+| <<scheduledMW,`scheduledMW`>>
+//| [[slots_table.scheduledMW]]<<scheduledMW,`scheduledMW`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++total MW schedule at the pnode+++
+| _n/a_
+
+| <<updateTimeStamp,`updateTimeStamp`>>
+//| [[slots_table.updateTimeStamp]]<<updateTimeStamp,`updateTimeStamp`>>
+| 0..1 +
+https://w3id.org/linkml/Date[`date`]
+| _n/a_
+| _n/a_
+
+| <<updateType,`updateType`>>
+//| [[slots_table.updateType]]<<updateType,`updateType`>>
+| 0..1 +
+xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+| _n/a_
+| _n/a_
+
+| <<updateUser,`updateUser`>>
+//| [[slots_table.updateUser]]<<updateUser,`updateUser`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| _n/a_
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#congestLMP]
+=== `congestLMP`
++++Congestion component of Location Marginal Price (LMP) in monetary units per MW.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeResults.congestLMP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.congestLMP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#costLMP]
+=== `costLMP`
++++Cost component of Locational Marginal Pricing (LMP) in monetary units per MW.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeResults.costLMP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.costLMP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#lossLMP]
+=== `lossLMP`
++++Loss component of Location Marginal Price (LMP) in monetary units per MW.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeResults.lossLMP`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.lossLMP,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#marginalClearingPrice]
+=== `marginalClearingPrice`
++++Locational Marginal Price (LMP) ($/MWh)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeResults.marginalClearingPrice`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.marginalClearingPrice,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Pnode]
+=== `Pnode`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeResults.Pnode`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Pnode.adoc[`Pnode`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Pnode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PnodeClearing]
+=== `PnodeClearing`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeResults.PnodeClearing`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PnodeClearing.adoc[`PnodeClearing`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PnodeClearing,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#scheduledMW]
+=== `scheduledMW`
++++total MW schedule at the pnode+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeResults.scheduledMW`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.scheduledMW,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateTimeStamp]
+=== `updateTimeStamp`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeResults.updateTimeStamp`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Date[`date`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateTimeStamp,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateType]
+=== `updateType`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeResults.updateType`
+| Cardinality
+| 0..1
+| Type
+| xref::enumeration/MQSCHGType.adoc[`MQSCHGType`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateType,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#updateUser]
+=== `updateUser`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:PnodeResults.updateUser`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.updateUser,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Pnode.adoc[`Pnode`] | xref::class/Pnode.adoc#PnodeResults[`PnodeResults`]
+
+
+
+| xref::class/PnodeClearing.adoc[`PnodeClearing`] | xref::class/PnodeClearing.adoc#PnodeResults[`PnodeResults`]
+
+
+|===
+

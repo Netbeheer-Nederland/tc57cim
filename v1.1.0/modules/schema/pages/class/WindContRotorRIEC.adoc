@@ -1,0 +1,719 @@
+= `WindContRotorRIEC`
+:toclevels: 4
+
+
++++Rotor resistance control model.
+Reference: IEC 61400-27-1:2015, 5.6.5.3.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:WindContRotorRIEC`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`WindContRotorRIEC`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<WindDynamicsLookupTable,`WindDynamicsLookupTable`>>
+//| [[slots_table.WindDynamicsLookupTable]]<<WindDynamicsLookupTable,`WindDynamicsLookupTable`>>
+| 1..* +
+xref::class/WindDynamicsLookupTable.adoc[`WindDynamicsLookupTable`]
+| +++The wind dynamics lookup table associated with this rotor resistance control model.+++
+| _n/a_
+
+| <<WindGenTurbineType2IEC,`WindGenTurbineType2IEC`>>
+//| [[slots_table.WindGenTurbineType2IEC]]<<WindGenTurbineType2IEC,`WindGenTurbineType2IEC`>>
+| 1 +
+xref::class/WindGenTurbineType2IEC.adoc[`WindGenTurbineType2IEC`]
+| +++Wind turbine type 2 model with whitch this wind control rotor resistance model is associated.+++
+| _n/a_
+
+| <<kirr,`kirr`>>
+//| [[slots_table.kirr]]<<kirr,`kirr`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Integral gain in rotor resistance PI controller (<i>K</i><i><sub>Irr</sub></i>). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<komegafilt,`komegafilt`>>
+//| [[slots_table.komegafilt]]<<komegafilt,`komegafilt`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Filter gain for generator speed measurement (<i>K</i><i><sub>omegafilt</sub></i>). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<kpfilt,`kpfilt`>>
+//| [[slots_table.kpfilt]]<<kpfilt,`kpfilt`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Filter gain for power measurement (<i>K</i><i><sub>pfilt</sub></i>). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<kprr,`kprr`>>
+//| [[slots_table.kprr]]<<kprr,`kprr`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Proportional gain in rotor resistance PI controller (<i>K</i><i><sub>Prr</sub></i>). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<rmax,`rmax`>>
+//| [[slots_table.rmax]]<<rmax,`rmax`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Maximum rotor resistance (<i>r</i><i><sub>max</sub></i>) (&gt; WindContRotorRIEC.rmin). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<rmin,`rmin`>>
+//| [[slots_table.rmin]]<<rmin,`rmin`>>
+| 0..1 +
+xref::class/PU.adoc[`PU`]
+| +++Minimum rotor resistance (<i>r</i><i><sub>min</sub></i>) (&lt; WindContRotorRIEC.rmax). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<tomegafiltrr,`tomegafiltrr`>>
+//| [[slots_table.tomegafiltrr]]<<tomegafiltrr,`tomegafiltrr`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Filter time constant for generator speed measurement (<i>T</i><i><sub>omegafiltrr</sub></i>) (&gt;= 0). It is a...+++
+| _n/a_
+
+| <<tpfiltrr,`tpfiltrr`>>
+//| [[slots_table.tpfiltrr]]<<tpfiltrr,`tpfiltrr`>>
+| 0..1 +
+xref::class/Seconds.adoc[`Seconds`]
+| +++Filter time constant for power measurement (<i>T</i><i><sub>pfiltrr</sub></i>) (&gt;= 0). It is a type-dependent parameter.+++
+| _n/a_
+
+| <<DiagramObjects,`DiagramObjects`>>
+//| [[slots_table.DiagramObjects]]<<DiagramObjects,`DiagramObjects`>>
+| 0..* +
+xref::class/DiagramObject.adoc[`DiagramObject`]
+| +++The diagram objects that are associated with the domain object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<InstanceSet,`InstanceSet`>>
+//| [[slots_table.InstanceSet]]<<InstanceSet,`InstanceSet`>>
+| 1 +
+xref::class/InstanceSet.adoc[`InstanceSet`]
+| +++Dataset containing the data objects.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<Names,`Names`>>
+//| [[slots_table.Names]]<<Names,`Names`>>
+| 0..* +
+xref::class/Name.adoc[`Name`]
+| +++All names of this identified object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+//| [[slots_table.PropertiesCIMDataObject]]<<PropertiesCIMDataObject,`PropertiesCIMDataObject`>>
+| 0..1 +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++The single CIM data object in the appropriate dataset context.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+//| [[slots_table.TargetingCIMDataObject]]<<TargetingCIMDataObject,`TargetingCIMDataObject`>>
+| 0..* +
+xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+| +++Data objects registered.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<aliasName,`aliasName`>>
+//| [[slots_table.aliasName]]<<aliasName,`aliasName`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<description,`description`>>
+//| [[slots_table.description]]<<description,`description`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<mRID,`mRID`>>
+//| [[slots_table.mRID]]<<mRID,`mRID`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is...+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+| <<name,`name`>>
+//| [[slots_table.name]]<<name,`name`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++The name is any free human readable and possibly non unique text naming the object.+++
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+|===
+
+'''
+
+
+//[discrete]
+[#aliasName]
+=== `aliasName`
++++The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.
+The attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.aliasName`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.aliasName,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#description]
+=== `description`
++++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.description`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.description,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiagramObjects]
+=== `DiagramObjects`
++++The diagram objects that are associated with the domain object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.DiagramObjects`
+| Cardinality
+| 0..*
+| Type
+| xref::class/DiagramObject.adoc[`DiagramObject`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiagramObjects,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#InstanceSet]
+=== `InstanceSet`
++++Dataset containing the data objects.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.InstanceSet`
+| Cardinality
+| 1
+| Type
+| xref::class/InstanceSet.adoc[`InstanceSet`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.InstanceSet,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kirr]
+=== `kirr`
++++Integral gain in rotor resistance PI controller (<i>K</i><i><sub>Irr</sub></i>). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContRotorRIEC.kirr`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kirr,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#komegafilt]
+=== `komegafilt`
++++Filter gain for generator speed measurement (<i>K</i><i><sub>omegafilt</sub></i>). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContRotorRIEC.komegafilt`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.komegafilt,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kpfilt]
+=== `kpfilt`
++++Filter gain for power measurement (<i>K</i><i><sub>pfilt</sub></i>). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContRotorRIEC.kpfilt`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kpfilt,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#kprr]
+=== `kprr`
++++Proportional gain in rotor resistance PI controller (<i>K</i><i><sub>Prr</sub></i>). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContRotorRIEC.kprr`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.kprr,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#mRID]
+=== `mRID`
++++Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.mRID`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.mRID,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#name]
+=== `name`
++++The name is any free human readable and possibly non unique text naming the object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.name`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.name,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#Names]
+=== `Names`
++++All names of this identified object.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.Names`
+| Cardinality
+| 0..*
+| Type
+| xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.Names,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PropertiesCIMDataObject]
+=== `PropertiesCIMDataObject`
++++The single CIM data object in the appropriate dataset context.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.PropertiesCIMDataObject`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PropertiesCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rmax]
+=== `rmax`
++++Maximum rotor resistance (<i>r</i><i><sub>max</sub></i>) (&gt; WindContRotorRIEC.rmin). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContRotorRIEC.rmax`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rmax,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#rmin]
+=== `rmin`
++++Minimum rotor resistance (<i>r</i><i><sub>min</sub></i>) (&lt; WindContRotorRIEC.rmax). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContRotorRIEC.rmin`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PU.adoc[`PU`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.rmin,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TargetingCIMDataObject]
+=== `TargetingCIMDataObject`
++++Data objects registered.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:IdentifiedObject.TargetingCIMDataObject`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ChangeSetMember.adoc[`ChangeSetMember`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TargetingCIMDataObject,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tomegafiltrr]
+=== `tomegafiltrr`
++++Filter time constant for generator speed measurement (<i>T</i><i><sub>omegafiltrr</sub></i>) (&gt;= 0). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContRotorRIEC.tomegafiltrr`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tomegafiltrr,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#tpfiltrr]
+=== `tpfiltrr`
++++Filter time constant for power measurement (<i>T</i><i><sub>pfiltrr</sub></i>) (&gt;= 0). It is a type-dependent parameter.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContRotorRIEC.tpfiltrr`
+| Cardinality
+| 0..1
+| Type
+| xref::class/Seconds.adoc[`Seconds`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.tpfiltrr,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindDynamicsLookupTable]
+=== `WindDynamicsLookupTable`
++++The wind dynamics lookup table associated with this rotor resistance control model.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContRotorRIEC.WindDynamicsLookupTable`
+| Cardinality
+| 1..*
+| Type
+| xref::class/WindDynamicsLookupTable.adoc[`WindDynamicsLookupTable`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindDynamicsLookupTable,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindGenTurbineType2IEC]
+=== `WindGenTurbineType2IEC`
++++Wind turbine type 2 model with whitch this wind control rotor resistance model is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:WindContRotorRIEC.WindGenTurbineType2IEC`
+| Cardinality
+| 1
+| Type
+| xref::class/WindGenTurbineType2IEC.adoc[`WindGenTurbineType2IEC`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindGenTurbineType2IEC,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/WindDynamicsLookupTable.adoc[`WindDynamicsLookupTable`] | xref::class/WindDynamicsLookupTable.adoc#WindContRotorRIEC[`WindContRotorRIEC`]
+
+
+
+| xref::class/WindGenTurbineType2IEC.adoc[`WindGenTurbineType2IEC`] | xref::class/WindGenTurbineType2IEC.adoc#WindContRotorRIEC[`WindContRotorRIEC`]
+
+
+|===
+

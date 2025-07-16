@@ -1,0 +1,963 @@
+= `ProprietaryParameterDynamics`
+:toclevels: 4
+
+
++++Supports definition of one or more parameters of several different datatypes for use by proprietary user-defined models.  
+This class does not inherit from IdentifiedObject since it is not intended that a single instance of it be referenced by more than one proprietary user-defined model instance.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ProprietaryParameterDynamics`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Class hierarchy
+* *`ProprietaryParameterDynamics`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<AsynchronousMachineUserDefined,`AsynchronousMachineUserDefined`>>
+//| [[slots_table.AsynchronousMachineUserDefined]]<<AsynchronousMachineUserDefined,`AsynchronousMachineUserDefined`>>
+| 0..1 +
+xref::class/AsynchronousMachineUserDefined.adoc[`AsynchronousMachineUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<CSCUserDefined,`CSCUserDefined`>>
+//| [[slots_table.CSCUserDefined]]<<CSCUserDefined,`CSCUserDefined`>>
+| 0..1 +
+xref::class/CSCUserDefined.adoc[`CSCUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<DiscontinuousExcitationControlUserDefined,`DiscontinuousExcitationControlUserDefined`>>
+//| [[slots_table.DiscontinuousExcitationControlUserDefined]]<<DiscontinuousExcitationControlUserDefined,`DiscontinuousExcitationControlUserDefined`>>
+| 0..1 +
+xref::class/DiscontinuousExcitationControlUserDefined.adoc[`DiscontinuousExcitationControlUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<ExcitationSystemUserDefined,`ExcitationSystemUserDefined`>>
+//| [[slots_table.ExcitationSystemUserDefined]]<<ExcitationSystemUserDefined,`ExcitationSystemUserDefined`>>
+| 0..1 +
+xref::class/ExcitationSystemUserDefined.adoc[`ExcitationSystemUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<LoadUserDefined,`LoadUserDefined`>>
+//| [[slots_table.LoadUserDefined]]<<LoadUserDefined,`LoadUserDefined`>>
+| 0..1 +
+xref::class/LoadUserDefined.adoc[`LoadUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<MechanicalLoadUserDefined,`MechanicalLoadUserDefined`>>
+//| [[slots_table.MechanicalLoadUserDefined]]<<MechanicalLoadUserDefined,`MechanicalLoadUserDefined`>>
+| 0..1 +
+xref::class/MechanicalLoadUserDefined.adoc[`MechanicalLoadUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<OverexcitationLimiterUserDefined,`OverexcitationLimiterUserDefined`>>
+//| [[slots_table.OverexcitationLimiterUserDefined]]<<OverexcitationLimiterUserDefined,`OverexcitationLimiterUserDefined`>>
+| 0..1 +
+xref::class/OverexcitationLimiterUserDefined.adoc[`OverexcitationLimiterUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<PFVArControllerType1UserDefined,`PFVArControllerType1UserDefined`>>
+//| [[slots_table.PFVArControllerType1UserDefined]]<<PFVArControllerType1UserDefined,`PFVArControllerType1UserDefined`>>
+| 0..1 +
+xref::class/PFVArControllerType1UserDefined.adoc[`PFVArControllerType1UserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<PFVArControllerType2UserDefined,`PFVArControllerType2UserDefined`>>
+//| [[slots_table.PFVArControllerType2UserDefined]]<<PFVArControllerType2UserDefined,`PFVArControllerType2UserDefined`>>
+| 0..1 +
+xref::class/PFVArControllerType2UserDefined.adoc[`PFVArControllerType2UserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<PowerSystemStabilizerUserDefined,`PowerSystemStabilizerUserDefined`>>
+//| [[slots_table.PowerSystemStabilizerUserDefined]]<<PowerSystemStabilizerUserDefined,`PowerSystemStabilizerUserDefined`>>
+| 0..1 +
+xref::class/PowerSystemStabilizerUserDefined.adoc[`PowerSystemStabilizerUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<SVCUserDefined,`SVCUserDefined`>>
+//| [[slots_table.SVCUserDefined]]<<SVCUserDefined,`SVCUserDefined`>>
+| 0..1 +
+xref::class/SVCUserDefined.adoc[`SVCUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<SynchronousMachineUserDefined,`SynchronousMachineUserDefined`>>
+//| [[slots_table.SynchronousMachineUserDefined]]<<SynchronousMachineUserDefined,`SynchronousMachineUserDefined`>>
+| 0..1 +
+xref::class/SynchronousMachineUserDefined.adoc[`SynchronousMachineUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<TurbineGovernorUserDefined,`TurbineGovernorUserDefined`>>
+//| [[slots_table.TurbineGovernorUserDefined]]<<TurbineGovernorUserDefined,`TurbineGovernorUserDefined`>>
+| 0..1 +
+xref::class/TurbineGovernorUserDefined.adoc[`TurbineGovernorUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<TurbineLoadControllerUserDefined,`TurbineLoadControllerUserDefined`>>
+//| [[slots_table.TurbineLoadControllerUserDefined]]<<TurbineLoadControllerUserDefined,`TurbineLoadControllerUserDefined`>>
+| 0..1 +
+xref::class/TurbineLoadControllerUserDefined.adoc[`TurbineLoadControllerUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<UnderexcitationLimiterUserDefined,`UnderexcitationLimiterUserDefined`>>
+//| [[slots_table.UnderexcitationLimiterUserDefined]]<<UnderexcitationLimiterUserDefined,`UnderexcitationLimiterUserDefined`>>
+| 0..1 +
+xref::class/UnderexcitationLimiterUserDefined.adoc[`UnderexcitationLimiterUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<VSCUserDefined,`VSCUserDefined`>>
+//| [[slots_table.VSCUserDefined]]<<VSCUserDefined,`VSCUserDefined`>>
+| 0..1 +
+xref::class/VSCUserDefined.adoc[`VSCUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<VoltageAdjusterUserDefined,`VoltageAdjusterUserDefined`>>
+//| [[slots_table.VoltageAdjusterUserDefined]]<<VoltageAdjusterUserDefined,`VoltageAdjusterUserDefined`>>
+| 0..1 +
+xref::class/VoltageAdjusterUserDefined.adoc[`VoltageAdjusterUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<VoltageCompensatorUserDefined,`VoltageCompensatorUserDefined`>>
+//| [[slots_table.VoltageCompensatorUserDefined]]<<VoltageCompensatorUserDefined,`VoltageCompensatorUserDefined`>>
+| 0..1 +
+xref::class/VoltageCompensatorUserDefined.adoc[`VoltageCompensatorUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<WindPlantUserDefined,`WindPlantUserDefined`>>
+//| [[slots_table.WindPlantUserDefined]]<<WindPlantUserDefined,`WindPlantUserDefined`>>
+| 0..1 +
+xref::class/WindPlantUserDefined.adoc[`WindPlantUserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<WindType1or2UserDefined,`WindType1or2UserDefined`>>
+//| [[slots_table.WindType1or2UserDefined]]<<WindType1or2UserDefined,`WindType1or2UserDefined`>>
+| 0..1 +
+xref::class/WindType1or2UserDefined.adoc[`WindType1or2UserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<WindType3or4UserDefined,`WindType3or4UserDefined`>>
+//| [[slots_table.WindType3or4UserDefined]]<<WindType3or4UserDefined,`WindType3or4UserDefined`>>
+| 0..1 +
+xref::class/WindType3or4UserDefined.adoc[`WindType3or4UserDefined`]
+| +++Proprietary user-defined model with which this parameter is associated.+++
+| _n/a_
+
+| <<booleanParameterValue,`booleanParameterValue`>>
+//| [[slots_table.booleanParameterValue]]<<booleanParameterValue,`booleanParameterValue`>>
+| 0..1 +
+https://w3id.org/linkml/Boolean[`boolean`]
+| +++Boolean parameter value. If this attribute is populated, integerParameterValue and floatParameterValue will not be.+++
+| _n/a_
+
+| <<floatParameterValue,`floatParameterValue`>>
+//| [[slots_table.floatParameterValue]]<<floatParameterValue,`floatParameterValue`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Floating point parameter value.  If this attribute is populated, booleanParameterValue and integerParameterValue will not be.+++
+| _n/a_
+
+| <<integerParameterValue,`integerParameterValue`>>
+//| [[slots_table.integerParameterValue]]<<integerParameterValue,`integerParameterValue`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Integer parameter value.  If this attribute is populated, booleanParameterValue and floatParameterValue will not be.+++
+| _n/a_
+
+| <<parameterNumber,`parameterNumber`>>
+//| [[slots_table.parameterNumber]]<<parameterNumber,`parameterNumber`>>
+| 0..1 +
+https://w3id.org/linkml/Integer[`integer`]
+| +++Sequence number of the parameter among the set of parameters associated with the related proprietary user-defined model.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#AsynchronousMachineUserDefined]
+=== `AsynchronousMachineUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.AsynchronousMachineUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/AsynchronousMachineUserDefined.adoc[`AsynchronousMachineUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.AsynchronousMachineUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#booleanParameterValue]
+=== `booleanParameterValue`
++++Boolean parameter value. If this attribute is populated, integerParameterValue and floatParameterValue will not be.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.booleanParameterValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Boolean[`boolean`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.booleanParameterValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#CSCUserDefined]
+=== `CSCUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.CSCUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/CSCUserDefined.adoc[`CSCUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.CSCUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#DiscontinuousExcitationControlUserDefined]
+=== `DiscontinuousExcitationControlUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.DiscontinuousExcitationControlUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/DiscontinuousExcitationControlUserDefined.adoc[`DiscontinuousExcitationControlUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.DiscontinuousExcitationControlUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ExcitationSystemUserDefined]
+=== `ExcitationSystemUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.ExcitationSystemUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/ExcitationSystemUserDefined.adoc[`ExcitationSystemUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ExcitationSystemUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#floatParameterValue]
+=== `floatParameterValue`
++++Floating point parameter value.  If this attribute is populated, booleanParameterValue and integerParameterValue will not be.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.floatParameterValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.floatParameterValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#integerParameterValue]
+=== `integerParameterValue`
++++Integer parameter value.  If this attribute is populated, booleanParameterValue and floatParameterValue will not be.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.integerParameterValue`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.integerParameterValue,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#LoadUserDefined]
+=== `LoadUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.LoadUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/LoadUserDefined.adoc[`LoadUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.LoadUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#MechanicalLoadUserDefined]
+=== `MechanicalLoadUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.MechanicalLoadUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/MechanicalLoadUserDefined.adoc[`MechanicalLoadUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.MechanicalLoadUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#OverexcitationLimiterUserDefined]
+=== `OverexcitationLimiterUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.OverexcitationLimiterUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/OverexcitationLimiterUserDefined.adoc[`OverexcitationLimiterUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.OverexcitationLimiterUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#parameterNumber]
+=== `parameterNumber`
++++Sequence number of the parameter among the set of parameters associated with the related proprietary user-defined model.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.parameterNumber`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Integer[`integer`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.parameterNumber,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PFVArControllerType1UserDefined]
+=== `PFVArControllerType1UserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.PFVArControllerType1UserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PFVArControllerType1UserDefined.adoc[`PFVArControllerType1UserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PFVArControllerType1UserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PFVArControllerType2UserDefined]
+=== `PFVArControllerType2UserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.PFVArControllerType2UserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PFVArControllerType2UserDefined.adoc[`PFVArControllerType2UserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PFVArControllerType2UserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#PowerSystemStabilizerUserDefined]
+=== `PowerSystemStabilizerUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.PowerSystemStabilizerUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PowerSystemStabilizerUserDefined.adoc[`PowerSystemStabilizerUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.PowerSystemStabilizerUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SVCUserDefined]
+=== `SVCUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.SVCUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SVCUserDefined.adoc[`SVCUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SVCUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#SynchronousMachineUserDefined]
+=== `SynchronousMachineUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.SynchronousMachineUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/SynchronousMachineUserDefined.adoc[`SynchronousMachineUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.SynchronousMachineUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TurbineGovernorUserDefined]
+=== `TurbineGovernorUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.TurbineGovernorUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TurbineGovernorUserDefined.adoc[`TurbineGovernorUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TurbineGovernorUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#TurbineLoadControllerUserDefined]
+=== `TurbineLoadControllerUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.TurbineLoadControllerUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TurbineLoadControllerUserDefined.adoc[`TurbineLoadControllerUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.TurbineLoadControllerUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#UnderexcitationLimiterUserDefined]
+=== `UnderexcitationLimiterUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.UnderexcitationLimiterUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/UnderexcitationLimiterUserDefined.adoc[`UnderexcitationLimiterUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.UnderexcitationLimiterUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VoltageAdjusterUserDefined]
+=== `VoltageAdjusterUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.VoltageAdjusterUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/VoltageAdjusterUserDefined.adoc[`VoltageAdjusterUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VoltageAdjusterUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VoltageCompensatorUserDefined]
+=== `VoltageCompensatorUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.VoltageCompensatorUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/VoltageCompensatorUserDefined.adoc[`VoltageCompensatorUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VoltageCompensatorUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#VSCUserDefined]
+=== `VSCUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.VSCUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/VSCUserDefined.adoc[`VSCUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.VSCUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindPlantUserDefined]
+=== `WindPlantUserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.WindPlantUserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindPlantUserDefined.adoc[`WindPlantUserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindPlantUserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindType1or2UserDefined]
+=== `WindType1or2UserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.WindType1or2UserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindType1or2UserDefined.adoc[`WindType1or2UserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindType1or2UserDefined,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#WindType3or4UserDefined]
+=== `WindType3or4UserDefined`
++++Proprietary user-defined model with which this parameter is associated.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ProprietaryParameterDynamics.WindType3or4UserDefined`
+| Cardinality
+| 0..1
+| Type
+| xref::class/WindType3or4UserDefined.adoc[`WindType3or4UserDefined`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.WindType3or4UserDefined,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/AsynchronousMachineUserDefined.adoc[`AsynchronousMachineUserDefined`] | xref::class/AsynchronousMachineUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/CSCUserDefined.adoc[`CSCUserDefined`] | xref::class/CSCUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/DiscontinuousExcitationControlUserDefined.adoc[`DiscontinuousExcitationControlUserDefined`] | xref::class/DiscontinuousExcitationControlUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/ExcitationSystemUserDefined.adoc[`ExcitationSystemUserDefined`] | xref::class/ExcitationSystemUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/LoadUserDefined.adoc[`LoadUserDefined`] | xref::class/LoadUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/MechanicalLoadUserDefined.adoc[`MechanicalLoadUserDefined`] | xref::class/MechanicalLoadUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/OverexcitationLimiterUserDefined.adoc[`OverexcitationLimiterUserDefined`] | xref::class/OverexcitationLimiterUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/PFVArControllerType1UserDefined.adoc[`PFVArControllerType1UserDefined`] | xref::class/PFVArControllerType1UserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/PFVArControllerType2UserDefined.adoc[`PFVArControllerType2UserDefined`] | xref::class/PFVArControllerType2UserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/PowerSystemStabilizerUserDefined.adoc[`PowerSystemStabilizerUserDefined`] | xref::class/PowerSystemStabilizerUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/SVCUserDefined.adoc[`SVCUserDefined`] | xref::class/SVCUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/SynchronousMachineUserDefined.adoc[`SynchronousMachineUserDefined`] | xref::class/SynchronousMachineUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/TurbineGovernorUserDefined.adoc[`TurbineGovernorUserDefined`] | xref::class/TurbineGovernorUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/TurbineLoadControllerUserDefined.adoc[`TurbineLoadControllerUserDefined`] | xref::class/TurbineLoadControllerUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/UnderexcitationLimiterUserDefined.adoc[`UnderexcitationLimiterUserDefined`] | xref::class/UnderexcitationLimiterUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/VoltageAdjusterUserDefined.adoc[`VoltageAdjusterUserDefined`] | xref::class/VoltageAdjusterUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/VoltageCompensatorUserDefined.adoc[`VoltageCompensatorUserDefined`] | xref::class/VoltageCompensatorUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/VSCUserDefined.adoc[`VSCUserDefined`] | xref::class/VSCUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/WindPlantUserDefined.adoc[`WindPlantUserDefined`] | xref::class/WindPlantUserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/WindType1or2UserDefined.adoc[`WindType1or2UserDefined`] | xref::class/WindType1or2UserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+
+| xref::class/WindType3or4UserDefined.adoc[`WindType3or4UserDefined`] | xref::class/WindType3or4UserDefined.adoc#ProprietaryParameterDynamics[`ProprietaryParameterDynamics`]
+
+
+|===
+

@@ -1,0 +1,618 @@
+= `ResourceStartupCost`
+:toclevels: 4
+
+
++++To model the startup costs of a generation resource.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:ResourceStartupCost`
+
+
+| CIM standard (perspective)
+| IEC62325 (Market)
+
+
+
+|===
+
+== Class hierarchy
+* *`ResourceStartupCost`*
+
+
+== Slots
+
+
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<ResourceVerifiableCosts,`ResourceVerifiableCosts`>>
+//| [[slots_table.ResourceVerifiableCosts]]<<ResourceVerifiableCosts,`ResourceVerifiableCosts`>>
+| 1 +
+xref::class/ResourceVerifiableCosts.adoc[`ResourceVerifiableCosts`]
+| _n/a_
+| _n/a_
+
+| <<fuelColdStartup,`fuelColdStartup`>>
+//| [[slots_table.fuelColdStartup]]<<fuelColdStartup,`fuelColdStartup`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Verifiable Cold Start Up Fuel (MMBtu per start)+++
+| _n/a_
+
+| <<fuelHotStartup,`fuelHotStartup`>>
+//| [[slots_table.fuelHotStartup]]<<fuelHotStartup,`fuelHotStartup`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Verifiable Hot Start Up Fuel (MMBtu per start)+++
+| _n/a_
+
+| <<fuelIntermediateStartup,`fuelIntermediateStartup`>>
+//| [[slots_table.fuelIntermediateStartup]]<<fuelIntermediateStartup,`fuelIntermediateStartup`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Verifiable Intermediate Start Up Fuel (MMBtu per start)+++
+| _n/a_
+
+| <<fuelLowSustainedLimit,`fuelLowSustainedLimit`>>
+//| [[slots_table.fuelLowSustainedLimit]]<<fuelLowSustainedLimit,`fuelLowSustainedLimit`>>
+| 0..1 +
+https://w3id.org/linkml/Float[`float`]
+| +++Minimum-Energy fuel, MMBtu/MWh+++
+| _n/a_
+
+| <<gasPercentColdStartup,`gasPercentColdStartup`>>
+//| [[slots_table.gasPercentColdStartup]]<<gasPercentColdStartup,`gasPercentColdStartup`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage of Fuel Index Price (gas) for cold startup+++
+| _n/a_
+
+| <<gasPercentHotStartup,`gasPercentHotStartup`>>
+//| [[slots_table.gasPercentHotStartup]]<<gasPercentHotStartup,`gasPercentHotStartup`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage of Fuel Index Price (gas) for hot startup+++
+| _n/a_
+
+| <<gasPercentIntermediateStartup,`gasPercentIntermediateStartup`>>
+//| [[slots_table.gasPercentIntermediateStartup]]<<gasPercentIntermediateStartup,`gasPercentIntermediateStartup`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage of Fuel Index Price (gas) for intermediate startup+++
+| _n/a_
+
+| <<gasPercentLowSustainedLimit,`gasPercentLowSustainedLimit`>>
+//| [[slots_table.gasPercentLowSustainedLimit]]<<gasPercentLowSustainedLimit,`gasPercentLowSustainedLimit`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage of FIP (gas) for operating at LSL+++
+| _n/a_
+
+| <<oilPercentColdStartup,`oilPercentColdStartup`>>
+//| [[slots_table.oilPercentColdStartup]]<<oilPercentColdStartup,`oilPercentColdStartup`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage of Fuel Oil Price (FOP) for cold startup+++
+| _n/a_
+
+| <<oilPercentHotStartup,`oilPercentHotStartup`>>
+//| [[slots_table.oilPercentHotStartup]]<<oilPercentHotStartup,`oilPercentHotStartup`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage of Fuel Oil Price (FOP) for hot startup+++
+| _n/a_
+
+| <<oilPercentIntermediateStartup,`oilPercentIntermediateStartup`>>
+//| [[slots_table.oilPercentIntermediateStartup]]<<oilPercentIntermediateStartup,`oilPercentIntermediateStartup`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage of Fuel Oil Price (FOP) for intermediate startup+++
+| _n/a_
+
+| <<oilPercentLowSustainedLimit,`oilPercentLowSustainedLimit`>>
+//| [[slots_table.oilPercentLowSustainedLimit]]<<oilPercentLowSustainedLimit,`oilPercentLowSustainedLimit`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage of FOP (oil) for operating at LSL+++
+| _n/a_
+
+| <<solidfuelPercentColdStartup,`solidfuelPercentColdStartup`>>
+//| [[slots_table.solidfuelPercentColdStartup]]<<solidfuelPercentColdStartup,`solidfuelPercentColdStartup`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage of Solid Fuel for cold startup+++
+| _n/a_
+
+| <<solidfuelPercentHotStartup,`solidfuelPercentHotStartup`>>
+//| [[slots_table.solidfuelPercentHotStartup]]<<solidfuelPercentHotStartup,`solidfuelPercentHotStartup`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage of Solid Fuel for hot startup+++
+| _n/a_
+
+| <<solidfuelPercentIntermediateStartup,`solidfuelPercentIntermediateStartup`>>
+//| [[slots_table.solidfuelPercentIntermediateStartup]]<<solidfuelPercentIntermediateStartup,`solidfuelPercentIntermediateStartup`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage of Solid Fuel for intermedite startup+++
+| _n/a_
+
+| <<solidfuelPercentLowSustainedLimit,`solidfuelPercentLowSustainedLimit`>>
+//| [[slots_table.solidfuelPercentLowSustainedLimit]]<<solidfuelPercentLowSustainedLimit,`solidfuelPercentLowSustainedLimit`>>
+| 0..1 +
+xref::class/PerCent.adoc[`PerCent`]
+| +++Percentage of Solid Fuel for operating at LSL+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#fuelColdStartup]
+=== `fuelColdStartup`
++++Verifiable Cold Start Up Fuel (MMBtu per start)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.fuelColdStartup`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.fuelColdStartup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#fuelHotStartup]
+=== `fuelHotStartup`
++++Verifiable Hot Start Up Fuel (MMBtu per start)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.fuelHotStartup`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.fuelHotStartup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#fuelIntermediateStartup]
+=== `fuelIntermediateStartup`
++++Verifiable Intermediate Start Up Fuel (MMBtu per start)+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.fuelIntermediateStartup`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.fuelIntermediateStartup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#fuelLowSustainedLimit]
+=== `fuelLowSustainedLimit`
++++Minimum-Energy fuel, MMBtu/MWh+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.fuelLowSustainedLimit`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/Float[`float`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.fuelLowSustainedLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#gasPercentColdStartup]
+=== `gasPercentColdStartup`
++++Percentage of Fuel Index Price (gas) for cold startup+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.gasPercentColdStartup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.gasPercentColdStartup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#gasPercentHotStartup]
+=== `gasPercentHotStartup`
++++Percentage of Fuel Index Price (gas) for hot startup+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.gasPercentHotStartup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.gasPercentHotStartup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#gasPercentIntermediateStartup]
+=== `gasPercentIntermediateStartup`
++++Percentage of Fuel Index Price (gas) for intermediate startup+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.gasPercentIntermediateStartup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.gasPercentIntermediateStartup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#gasPercentLowSustainedLimit]
+=== `gasPercentLowSustainedLimit`
++++Percentage of FIP (gas) for operating at LSL+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.gasPercentLowSustainedLimit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.gasPercentLowSustainedLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#oilPercentColdStartup]
+=== `oilPercentColdStartup`
++++Percentage of Fuel Oil Price (FOP) for cold startup+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.oilPercentColdStartup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.oilPercentColdStartup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#oilPercentHotStartup]
+=== `oilPercentHotStartup`
++++Percentage of Fuel Oil Price (FOP) for hot startup+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.oilPercentHotStartup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.oilPercentHotStartup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#oilPercentIntermediateStartup]
+=== `oilPercentIntermediateStartup`
++++Percentage of Fuel Oil Price (FOP) for intermediate startup+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.oilPercentIntermediateStartup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.oilPercentIntermediateStartup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#oilPercentLowSustainedLimit]
+=== `oilPercentLowSustainedLimit`
++++Percentage of FOP (oil) for operating at LSL+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.oilPercentLowSustainedLimit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.oilPercentLowSustainedLimit,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#ResourceVerifiableCosts]
+=== `ResourceVerifiableCosts`
+
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.ResourceVerifiableCosts`
+| Cardinality
+| 1
+| Type
+| xref::class/ResourceVerifiableCosts.adoc[`ResourceVerifiableCosts`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.ResourceVerifiableCosts,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#solidfuelPercentColdStartup]
+=== `solidfuelPercentColdStartup`
++++Percentage of Solid Fuel for cold startup+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.solidfuelPercentColdStartup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.solidfuelPercentColdStartup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#solidfuelPercentHotStartup]
+=== `solidfuelPercentHotStartup`
++++Percentage of Solid Fuel for hot startup+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.solidfuelPercentHotStartup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.solidfuelPercentHotStartup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#solidfuelPercentIntermediateStartup]
+=== `solidfuelPercentIntermediateStartup`
++++Percentage of Solid Fuel for intermedite startup+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.solidfuelPercentIntermediateStartup`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.solidfuelPercentIntermediateStartup,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#solidfuelPercentLowSustainedLimit]
+=== `solidfuelPercentLowSustainedLimit`
++++Percentage of Solid Fuel for operating at LSL+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:ResourceStartupCost.solidfuelPercentLowSustainedLimit`
+| Cardinality
+| 0..1
+| Type
+| xref::class/PerCent.adoc[`PerCent`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.solidfuelPercentLowSustainedLimit,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/ResourceVerifiableCosts.adoc[`ResourceVerifiableCosts`] | xref::class/ResourceVerifiableCosts.adoc#ResourceStartupCost[`ResourceStartupCost`]
+
+
+|===
+
