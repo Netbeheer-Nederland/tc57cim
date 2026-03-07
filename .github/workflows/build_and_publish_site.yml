@@ -1,6 +1,6 @@
 name: Build and publish site
 on:
-  workflow_call:
+  workflow_dispatch:
 defaults:
   run:
     shell: bash
