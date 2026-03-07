@@ -5,7 +5,7 @@ site:
 content:
   sources:
     - url: ''
-      branches: HEAD
+      branches: [cim*]
       start_path: output/docs/adoc
 asciidoc:
   attributes:
