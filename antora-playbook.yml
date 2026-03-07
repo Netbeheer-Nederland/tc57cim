@@ -26,4 +26,5 @@ ui:
   supplemental_files: ui/supplemental-ui
 antora:
   extensions:
+    - require: '@antora/collector-extension'
     - require: '@antora/lunr-extension'
