@@ -34,6 +34,8 @@ _generate-antora-docs:
     @echo
     mkdir -p output/docs/adoc
     cp -r src/docs/* output/docs/adoc
+    # Delete `version` so Collector will derive it correctly automatically.
+    sed -i '/^version: .*$/d' "artifacts/information_models/dp_meetdata.schema.linkml.yml"
     cp -r src/data/*.qea output/docs/adoc/modules/ROOT/attachments/
     cp -r output/linkml/*.yml output/docs/adoc/modules/ROOT/attachments/
     mkdir -p output/docs/adoc/modules/schema
