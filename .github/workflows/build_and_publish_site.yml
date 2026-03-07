@@ -36,6 +36,8 @@ jobs:
         run: npm i
       - name: Generate site
         run: just build
+      - name: DEBUG
+        run: find
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
         with:
