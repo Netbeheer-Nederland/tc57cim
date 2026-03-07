@@ -7,9 +7,6 @@ ext:
   collector:
     run:
       command: just build
-      env:
-      - name: REF_NAME
-        value: ${origin.refName}
     scan:
       clean: true
       dir: output/docs/adoc
