@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: '18'
       - name: Install Antora
-        run: npm i -g
+        run: npm i
       - name: Generate site
         run: just build
       - name: Upload artifacts

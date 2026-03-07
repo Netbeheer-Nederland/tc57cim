@@ -52,7 +52,7 @@ _generate_site:
     @echo "Generating HTML website…"
     @echo
     if [ "{{ci}}" == true ]; then \
-        antora antora-playbook.yml; \
+        npx antora antora-playbook.yml; \
     else \
         npx antora antora-playbook.local.yml; \
     fi

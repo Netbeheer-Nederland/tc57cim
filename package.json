@@ -2,13 +2,13 @@
   "name": "tc57cim",
   "version": "1.0.0",
   "description": "The CIM information model represented as LinkML schemas, generated from the official Sparx EA project.",
-  "homepage": "https://github.com/Netbeheer-Nederland/im-tc57cim#readme",
+  "homepage": "https://github.com/Netbeheer-Nederland/tc57cim#readme",
   "bugs": {
-    "url": "https://github.com/Netbeheer-Nederland/im-tc57cim/issues"
+    "url": "https://github.com/Netbeheer-Nederland/tc57cim/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Netbeheer-Nederland/im-tc57cim.git"
+    "url": "git+https://github.com/Netbeheer-Nederland/tc57cim.git"
   },
   "license": "ISC",
   "author": "",
@@ -21,7 +21,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "antora": "^3.1.10",
     "@antora/lunr-extension": "^1.0.0-alpha.13",
     "asciidoctor-kroki": "^0.18.1"
   }
