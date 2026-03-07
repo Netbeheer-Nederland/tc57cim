@@ -22,6 +22,18 @@ jobs:
         uses: actions/checkout@v6
       - name: Configure Pages
         uses: actions/configure-pages@v3
+      - name: Setup Python 3.12.7
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.12.7"
+      - name: Install Python project dependencies
+        run: pip install -r requirements.txt
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install Antora
+        run: npm i
       - name: Generate site
         run: just build
       - name: Upload artifacts
