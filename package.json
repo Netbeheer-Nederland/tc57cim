@@ -21,6 +21,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "antora": "^3.1.10",
     "@antora/lunr-extension": "^1.0.0-alpha.13",
     "asciidoctor-kroki": "^0.18.1"
   }
