@@ -1,0 +1,17 @@
+= TC57CIM
+
+The Common Information Model (CIM) is an electric power transmission and
+distribution standard developed by the electric power industry. It aims to
+allow application software to exchange information about an electrical network.
+It has been officially adopted by the International Electrotechnical Commission
+(IEC).
+
+The core packages of the CIM are defined in _IEC 61970-301_, with a focus on
+the needs of electricity transmission, where related applications include
+energy management system, SCADA, and planning and optimization. _IEC 61970-501_
+and _61970-452_ define an XML format for network model exchanges using RDF. The
+_IEC 61968_ series of standards extend CIM to meet the needs of electrical
+distribution, where related applications include distribution management
+system, outage management system, planning, metering, work management,
+geographic information system, asset management, customer information systems
+and enterprise resource planning.

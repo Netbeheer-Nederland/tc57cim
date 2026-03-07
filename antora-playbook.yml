@@ -1,0 +1,29 @@
+site:
+  title: TC57CIM
+  url: https://modellen.netbeheernederland.nl/tc57cim
+  start_page: ROOT::index.adoc
+content:
+  sources:
+    - url: ''
+      branches: [cim*]
+      start_path: output/docs/adoc
+asciidoc:
+  attributes:
+    page-pagination: ''
+    experimental: ''
+    kroki-fetch-diagram: true  # Whether rendering is done server-sided so the images are served statically.
+    kroki-default-format: svg@
+    kroki-server-url: http://fruit.ritger.nl:9000
+  extensions:
+    - asciidoctor-kroki
+output:
+  clean: true
+  dir: output/docs/html
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ui/supplemental-ui
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'

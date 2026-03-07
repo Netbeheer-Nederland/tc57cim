@@ -1,7 +1,0 @@
-_commit: v0.7.9
-_src_path: gh:Netbeheer-Nederland/tmpl-dp
-description: Information models for the TC57CIM standard.
-name: im-tc57cim
-org: Netbeheer-Nederland
-schema_base_uri: https://cim.ucaiug.io/ns#
-title: TC57CIM

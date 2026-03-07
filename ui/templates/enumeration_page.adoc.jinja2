@@ -1,0 +1,72 @@
+{%- if enumeration.title -%}
+    {%- set title = enumeration.title -%}
+{%- else -%}
+    {%- set title = "`" ~ enumeration.name ~ "`" -%}
+{%- endif -%}
+= {{ title }}
+:toclevels: 4
+
+{% if enumeration.description %}
++++{{- enumeration.description | trim -}}+++
+{% endif %}
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+{% if enumeration.uri %}
+| URI
+| {{ link_curie(enumeration.uri) }}
+{% endif %}
+{% if enumeration.standard %}
+| CIM standard (perspective)
+| {{ enumeration.standard.value }}
+{% endif %}
+{% if enumeration.skos_mappings %}
+| Glossary mappings
+a|
+{% with skos_mappings=enumeration.skos_mappings %}
+{% include "class_page/skos_mappings.adoc.jinja2" %}
+{% endwith %}
+{% endif %}
+{% if enumeration.see_also %}
+| See also
+a| {% for link in enumeration.see_also %}
+{% if loop.length == 1 %}
+{{ link }}
+{% else %}
+* {{ link }}{% if loop.last %} +{% endif %}
+{% endif %}
+{% endfor %}
+{% endif %}
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+{% for val in enumeration.values|sort(attribute="value") %}
+| `{{ val.value }}`
+| {% if val.uri %}{{ link_curie(val.uri) }}{% else %}n/a{% endif %}
+| {% if val.description %}+++{{- val.description | trim | replace("|", '\\|') -}}+++{% else %}n/a{% endif %}
+{% endfor -%}
+|===
+
+== Used by
+
+{% if enumeration.used_by %}
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+{% for class_name, slot_names in enumeration.used_by | dictsort %}
+{% for slot_name in slot_names | sort %}
+| {{ xref_class(class_name) }} | {{ xref_slot(slot_name, class_name) }}
+{% endfor %}
+{% endfor %}
+|===
+
+{% else %}
+This enumeration is not used by any classes as the range of a slot.
+{% endif %}

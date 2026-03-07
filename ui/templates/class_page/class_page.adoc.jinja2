@@ -1,0 +1,127 @@
+{%- if class_.title -%}
+    {%- set title = class_.title -%}
+{%- else -%}
+    {%- set title = "`" ~ class_.name ~ "`" -%}
+{%- endif -%}
+= {{ title }}
+:toclevels: 4
+
+{% if class_.description %}
++++{{ class_.description | trim }}+++
+{% endif %}
+
+[cols="h,3",width=65%]
+|===
+| Type
+| {% if class_.is_abstract %}Abstract class{% else %}Class{% endif %}
+{% if class_.uri %}
+| URI
+| {{ link_curie(class_.uri) }}
+{% endif %}
+{% if class_.standard %}
+| CIM standard (perspective)
+| {{ class_.standard.value }}
+{% endif %}
+{% if class_.skos_mappings %}
+| Glossary mappings
+a|
+{% with skos_mappings=class_.skos_mappings %}
+{% include "class_page/skos_mappings.adoc.jinja2" %}
+{% endwith %}
+{% endif %}
+{% if class_.see_also %}
+| See also
+a| {% for link in class_.see_also %}
+{% if loop.length == 1 %}
+{{ link }}
+{% else %}
+* {{ link }}{% if loop.last %} +{% endif %}
+{% endif %}
+{% endfor %}
+{% endif %}
+|===
+
+== Class hierarchy
+{{ class_hierarchy }}
+
+== Slots
+
+{% if class_.relations or class_.attributes %}
+{% if relations_diagram %}
+.Associated classes
+{{ relations_diagram }}
+{% endif %}
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+{% for slot in slots_for_table %}
+| <<{{ slot.name }},`{{ slot.name }}`>>
+//| [[slots_table.{{ slot.name }}]]<<{{ slot.name }},`{{ slot.name }}`>>
+| {{ cardinalities(slot) }} +
+{% if slot.destination_class %}{{ xref_class(slot.destination_class.name) }}{% elif slot.data_type %}{{ xref_type(slot.data_type) }}{% else %}_n/a_{% endif %}
+| {% if slot.description %}+++{{- slot.description | trim | replace("|", '\\|') | truncate(128) -}}+++{% else %}_n/a_{% endif %}
+| {% if slot.inherited_from is not none %}{{ xref_class(slot.inherited_from) }}{% else %}_n/a_{% endif %}
+{% endfor -%}
+|===
+
+'''
+
+{% for slot in (class_.relations + class_.attributes)|sort(attribute="name") %}
+//[discrete]
+[#{{ slot.name }}]
+=== `{{- slot.name -}}`
+{% if slot.description %}+++{{- slot.description | trim -}}+++{#<<slots_table.{{ slot.name }},&#11144;>> <<slots_table.{{ slot.name }},&#11145;>>#}{% endif %}
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| {% if slot.uri %}{{ link_curie(slot.uri) }}{% else %}_n/a_{% endif %}
+| Cardinality
+| {{ cardinalities(slot) }}
+| Type
+| {% if slot.destination_class %}{{ xref_class(slot.destination_class.name) }}{% elif slot.data_type is none %}_n/a_{% else %}{{ xref_type(slot.data_type) }}{% endif %}
+{% if slot.inherited_from %}
+| Inherited from
+| {{ xref_class(slot.inherited_from) }}
+{% endif %}
+{% if slot.skos_mappings %}
+| Glossary mappings
+a|
+{% with skos_mappings=slot.skos_mappings %}
+{% include "class_page/skos_mappings.adoc.jinja2" %}
+{% endwith %}
+{% endif %}
+|===
+
+////
+[.text-left]
+--
+<<slots_table.{{ slot.name }},&#10548;>>
+--
+////
+
+{% endfor %}
+
+{% else %}
+This class has no slots.
+{% endif %}
+
+== Used by
+
+{% if class_.used_by %}
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+{% for class_name, slot_names in class_.used_by | dictsort %}
+{% for slot_name in slot_names | sort %}
+| {{ xref_class(class_name) }} | {{ xref_slot(slot_name, class_name) }}
+{% endfor %}
+{% endfor %}
+|===
+
+{% else %}
+This class is not used by any other classes as the range of a slot.
+{% endif %}

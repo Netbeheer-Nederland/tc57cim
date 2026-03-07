@@ -1,0 +1,32 @@
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+{{ class_.name }} {
+  style {
+    fill: "{{ color_class(class_) }}"
+    shadow: true
+  }
+}
+
+{% for related_class in class_.relations | map(attribute="destination_class") %}
+{% if not related_class.is_cim_data_type %}
+{{ related_class.name }} {
+  style {
+    fill: "{{ color_class(related_class) }}"
+    shadow: true
+  }
+}
+{% endif %}
+{% endfor %}
+
+{% for relation in class_.relations -%}
+{% if not relation.destination_class.is_cim_data_type %}
+{{ class_.name }} -> {{ relation.destination_class.name }}: {{ relation.name }}
+{% endif %}
+{% endfor %}
+{% include "class_page/relations_diagram_legend.d2.jinja2" %}
+----

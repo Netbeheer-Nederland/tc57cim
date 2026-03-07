@@ -1,0 +1,90 @@
+{%- if class_.title -%}
+    {%- set title = class_.title -%}
+{%- else -%}
+    {%- set title = "`" ~ class_.name ~ "`" -%}
+{%- endif -%}
+= {{ title }}
+:toclevels: 4
+
+{% if class_.description %}
++++{{ class_.description | trim }}+++
+{% endif %}
+
+[cols="h,3",width=60%]
+|===
+| Type
+| CIM data type class
+
+{% if class_.uri %}
+| URI
+| {{ link_curie(class_.uri) }}
+{% endif %}
+{% if class_.standard %}
+| CIM standard (perspective)
+| {{ class_.standard.value }}
+{% endif %}
+{% if class_.see_also %}
+| See also
+a| {% for link in class_.see_also %}
+{% if loop.length == 1 %}
+{{ link }}
+{% else %}
+* {{ link }}{% if loop.last %} +{% endif %}
+{% endif %}
+{% endfor %}
+{% endif %}
+|===
+
+== Slots
+
+[cols="1,1,2",width=100%]
+|===
+| Name | Type | Description
+{% for slot in slots_for_table %}
+| `{{ slot.name }}`
+| {{ cardinalities(slot) }} +
+{% if slot.destination_class %}{{ xref_class(slot.destination_class.name) }}{% elif slot.data_type %}{{ xref_type(slot.data_type) }}{% else %}_n/a_{% endif %}
+//| +++{{- slot.description | trim | replace("|", '\\|') | truncate(100, False) -}}+++
+| {% if slot.description %}+++{{- slot.description | trim | replace("|", '\\|') -}}+++{% else %}n/a{% endif %}
+{% endfor -%}
+|===
+
+////
+
+'''
+
+{% for slot in class_.relations + class_.attributes %}
+//[discrete]
+[#{{ slot.name }}]
+=== `{{- slot.name -}}`
+{% if slot.description %}+++{{- slot.description | trim -}}+++{% endif %}
+
+[cols="h,1",width=60%]
+|===
+| URI
+| {% if slot.uri %}{{ link_curie(slot.uri) }}{% else %}n/a{% endif %}
+| Cardinality
+| {{ cardinalities(slot) }}
+| Type
+| {% if slot.destination_class %}{{ xref_class(slot.destination_class.name) }}{% elif slot.data_type %}{{ xref_type(slot.data_type) }}{% else %}n/a{% endif %}
+|===
+{% endfor %}
+////
+
+== Used by
+
+{% if class_.used_by %}
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+{% for class_name, slot_names in class_.used_by | dictsort %}
+{% for slot_name in slot_names | sort %}
+| {{ xref_class(class_name) }} | {{ xref_slot(slot_name, class_name) }}
+{% endfor %}
+{% endfor %}
+|===
+
+{% else %}
+This CIM data type is not used by any classes as the range of a slot.
+{% endif %}
