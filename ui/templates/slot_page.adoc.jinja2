@@ -1,0 +1,52 @@
+{%- if slot.title -%}
+    {%- set title = slot.title -%}
+{%- else -%}
+    {%- set title = "`" ~ slot.name ~ "`" -%}
+{%- endif -%}
+{%- if not slot|attr("destination_class") is None %}
+    {%- set is_relation = True -%}
+{%- else -%}
+    {%- set is_relation = False -%}
+= {{ title }}
+
+{% if slot.description %}
++++{{ slot.description | trim }}+++
+{% endif %}
+
+[cols="h,3",width=60%]
+|===
+| Type
+| {% if is_relation %}Relation{% else %}Attribute{% endif %}
+
+{% if slot.uri %}
+| URI
+| {{ link_curie(slot.uri) }}
+{% endif %}
+|===
+
+'''
+
+[cols="h,1",width=60%]
+|===
+| URI
+| {% if slot.uri %}{{ link_curie(slot.uri) }}{% else %}n/a{% endif %}
+| Cardinality
+| `{{ cardinalities(slot) }}`
+| {% if is_relation %}Destination class{% else %}Data type{% endif %}
+| {% if is_relation and slot.destination_class %}`{{ slot.destination_class }}`{% elif not is_relation and slot.data_type %}`{{slot.data_type }}`{% else %}`Any`{% endif %}
+{% if slot.inherited_from != class_name %}
+| Inherited from
+| {{ xref_slot(slot.inherited_from) }}
+{% endif %}
+| Glossary mappings
+a|
+!===
+! Mapping type ! Term
+
+! `closeMatch`
+! `nbnl:EAN`
+! `exactMatch`
+! `schema:gtin13`
+!===
+
+|===

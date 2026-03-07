@@ -1,0 +1,7 @@
+{% for skos_verb, terms in skos_mappings.items() %}
+{{ skos_verb.value.label }}::
+[unstyled]
+{% for term in terms %}
+* {{ link_curie(term, label=label_for(term)) }}{% if loop.last %} +{% endif %}
+{% endfor %}
+{% endfor %}

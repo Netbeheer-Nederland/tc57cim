@@ -1,0 +1,27 @@
+[.truncate]
+* Information model
+** xref::index.adoc[Index]
+** Classes
+*** xref::class/{{ root_class.name }}.adoc[{{ root_class.name }} (root)]
+{% for class_ in page.classes.values() | sort(attribute="name") -%}
+{% if not class_.is_root %}
+*** xref::class/{{ class_.name }}.adoc[{{ class_.name }}]
+{#%- if class_.attributes -%}
+{% for slot in (class_.attributes + class_.relations) -%}
+**** xref::slot/{{ slot.name }}.adoc[{{ slot.name }}]
+{% endfor -%}
+{% endif %#}
+{% endif %}
+{% endfor -%}
+{% if page.cim_data_types %}
+** CIM data types
+{% for cim_data_type_class in page.cim_data_types.values() | sort(attribute="name") -%}
+*** xref::class/{{ cim_data_type_class.name }}.adoc[{{ cim_data_type_class.name }}]
+{% endfor -%}
+{% endif %}
+{% if page.enumerations %}
+** Enumerations
+{% for enum in page.enumerations.values() | sort(attribute="name") -%}
+*** xref::enumeration/{{ enum.name }}.adoc[{{ enum.name }}]
+{% endfor -%}
+{% endif %}

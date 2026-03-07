@@ -1,208 +1,60 @@
-#set dotenv-required
-#set dotenv-load
 set shell := ["bash", "-uc"]
-set windows-shell := ["bash", "-uc"]
 
-
-
-ref_name := "git rev-parse --abbrev-ref HEAD"
-major_branch_name := "git rev-parse --abbrev-ref HEAD | cut -d . -f 1"
-
+ci := env("CI", "false")
 
 _default:
     @just --list --unsorted --justfile {{justfile()}}
 
-# Build the project
-[group("project")]
-build: clean _post-process-linkml-schema generate-documentation
-    @echo "Building project…"
-    @echo
-    cp -r "artifacts/information_models" "artifacts/documentation/modules/schema/attachments/"
+# Build the LinkML schema and documentation artifacts
+build: _clean _generate-linkml-schema _generate-antora-docs _generate_site
     @echo "… OK."
     @echo
-    @echo "All project artifacts have been generated and post-processed, and can found in: artifacts/"
+    @echo "All project artifacts have been generated and post-processed, and can found in: output/"
     @echo
 
 # Clean up the output directory
-[group("project")]
-clean:
+_clean:
     @echo "Cleaning up generated artifacts…"
     @echo
-    @if [ -d "artifacts" ]; then \
-        rm -rf "artifacts"; \
+    @if [ -d output ]; then \
+        rm -rf output; \
     fi
-    mkdir -p "artifacts"
+    mkdir -p output
     @echo "… OK."
     @echo
 
-# Initialize project
-[group("project")]
-initialize:
-    #!/bin/env bash
-    echo "Initializing project…"
-    echo
+# Generate LinkML schema from QEA file
+_generate-linkml-schema:
+    mkdir -p output/linkml
+    cim2linkml src/data/*.qea --single-schema -o output/linkml
 
-    poetry install
-
-    echo
-    echo "Creating and configuring repository on GitHub…"
-    echo
-
-    gh repo create Netbeheer-Nederland/im-tc57cim \
-        --description "Information models for the TC57CIM standard." \
-        --public \
-        --disable-wiki
-
-    git init -b main
-
-    git remote add origin git@github.com:Netbeheer-Nederland/im-tc57cim.git
-    git fetch
-
-    git add .
-    git commit -m "Initial commit"
-    git push -u origin main
-
-    echo
-    echo 'Create `docs` and `docs-dev` branches for storing documentation artifacts…'
-    echo
-    git checkout --orphan docs
-    git rm -rf .
-    git add .
-    git commit --allow-empty -m "Initial commit"
-    git push -u origin docs
-
-    git checkout main
-    git checkout --orphan docs-dev
-    git rm -rf .
-    git add .
-    git commit --allow-empty -m "Initial commit"
-    git push -u origin docs-dev
-
-    echo
-    echo 'Creating `v0` major version branch…'
-    echo
-    git checkout main
-    git checkout -b v0
-    git push -u origin v0
-
-    gh repo edit Netbeheer-Nederland/im-tc57cim --default-branch v0
-    git branch -D main
-    git push --delete origin main
-
-    # TODO: Enable this only as soon as you've managed to make an exception
-    # for the CI/CD, which obviously ought to be able to write.
-    #
-    #echo "Adding ruleset to protect documentation branches…"
-    #echo -en "\t"
-    #gh api \
-    #    --method POST \
-    #    -H "Accept: application/vnd.github+json" \
-    #    -H "X-GitHub-Api-Version: 2022-11-28" \
-    #    /repos/Netbeheer-Nederland/$(basename `git config --get remote.origin.url` | cut -d . -f -1)/rulesets \
-    #    --input ".github/rulesets/protect-docs-branches.json"
-    #@echo "… OK."
-    #@echo
-
-    echo
-    echo "Adding ruleset to protect major branches…"
-    echo
-    gh api \
-        --method POST \
-        -H "Accept: application/vnd.github+json" \
-        -H "X-GitHub-Api-Version: 2022-11-28" \
-        /repos/Netbeheer-Nederland/$(basename `git config --get remote.origin.url` | cut -d . -f -1)/rulesets \
-        --input ".github/rulesets/protect-major-branches.json"
-
-    # Set workflow permissions
-
-    #gh api \
-    #  --method PUT \
-    #  -H "Accept: application/vnd.github+json" \
-    #  -H "X-GitHub-Api-Version: 2022-11-28" \
-    #  /repos/Netbeheer-Nederland/im-tc57cim/actions/permissions \
-    #   -F "enabled=true" -f "allowed_actions=all"
-
-    echo "… OK."
-    echo
-    echo "A GitHub repository has been created and configured at: https://github.com/Netbeheer-Nederland/im-tc57cim"
-    echo
-
-
-# Post-process LinkML schema for preview or releasing
-_post-process-linkml-schema:
-    @echo "Copying source files to artifacts directory…"
-    @echo
-    mkdir -p "artifacts/information_models"
-    cp "information_models/im_tc57cim.schema.linkml.yml" "artifacts/information_models/"
-    @echo
-    @echo "Setting version in LinkML schema…"
-    @echo
-    sed -i '/^version: .*$/d' "artifacts/information_models/im_tc57cim.schema.linkml.yml"
-    @if [ -z ${VERSION:-} ]; then \
-        sed -i "/^name: .*$/a version: {{shell(ref_name)}}" "artifacts/information_models/im_tc57cim.schema.linkml.yml"; \
-    else \
-        sed -i "/^name: .*$/a version: ${VERSION}" "artifacts/information_models/im_tc57cim.schema.linkml.yml"; \
-    fi
-    @echo "… OK."
-    @echo
-
-# Preview version
-[group("version-control")]
-preview-version:
-    @echo "Generating preview of version…"
-    @echo
-    gh workflow run preview_release.yml --ref {{shell(ref_name)}}
-    @echo "… OK."
-    @echo
-
-# Check if currently checked out branch is a major version branch
-_on-major-branch:
-    @echo "Checking if currently checked out branch is a major version branch…"
-    @echo
-    @if [ ! {{shell(ref_name)}} == {{shell(major_branch_name)}}  ]; then \
-        echo "Releases can only be done from major branches. Please check out the major branch you wish to release from."; \
-        exit 1; \
-    fi
-
-# Release new major version
-[group("version-control")]
-release-major-version: _on-major-branch
-    @echo "Releasing new major version…"
-    @echo
-    gh workflow run release_major_version.yml --ref {{shell(ref_name)}}
-    @echo "… OK."
-    @echo
-
-# Release new minor version
-[group("version-control")]
-release-minor-version: _on-major-branch
-    @echo "Releasing new minor version…"
-    @echo
-    gh workflow run release_minor_version.yml --ref {{shell(ref_name)}}
-    @echo "… OK."
-    @echo
-
-# Release new patch version
-[group("version-control")]
-release-patch-version: _on-major-branch
-    @echo "Releasing new patch version…"
-    @echo
-    gh workflow run release_patch_version.yml --ref {{shell(ref_name)}}
-    @echo "… OK."
-    @echo
-
-# Generate documentation
-[group("generators")]
-generate-documentation: _post-process-linkml-schema
+# Generate Antora documentation
+_generate-antora-docs:
     @echo "Generating documentation…"
     @echo
-    cp -r "documentation" "artifacts"
-    mkdir -p "artifacts/documentation/modules/schema"
-    poetry run python -m linkml_asciidoc_generator.main \
-        "artifacts/information_models/im_tc57cim.schema.linkml.yml" \
-        "artifacts/documentation/modules/schema"
-    echo "- modules/schema/nav.adoc" >> artifacts/documentation/antora.yml
+    mkdir -p output/docs/adoc
+    cp -r src/docs/* output/docs/adoc
+    cp -r src/data/*.qea output/docs/adoc/modules/ROOT/attachments/
+    cp -r output/linkml/*.yml output/docs/adoc/modules/ROOT/attachments/
+    mkdir -p output/docs/adoc/modules/schema
+    python -m linkml_asciidoc_generator.main \
+        -o output/docs/adoc/modules/schema \
+        -t ui/templates \
+        output/linkml/*.yml
+    echo "- modules/schema/nav.adoc" >> output/docs/adoc/antora.yml
     @echo "… OK."
     @echo
-    @echo -e "Generated documentation files at: artifacts/documentation"
+    @echo -e "Generated documentation files at: output/docs/adoc"
     @echo
+
+# Generate HTML website
+_generate_site:
+    @echo "Generating HTML website…"
+    @echo
+    if [ "{{ci}}" == true ]; then \
+        antora antora-playbook.yml; \
+    else \
+        npx antora antora-playbook.local.yml; \
+    fi
+    @echo
+    @echo "Success."
