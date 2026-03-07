@@ -3,3 +3,13 @@ title: TC57CIM — CIM 17
 version: true
 nav:
 - modules/ROOT/nav.adoc
+ext:
+  collector:
+    run:
+      command: just build
+      env:
+      - name: REF_NAME
+        value: ${origin.refName}
+    scan:
+      clean: true
+      dir: output/docs/adoc
