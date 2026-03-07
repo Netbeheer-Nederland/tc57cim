@@ -1,13 +1,12 @@
 set shell := ["bash", "-uc"]
 
+ci := env("CI", "false")
+
 _default:
     @just --list --unsorted --justfile {{justfile()}}
 
 # Build the LinkML schema and documentation artifacts
 build: _clean _generate-linkml-schema _generate-antora-docs _generate_site
-    @echo "Building project…"
-    @echo
-    cp -r output/linkml output/docs/modules/schema/attachments/
     @echo "… OK."
     @echo
     @echo "All project artifacts have been generated and post-processed, and can found in: output/"
@@ -33,26 +32,29 @@ _generate-linkml-schema:
 _generate-antora-docs:
     @echo "Generating documentation…"
     @echo
-    cp -r src/docs output/
-    mkdir -p output/docs/modules/schema
+    mkdir -p output/docs/adoc
+    cp -r src/docs/* output/docs/adoc
+    cp -r src/data/*.qea output/docs/adoc/modules/ROOT/attachments/
+    cp -r output/linkml/*.yml output/docs/adoc/modules/ROOT/attachments/
+    mkdir -p output/docs/adoc/modules/schema
     python -m linkml_asciidoc_generator.main \
-        -o output/docs/modules/schema \
+        -o output/docs/adoc/modules/schema \
         -t ui/templates \
         output/linkml/*.yml
-    echo "- modules/schema/nav.adoc" >> output/docs/antora.yml
+    echo "- modules/schema/nav.adoc" >> output/docs/adoc/antora.yml
     @echo "… OK."
     @echo
-    @echo -e "Generated documentation files at: output/docs"
+    @echo -e "Generated documentation files at: output/docs/adoc"
     @echo
 
 # Generate HTML website
 _generate_site:
     @echo "Generating HTML website…"
     @echo
-    if [ "$CI" == true ]; then \
+    if [ "{{ci}}" == true ]; then \
         antora antora-playbook.yml; \
     else \
-        antora antora-playbook.local.yml; \
+        npx antora antora-playbook.local.yml; \
     fi
     @echo
     @echo "Success."

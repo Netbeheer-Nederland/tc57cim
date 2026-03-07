@@ -1,4 +1,9 @@
-= TC57CIM
+= TC57CIM — CIM 17
+
+Official model source:: xref::attachment$iec61970cim17v40_iec61968cim13v13b_iec62325cim03v17b_CIM100.1.1.1.qea[iec61970cim17v40_iec61968cim13v13b_iec62325cim03v17b_CIM100.1.1.1.qea]
+LinkML schema:: xref::attachment$TC57CIM.yml[TC57CIM.yml]
+
+'''
 
 The Common Information Model (CIM) is an electric power transmission and
 distribution standard developed by the electric power industry. It aims to
