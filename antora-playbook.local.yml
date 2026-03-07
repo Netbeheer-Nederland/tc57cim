@@ -6,7 +6,7 @@ content:
   sources:
     - url: ''
       branches: [cim*]
-      start_path: output/docs/adoc
+      start_path: src/docs
 asciidoc:
   attributes:
     page-pagination: ''
