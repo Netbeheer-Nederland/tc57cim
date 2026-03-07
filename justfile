@@ -27,13 +27,13 @@ _clean:
 # Generate LinkML schema from QEA file
 _generate-linkml-schema:
     mkdir -p output/linkml
-    cim2linkml data/*.qea --single-schema -o output/linkml
+    cim2linkml src/data/*.qea --single-schema -o output/linkml
 
 # Generate Antora documentation
 _generate-antora-docs:
     @echo "Generating documentation…"
     @echo
-    cp -r docs output/
+    cp -r src/docs output/
     mkdir -p output/docs/modules/schema
     python -m linkml_asciidoc_generator.main \
         -o output/docs/modules/schema \
