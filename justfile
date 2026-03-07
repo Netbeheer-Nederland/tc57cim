@@ -6,7 +6,7 @@ _default:
     @just --list --unsorted --justfile {{justfile()}}
 
 # Build the LinkML schema and documentation artifacts
-build: _clean _generate-linkml-schema _generate-antora-docs _generate_site
+build: _clean _generate-linkml-schema _generate-antora-docs
     @echo "… OK."
     @echo
     @echo "All project artifacts have been generated and post-processed, and can found in: output/"
@@ -46,15 +46,3 @@ _generate-antora-docs:
     @echo
     @echo -e "Generated documentation files at: output/docs/adoc"
     @echo
-
-# Generate HTML website
-_generate_site:
-    @echo "Generating HTML website…"
-    @echo
-    if [ "{{ci}}" == true ]; then \
-        antora antora-playbook.yml; \
-    else \
-        npx antora antora-playbook.local.yml; \
-    fi
-    @echo
-    @echo "Success."

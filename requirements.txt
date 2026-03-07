@@ -1,2 +1,3 @@
 cim-to-linkml @ git+https://github.com/Netbeheer-Nederland/cim-to-linkml@v2.0.0
 linkml-asciidoc-generator @ git+https://github.com/Netbeheer-Nederland/linkml-asciidoc-generator.git@0.7
+rust-just==1.38.0
