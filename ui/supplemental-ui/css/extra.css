@@ -1,8 +1,4 @@
 /* General */
-body, .doc {
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-}
 
 .truncate {
   max-width: 50px;
@@ -33,6 +29,7 @@ body, .doc {
 .doc h4,
 .doc h5,
 .doc h6 {
+  font-family: Poppins, sans-serif;
   color: #002d41;
 }
 
@@ -56,13 +53,14 @@ nav.navbar .navbar-item {
   color: #002d41;
 }
 
-.navbar-end>a.navbar-item {
+.navbar-end > a.navbar-item {
   background: inherit;
   color: #002d41;
+  font-family: Poppins, sans-serif;
   font-size: 0.75rem;
 }
 
-.navbar-end>a.navbar-item:hover {
+.navbar-end > a.navbar-item:hover {
   color: #002d41;
   background-color: #e9f1f5;
 }
