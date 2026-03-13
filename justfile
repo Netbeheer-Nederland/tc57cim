@@ -43,6 +43,7 @@ _generate-antora-docs:
         -o output/docs/adoc/modules/schema \
         -t ui/templates \
         output/linkml/*.yml
+    sed -i '/\*\*\* xref::class\/\.adoc\[ (root)\]/d' output/docs/adoc/modules/schema/nav.adoc
     echo "Adding schema documentation to nav…"
     yq -i '.nav += ["modules/schema/nav.adoc"]' output/docs/adoc/antora.yml
     @echo "… OK."
