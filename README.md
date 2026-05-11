@@ -8,7 +8,7 @@ A LinkML schema and documentation website is built for every branch matching the
 
 ### Build and deploy in CI/CD
 
-Run the GitHub Actions workflow `build_and_deploy_site.yml` from the `main` branch.
+Run the GitHub Actions workflow `build_and_publish_site.yml` from the `main` branch.
 
 ### Build locally
 
