@@ -21,7 +21,7 @@ output:
   dir: output/docs/html
 ui:
   bundle:
-    url: https://github.com/Netbeheer-Nederland/antora-nbnl-ui/releases/download/1.0/ui-bundle.zip
+    url: https://github.com/Netbeheer-Nederland/antora-ui-nbnl/releases/download/1.2/ui-bundle.zip
 antora:
   extensions:
     - require: '@antora/collector-extension'
